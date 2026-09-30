@@ -1,0 +1,32 @@
+{
+ "c_deus": {
+  "author": "Schola Gregoriana, Pallottine Seminary, Ołtarzew (cond. Dariusz Smolarek)",
+  "title": "Deus in adjutorium meum intende (Vespers)",
+  "url": "https://commons.wikimedia.org/wiki/File:Schola_Gregoriana-Deus_in_adjutorium_meum_intende.ogg",
+  "license": "CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/) — the trimmed derivative is shared under the same licence"
+ },
+ "c_magn": {
+  "author": "Schola Gregoriana, Pallottine Seminary, Ołtarzew",
+  "title": "Antiphona et Magnificat (Vespers) — Magnificat verses only",
+  "url": "https://commons.wikimedia.org/wiki/File:Schola_Gregoriana-Antiphona_et_Magnificat.ogg",
+  "license": "CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/) — derivative under the same licence"
+ },
+ "c_antimo": {
+  "author": "Zyance (recording); the monks of Sant’Antimo",
+  "title": "San Antimo, monks singing Gregorian chant at a Sunday morning service",
+  "url": "https://commons.wikimedia.org/wiki/File:Sanantimo_gregorian.ogg",
+  "license": "CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/) — derivative under the same licence"
+ },
+ "c_veni": {
+  "author": "Membeth",
+  "title": "Veni creator spiritus (hymn)",
+  "url": "https://commons.wikimedia.org/wiki/File:Veni.creator.spiritus.ogg",
+  "license": "Public domain (as released by the author)"
+ },
+ "c_lament": {
+  "author": "Membeth",
+  "title": "Lamentation III, Holy Saturday (tonus peregrinus)",
+  "url": "https://commons.wikimedia.org/wiki/File:Lamentation.III.Karsamstag.ogg",
+  "license": "CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/)"
+ }
+}

@@ -1,0 +1,41 @@
+# Local system, editor and assistant state
+.DS_Store
+._*
+*.swp
+*.swo
+*~
+/.claude/
+/.kiro/
+/.local/
+/_legacy_gpt/
+
+# Dependencies, Python bytecode and environments
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Credentials and machine-specific configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Source books and full-text working data stay local
+*.epub
+/book_details/*.pdf
+/book_details/*.txt
+/book_details/cache/
+/book_details/reports/
+/book_details/data/*
+!/book_details/data/entity_aliases.json
+!/book_details/data/possible_entity_merges.json
+!/book_details/data/unresolved_references.json
+/book_details/analysis/verification_candidates.jsonl
+
+# Keep the extraction agent definition, excluding the local CLI installation
+/book_details/.opencode/*
+!/book_details/.opencode/agent/

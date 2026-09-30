@@ -1,0 +1,4056 @@
+{
+  "note": "Candidate conflicts. verdict=contradiction means the model judged the statements incompatible given the evidence; unverified means no adjudication was possible.",
+  "count": 150,
+  "candidates": [
+    {
+      "id": "cand_1",
+      "type": "attribute_conflict",
+      "a": {
+        "statement": "AEDIFICIUM: shape = an octagonal building",
+        "source": {
+          "claim_id": "claim_000043",
+          "chunk_id": "chunk_0004",
+          "chapter": "ÖNDEYİŞ",
+          "paragraph": 92,
+          "evidence": "Uzaktan bir dörtgen gibi görünen sekizgen bir yapıydı bu"
+        }
+      },
+      "b": {
+        "statement": "AEDIFICIUM: shape = quadrangular shape",
+        "source": {
+          "claim_id": "claim_002512",
+          "chunk_id": "chunk_0108",
+          "chapter": "ÖĞLE Kütüphanecilerin öyküsü oluşturuluyor ve gizemli kitaba ilişkin daha çok bilgi elde ediliyor.",
+          "paragraph": 2616,
+          "evidence": "Ama dörtgen biçimi de"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The evidence states it was an octagonal building that merely appeared quadrangular from a distance, so both descriptions refer to the same structure from different viewpoints.",
+      "topic": "building shape perspective"
+    },
+    {
+      "id": "cand_2",
+      "type": "attribute_conflict",
+      "a": {
+        "statement": "CHURCH: material = the human statues and the lions are made of the same material",
+        "source": {
+          "claim_id": "claim_000259",
+          "chunk_id": "chunk_0010",
+          "chapter": "ÖĞLE Adso kilisenin kapısına hayran oluyor, William ise Casale’li Ubertino’yu buluyor.",
+          "paragraph": 232,
+          "evidence": "onlarla aynı maddeden yapılmışlardı"
+        }
+      },
+      "b": {
+        "statement": "CHURCH: material = stone surrounds those inside the church",
+        "source": {
+          "claim_id": "claim_000936",
+          "chunk_id": "chunk_0034",
+          "chapter": "ÖĞLE Benno, manastır yaşamı üstüne hiç de iyi sayılmayacak şeyler açıklayan tuhaf bir öykü anlatıyor.",
+          "paragraph": 847,
+          "evidence": "çevremizi kuşatan şu taş da bir ışık"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "One statement concerns the material shared by the statues and lions, the other that stone surrounds those inside the church; these are different claims, not conflicting ones.",
+      "topic": "church material"
+    },
+    {
+      "id": "cand_3",
+      "type": "attribute_conflict",
+      "a": {
+        "statement": "LIBRARY: shape = a huge labyrinth; symbol of the world labyrinth",
+        "source": {
+          "claim_id": "claim_000993",
+          "chunk_id": "chunk_0038",
+          "chapter": "İKİNDİ Başrahip manastırının zengin teriyle övündüğünü, sapkınlardan çekindiğini gösteriyor; sonunda Adso dünyayı dolaşmakla kötü bir şey mi yaptığından kuşku duyuyor.",
+          "paragraph": 935,
+          "evidence": "Kitaplık kocaman bir labirenttir"
+        }
+      },
+      "b": {
+        "statement": "LIBRARY: shape = heptagonal",
+        "source": {
+          "claim_id": "claim_001270",
+          "chunk_id": "chunk_0043",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1101,
+          "evidence": "Yedigen biçiminde yeni bir salona rastladık"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A labyrinth can be composed of heptagonal rooms, so describing the library as a labyrinth and as heptagonal is not contradictory.",
+      "topic": "library layout"
+    },
+    {
+      "id": "cand_4",
+      "type": "attribute_conflict",
+      "a": {
+        "statement": "LIBRARY: shape = a huge labyrinth; symbol of the world labyrinth",
+        "source": {
+          "claim_id": "claim_000993",
+          "chunk_id": "chunk_0038",
+          "chapter": "İKİNDİ Başrahip manastırının zengin teriyle övündüğünü, sapkınlardan çekindiğini gösteriyor; sonunda Adso dünyayı dolaşmakla kötü bir şey mi yaptığından kuşku duyuyor.",
+          "paragraph": 935,
+          "evidence": "Kitaplık kocaman bir labirenttir"
+        }
+      },
+      "b": {
+        "statement": "LIBRARY: shape = the central opening is octagonal",
+        "source": {
+          "claim_id": "claim_001410",
+          "chunk_id": "chunk_0052",
+          "chapter": "GÜNBATIMI Başrahip yeniden ziyaretçilerle konuşuyor; William’ın labirentin bilmecesini çözmek için bazı şaşırtıcı fikirleri vardır; sonunda bunu çok mantıklı bir biçimde basanı: Sonra William’la Adso eritme peynir yerler.",
+          "paragraph": 1336,
+          "evidence": "Sekizgen"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The labyrinth shape of the library and its octagonal central opening describe different features and can coexist.",
+      "topic": "library layout"
+    },
+    {
+      "id": "cand_5",
+      "type": "attribute_conflict",
+      "a": {
+        "statement": "LIBRARY: shape = a huge labyrinth; symbol of the world labyrinth",
+        "source": {
+          "claim_id": "claim_000993",
+          "chunk_id": "chunk_0038",
+          "chapter": "İKİNDİ Başrahip manastırının zengin teriyle övündüğünü, sapkınlardan çekindiğini gösteriyor; sonunda Adso dünyayı dolaşmakla kötü bir şey mi yaptığından kuşku duyuyor.",
+          "paragraph": 935,
+          "evidence": "Kitaplık kocaman bir labirenttir"
+        }
+      },
+      "b": {
+        "statement": "LIBRARY: shape = seven-sided room",
+        "source": {
+          "claim_id": "claim_001825",
+          "chunk_id": "chunk_0075",
+          "chapter": "AKŞAM Salvatore çok güçlü bir büyüden söz ediyor.",
+          "paragraph": 1887,
+          "evidence": "yedigen oda"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A labyrinth made of seven-sided rooms is consistent; the two statements describe the whole versus a component room.",
+      "topic": "library layout"
+    },
+    {
+      "id": "cand_6",
+      "type": "attribute_conflict",
+      "a": {
+        "statement": "LIBRARY: shape = a huge labyrinth; symbol of the world labyrinth",
+        "source": {
+          "claim_id": "claim_000993",
+          "chunk_id": "chunk_0038",
+          "chapter": "İKİNDİ Başrahip manastırının zengin teriyle övündüğünü, sapkınlardan çekindiğini gösteriyor; sonunda Adso dünyayı dolaşmakla kötü bir şey mi yaptığından kuşku duyuyor.",
+          "paragraph": 935,
+          "evidence": "Kitaplık kocaman bir labirenttir"
+        }
+      },
+      "b": {
+        "statement": "LIBRARY: shape = the room is heptagonal",
+        "source": {
+          "claim_id": "claim_002678",
+          "chunk_id": "chunk_0112",
+          "chapter": "YEDİNCİ GÜN",
+          "paragraph": 2718,
+          "evidence": "Kendimizi yedigen biçimde... bir odanın eşiğinde bulduk"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A labyrinth can contain heptagonal rooms, so these statements are not mutually exclusive.",
+      "topic": "library layout"
+    },
+    {
+      "id": "cand_7",
+      "type": "attribute_conflict",
+      "a": {
+        "statement": "CENTRAL_OPENING: shape = the central opening has eight sides",
+        "source": {
+          "claim_id": "claim_001198",
+          "chunk_id": "chunk_0041",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1073,
+          "evidence": "gördüğümüz pencerelerin çoğu o açıklığın sekiz kenarına bakıyor"
+        }
+      },
+      "b": {
+        "statement": "CENTRAL_OPENING: shape = the central opening is octagonal",
+        "source": {
+          "claim_id": "claim_001389",
+          "chunk_id": "chunk_0051",
+          "chapter": "GÜNBATIMI Başrahip yeniden ziyaretçilerle konuşuyor; William’ın labirentin bilmecesini çözmek için bazı şaşırtıcı fikirleri vardır; sonunda bunu çok mantıklı bir biçimde basanı: Sonra William’la Adso eritme peynir yerler.",
+          "paragraph": 1336,
+          "evidence": "Sekizgen"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Having eight sides and being octagonal mean the same thing; this is a duplicate, not a contradiction.",
+      "topic": "central opening shape"
+    },
+    {
+      "id": "cand_8",
+      "type": "attribute_conflict",
+      "a": {
+        "statement": "LIBRARY: shape = heptagonal",
+        "source": {
+          "claim_id": "claim_001270",
+          "chunk_id": "chunk_0043",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1101,
+          "evidence": "Yedigen biçiminde yeni bir salona rastladık"
+        }
+      },
+      "b": {
+        "statement": "LIBRARY: shape = the central opening is octagonal",
+        "source": {
+          "claim_id": "claim_001410",
+          "chunk_id": "chunk_0052",
+          "chapter": "GÜNBATIMI Başrahip yeniden ziyaretçilerle konuşuyor; William’ın labirentin bilmecesini çözmek için bazı şaşırtıcı fikirleri vardır; sonunda bunu çok mantıklı bir biçimde basanı: Sonra William’la Adso eritme peynir yerler.",
+          "paragraph": 1336,
+          "evidence": "Sekizgen"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "One describes the room shape and the other the central opening, which are distinct architectural features.",
+      "topic": "library layout"
+    },
+    {
+      "id": "cand_9",
+      "type": "attribute_conflict",
+      "a": {
+        "statement": "LIBRARY: shape = heptagonal",
+        "source": {
+          "claim_id": "claim_001270",
+          "chunk_id": "chunk_0043",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1101,
+          "evidence": "Yedigen biçiminde yeni bir salona rastladık"
+        }
+      },
+      "b": {
+        "statement": "LIBRARY: shape = seven-sided room",
+        "source": {
+          "claim_id": "claim_001825",
+          "chunk_id": "chunk_0075",
+          "chapter": "AKŞAM Salvatore çok güçlü bir büyüden söz ediyor.",
+          "paragraph": 1887,
+          "evidence": "yedigen oda"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Heptagonal means seven-sided, so these two statements are equivalent descriptions of the same room.",
+      "topic": "library room shape"
+    },
+    {
+      "id": "cand_10",
+      "type": "attribute_conflict",
+      "a": {
+        "statement": "LIBRARY: shape = the central opening is octagonal",
+        "source": {
+          "claim_id": "claim_001410",
+          "chunk_id": "chunk_0052",
+          "chapter": "GÜNBATIMI Başrahip yeniden ziyaretçilerle konuşuyor; William’ın labirentin bilmecesini çözmek için bazı şaşırtıcı fikirleri vardır; sonunda bunu çok mantıklı bir biçimde basanı: Sonra William’la Adso eritme peynir yerler.",
+          "paragraph": 1336,
+          "evidence": "Sekizgen"
+        }
+      },
+      "b": {
+        "statement": "LIBRARY: shape = seven-sided room",
+        "source": {
+          "claim_id": "claim_001825",
+          "chunk_id": "chunk_0075",
+          "chapter": "AKŞAM Salvatore çok güçlü bir büyüden söz ediyor.",
+          "paragraph": 1887,
+          "evidence": "yedigen oda"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The central opening's octagonal shape and a seven-sided room refer to different parts of the library and do not conflict.",
+      "topic": "library layout"
+    },
+    {
+      "id": "cand_11",
+      "type": "attribute_conflict",
+      "a": {
+        "statement": "LIBRARY: shape = the central opening is octagonal",
+        "source": {
+          "claim_id": "claim_001410",
+          "chunk_id": "chunk_0052",
+          "chapter": "GÜNBATIMI Başrahip yeniden ziyaretçilerle konuşuyor; William’ın labirentin bilmecesini çözmek için bazı şaşırtıcı fikirleri vardır; sonunda bunu çok mantıklı bir biçimde basanı: Sonra William’la Adso eritme peynir yerler.",
+          "paragraph": 1336,
+          "evidence": "Sekizgen"
+        }
+      },
+      "b": {
+        "statement": "LIBRARY: shape = the room is heptagonal",
+        "source": {
+          "claim_id": "claim_002678",
+          "chunk_id": "chunk_0112",
+          "chapter": "YEDİNCİ GÜN",
+          "paragraph": 2718,
+          "evidence": "Kendimizi yedigen biçimde... bir odanın eşiğinde bulduk"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The octagonal central opening and heptagonal room are separate features that can both exist.",
+      "topic": "library layout"
+    },
+    {
+      "id": "cand_12",
+      "type": "attribute_conflict",
+      "a": {
+        "statement": "LIBRARY: shape = seven-sided room",
+        "source": {
+          "claim_id": "claim_001825",
+          "chunk_id": "chunk_0075",
+          "chapter": "AKŞAM Salvatore çok güçlü bir büyüden söz ediyor.",
+          "paragraph": 1887,
+          "evidence": "yedigen oda"
+        }
+      },
+      "b": {
+        "statement": "LIBRARY: shape = the room is heptagonal",
+        "source": {
+          "claim_id": "claim_002678",
+          "chunk_id": "chunk_0112",
+          "chapter": "YEDİNCİ GÜN",
+          "paragraph": 2718,
+          "evidence": "Kendimizi yedigen biçimde... bir odanın eşiğinde bulduk"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Seven-sided and heptagonal are synonymous, so the two statements are duplicates.",
+      "topic": "library room shape"
+    },
+    {
+      "id": "cand_13",
+      "type": "attribute_conflict",
+      "a": {
+        "statement": "LIBRARY: number_of_towers = four towers in total (this one plus three others)",
+        "source": {
+          "claim_id": "claim_001890",
+          "chunk_id": "chunk_0076",
+          "chapter": "AKŞAM DUASINDAN SONRA William’la Adso bir kez daha labirente giriyorlar; finis Africae’nin eşiğine varıyorlar, ama içeri giremiyorlar, çünkü dördün birincisinin ve dördün yedincisinin ne olduğunu bilmemektedirler; sonunda Adso’nun sevda hastalığı depreşiyor, ama bu kez oldukça bilgince.",
+          "paragraph": 1939,
+          "evidence": "Öteki üç kulenin tüm öteki kör odaları gibi"
+        }
+      },
+      "b": {
+        "statement": "LIBRARY: number_of_towers = four towers implied (the current one plus the other three)",
+        "source": {
+          "claim_id": "claim_001904",
+          "chunk_id": "chunk_0077",
+          "chapter": "AKŞAM DUASINDAN SONRA William’la Adso bir kez daha labirente giriyorlar; finis Africae’nin eşiğine varıyorlar, ama içeri giremiyorlar, çünkü dördün birincisinin ve dördün yedincisinin ne olduğunu bilmemektedirler; sonunda Adso’nun sevda hastalığı depreşiyor, ama bu kez oldukça bilgince.",
+          "paragraph": 1939,
+          "evidence": "Öteki üç kulenin tüm öteki kör odaları gibi"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Both statements assert exactly the same fact (four towers = this one plus three others) and even cite the identical chapter, paragraph and evidence; they are duplicates, not a conflict.",
+      "topic": "library towers"
+    },
+    {
+      "id": "cand_14",
+      "type": "inverse_relation_conflict",
+      "a": {
+        "statement": "CHARACTERS outside CHURCH",
+        "source": {
+          "claim_id": "claim_001265",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1102,
+          "evidence": "Yeniden kiliseye girip kuzey kapısından dışarı çıktık; mutlu mutlu mezartaşlarının üstüne oturduk"
+        }
+      },
+      "b": {
+        "statement": "CHARACTERS inside CHURCH",
+        "source": {
+          "claim_id": "claim_001263",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1102,
+          "evidence": "Yeniden kiliseye girip kuzey kapısından dışarı çıktık"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The single sentence records entering the church and then going out its north door to sit on the gravestones, so 'inside' and 'outside' hold at different moments of the same sequence.",
+      "topic": "characters location"
+    },
+    {
+      "id": "cand_15",
+      "type": "inverse_relation_conflict",
+      "a": {
+        "statement": "CELLARER outside LABORATORY",
+        "source": {
+          "claim_id": "claim_002151",
+          "chunk_id": "chunk_0087",
+          "chapter": "SABAH Severinus William’a tuhaf bir hitaptan söz ediyor; William ise elçilere tuhaf bir yönetim kavramından söz ediyor.",
+          "paragraph": 2141,
+          "evidence": "kilerci itile kakıla kapının eşiğini aşarken"
+        }
+      },
+      "b": {
+        "statement": "CELLARER inside LABORATORY",
+        "source": {
+          "claim_id": "claim_002138",
+          "chunk_id": "chunk_0087",
+          "chapter": "SABAH Severinus William’a tuhaf bir hitaptan söz ediyor; William ise elçilere tuhaf bir yönetim kavramından söz ediyor.",
+          "paragraph": 2136,
+          "evidence": "Odanın öteki ucunda iki okçu kilerciyi kıskıvrak yakalamışlardı"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The cellarer is first pinned inside the room (paragraph 2136) and then shoved across the door threshold (paragraph 2141), which is a sequential change of location rather than a contradiction.",
+      "topic": "cellarer location"
+    },
+    {
+      "id": "cand_16",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "ABBEY entered_through WALL",
+        "source": {
+          "claim_id": "claim_000059",
+          "chunk_id": "chunk_0004",
+          "chapter": "ÖNDEYİŞ",
+          "paragraph": 99,
+          "evidence": "onlara ziyaretçimizin surlardan girmek üzere olduğunu bildir"
+        }
+      },
+      "b": {
+        "statement": "ABBEY entered_through AEDIFICIUM",
+        "source": {
+          "claim_id": "claim_000973",
+          "chunk_id": "chunk_0038",
+          "chapter": "İKİNDİ Başrahip manastırının zengin teriyle övündüğünü, sapkınlardan çekindiğini gösteriyor; sonunda Adso dünyayı dolaşmakla kötü bir şey mi yaptığından kuşku duyuyor.",
+          "paragraph": 916,
+          "evidence": "onu Aedificium'a çıkarken buldum"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "One fragment concerns a visitor approaching over the walls, the other concerns finding him going up to the Aedificium; they are different events and the Aedificium is inside the abbey, so no conflict.",
+      "topic": "abbey entry"
+    },
+    {
+      "id": "cand_17",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "ABBEY entered_through WALL",
+        "source": {
+          "claim_id": "claim_000059",
+          "chunk_id": "chunk_0004",
+          "chapter": "ÖNDEYİŞ",
+          "paragraph": 99,
+          "evidence": "onlara ziyaretçimizin surlardan girmek üzere olduğunu bildir"
+        }
+      },
+      "b": {
+        "statement": "ABBEY entered_through GATE",
+        "source": {
+          "claim_id": "claim_002476",
+          "chunk_id": "chunk_0106",
+          "chapter": "SABAH Adso, “Dies irae’yi“ dinlerken bir düş görüyor, ya da dilerseniz, bir görüntü diyelim.",
+          "paragraph": 2550,
+          "evidence": "Afallamış, ana kapıdan çıktım"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "One describes entering the abbey over the walls, the other describes Adso leaving by the main gate; different directions and occasions, so they do not contradict.",
+      "topic": "abbey entry/exit"
+    },
+    {
+      "id": "cand_18",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above AEDIFICIUM",
+        "source": {
+          "claim_id": "claim_000171",
+          "chunk_id": "chunk_0007",
+          "chapter": "SABAH William, Başrahip’le öğretici bir konuşma yapıyor.",
+          "paragraph": 165,
+          "evidence": "onun üstündeki iki katta da, yazı salonuyla kitaplık"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above AEDIFICIUM_GROUND_FLOOR",
+        "source": {
+          "claim_id": "claim_000384",
+          "chunk_id": "chunk_0017",
+          "chapter": "İKİNDİ William şifalı bitkiler uzmanı Severinus’lu bilginle bir konuşma yapıyor.",
+          "paragraph": 424,
+          "evidence": "üst kattaki yazı salonuna"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "'Above the Aedificium' and 'above the Aedificium's ground floor' are the same relation at different granularity, and the second is a refinement of the first.",
+      "topic": "scriptorium location"
+    },
+    {
+      "id": "cand_19",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above AEDIFICIUM",
+        "source": {
+          "claim_id": "claim_000171",
+          "chunk_id": "chunk_0007",
+          "chapter": "SABAH William, Başrahip’le öğretici bir konuşma yapıyor.",
+          "paragraph": 165,
+          "evidence": "onun üstündeki iki katta da, yazı salonuyla kitaplık"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above KITCHEN",
+        "source": {
+          "claim_id": "claim_000810",
+          "chunk_id": "chunk_0030",
+          "chapter": "SABAH Konuklar halktan kişiler arasında bir kavgaya tanık oluyorlar. Alessandria’lı Aymaro bazı şeyler ima ediyor; Adso ermişlik ve Şeytan’ın tersi üstüne düşünüyor. Sonra William’la Adso yazı salonuna dönüyorlar; William, orada ilginç bir şey görüyor; gülmenin mübahlığı üstüne üçüncü bir konuşma yapıyor, ama sonunda istediği yere bakamıyor.",
+          "paragraph": 761,
+          "evidence": "Yazı salonunun, yeterli ısının geldiği mutfağın üstünde bulunması bir rastlantı değildi"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The kitchen lies on the ground floor of the Aedificium, so the scriptorium being above the kitchen is consistent with its being above the Aedificium.",
+      "topic": "scriptorium location"
+    },
+    {
+      "id": "cand_20",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above AEDIFICIUM",
+        "source": {
+          "claim_id": "claim_000171",
+          "chunk_id": "chunk_0007",
+          "chapter": "SABAH William, Başrahip’le öğretici bir konuşma yapıyor.",
+          "paragraph": 165,
+          "evidence": "onun üstündeki iki katta da, yazı salonuyla kitaplık"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above ABBEY",
+        "source": {
+          "claim_id": "claim_001126",
+          "chunk_id": "chunk_0040",
+          "chapter": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+          "paragraph": 1034,
+          "evidence": "yasak kata çıkan doğu merdiveninden yeniden yazı salonuna çıktık"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The abbey is the whole complex that contains the Aedificium, so 'above the abbey' and 'above the Aedificium' are not mutually exclusive descriptions.",
+      "topic": "scriptorium location"
+    },
+    {
+      "id": "cand_21",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above AEDIFICIUM",
+        "source": {
+          "claim_id": "claim_000171",
+          "chunk_id": "chunk_0007",
+          "chapter": "SABAH William, Başrahip’le öğretici bir konuşma yapıyor.",
+          "paragraph": 165,
+          "evidence": "onun üstündeki iki katta da, yazı salonuyla kitaplık"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above CHURCH",
+        "source": {
+          "claim_id": "claim_001297",
+          "chunk_id": "chunk_0043",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1128,
+          "evidence": "Kiliseden ... çıktım ... Yazı salonuna çıktım"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Going up from the church to the scriptorium does not contradict the scriptorium being above the Aedificium; church and Aedificium are adjacent parts of the same complex.",
+      "topic": "scriptorium location"
+    },
+    {
+      "id": "cand_22",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above AEDIFICIUM",
+        "source": {
+          "claim_id": "claim_000171",
+          "chunk_id": "chunk_0007",
+          "chapter": "SABAH William, Başrahip’le öğretici bir konuşma yapıyor.",
+          "paragraph": 165,
+          "evidence": "onun üstündeki iki katta da, yazı salonuyla kitaplık"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above REFECTORY",
+        "source": {
+          "claim_id": "claim_001495",
+          "chunk_id": "chunk_0058",
+          "chapter": "AKŞAM DUASINDAN SONRA Ubertino, Fra Dolcino’nun öyküsünü anlatıyor. Adso bunun üzerine başka öyküleri anımsıyor ya da kitaplıkta okuyor; sonra savaş donanımına bürünmüş bir ordu gibi güzel ve ürkütücü bir genç kızla karşılaşıyor.",
+          "paragraph": 1481,
+          "evidence": "yemekhaneye inen basamaklardan aşağı attım kendimi"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The refectory is on the ground floor of the Aedificium, so descending from the scriptorium toward the refectory is consistent with the scriptorium being above the Aedificium.",
+      "topic": "scriptorium location"
+    },
+    {
+      "id": "cand_23",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above AEDIFICIUM",
+        "source": {
+          "claim_id": "claim_000171",
+          "chunk_id": "chunk_0007",
+          "chapter": "SABAH William, Başrahip’le öğretici bir konuşma yapıyor.",
+          "paragraph": 165,
+          "evidence": "onun üstündeki iki katta da, yazı salonuyla kitaplık"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above COURTYARD",
+        "source": {
+          "claim_id": "claim_001775",
+          "chunk_id": "chunk_0073",
+          "chapter": "İKİNDİ Poggetto Kardinali, Bernardo Gui ve Avignon’lu öteki adamlar geliyorlar; sonra her biri başka başka şeyler yapıyorlar.",
+          "paragraph": 1822,
+          "evidence": "yazı salonundan keyifli indi"
+        }
+      },
+      "verdict": "uncertain",
+      "explanation": "The evidence only says he came down from the scriptorium and never places the scriptorium above the courtyard, so the two targets cannot be confirmed as conflicting or as equivalent.",
+      "topic": "scriptorium location"
+    },
+    {
+      "id": "cand_24",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above AEDIFICIUM",
+        "source": {
+          "claim_id": "claim_000171",
+          "chunk_id": "chunk_0007",
+          "chapter": "SABAH William, Başrahip’le öğretici bir konuşma yapıyor.",
+          "paragraph": 165,
+          "evidence": "onun üstündeki iki katta da, yazı salonuyla kitaplık"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above LABORATORY",
+        "source": {
+          "claim_id": "claim_002180",
+          "chunk_id": "chunk_0088",
+          "chapter": "ÖĞLE Severinus ölü bulunuyor; bulmuş olduğu kitap ortada yoktur.",
+          "paragraph": 2188,
+          "evidence": "Yazı salonuna çık, Malachi’yi gözle"
+        }
+      },
+      "verdict": "uncertain",
+      "explanation": "The fragment merely orders someone to go up to the scriptorium and never establishes that it is above the laboratory (which belongs to a separate building), so the relations cannot be resolved from the given text.",
+      "topic": "scriptorium location"
+    },
+    {
+      "id": "cand_25",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above AEDIFICIUM",
+        "source": {
+          "claim_id": "claim_000171",
+          "chunk_id": "chunk_0007",
+          "chapter": "SABAH William, Başrahip’le öğretici bir konuşma yapıyor.",
+          "paragraph": 165,
+          "evidence": "onun üstündeki iki katta da, yazı salonuyla kitaplık"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above TREASURY",
+        "source": {
+          "claim_id": "claim_002402",
+          "chunk_id": "chunk_0103",
+          "chapter": "TANSÖKÜMÜ Yeraltı hazinesinin ziyaret edilişi sırasında Nicola birçok şey anlatıyor.",
+          "paragraph": 2512,
+          "evidence": "Yazı salonuna çıkıyorum; bir şeye daha bakmam gerek"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The scriptorium can lie above the Aedificium's lower levels while the treasury is one of those underground/lower parts, so both 'above' targets refer to the same building at different levels.",
+      "topic": "scriptorium position"
+    },
+    {
+      "id": "cand_26",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above AEDIFICIUM",
+        "source": {
+          "claim_id": "claim_000171",
+          "chunk_id": "chunk_0007",
+          "chapter": "SABAH William, Başrahip’le öğretici bir konuşma yapıyor.",
+          "paragraph": 165,
+          "evidence": "onun üstündeki iki katta da, yazı salonuyla kitaplık"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above UNKNOWN_LOWER_LOCATION",
+        "source": {
+          "claim_id": "claim_002486",
+          "chunk_id": "chunk_0107",
+          "chapter": "ÖĞLEYE DOĞRU William Adso’ya gördüğü düşü açıklıyor.",
+          "paragraph": 2571,
+          "evidence": "William yeniden, az önce indiği yazı salonuna çıkmak istiyordu."
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "One statement places the scriptorium above the Aedificium, the other merely has a character go up to the scriptorium without naming a conflicting lower location; no contradiction arises.",
+      "topic": "scriptorium position"
+    },
+    {
+      "id": "cand_27",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "LIBRARY above AEDIFICIUM",
+        "source": {
+          "claim_id": "claim_000172",
+          "chunk_id": "chunk_0007",
+          "chapter": "SABAH William, Başrahip’le öğretici bir konuşma yapıyor.",
+          "paragraph": 165,
+          "evidence": "onun üstündeki iki katta da, yazı salonuyla kitaplık"
+        }
+      },
+      "b": {
+        "statement": "LIBRARY above SCRIPTORIUM",
+        "source": {
+          "claim_id": "claim_000417",
+          "chunk_id": "chunk_0018",
+          "chapter": "İKİNDİDEN SONRA William ve Adso yazı salonunu ziyaret ediyorlar ve birçok araştırmacı, kopyacı ve baslık yazıcısı, bu arada, Deccal’ı bekleyen yaşlı bir körle tanışıyorlar.",
+          "paragraph": 436,
+          "evidence": "üst kattaki kitaplıktan alıp getiriyordu"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The library may be above the Aedificium and also above the scriptorium, since the scriptorium itself sits within the Aedificium; the two 'above' relations are nested, not conflicting.",
+      "topic": "library position"
+    },
+    {
+      "id": "cand_28",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "LIBRARY above AEDIFICIUM",
+        "source": {
+          "claim_id": "claim_000172",
+          "chunk_id": "chunk_0007",
+          "chapter": "SABAH William, Başrahip’le öğretici bir konuşma yapıyor.",
+          "paragraph": 165,
+          "evidence": "onun üstündeki iki katta da, yazı salonuyla kitaplık"
+        }
+      },
+      "b": {
+        "statement": "LIBRARY above ABBEY",
+        "source": {
+          "claim_id": "claim_001115",
+          "chunk_id": "chunk_0040",
+          "chapter": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+          "paragraph": 1019,
+          "evidence": "kitaplığa çıkalım"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The library being above the Aedificium and above the abbey are consistent, as the Aedificium is part of the abbey complex.",
+      "topic": "library position"
+    },
+    {
+      "id": "cand_29",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "WILLIAM inside ABBEY",
+        "source": {
+          "claim_id": "claim_000179",
+          "chunk_id": "chunk_0008",
+          "chapter": null,
+          "paragraph": 182,
+          "evidence": "tüm manastırın içinde serbestçe dolaşabilirsiniz"
+        }
+      },
+      "b": {
+        "statement": "WILLIAM inside LAMP_ROOM",
+        "source": {
+          "claim_id": "claim_001237",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1086,
+          "evidence": "seni hemen oradan uzaklaştırdım"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Being inside the lamp room is a specific instance of being inside the abbey, where William is free to move; no conflict.",
+      "topic": "William location"
+    },
+    {
+      "id": "cand_30",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "LIBRARY inside AEDIFICIUM",
+        "source": {
+          "claim_id": "claim_000180",
+          "chunk_id": "chunk_0008",
+          "chapter": null,
+          "paragraph": 188,
+          "evidence": "Aedificium'un en üst katında, kitaplıkta dolaşamazsınız"
+        }
+      },
+      "b": {
+        "statement": "LIBRARY inside WALL",
+        "source": {
+          "claim_id": "claim_000431",
+          "chunk_id": "chunk_0018",
+          "chapter": "İKİNDİDEN SONRA William ve Adso yazı salonunu ziyaret ediyorlar ve birçok araştırmacı, kopyacı ve baslık yazıcısı, bu arada, Deccal’ı bekleyen yaşlı bir körle tanışıyorlar.",
+          "paragraph": 444,
+          "evidence": "Kitaplar da alınış, bağış, duvarlarımız arasına giriş sırasına göre kaydedilir"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "'Within our walls' is a figurative way of saying the library is inside the abbey/Aedificium, so both statements agree.",
+      "topic": "library container"
+    },
+    {
+      "id": "cand_31",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "LIBRARY inside AEDIFICIUM",
+        "source": {
+          "claim_id": "claim_000180",
+          "chunk_id": "chunk_0008",
+          "chapter": null,
+          "paragraph": 188,
+          "evidence": "Aedificium'un en üst katında, kitaplıkta dolaşamazsınız"
+        }
+      },
+      "b": {
+        "statement": "LIBRARY inside TOWER",
+        "source": {
+          "claim_id": "claim_001214",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1071,
+          "evidence": "bir başka kulenin beşgeni içindeyiz"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The library is inside the Aedificium, and the Aedificium's upper structure is the tower/pentagon rooms, so 'inside the tower' is a sub-location, not a contradiction.",
+      "topic": "library container"
+    },
+    {
+      "id": "cand_32",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "ABBEY above SETTLEMENTS",
+        "source": {
+          "claim_id": "claim_000199",
+          "chunk_id": "chunk_0008",
+          "chapter": null,
+          "paragraph": 195,
+          "evidence": "aşağıda, ermişlik ruhunun barınamayacağı büyük yerleşmelerde"
+        }
+      },
+      "b": {
+        "statement": "ABBEY above CITY",
+        "source": {
+          "claim_id": "claim_000795",
+          "chunk_id": "chunk_0029",
+          "chapter": "SABAH Konuklar halktan kişiler arasında bir kavgaya tanık oluyorlar. Alessandria’lı Aymaro bazı şeyler ima ediyor; Adso ermişlik ve Şeytan’ın tersi üstüne düşünüyor. Sonra William’la Adso yazı salonuna dönüyorlar; William, orada ilginç bir şey görüyor; gülmenin mübahlığı üstüne üçüncü bir konuşma yapıyor, ama sonunda istediği yere bakamıyor.",
+          "paragraph": 736,
+          "evidence": "Biz burada, yukarıdayız, oysa aşağıda, kentte insanlar eylemdeler"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The abbey sits above both the settlements and the city below the hill; these describe the same elevation relation with different wording.",
+      "topic": "abbey elevation"
+    },
+    {
+      "id": "cand_33",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "ABBEY above SETTLEMENTS",
+        "source": {
+          "claim_id": "claim_000199",
+          "chunk_id": "chunk_0008",
+          "chapter": null,
+          "paragraph": 195,
+          "evidence": "aşağıda, ermişlik ruhunun barınamayacağı büyük yerleşmelerde"
+        }
+      },
+      "b": {
+        "statement": "ABBEY above LOWER_FLOOR",
+        "source": {
+          "claim_id": "claim_002525",
+          "chunk_id": "chunk_0109",
+          "chapter": "İKİNDİ Başrahip, William’ı dinlemek istemiyor; değerli taşların dili üstüne konuşuyor, son üzücü olaylarla ilgili soruşturmanın sürdürülmemesi isteğini dile getiriyor.",
+          "paragraph": 2632,
+          "evidence": "alt kata inen merdivenin başında bekledim"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The abbey being above the valley settlements and a character waiting at stairs to a lower floor are different scales and moments; no conflict.",
+      "topic": "abbey elevation"
+    },
+    {
+      "id": "cand_34",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "CHURCH entered_through CHURCH_DOOR",
+        "source": {
+          "claim_id": "claim_000294",
+          "chunk_id": "chunk_0015",
+          "chapter": "ÖĞLE Adso kilisenin kapısına hayran oluyor, William ise Casale’li Ubertino’yu buluyor.",
+          "paragraph": 379,
+          "evidence": "Orta şahından geri döndük ve içeri girmiş olduğumuz kapıdan çıktık."
+        }
+      },
+      "b": {
+        "statement": "CHURCH entered_through SIDE_DOOR",
+        "source": {
+          "claim_id": "claim_000722",
+          "chunk_id": "chunk_0027",
+          "chapter": "TANSÖKÜMÜ Upsala’lı Benno bazı gizler açıklıyor Arundel’li Berengar da. Adso ise gerçek tövbenin ne olduğunu öğreniyor.",
+          "paragraph": 677,
+          "evidence": "Berengar'ın yan kapıdan çıkıp mezarlığın içinden geçerek Aedificium'a yöneldiğini farkettik"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A church can be entered through a main door on one occasion and a side door on another; the fragments describe different moments.",
+      "topic": "church entrance"
+    },
+    {
+      "id": "cand_35",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "CHURCH entered_through CHURCH_DOOR",
+        "source": {
+          "claim_id": "claim_000294",
+          "chunk_id": "chunk_0015",
+          "chapter": "ÖĞLE Adso kilisenin kapısına hayran oluyor, William ise Casale’li Ubertino’yu buluyor.",
+          "paragraph": 379,
+          "evidence": "Orta şahından geri döndük ve içeri girmiş olduğumuz kapıdan çıktık."
+        }
+      },
+      "b": {
+        "statement": "CHURCH entered_through NORTH_GATE",
+        "source": {
+          "claim_id": "claim_001281",
+          "chunk_id": "chunk_0043",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1102,
+          "evidence": "kuzey kapısından dışarı çıkıp ... mezartaşlarının üstüne oturduk"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Entering through the main church door and later passing out a north gate are not mutually exclusive; churches/compounds commonly have several openings.",
+      "topic": "church entrance"
+    },
+    {
+      "id": "cand_36",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "CHURCH entered_through CHURCH_DOOR",
+        "source": {
+          "claim_id": "claim_000294",
+          "chunk_id": "chunk_0015",
+          "chapter": "ÖĞLE Adso kilisenin kapısına hayran oluyor, William ise Casale’li Ubertino’yu buluyor.",
+          "paragraph": 379,
+          "evidence": "Orta şahından geri döndük ve içeri girmiş olduğumuz kapıdan çıktık."
+        }
+      },
+      "b": {
+        "statement": "CHURCH entered_through COURTYARD",
+        "source": {
+          "claim_id": "claim_001978",
+          "chunk_id": "chunk_0078",
+          "chapter": "AKŞAM DUASINDAN SONRA William’la Adso bir kez daha labirente giriyorlar; finis Africae’nin eşiğine varıyorlar, ama içeri giremiyorlar, çünkü dördün birincisinin ve dördün yedincisinin ne olduğunu bilmemektedirler; sonunda Adso’nun sevda hastalığı depreşiyor, ama bu kez oldukça bilgince.",
+          "paragraph": 1966,
+          "evidence": "güney kapısından dışarı çıktık; avluda meşalelerin parıltısını gördük"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Using the main door and later exiting a south door into the courtyard are different exits on different occasions, not a contradiction.",
+      "topic": "church entrance"
+    },
+    {
+      "id": "cand_37",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "INFIRMARY inside AEDIFICIUM",
+        "source": {
+          "claim_id": "claim_000332",
+          "chunk_id": "chunk_0016",
+          "chapter": "ÖĞLE Adso kilisenin kapısına hayran oluyor, William ise Casale’li Ubertino’yu buluyor.",
+          "paragraph": 420,
+          "evidence": "öteki yarısında hastane vardır"
+        }
+      },
+      "b": {
+        "statement": "INFIRMARY inside INFIRMARY_ROOM",
+        "source": {
+          "claim_id": "claim_001606",
+          "chunk_id": "chunk_0063",
+          "chapter": "DÖRDÜNCÜ GÜN",
+          "paragraph": 1586,
+          "evidence": "fırtına şimdi içinde bulunduğumuz odayı allak bullak etti"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "the second states the infirmary lies within its own infirmary room, which is consistent with the infirmary lying within the Aedificium; no mutually exclusive containers are asserted.",
+      "topic": "infirmary containment"
+    },
+    {
+      "id": "cand_38",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "COURTYARD inside AEDIFICIUM",
+        "source": {
+          "claim_id": "claim_000354",
+          "chunk_id": "chunk_0017",
+          "chapter": "İKİNDİ William şifalı bitkiler uzmanı Severinus’lu bilginle bir konuşma yapıyor.",
+          "paragraph": 421,
+          "evidence": "Aedificium'un içinde, yapının yüksekliğinde, sekizgen bir avlu bulunduğunu farkettim"
+        }
+      },
+      "b": {
+        "statement": "COURTYARD inside ABBEY",
+        "source": {
+          "claim_id": "claim_001763",
+          "chunk_id": "chunk_0072",
+          "chapter": "ÖĞLE Adso domalan toplamaya gidiyor. Minoritlerin gelmekte olduklarını görüyor; William ve Ubertino ile Minoritler uzun uzun konuşuyorlar; XXII. Ioannes hakkında çok acıklı şeyler öğreniliyor.",
+          "paragraph": 1808,
+          "evidence": "görünürde alçakgönüllülükle avluda selamlaştılar"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "the Aedificium is part of the abbey, so a courtyard inside the Aedificium is also inside the abbey; the two targets are nested, not conflicting.",
+      "topic": "courtyard containment"
+    },
+    {
+      "id": "cand_39",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "COURTYARD inside AEDIFICIUM",
+        "source": {
+          "claim_id": "claim_000354",
+          "chunk_id": "chunk_0017",
+          "chapter": "İKİNDİ William şifalı bitkiler uzmanı Severinus’lu bilginle bir konuşma yapıyor.",
+          "paragraph": 421,
+          "evidence": "Aedificium'un içinde, yapının yüksekliğinde, sekizgen bir avlu bulunduğunu farkettim"
+        }
+      },
+      "b": {
+        "statement": "COURTYARD inside MEETING_HALL",
+        "source": {
+          "claim_id": "claim_002045",
+          "chunk_id": "chunk_0080",
+          "chapter": "GECE Salvatore acıklı bir biçimde Bernardo Gui tarafından görülüyor, Adso’nun sevdiği kız büyücülük suçuyla yakalanıyor ve herkes eskisinden daha da mutsuz ve kaygılı yatmaya gidiyor.",
+          "paragraph": 2009,
+          "evidence": "içeride, eski bir giriş nefinin kalıntıları üstünde sonradan yapılmış bir avluda buluyordunuz kendinizi"
+        }
+      },
+      "verdict": "uncertain",
+      "explanation": "the fragments may refer to two different courtyards (the octagonal courtyard of the Aedificium vs. a courtyard built over an old nave), so it cannot be decided whether they conflict.",
+      "topic": "courtyard location"
+    },
+    {
+      "id": "cand_40",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "STAIRCASE inside TOWER",
+        "source": {
+          "claim_id": "claim_000379",
+          "chunk_id": "chunk_0017",
+          "chapter": "İKİNDİ William şifalı bitkiler uzmanı Severinus’lu bilginle bir konuşma yapıyor.",
+          "paragraph": 424,
+          "evidence": "ötekinde, üst kattaki yazı salonuna çıkan bir döner merdiven vardı"
+        }
+      },
+      "b": {
+        "statement": "STAIRCASE inside STAIRCASE_HALL",
+        "source": {
+          "claim_id": "claim_001257",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1101,
+          "evidence": "ansızın merdivenin başladığı salonu yeniden bulduk"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "a staircase that begins in a hall within the tower satisfies both statements; the staircase hall is plausibly part of the tower, so no conflict is shown.",
+      "topic": "staircase location"
+    },
+    {
+      "id": "cand_41",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above AEDIFICIUM_GROUND_FLOOR",
+        "source": {
+          "claim_id": "claim_000384",
+          "chunk_id": "chunk_0017",
+          "chapter": "İKİNDİ William şifalı bitkiler uzmanı Severinus’lu bilginle bir konuşma yapıyor.",
+          "paragraph": 424,
+          "evidence": "üst kattaki yazı salonuna"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above KITCHEN",
+        "source": {
+          "claim_id": "claim_000810",
+          "chunk_id": "chunk_0030",
+          "chapter": "SABAH Konuklar halktan kişiler arasında bir kavgaya tanık oluyorlar. Alessandria’lı Aymaro bazı şeyler ima ediyor; Adso ermişlik ve Şeytan’ın tersi üstüne düşünüyor. Sonra William’la Adso yazı salonuna dönüyorlar; William, orada ilginç bir şey görüyor; gülmenin mübahlığı üstüne üçüncü bir konuşma yapıyor, ama sonunda istediği yere bakamıyor.",
+          "paragraph": 761,
+          "evidence": "Yazı salonunun, yeterli ısının geldiği mutfağın üstünde bulunması bir rastlantı değildi"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "the kitchen lies on the ground floor, so a scriptorium above the kitchen is also above the ground floor; the specific statement entails the general one.",
+      "topic": "scriptorium containment"
+    },
+    {
+      "id": "cand_42",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above AEDIFICIUM_GROUND_FLOOR",
+        "source": {
+          "claim_id": "claim_000384",
+          "chunk_id": "chunk_0017",
+          "chapter": "İKİNDİ William şifalı bitkiler uzmanı Severinus’lu bilginle bir konuşma yapıyor.",
+          "paragraph": 424,
+          "evidence": "üst kattaki yazı salonuna"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above ABBEY",
+        "source": {
+          "claim_id": "claim_001126",
+          "chunk_id": "chunk_0040",
+          "chapter": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+          "paragraph": 1034,
+          "evidence": "yasak kata çıkan doğu merdiveninden yeniden yazı salonuna çıktık"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "the evidence only shows the scriptorium reached by the east staircase; a scriptorium above the abbey's ground level is not contradicted by being above the ground floor.",
+      "topic": "scriptorium containment"
+    },
+    {
+      "id": "cand_43",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above AEDIFICIUM_GROUND_FLOOR",
+        "source": {
+          "claim_id": "claim_000384",
+          "chunk_id": "chunk_0017",
+          "chapter": "İKİNDİ William şifalı bitkiler uzmanı Severinus’lu bilginle bir konuşma yapıyor.",
+          "paragraph": 424,
+          "evidence": "üst kattaki yazı salonuna"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above CHURCH",
+        "source": {
+          "claim_id": "claim_001297",
+          "chunk_id": "chunk_0043",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1128,
+          "evidence": "Kiliseden ... çıktım ... Yazı salonuna çıktım"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "reaching the scriptorium from the church does not conflict with the scriptorium being above the ground floor, since the church stands on the same abbey ground level.",
+      "topic": "scriptorium containment"
+    },
+    {
+      "id": "cand_44",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above AEDIFICIUM_GROUND_FLOOR",
+        "source": {
+          "claim_id": "claim_000384",
+          "chunk_id": "chunk_0017",
+          "chapter": "İKİNDİ William şifalı bitkiler uzmanı Severinus’lu bilginle bir konuşma yapıyor.",
+          "paragraph": 424,
+          "evidence": "üst kattaki yazı salonuna"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above REFECTORY",
+        "source": {
+          "claim_id": "claim_001495",
+          "chunk_id": "chunk_0058",
+          "chapter": "AKŞAM DUASINDAN SONRA Ubertino, Fra Dolcino’nun öyküsünü anlatıyor. Adso bunun üzerine başka öyküleri anımsıyor ya da kitaplıkta okuyor; sonra savaş donanımına bürünmüş bir ordu gibi güzel ve ürkütücü bir genç kızla karşılaşıyor.",
+          "paragraph": 1481,
+          "evidence": "yemekhaneye inen basamaklardan aşağı attım kendimi"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "the refectory is on the ground floor, so a scriptorium above the refectory is also above the ground floor; the two are consistent.",
+      "topic": "scriptorium containment"
+    },
+    {
+      "id": "cand_45",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above AEDIFICIUM_GROUND_FLOOR",
+        "source": {
+          "claim_id": "claim_000384",
+          "chunk_id": "chunk_0017",
+          "chapter": "İKİNDİ William şifalı bitkiler uzmanı Severinus’lu bilginle bir konuşma yapıyor.",
+          "paragraph": 424,
+          "evidence": "üst kattaki yazı salonuna"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above COURTYARD",
+        "source": {
+          "claim_id": "claim_001775",
+          "chunk_id": "chunk_0073",
+          "chapter": "İKİNDİ Poggetto Kardinali, Bernardo Gui ve Avignon’lu öteki adamlar geliyorlar; sonra her biri başka başka şeyler yapıyorlar.",
+          "paragraph": 1822,
+          "evidence": "yazı salonundan keyifli indi"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "coming down from the scriptorium implies it is on an upper level; being above the courtyard is compatible with being above the ground floor.",
+      "topic": "scriptorium containment"
+    },
+    {
+      "id": "cand_46",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above AEDIFICIUM_GROUND_FLOOR",
+        "source": {
+          "claim_id": "claim_000384",
+          "chunk_id": "chunk_0017",
+          "chapter": "İKİNDİ William şifalı bitkiler uzmanı Severinus’lu bilginle bir konuşma yapıyor.",
+          "paragraph": 424,
+          "evidence": "üst kattaki yazı salonuna"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above LABORATORY",
+        "source": {
+          "claim_id": "claim_002180",
+          "chunk_id": "chunk_0088",
+          "chapter": "ÖĞLE Severinus ölü bulunuyor; bulmuş olduğu kitap ortada yoktur.",
+          "paragraph": 2188,
+          "evidence": "Yazı salonuna çık, Malachi’yi gözle"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "the fragment concerns going up to the scriptorium and does not assert a mutually exclusive lower location; no conflict with the ground-floor target is shown.",
+      "topic": "scriptorium containment"
+    },
+    {
+      "id": "cand_47",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above AEDIFICIUM_GROUND_FLOOR",
+        "source": {
+          "claim_id": "claim_000384",
+          "chunk_id": "chunk_0017",
+          "chapter": "İKİNDİ William şifalı bitkiler uzmanı Severinus’lu bilginle bir konuşma yapıyor.",
+          "paragraph": 424,
+          "evidence": "üst kattaki yazı salonuna"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above TREASURY",
+        "source": {
+          "claim_id": "claim_002402",
+          "chunk_id": "chunk_0103",
+          "chapter": "TANSÖKÜMÜ Yeraltı hazinesinin ziyaret edilişi sırasında Nicola birçok şey anlatıyor.",
+          "paragraph": 2512,
+          "evidence": "Yazı salonuna çıkıyorum; bir şeye daha bakmam gerek"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "the treasury is underground, so a scriptorium above the ground floor is still above it; the two targets are not mutually exclusive.",
+      "topic": "scriptorium containment"
+    },
+    {
+      "id": "cand_48",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above AEDIFICIUM_GROUND_FLOOR",
+        "source": {
+          "claim_id": "claim_000384",
+          "chunk_id": "chunk_0017",
+          "chapter": "İKİNDİ William şifalı bitkiler uzmanı Severinus’lu bilginle bir konuşma yapıyor.",
+          "paragraph": 424,
+          "evidence": "üst kattaki yazı salonuna"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above UNKNOWN_LOWER_LOCATION",
+        "source": {
+          "claim_id": "claim_002486",
+          "chunk_id": "chunk_0107",
+          "chapter": "ÖĞLEYE DOĞRU William Adso’ya gördüğü düşü açıklıyor.",
+          "paragraph": 2571,
+          "evidence": "William yeniden, az önce indiği yazı salonuna çıkmak istiyordu."
+        }
+      },
+      "verdict": "uncertain",
+      "explanation": "the lower location is unspecified (UNKNOWN_LOWER_LOCATION), so whether it conflicts with the ground floor cannot be determined.",
+      "topic": "scriptorium containment"
+    },
+    {
+      "id": "cand_49",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "LIBRARY above SCRIPTORIUM",
+        "source": {
+          "claim_id": "claim_000417",
+          "chunk_id": "chunk_0018",
+          "chapter": "İKİNDİDEN SONRA William ve Adso yazı salonunu ziyaret ediyorlar ve birçok araştırmacı, kopyacı ve baslık yazıcısı, bu arada, Deccal’ı bekleyen yaşlı bir körle tanışıyorlar.",
+          "paragraph": 436,
+          "evidence": "üst kattaki kitaplıktan alıp getiriyordu"
+        }
+      },
+      "b": {
+        "statement": "LIBRARY above ABBEY",
+        "source": {
+          "claim_id": "claim_001115",
+          "chunk_id": "chunk_0040",
+          "chapter": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+          "paragraph": 1019,
+          "evidence": "kitaplığa çıkalım"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Both simply place the library on an upper level; 'scriptorium' and the abbey/Aedificium are not mutually exclusive frames of reference, so the two can hold together.",
+      "topic": "library elevation"
+    },
+    {
+      "id": "cand_50",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "LIBRARY inside WALL",
+        "source": {
+          "claim_id": "claim_000431",
+          "chunk_id": "chunk_0018",
+          "chapter": "İKİNDİDEN SONRA William ve Adso yazı salonunu ziyaret ediyorlar ve birçok araştırmacı, kopyacı ve baslık yazıcısı, bu arada, Deccal’ı bekleyen yaşlı bir körle tanışıyorlar.",
+          "paragraph": 444,
+          "evidence": "Kitaplar da alınış, bağış, duvarlarımız arasına giriş sırasına göre kaydedilir"
+        }
+      },
+      "b": {
+        "statement": "LIBRARY inside TOWER",
+        "source": {
+          "claim_id": "claim_001214",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1071,
+          "evidence": "bir başka kulenin beşgeni içindeyiz"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A library can lie both within the building's walls and within one of its towers; the two containments are nested, not conflicting.",
+      "topic": "library location"
+    },
+    {
+      "id": "cand_51",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "KITCHEN below SCRIPTORIUM",
+        "source": {
+          "claim_id": "claim_000472",
+          "chunk_id": "chunk_0020",
+          "chapter": "İKİNDİDEN SONRA William ve Adso yazı salonunu ziyaret ediyorlar ve birçok araştırmacı, kopyacı ve baslık yazıcısı, bu arada, Deccal’ı bekleyen yaşlı bir körle tanışıyorlar.",
+          "paragraph": 484,
+          "evidence": "mutfağa ve hastaneye açılan aşağıdaki kapıları kilitlerim"
+        }
+      },
+      "b": {
+        "statement": "KITCHEN below SPIRAL_STAIRCASE",
+        "source": {
+          "claim_id": "claim_001069",
+          "chunk_id": "chunk_0039",
+          "chapter": "GÜNBATIMINDAN SONRA Bu kısa bölümde yaşlı Alinardo, labirente ve oraya nasıl girileceğine dair çok ilginç şeyler anlatıyor.",
+          "paragraph": 973,
+          "evidence": "yazı salonuna çıkan sarmal merdivenin tam altında"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The spiral staircase leads up to the scriptorium, so the kitchen on the lower level can be below both the scriptorium and that staircase.",
+      "topic": "kitchen elevation"
+    },
+    {
+      "id": "cand_52",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "KITCHEN below SCRIPTORIUM",
+        "source": {
+          "claim_id": "claim_000472",
+          "chunk_id": "chunk_0020",
+          "chapter": "İKİNDİDEN SONRA William ve Adso yazı salonunu ziyaret ediyorlar ve birçok araştırmacı, kopyacı ve baslık yazıcısı, bu arada, Deccal’ı bekleyen yaşlı bir körle tanışıyorlar.",
+          "paragraph": 484,
+          "evidence": "mutfağa ve hastaneye açılan aşağıdaki kapıları kilitlerim"
+        }
+      },
+      "b": {
+        "statement": "KITCHEN below TREASURY",
+        "source": {
+          "claim_id": "claim_002417",
+          "chunk_id": "chunk_0103",
+          "chapter": "TANSÖKÜMÜ Yeraltı hazinesinin ziyaret edilişi sırasında Nicola birçok şey anlatıyor.",
+          "paragraph": 2527,
+          "evidence": "ama biraz daha aşağı inince, kendimi daha geniş bir mahzende buldum"
+        }
+      },
+      "verdict": "uncertain",
+      "explanation": "The fragments only show the kitchen below the scriptorium and a descent into a wider cellar; they do not establish the kitchen's relation to the treasury, and the underground treasury makes the second triple doubtful.",
+      "topic": "kitchen vs treasury"
+    },
+    {
+      "id": "cand_53",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "KITCHEN below SCRIPTORIUM",
+        "source": {
+          "claim_id": "claim_000472",
+          "chunk_id": "chunk_0020",
+          "chapter": "İKİNDİDEN SONRA William ve Adso yazı salonunu ziyaret ediyorlar ve birçok araştırmacı, kopyacı ve baslık yazıcısı, bu arada, Deccal’ı bekleyen yaşlı bir körle tanışıyorlar.",
+          "paragraph": 484,
+          "evidence": "mutfağa ve hastaneye açılan aşağıdaki kapıları kilitlerim"
+        }
+      },
+      "b": {
+        "statement": "KITCHEN below LIBRARY",
+        "source": {
+          "claim_id": "claim_002794",
+          "chunk_id": "chunk_0117",
+          "chapter": "GECE Yangın çıkıyor ve aşırı erdem yüzünden cehennem güçleri egemen oluyor.",
+          "paragraph": 2832,
+          "evidence": "Mutfakta, aşağıda mutfakta!"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The library sits above the scriptorium, which is above the kitchen, so the kitchen is below both without any conflict.",
+      "topic": "kitchen elevation"
+    },
+    {
+      "id": "cand_54",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM below SCRIPTORIUM",
+        "source": {
+          "claim_id": "claim_000490",
+          "chunk_id": "chunk_0021",
+          "chapter": "Birinci Gün",
+          "paragraph": 485,
+          "evidence": "Aşağı indik."
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM below LIBRARY",
+        "source": {
+          "claim_id": "claim_002800",
+          "chunk_id": "chunk_0117",
+          "chapter": "GECE Yangın çıkıyor ve aşırı erdem yüzünden cehennem güçleri egemen oluyor.",
+          "paragraph": 2834,
+          "evidence": "Aşağıda ay ışığı yazı salonunu belli belirsiz aydınlatıyordu"
+        }
+      },
+      "verdict": "uncertain",
+      "explanation": "One triple is a self-relation ('scriptorium below itself') that is likely a malformed extraction, so no genuine conflict with 'scriptorium below library' can be judged.",
+      "topic": "scriptorium position"
+    },
+    {
+      "id": "cand_55",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "NORTH_GATE north_of ABBEY",
+        "source": {
+          "claim_id": "claim_000655",
+          "chunk_id": "chunk_0024",
+          "chapter": "İKİNCİ GÜN",
+          "paragraph": 580,
+          "evidence": "Birden kuzey kapısı yönünden çığlıklar yükseldi"
+        }
+      },
+      "b": {
+        "statement": "NORTH_GATE north_of CHURCH",
+        "source": {
+          "claim_id": "claim_001280",
+          "chunk_id": "chunk_0043",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1102,
+          "evidence": "kuzey kapısından dışarı çıktık"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A gate can lie north of both the abbey and the church contained within it; the targets are nested rather than exclusive.",
+      "topic": "north gate position"
+    },
+    {
+      "id": "cand_56",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "VAT in_front_of STIES",
+        "source": {
+          "claim_id": "claim_000662",
+          "chunk_id": "chunk_0024",
+          "chapter": "İKİNCİ GÜN",
+          "paragraph": 582,
+          "evidence": "Koro yerinin ardında, kümeslerin önünde, ... domuz kanıyla dolu büyük küpte"
+        }
+      },
+      "b": {
+        "statement": "VAT in_front_of PIGSTIES",
+        "source": {
+          "claim_id": "claim_000669",
+          "chunk_id": "chunk_0025",
+          "chapter": "İKİNCİ GÜN",
+          "paragraph": 582,
+          "evidence": "Koro yerinin ardında, kümeslerin önünde"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "'Sties' and 'pigsties' refer to the same enclosure, and the two fragments even quote the identical line, so this is a duplicate rather than a conflict.",
+      "topic": "vat location"
+    },
+    {
+      "id": "cand_57",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "CHURCH entered_through SIDE_DOOR",
+        "source": {
+          "claim_id": "claim_000722",
+          "chunk_id": "chunk_0027",
+          "chapter": "TANSÖKÜMÜ Upsala’lı Benno bazı gizler açıklıyor Arundel’li Berengar da. Adso ise gerçek tövbenin ne olduğunu öğreniyor.",
+          "paragraph": 677,
+          "evidence": "Berengar'ın yan kapıdan çıkıp mezarlığın içinden geçerek Aedificium'a yöneldiğini farkettik"
+        }
+      },
+      "b": {
+        "statement": "CHURCH entered_through NORTH_GATE",
+        "source": {
+          "claim_id": "claim_001281",
+          "chunk_id": "chunk_0043",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1102,
+          "evidence": "kuzey kapısından dışarı çıkıp ... mezartaşlarının üstüne oturduk"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A church can have several entrances; leaving by the side door and by the north gate on different occasions are not mutually exclusive.",
+      "topic": "church entrance"
+    },
+    {
+      "id": "cand_58",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "CHURCH entered_through SIDE_DOOR",
+        "source": {
+          "claim_id": "claim_000722",
+          "chunk_id": "chunk_0027",
+          "chapter": "TANSÖKÜMÜ Upsala’lı Benno bazı gizler açıklıyor Arundel’li Berengar da. Adso ise gerçek tövbenin ne olduğunu öğreniyor.",
+          "paragraph": 677,
+          "evidence": "Berengar'ın yan kapıdan çıkıp mezarlığın içinden geçerek Aedificium'a yöneldiğini farkettik"
+        }
+      },
+      "b": {
+        "statement": "CHURCH entered_through COURTYARD",
+        "source": {
+          "claim_id": "claim_001978",
+          "chunk_id": "chunk_0078",
+          "chapter": "AKŞAM DUASINDAN SONRA William’la Adso bir kez daha labirente giriyorlar; finis Africae’nin eşiğine varıyorlar, ama içeri giremiyorlar, çünkü dördün birincisinin ve dördün yedincisinin ne olduğunu bilmemektedirler; sonunda Adso’nun sevda hastalığı depreşiyor, ama bu kez oldukça bilgince.",
+          "paragraph": 1966,
+          "evidence": "güney kapısından dışarı çıktık; avluda meşalelerin parıltısını gördük"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The side door and the courtyard/gate refer to different exits or moments, so both can describe how the church was entered or left.",
+      "topic": "church entrance"
+    },
+    {
+      "id": "cand_59",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "ABBEY above CITY",
+        "source": {
+          "claim_id": "claim_000795",
+          "chunk_id": "chunk_0029",
+          "chapter": "SABAH Konuklar halktan kişiler arasında bir kavgaya tanık oluyorlar. Alessandria’lı Aymaro bazı şeyler ima ediyor; Adso ermişlik ve Şeytan’ın tersi üstüne düşünüyor. Sonra William’la Adso yazı salonuna dönüyorlar; William, orada ilginç bir şey görüyor; gülmenin mübahlığı üstüne üçüncü bir konuşma yapıyor, ama sonunda istediği yere bakamıyor.",
+          "paragraph": 736,
+          "evidence": "Biz burada, yukarıdayız, oysa aşağıda, kentte insanlar eylemdeler"
+        }
+      },
+      "b": {
+        "statement": "ABBEY above LOWER_FLOOR",
+        "source": {
+          "claim_id": "claim_002525",
+          "chunk_id": "chunk_0109",
+          "chapter": "İKİNDİ Başrahip, William’ı dinlemek istemiyor; değerli taşların dili üstüne konuşuyor, son üzücü olaylarla ilgili soruşturmanın sürdürülmemesi isteğini dile getiriyor.",
+          "paragraph": 2632,
+          "evidence": "alt kata inen merdivenin başında bekledim"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The abbey is 'above the city' in the sense of standing on a height, and 'above the lower floor' internally; these are different frames, not a conflict.",
+      "topic": "abbey elevation"
+    },
+    {
+      "id": "cand_60",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above KITCHEN",
+        "source": {
+          "claim_id": "claim_000810",
+          "chunk_id": "chunk_0030",
+          "chapter": "SABAH Konuklar halktan kişiler arasında bir kavgaya tanık oluyorlar. Alessandria’lı Aymaro bazı şeyler ima ediyor; Adso ermişlik ve Şeytan’ın tersi üstüne düşünüyor. Sonra William’la Adso yazı salonuna dönüyorlar; William, orada ilginç bir şey görüyor; gülmenin mübahlığı üstüne üçüncü bir konuşma yapıyor, ama sonunda istediği yere bakamıyor.",
+          "paragraph": 761,
+          "evidence": "Yazı salonunun, yeterli ısının geldiği mutfağın üstünde bulunması bir rastlantı değildi"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above ABBEY",
+        "source": {
+          "claim_id": "claim_001126",
+          "chunk_id": "chunk_0040",
+          "chapter": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+          "paragraph": 1034,
+          "evidence": "yasak kata çıkan doğu merdiveninden yeniden yazı salonuna çıktık"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The scriptorium being above the kitchen and being on an upper floor of the abbey building are consistent descriptions of the same elevated room.",
+      "topic": "scriptorium elevation"
+    },
+    {
+      "id": "cand_61",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above KITCHEN",
+        "source": {
+          "claim_id": "claim_000810",
+          "chunk_id": "chunk_0030",
+          "chapter": "SABAH Konuklar halktan kişiler arasında bir kavgaya tanık oluyorlar. Alessandria’lı Aymaro bazı şeyler ima ediyor; Adso ermişlik ve Şeytan’ın tersi üstüne düşünüyor. Sonra William’la Adso yazı salonuna dönüyorlar; William, orada ilginç bir şey görüyor; gülmenin mübahlığı üstüne üçüncü bir konuşma yapıyor, ama sonunda istediği yere bakamıyor.",
+          "paragraph": 761,
+          "evidence": "Yazı salonunun, yeterli ısının geldiği mutfağın üstünde bulunması bir rastlantı değildi"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above CHURCH",
+        "source": {
+          "claim_id": "claim_001297",
+          "chunk_id": "chunk_0043",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1128,
+          "evidence": "Kiliseden ... çıktım ... Yazı salonuna çıktım"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The explicit claim is that the scriptorium lies above the kitchen, while the second fragment only describes Adso moving upward from the church to the scriptorium (a separate structure reached by internal passages). That upward path does not assert the scriptorium is directly above the church, so the two relations can coexist.",
+      "topic": "scriptorium lower-room relation"
+    },
+    {
+      "id": "cand_62",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above KITCHEN",
+        "source": {
+          "claim_id": "claim_000810",
+          "chunk_id": "chunk_0030",
+          "chapter": "SABAH Konuklar halktan kişiler arasında bir kavgaya tanık oluyorlar. Alessandria’lı Aymaro bazı şeyler ima ediyor; Adso ermişlik ve Şeytan’ın tersi üstüne düşünüyor. Sonra William’la Adso yazı salonuna dönüyorlar; William, orada ilginç bir şey görüyor; gülmenin mübahlığı üstüne üçüncü bir konuşma yapıyor, ama sonunda istediği yere bakamıyor.",
+          "paragraph": 761,
+          "evidence": "Yazı salonunun, yeterli ısının geldiği mutfağın üstünde bulunması bir rastlantı değildi"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above REFECTORY",
+        "source": {
+          "claim_id": "claim_001495",
+          "chunk_id": "chunk_0058",
+          "chapter": "AKŞAM DUASINDAN SONRA Ubertino, Fra Dolcino’nun öyküsünü anlatıyor. Adso bunun üzerine başka öyküleri anımsıyor ya da kitaplıkta okuyor; sonra savaş donanımına bürünmüş bir ordu gibi güzel ve ürkütücü bir genç kızla karşılaşıyor.",
+          "paragraph": 1481,
+          "evidence": "yemekhaneye inen basamaklardan aşağı attım kendimi"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Both the kitchen and the refectory are ground-floor rooms of the Aedificium, so a scriptorium above the kitchen can also be above the refectory; the second fragment merely shows Adso descending toward the refectory.",
+      "topic": "scriptorium lower-room relation"
+    },
+    {
+      "id": "cand_63",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above KITCHEN",
+        "source": {
+          "claim_id": "claim_000810",
+          "chunk_id": "chunk_0030",
+          "chapter": "SABAH Konuklar halktan kişiler arasında bir kavgaya tanık oluyorlar. Alessandria’lı Aymaro bazı şeyler ima ediyor; Adso ermişlik ve Şeytan’ın tersi üstüne düşünüyor. Sonra William’la Adso yazı salonuna dönüyorlar; William, orada ilginç bir şey görüyor; gülmenin mübahlığı üstüne üçüncü bir konuşma yapıyor, ama sonunda istediği yere bakamıyor.",
+          "paragraph": 761,
+          "evidence": "Yazı salonunun, yeterli ısının geldiği mutfağın üstünde bulunması bir rastlantı değildi"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above COURTYARD",
+        "source": {
+          "claim_id": "claim_001775",
+          "chunk_id": "chunk_0073",
+          "chapter": "İKİNDİ Poggetto Kardinali, Bernardo Gui ve Avignon’lu öteki adamlar geliyorlar; sonra her biri başka başka şeyler yapıyorlar.",
+          "paragraph": 1822,
+          "evidence": "yazı salonundan keyifli indi"
+        }
+      },
+      "verdict": "uncertain",
+      "explanation": "The only evidence is that someone came down cheerfully from the scriptorium; it names no courtyard and establishes no vertical relation, so no contradiction with 'above kitchen' can be confirmed.",
+      "topic": "scriptorium lower-room relation"
+    },
+    {
+      "id": "cand_64",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above KITCHEN",
+        "source": {
+          "claim_id": "claim_000810",
+          "chunk_id": "chunk_0030",
+          "chapter": "SABAH Konuklar halktan kişiler arasında bir kavgaya tanık oluyorlar. Alessandria’lı Aymaro bazı şeyler ima ediyor; Adso ermişlik ve Şeytan’ın tersi üstüne düşünüyor. Sonra William’la Adso yazı salonuna dönüyorlar; William, orada ilginç bir şey görüyor; gülmenin mübahlığı üstüne üçüncü bir konuşma yapıyor, ama sonunda istediği yere bakamıyor.",
+          "paragraph": 761,
+          "evidence": "Yazı salonunun, yeterli ısının geldiği mutfağın üstünde bulunması bir rastlantı değildi"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above LABORATORY",
+        "source": {
+          "claim_id": "claim_002180",
+          "chunk_id": "chunk_0088",
+          "chapter": "ÖĞLE Severinus ölü bulunuyor; bulmuş olduğu kitap ortada yoktur.",
+          "paragraph": 2188,
+          "evidence": "Yazı salonuna çık, Malachi’yi gözle"
+        }
+      },
+      "verdict": "uncertain",
+      "explanation": "The fragment only says 'go up to the scriptorium'; it names no laboratory or lower location, so the claimed 'above laboratory' relation is unsupported and cannot be judged contradictory.",
+      "topic": "scriptorium lower-room relation"
+    },
+    {
+      "id": "cand_65",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above KITCHEN",
+        "source": {
+          "claim_id": "claim_000810",
+          "chunk_id": "chunk_0030",
+          "chapter": "SABAH Konuklar halktan kişiler arasında bir kavgaya tanık oluyorlar. Alessandria’lı Aymaro bazı şeyler ima ediyor; Adso ermişlik ve Şeytan’ın tersi üstüne düşünüyor. Sonra William’la Adso yazı salonuna dönüyorlar; William, orada ilginç bir şey görüyor; gülmenin mübahlığı üstüne üçüncü bir konuşma yapıyor, ama sonunda istediği yere bakamıyor.",
+          "paragraph": 761,
+          "evidence": "Yazı salonunun, yeterli ısının geldiği mutfağın üstünde bulunması bir rastlantı değildi"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above TREASURY",
+        "source": {
+          "claim_id": "claim_002402",
+          "chunk_id": "chunk_0103",
+          "chapter": "TANSÖKÜMÜ Yeraltı hazinesinin ziyaret edilişi sırasında Nicola birçok şey anlatıyor.",
+          "paragraph": 2512,
+          "evidence": "Yazı salonuna çıkıyorum; bir şeye daha bakmam gerek"
+        }
+      },
+      "verdict": "uncertain",
+      "explanation": "The fragment only records going up to the scriptorium during the treasury chapter; it asserts no relation between the scriptorium and the treasury, so the pair cannot be resolved as a real contradiction.",
+      "topic": "scriptorium lower-room relation"
+    },
+    {
+      "id": "cand_66",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above KITCHEN",
+        "source": {
+          "claim_id": "claim_000810",
+          "chunk_id": "chunk_0030",
+          "chapter": "SABAH Konuklar halktan kişiler arasında bir kavgaya tanık oluyorlar. Alessandria’lı Aymaro bazı şeyler ima ediyor; Adso ermişlik ve Şeytan’ın tersi üstüne düşünüyor. Sonra William’la Adso yazı salonuna dönüyorlar; William, orada ilginç bir şey görüyor; gülmenin mübahlığı üstüne üçüncü bir konuşma yapıyor, ama sonunda istediği yere bakamıyor.",
+          "paragraph": 761,
+          "evidence": "Yazı salonunun, yeterli ısının geldiği mutfağın üstünde bulunması bir rastlantı değildi"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above UNKNOWN_LOWER_LOCATION",
+        "source": {
+          "claim_id": "claim_002486",
+          "chunk_id": "chunk_0107",
+          "chapter": "ÖĞLEYE DOĞRU William Adso’ya gördüğü düşü açıklıyor.",
+          "paragraph": 2571,
+          "evidence": "William yeniden, az önce indiği yazı salonuna çıkmak istiyordu."
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The lower target is left as UNKNOWN, so there is no named location that could conflict with the kitchen; the fragment only says William wanted to go back up to the scriptorium he had just left.",
+      "topic": "scriptorium lower-room relation"
+    },
+    {
+      "id": "cand_67",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "HEARTH inside SCRIPTORIUM",
+        "source": {
+          "claim_id": "claim_000855",
+          "chunk_id": "chunk_0031",
+          "chapter": "SABAH Konuklar halktan kişiler arasında bir kavgaya tanık oluyorlar. Alessandria’lı Aymaro bazı şeyler ima ediyor; Adso ermişlik ve Şeytan’ın tersi üstüne düşünüyor. Sonra William’la Adso yazı salonuna dönüyorlar; William, orada ilginç bir şey görüyor; gülmenin mübahlığı üstüne üçüncü bir konuşma yapıyor, ama sonunda istediği yere bakamıyor.",
+          "paragraph": 767,
+          "evidence": "yazı salonunda, ocağın yanında bir iskemleye oturmuş"
+        }
+      },
+      "b": {
+        "statement": "HEARTH inside KITCHEN",
+        "source": {
+          "claim_id": "claim_001260",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1102,
+          "evidence": "Mutfağa girer girmez ocağa doğru koşarak"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A building can contain more than one hearth; the fragments place one hearth in the scriptorium and a distinct one in the kitchen, and neither statement denies the other room having its own hearth.",
+      "topic": "hearth location"
+    },
+    {
+      "id": "cand_68",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "ABBEY entered_through AEDIFICIUM",
+        "source": {
+          "claim_id": "claim_000973",
+          "chunk_id": "chunk_0038",
+          "chapter": "İKİNDİ Başrahip manastırının zengin teriyle övündüğünü, sapkınlardan çekindiğini gösteriyor; sonunda Adso dünyayı dolaşmakla kötü bir şey mi yaptığından kuşku duyuyor.",
+          "paragraph": 916,
+          "evidence": "onu Aedificium'a çıkarken buldum"
+        }
+      },
+      "b": {
+        "statement": "ABBEY entered_through GATE",
+        "source": {
+          "claim_id": "claim_002476",
+          "chunk_id": "chunk_0106",
+          "chapter": "SABAH Adso, “Dies irae’yi“ dinlerken bir düş görüyor, ya da dilerseniz, bir görüntü diyelim.",
+          "paragraph": 2550,
+          "evidence": "Afallamış, ana kapıdan çıktım"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The fragments describe different events and relations: one is about someone found going up to the Aedificium, the other about Adso leaving through the main gate. Entering the abbey and entering the Aedificium are not mutually exclusive actions.",
+      "topic": "abbey entrance"
+    },
+    {
+      "id": "cand_69",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "KITCHEN below SPIRAL_STAIRCASE",
+        "source": {
+          "claim_id": "claim_001069",
+          "chunk_id": "chunk_0039",
+          "chapter": "GÜNBATIMINDAN SONRA Bu kısa bölümde yaşlı Alinardo, labirente ve oraya nasıl girileceğine dair çok ilginç şeyler anlatıyor.",
+          "paragraph": 973,
+          "evidence": "yazı salonuna çıkan sarmal merdivenin tam altında"
+        }
+      },
+      "b": {
+        "statement": "KITCHEN below TREASURY",
+        "source": {
+          "claim_id": "claim_002417",
+          "chunk_id": "chunk_0103",
+          "chapter": "TANSÖKÜMÜ Yeraltı hazinesinin ziyaret edilişi sırasında Nicola birçok şey anlatıyor.",
+          "paragraph": 2527,
+          "evidence": "ama biraz daha aşağı inince, kendimi daha geniş bir mahzende buldum"
+        }
+      },
+      "verdict": "uncertain",
+      "explanation": "The treasury evidence describes going further down into a cellar (i.e., the cellar being below the kitchen), so the stated 'kitchen below treasury' looks like a reversed or mis-extracted relation rather than a genuine conflict with 'kitchen below the spiral staircase'.",
+      "topic": "kitchen lower-relation"
+    },
+    {
+      "id": "cand_70",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "KITCHEN below SPIRAL_STAIRCASE",
+        "source": {
+          "claim_id": "claim_001069",
+          "chunk_id": "chunk_0039",
+          "chapter": "GÜNBATIMINDAN SONRA Bu kısa bölümde yaşlı Alinardo, labirente ve oraya nasıl girileceğine dair çok ilginç şeyler anlatıyor.",
+          "paragraph": 973,
+          "evidence": "yazı salonuna çıkan sarmal merdivenin tam altında"
+        }
+      },
+      "b": {
+        "statement": "KITCHEN below LIBRARY",
+        "source": {
+          "claim_id": "claim_002794",
+          "chunk_id": "chunk_0117",
+          "chapter": "GECE Yangın çıkıyor ve aşırı erdem yüzünden cehennem güçleri egemen oluyor.",
+          "paragraph": 2832,
+          "evidence": "Mutfakta, aşağıda mutfakta!"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The kitchen can lie below the spiral staircase to the scriptorium and also below the library, which is on a higher floor above the scriptorium; these are consistent vertical relations, not a conflict.",
+      "topic": "kitchen lower-relation"
+    },
+    {
+      "id": "cand_71",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above ABBEY",
+        "source": {
+          "claim_id": "claim_001126",
+          "chunk_id": "chunk_0040",
+          "chapter": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+          "paragraph": 1034,
+          "evidence": "yasak kata çıkan doğu merdiveninden yeniden yazı salonuna çıktık"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above CHURCH",
+        "source": {
+          "claim_id": "claim_001297",
+          "chunk_id": "chunk_0043",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1128,
+          "evidence": "Kiliseden ... çıktım ... Yazı salonuna çıktım"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The evidence only describes climbing back up to the scriptorium via the eastern staircase; 'above the abbey' is not literally asserted, and an upward route from the church is not mutually exclusive with the scriptorium being in the abbey.",
+      "topic": "scriptorium lower-room relation"
+    },
+    {
+      "id": "cand_72",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above ABBEY",
+        "source": {
+          "claim_id": "claim_001126",
+          "chunk_id": "chunk_0040",
+          "chapter": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+          "paragraph": 1034,
+          "evidence": "yasak kata çıkan doğu merdiveninden yeniden yazı salonuna çıktık"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above REFECTORY",
+        "source": {
+          "claim_id": "claim_001495",
+          "chunk_id": "chunk_0058",
+          "chapter": "AKŞAM DUASINDAN SONRA Ubertino, Fra Dolcino’nun öyküsünü anlatıyor. Adso bunun üzerine başka öyküleri anımsıyor ya da kitaplıkta okuyor; sonra savaş donanımına bürünmüş bir ordu gibi güzel ve ürkütücü bir genç kızla karşılaşıyor.",
+          "paragraph": 1481,
+          "evidence": "yemekhaneye inen basamaklardan aşağı attım kendimi"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The scriptorium can be above both the abbey's ground areas and the refectory, which is a ground-floor room; the fragments concern movement up to the scriptorium and do not establish conflicting fixed positions.",
+      "topic": "scriptorium lower-room relation"
+    },
+    {
+      "id": "cand_73",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above ABBEY",
+        "source": {
+          "claim_id": "claim_001126",
+          "chunk_id": "chunk_0040",
+          "chapter": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+          "paragraph": 1034,
+          "evidence": "yasak kata çıkan doğu merdiveninden yeniden yazı salonuna çıktık"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above COURTYARD",
+        "source": {
+          "claim_id": "claim_001775",
+          "chunk_id": "chunk_0073",
+          "chapter": "İKİNDİ Poggetto Kardinali, Bernardo Gui ve Avignon’lu öteki adamlar geliyorlar; sonra her biri başka başka şeyler yapıyorlar.",
+          "paragraph": 1822,
+          "evidence": "yazı salonundan keyifli indi"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A room can be above both the abbey complex and its courtyard; the courtyard is part of the abbey, so the two 'above' relations do not exclude each other.",
+      "topic": "scriptorium position"
+    },
+    {
+      "id": "cand_74",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above ABBEY",
+        "source": {
+          "claim_id": "claim_001126",
+          "chunk_id": "chunk_0040",
+          "chapter": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+          "paragraph": 1034,
+          "evidence": "yasak kata çıkan doğu merdiveninden yeniden yazı salonuna çıktık"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above LABORATORY",
+        "source": {
+          "claim_id": "claim_002180",
+          "chunk_id": "chunk_0088",
+          "chapter": "ÖĞLE Severinus ölü bulunuyor; bulmuş olduğu kitap ortada yoktur.",
+          "paragraph": 2188,
+          "evidence": "Yazı salonuna çık, Malachi’yi gözle"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The laboratory is a part of the abbey structure, and the scriptorium can simultaneously lie above both the abbey and the laboratory; no exclusivity is stated.",
+      "topic": "scriptorium position"
+    },
+    {
+      "id": "cand_75",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above ABBEY",
+        "source": {
+          "claim_id": "claim_001126",
+          "chunk_id": "chunk_0040",
+          "chapter": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+          "paragraph": 1034,
+          "evidence": "yasak kata çıkan doğu merdiveninden yeniden yazı salonuna çıktık"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above TREASURY",
+        "source": {
+          "claim_id": "claim_002402",
+          "chunk_id": "chunk_0103",
+          "chapter": "TANSÖKÜMÜ Yeraltı hazinesinin ziyaret edilişi sırasında Nicola birçok şey anlatıyor.",
+          "paragraph": 2512,
+          "evidence": "Yazı salonuna çıkıyorum; bir şeye daha bakmam gerek"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The treasury is an area within the abbey, so the scriptorium being above the abbey and above the treasury are not mutually exclusive claims.",
+      "topic": "scriptorium position"
+    },
+    {
+      "id": "cand_76",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above ABBEY",
+        "source": {
+          "claim_id": "claim_001126",
+          "chunk_id": "chunk_0040",
+          "chapter": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+          "paragraph": 1034,
+          "evidence": "yasak kata çıkan doğu merdiveninden yeniden yazı salonuna çıktık"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above UNKNOWN_LOWER_LOCATION",
+        "source": {
+          "claim_id": "claim_002486",
+          "chunk_id": "chunk_0107",
+          "chapter": "ÖĞLEYE DOĞRU William Adso’ya gördüğü düşü açıklıyor.",
+          "paragraph": 2571,
+          "evidence": "William yeniden, az önce indiği yazı salonuna çıkmak istiyordu."
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The lower location is unspecified ('unknown'), and it may well be a part of the abbey, so no definite conflict with 'above abbey' can be established.",
+      "topic": "scriptorium position"
+    },
+    {
+      "id": "cand_77",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside SEVEN_WALLED_HALL",
+        "source": {
+          "claim_id": "claim_001134",
+          "chunk_id": "chunk_0040",
+          "chapter": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+          "paragraph": 1036,
+          "evidence": "Odanın ortasında, üstü gene kitaplarla dolu bir masa"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside LAMP_ROOM",
+        "source": {
+          "claim_id": "claim_001234",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1079,
+          "evidence": "Masanın üstünde, buhurdanın yanında, canlı renkleri olan bir kitap duruyordu"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The seven-walled hall and the lamp room are different rooms, and the fragments do not claim that these are the same single table; each room may contain its own table.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_78",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside SEVEN_WALLED_HALL",
+        "source": {
+          "claim_id": "claim_001134",
+          "chunk_id": "chunk_0040",
+          "chapter": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+          "paragraph": 1036,
+          "evidence": "Odanın ortasında, üstü gene kitaplarla dolu bir masa"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside WORKSHOP",
+        "source": {
+          "claim_id": "claim_001334",
+          "chunk_id": "chunk_0049",
+          "chapter": "İKİNDİ William Adso’ya büyük sapkınlık ırmağından, saf insanların kilisedeki işlevinden, evrensel yasaları öğrenme konusundaki kuşkularından söz ediyor; sanki ayraç içindeymişçesine Venantius’un bıraktığı kara büyü ibaretlerini nasıl çözdüğünü anlatıyor.",
+          "paragraph": 1240,
+          "evidence": "camı masanın üstüne indirip"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The described tables appear in different rooms (seven-walled hall vs. workshop) and different moments, so they can be distinct tables rather than one contradictory object.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_79",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside SEVEN_WALLED_HALL",
+        "source": {
+          "claim_id": "claim_001134",
+          "chunk_id": "chunk_0040",
+          "chapter": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+          "paragraph": 1036,
+          "evidence": "Odanın ortasında, üstü gene kitaplarla dolu bir masa"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside INFIRMARY",
+        "source": {
+          "claim_id": "claim_001596",
+          "chunk_id": "chunk_0062",
+          "chapter": "GECE Adso allak bullak, William’a günah çıkartıyor ve kadının yaratılıştaki işlevi üstüne düşünüyor; sonra bir adamın ölüsünü buluyor.",
+          "paragraph": 1548,
+          "evidence": "hastanede bir masanın üstüne uzattırdılar"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The infirmary is a separate location from the seven-walled hall, so a table in each is not contradictory; multiple tables exist in distinct places.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_80",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside SEVEN_WALLED_HALL",
+        "source": {
+          "claim_id": "claim_001134",
+          "chunk_id": "chunk_0040",
+          "chapter": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+          "paragraph": 1036,
+          "evidence": "Odanın ortasında, üstü gene kitaplarla dolu bir masa"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside LABORATORY",
+        "source": {
+          "claim_id": "claim_002136",
+          "chunk_id": "chunk_0087",
+          "chapter": "SABAH Severinus William’a tuhaf bir hitaptan söz ediyor; William ise elçilere tuhaf bir yönetim kavramından söz ediyor.",
+          "paragraph": 2135,
+          "evidence": "Daha önce kapının sol yanındaki masanın üstünde görmüştüm onu"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The laboratory and the seven-walled hall are different rooms, and the fragments do not assert they refer to the same table, so no real conflict arises.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_81",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside SEVEN_WALLED_HALL",
+        "source": {
+          "claim_id": "claim_001134",
+          "chunk_id": "chunk_0040",
+          "chapter": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+          "paragraph": 1036,
+          "evidence": "Odanın ortasında, üstü gene kitaplarla dolu bir masa"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside REFECTORY",
+        "source": {
+          "claim_id": "claim_002432",
+          "chunk_id": "chunk_0104",
+          "chapter": "SABAH Adso, “Dies irae’yi“ dinlerken bir düş görüyor, ya da dilerseniz, bir görüntü diyelim.",
+          "paragraph": 2530,
+          "evidence": "Masanın ortasında, erguvan renginde işlemeli kocaman giysiisiyle tören kılığına bürünmüş Başrahip oturuyordu"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The refectory table appears within a dream/vision sequence and is a different location from the seven-walled hall; the two tables are not the same object.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_82",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside SEVEN_WALLED_HALL",
+        "source": {
+          "claim_id": "claim_001134",
+          "chunk_id": "chunk_0040",
+          "chapter": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+          "paragraph": 1036,
+          "evidence": "Odanın ortasında, üstü gene kitaplarla dolu bir masa"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside LIBRARY",
+        "source": {
+          "claim_id": "claim_002658",
+          "chunk_id": "chunk_0112",
+          "chapter": "YEDİNCİ GÜN",
+          "paragraph": 2709,
+          "evidence": "masaların üstüne dağıtılmış sayfaları"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The library contains many tables scattered across its rooms, and the seven-walled hall is one such room, so a table in the library and a table in the hall are not contradictory.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_83",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside SEVEN_WALLED_HALL",
+        "source": {
+          "claim_id": "claim_001134",
+          "chunk_id": "chunk_0040",
+          "chapter": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+          "paragraph": 1036,
+          "evidence": "Odanın ortasında, üstü gene kitaplarla dolu bir masa"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside MIRROR_ROOM",
+        "source": {
+          "claim_id": "claim_002662",
+          "chunk_id": "chunk_0112",
+          "chapter": "YEDİNCİ GÜN",
+          "paragraph": 2710,
+          "evidence": "lambayı çabucak odanın ortasındaki masanın üstüne bıraktım"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The seven-walled hall and the mirror room are distinct rooms in the library; a table in the middle of each is compatible unless the same table is claimed, which is not shown.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_84",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside SEVEN_WALLED_HALL",
+        "source": {
+          "claim_id": "claim_001134",
+          "chunk_id": "chunk_0040",
+          "chapter": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+          "paragraph": 1036,
+          "evidence": "Odanın ortasında, üstü gene kitaplarla dolu bir masa"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside FINIS_AFRICAE",
+        "source": {
+          "claim_id": "claim_002683",
+          "chunk_id": "chunk_0112",
+          "chapter": "YEDİNCİ GÜN",
+          "paragraph": 2718,
+          "evidence": "odanın ortasında üstü kâğıtlarla tepeleme dolu bir masa gördük"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Finis Africae is a separate hidden room from the seven-walled hall, so a table in each does not conflict; they can be different tables.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_85",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside SEVEN_WALLED_HALL",
+        "source": {
+          "claim_id": "claim_001134",
+          "chunk_id": "chunk_0040",
+          "chapter": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+          "paragraph": 1036,
+          "evidence": "Odanın ortasında, üstü gene kitaplarla dolu bir masa"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside YSPANIA_Y_ROOM",
+        "source": {
+          "claim_id": "claim_002779",
+          "chunk_id": "chunk_0117",
+          "chapter": "GECE Yangın çıkıyor ve aşırı erdem yüzünden cehennem güçleri egemen oluyor.",
+          "paragraph": 2819,
+          "evidence": "çarpıp devirdiği masadan düşmüş ciltlerin ortasında yeniden ayağa kalkmaya çalışıyordu"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A table can stand in more than one room of the labyrinth; the two fragments describe different rooms (seven-walled hall vs. Yspania room) and do not exclude each other.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_86",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "ROOM entered_through ROOM_GRATIA",
+        "source": {
+          "claim_id": "claim_001188",
+          "chunk_id": "chunk_0041",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1049,
+          "evidence": "insan geldiği yoldan geri dönmek istemiyorsa, Gratia vobis et pax denen odadan başka geçilecek yer yoktu"
+        }
+      },
+      "b": {
+        "statement": "ROOM entered_through OPENING",
+        "source": {
+          "claim_id": "claim_001204",
+          "chunk_id": "chunk_0041",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1038,
+          "evidence": "Açıklıkların birinden geçtik"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Passing through one of the openings and having no way but through the 'Gratia vobis et pax' room can describe the same route at different moments; the fragments do not assert mutually exclusive entry points.",
+      "topic": "room entry route"
+    },
+    {
+      "id": "cand_87",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "CHARACTERS inside MIRROR_ROOM",
+        "source": {
+          "claim_id": "claim_001224",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1074,
+          "evidence": "Aynalı odaya geri döndük"
+        }
+      },
+      "b": {
+        "statement": "CHARACTERS inside KITCHEN",
+        "source": {
+          "claim_id": "claim_001259",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1102,
+          "evidence": "Mutfağa girer girmez ocağa doğru koşarak"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The two fragments are from different moments in the same nightly wandering; the characters move from the mirror room to the kitchen, so both can be true.",
+      "topic": "character location"
+    },
+    {
+      "id": "cand_88",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "CHARACTERS inside MIRROR_ROOM",
+        "source": {
+          "claim_id": "claim_001224",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1074,
+          "evidence": "Aynalı odaya geri döndük"
+        }
+      },
+      "b": {
+        "statement": "CHARACTERS inside CORRIDOR",
+        "source": {
+          "claim_id": "claim_001261",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1102,
+          "evidence": "ocağa doğru koşarak kemik mezarlığının bulunduğu koridora girdik"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Mirror room and the corridor containing the bone graveyard are sequential locations visited in the same chapter, not simultaneous conflicting positions.",
+      "topic": "character location"
+    },
+    {
+      "id": "cand_89",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "CHARACTERS inside MIRROR_ROOM",
+        "source": {
+          "claim_id": "claim_001224",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1074,
+          "evidence": "Aynalı odaya geri döndük"
+        }
+      },
+      "b": {
+        "statement": "CHARACTERS inside CHURCH",
+        "source": {
+          "claim_id": "claim_001263",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1102,
+          "evidence": "Yeniden kiliseye girip kuzey kapısından dışarı çıktık"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The characters return to the mirror room and later re-enter the church, so the two statements describe consecutive moments rather than a contradiction.",
+      "topic": "character location"
+    },
+    {
+      "id": "cand_90",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "ADSO inside LIBRARY",
+        "source": {
+          "claim_id": "claim_001229",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1079,
+          "evidence": "duvarlara sürünerek üç odadan geçtim; duvar boyunca süzülerek sağ pervazı oluşturan sütunun arkasından"
+        }
+      },
+      "b": {
+        "statement": "ADSO inside CELL",
+        "source": {
+          "claim_id": "claim_001447",
+          "chunk_id": "chunk_0053",
+          "chapter": "GÜNBATIMI Başrahip yeniden ziyaretçilerle konuşuyor; William’ın labirentin bilmecesini çözmek için bazı şaşırtıcı fikirleri vardır; sonunda bunu çok mantıklı bir biçimde basanı: Sonra William’la Adso eritme peynir yerler.",
+          "paragraph": 1385,
+          "evidence": "ben hücreme çekildim"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The library passage and the later withdrawal to his cell occur in different chapters/moments, so Adso can be in both at different times.",
+      "topic": "Adso location"
+    },
+    {
+      "id": "cand_91",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "ADSO inside LIBRARY",
+        "source": {
+          "claim_id": "claim_001229",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1079,
+          "evidence": "duvarlara sürünerek üç odadan geçtim; duvar boyunca süzülerek sağ pervazı oluşturan sütunun arkasından"
+        }
+      },
+      "b": {
+        "statement": "ADSO inside CHURCH",
+        "source": {
+          "claim_id": "claim_001448",
+          "chunk_id": "chunk_0053",
+          "chapter": "GÜNBATIMI Başrahip yeniden ziyaretçilerle konuşuyor; William’ın labirentin bilmecesini çözmek için bazı şaşırtıcı fikirleri vardır; sonunda bunu çok mantıklı bir biçimde basanı: Sonra William’la Adso eritme peynir yerler.",
+          "paragraph": 1385,
+          "evidence": "gizlice kiliseye girdim"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Adso being in the library and later secretly entering the church are separate episodes in different chapters; no simultaneous conflict.",
+      "topic": "Adso location"
+    },
+    {
+      "id": "cand_92",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "LAMP inside LAMP_ROOM",
+        "source": {
+          "claim_id": "claim_001233",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1079,
+          "evidence": "Masanın üstüne yanık bir lamba konmuştu; ... alemi yoktu; belli belirsiz bir kıvılcım için için yanıyor, bir şeyi yakıyordu"
+        }
+      },
+      "b": {
+        "statement": "LAMP inside LIBRARY",
+        "source": {
+          "claim_id": "claim_002772",
+          "chunk_id": "chunk_0117",
+          "chapter": "GECE Yangın çıkıyor ve aşırı erdem yüzünden cehennem güçleri egemen oluyor.",
+          "paragraph": 2814,
+          "evidence": "el yordamıyla lambayı aradım. Tanrısal bir mucizeyle hemen buldum"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A lamp can be in the lamp room and also be found in the library (which contains that room); the fragments refer to different moments and do not conflict.",
+      "topic": "lamp location"
+    },
+    {
+      "id": "cand_93",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside LAMP_ROOM",
+        "source": {
+          "claim_id": "claim_001234",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1079,
+          "evidence": "Masanın üstünde, buhurdanın yanında, canlı renkleri olan bir kitap duruyordu"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside WORKSHOP",
+        "source": {
+          "claim_id": "claim_001334",
+          "chunk_id": "chunk_0049",
+          "chapter": "İKİNDİ William Adso’ya büyük sapkınlık ırmağından, saf insanların kilisedeki işlevinden, evrensel yasaları öğrenme konusundaki kuşkularından söz ediyor; sanki ayraç içindeymişçesine Venantius’un bıraktığı kara büyü ibaretlerini nasıl çözdüğünü anlatıyor.",
+          "paragraph": 1240,
+          "evidence": "camı masanın üstüne indirip"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Tables exist in multiple rooms; a lamp-room table and a workshop table are distinct objects in distinct places and do not contradict each other.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_94",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside LAMP_ROOM",
+        "source": {
+          "claim_id": "claim_001234",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1079,
+          "evidence": "Masanın üstünde, buhurdanın yanında, canlı renkleri olan bir kitap duruyordu"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside INFIRMARY",
+        "source": {
+          "claim_id": "claim_001596",
+          "chunk_id": "chunk_0062",
+          "chapter": "GECE Adso allak bullak, William’a günah çıkartıyor ve kadının yaratılıştaki işlevi üstüne düşünüyor; sonra bir adamın ölüsünü buluyor.",
+          "paragraph": 1548,
+          "evidence": "hastanede bir masanın üstüne uzattırdılar"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The lamp room in the library and the infirmary are different locations, each with its own table; no conflict.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_95",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside LAMP_ROOM",
+        "source": {
+          "claim_id": "claim_001234",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1079,
+          "evidence": "Masanın üstünde, buhurdanın yanında, canlı renkleri olan bir kitap duruyordu"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside LABORATORY",
+        "source": {
+          "claim_id": "claim_002136",
+          "chunk_id": "chunk_0087",
+          "chapter": "SABAH Severinus William’a tuhaf bir hitaptan söz ediyor; William ise elçilere tuhaf bir yönetim kavramından söz ediyor.",
+          "paragraph": 2135,
+          "evidence": "Daha önce kapının sol yanındaki masanın üstünde görmüştüm onu"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A lamp-room table and a laboratory table are separate objects in separate rooms, possibly even overlapping in the same complex; they do not exclude each other.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_96",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside LAMP_ROOM",
+        "source": {
+          "claim_id": "claim_001234",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1079,
+          "evidence": "Masanın üstünde, buhurdanın yanında, canlı renkleri olan bir kitap duruyordu"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside REFECTORY",
+        "source": {
+          "claim_id": "claim_002432",
+          "chunk_id": "chunk_0104",
+          "chapter": "SABAH Adso, “Dies irae’yi“ dinlerken bir düş görüyor, ya da dilerseniz, bir görüntü diyelim.",
+          "paragraph": 2530,
+          "evidence": "Masanın ortasında, erguvan renginde işlemeli kocaman giysiisiyle tören kılığına bürünmüş Başrahip oturuyordu"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The lamp-room table and the refectory table are different tables in different rooms at different moments, so both statements can hold.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_97",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside LAMP_ROOM",
+        "source": {
+          "claim_id": "claim_001234",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1079,
+          "evidence": "Masanın üstünde, buhurdanın yanında, canlı renkleri olan bir kitap duruyordu"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside LIBRARY",
+        "source": {
+          "claim_id": "claim_002658",
+          "chunk_id": "chunk_0112",
+          "chapter": "YEDİNCİ GÜN",
+          "paragraph": 2709,
+          "evidence": "masaların üstüne dağıtılmış sayfaları"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "\"TABLE\" is a generic type, not a unique entity; the library comprises many rooms and can contain several tables, so a table in the lamp room and tables in the library can both exist.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_98",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside LAMP_ROOM",
+        "source": {
+          "claim_id": "claim_001234",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1079,
+          "evidence": "Masanın üstünde, buhurdanın yanında, canlı renkleri olan bir kitap duruyordu"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside MIRROR_ROOM",
+        "source": {
+          "claim_id": "claim_002662",
+          "chunk_id": "chunk_0112",
+          "chapter": "YEDİNCİ GÜN",
+          "paragraph": 2710,
+          "evidence": "lambayı çabucak odanın ortasındaki masanın üstüne bıraktım"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The lamp room and mirror room are different spaces (possibly even the same room described differently) and more than one table can exist, so these do not strictly contradict.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_99",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside LAMP_ROOM",
+        "source": {
+          "claim_id": "claim_001234",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1079,
+          "evidence": "Masanın üstünde, buhurdanın yanında, canlı renkleri olan bir kitap duruyordu"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside FINIS_AFRICAE",
+        "source": {
+          "claim_id": "claim_002683",
+          "chunk_id": "chunk_0112",
+          "chapter": "YEDİNCİ GÜN",
+          "paragraph": 2718,
+          "evidence": "odanın ortasında üstü kâğıtlarla tepeleme dolu bir masa gördük"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A table in the lamp room and a table in finis Africae are distinct instances in distinct rooms across different episodes.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_100",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside LAMP_ROOM",
+        "source": {
+          "claim_id": "claim_001234",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1079,
+          "evidence": "Masanın üstünde, buhurdanın yanında, canlı renkleri olan bir kitap duruyordu"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside YSPANIA_Y_ROOM",
+        "source": {
+          "claim_id": "claim_002779",
+          "chunk_id": "chunk_0117",
+          "chapter": "GECE Yangın çıkıyor ve aşırı erdem yüzünden cehennem güçleri egemen oluyor.",
+          "paragraph": 2819,
+          "evidence": "çarpıp devirdiği masadan düşmüş ciltlerin ortasında yeniden ayağa kalkmaya çalışıyordu"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Tables in the lamp room and in the Yspania room are separate instances in separate rooms, so no true contradiction arises.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_101",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "CHARACTERS inside KITCHEN",
+        "source": {
+          "claim_id": "claim_001259",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1102,
+          "evidence": "Mutfağa girer girmez ocağa doğru koşarak"
+        }
+      },
+      "b": {
+        "statement": "CHARACTERS inside CORRIDOR",
+        "source": {
+          "claim_id": "claim_001261",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1102,
+          "evidence": "ocağa doğru koşarak kemik mezarlığının bulunduğu koridora girdik"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "In the same scene the characters enter the kitchen and then pass into the corridor, describing sequential movement at different moments.",
+      "topic": "characters location"
+    },
+    {
+      "id": "cand_102",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "CHARACTERS inside KITCHEN",
+        "source": {
+          "claim_id": "claim_001259",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1102,
+          "evidence": "Mutfağa girer girmez ocağa doğru koşarak"
+        }
+      },
+      "b": {
+        "statement": "CHARACTERS inside CHURCH",
+        "source": {
+          "claim_id": "claim_001263",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1102,
+          "evidence": "Yeniden kiliseye girip kuzey kapısından dışarı çıktık"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The kitchen and church references are sequential stages of the same journey, not simultaneous conflicting locations.",
+      "topic": "characters location"
+    },
+    {
+      "id": "cand_103",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "CHARACTERS inside CORRIDOR",
+        "source": {
+          "claim_id": "claim_001261",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1102,
+          "evidence": "ocağa doğru koşarak kemik mezarlığının bulunduğu koridora girdik"
+        }
+      },
+      "b": {
+        "statement": "CHARACTERS inside CHURCH",
+        "source": {
+          "claim_id": "claim_001263",
+          "chunk_id": "chunk_0042",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1102,
+          "evidence": "Yeniden kiliseye girip kuzey kapısından dışarı çıktık"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Moving from the corridor into the church is a sequence of positions over time, so both statements can hold.",
+      "topic": "characters location"
+    },
+    {
+      "id": "cand_104",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "CHURCH entered_through NORTH_GATE",
+        "source": {
+          "claim_id": "claim_001281",
+          "chunk_id": "chunk_0043",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1102,
+          "evidence": "kuzey kapısından dışarı çıkıp ... mezartaşlarının üstüne oturduk"
+        }
+      },
+      "b": {
+        "statement": "CHURCH entered_through COURTYARD",
+        "source": {
+          "claim_id": "claim_001978",
+          "chunk_id": "chunk_0078",
+          "chapter": "AKŞAM DUASINDAN SONRA William’la Adso bir kez daha labirente giriyorlar; finis Africae’nin eşiğine varıyorlar, ama içeri giremiyorlar, çünkü dördün birincisinin ve dördün yedincisinin ne olduğunu bilmemektedirler; sonunda Adso’nun sevda hastalığı depreşiyor, ama bu kez oldukça bilgince.",
+          "paragraph": 1966,
+          "evidence": "güney kapısından dışarı çıktık; avluda meşalelerin parıltısını gördük"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The two fragments describe different excursions through different gates (north gate vs. south gate into the courtyard), so they are not competing entrances on the same occasion.",
+      "topic": "church access"
+    },
+    {
+      "id": "cand_105",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above CHURCH",
+        "source": {
+          "claim_id": "claim_001297",
+          "chunk_id": "chunk_0043",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1128,
+          "evidence": "Kiliseden ... çıktım ... Yazı salonuna çıktım"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above REFECTORY",
+        "source": {
+          "claim_id": "claim_001495",
+          "chunk_id": "chunk_0058",
+          "chapter": "AKŞAM DUASINDAN SONRA Ubertino, Fra Dolcino’nun öyküsünü anlatıyor. Adso bunun üzerine başka öyküleri anımsıyor ya da kitaplıkta okuyor; sonra savaş donanımına bürünmüş bir ordu gibi güzel ve ürkütücü bir genç kızla karşılaşıyor.",
+          "paragraph": 1481,
+          "evidence": "yemekhaneye inen basamaklardan aşağı attım kendimi"
+        }
+      },
+      "verdict": "uncertain",
+      "explanation": "One fragment places the scriptorium above the refectory (stairs down to it) and another has it reached by going up from the church; whether one scriptorium can lie above both is not determinable from these fragments.",
+      "topic": "scriptorium location"
+    },
+    {
+      "id": "cand_106",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above CHURCH",
+        "source": {
+          "claim_id": "claim_001297",
+          "chunk_id": "chunk_0043",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1128,
+          "evidence": "Kiliseden ... çıktım ... Yazı salonuna çıktım"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above COURTYARD",
+        "source": {
+          "claim_id": "claim_001775",
+          "chunk_id": "chunk_0073",
+          "chapter": "İKİNDİ Poggetto Kardinali, Bernardo Gui ve Avignon’lu öteki adamlar geliyorlar; sonra her biri başka başka şeyler yapıyorlar.",
+          "paragraph": 1822,
+          "evidence": "yazı salonundan keyifli indi"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "\"Coming down from the scriptorium\" merely indicates a descent at some moment and does not establish a strict competing \"above church\" relation.",
+      "topic": "scriptorium location"
+    },
+    {
+      "id": "cand_107",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above CHURCH",
+        "source": {
+          "claim_id": "claim_001297",
+          "chunk_id": "chunk_0043",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1128,
+          "evidence": "Kiliseden ... çıktım ... Yazı salonuna çıktım"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above LABORATORY",
+        "source": {
+          "claim_id": "claim_002180",
+          "chunk_id": "chunk_0088",
+          "chapter": "ÖĞLE Severinus ölü bulunuyor; bulmuş olduğu kitap ortada yoktur.",
+          "paragraph": 2188,
+          "evidence": "Yazı salonuna çık, Malachi’yi gözle"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The instruction to go up to the scriptorium does not state that it lies above the laboratory, so no real conflict is established.",
+      "topic": "scriptorium location"
+    },
+    {
+      "id": "cand_108",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above CHURCH",
+        "source": {
+          "claim_id": "claim_001297",
+          "chunk_id": "chunk_0043",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1128,
+          "evidence": "Kiliseden ... çıktım ... Yazı salonuna çıktım"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above TREASURY",
+        "source": {
+          "claim_id": "claim_002402",
+          "chunk_id": "chunk_0103",
+          "chapter": "TANSÖKÜMÜ Yeraltı hazinesinin ziyaret edilişi sırasında Nicola birçok şey anlatıyor.",
+          "paragraph": 2512,
+          "evidence": "Yazı salonuna çıkıyorum; bir şeye daha bakmam gerek"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Going up to the scriptorium says nothing about its relation to the treasury, so the two fragments do not contradict.",
+      "topic": "scriptorium location"
+    },
+    {
+      "id": "cand_109",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above CHURCH",
+        "source": {
+          "claim_id": "claim_001297",
+          "chunk_id": "chunk_0043",
+          "chapter": "GECE Sonunda William’la Adso labirente giriyorlar; garip görüntüler görüyorlar ve labirentlerde olduğu gibi kayboluyorlar.",
+          "paragraph": 1128,
+          "evidence": "Kiliseden ... çıktım ... Yazı salonuna çıktım"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above UNKNOWN_LOWER_LOCATION",
+        "source": {
+          "claim_id": "claim_002486",
+          "chunk_id": "chunk_0107",
+          "chapter": "ÖĞLEYE DOĞRU William Adso’ya gördüğü düşü açıklıyor.",
+          "paragraph": 2571,
+          "evidence": "William yeniden, az önce indiği yazı salonuna çıkmak istiyordu."
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The scriptorium being reached from the church is consistent with it also being above an unspecified lower location; the second fragment only leaves the lower room unnamed and does not name a conflicting one.",
+      "topic": "scriptorium location"
+    },
+    {
+      "id": "cand_110",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "ADSO entered_through KITCHEN",
+        "source": {
+          "claim_id": "claim_001308",
+          "chunk_id": "chunk_0044",
+          "chapter": "SABAH Adso yazı salonunda tarikatının tarihçesi ve kitapların yazgısı üstüne düşünüyor.",
+          "paragraph": 1141,
+          "evidence": "Kahvaltı saati gelmişti. Aşçılarla artık arkadaş olduğum mutfağa gittim"
+        }
+      },
+      "b": {
+        "statement": "ADSO entered_through CHURCH",
+        "source": {
+          "claim_id": "claim_001314",
+          "chunk_id": "chunk_0046",
+          "chapter": "ÖĞLE Adso, Salvatore’nin, birkaç sözcükle özetlenemeyecek, ama onu uzun ve kaygılı düşüncelere salacak itiraflarını dinliyor.",
+          "paragraph": 1170,
+          "evidence": "Bir anlık bir özgürlüğe sahip olduğumdan oraya gittim."
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The kitchen entry belongs to the morning breakfast scene, while the church entry is a separate noon moment; entering by different routes on different occasions is consistent.",
+      "topic": "Adso entry route"
+    },
+    {
+      "id": "cand_111",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "ADSO entered_through KITCHEN",
+        "source": {
+          "claim_id": "claim_001308",
+          "chunk_id": "chunk_0044",
+          "chapter": "SABAH Adso yazı salonunda tarikatının tarihçesi ve kitapların yazgısı üstüne düşünüyor.",
+          "paragraph": 1141,
+          "evidence": "Kahvaltı saati gelmişti. Aşçılarla artık arkadaş olduğum mutfağa gittim"
+        }
+      },
+      "b": {
+        "statement": "ADSO entered_through WORKSHOP",
+        "source": {
+          "claim_id": "claim_001322",
+          "chunk_id": "chunk_0046",
+          "chapter": "ÖĞLE Adso, Salvatore’nin, birkaç sözcükle özetlenemeyecek, ama onu uzun ve kaygılı düşüncelere salacak itiraflarını dinliyor.",
+          "paragraph": 1174,
+          "evidence": "William'ı demirci ocağında Nicola'yla birlikte işlerine dalmış çalışırken buldum."
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The kitchen fragment is from the morning and the workshop fragment from the noon scene; these are different moments and are not mutually exclusive.",
+      "topic": "Adso entry route"
+    },
+    {
+      "id": "cand_112",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "ADSO entered_through CHURCH",
+        "source": {
+          "claim_id": "claim_001314",
+          "chunk_id": "chunk_0046",
+          "chapter": "ÖĞLE Adso, Salvatore’nin, birkaç sözcükle özetlenemeyecek, ama onu uzun ve kaygılı düşüncelere salacak itiraflarını dinliyor.",
+          "paragraph": 1170,
+          "evidence": "Bir anlık bir özgürlüğe sahip olduğumdan oraya gittim."
+        }
+      },
+      "b": {
+        "statement": "ADSO entered_through WORKSHOP",
+        "source": {
+          "claim_id": "claim_001322",
+          "chunk_id": "chunk_0046",
+          "chapter": "ÖĞLE Adso, Salvatore’nin, birkaç sözcükle özetlenemeyecek, ama onu uzun ve kaygılı düşüncelere salacak itiraflarını dinliyor.",
+          "paragraph": 1174,
+          "evidence": "William'ı demirci ocağında Nicola'yla birlikte işlerine dalmış çalışırken buldum."
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Going toward/entering via the church and later finding William in the workshop are sequential actions within the same noon visit, not conflicting claims about one location.",
+      "topic": "Adso entry route"
+    },
+    {
+      "id": "cand_113",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside WORKSHOP",
+        "source": {
+          "claim_id": "claim_001334",
+          "chunk_id": "chunk_0049",
+          "chapter": "İKİNDİ William Adso’ya büyük sapkınlık ırmağından, saf insanların kilisedeki işlevinden, evrensel yasaları öğrenme konusundaki kuşkularından söz ediyor; sanki ayraç içindeymişçesine Venantius’un bıraktığı kara büyü ibaretlerini nasıl çözdüğünü anlatıyor.",
+          "paragraph": 1240,
+          "evidence": "camı masanın üstüne indirip"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside INFIRMARY",
+        "source": {
+          "claim_id": "claim_001596",
+          "chunk_id": "chunk_0062",
+          "chapter": "GECE Adso allak bullak, William’a günah çıkartıyor ve kadının yaratılıştaki işlevi üstüne düşünüyor; sonra bir adamın ölüsünü buluyor.",
+          "paragraph": 1548,
+          "evidence": "hastanede bir masanın üstüne uzattırdılar"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A table in the workshop and another (the one in the infirmary) are distinct objects in different rooms; tables are not unique so no contradiction arises.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_114",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside WORKSHOP",
+        "source": {
+          "claim_id": "claim_001334",
+          "chunk_id": "chunk_0049",
+          "chapter": "İKİNDİ William Adso’ya büyük sapkınlık ırmağından, saf insanların kilisedeki işlevinden, evrensel yasaları öğrenme konusundaki kuşkularından söz ediyor; sanki ayraç içindeymişçesine Venantius’un bıraktığı kara büyü ibaretlerini nasıl çözdüğünü anlatıyor.",
+          "paragraph": 1240,
+          "evidence": "camı masanın üstüne indirip"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside LABORATORY",
+        "source": {
+          "claim_id": "claim_002136",
+          "chunk_id": "chunk_0087",
+          "chapter": "SABAH Severinus William’a tuhaf bir hitaptan söz ediyor; William ise elçilere tuhaf bir yönetim kavramından söz ediyor.",
+          "paragraph": 2135,
+          "evidence": "Daha önce kapının sol yanındaki masanın üstünde görmüştüm onu"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A table in the workshop and one in the laboratory are separate tables in separate rooms; nothing forces them to be the same object.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_115",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside WORKSHOP",
+        "source": {
+          "claim_id": "claim_001334",
+          "chunk_id": "chunk_0049",
+          "chapter": "İKİNDİ William Adso’ya büyük sapkınlık ırmağından, saf insanların kilisedeki işlevinden, evrensel yasaları öğrenme konusundaki kuşkularından söz ediyor; sanki ayraç içindeymişçesine Venantius’un bıraktığı kara büyü ibaretlerini nasıl çözdüğünü anlatıyor.",
+          "paragraph": 1240,
+          "evidence": "camı masanın üstüne indirip"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside REFECTORY",
+        "source": {
+          "claim_id": "claim_002432",
+          "chunk_id": "chunk_0104",
+          "chapter": "SABAH Adso, “Dies irae’yi“ dinlerken bir düş görüyor, ya da dilerseniz, bir görüntü diyelim.",
+          "paragraph": 2530,
+          "evidence": "Masanın ortasında, erguvan renginde işlemeli kocaman giysiisiyle tören kılığına bürünmüş Başrahip oturuyordu"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The workshop table and the refectory table (in a dream/vision scene) are different objects in different rooms and are not mutually exclusive.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_116",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside WORKSHOP",
+        "source": {
+          "claim_id": "claim_001334",
+          "chunk_id": "chunk_0049",
+          "chapter": "İKİNDİ William Adso’ya büyük sapkınlık ırmağından, saf insanların kilisedeki işlevinden, evrensel yasaları öğrenme konusundaki kuşkularından söz ediyor; sanki ayraç içindeymişçesine Venantius’un bıraktığı kara büyü ibaretlerini nasıl çözdüğünü anlatıyor.",
+          "paragraph": 1240,
+          "evidence": "camı masanın üstüne indirip"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside LIBRARY",
+        "source": {
+          "claim_id": "claim_002658",
+          "chunk_id": "chunk_0112",
+          "chapter": "YEDİNCİ GÜN",
+          "paragraph": 2709,
+          "evidence": "masaların üstüne dağıtılmış sayfaları"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A table in the workshop and tables in the library are distinct furniture in distinct rooms; multiple tables can exist.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_117",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside WORKSHOP",
+        "source": {
+          "claim_id": "claim_001334",
+          "chunk_id": "chunk_0049",
+          "chapter": "İKİNDİ William Adso’ya büyük sapkınlık ırmağından, saf insanların kilisedeki işlevinden, evrensel yasaları öğrenme konusundaki kuşkularından söz ediyor; sanki ayraç içindeymişçesine Venantius’un bıraktığı kara büyü ibaretlerini nasıl çözdüğünü anlatıyor.",
+          "paragraph": 1240,
+          "evidence": "camı masanın üstüne indirip"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside MIRROR_ROOM",
+        "source": {
+          "claim_id": "claim_002662",
+          "chunk_id": "chunk_0112",
+          "chapter": "YEDİNCİ GÜN",
+          "paragraph": 2710,
+          "evidence": "lambayı çabucak odanın ortasındaki masanın üstüne bıraktım"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The workshop table and the mirror-room table are separate tables in separate rooms, so the two statements do not conflict.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_118",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside WORKSHOP",
+        "source": {
+          "claim_id": "claim_001334",
+          "chunk_id": "chunk_0049",
+          "chapter": "İKİNDİ William Adso’ya büyük sapkınlık ırmağından, saf insanların kilisedeki işlevinden, evrensel yasaları öğrenme konusundaki kuşkularından söz ediyor; sanki ayraç içindeymişçesine Venantius’un bıraktığı kara büyü ibaretlerini nasıl çözdüğünü anlatıyor.",
+          "paragraph": 1240,
+          "evidence": "camı masanın üstüne indirip"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside FINIS_AFRICAE",
+        "source": {
+          "claim_id": "claim_002683",
+          "chunk_id": "chunk_0112",
+          "chapter": "YEDİNCİ GÜN",
+          "paragraph": 2718,
+          "evidence": "odanın ortasında üstü kâğıtlarla tepeleme dolu bir masa gördük"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The workshop table and the table in the Finis Africae room are different objects in different rooms; both can be true.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_119",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside WORKSHOP",
+        "source": {
+          "claim_id": "claim_001334",
+          "chunk_id": "chunk_0049",
+          "chapter": "İKİNDİ William Adso’ya büyük sapkınlık ırmağından, saf insanların kilisedeki işlevinden, evrensel yasaları öğrenme konusundaki kuşkularından söz ediyor; sanki ayraç içindeymişçesine Venantius’un bıraktığı kara büyü ibaretlerini nasıl çözdüğünü anlatıyor.",
+          "paragraph": 1240,
+          "evidence": "camı masanın üstüne indirip"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside YSPANIA_Y_ROOM",
+        "source": {
+          "claim_id": "claim_002779",
+          "chunk_id": "chunk_0117",
+          "chapter": "GECE Yangın çıkıyor ve aşırı erdem yüzünden cehennem güçleri egemen oluyor.",
+          "paragraph": 2819,
+          "evidence": "çarpıp devirdiği masadan düşmüş ciltlerin ortasında yeniden ayağa kalkmaya çalışıyordu"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The workshop table and the table in the Yspania room are distinct pieces of furniture in distinct rooms, so no contradiction exists.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_120",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "ADSO inside CELL",
+        "source": {
+          "claim_id": "claim_001447",
+          "chunk_id": "chunk_0053",
+          "chapter": "GÜNBATIMI Başrahip yeniden ziyaretçilerle konuşuyor; William’ın labirentin bilmecesini çözmek için bazı şaşırtıcı fikirleri vardır; sonunda bunu çok mantıklı bir biçimde basanı: Sonra William’la Adso eritme peynir yerler.",
+          "paragraph": 1385,
+          "evidence": "ben hücreme çekildim"
+        }
+      },
+      "b": {
+        "statement": "ADSO inside CHURCH",
+        "source": {
+          "claim_id": "claim_001448",
+          "chunk_id": "chunk_0053",
+          "chapter": "GÜNBATIMI Başrahip yeniden ziyaretçilerle konuşuyor; William’ın labirentin bilmecesini çözmek için bazı şaşırtıcı fikirleri vardır; sonunda bunu çok mantıklı bir biçimde basanı: Sonra William’la Adso eritme peynir yerler.",
+          "paragraph": 1385,
+          "evidence": "gizlice kiliseye girdim"
+        }
+      },
+      "verdict": "uncertain",
+      "explanation": "Both fragments occur in the same paragraph, one saying Adso withdrew to his cell and the other that he secretly entered the church; they may be sequential actions or may conflict, and the fragments do not establish the order.",
+      "topic": "Adso location"
+    },
+    {
+      "id": "cand_121",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above REFECTORY",
+        "source": {
+          "claim_id": "claim_001495",
+          "chunk_id": "chunk_0058",
+          "chapter": "AKŞAM DUASINDAN SONRA Ubertino, Fra Dolcino’nun öyküsünü anlatıyor. Adso bunun üzerine başka öyküleri anımsıyor ya da kitaplıkta okuyor; sonra savaş donanımına bürünmüş bir ordu gibi güzel ve ürkütücü bir genç kızla karşılaşıyor.",
+          "paragraph": 1481,
+          "evidence": "yemekhaneye inen basamaklardan aşağı attım kendimi"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above COURTYARD",
+        "source": {
+          "claim_id": "claim_001775",
+          "chunk_id": "chunk_0073",
+          "chapter": "İKİNDİ Poggetto Kardinali, Bernardo Gui ve Avignon’lu öteki adamlar geliyorlar; sonra her biri başka başka şeyler yapıyorlar.",
+          "paragraph": 1822,
+          "evidence": "yazı salonundan keyifli indi"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The scriptorium can lie above both the refectory and the courtyard; the two descent references are not mutually exclusive, since a room may sit above multiple lower spaces.",
+      "topic": "scriptorium elevation"
+    },
+    {
+      "id": "cand_122",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above REFECTORY",
+        "source": {
+          "claim_id": "claim_001495",
+          "chunk_id": "chunk_0058",
+          "chapter": "AKŞAM DUASINDAN SONRA Ubertino, Fra Dolcino’nun öyküsünü anlatıyor. Adso bunun üzerine başka öyküleri anımsıyor ya da kitaplıkta okuyor; sonra savaş donanımına bürünmüş bir ordu gibi güzel ve ürkütücü bir genç kızla karşılaşıyor.",
+          "paragraph": 1481,
+          "evidence": "yemekhaneye inen basamaklardan aşağı attım kendimi"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above LABORATORY",
+        "source": {
+          "claim_id": "claim_002180",
+          "chunk_id": "chunk_0088",
+          "chapter": "ÖĞLE Severinus ölü bulunuyor; bulmuş olduğu kitap ortada yoktur.",
+          "paragraph": 2188,
+          "evidence": "Yazı salonuna çık, Malachi’yi gözle"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A single scriptorium can be above both the refectory and the laboratory; the fragments describe different descents and do not exclude each other.",
+      "topic": "scriptorium elevation"
+    },
+    {
+      "id": "cand_123",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above REFECTORY",
+        "source": {
+          "claim_id": "claim_001495",
+          "chunk_id": "chunk_0058",
+          "chapter": "AKŞAM DUASINDAN SONRA Ubertino, Fra Dolcino’nun öyküsünü anlatıyor. Adso bunun üzerine başka öyküleri anımsıyor ya da kitaplıkta okuyor; sonra savaş donanımına bürünmüş bir ordu gibi güzel ve ürkütücü bir genç kızla karşılaşıyor.",
+          "paragraph": 1481,
+          "evidence": "yemekhaneye inen basamaklardan aşağı attım kendimi"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above TREASURY",
+        "source": {
+          "claim_id": "claim_002402",
+          "chunk_id": "chunk_0103",
+          "chapter": "TANSÖKÜMÜ Yeraltı hazinesinin ziyaret edilişi sırasında Nicola birçok şey anlatıyor.",
+          "paragraph": 2512,
+          "evidence": "Yazı salonuna çıkıyorum; bir şeye daha bakmam gerek"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The scriptorium may be above the refectory as well as above the treasury; the two targets can coexist beneath the same upper room.",
+      "topic": "scriptorium elevation"
+    },
+    {
+      "id": "cand_124",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above REFECTORY",
+        "source": {
+          "claim_id": "claim_001495",
+          "chunk_id": "chunk_0058",
+          "chapter": "AKŞAM DUASINDAN SONRA Ubertino, Fra Dolcino’nun öyküsünü anlatıyor. Adso bunun üzerine başka öyküleri anımsıyor ya da kitaplıkta okuyor; sonra savaş donanımına bürünmüş bir ordu gibi güzel ve ürkütücü bir genç kızla karşılaşıyor.",
+          "paragraph": 1481,
+          "evidence": "yemekhaneye inen basamaklardan aşağı attım kendimi"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above UNKNOWN_LOWER_LOCATION",
+        "source": {
+          "claim_id": "claim_002486",
+          "chunk_id": "chunk_0107",
+          "chapter": "ÖĞLEYE DOĞRU William Adso’ya gördüğü düşü açıklıyor.",
+          "paragraph": 2571,
+          "evidence": "William yeniden, az önce indiği yazı salonuna çıkmak istiyordu."
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The second target is a generic/unknown lower location, so it cannot conflict with the specific refectory claim.",
+      "topic": "scriptorium elevation"
+    },
+    {
+      "id": "cand_125",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside INFIRMARY",
+        "source": {
+          "claim_id": "claim_001596",
+          "chunk_id": "chunk_0062",
+          "chapter": "GECE Adso allak bullak, William’a günah çıkartıyor ve kadının yaratılıştaki işlevi üstüne düşünüyor; sonra bir adamın ölüsünü buluyor.",
+          "paragraph": 1548,
+          "evidence": "hastanede bir masanın üstüne uzattırdılar"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside LABORATORY",
+        "source": {
+          "claim_id": "claim_002136",
+          "chunk_id": "chunk_0087",
+          "chapter": "SABAH Severinus William’a tuhaf bir hitaptan söz ediyor; William ise elçilere tuhaf bir yönetim kavramından söz ediyor.",
+          "paragraph": 2135,
+          "evidence": "Daha önce kapının sol yanındaki masanın üstünde görmüştüm onu"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Tables are not unique objects; a table in the infirmary and one in the adjoining laboratory may both exist without contradiction.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_126",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside INFIRMARY",
+        "source": {
+          "claim_id": "claim_001596",
+          "chunk_id": "chunk_0062",
+          "chapter": "GECE Adso allak bullak, William’a günah çıkartıyor ve kadının yaratılıştaki işlevi üstüne düşünüyor; sonra bir adamın ölüsünü buluyor.",
+          "paragraph": 1548,
+          "evidence": "hastanede bir masanın üstüne uzattırdılar"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside REFECTORY",
+        "source": {
+          "claim_id": "claim_002432",
+          "chunk_id": "chunk_0104",
+          "chapter": "SABAH Adso, “Dies irae’yi“ dinlerken bir düş görüyor, ya da dilerseniz, bir görüntü diyelim.",
+          "paragraph": 2530,
+          "evidence": "Masanın ortasında, erguvan renginde işlemeli kocaman giysiisiyle tören kılığına bürünmüş Başrahip oturuyordu"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "An infirmary table and a refectory table are distinct furniture in distinct rooms, so no conflict arises.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_127",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside INFIRMARY",
+        "source": {
+          "claim_id": "claim_001596",
+          "chunk_id": "chunk_0062",
+          "chapter": "GECE Adso allak bullak, William’a günah çıkartıyor ve kadının yaratılıştaki işlevi üstüne düşünüyor; sonra bir adamın ölüsünü buluyor.",
+          "paragraph": 1548,
+          "evidence": "hastanede bir masanın üstüne uzattırdılar"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside LIBRARY",
+        "source": {
+          "claim_id": "claim_002658",
+          "chunk_id": "chunk_0112",
+          "chapter": "YEDİNCİ GÜN",
+          "paragraph": 2709,
+          "evidence": "masaların üstüne dağıtılmış sayfaları"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Tables in the infirmary and tables in the library are separate objects/rooms and can coexist.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_128",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside INFIRMARY",
+        "source": {
+          "claim_id": "claim_001596",
+          "chunk_id": "chunk_0062",
+          "chapter": "GECE Adso allak bullak, William’a günah çıkartıyor ve kadının yaratılıştaki işlevi üstüne düşünüyor; sonra bir adamın ölüsünü buluyor.",
+          "paragraph": 1548,
+          "evidence": "hastanede bir masanın üstüne uzattırdılar"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside MIRROR_ROOM",
+        "source": {
+          "claim_id": "claim_002662",
+          "chunk_id": "chunk_0112",
+          "chapter": "YEDİNCİ GÜN",
+          "paragraph": 2710,
+          "evidence": "lambayı çabucak odanın ortasındaki masanın üstüne bıraktım"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The mirror room table (inside the library) and an infirmary table are different pieces in different rooms, not mutually exclusive.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_129",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside INFIRMARY",
+        "source": {
+          "claim_id": "claim_001596",
+          "chunk_id": "chunk_0062",
+          "chapter": "GECE Adso allak bullak, William’a günah çıkartıyor ve kadının yaratılıştaki işlevi üstüne düşünüyor; sonra bir adamın ölüsünü buluyor.",
+          "paragraph": 1548,
+          "evidence": "hastanede bir masanın üstüne uzattırdılar"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside FINIS_AFRICAE",
+        "source": {
+          "claim_id": "claim_002683",
+          "chunk_id": "chunk_0112",
+          "chapter": "YEDİNCİ GÜN",
+          "paragraph": 2718,
+          "evidence": "odanın ortasında üstü kâğıtlarla tepeleme dolu bir masa gördük"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The Finis Africae table and an infirmary table are separate objects in separate rooms, so both can hold simultaneously.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_130",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside INFIRMARY",
+        "source": {
+          "claim_id": "claim_001596",
+          "chunk_id": "chunk_0062",
+          "chapter": "GECE Adso allak bullak, William’a günah çıkartıyor ve kadının yaratılıştaki işlevi üstüne düşünüyor; sonra bir adamın ölüsünü buluyor.",
+          "paragraph": 1548,
+          "evidence": "hastanede bir masanın üstüne uzattırdılar"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside YSPANIA_Y_ROOM",
+        "source": {
+          "claim_id": "claim_002779",
+          "chunk_id": "chunk_0117",
+          "chapter": "GECE Yangın çıkıyor ve aşırı erdem yüzünden cehennem güçleri egemen oluyor.",
+          "paragraph": 2819,
+          "evidence": "çarpıp devirdiği masadan düşmüş ciltlerin ortasında yeniden ayağa kalkmaya çalışıyordu"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The Yspania-room table and the infirmary table are distinct furniture in different rooms and do not contradict each other.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_131",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "KITCHEN entered_through GARDEN",
+        "source": {
+          "claim_id": "claim_001673",
+          "chunk_id": "chunk_0066",
+          "chapter": "TANSÖKÜMÜ William önce Salvatore’yi, sonra da kilerciyi geçmişleri konusunda günah çıkarmaya sürüklüyor; Severinus çalınmış mercekleri buluyor, Nicola da yenilerini getiriyor; böylece William altı gözle Venantius’un elyazmasını çözmeye gidiyor.",
+          "paragraph": 1669,
+          "evidence": "O gece akşam duasından bir saat sonra mutfağa girmiştim"
+        }
+      },
+      "b": {
+        "statement": "KITCHEN entered_through KITCHEN",
+        "source": {
+          "claim_id": "claim_003070",
+          "chunk_id": "chunk_v0019",
+          "chapter": "GECE Salvatore acıklı bir biçimde Bernardo Gui tarafından görülüyor, Adso’nun sevdiği kız büyücülük suçuyla yakalanıyor ve herkes eskisinden daha da mutsuz ve kaygılı yatmaya gidiyor.",
+          "paragraph": 1972,
+          "evidence": "Salvatore mutfağa girip kediyi öldürerek gözlerini oymak üzereydi"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Both fragments describe entering the kitchen, on different occasions and by different people; the differing entry targets do not conflict.",
+      "topic": "kitchen access"
+    },
+    {
+      "id": "cand_132",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "COURTYARD inside ABBEY",
+        "source": {
+          "claim_id": "claim_001763",
+          "chunk_id": "chunk_0072",
+          "chapter": "ÖĞLE Adso domalan toplamaya gidiyor. Minoritlerin gelmekte olduklarını görüyor; William ve Ubertino ile Minoritler uzun uzun konuşuyorlar; XXII. Ioannes hakkında çok acıklı şeyler öğreniliyor.",
+          "paragraph": 1808,
+          "evidence": "görünürde alçakgönüllülükle avluda selamlaştılar"
+        }
+      },
+      "b": {
+        "statement": "COURTYARD inside MEETING_HALL",
+        "source": {
+          "claim_id": "claim_002045",
+          "chunk_id": "chunk_0080",
+          "chapter": "GECE Salvatore acıklı bir biçimde Bernardo Gui tarafından görülüyor, Adso’nun sevdiği kız büyücülük suçuyla yakalanıyor ve herkes eskisinden daha da mutsuz ve kaygılı yatmaya gidiyor.",
+          "paragraph": 2009,
+          "evidence": "içeride, eski bir giriş nefinin kalıntıları üstünde sonradan yapılmış bir avluda buluyordunuz kendinizi"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The abbey courtyard and the inner courtyard of the meeting hall can be two distinct courtyards, so the two containment claims are not mutually exclusive.",
+      "topic": "courtyard containment"
+    },
+    {
+      "id": "cand_133",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above COURTYARD",
+        "source": {
+          "claim_id": "claim_001775",
+          "chunk_id": "chunk_0073",
+          "chapter": "İKİNDİ Poggetto Kardinali, Bernardo Gui ve Avignon’lu öteki adamlar geliyorlar; sonra her biri başka başka şeyler yapıyorlar.",
+          "paragraph": 1822,
+          "evidence": "yazı salonundan keyifli indi"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above LABORATORY",
+        "source": {
+          "claim_id": "claim_002180",
+          "chunk_id": "chunk_0088",
+          "chapter": "ÖĞLE Severinus ölü bulunuyor; bulmuş olduğu kitap ortada yoktur.",
+          "paragraph": 2188,
+          "evidence": "Yazı salonuna çık, Malachi’yi gözle"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A scriptorium can be situated above both the courtyard and the laboratory, so being above one does not exclude being above the other.",
+      "topic": "scriptorium spatial relation"
+    },
+    {
+      "id": "cand_134",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above COURTYARD",
+        "source": {
+          "claim_id": "claim_001775",
+          "chunk_id": "chunk_0073",
+          "chapter": "İKİNDİ Poggetto Kardinali, Bernardo Gui ve Avignon’lu öteki adamlar geliyorlar; sonra her biri başka başka şeyler yapıyorlar.",
+          "paragraph": 1822,
+          "evidence": "yazı salonundan keyifli indi"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above TREASURY",
+        "source": {
+          "claim_id": "claim_002402",
+          "chunk_id": "chunk_0103",
+          "chapter": "TANSÖKÜMÜ Yeraltı hazinesinin ziyaret edilişi sırasında Nicola birçok şey anlatıyor.",
+          "paragraph": 2512,
+          "evidence": "Yazı salonuna çıkıyorum; bir şeye daha bakmam gerek"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The scriptorium can be above both the courtyard and the treasury; 'above' is a non-exclusive spatial relation, so no contradiction.",
+      "topic": "scriptorium spatial relation"
+    },
+    {
+      "id": "cand_135",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above COURTYARD",
+        "source": {
+          "claim_id": "claim_001775",
+          "chunk_id": "chunk_0073",
+          "chapter": "İKİNDİ Poggetto Kardinali, Bernardo Gui ve Avignon’lu öteki adamlar geliyorlar; sonra her biri başka başka şeyler yapıyorlar.",
+          "paragraph": 1822,
+          "evidence": "yazı salonundan keyifli indi"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above UNKNOWN_LOWER_LOCATION",
+        "source": {
+          "claim_id": "claim_002486",
+          "chunk_id": "chunk_0107",
+          "chapter": "ÖĞLEYE DOĞRU William Adso’ya gördüğü düşü açıklıyor.",
+          "paragraph": 2571,
+          "evidence": "William yeniden, az önce indiği yazı salonuna çıkmak istiyordu."
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Being above the courtyard and above some unspecified lower location are not mutually exclusive; the unknown lower location may even be the courtyard.",
+      "topic": "scriptorium spatial relation"
+    },
+    {
+      "id": "cand_136",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "COURTYARD outside CHURCH",
+        "source": {
+          "claim_id": "claim_002002",
+          "chunk_id": "chunk_0079",
+          "chapter": "AKŞAM DUASINDAN SONRA William’la Adso bir kez daha labirente giriyorlar; finis Africae’nin eşiğine varıyorlar, ama içeri giremiyorlar, çünkü dördün birincisinin ve dördün yedincisinin ne olduğunu bilmemektedirler; sonunda Adso’nun sevda hastalığı depreşiyor, ama bu kez oldukça bilgince.",
+          "paragraph": 1966,
+          "evidence": "avluda meşalelerin parıltısını gördük"
+        }
+      },
+      "b": {
+        "statement": "COURTYARD outside INFIRMARY",
+        "source": {
+          "claim_id": "claim_002197",
+          "chunk_id": "chunk_0089",
+          "chapter": "ÖĞLE Severinus ölü bulunuyor; bulmuş olduğu kitap ortada yoktur.",
+          "paragraph": 2209,
+          "evidence": "William beni sertçe avludan dışarı sürükledi; hastaneye doğru koşturdu"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The courtyard can be adjacent to (outside) both the church and the infirmary, since a courtyard may border several buildings.",
+      "topic": "courtyard adjacency"
+    },
+    {
+      "id": "cand_137",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "MEETING_HALL entered_through THRESHOLD",
+        "source": {
+          "claim_id": "claim_002058",
+          "chunk_id": "chunk_0080",
+          "chapter": "GECE Salvatore acıklı bir biçimde Bernardo Gui tarafından görülüyor, Adso’nun sevdiği kız büyücülük suçuyla yakalanıyor ve herkes eskisinden daha da mutsuz ve kaygılı yatmaya gidiyor.",
+          "paragraph": 2012,
+          "evidence": "Bu eşiğin ötesinde... toplantı için iyi bir alâmet"
+        }
+      },
+      "b": {
+        "statement": "MEETING_HALL entered_through DOOR",
+        "source": {
+          "claim_id": "claim_002062",
+          "chunk_id": "chunk_0081",
+          "chapter": "BEŞİNCİ GÜN",
+          "paragraph": 2011,
+          "evidence": "Bu eşiğin ötesinde ... İçeri girer girmez"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Threshold (eşik) and door refer to the same entrance feature, and the cited evidence is essentially the same wording, making these duplicates rather than conflicting.",
+      "topic": "meeting hall entrance"
+    },
+    {
+      "id": "cand_138",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "CELLARER inside LABORATORY",
+        "source": {
+          "claim_id": "claim_002122",
+          "chunk_id": "chunk_0086",
+          "chapter": "SABAH Severinus William’a tuhaf bir hitaptan söz ediyor; William ise elçilere tuhaf bir yönetim kavramından söz ediyor.",
+          "paragraph": 2136,
+          "evidence": "Ben içeri girdiğimde Severinus ölmüştü"
+        }
+      },
+      "b": {
+        "statement": "CELLARER inside FORGE",
+        "source": {
+          "claim_id": "claim_002153",
+          "chunk_id": "chunk_0087",
+          "chapter": "SABAH Severinus William’a tuhaf bir hitaptan söz ediyor; William ise elçilere tuhaf bir yönetim kavramından söz ediyor.",
+          "paragraph": 2143,
+          "evidence": "Kilerciyi demirci ocağına götürmelerini"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The cellarer could be in the laboratory and later in the forge at different moments; the cited fragments do not even clearly place him in the laboratory.",
+      "topic": "cellarer location"
+    },
+    {
+      "id": "cand_139",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside LABORATORY",
+        "source": {
+          "claim_id": "claim_002136",
+          "chunk_id": "chunk_0087",
+          "chapter": "SABAH Severinus William’a tuhaf bir hitaptan söz ediyor; William ise elçilere tuhaf bir yönetim kavramından söz ediyor.",
+          "paragraph": 2135,
+          "evidence": "Daha önce kapının sol yanındaki masanın üstünde görmüştüm onu"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside REFECTORY",
+        "source": {
+          "claim_id": "claim_002432",
+          "chunk_id": "chunk_0104",
+          "chapter": "SABAH Adso, “Dies irae’yi“ dinlerken bir düş görüyor, ya da dilerseniz, bir görüntü diyelim.",
+          "paragraph": 2530,
+          "evidence": "Masanın ortasında, erguvan renginde işlemeli kocaman giysiisiyle tören kılığına bürünmüş Başrahip oturuyordu"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Different rooms can each contain their own table; a table in the laboratory does not prevent a table in the refectory.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_140",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside LABORATORY",
+        "source": {
+          "claim_id": "claim_002136",
+          "chunk_id": "chunk_0087",
+          "chapter": "SABAH Severinus William’a tuhaf bir hitaptan söz ediyor; William ise elçilere tuhaf bir yönetim kavramından söz ediyor.",
+          "paragraph": 2135,
+          "evidence": "Daha önce kapının sol yanındaki masanın üstünde görmüştüm onu"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside LIBRARY",
+        "source": {
+          "claim_id": "claim_002658",
+          "chunk_id": "chunk_0112",
+          "chapter": "YEDİNCİ GÜN",
+          "paragraph": 2709,
+          "evidence": "masaların üstüne dağıtılmış sayfaları"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The laboratory and the library can each have tables, so the two statements are not in conflict.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_141",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside LABORATORY",
+        "source": {
+          "claim_id": "claim_002136",
+          "chunk_id": "chunk_0087",
+          "chapter": "SABAH Severinus William’a tuhaf bir hitaptan söz ediyor; William ise elçilere tuhaf bir yönetim kavramından söz ediyor.",
+          "paragraph": 2135,
+          "evidence": "Daha önce kapının sol yanındaki masanın üstünde görmüştüm onu"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside MIRROR_ROOM",
+        "source": {
+          "claim_id": "claim_002662",
+          "chunk_id": "chunk_0112",
+          "chapter": "YEDİNCİ GÜN",
+          "paragraph": 2710,
+          "evidence": "lambayı çabucak odanın ortasındaki masanın üstüne bıraktım"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A table in the laboratory and a table in the mirror room are separate objects; no contradiction.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_142",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside LABORATORY",
+        "source": {
+          "claim_id": "claim_002136",
+          "chunk_id": "chunk_0087",
+          "chapter": "SABAH Severinus William’a tuhaf bir hitaptan söz ediyor; William ise elçilere tuhaf bir yönetim kavramından söz ediyor.",
+          "paragraph": 2135,
+          "evidence": "Daha önce kapının sol yanındaki masanın üstünde görmüştüm onu"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside FINIS_AFRICAE",
+        "source": {
+          "claim_id": "claim_002683",
+          "chunk_id": "chunk_0112",
+          "chapter": "YEDİNCİ GÜN",
+          "paragraph": 2718,
+          "evidence": "odanın ortasında üstü kâğıtlarla tepeleme dolu bir masa gördük"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A table in the laboratory and a table in finis Africae can coexist as distinct tables in distinct rooms.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_143",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "TABLE inside LABORATORY",
+        "source": {
+          "claim_id": "claim_002136",
+          "chunk_id": "chunk_0087",
+          "chapter": "SABAH Severinus William’a tuhaf bir hitaptan söz ediyor; William ise elçilere tuhaf bir yönetim kavramından söz ediyor.",
+          "paragraph": 2135,
+          "evidence": "Daha önce kapının sol yanındaki masanın üstünde görmüştüm onu"
+        }
+      },
+      "b": {
+        "statement": "TABLE inside YSPANIA_Y_ROOM",
+        "source": {
+          "claim_id": "claim_002779",
+          "chunk_id": "chunk_0117",
+          "chapter": "GECE Yangın çıkıyor ve aşırı erdem yüzünden cehennem güçleri egemen oluyor.",
+          "paragraph": 2819,
+          "evidence": "çarpıp devirdiği masadan düşmüş ciltlerin ortasında yeniden ayağa kalkmaya çalışıyordu"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "A table in the laboratory and a table in the Yspania room are not mutually exclusive; multiple tables may exist.",
+      "topic": "table location"
+    },
+    {
+      "id": "cand_144",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "BENNO inside LABORATORY",
+        "source": {
+          "claim_id": "claim_002154",
+          "chunk_id": "chunk_0087",
+          "chapter": "SABAH Severinus William’a tuhaf bir hitaptan söz ediyor; William ise elçilere tuhaf bir yönetim kavramından söz ediyor.",
+          "paragraph": 2144,
+          "evidence": "Ben sizden hemen sonra içeri girdim"
+        }
+      },
+      "b": {
+        "statement": "BENNO inside CELL",
+        "source": {
+          "claim_id": "claim_002203",
+          "chunk_id": "chunk_0089",
+          "chapter": "ÖĞLE Severinus ölü bulunuyor; bulmuş olduğu kitap ortada yoktur.",
+          "paragraph": 2217,
+          "evidence": "doğruca hücresine, kitabı saklamaya gitti"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Benno could be in the laboratory and later in his cell at different moments; these are time-separated locations, not a contradiction.",
+      "topic": "Benno location"
+    },
+    {
+      "id": "cand_145",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "BOOK inside LABORATORY",
+        "source": {
+          "claim_id": "claim_002161",
+          "chunk_id": "chunk_0087",
+          "chapter": "SABAH Severinus William’a tuhaf bir hitaptan söz ediyor; William ise elçilere tuhaf bir yönetim kavramından söz ediyor.",
+          "paragraph": 2151,
+          "evidence": "burada bir kitap vardı; hâlâ da burada olmalı"
+        }
+      },
+      "b": {
+        "statement": "BOOK inside INFIRMARY",
+        "source": {
+          "claim_id": "claim_002722",
+          "chunk_id": "chunk_0113",
+          "chapter": "YEDİNCİ GÜN",
+          "paragraph": 2740,
+          "evidence": "Cildini tanıdım; hastanede açtığım, Arapça bir elyazması sandığım kitaptı bu"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The two fragments concern the same book, which was opened in the infirmary and later spoken of as being in the laboratory; a book can be in different places at different moments, so both hold.",
+      "topic": "book location (laboratory vs infirmary)"
+    },
+    {
+      "id": "cand_146",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above LABORATORY",
+        "source": {
+          "claim_id": "claim_002180",
+          "chunk_id": "chunk_0088",
+          "chapter": "ÖĞLE Severinus ölü bulunuyor; bulmuş olduğu kitap ortada yoktur.",
+          "paragraph": 2188,
+          "evidence": "Yazı salonuna çık, Malachi’yi gözle"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above TREASURY",
+        "source": {
+          "claim_id": "claim_002402",
+          "chunk_id": "chunk_0103",
+          "chapter": "TANSÖKÜMÜ Yeraltı hazinesinin ziyaret edilişi sırasında Nicola birçok şey anlatıyor.",
+          "paragraph": 2512,
+          "evidence": "Yazı salonuna çıkıyorum; bir şeye daha bakmam gerek"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Stating the scriptorium is above the laboratory and above the treasury is not exclusive, since a room can lie above several different lower rooms at different levels of the Aedificium.",
+      "topic": "scriptorium vertical relation"
+    },
+    {
+      "id": "cand_147",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above LABORATORY",
+        "source": {
+          "claim_id": "claim_002180",
+          "chunk_id": "chunk_0088",
+          "chapter": "ÖĞLE Severinus ölü bulunuyor; bulmuş olduğu kitap ortada yoktur.",
+          "paragraph": 2188,
+          "evidence": "Yazı salonuna çık, Malachi’yi gözle"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above UNKNOWN_LOWER_LOCATION",
+        "source": {
+          "claim_id": "claim_002486",
+          "chunk_id": "chunk_0107",
+          "chapter": "ÖĞLEYE DOĞRU William Adso’ya gördüğü düşü açıklıyor.",
+          "paragraph": 2571,
+          "evidence": "William yeniden, az önce indiği yazı salonuna çıkmak istiyordu."
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "Being above the laboratory and above an unspecified lower location are both satisfiable at once; the second fragment merely does not name the lower room.",
+      "topic": "scriptorium vertical relation"
+    },
+    {
+      "id": "cand_148",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "CATAFALQUE inside CHURCH",
+        "source": {
+          "claim_id": "claim_002347",
+          "chunk_id": "chunk_0101",
+          "chapter": "ALTINCI GÜN",
+          "paragraph": 2450,
+          "evidence": "Malachi'nin ölüsü kilisede bir katafalkın üstüne uzatıldı"
+        }
+      },
+      "b": {
+        "statement": "CATAFALQUE inside NAVE",
+        "source": {
+          "claim_id": "claim_002365",
+          "chunk_id": "chunk_0101",
+          "chapter": "ALTINCI GÜN",
+          "paragraph": 2481,
+          "evidence": "rahipler Malachi'nin cesedi başında nöbet tutmak için nefte bir katafalk hazırlıyorlardı"
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The nave is part of the church, so a catafalque in the nave is also a catafalque in the church; these are duplicate descriptions, not a conflict.",
+      "topic": "catafalque location (church vs nave)"
+    },
+    {
+      "id": "cand_149",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "SCRIPTORIUM above TREASURY",
+        "source": {
+          "claim_id": "claim_002402",
+          "chunk_id": "chunk_0103",
+          "chapter": "TANSÖKÜMÜ Yeraltı hazinesinin ziyaret edilişi sırasında Nicola birçok şey anlatıyor.",
+          "paragraph": 2512,
+          "evidence": "Yazı salonuna çıkıyorum; bir şeye daha bakmam gerek"
+        }
+      },
+      "b": {
+        "statement": "SCRIPTORIUM above UNKNOWN_LOWER_LOCATION",
+        "source": {
+          "claim_id": "claim_002486",
+          "chunk_id": "chunk_0107",
+          "chapter": "ÖĞLEYE DOĞRU William Adso’ya gördüğü düşü açıklıyor.",
+          "paragraph": 2571,
+          "evidence": "William yeniden, az önce indiği yazı salonuna çıkmak istiyordu."
+        }
+      },
+      "verdict": "compatible",
+      "explanation": "The scriptorium being above the treasury and above an unnamed lower location are not mutually exclusive, so no real contradiction arises.",
+      "topic": "scriptorium vertical relation"
+    },
+    {
+      "id": "cand_150",
+      "type": "relation_target_conflict",
+      "a": {
+        "statement": "KITCHEN below TREASURY",
+        "source": {
+          "claim_id": "claim_002417",
+          "chunk_id": "chunk_0103",
+          "chapter": "TANSÖKÜMÜ Yeraltı hazinesinin ziyaret edilişi sırasında Nicola birçok şey anlatıyor.",
+          "paragraph": 2527,
+          "evidence": "ama biraz daha aşağı inince, kendimi daha geniş bir mahzende buldum"
+        }
+      },
+      "b": {
+        "statement": "KITCHEN below LIBRARY",
+        "source": {
+          "claim_id": "claim_002794",
+          "chunk_id": "chunk_0117",
+          "chapter": "GECE Yangın çıkıyor ve aşırı erdem yüzünden cehennem güçleri egemen oluyor.",
+          "paragraph": 2832,
+          "evidence": "Mutfakta, aşağıda mutfakta!"
+        }
+      },
+      "verdict": "uncertain",
+      "explanation": "The fragments indicate the treasury lies underground (below) and the library lies above, so the kitchen cannot be directly below both if these are true vertical relations; however, the fragments do not themselves fix the kitchen's position, so the conflict is unresolved.",
+      "topic": "kitchen vertical relation"
+    }
+  ]
+}

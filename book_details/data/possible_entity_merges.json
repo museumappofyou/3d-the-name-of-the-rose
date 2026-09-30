@@ -1,0 +1,373 @@
+{
+  "note": "uncertain merges - NOT applied automatically",
+  "possible_merges": [
+    {
+      "entities": [
+        "CEMETERY",
+        "CRYPT"
+      ],
+      "confidence": "low",
+      "reason": "Both use 'kemik mezarlığı'; may be the same ossuary/crypt or the cemetery vs. the bone crypt."
+    },
+    {
+      "entities": [
+        "CELLAR",
+        "CRYPT"
+      ],
+      "confidence": "low",
+      "reason": "Both use 'mahzen'; possibly the same underground cellar."
+    },
+    {
+      "entities": [
+        "CELLAR",
+        "TREASURY"
+      ],
+      "confidence": "low",
+      "reason": "Both use 'hazine mahzeni'; treasury vault vs. general cellar."
+    },
+    {
+      "entities": [
+        "GARDEN",
+        "ORCHARD"
+      ],
+      "confidence": "low",
+      "reason": "ORCHARD's original 'meyve bahçesi' is also listed as a subtype within GARDEN."
+    },
+    {
+      "entities": [
+        "KITCHEN",
+        "HEARTH"
+      ],
+      "confidence": "low",
+      "reason": "Both use 'ocak'; kitchen room vs. the hearth/stove."
+    },
+    {
+      "entities": [
+        "SCRIPTORIUM",
+        "AEDIFICIUM"
+      ],
+      "confidence": "low",
+      "reason": "Both list 'yazı salonu'; scriptorium is a room inside the Aedificium building, so likely part-whole rather than same."
+    },
+    {
+      "entities": [
+        "INFIRMARY",
+        "LABORATORY"
+      ],
+      "confidence": "low",
+      "reason": "Both use 'laboratuvar'; Severinus's laboratory is a room within the infirmary."
+    },
+    {
+      "entities": [
+        "CLOISTER",
+        "COURTYARD"
+      ],
+      "confidence": "low",
+      "reason": "Both use 'avlu'; the cloister garth may be the same courtyard."
+    },
+    {
+      "entities": [
+        "CORRIDOR",
+        "PASSAGE"
+      ],
+      "confidence": "low",
+      "reason": "Both are passageways ('koridor'/'dehliz'/'geçit')."
+    },
+    {
+      "entities": [
+        "CORRIDOR",
+        "CLOISTER"
+      ],
+      "confidence": "low",
+      "reason": "Both use 'dehliz'."
+    },
+    {
+      "entities": [
+        "PASSAGE",
+        "UNDERGROUND_PASSAGE"
+      ],
+      "confidence": "low",
+      "reason": "'geçit' vs. 'yeraltı geçidi'; possibly the same underground passage."
+    },
+    {
+      "entities": [
+        "TOWER",
+        "EAST_TOWER"
+      ],
+      "confidence": "low",
+      "reason": "TOWER also contains 'doğu kulesi'; generic tower vs. the specific east tower."
+    },
+    {
+      "entities": [
+        "TOWER",
+        "WEST_TOWER"
+      ],
+      "confidence": "low",
+      "reason": "Generic 'kule' may refer to the same tower as 'batı kulesi'."
+    },
+    {
+      "entities": [
+        "TOWER",
+        "SOUTH_TOWER"
+      ],
+      "confidence": "low",
+      "reason": "Generic 'kule' may refer to the same tower as 'güney kulesi'."
+    },
+    {
+      "entities": [
+        "TOWER",
+        "NORTH_TOWER"
+      ],
+      "confidence": "low",
+      "reason": "Generic 'kule' may refer to the same tower as 'kuzey kulesi'."
+    },
+    {
+      "entities": [
+        "STAIRCASE",
+        "SPIRAL_STAIRCASE"
+      ],
+      "confidence": "low",
+      "reason": "Both use 'sarmal merdiven'; SPIRAL_STAIRCASE may be the main spiral staircase included in STAIRCASE."
+    },
+    {
+      "entities": [
+        "HALL",
+        "AULA"
+      ],
+      "confidence": "low",
+      "reason": "Both are 'salon'; AULA is Latin for hall."
+    },
+    {
+      "entities": [
+        "HALL",
+        "SEVEN_SIDED_HALL"
+      ],
+      "confidence": "low",
+      "reason": "Both use 'salon'; 'yedigen salon' is a specific hall."
+    },
+    {
+      "entities": [
+        "ABBOT_HOUSE",
+        "HALL"
+      ],
+      "confidence": "low",
+      "reason": "ABBOT_HOUSE also lists 'salon'; hall inside/attached to the abbot's house."
+    },
+    {
+      "entities": [
+        "SEVEN_SIDED_HALL",
+        "CENTRAL_HEPTAGON"
+      ],
+      "confidence": "low",
+      "reason": "'yedigen salon' vs. 'yedigen oda'; possibly the same seven-sided room."
+    },
+    {
+      "entities": [
+        "CELL",
+        "GUEST_HOUSE"
+      ],
+      "confidence": "low",
+      "reason": "Both use 'hücre'; guest-house cells may be the same as monk cells."
+    },
+    {
+      "entities": [
+        "SHEEPFOLDS",
+        "SHEEP_PENS"
+      ],
+      "confidence": "low",
+      "reason": "'ağıllar' vs. 'koyun ağılları'; likely the same sheep pens."
+    },
+    {
+      "entities": [
+        "PIG_PENS",
+        "PIGSTY"
+      ],
+      "confidence": "low",
+      "reason": "'domuz ağılları' vs. 'domuz ahırı'; likely the same pig enclosure."
+    },
+    {
+      "entities": [
+        "LAND",
+        "GROUND"
+      ],
+      "confidence": "low",
+      "reason": "'topraklar' vs. 'toprak'; singular/plural of land/ground."
+    },
+    {
+      "entities": [
+        "MOUNTAIN",
+        "MOUNTAIN_RANGE"
+      ],
+      "confidence": "low",
+      "reason": "'dağ' vs. 'sıradağ'; related mountain features."
+    },
+    {
+      "entities": [
+        "BLIND_ROOM",
+        "FIRST_BLIND_ROOM"
+      ],
+      "confidence": "low",
+      "reason": "'kör oda' vs. 'birinci kör oda'."
+    },
+    {
+      "entities": [
+        "SMITHY",
+        "WORKSHOP"
+      ],
+      "confidence": "low",
+      "reason": "'Demirhane' vs. 'işlik/demirci ocağı'; both smithing workshops."
+    },
+    {
+      "entities": [
+        "MEETING_BUILDING",
+        "MEETING_HALL"
+      ],
+      "confidence": "low",
+      "reason": "'toplantı binası' vs. 'toplantı salonu'."
+    },
+    {
+      "entities": [
+        "DOOR",
+        "GATE"
+      ],
+      "confidence": "low",
+      "reason": "Both use 'kapı'; many mentions are indistinguishable door/gate."
+    },
+    {
+      "entities": [
+        "DOOR",
+        "OLD_CHURCH_DOOR"
+      ],
+      "confidence": "low",
+      "reason": "OLD_CHURCH_DOOR is identified only by 'kapı'."
+    },
+    {
+      "entities": [
+        "MIRROR",
+        "ROOM_S"
+      ],
+      "confidence": "low",
+      "reason": "Both use 'ayna'; the mirror vs. the room that contains it."
+    },
+    {
+      "entities": [
+        "MIRROR",
+        "MIRROR_ROOM"
+      ],
+      "confidence": "low",
+      "reason": "'ayna' vs. 'aynalı oda'."
+    },
+    {
+      "entities": [
+        "ROOM_S",
+        "MIRROR_ROOM"
+      ],
+      "confidence": "low",
+      "reason": "Both are mirror rooms ('S odası' / 'aynalı oda')."
+    },
+    {
+      "entities": [
+        "CHURCH",
+        "SAN_SALVATORE_CHURCH"
+      ],
+      "confidence": "low",
+      "reason": "Both are 'kilise'; possibly the same church."
+    },
+    {
+      "entities": [
+        "WALL",
+        "SOUTH_WALL"
+      ],
+      "confidence": "low",
+      "reason": "'güney duvarları' is likely part of the abbey walls (part-whole)."
+    },
+    {
+      "entities": [
+        "TRIPOD",
+        "TRIPOD_LAMP"
+      ],
+      "confidence": "low",
+      "reason": "'üçayaklı' and 'büyük bronz üçayak' may refer to the same bronze tripod/lamp."
+    },
+    {
+      "entities": [
+        "MOUNTAIN_SLOPES",
+        "HILLSIDE"
+      ],
+      "confidence": "low",
+      "reason": "'dağın yamaçları' and 'yamaç' are both slopes and could be the same slope."
+    },
+    {
+      "entities": [
+        "FURNACE",
+        "BREAD_OVEN"
+      ],
+      "confidence": "low",
+      "reason": "'fırın' and 'ekmek fırını' may be the same oven."
+    },
+    {
+      "entities": [
+        "MONASTERY",
+        "PREACHERS_MONASTERY"
+      ],
+      "confidence": "low",
+      "reason": "'manastır' and 'vaizler manastırı' may denote the same monastery."
+    },
+    {
+      "entities": [
+        "MEADOW",
+        "MEADOW_OF_JUSTICE"
+      ],
+      "confidence": "low",
+      "reason": "'çayırlıklar' and 'Adalet Çayırı' may refer to the same meadow."
+    },
+    {
+      "entities": [
+        "BONE_ROOM",
+        "BONE_CEMETERY"
+      ],
+      "confidence": "low",
+      "reason": "The bone room and the bone-cemetery passage are related but likely distinct parts."
+    },
+    {
+      "entities": [
+        "INNER_OCTAGON",
+        "OCTAGONAL_COURTYARD"
+      ],
+      "confidence": "low",
+      "reason": "'iç sekizgen' and 'sekizgen avlu' may be the same octagonal structure."
+    },
+    {
+      "entities": [
+        "OIL_LAMP",
+        "TRIPOD_LAMP"
+      ],
+      "confidence": "low",
+      "reason": "'kandil' and the bronze tripod lamp may be the same lamp."
+    },
+    {
+      "entities": [
+        "ENTRANCE_DOOR",
+        "NORTH_DOOR"
+      ],
+      "confidence": "low",
+      "reason": "'kapı' and 'kuzey kapısı' could refer to the same door."
+    },
+    {
+      "entities": [
+        "VERCELLI_LANDS",
+        "NORTHERN_LANDS"
+      ],
+      "confidence": "low",
+      "reason": "The Vercelli bishop's lands and the northern lands may overlap."
+    },
+    {
+      "entities": [
+        "FOUNTAIN",
+        "BASIN"
+      ],
+      "confidence": "low",
+      "reason": "'kurna' and 'leğen' are both water basins and may be the same object."
+    }
+  ]
+}

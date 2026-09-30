@@ -1,0 +1,1305 @@
+{
+  "edge_count": 81,
+  "edges": [
+    {
+      "space": "LIBRARY",
+      "rule": "restricted",
+      "who": "librarian",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000182",
+        "claim_000196",
+        "claim_000201",
+        "claim_000208",
+        "claim_000326",
+        "claim_000428",
+        "claim_000461",
+        "claim_000734",
+        "claim_000803",
+        "claim_000804",
+        "claim_000805",
+        "claim_000873",
+        "claim_000903",
+        "claim_000955",
+        "claim_000980",
+        "claim_001241",
+        "claim_001341",
+        "claim_001350",
+        "claim_001767",
+        "claim_002300",
+        "claim_002354",
+        "claim_002404",
+        "claim_002892",
+        "claim_003083"
+      ],
+      "evidence": [
+        "Yalnızca kütüphanecinin, bilmenin dışında, kitapların labirentinde dolaşmaya hakkı var",
+        "Bir rahip bir kitabı almak isterse, onu nasıl, ne zaman vereceğine ya da verip vermeyeceğine, bazan bana danıştıktan sonra, yalnız o karar verir",
+        "her önüne gelen oraya giremez",
+        "İçeri girebilirsiniz, ama dışarı çıkamazsınız",
+        "geceyarısı bir rahibin, Başrahip’in izniyle... yasak saatte oraya girenlerin başına"
+      ],
+      "support": 24
+    },
+    {
+      "space": "LIBRARY",
+      "rule": "forbidden",
+      "who": "William of Baskerville",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000181",
+        "claim_000206",
+        "claim_000485",
+        "claim_000532",
+        "claim_000550",
+        "claim_000954",
+        "claim_000992",
+        "claim_002228",
+        "claim_002516",
+        "claim_002519",
+        "claim_002820",
+        "claim_002832"
+      ],
+      "evidence": [
+        "Ama kesinlikle Aedificium'un en üst katında, kitaplıkta dolaşamazsınız",
+        "Hiç kimse girmemelidir. Hiç kimse giremez.",
+        "Başrahip'in yasağı tüm kitaplardan daha güçlü",
+        "bir rahibin geceyarısı ... gizlice kitaplığa girmeye kalkıştığı",
+        "manastırda gece vakti kimsenin kitaplığa girmesinin istenmediği"
+      ],
+      "support": 12
+    },
+    {
+      "space": "FINIS_AFRICAE",
+      "rule": "restricted",
+      "who": "those ignorant of the key (dördün birincisi ve dördün yedincisi)",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001800",
+        "claim_001810",
+        "claim_001929",
+        "claim_002205",
+        "claim_002540",
+        "claim_002631",
+        "claim_002726",
+        "claim_002734",
+        "claim_002754",
+        "claim_002924"
+      ],
+      "evidence": [
+        "finis Africae’nin eşiğine varıyorlar, ama içeri giremiyorlar",
+        "içeri giremiyorlar, çünkü dördün birincisinin ve dördün yedincisinin ne olduğunu bilmemektedirler",
+        "kesinlikle bir geçit var",
+        "ancak finis Africae’ye nasıl girildiğini bilirsek bulabiliriz",
+        "finis Afriace'ye nasıl girebiliriz"
+      ],
+      "support": 10
+    },
+    {
+      "space": "ABBEY",
+      "rule": "allowed",
+      "who": "visitor",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000059",
+        "claim_000179",
+        "claim_000979",
+        "claim_001556",
+        "claim_001563",
+        "claim_001746",
+        "claim_001752",
+        "claim_001794",
+        "claim_002316"
+      ],
+      "evidence": [
+        "onlara ziyaretçimizin surlardan girmek üzere olduğunu bildir",
+        "tüm manastırın içinde serbestçe dolaşabilirsiniz",
+        "Başrahip'in kendisine tüm manastırda inceleme yapmak için izin vermiş olduğunu",
+        "kapının açık bırakıldığı ve bir köpeğin gelip artıkları yediği söylenecek",
+        "karanlıkta manastırın içinde rahatça dolaşan şu bizim kilerci ya da Salvatore"
+      ],
+      "support": 9
+    },
+    {
+      "space": "AEDIFICIUM",
+      "rule": "locked",
+      "who": null,
+      "when": "after the evening meal",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000173",
+        "claim_000488",
+        "claim_000595",
+        "claim_000596",
+        "claim_000996",
+        "claim_001120",
+        "claim_002231",
+        "claim_002594",
+        "claim_002595"
+      ],
+      "evidence": [
+        "Akşam yemeğinden sonra Aedificium kilitlenir",
+        "ben kendim, mutfağa ve hastaneye açılan aşağıdaki kapıları kilitlerim",
+        "Bu saatte Aedificium’un kapıları kapanır mı?",
+        "kütüphaneci kendi eliyle tüm kapıları kilitler, içeriden sürgüler.",
+        "Aedificium'un kapıları kilitliyken"
+      ],
+      "support": 9
+    },
+    {
+      "space": "KITCHEN",
+      "rule": "allowed",
+      "who": "monks",
+      "when": "until evening prayer",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000462",
+        "claim_000527",
+        "claim_000572",
+        "claim_000587",
+        "claim_001432",
+        "claim_001531",
+        "claim_001679",
+        "claim_001971",
+        "claim_003060"
+      ],
+      "evidence": [
+        "rahipler akşam duasına değin mutfaktan da, hastaneden de yararlanmak zorundalar",
+        "rahipler akşam duasına değin mutfaktan da, hastaneden de yararlanmak zorundalar",
+        "yemekten önce ya da sonra mutfağa uğrayabileceğimi",
+        "yemekten önce ya da sonra mutfağa uğrayabileceğimi",
+        "Yemek saati geçti. Rahipler akşam duasına başladılar bile. Ama belki mutfak hâlâ açıktır"
+      ],
+      "support": 9
+    },
+    {
+      "space": "AEDIFICIUM",
+      "rule": "restricted",
+      "who": "foreigners and animals",
+      "when": "after doors are locked",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000466",
+        "claim_000531",
+        "claim_000916",
+        "claim_001026",
+        "claim_001074",
+        "claim_001117",
+        "claim_001683"
+      ],
+      "evidence": [
+        "yabancılarla hayvanların Acdificium'a girmelerini önlemek için",
+        "Sürgülü kapılar, kesin yasaklar, tehditlerle, sanırım.",
+        "Aedificium'a girmeye gelince, dün gece Malachi'nin nereden çıktığını gördük",
+        "Aedificium'a nasıl girileceği konusunda bize ipucu verdiğine inanıyorum",
+        "Aedificium'a girmenin tek yolunun bu olduğunu varsayarsak"
+      ],
+      "support": 7
+    },
+    {
+      "space": "ABBEY",
+      "rule": "restricted",
+      "who": "certain books",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000193",
+        "claim_001567",
+        "claim_001628",
+        "claim_002539",
+        "claim_002646",
+        "claim_003062"
+      ],
+      "evidence": [
+        "bu ciltlerin hiçbiri duvarlarımızdan içeri giremez",
+        "İnsanları manastıra nasıl sokacağım ve manastırdan nasıl çıkaracağını",
+        "kızları gece bize söylemek istemediği yollardan manastıra sokuyordu",
+        "Günbatımında kuşkusuz Başrahip, William'ın artık soru sormaya ve dilediği her yere girip çıkmaya hakkı olmadığım söyleyerek rahipleri uyaracaktı",
+        "onu uzun süre dışarıda beklemek zorunda kaldığını söyledi"
+      ],
+      "support": 6
+    },
+    {
+      "space": "CHURCH",
+      "rule": "allowed",
+      "who": "Adso",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001315",
+        "claim_001438",
+        "claim_002884",
+        "claim_002886",
+        "claim_002893",
+        "claim_002894"
+      ],
+      "evidence": [
+        "Bir anlık bir özgürlüğe sahip olduğumdan oraya gittim.",
+        "gizlice kiliseye girdim",
+        "Kuşkusuz, kiliseye daha kolay girilebiliyor, bu yüzden de kitaplıktan daha kolay savunulabiliyordu",
+        "dua saatinde herkese ana gibi kucak açan kilise, yardım saatinde de herkese açıktı",
+        "dua saatinde herkese ana gibi kucak açan kilise"
+      ],
+      "support": 6
+    },
+    {
+      "space": "INFIRMARY",
+      "rule": "allowed",
+      "who": "monks",
+      "when": "until evening prayer",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000463",
+        "claim_000528",
+        "claim_001605",
+        "claim_002146",
+        "claim_002702",
+        "claim_002705"
+      ],
+      "evidence": [
+        "rahipler akşam duasına değin mutfaktan da, hastaneden de yararlanmak zorundalar",
+        "rahipler akşam duasına değin mutfaktan da, hastaneden de yararlanmak zorundalar",
+        "Yardımcılarımdan biri, bir çömez, hastanenin kapısını açık bırakmıştı",
+        "Okçular oraya gitmişler, kapıyı açık bulmuşlardı",
+        "Severinus’un önceki gün Malachi’nin hastaneye girmesine izin vermesinin nedeni buydu"
+      ],
+      "support": 6
+    },
+    {
+      "space": "ABBEY",
+      "rule": "guarded",
+      "who": "archers (okçular)",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001795",
+        "claim_001804",
+        "claim_002015",
+        "claim_002562"
+      ],
+      "evidence": [
+        "okçuların çevrede dolaştıklarını söyledim",
+        "çünkü okçuların çevrede dolaştıklarını söyledim",
+        "okçular gece tüm yapılar bütününde devriye geziyorlardı",
+        "Benno'nun hiçbir yeri kilitlememesine karar verilmiş olduğunu, çünkü kuralları bilmediğini söyledi"
+      ],
+      "support": 4
+    },
+    {
+      "space": "LIBRARY",
+      "rule": "guarded",
+      "who": null,
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000209",
+        "claim_002380",
+        "claim_002736",
+        "claim_003080"
+      ],
+      "evidence": [
+        "kitaplık kendi kendini korur",
+        "Malachi'nin kitaplığı bir çoban köpeği gibi koruduğu",
+        "Görevim kitaplığı korumaktı.",
+        "Şimdi öğrenmek istediği gizlerin bekçiliğini o yapıyor"
+      ],
+      "support": 4
+    },
+    {
+      "space": "LABORATORY",
+      "rule": "restricted",
+      "who": "Malachi",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002160",
+        "claim_002166",
+        "claim_002193"
+      ],
+      "evidence": [
+        "William orasının kitaplık olmadığını ve orada hak iddia edemeyeceğini anımsattı ona",
+        "Başrahip’in buyruklarına karşın, birçokları içeri girmek için zorluyorlardı",
+        "içeri girmekte güçlük çektik; çünkü çömezler odanın içinde dolaşıyorlardı"
+      ],
+      "support": 3
+    },
+    {
+      "space": "MEETING_HALL",
+      "rule": "guarded",
+      "who": "archers",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002038",
+        "claim_002072",
+        "claim_002209"
+      ],
+      "evidence": [
+        "yakında duran okçuların başını çağırdı ve ona bir şeyler fısıldadı",
+        "kapıda nöbet tutan çömezlerden biri içeri girdi",
+        "Kilerci masanın önünde, iki okçu arasında ayakta duruyordu"
+      ],
+      "support": 3
+    },
+    {
+      "space": "AEDIFICIUM",
+      "rule": "forbidden",
+      "who": "everyone",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000174",
+        "claim_000175"
+      ],
+      "evidence": [
+        "çok katı bir kural, hiç kimsenin içeri girmesine izin vermez",
+        "Doğal olarak, rahiplerin de, ama..."
+      ],
+      "support": 2
+    },
+    {
+      "space": "CELL",
+      "rule": "locked",
+      "who": "accused",
+      "when": "three days",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002247",
+        "claim_002250"
+      ],
+      "evidence": [
+        "Elleri ayakları zincire vurulup üç gün hücrede bırakılsın.",
+        "üç gün hücrede bırakılsın"
+      ],
+      "support": 2
+    },
+    {
+      "space": "GATE",
+      "rule": "locked",
+      "who": "Malachi",
+      "when": "after evening prayer/night",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000464",
+        "claim_000465"
+      ],
+      "evidence": [
+        "mutfağa ve hastaneye açılan aşağıdaki kapıları kilitlerim",
+        "mutfağa ve hastaneye açılan aşağıdaki kapıları kilitlerim"
+      ],
+      "support": 2
+    },
+    {
+      "space": "INFIRMARY",
+      "rule": "guarded",
+      "who": "monks and servants",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002112",
+        "claim_002125"
+      ],
+      "evidence": [
+        "kapının girişini tutmuşlardı",
+        "Koşuşan rahiplerle uşaklardı bunlar; kapının girişini tutmuşlardı"
+      ],
+      "support": 2
+    },
+    {
+      "space": "KITCHEN",
+      "rule": "key required",
+      "who": "Remigio",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001659",
+        "claim_001669"
+      ],
+      "evidence": [
+        "Çok eskiden çilingirlere yaptırdığım bir anahtarım var.",
+        "Çok eskiden çilingirlere yaptırdığım bir anahtarım var"
+      ],
+      "support": 2
+    },
+    {
+      "space": "LABORATORY",
+      "rule": "locked",
+      "who": "Severinus",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002082",
+        "claim_002173"
+      ],
+      "evidence": [
+        "hemen geldiğin yere dön. Kapıyı içeriden kilitle ve beni bekle",
+        "Severinus bir kitapla kendini buraya kilitledi."
+      ],
+      "support": 2
+    },
+    {
+      "space": "REFECTORY",
+      "rule": "restricted",
+      "who": null,
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001098",
+        "claim_001104"
+      ],
+      "evidence": [
+        "açmak için birkaç saniye uğraştım",
+        "Kapıdan çıkmadı"
+      ],
+      "support": 2
+    },
+    {
+      "space": "SCRIPTORIUM",
+      "rule": "restricted",
+      "who": "William",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000981",
+        "claim_001299"
+      ],
+      "evidence": [
+        "Başrahip'in yazı salonunda ... dilediği gibi dolaşmasına da izin verip vermediğini",
+        "Malachi'den izin isteyip katalogun sayfalarım çevirmeye başladım"
+      ],
+      "support": 2
+    },
+    {
+      "space": "SCRIPTORIUM",
+      "rule": "locked",
+      "who": null,
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002561",
+        "claim_002862"
+      ],
+      "evidence": [
+        "yazı salonunu kilitlemekle uğraşmakta olabileceğini öne sürdü",
+        "oraya çıkanlar da, pencereleri dışarıdan açamıyorlardı"
+      ],
+      "support": 2
+    },
+    {
+      "space": "ABBEY",
+      "rule": "jurisdiction of the abbot applies to entrants",
+      "who": "papal envoys",
+      "when": "upon setting foot on monastery land",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000938"
+      ],
+      "evidence": [
+        "elçilerinin manastır toprağına ayak basar basmaz Başrahip'in yargı yetkisine gireceklerini biliyordu"
+      ],
+      "support": 1
+    },
+    {
+      "space": "ABBEY",
+      "rule": "strict surveillance during negotiations",
+      "who": null,
+      "when": "during the talks",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000942"
+      ],
+      "evidence": [
+        "görüşmeler sırasında manastırı sıkı bir gözetim altında tutmak için onunla işbirliği sağlanmaya çalışılacaktı"
+      ],
+      "support": 1
+    },
+    {
+      "space": "ABBEY",
+      "rule": "guarded by armed force",
+      "who": "French King's archer company",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000943"
+      ],
+      "evidence": [
+        "Fransız Kralı'nın bir okçu bölüğünce sağlanmasını şart koşmuştu"
+      ],
+      "support": 1
+    },
+    {
+      "space": "ABBEY",
+      "rule": "locked",
+      "who": "Benno",
+      "when": "sunset",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002355"
+      ],
+      "evidence": [
+        "o saatte her şeyi kilitliyor olacaksın"
+      ],
+      "support": 1
+    },
+    {
+      "space": "ADJACENT_ROOM",
+      "rule": "restricted",
+      "who": "readers",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001961"
+      ],
+      "evidence": [
+        "okunmak için kesinlikle hiç kimseye verilemeyecek kitapların bir duvar boyunca toplandığının ayrımına vardım"
+      ],
+      "support": 1
+    },
+    {
+      "space": "AEDIFICIUM",
+      "rule": "guarded",
+      "who": "Malachi",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000902"
+      ],
+      "evidence": [
+        "Aedificium’u koruması gereken Malachi"
+      ],
+      "support": 1
+    },
+    {
+      "space": "AEDIFICIUM",
+      "rule": "secret mechanism",
+      "who": null,
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001073"
+      ],
+      "evidence": [
+        "bizim bildiğimizden daha çok gizli kapıları olmalı"
+      ],
+      "support": 1
+    },
+    {
+      "space": "AEDIFICIUM_TOP_FLOOR",
+      "rule": "restricted",
+      "who": "all but two persons",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000204"
+      ],
+      "evidence": [
+        "iki kişiden başka hiç kimse, Aedificium'un en üst katına giremiyor"
+      ],
+      "support": 1
+    },
+    {
+      "space": "BATH",
+      "rule": "allowed",
+      "who": "servants",
+      "when": "this morning",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001577"
+      ],
+      "evidence": [
+        "hamamın kapışım açtılar, içeriye şöyle bir göz attılar, hiç aramadan"
+      ],
+      "support": 1
+    },
+    {
+      "space": "CELL",
+      "rule": "restricted",
+      "who": "William and Adso",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001717"
+      ],
+      "evidence": [
+        "saygısız kulakların erişemeyeceği hücresine"
+      ],
+      "support": 1
+    },
+    {
+      "space": "CELLAR",
+      "rule": "restricted",
+      "who": "ABBOT",
+      "when": "extraordinary occasions and very important visitors only",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002373"
+      ],
+      "evidence": [
+        "Başrahip'in kıskançlıkla koruduğu ve yalnızca olağanüstü durumlarda ve çok önemli ziyaretçiler için açılmasına izin verdiği"
+      ],
+      "support": 1
+    },
+    {
+      "space": "CEMETERY",
+      "rule": "restricted",
+      "who": "monks",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001005"
+      ],
+      "evidence": [
+        "Ama sakın gitme oraya; ... Başrahip kızar sonra"
+      ],
+      "support": 1
+    },
+    {
+      "space": "CENTRAL_HEPTAGON",
+      "rule": "entrance possibly through room u",
+      "who": null,
+      "when": null,
+      "certainty": "WEAK_INFERENCE",
+      "claim_ids": [
+        "claim_001891"
+      ],
+      "evidence": [
+        "Eğer açılmıyorsa, yedigene giriş, bitişikteki kör odadan, U odasından olmalıydı"
+      ],
+      "support": 1
+    },
+    {
+      "space": "CENTRAL_HEPTAGON",
+      "rule": "unreachable",
+      "who": null,
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001899"
+      ],
+      "evidence": [
+        "Yedigen oda var, ama ulaşılamaz."
+      ],
+      "support": 1
+    },
+    {
+      "space": "CHAPEL",
+      "rule": "secret mechanism",
+      "who": null,
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001047"
+      ],
+      "evidence": [
+        "sağdan dördüncü kafatası, gözlerine bas"
+      ],
+      "support": 1
+    },
+    {
+      "space": "CHOIR",
+      "rule": "allowed",
+      "who": "monks",
+      "when": "entering for evening prayer",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000594"
+      ],
+      "evidence": [
+        "kuzey kapısından koro yerine girdiler"
+      ],
+      "support": 1
+    },
+    {
+      "space": "CHURCH",
+      "rule": "restricted",
+      "who": "Adso",
+      "when": "night",
+      "certainty": "WEAK_INFERENCE",
+      "claim_ids": [
+        "claim_001449"
+      ],
+      "evidence": [
+        "gizlice kiliseye girdim"
+      ],
+      "support": 1
+    },
+    {
+      "space": "CHURCH_NORTH_DOOR",
+      "rule": "allowed",
+      "who": null,
+      "when": "at night",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000889"
+      ],
+      "evidence": [
+        "geceleri hep açık duran) kuzey kapısından koro yerine girmişti"
+      ],
+      "support": 1
+    },
+    {
+      "space": "DORMITORY",
+      "rule": "restricted",
+      "who": "monks",
+      "when": "that night",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002587"
+      ],
+      "evidence": [
+        "Hiç kimsenin ... yatakhanenin dışında dolaşmaması için buyruk verdi"
+      ],
+      "support": 1
+    },
+    {
+      "space": "FINIS_AFRICAE",
+      "rule": "key required",
+      "who": null,
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002652"
+      ],
+      "evidence": [
+        "çünkü buradan şifreyi bilmiyoruz"
+      ],
+      "support": 1
+    },
+    {
+      "space": "FINIS_AFRICAE",
+      "rule": "locked",
+      "who": null,
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002753"
+      ],
+      "evidence": [
+        "Ayna!\" diye bağırdı William. \"Bizi içeriye kapatıyor!"
+      ],
+      "support": 1
+    },
+    {
+      "space": "FORBIDDEN_FLOOR",
+      "rule": "forbidden",
+      "who": null,
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001124"
+      ],
+      "evidence": [
+        "yasak kata çıkan doğu merdiveninden"
+      ],
+      "support": 1
+    },
+    {
+      "space": "GATE",
+      "rule": "open",
+      "who": null,
+      "when": "perhaps tomorrow",
+      "certainty": "WEAK_INFERENCE",
+      "claim_ids": [
+        "claim_001566"
+      ],
+      "evidence": [
+        "kapının açık bırakıldığı ve bir köpeğin gelip artıkları yediği söylenecek"
+      ],
+      "support": 1
+    },
+    {
+      "space": "GATE",
+      "rule": "guarded",
+      "who": "okçular (archers)",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002263"
+      ],
+      "evidence": [
+        "Ama okçular hâlâ kapıda nöbet tutmuyorlar mı?"
+      ],
+      "support": 1
+    },
+    {
+      "space": "GATE",
+      "rule": "allowed",
+      "who": "Adso",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002475"
+      ],
+      "evidence": [
+        "Afallamış, ana kapıdan çıktım"
+      ],
+      "support": 1
+    },
+    {
+      "space": "HEPTAGONAL_ROOM",
+      "rule": "locked",
+      "who": null,
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001926"
+      ],
+      "evidence": [
+        "Yedigen oda var, ama ulaşılamaz."
+      ],
+      "support": 1
+    },
+    {
+      "space": "HOSPITAL",
+      "rule": "forbidden",
+      "who": null,
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002100"
+      ],
+      "evidence": [
+        "Sana hastaneye girmemeni salık veririm"
+      ],
+      "support": 1
+    },
+    {
+      "space": "INFIRMARY",
+      "rule": "locked",
+      "who": null,
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002089"
+      ],
+      "evidence": [
+        "hastanenin kapısı sisin içinden belirdiği zaman çoktan kilitlenmişti"
+      ],
+      "support": 1
+    },
+    {
+      "space": "INFIRMARY",
+      "rule": "restricted",
+      "who": "Benno",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002098"
+      ],
+      "evidence": [
+        "Sana hastaneye girmemeni salık veririm"
+      ],
+      "support": 1
+    },
+    {
+      "space": "KITCHEN",
+      "rule": "restricted",
+      "who": "abbot",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000787"
+      ],
+      "evidence": [
+        "Tanrı'nın çocuklarına yiyecek vermek Başrahip'in merhametine kalmış"
+      ],
+      "support": 1
+    },
+    {
+      "space": "KITCHEN",
+      "rule": "left ajar",
+      "who": null,
+      "when": "at night",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001510"
+      ],
+      "evidence": [
+        "aralık bırakıldığı açıkça anlaşılan dış kapıdan kaçtı; kapıyı ardından kapattı"
+      ],
+      "support": 1
+    },
+    {
+      "space": "KITCHEN",
+      "rule": "not locked from inside",
+      "who": null,
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001666"
+      ],
+      "evidence": [
+        "içeriden de sürgülenmez"
+      ],
+      "support": 1
+    },
+    {
+      "space": "KITCHEN",
+      "rule": "locked",
+      "who": null,
+      "when": "night",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001790"
+      ],
+      "evidence": [
+        "gece için kapıları kilitlemeye hazırlanılan mutfakta"
+      ],
+      "support": 1
+    },
+    {
+      "space": "LABORATORY",
+      "rule": "guarded",
+      "who": "Benno",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002165"
+      ],
+      "evidence": [
+        "onun yalnızca kapıda nöbet tutmasına izin verdi"
+      ],
+      "support": 1
+    },
+    {
+      "space": "LABORATORY",
+      "rule": "allowed",
+      "who": null,
+      "when": "at the time Remigio went there",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002237"
+      ],
+      "evidence": [
+        "Severinus'un yanına gittim... Kapı açıktı ve Severinus ölmüştü"
+      ],
+      "support": 1
+    },
+    {
+      "space": "LABYRINTH",
+      "rule": null,
+      "who": "Alinardo",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000966"
+      ],
+      "evidence": [
+        "yaşlı Alinardo, labirente ve oraya nasıl girileceğine dair çok ilginç şeyler anlatıyor"
+      ],
+      "support": 1
+    },
+    {
+      "space": "LIBRARY",
+      "rule": "reached via",
+      "who": null,
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000830"
+      ],
+      "evidence": [
+        "yukarıdaki kitaplığa açılan tek merdiven"
+      ],
+      "support": 1
+    },
+    {
+      "space": "LIBRARY",
+      "rule": "key required",
+      "who": "monks",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001621"
+      ],
+      "evidence": [
+        "Malachi birçok kitabı bana göstermekte öylesine isteksizdi ki, Başrahip’ten izin almak zorunda kaldım"
+      ],
+      "support": 1
+    },
+    {
+      "space": "LIBRARY",
+      "rule": "locked",
+      "who": null,
+      "when": "always",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002096"
+      ],
+      "evidence": [
+        "kitaplık, içinde kötü şeyler varmış gibi hep kapalı duruyor"
+      ],
+      "support": 1
+    },
+    {
+      "space": "LOWER_DOORS",
+      "rule": "locked",
+      "who": "ABBOT",
+      "when": "after dinner",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002356"
+      ],
+      "evidence": [
+        "Akşam yemeğinden sonra alt kapıları ben kendim kilitleyeceğim"
+      ],
+      "support": 1
+    },
+    {
+      "space": "MEETING_HALL",
+      "rule": "restrained",
+      "who": "cellarer",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002210"
+      ],
+      "evidence": [
+        "Kilerci güçlükle kımıldatabildiği zincire vurulmuş elleriyle yüzünü örttü"
+      ],
+      "support": 1
+    },
+    {
+      "space": "PASSAGE",
+      "rule": "locked",
+      "who": null,
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002692"
+      ],
+      "evidence": [
+        "Şimdi geçidin iki tarafı da kapalı; düzeneği onarmak olanaksız"
+      ],
+      "support": 1
+    },
+    {
+      "space": "PASSAGE",
+      "rule": "restricted",
+      "who": "Jorge (only he knows it)",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002693"
+      ],
+      "evidence": [
+        "Ona yalnız benim bildiğim öteki geçidi gösterdim. Yıllardır o geçidi kullanıyorum, çünkü karanlıkta daha kolay oluyor"
+      ],
+      "support": 1
+    },
+    {
+      "space": "REFECTORY",
+      "rule": "locked",
+      "who": null,
+      "when": null,
+      "certainty": "STRONG_INFERENCE",
+      "claim_ids": [
+        "claim_001099"
+      ],
+      "evidence": [
+        "Dış kapı hâlâ sürgülüydü"
+      ],
+      "support": 1
+    },
+    {
+      "space": "REFECTORY",
+      "rule": "allowed",
+      "who": null,
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002804"
+      ],
+      "evidence": [
+        "yemekhanenin kapısını içeriden açmaya çalıştım; oldukça çaba harcadıktan sonra bunu başardım"
+      ],
+      "support": 1
+    },
+    {
+      "space": "ROOM",
+      "rule": "single passage",
+      "who": null,
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001188"
+      ],
+      "evidence": [
+        "insan geldiği yoldan geri dönmek istemiyorsa, Gratia vobis et pax denen odadan başka geçilecek yer yoktu"
+      ],
+      "support": 1
+    },
+    {
+      "space": "ROOM_L",
+      "rule": "no other exit",
+      "who": null,
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001869"
+      ],
+      "evidence": [
+        "başka çıkışı olmayan kırmızı bir L harfinin bulunduğu son oda"
+      ],
+      "support": 1
+    },
+    {
+      "space": "ROOM_S",
+      "rule": "key required",
+      "who": null,
+      "when": null,
+      "certainty": "STRONG_INFERENCE",
+      "claim_ids": [
+        "claim_001930"
+      ],
+      "evidence": [
+        "bu aynanın bir kapı olduğuna hiç kuşku yok"
+      ],
+      "support": 1
+    },
+    {
+      "space": "SAN_SALVATORE_CHURCH",
+      "rule": "restricted",
+      "who": "Adso",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_003035"
+      ],
+      "evidence": [
+        "kilisenin önünde toplanmış olan büyük kalabalık yüzünden içeri giremedim"
+      ],
+      "support": 1
+    },
+    {
+      "space": "SCRIPTORIUM",
+      "rule": "allowed",
+      "who": "shepherds",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002848"
+      ],
+      "evidence": [
+        "Ama yazı salonuna nasıl çıkacaklarını bilmiyorlardı"
+      ],
+      "support": 1
+    },
+    {
+      "space": "TORTURE_ROOM",
+      "rule": "restricted",
+      "who": "abbot",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002248"
+      ],
+      "evidence": [
+        "Başrahip'ten işkence aletlerinin konabileceği bir yer sağlamasını isteyin."
+      ],
+      "support": 1
+    },
+    {
+      "space": "TRIAL_SPACE",
+      "rule": "guarded",
+      "who": "archers (okçular)",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002217"
+      ],
+      "evidence": [
+        "okçular tarafından sürüklenen zincire vurulmuş gövdesinin"
+      ],
+      "support": 1
+    },
+    {
+      "space": "VENANTIUS_DESK",
+      "rule": "guarded",
+      "who": "monks",
+      "when": "all day until William returns",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000875"
+      ],
+      "evidence": [
+        "o masaya hiç kimsenin yaklaşmamasını"
+      ],
+      "support": 1
+    },
+    {
+      "space": "VENANTIUS_DESK",
+      "rule": "restricted",
+      "who": "monks",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000978"
+      ],
+      "evidence": [
+        "Başrahip'in buyruğu olmaksızın da yaklaşamayacaktı"
+      ],
+      "support": 1
+    },
+    {
+      "space": "WALL",
+      "rule": "multiple entrances",
+      "who": null,
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001670"
+      ],
+      "evidence": [
+        "Surlarda, ana kapıdan başka girişler de var"
+      ],
+      "support": 1
+    },
+    {
+      "space": "WALL_PASSAGE",
+      "rule": "allowed",
+      "who": "Ubertino",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002265"
+      ],
+      "evidence": [
+        "duvardaki geçitlerden birinden çıkar çıkmaz"
+      ],
+      "support": 1
+    },
+    {
+      "space": "WASTE_SLOPE",
+      "rule": "allowed",
+      "who": "peasants",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000506"
+      ],
+      "evidence": [
+        "köylülerin oraya gelip aşağıdan uzanarak çiftlikleri için saman aldıkları açıktı"
+      ],
+      "support": 1
+    },
+    {
+      "space": "assembly space (unidentified)",
+      "rule": "guarded",
+      "who": "Bernardo Gui's archers (okçular)",
+      "when": null,
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_003077"
+      ],
+      "evidence": [
+        "Bernardo Gui'nin bir işareti üzerine okçular iki safın yumruk yumruğa gelmesini önlemek için araya girdiler"
+      ],
+      "support": 1
+    }
+  ]
+}

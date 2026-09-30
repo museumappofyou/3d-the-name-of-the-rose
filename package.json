@@ -1,0 +1,11 @@
+{
+  "name": "gulun-adi-abbey",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A walkable 3D reconstruction of the abbey in Umberto Eco's The Name of the Rose, built from the novel and its plan.",
+  "scripts": {
+    "start": "python3 scripts/serve.py",
+    "test": "node --test tests/*.test.js"
+  }
+}

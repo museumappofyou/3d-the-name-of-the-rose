@@ -1,0 +1,108 @@
+# Internet asset research — selected candidates
+
+Checked 29 September 2026. Candidate status means **researched**, not downloaded, purchased, visually matched in-engine, or cleared for every deployment. The next pass should preview in consistent lighting and inspect the downloaded file before committing. For Sketchfab “downloadable” items, the platform normally offers a glTF archive after creator-account sign-in; verify rig/clips and texture contents in the actual archive. Avoid bulk imports. Source pages and the governing licenses are linked directly.
+
+## License and sourcing rules
+
+- **FREE / CC0:** [Poly Haven](https://polyhaven.com/license) permits commercial use, modification and redistribution without attribution. Existing project textures already come from there. [MakeHuman outputs](https://github.com/makehumancommunity/makehuman/blob/master/LICENSE.md) can be CC0 when built entirely from bundled CC0 assets; verify every third-party garment separately.
+- **FREE / CC BY:** The listed Sketchfab models allow commercial use under their displayed CC Attribution license. Credit author, asset, license and model URL in an in-app credits panel and repository; [Sketchfab guidance](https://sketchfab.com/developers/download-api/guidelines) explicitly requires author/source attribution. Model-page prose can introduce conflicting “personal only” terms: reject or seek permission if so.
+- **PAID / Fab Standard:** [Fab EULA](https://www.fab.com/eula) allows commercial projects and modifications, including tools beyond Unreal, but prohibits standalone asset redistribution. **Price and tier must be checked at purchase**; several listings did not show a public price or selected license. A public repository or directly retrievable browser GLB may pose redistribution concerns; get publisher clearance or choose CC0/CC BY for openly served assets.
+- **PAID / CGTrader Royalty Free:** [CGTrader license](https://help.cgtrader.com/hc/en-us/articles/360015124437-Royalty-Free-License) allows incorporation in a product when the asset cannot be retrieved as a standalone file. Loose public browser models need a rights review. No ripped game meshes or CC BY-NC/ND candidates.
+- **Mixamo:** [Adobe FAQ](https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html) permits use in commercial games with an Adobe ID. It is a **biped** auto-rig/animation service, not an animal animation source; check redistribution terms for raw download files.
+
+## Humans and animation — rank by suitability
+
+| Rank / candidate | Price, license, format, rig/animation, complexity | Why it fits / integration concern |
+|---|---|---|
+| **1, conditional: [Old Monks – Game Ready, AspectStudios (Fab)](https://www.fab.com/listings/45905534-39d4-4f5f-a044-b407facc2282)** | **PAID**, price not exposed without license selection; Fab Standard if selected. FBX and converted GLB/glTF. Listing says fully rigged hooded/unhooded; animation clips and triangle count **unpublished**. | Direct period silhouette; best near-view monk lead. Preview face/robe deformation and hood clipping; ascertain number of distinct meshes, texture size, licence for web deployment before purchase. |
+| **2, free fallback: [MakeHuman Community](https://www.makehumancommunity.org/) + [official CC0 terms](https://github.com/makehumancommunity/makehuman/blob/master/LICENSE.md) + [Mixamo](https://www.mixamo.com/)** | **FREE**; generated bundled MakeHuman asset CC0; Adobe Mixamo biped animations commercial game use. Export FBX/DAE then Blender to GLB; rig via Mixamo or compatible skeleton. Poly count depends on export. | Existing human anatomy/skin/face base avoids geometric people. Create 4–6 shared archetypes and period habit/cowl, overrobe, cap, apron and boots; keep cloth meshes simple and optimize to environment scale. Biggest work is compatible garment weighting, texture atlas and clip retarget. |
+| **3, conditional paid variety: [Male NPC Pack (CGTrader)](https://www.cgtrader.com/3d-model-packs/male-npc-pack)** | **PAID**, dynamic price (roughly $160 in search snapshot, verify); RF license. FBX, no native GLB advertised; monk about 28k triangles, rigged but monk animation status unclear; many materials/textures. | Includes monk, peasant, blacksmith, butcher, merchant; strong worker variety. Many textures need atlasing/downsizing. Verify copyright/originality and whether public GLB serving meets CGTrader anti-extraction terms. |
+| **Background only: [Worker Girl set (Sketchfab)](https://sketchfab.com/3d-models/girl-with-clothes-worker-set-4cf10e2dde6d4b12b6dccd25a4cf3b77)** | **FREE CC BY / attribution required / commercial allowed**; FBX/downloadable glTF; rigged, idle; ~2.5k triangles, 1–2K maps. | Low-cost service-person variation if visual style matches after desaturation/retexturing. It is somewhat stylized and should not define the cast. |
+
+**Rejected human shortcuts:** [964-triangle monk](https://sketchfab.com/3d-models/monk-character-8cacbd85a5b84f59a8c9000d7a6dcca2) is too crude for the target; [“Monk Rigged” listing](https://sketchfab.com/3d-models/monk-rigged-3d-model-999aac12a3354a10862ae87f1eaee31c) says its downloadable version has no rig. Do not treat title tags as proof of import-ready animation.
+
+**Animation set:** Source biped walking, standing, sit, kneel, prayer, writing, carrying and work idles from [Mixamo](https://www.mixamo.com/) after reviewing fit. Preserve current horarium timing; a few high quality actions, varied phase offsets and matching hand/furniture contacts matter more than dozens of conspicuous loops. For scriptorium writing, page turn and work gestures, a small authored upper-body action may be necessary.
+
+## Animals — choose compatible quality, never mix a realistic horse with cartoon livestock in the same close view
+
+| Candidate | Price/license; format; rig/animation; published complexity | Fit and concern |
+|---|---|---|
+| **[Animated Rigged Horse with Saddle (Sketchfab)](https://sketchfab.com/3d-models/animated-rigged-horse-with-saddle-b08743c2c4734fb98a4e0a2f5767c318)** | **FREE CC BY / attribution / commercial allowed**; downloadable glTF archive; listed rigged/animated, ~32.1k triangles. | First horse test for Brunellus and visitors; test actual idle/walk clips and detachable tack. Make Brunellus black; keep horses within stable dimensions. |
+| **[Farm Cow Animated Dairy Cattle (Sketchfab)](https://sketchfab.com/3d-models/farm-cow-animated-dairy-cattle-0e780cb5ab6d457198ded7d4e191a03e)** | **FREE CC BY / attribution / commercial allowed**; downloadable glTF, animated (idle/run described), ~9.5k triangles. | Efficient cattle replacement; check breed silhouette against medieval oxen and select calm motions. |
+| **[Animated Sheep (Sketchfab)](https://sketchfab.com/3d-models/animated-sheep-b99698502dea4905b916fce0bcf2dfc0)** | **FREE CC BY / attribution / commercial allowed**; downloadable glTF, animated standing; ~15.7k triangles. | Realistic sheep idle. Optimize wool/texture; LOD for flock. |
+| **[Donkey animated (Sketchfab)](https://sketchfab.com/3d-models/donkey-animated-8fdd01c5ae354b50a686a2bc2a901f34)** | **FREE CC BY / attribution / commercial allowed**; downloadable glTF, rigged walk; ~19.8k triangles. | Test as donkey. A mule should have its own proportions/coat, not merely a small horse; adapt only if the result reads as mule. |
+| **[Piglet (Sketchfab)](https://sketchfab.com/3d-models/piglet-8343f141936f4c799ed980a3c7c3ae27)** | **FREE CC BY / attribution / commercial allowed**; downloadable glTF, rigged/animated; ~17.6k triangles. | Young pig detail; check adult scale and style before cloning for all six pigs. |
+| **[Animated Pig (Fab)](https://www.fab.com/listings/bcbfab4a-e14b-48ad-a940-580ca2ef417b)** | **PAID**, price requires selection; Fab Standard. GLB listed, ~10.4k triangles, 24 clips including feeding/rooting. | Strong adult pig candidate and action variety. Check web distribution rights and source clip/texture quality. |
+| **[Farm Animals Pack, Protofactor (Fab)](https://www.fab.com/listings/21aae714-2d56-4fbf-b81a-2aa365b46520)** | **PAID**, price not public; Fab Standard if selected; UE/Unity package, FBX extraction/conversion to GLB likely. Hen 3.8k, cow ~10.6k, goat ~10.1k, pig ~11k, sheep ~9k triangles; 11–15 animations per species. | Most coherent realistic livestock set for folds/yard if paid use is cleared. Verify source formats, coat variety and scope; no horse. |
+| **[Animals – Low Poly Animated Pack (Fab)](https://www.fab.com/listings/1be6641a-a71c-45eb-af56-98679efd50e3)** | **PAID**, price/tier verify; Fab Standard; GLB listed, ~175k triangles for 100 animals, 4+ clips. | One style-consistent fallback covering horses, donkey, cows, pigs, sheep, goats, chicken, dogs and cat. Preview carefully: stylized silhouette may not reach target. Import selected species only. |
+
+**Do not use:** [Horse Walk](https://sketchfab.com/3d-models/horse-walk-93b53ddcec414592842753d1819f3133) is marked CC BY-ND and notes third-party mesh/rig; [Animated Realistic Donkey demo](https://sketchfab.com/3d-models/animated-realistic-donkey-3d-animal-model-32ce1c2f276a4e27bb26b8bb99439bb7) advertises CC BY but its own description limits this version to personal use; [mountain goat demo](https://sketchfab.com/3d-models/mountaingoat-realistic-3d-model-demo-free-2c90be8416c740b1a26e9b698b6491e8) is CC BY-NC and not a domestic goat. These are license or species traps.
+
+For chickens, goats, dogs and cat, test Protofactor/whole-pack previews or search for matching CC BY assets at implementation time; do not fill a gap with conspicuous sphere creatures. Chicken pecking/head motion and horse feeding/snout motion are high-return animation targets.
+
+## Props and focal objects
+
+Unless marked otherwise, rows are **FREE CC BY, attribution required, commercial use allowed**, downloadable Sketchfab glTF archive; **static/unrigged** and **no animation** unless stated. Conversion and simplification may be needed.
+
+| Candidate / source | Published complexity | Use and caveat |
+|---|---:|---|
+| [Feeding Trough, Hakan Unlu](https://sketchfab.com/3d-models/feeding-trough-low-poly-and-game-ready-18d5d6a265214b689f6065d4139fbb6a) | 748 triangles, PBR | Strong horse/ox manger replacement; ensure animal muzzle height. |
+| [Medieval Wooden Cart](https://sketchfab.com/3d-models/low-poly-old-rusty-wooden-cart-eski-arava-d547e89173fe44ff89e9a5408a55fd6c) | ~17.2k triangles | Farmyard cart hero. Check wheel/axle look and scale; a [5.9k triangle alternative](https://sketchfab.com/3d-models/wooden-cart-e76d1adeea934f96bd4978e7ce57cc50) is lighter but more stylized. |
+| [Medieval Table, wolfgar74](https://sketchfab.com/3d-models/medieval-table-free-6d4f897c019f4a55aeda23cda6e6fb57) | ~2.1k triangles | Refectory/work table repetition; adjust length and bench relationship. [12.2k triangle dining-table variant](https://sketchfab.com/3d-models/medieval-wooden-table-e1f64c5eba7c4e68b41c464df6d85eda) has dishes/food for selective close use. |
+| [Medieval book stack](https://sketchfab.com/3d-models/medieval-book-stack-0ea43f7fdcb7411cb1123b987f297d41) | ~3k triangles, 4K PBR source | Scriptorium/library prop; downsize maps to 1K and avoid repeated identical stack orientation. |
+| [Chained medieval library book](https://sketchfab.com/3d-models/chained-medieval-library-book-8e4a74f2cb4c4101bb0cd843445ef23e) | ~220k triangles | Excellent hero reference for restricted books; retopologize/decimate before single use. |
+| [Poly Haven Wooden Barrels 01](https://polyhaven.com/a/wooden_barrels_01) | **FREE CC0 / no attribution / commercial**, ~33k triangles source, PBR; downloadable glTF/Blend | Kitchen/stable/cellar barrels. Make 2–3 web LODs and 1K texture atlas, vary set dressing. |
+| [Free Pack Human Skull, PolyOne](https://sketchfab.com/3d-models/free-pack-human-skull-16c47e71dc594ae2ac81ed99a8e3f94c) | Five LODs ~214–18k triangles | Ossuary close skull template; choose appropriate LOD, derive warm worn bone material and hand-place sparse hero skulls. Avoid high LOD per repeated skull. |
+| [Holycross medieval grave slab, Archaeological Survey of Ireland](https://sketchfab.com/3d-models/holycross-grave-slab-tn047-030019-69082e64b9274888b02ad244b0197d11) | ~863.5k triangles scan, documented 1.43m long, 0.59m wide | Excellent authentic 1200–1600 slab morphology/reference; use only after substantial retopology and surface processing, perhaps one older slab. Setting is Irish, so use as material/form reference, not exact Italian motif. |
+| [Historic Grave Stone Cross](https://sketchfab.com/3d-models/historic-grave-stone-cross-a5332722e80c470fb031dc244313b849) | ~76.5k triangles photogrammetry | Weathered marker source, but age/location may be unsuitable for this 1327 abbey; date-check before use. Prefer reconstructed rough stones/crosses informed by historical refs. |
+| [Medieval Candelabra, NeverSleep](https://sketchfab.com/3d-models/medieval-candelabra-free-download-a3467b35348244b6a26897d46f218f86) | ~10k triangles, textured | Secondary church fixtures only; novel's **single giant bronze tripod lamp** at night remains the focal source, not rows of candles. |
+| [Medieval Tools Set, Thangzy](https://sketchfab.com/3d-models/medieval-tools-set-e543a102465a4fbdb2eb89e3b8d3afb0) | ~2.5k triangles | Smithy tools. Pair with [5.4k anvil](https://sketchfab.com/3d-models/medieval-anvil-9e020953cb1144cd8a26472545efa16e) or [228-triangle alternative](https://sketchfab.com/3d-models/strong-medieval-anvil-ee9c56f809ce4c6fb4c02b42673dc9e1). |
+| [Medieval Cauldron, TANDA](https://sketchfab.com/3d-models/medieval-cauldron-game-asset-3d-model-9a02457da6ab4f73bee2c90410d93bce) | 440 triangles, complete PBR maps | Efficient suspended kitchen pot. Avoid imported stylized albedo if mismatched; material adjustment can unify it. |
+| [Medieval Bed, Jordan F](https://sketchfab.com/3d-models/medieval-bed-59ccf6aae97f47adb32466ce5afb0e49) | ~20k triangles | Infirmary/dormitory starting mesh. Listing tags “15th century”; check form before using in a 1327 setting, simplify, add plain coarse linens. |
+
+## Vegetation
+
+| Candidate | Price/license; format; complexity | Use and concern |
+|---|---|---|
+| [Low Poly Winter Tree Pack, 99.Miles](https://sketchfab.com/3d-models/low-poly-winter-tree-pack-824b124215fe4e459b895c9a5ff6f5a5) | **FREE CC BY / attribution / commercial allowed**; downloadable glTF; 7 trees + 3 shrubs, ~78.2k triangles total, two 2K PBR materials | Strong near-to-mid winter variety; billboard planes need cross-angle inspection and snow consistency. Use a few near cloister/cemetery; retain procedural distant forest. |
+| [Snow Trees Pack LOWPOLY, EFX](https://sketchfab.com/3d-models/snow-trees-pack-lowpoly-8927ca8abbfc4871a029323480d1ad05) | **FREE CC BY / attribution / commercial allowed**; 113 triangles image planes | Background LOD only, never player-adjacent. |
+
+The cemetery oak should have a branching deciduous silhouette and plausible bare winter canopy. The 99.Miles pack may help but species must be checked. Do not add summer foliage. Existing tree placement, the winter garden and distant pines are worth keeping.
+
+## PBR material candidates
+
+All linked Poly Haven textures are **FREE CC0, commercial and redistribution allowed, no attribution**, downloadable as albedo, OpenGL normal, roughness, AO and displacement/height (check each selected 1K/2K derivative). They are source maps; make web-size derivatives rather than shipping 8K downloads. Record real-world tile width and use physical scale. A given material belongs to a surface role, not the whole abbey.
+
+| Role | Candidate and why |
+|---|---|
+| Church dressed stone, trim | [Medieval Blocks 03](https://polyhaven.com/a/medieval_blocks_03): cut stone with complete maps, ~2m wide source; balance with current lighter church stone. |
+| Yard/service rubble masonry | [Broken Wall](https://polyhaven.com/a/broken_wall): irregular old masonry; select for utilitarian walls, not altar/columns. |
+| Interior worn plaster | [Medieval Wall 01](https://polyhaven.com/a/medieval_wall_01): damaged plaster on protected walls; add soot near hearths and damp at bases. |
+| Weathered plank/door/timber | [Medieval Wood](https://polyhaven.com/a/medieval_wood): directional grain, dark fasteners; match grain to beams/door leaf and use varied roughness. |
+| Stone paving | [Stone Floor](https://polyhaven.com/a/stone_floor): dirt joints and worn uneven paving, 1.8m tile; for kitchen, service, outdoor paths, not every ceremonial floor. |
+| Wet traffic mud | [Brown Mud 03](https://polyhaven.com/a/brown_mud_03): wet patches, ridges and footprints, 1.3m tile; stable/yard/avenue blend only. |
+| Dirty/trampled snow | [Snow 03](https://polyhaven.com/a/snow_03): use in paths and under traffic with cleaner existing snow off-path. |
+| Exposed clay tile roof | [Roof 07](https://polyhaven.com/a/roof_07): chipped weathered clay, ~2m tile; only on historically plausible pitched roofs, partly under snow. |
+
+Current `src/core/materials.js` uses AO maps as roughness maps in `pbr()`; correct this before judging roughness. Add real roughness at a few focal surfaces first. Use height for localized parallax/displacement only if affordable; normal plus geometry edge detail will often be enough. Complement albedo with geometry variation and decals/masks for damp, snow, soot, lichen and chipped edges. Avoid [Muddy Tracks](https://polyhaven.com/a/muddy_tracks) because its vehicle tire marks are anachronistic.
+
+## Recorded sound candidates
+
+**The six entries below are only the original short lead list.** After the user's listening feedback, a full [audio realism audit and cue-by-cue CC0 source shortlist](AUDIO_REALISM_AUDIT.md) was added. Treat that document as the audio selection authority: it covers all step surfaces, species, chant, bell, wind, doors, fire, kitchen, smithy, scriptorium, workyard and crypt, with specific unsuitable recordings excluded. The goal is replacement of the audible synthetic source banks, not merely adding a few recordings beneath them.
+
+The Freesound pages linked below explicitly list **CC0** in their respective listings (verify metadata again on download); free, commercial, redistribution and derivative use allowed, attribution optional. Download WAV, trim/edit, normalize and encode compact Ogg/WebM alternatives. Make variation pools, not a repeating full recording. Keep `src/systems/audio.js` surface classification, positional emitters and convolution zones.
+
+| Category / sample | Source and intended use |
+|---|---|
+| Snow steps | [MarcMatthewsMusic snow walking](https://freesound.org/people/MarcMatthewsMusic/sounds/420551/) — 40s stereo field recording; cut individual compressed/soft steps, use random pitch/gain and foot timing. |
+| Stone steps | [Wdomino stone footsteps](https://freesound.org/people/Wdomino/sounds/517141/) — mono sequence, 12 steps; crop into a small bank for nave/cloister. |
+| Hearth/fire | [jmehlferber fire crackle](https://freesound.org/people/jmehlferber/sounds/370938/) — 24s loop source; low positional layer at kitchen and smithy, filter behind walls. |
+| Bell | [organicmanpl church bell](https://freesound.org/people/organicmanpl/sounds/414825/) — long recording; extract clean strikes, preserve canonical hour counts and distant rolloff. |
+| Hens | [Breviceps chicken cluck](https://freesound.org/people/Breviceps/sounds/456803/) — sparse calls near coop, not constant chatter. |
+| Horse | [o_ciz horse snort](https://freesound.org/people/o_ciz/sounds/475483/) — stable close accent, with hoof/shuffle and straw layer sought next. |
+
+**Use the dedicated [audio audit](AUDIO_REALISM_AUDIT.md) for the fuller selection and unresolved gaps.** It provides specific CC0 leads for mud/straw/wood/gravel footsteps, farm species, door/latch, wind, forge, parchment, kitchen, yard and crypt, plus contamination exclusions. Agent A must still **audition downloaded audio** and find/record missing clean cues (notably compacted/frozen earth, bellows/quench, dog, suitable Latin office performance) before shipping. [Sonniss GDC bundle](https://gdc.sonniss.com/) is a **FREE royalty-free sound source for commercial interactive projects** under its [specific license](https://sonniss.com/gdc-bundle-license/), but does not allow standalone raw redistribution; select exact files and clear web delivery before use. The audio audit also evaluates **PAID** [BOOM Medieval Life Construction Kit](https://www.boomlibrary.com/sound-effects/medieval-life/) and [BOOM Horses](https://www.boomlibrary.com/sound-effects/horses/) as conditional original-recording alternatives, subject to purchase and browser-delivery rights. Do not layer commercial Gregorian chant without separate performance/recording rights.
+
+## Web asset integration and performance
+
+Use [Three.js GLTFLoader](https://threejs.org/docs/pages/GLTFLoader.html) (supports Draco, Meshopt and KTX2) and [AnimationMixer](https://threejs.org/docs/pages/AnimationMixer.html). Source formats often need Blender export to GLB; inspect units, forward axis, root transforms, skin weights, alpha mode, normals, material maps and clip naming. Document author/license/source and changes for every shipped asset. Target common shared 1–2K maps, atlas repeated NPCs, LODs for animals/trees/hero props, KTX2 where practical, Meshopt or Draco as appropriate, distance-based clip update and shadow limits. The existing scene already batches static architecture and gates figures by distance; protect that advantage. Check download weight and actual browser FPS/draw calls in daylight, snow and at crowded canonical hours, then trim where the loss is least visible.

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1b140e">
+<meta name="description" content="Walk through the abbey of Umberto Eco’s The Name of the Rose (Gülün Adı), reconstructed in 3D from the novel and its plan: the Aedificium, the 56-room library, the church, the ossuary and every building of the enclosure.">
+<title>Gülün Adı — The Abbey</title>
+<link rel="icon" href="./assets/rose.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./src/ui/style.css">
+<script type="importmap">{"imports":{"three":"./lib/three/three.module.js","three/addons/":"./lib/three/addons/","three-mesh-bvh":"./lib/three-mesh-bvh.module.js"}}</script>
+</head>
+<body>
+<canvas id="scene" aria-label="Three-dimensional reconstruction of the abbey"></canvas>
+<div id="vision" aria-hidden="true"></div>
+<div id="vignette" aria-hidden="true"></div>
+
+<!-- title cartouche -->
+<header class="cartouche" id="cartouche">
+  <button class="initial" id="homeBtn" aria-label="Return to the view of the whole abbey"><span>G</span></button>
+  <div class="title">
+    <h1>Gülün Adı</h1>
+    <p><span class="sc">the abbey</span> · <span class="sc">anno domini mcccxxvii</span></p>
+  </div>
+</header>
+
+<!-- seals -->
+<nav class="seals" aria-label="Settings">
+  <button class="seal" id="soundBtn" aria-pressed="false" title="Sound — bells, wind, fire"></button>
+  <button class="seal" id="weatherBtn" title="Weather"></button>
+  <button class="seal" id="qualityBtn" title="Image quality"></button>
+  <button class="seal" id="notesBtn" title="Notae — what you have seen (J)"></button>
+  <button class="seal" id="helpBtn" title="How to explore"></button>
+  <button class="seal" id="fullBtn" title="Full screen"></button>
+</nav>
+
+<!-- index of places -->
+<button class="spine" id="spineBtn" aria-expanded="false" aria-controls="index"><span>Index Locorum</span></button>
+<aside class="index vellum" id="index" aria-label="Index of places" hidden>
+  <div class="index-head">
+    <p class="kicker">Index Locorum</p>
+    <h2>The places of the abbey</h2>
+    <p class="lede">Every building on the plan printed in the novel, and the rooms Adso walked through.</p>
+    <p class="study">Study navigation: choosing a place carries you there directly. Nothing on the way is walked, and nothing is noted.</p>
+    <button class="journey-btn" id="journeyBtn"><span class="dropcap">S</span><span>Follow William<small>the seven days, in twenty stations</small></span></button>
+  </div>
+  <div class="index-list" id="indexList"></div>
+  <p class="index-foot">Letters in red are those of the plan’s own key. <em>Stat rosa pristina nomine.</em></p>
+</aside>
+
+<!-- folio: the page for one place -->
+<article class="folio vellum" id="folio" aria-live="polite" hidden>
+  <button class="folio-close" id="folioClose" aria-label="Close the page">×</button>
+  <p class="kicker" id="folioKicker"></p>
+  <h2 id="folioTitle"></h2>
+  <p class="tr" id="folioTr"></p>
+  <div class="folio-body" id="folioBody"></div>
+  <div class="folio-actions">
+    <button class="rubric-btn" id="walkHere">Walk here <span>→</span></button>
+    <button class="plain-btn" id="levelBtns" hidden></button>
+  </div>
+  <div class="journey-nav" id="journeyNav" hidden>
+    <button id="jPrev" aria-label="Previous station">‹</button>
+    <span id="jCount"></span>
+    <button id="jNext" aria-label="Next station">›</button>
+  </div>
+</article>
+
+<!-- the horarium: canonical hours -->
+<div class="horarium" id="horarium" aria-label="The hour of the day">
+  <svg viewBox="0 0 360 120" id="horaSvg" aria-hidden="true"></svg>
+  <div class="hora-label"><span id="horaLatin">Tertia</span><small id="horaTr">Sabah · Terce</small></div>
+</div>
+
+<!-- mode switch and floors -->
+<div class="modes" id="modes">
+  <button class="mode active" id="aerialBtn" aria-pressed="true"><span class="rub">P</span>er aerem<small>bird’s eye</small></button>
+  <button class="mode" id="walkBtn" aria-pressed="false"><span class="rub">P</span>edibus<small>on foot</small></button>
+  <div class="floors" id="floors" hidden>
+    <p class="kicker">Aedificium</p>
+    <button data-cut="0" class="active">Whole</button>
+    <button data-cut="3">Library</button>
+    <button data-cut="2">Scriptorium</button>
+    <button data-cut="1">Kitchen &amp; refectory</button>
+  </div>
+</div>
+
+<!-- the plan / live map -->
+<button class="mappa vellum" id="mappa" aria-label="Open the plan of the abbey">
+  <canvas id="mappaCanvas" width="360" height="276"></canvas>
+  <span class="mappa-label" id="mappaLabel">Planum Abbatiae</span>
+</button>
+<div class="plan-sheet" id="planSheet" hidden>
+  <div class="plan-page vellum">
+    <button class="folio-close" id="planClose" aria-label="Close the plan">×</button>
+    <p class="kicker">Planum Abbatiae</p>
+    <h2 id="planTitle">The plan printed in the novel</h2>
+    <div class="plan-wrap"><canvas id="planCanvas" width="1256" height="962"></canvas></div>
+    <p class="plan-note" id="planNote">Choose a building to fly there. A Aedificium · B Church · D Cloister · F Dormitory · H Chapter house · J Baths · K Infirmary · M Folds · N Stables · R Smithy</p>
+  </div>
+</div>
+
+<!-- walking HUD -->
+<div class="banner" id="banner" aria-live="polite"><span class="b-latin" id="bannerLatin"></span><span class="b-tr" id="bannerTr"></span></div>
+<div class="crosshair" id="crosshair" hidden></div>
+<div class="prompt" id="prompt" hidden></div>
+<div class="gloss" id="gloss" hidden>
+  <p><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> walk · <kbd>⇧</kbd> hurry · mouse looks</p>
+  <p><kbd>E</kbd> look closely · <kbd>F</kbd> lantern · <kbd>M</kbd> map · <kbd>J</kbd> notes · <kbd>Esc</kbd> release</p>
+</div>
+<div class="room-card" id="roomCard" hidden></div>
+<div class="touch" id="touch" hidden><div class="stick" id="stick"><span></span></div><button id="touchAct">E</button></div>
+<div class="toast" id="toast" role="status"></div>
+<div class="nota-cue" id="notaCue" aria-live="polite"></div>
+
+<!-- mirror letters -->
+<div class="mirror-verse" id="mirrorVerse" hidden>
+  <p class="kicker">Primum et septimum de quatuor</p>
+  <p class="verse" id="verseLetters"></p>
+  <p class="hint">Press the letters of the verse.</p>
+</div>
+
+<div class="sheet" id="helpSheet" hidden>
+  <div class="vellum sheet-page">
+    <button class="folio-close" id="helpClose" aria-label="Close">×</button>
+    <p class="kicker">De modo ambulandi</p>
+    <h2>How to explore</h2>
+    <div class="help-cols">
+      <div><h3>Per aerem</h3><p>Drag to turn, scroll to come closer, right-drag to glide. Choose any place in the <em>Index Locorum</em> or on the plan.</p><p>Open the Aedificium level by level with the floor buttons: the library shows itself as a labyrinth from above.</p></div>
+      <div><h3>Pedibus</h3><p><kbd>W A S D</kbd> or arrows to walk, <kbd>Shift</kbd> to hurry, the mouse to look. <kbd>E</kbd> acts on what is before you: altars, mirrors, books. <kbd>F</kbd> lights the lantern. <kbd>M</kbd> opens the plan. <kbd>J</kbd> opens your notes: a few things worth remembering are written there when you first look closely at them. In the library the plan draws itself as you go, as William’s did.</p></div>
+      <div><h3>Horarium</h3><p>The day turns by the canonical hours, from Matins in the dark to Compline. The library is best at night, by lantern.</p><p>The seals change the weather (clear, snowfall, the fog of the fourth day), sound and image quality.</p></div>
+    </div>
+    <p class="colophon">Built from the Turkish edition (Şadan Karadeniz) and the plan printed in the novel. Textures CC0 · Poly Haven. Three.js.</p>
+    <details class="credits" id="credits"><summary>Fontes et auctores — the recordings and models used, with their licences</summary><div id="creditsBody" class="credits-body">…</div></details>
+  </div>
+</div>
+
+<div id="loader" class="loader">
+  <div class="loader-page">
+    <svg class="loader-initial" viewBox="0 0 120 150" aria-hidden="true">
+      <rect x="6" y="6" width="108" height="138" rx="2" class="li-frame"/>
+      <path class="li-letter" d="M60 30 C32 30 24 52 24 75 C24 102 38 120 62 120 C78 120 90 112 94 100 L94 82 L64 82"/>
+      <path class="li-vine" d="M14 140 C30 120 20 100 36 88 M106 14 C92 30 104 46 88 56"/>
+    </svg>
+    <p class="loader-quote">Başlangıçta Söz vardı<br><em>In the beginning was the Word</em></p>
+    <div class="loader-rule"><i id="loaderBar"></i></div>
+    <p class="loader-status" id="loaderStatus">Preparing the vellum…</p>
+  </div>
+</div>
+<noscript><p class="noscript">This reconstruction needs JavaScript and WebGL.</p></noscript>
+<script>
+  if (location.protocol === 'file:') document.addEventListener('DOMContentLoaded', () => { document.getElementById('loaderStatus').textContent = 'Open start.command (or run: npm start) and visit http://localhost:8000 — browsers do not load 3D modules from a file.'; });
+  window.addEventListener('error', e => { const s = document.getElementById('loaderStatus'); if (s) s.textContent = 'The abbey could not be built: ' + e.message; });
+</script>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1461 @@
+{
+  "count": 208,
+  "references": [
+    {
+      "reference": "onlara (to them)",
+      "context": "yukarı çık, onlara ziyaretçimizin surlardan girmek üzere olduğunu bildir",
+      "reason": "the recipients of the announcement are not explicitly named in the chunk",
+      "chunk_id": "chunk_0005",
+      "pass": "primary"
+    },
+    {
+      "reference": "içeriye (girecek olsa)",
+      "context": "İçeriye birisi girecek olsa, beni bir çıkın sanabilirdi",
+      "reason": "the precise space entered is not explicitly named, only implied to be the cell where Adso lay hidden",
+      "chunk_id": "chunk_0006",
+      "pass": "primary"
+    },
+    {
+      "reference": "oraya",
+      "context": "bir hizmetçinin geceleyin oraya girme yürekliliğini göstermiş olabileceğini",
+      "reason": "the place a servant might enter at night is not named in this chunk; only inferrable as a forbidden location",
+      "chunk_id": "chunk_0008",
+      "pass": "primary"
+    },
+    {
+      "reference": "yasaklanan bir yer",
+      "context": "bir rahibin yasaklanan bir yere girmeye kalkışması",
+      "reason": "the forbidden place is not specified in this chunk",
+      "chunk_id": "chunk_0008",
+      "pass": "primary"
+    },
+    {
+      "reference": "hücre",
+      "context": "hücrenin pencerelerinden seçilebilen",
+      "reason": "the cell whose windows look onto the Aedificium is not attributed to any named occupant in this chunk",
+      "chunk_id": "chunk_0008",
+      "pass": "primary"
+    },
+    {
+      "reference": "hücre (the cell)",
+      "context": "Tam hücreden çıkarken, avludan yürek paralayan bir çığlık yükseldi",
+      "reason": "the text does not state whose cell it is nor in which building the cell sits within this chunk",
+      "chunk_id": "chunk_0009",
+      "pass": "primary"
+    },
+    {
+      "reference": "Burada / bu duvarlar",
+      "context": "Burada bile, duaya adanmış bu duvarlar arasında bile",
+      "reason": "The exact room or space where the conversation takes place is not identified anywhere in this chunk",
+      "chunk_id": "chunk_0014",
+      "pass": "primary"
+    },
+    {
+      "reference": "oraya",
+      "context": "geceyarısı bir rahibin, Başrahip’in izniyle... yasak saatte oraya girenlerin başına... korkunç şeyler gelebilirdi",
+      "reason": "The place called 'oraya' (there) is not named in this chunk; the library is only inferred from surrounding discussion.",
+      "chunk_id": "chunk_0016",
+      "pass": "primary"
+    },
+    {
+      "reference": "içeri girerken (nereye?)",
+      "context": "içeri girerken güzel bahçenin farkına vardığını",
+      "reason": "The place being entered is not identified in this chunk.",
+      "chunk_id": "chunk_0016",
+      "pass": "primary"
+    },
+    {
+      "reference": "oraya",
+      "context": "geceyarısı bir rahibin, Başrahip'in izniyle... yasak saatte oraya girenlerin başına",
+      "reason": "the place entered at the forbidden hour is not named in this chunk; could be the library or another restricted space",
+      "chunk_id": "chunk_0017",
+      "pass": "primary"
+    },
+    {
+      "reference": "the room where the group stands (scriptorium)",
+      "context": "Adelmo'nun çalışma masasına yaklaştık ... Eliyle pencereden dışarıyı, kiliseyi gösterdi",
+      "reason": "The text does not explicitly name the room; identification as the scriptorium relies on the metadata and on the presence of copying desks.",
+      "chunk_id": "chunk_0019",
+      "pass": "primary"
+    },
+    {
+      "reference": "the destination after 'Aşağı indik'",
+      "context": "Aşağı indik. Rahipler koroya yönelirken...",
+      "reason": "The text states they went down but does not name the place reached; the next stated exit is from the kitchen.",
+      "chunk_id": "chunk_0020",
+      "pass": "primary"
+    },
+    {
+      "reference": "yukarıdan (from above)",
+      "context": "Bu akşam yukarıdan baktığımızda, saman yığınının üstünü örten karın çok az olduğunu görmüştük",
+      "reason": "the specific high vantage point (which building or tower) is not named in this chunk",
+      "chunk_id": "chunk_0022",
+      "pass": "primary"
+    },
+    {
+      "reference": "pencere (the window)",
+      "context": "pencereye dek tırmanmanın ... pencereyi açıp zavallıyı uçuruma yuvarlamış olması gerekir",
+      "reason": "the exact window and the building face it belongs to are not explicitly identified",
+      "chunk_id": "chunk_0022",
+      "pass": "primary"
+    },
+    {
+      "reference": "orada (there)",
+      "context": "Ama orada ... bilimin gizleri büyü kitaplarıyla iyi korunmuş",
+      "reason": "refers to the Aedificium by gesture, not by a named spatial location",
+      "chunk_id": "chunk_0022",
+      "pass": "primary"
+    },
+    {
+      "reference": "bir girişi daha var (the Aedificium's other entrance)",
+      "context": "demek bir girişi daha var, ama bizim bunu bilmememiz gerekiyor",
+      "reason": "the existence of a second entrance is inferred but its location is never stated in this chunk",
+      "chunk_id": "chunk_0023",
+      "pass": "primary"
+    },
+    {
+      "reference": "bir kemik gömütlüğü (a bone cemetery/ossuary)",
+      "context": "bir yerde bir kemik gömütlüğü olmalı",
+      "reason": "asserted to exist somewhere but its location within the abbey is not indicated",
+      "chunk_id": "chunk_0023",
+      "pass": "primary"
+    },
+    {
+      "reference": "bir girişi daha var",
+      "context": "William: \"demek bir girişi daha var, ama bizim bunu bilmememiz gerekiyor.\"",
+      "reason": "The structure or space that has 'another entrance' is not identified anywhere in this chunk; antecedent lies outside the provided text",
+      "chunk_id": "chunk_0024",
+      "pass": "primary"
+    },
+    {
+      "reference": "kapının üstündeki figürler",
+      "context": "\"bir gün önce yüreğimi ve gözlerimi öylesine büyüleyen kapının üstündeki figürler aklıma geldi\"",
+      "reason": "Which door of the church carries these figures is not specified in this chunk; it refers to something seen on the previous day",
+      "chunk_id": "chunk_0024",
+      "pass": "primary"
+    },
+    {
+      "reference": "Efendimiz",
+      "context": "şimdi git; koroya git, Efendimiz'le konuş, insanlarla konuşmak istemediğine göre",
+      "reason": "'Our Lord' may denote an altar, chapel or sacred object inside the church/choir, but the text does not specify a physical space",
+      "chunk_id": "chunk_0027",
+      "pass": "primary"
+    },
+    {
+      "reference": "işine gönderdi",
+      "context": "Malachi, o da oradaydı, öfkeden deliye döndü, onu kukuletasından yakalayıp işine gönderdi",
+      "reason": "Berengar's workplace is not named; it could be the scriptorium or elsewhere, but no place is identified in this chunk",
+      "chunk_id": "chunk_0027",
+      "pass": "primary"
+    },
+    {
+      "reference": "istediği yer",
+      "context": "yazı salonuna dönüyorlar; William, orada ilginç bir şey görüyor ... ama sonunda istediği yere bakamıyor",
+      "reason": "the specific location William wanted to look at is only in the section summary, not specified in the body text",
+      "chunk_id": "chunk_0028",
+      "pass": "primary"
+    },
+    {
+      "reference": "dışarı",
+      "context": "Salvatore çobanları ite kaka dışarı çıkardı; Aşçı onu tartaklayarak dışarı itti",
+      "reason": "the outside space beyond the kitchen door is not identified",
+      "chunk_id": "chunk_0028",
+      "pass": "primary"
+    },
+    {
+      "reference": "kalktığımızdan beri",
+      "context": "çünkü kalktığımızdan beri ağzımıza hiçbir şey koymamıştık",
+      "reason": "the place where they rose/slept is not named in this chunk",
+      "chunk_id": "chunk_0028",
+      "pass": "primary"
+    },
+    {
+      "reference": "the room where William and Adso are drinking milk (\"burada\")",
+      "context": "William ve Adso süt içerken aşçı Salvatore'yi dışarı iter",
+      "reason": "The text never names this room; only the presence of the cook (aşçı) and a door suggests a kitchen or refectory, so the exact space is undetermined.",
+      "chunk_id": "chunk_0029",
+      "pass": "primary"
+    },
+    {
+      "reference": "location of the barrel/vat full of blood (\"kanla dolu küp\")",
+      "context": "Venantius'u kanla dolu küpe bir başkasının ellerinin attığına",
+      "reason": "The place inside the monastery where this vat stands is not stated in the chunk.",
+      "chunk_id": "chunk_0029",
+      "pass": "primary"
+    },
+    {
+      "reference": "the lower place from which they ascend to the scriptorium",
+      "context": "Aymaro bizi selamlayıp çalışmak için yukarı çıktı / Şimdi yukarı çıkmak istiyorum",
+      "reason": "the location where the conversation takes place before going up is never named in this chunk",
+      "chunk_id": "chunk_0030",
+      "pass": "primary"
+    },
+    {
+      "reference": "büyük salon (great hall)",
+      "context": "Büyük salonun karşı yanındaki kuzey kulesine gelince",
+      "reason": "probably the scriptorium (yazı salonu) but it is not explicitly identified in the text",
+      "chunk_id": "chunk_0030",
+      "pass": "primary"
+    },
+    {
+      "reference": "uzakları (the distant places Berengar pointed to)",
+      "context": "Berengar eliyle uzakları gösterdi.",
+      "reason": "The specific distant location gestured at is not identified in the chunk.",
+      "chunk_id": "chunk_0031",
+      "pass": "primary"
+    },
+    {
+      "reference": "saman (the straw)",
+      "context": "ayak sesleri samanın içinde boğulmuş",
+      "reason": "It is not stated where the straw is located within the complex.",
+      "chunk_id": "chunk_0031",
+      "pass": "primary"
+    },
+    {
+      "reference": "yerine dönmekten başka bir şey yapamadı",
+      "context": "Jorge ... yerine dönmekten başka bir şey yapamadı",
+      "reason": "Jorge's 'place' is not identified anywhere in this chunk.",
+      "chunk_id": "chunk_0032",
+      "pass": "primary"
+    },
+    {
+      "reference": "buraya",
+      "context": "bizi yalnızca yazı salonundan uzaklaştırmak için getirmişti buraya",
+      "reason": "'here' likely refers to the bathhouse/garden area but the antecedent is not explicitly fixed in this chunk.",
+      "chunk_id": "chunk_0032",
+      "pass": "primary"
+    },
+    {
+      "reference": "Malachi'nin nereden çıktığı (the place Malachi came out from)",
+      "context": "Aedificium’a girmeye gelince, dün gece Malachi’nin nereden çıktığını gördük.",
+      "reason": "the exact place from which Malachi emerged is referred to but not identified in this chunk",
+      "chunk_id": "chunk_0033",
+      "pass": "primary"
+    },
+    {
+      "reference": "gizli bir yer",
+      "context": "Gizli bir yerden birkaç kutsal kap ... çıkarmış olan çömezler",
+      "reason": "the exact location within the church is not stated in this chunk",
+      "chunk_id": "chunk_0034",
+      "pass": "primary"
+    },
+    {
+      "reference": "Malachi'nin nereden çıktığı",
+      "context": "Aedificium'a girmeye gelince, dün gece Malachi'nin nereden çıktığını gördük",
+      "reason": "the specific exit/opening of the Aedificium is not named in this chunk",
+      "chunk_id": "chunk_0034",
+      "pass": "primary"
+    },
+    {
+      "reference": "yemeğe",
+      "context": "Bir saat sonra yemeğe gideceğiz",
+      "reason": "the room or place where the meal is taken is not named in this chunk",
+      "chunk_id": "chunk_0034",
+      "pass": "primary"
+    },
+    {
+      "reference": "Hacılar",
+      "context": "Hacılar konukevine doğru yöneldi.",
+      "reason": "The subject is ambiguous; it is unclear whether it denotes William and Adso, other pilgrims, or a different referent.",
+      "chunk_id": "chunk_0037",
+      "pass": "primary"
+    },
+    {
+      "reference": "o kâğıtları",
+      "context": "hiçbiri o kâğıtları karıştırmasını istemiyormuş gibi görünüyordu",
+      "reason": "The antecedent (the catalogues/papers) is only implied and not explicitly restated.",
+      "chunk_id": "chunk_0037",
+      "pass": "primary"
+    },
+    {
+      "reference": "Herkül tapınağının sütunları",
+      "context": "Herkül tapınağının sütunlarından içeri girmemeli...",
+      "reason": "No antecedent in the chunk; may be a metaphor or an unnamed physical feature of the abbey/entrance.",
+      "chunk_id": "chunk_0038",
+      "pass": "primary"
+    },
+    {
+      "reference": "labirentin mührü",
+      "context": "İçimizden birisi de yasağı çiğnedi, labirentin mührünü kırdı…",
+      "reason": "Whether this is a physical seal on the library or a figurative expression is not determinable from the text.",
+      "chunk_id": "chunk_0038",
+      "pass": "primary"
+    },
+    {
+      "reference": "Malachi yerine",
+      "context": "Malachi yerine gitmek üzere karanlıktan sıyrılınca, nereden geldiğini tam olarak anlayamadık",
+      "reason": "Malachi's 'yer' (place/seat) is not identified; it could be a choir stall or another location.",
+      "chunk_id": "chunk_0038",
+      "pass": "primary"
+    },
+    {
+      "reference": "dün Malachi'nin çıktığı şapel",
+      "context": "dün Malachi'nin çıktığı şapeli gördüm. Gerçekten de taştan bir sunak var orada",
+      "reason": "It is not certain whether this chapel is identical with the chapel/altar mentioned earlier by Alinardo.",
+      "chunk_id": "chunk_0038",
+      "pass": "primary"
+    },
+    {
+      "reference": "şapeldeki kemik mezarlığına açılan sunak",
+      "context": "Sen hiç şapeldeki kemik mezarlığına açılan sunağı görmedin mi?",
+      "reason": "Which chapel this is (a chapel within the church or a separate one) is not stated.",
+      "chunk_id": "chunk_0038",
+      "pass": "primary"
+    },
+    {
+      "reference": "yerine (Malachi's place)",
+      "context": "Malachi yerine gitmek üzere karanlıktan sıyrılınca",
+      "reason": "the specific place Malachi went to is not identified in this chunk",
+      "chunk_id": "chunk_0039",
+      "pass": "primary"
+    },
+    {
+      "reference": "dış kapı (the outer door)",
+      "context": "Dış kapı hâlâ sürgülüydü",
+      "reason": "it is not explicitly stated which building's outer door this is",
+      "chunk_id": "chunk_0039",
+      "pass": "primary"
+    },
+    {
+      "reference": "geldiğimiz yön (the direction we came from)",
+      "context": "geldiğimiz yönden bir başka gürültü daha işittik",
+      "reason": "the specific prior location is not restated in this chunk",
+      "chunk_id": "chunk_0039",
+      "pass": "primary"
+    },
+    {
+      "reference": "iki oda (the two rooms)",
+      "context": "İki oda arasındaki geçidin eşiğinde",
+      "reason": "the two rooms are not explicitly named in this chunk",
+      "chunk_id": "chunk_0039",
+      "pass": "primary"
+    },
+    {
+      "reference": "üçüncü sunak / üçüncü şapel correspondence",
+      "context": "Töreni nefte, üçüncü sunağı gözetleyerek izledik ... Üçüncü şapele yaklaştık",
+      "reason": "the text does not explicitly state that the third altar is inside the third chapel",
+      "chunk_id": "chunk_0039",
+      "pass": "primary"
+    },
+    {
+      "reference": "üçüncü oda",
+      "context": "İki odada da ... iki şerit vardı ... Üçüncü odaya girdik. Burada kitap ve üstü yazılı şerit yoktu.",
+      "reason": "the numbering is inconsistent with the earlier description of 'these two rooms'; it is unclear whether this is a new third room or one previously described",
+      "chunk_id": "chunk_0040",
+      "pass": "primary"
+    },
+    {
+      "reference": "buradan (çıktı)",
+      "context": "Hayır, buradan çıktı, ama nereden çıktığını bilmiyorum!",
+      "reason": "the exact room from which the man left is not named in this chunk",
+      "chunk_id": "chunk_0040",
+      "pass": "primary"
+    },
+    {
+      "reference": "bunların yalnızca dördünde",
+      "context": "salonun yedi duvarı vardı, ama bunların yalnızca dördünde ... bir geçit vardı",
+      "reason": "resolved to the seven walls of the hall",
+      "chunk_id": "chunk_0041",
+      "pass": "primary"
+    },
+    {
+      "reference": "ilk girdiğimiz yedigen salon",
+      "context": "kendimizi ilk girdiğimiz yedigen salonda bulduk",
+      "reason": "resolved as the seven-sided hall of the library",
+      "chunk_id": "chunk_0041",
+      "pass": "primary"
+    },
+    {
+      "reference": "o açıklığın sekiz kenarı",
+      "context": "gördüğümüz pencerelerin çoğu o açıklığın sekiz kenarına bakıyor",
+      "reason": "the central opening is named (ortadaki açıklık) but its physical nature (courtyard/well/light shaft) is not stated",
+      "chunk_id": "chunk_0041",
+      "pass": "primary"
+    },
+    {
+      "reference": "o oda",
+      "context": "O odada değildim artık: gözlerimin önünde ... yazılı bir şerit vardı.",
+      "reason": "refers back to the lamp room but the exact identified space is ambiguous after the fainting episode",
+      "chunk_id": "chunk_0042",
+      "pass": "primary"
+    },
+    {
+      "reference": "Binanın kapısı (the building's door)",
+      "context": "hacılar konukevine gitmek için avludan geçtik. Binanın kapısında Başrahip durmuş",
+      "reason": "'Bina' is not explicitly named; resolved provisionally to the guesthouse, but a different building cannot be fully excluded.",
+      "chunk_id": "chunk_0043",
+      "pass": "primary"
+    },
+    {
+      "reference": "öteden dolaştım (I walked around from a distance)",
+      "context": "büyük kapıyı geçtik (Vahiy'de adı geçen uluları görmemek için öteden dolaştım)",
+      "reason": "The exact space he detoured through to avoid the great door imagery is not named.",
+      "chunk_id": "chunk_0043",
+      "pass": "primary"
+    },
+    {
+      "reference": "bir köşe",
+      "context": "Salvatore'nin açıkça görüldüğü 'bir köşe', Adso yemek yerken",
+      "reason": "the room containing this corner is not named in the chunk",
+      "chunk_id": "chunk_0044",
+      "pass": "primary"
+    },
+    {
+      "reference": "the room into which Nicola re-enters and where William works",
+      "context": "Nicola … yeniden içeri girdi … camı masanın üstüne indirip",
+      "reason": "the workspace room is never named or described in this chunk; only its interior (table, light) is indicated",
+      "chunk_id": "chunk_0049",
+      "pass": "primary"
+    },
+    {
+      "reference": "the room Nicola re-entered",
+      "context": "Nicola ... elindeki hemen hemen bitmiş bir çatalı göstererek yeniden içeri girdi",
+      "reason": "the room where William and Adso were working is not named in this chunk",
+      "chunk_id": "chunk_0050",
+      "pass": "primary"
+    },
+    {
+      "reference": "laboratuvar",
+      "context": "Ben laboratuvara dönüyorum; çünkü mercekler olmaksızın yalnızca elyazmasını okuyamam",
+      "reason": "location of the laboratory within the abbey is not stated in this chunk",
+      "chunk_id": "chunk_0051",
+      "pass": "primary"
+    },
+    {
+      "reference": "dehliz",
+      "context": "Ne yapacağımızı bilmeden dehlizde biraz dolaştık",
+      "reason": "which building or part of the abbey the corridor belongs to is not specified",
+      "chunk_id": "chunk_0051",
+      "pass": "primary"
+    },
+    {
+      "reference": "bu duvarlar",
+      "context": "bu duvarlar arasında... tek yetkili benim",
+      "reason": "whether these are the outer abbey walls or walls of a specific building is not fully determined",
+      "chunk_id": "chunk_0051",
+      "pass": "primary"
+    },
+    {
+      "reference": "karanlık bir yer (a dark place)",
+      "context": "Fileisch tuo magister bu gece karanlık bir yere gitmek ister.",
+      "reason": "the text does not identify which place is meant, and no antecedent in this chunk fixes it",
+      "chunk_id": "chunk_0052",
+      "pass": "primary"
+    },
+    {
+      "reference": "şeritler (bands/strips)",
+      "context": "Şeritlerin en büyüğünden, giriş kulesindeki yedigen biçimindeki salondan",
+      "reason": "the term 'şerit' is used only here and its extent/meaning is not defined in this chunk",
+      "chunk_id": "chunk_0052",
+      "pass": "primary"
+    },
+    {
+      "reference": "karanlık bir yer",
+      "context": "Fileisch tuo magister bu gece karanlık bir yere gitmek ister.",
+      "reason": "The dark place William intends to visit at night is never identified or localized in this chunk.",
+      "chunk_id": "chunk_0053",
+      "pass": "primary"
+    },
+    {
+      "reference": "William'ın bulunduğu yer",
+      "context": "yemeği William’a götürdüm. Yedik, sonra ben hücreme çekildim.",
+      "reason": "The place where Adso brings the food to William and eats with him is not stated.",
+      "chunk_id": "chunk_0053",
+      "pass": "primary"
+    },
+    {
+      "reference": "kardeşlerimizin kilisesi",
+      "context": "Günlerini kardeşlerimizin kilisesinde geçiriyordu",
+      "reason": "This church belongs to the Minorites in the recounted story and is not locatable within the abbey of the narrative frame.",
+      "chunk_id": "chunk_0053",
+      "pass": "primary"
+    },
+    {
+      "reference": "onun ... kutsal kapıları (the 'sacred doors' whose owner is unnamed)",
+      "context": "...Başrahip'in, değerli taşlarından ve altından yapılmış kutsal kapılarından söz ettiği zamanki yüzü gibi...",
+      "reason": "the possessive antecedent of 'onun' is not stated in this chunk",
+      "chunk_id": "chunk_0055",
+      "pass": "primary"
+    },
+    {
+      "reference": "the place where the Virgin Mary statue is located",
+      "context": "Meryem Ana'nın heykelini gösterdi; ...ince gövdesini gösterdi.",
+      "reason": "the room or building housing the statue is not specified in this chunk",
+      "chunk_id": "chunk_0055",
+      "pass": "primary"
+    },
+    {
+      "reference": "the exact room/building within the abbey where Ubertino and Adso are speaking",
+      "context": "sana şunu söyleyeyim, burada, manastırda...",
+      "reason": "only 'manastır' (abbey) is given; no sub-location in this chunk",
+      "chunk_id": "chunk_0055",
+      "pass": "primary"
+    },
+    {
+      "reference": "basamaklar (the steps)",
+      "context": "P1451: 'Basamakları Dolcino’nun Rubello Dağı’na tırmanışı gibi tırmandım.'",
+      "reason": "Which staircase, its exact location, destination and level change are not stated; only that Adso climbed it before entering the bone cemetery.",
+      "chunk_id": "chunk_0056",
+      "pass": "primary"
+    },
+    {
+      "reference": "merdivene yakındım (the staircase he was near)",
+      "context": "Neyse ki merdivene yakındım",
+      "reason": "the staircase and his starting location are not identified in this chunk; no antecedent within the chunk",
+      "chunk_id": "chunk_0059",
+      "pass": "primary"
+    },
+    {
+      "reference": "Aedificium'un zemin katının 'bir yarısı' (one half of the ground floor)",
+      "context": "Aedificium'un zemin katının bir yarısına açılan kapılar",
+      "reason": "which half/part and how the ground floor is divided is not specified in this chunk",
+      "chunk_id": "chunk_0059",
+      "pass": "primary"
+    },
+    {
+      "reference": "bir köşe (a corner)",
+      "context": "koyu renkli çıkını bir köşeye attı",
+      "reason": "At this point the text names only 'a corner' without stating to which room of the abbey it belongs; kitchen identity inferred only from the following paragraph.",
+      "chunk_id": "chunk_0060",
+      "pass": "primary"
+    },
+    {
+      "reference": "önümü, arkamı, çevremdeki her şeyi görebiliyordum",
+      "context": "tüm bedenim tek bir göz gibiydi; bir bakışta, önümü, arkamı, çevremdeki her şeyi görebiliyordum",
+      "reason": "Mystical/visionary omnidirectional sight, not tied to any identifiable architectural location or line of sight.",
+      "chunk_id": "chunk_0060",
+      "pass": "primary"
+    },
+    {
+      "reference": "kapı (the gate)",
+      "context": "belki de yarın, kapının açık bırakıldığı ve bir köpeğin gelip artıkları yediği söylenecek",
+      "reason": "could refer either to the abbey gate or to the kitchen door mentioned earlier in P1515",
+      "chunk_id": "chunk_0061",
+      "pass": "primary"
+    },
+    {
+      "reference": "her zamanki yolumuz",
+      "context": "Her zamanki yolumuzdan dışarı çıkarak kiliseye doğru yöneldik",
+      "reason": "the starting place and the usual route are not identified in this chunk",
+      "chunk_id": "chunk_0062",
+      "pass": "primary"
+    },
+    {
+      "reference": "başka bir yere",
+      "context": "buraya gelmeden önce başka bir yere gitmiş",
+      "reason": "the other place Berengar visited before coming is not named",
+      "chunk_id": "chunk_0062",
+      "pass": "primary"
+    },
+    {
+      "reference": "bütün o kemikler",
+      "context": "bütün o kemikler ... bana ... anımsatıyordu",
+      "reason": "the place/bones being recalled is not identified in this chunk",
+      "chunk_id": "chunk_0062",
+      "pass": "primary"
+    },
+    {
+      "reference": "içeriye",
+      "context": "Nereden? İçeriye nasıl gireceklerdi?",
+      "reason": "The place they would enter ('inside') is not identified in this chunk; the answer is cut off",
+      "chunk_id": "chunk_0065",
+      "pass": "primary"
+    },
+    {
+      "reference": "kapıyı (the door expected to be opened in the morning)",
+      "context": "ertesi sabah birinin kapıyı açıp cesedi bulmasını bekleyerek",
+      "reason": "The door is not explicitly named; it is plausibly the kitchen door but not stated as such",
+      "chunk_id": "chunk_0066",
+      "pass": "primary"
+    },
+    {
+      "reference": "küp (the vat)",
+      "context": "onu küpün içinde görünce donakalmıştı",
+      "reason": "The physical location of the vat is not stated in this chunk",
+      "chunk_id": "chunk_0066",
+      "pass": "primary"
+    },
+    {
+      "reference": "iki saat önce ayrıldığımız yer",
+      "context": "kendimi yeniden, iki saat önce ayrıldığımız yerde bulduğumda",
+      "reason": "the specific place referred to is not named or localizable within this chunk",
+      "chunk_id": "chunk_0068",
+      "pass": "primary"
+    },
+    {
+      "reference": "hücresine (his cell)",
+      "context": "saygısız kulakların erişemeyeceği hücresine gittik",
+      "reason": "attributed to William only by immediate context; the cell's location within the abbey is not stated",
+      "chunk_id": "chunk_0068",
+      "pass": "primary"
+    },
+    {
+      "reference": "the interior room Adso left to go out into the courtyard",
+      "context": "Ot şiltenin üstüne uzandı ... düşünmesine saygı gösterip yeniden avluya çıktım",
+      "reason": "the room from which Adso exits is not named in this chunk",
+      "chunk_id": "chunk_0069",
+      "pass": "primary"
+    },
+    {
+      "reference": "the room where the guests ate after the meal hour had passed",
+      "context": "konuklar için bir sofra donatıldı",
+      "reason": "no place name (refectory, guest house, etc.) is given in this chunk",
+      "chunk_id": "chunk_0069",
+      "pass": "primary"
+    },
+    {
+      "reference": "gidip onları karşıladı (where William greeted them)",
+      "context": "Sonra gidip onları karşıladı",
+      "reason": "no named place for the greeting in this chunk",
+      "chunk_id": "chunk_0070",
+      "pass": "primary"
+    },
+    {
+      "reference": "konuklar için bir sofra donatıldı (where the table was laid)",
+      "context": "konuklar için bir sofra donatıldı",
+      "reason": "room for the guest meal is not identified in this chunk",
+      "chunk_id": "chunk_0070",
+      "pass": "primary"
+    },
+    {
+      "reference": "sofraya",
+      "context": "Başrahip’in sofraya gönderdiği güzel yemekleri",
+      "reason": "a table where monks are eating is mentioned but the room housing it is not named in this chunk",
+      "chunk_id": "chunk_0071",
+      "pass": "primary"
+    },
+    {
+      "reference": "orada",
+      "context": "\"Uzun zamandan beri sizi bekliyorlar orada,\" diye mırıldandı",
+      "reason": "No antecedent in this chunk specifies which place is meant (could be Avignon or a meeting space)",
+      "chunk_id": "chunk_0072",
+      "pass": "primary"
+    },
+    {
+      "reference": "the place of the table-side conversation",
+      "context": "o sofra başı söyleşisi / lokmasını çiğnerken / yemek yemekten bile tat almaz",
+      "reason": "A meal and table are mentioned but the room/space where the Minorites were eating and from which they rose in P1805 is never named in this chunk",
+      "chunk_id": "chunk_0072",
+      "pass": "primary"
+    },
+    {
+      "reference": "orada",
+      "context": "“Uzun zamandan beri sizi bekliyorlar orada,” dedi",
+      "reason": "no antecedent in this chunk indicates which place 'orada' refers to",
+      "chunk_id": "chunk_0073",
+      "pass": "primary"
+    },
+    {
+      "reference": "arayacağı yeri",
+      "context": "Ah, arayacağı yeri bilirdi o, kâfirlerin dilini de konuşurdu",
+      "reason": "the place where the manuscripts were to be found is not named in this chunk",
+      "chunk_id": "chunk_0073",
+      "pass": "primary"
+    },
+    {
+      "reference": "labirent / kitaplık",
+      "context": "dua biter bitmez labirentin dolaşık yollarında ... yolculuğumuza çıkmaya hazırdık",
+      "reason": "The text here uses 'labirent' but does not explicitly equate it with the library within this chunk; the equivalence is taken from the section heading.",
+      "chunk_id": "chunk_0074",
+      "pass": "primary"
+    },
+    {
+      "reference": "o ince ıslıklar",
+      "context": "ilk akşam bizi tedirgin eden o ince ıslıklar işitilmiyordu",
+      "reason": "refers to sounds from the first evening, which are not described in this chunk",
+      "chunk_id": "chunk_0075",
+      "pass": "primary"
+    },
+    {
+      "reference": "dördün birincisi ve dördün yedincisi",
+      "context": "dördün birincisinin ve dördün yedincisinin ne olduğunu bilmemektedirler",
+      "reason": "a coded reference whose referents are not defined in this chunk",
+      "chunk_id": "chunk_0075",
+      "pass": "primary"
+    },
+    {
+      "reference": "bu oda",
+      "context": "Bu odanın sunaklı ve gün doğusuna bakan oda olduğunu anımsa.",
+      "reason": "ambiguous whether it refers to Fons Adae or to the second windowless (U) room mentioned just before",
+      "chunk_id": "chunk_0075",
+      "pass": "primary"
+    },
+    {
+      "reference": "altta ne var",
+      "context": "Bakalım altta ne var...",
+      "reason": "ambiguous whether it refers to a lower shelf of the cabinet or a lower space",
+      "chunk_id": "chunk_0075",
+      "pass": "primary"
+    },
+    {
+      "reference": "başladığımız 5 odası",
+      "context": "Geri dönelim, başladığımız 5 odasına!",
+      "reason": "The text does not explicitly identify which room is meant as 'room 5' in this chunk",
+      "chunk_id": "chunk_0076",
+      "pass": "primary"
+    },
+    {
+      "reference": "bunlardan biri",
+      "context": "bunlardan biri benim hayal gördüğüm odaydı",
+      "reason": "Refers to an unspecified room among the series of rooms passed through; no unique antecedent",
+      "chunk_id": "chunk_0076",
+      "pass": "primary"
+    },
+    {
+      "reference": "öteki üç kule",
+      "context": "Öteki üç kulenin tüm öteki kör odaları gibi",
+      "reason": "The identity/position of the fourth tower or of the other three towers is not fully stated within this chunk.",
+      "chunk_id": "chunk_0077",
+      "pass": "primary"
+    },
+    {
+      "reference": "S odası / hemen sağımdaki duvar",
+      "context": "S odası, aynalı olan odaydı - neyse ki hemen sağımdaki duvardaydı",
+      "reason": "It is not fully determined whether S room is the room Adso is standing in or an adjacent room whose wall is at his right.",
+      "chunk_id": "chunk_0077",
+      "pass": "primary"
+    },
+    {
+      "reference": "odaya",
+      "context": "William'ın odaya girip böyle kendimi kaptırmış ne okuduğumu sormasından korktuğum",
+      "reason": "the room William enters where Adso reads is not identified in this chunk",
+      "chunk_id": "chunk_0078",
+      "pass": "primary"
+    },
+    {
+      "reference": "Tam yemekhaneye geri dönüyorduk (the place from which they were returning to the refectory)",
+      "context": "Tam yemekhaneye geri dönüyorduk ki, mutfak yönünden gelen bağrışmalar işittik",
+      "reason": "the starting point of the return to the refectory is not given in this chunk",
+      "chunk_id": "chunk_0079",
+      "pass": "primary"
+    },
+    {
+      "reference": "olay yerine (the scene where the crowd gathered)",
+      "context": "olay yerine varmış olan birçokları gibi biz de dışarı fırlamıştık",
+      "reason": "the exact spot of 'the scene' is not defined as a named space in this chunk",
+      "chunk_id": "chunk_0079",
+      "pass": "primary"
+    },
+    {
+      "reference": "mutfağa açılan kapı (which space the kitchen door connects from)",
+      "context": "Duvarlara tutuna tutuna mutfağa açılan kapıya yaklaştık",
+      "reason": "the corridor/room on the near side of the kitchen door is not identified",
+      "chunk_id": "chunk_0079",
+      "pass": "primary"
+    },
+    {
+      "reference": "o kargaşalık / dışarı (where they emerged from when they rushed out)",
+      "context": "biz de dışarı fırlamıştık",
+      "reason": "the doorway the crowd rushed out of is not specified",
+      "chunk_id": "chunk_0079",
+      "pass": "primary"
+    },
+    {
+      "reference": "Kapı (the door with sculptures and stone tympanum)",
+      "context": "Kapının üstünde ... yontuları vardı; ... Alınlığın taşında",
+      "reason": "The chunk does not state which door/building of the abbey this is, nor its location within the complex; antecedent may be in earlier chunks.",
+      "chunk_id": "chunk_0081",
+      "pass": "primary"
+    },
+    {
+      "reference": "İçeri (the room entered beyond the threshold)",
+      "context": "Bu eşiğin ötesinde ... İçeri girer girmez",
+      "reason": "The hall/room where the disputation is held is never named nor located within the abbey in this chunk.",
+      "chunk_id": "chunk_0081",
+      "pass": "primary"
+    },
+    {
+      "reference": "bunların (P2011: 'these and other extraordinary creatures')",
+      "context": "Kapının üstünde bunların ve başka olağanüstü yaratıkların yontuları vardı",
+      "reason": "The antecedent of 'bunlar' lies outside this chunk.",
+      "chunk_id": "chunk_0081",
+      "pass": "primary"
+    },
+    {
+      "reference": "geldiğin yer",
+      "context": "hemen geldiğin yere dön. Kapıyı içeriden kilitle",
+      "reason": "no explicit antecedent; could be the laboratory or the infirmary",
+      "chunk_id": "chunk_0084",
+      "pass": "primary"
+    },
+    {
+      "reference": "kiliseye ya da Aedificum'a",
+      "context": "avludan geçip kiliseye ya da Aedificum'a doğru gidiyordu",
+      "reason": "destination stated disjunctively, cannot determine which",
+      "chunk_id": "chunk_0084",
+      "pass": "primary"
+    },
+    {
+      "reference": "ön şahın / ön nef",
+      "context": "meraklı rahiplerin doluştukları ön şahından çıktık",
+      "reason": "relation between this nave and the named 'toplantı salonu' is not made explicit",
+      "chunk_id": "chunk_0084",
+      "pass": "primary"
+    },
+    {
+      "reference": "ona",
+      "context": "'Sana hastaneye girmemeni salık veririm,' dedim ona.",
+      "reason": "antecedent person not named in this chunk",
+      "chunk_id": "chunk_0085",
+      "pass": "primary"
+    },
+    {
+      "reference": "içeri",
+      "context": "Artık onu dinlemeyip içeri girdim.",
+      "reason": "the building/room entered is not named in this chunk",
+      "chunk_id": "chunk_0085",
+      "pass": "primary"
+    },
+    {
+      "reference": "oradan",
+      "context": "bir an önce oradan çıkıp gitmek istiyordu",
+      "reason": "the place referred to is not named in this chunk",
+      "chunk_id": "chunk_0085",
+      "pass": "primary"
+    },
+    {
+      "reference": "orada",
+      "context": "Ama ne yazık ki biraz geç, bir kez daha... orada... bir şey oldu...",
+      "reason": "Bernardo vaguely indicates a place outside but never names it in this chunk",
+      "chunk_id": "chunk_0086",
+      "pass": "primary"
+    },
+    {
+      "reference": "içeri (inside)",
+      "context": "dedi Bernardo içeri doğru yürüyerek",
+      "reason": "The building/space reached by 'inside' is not explicitly stated in the same sentence",
+      "chunk_id": "chunk_0086",
+      "pass": "primary"
+    },
+    {
+      "reference": "ön şahında durduğu yer",
+      "context": "kilercinin, yazgısından habersiz, ötekilerle birlikte ön şahında durduğunun farkına varmamışlardı",
+      "reason": "the term 'ön şahı' is unclear and no identifiable space matches it in this chunk",
+      "chunk_id": "chunk_0087",
+      "pass": "primary"
+    },
+    {
+      "reference": "Venantius’un masası",
+      "context": "Malachi’nin, onun Venantius’un masasını incelemesine izin vermemesinin öcünü aldı",
+      "reason": "a table belonging to Venantius is mentioned, but the room/building containing it is not identified in this chunk",
+      "chunk_id": "chunk_0087",
+      "pass": "primary"
+    },
+    {
+      "reference": "orada (there, where Severinus died)",
+      "context": "sen de oradaydın - you were there too",
+      "reason": "the place of Severinus's death is not named as a location in this chunk",
+      "chunk_id": "chunk_0091",
+      "pass": "primary"
+    },
+    {
+      "reference": "salon (the hall)",
+      "context": "duruşmayı izlemek için salon kapısının çevresine yığılan rahipler",
+      "reason": "the building or part of the abbey containing this hall is not stated in the chunk",
+      "chunk_id": "chunk_0091",
+      "pass": "primary"
+    },
+    {
+      "reference": "hücre (Salvatore's cell)",
+      "context": "git de hücrende düşün",
+      "reason": "the location of the cell within the complex is not stated",
+      "chunk_id": "chunk_0091",
+      "pass": "primary"
+    },
+    {
+      "reference": "the place where the interrogation/trial is being held",
+      "context": "Okçular hâlâ çırpınışlar içindeki kilerciyi alıp götürdüler. Bernardo kâğıtlarını düzeltti. Sonra... hazır bulunanlara gözlerini dikti",
+      "reason": "the chunk never names the room/space where Bernardo conducts the inquiry, so the origin of the cellarer's removal cannot be identified",
+      "chunk_id": "chunk_0094",
+      "pass": "primary"
+    },
+    {
+      "reference": "the cell mentioned (hücre)",
+      "context": "Elleri ayakları zincire vurulup üç gün hücrede bırakılsın",
+      "reason": "no prior identification of this cell within the chunk; it is only requested, not located",
+      "chunk_id": "chunk_0094",
+      "pass": "primary"
+    },
+    {
+      "reference": "Başrahip’i bulmaya gitti",
+      "context": "Sonra Michele’yle birlikte Başrahip’i bulmaya gitti.",
+      "reason": "the place where the Abbot was to be found is not identified in this chunk",
+      "chunk_id": "chunk_0095",
+      "pass": "primary"
+    },
+    {
+      "reference": "kapı",
+      "context": "Benno, yemek sonunda bizi selamlayıp kapıya doğru yöneldi",
+      "reason": "Which building's door is not named; only inferred from the meal scene",
+      "chunk_id": "chunk_0096",
+      "pass": "primary"
+    },
+    {
+      "reference": "kürsü",
+      "context": "Başrahip kürsüye geldi",
+      "reason": "The hall/building that contains the kürsü is not named in this chunk",
+      "chunk_id": "chunk_0096",
+      "pass": "primary"
+    },
+    {
+      "reference": "toplantı salonu",
+      "context": "çömezlerin toplantı salonunda olup bitenleri pencere ve yarıklardan izlemek için",
+      "reason": "The position of the meeting hall within the abbey is not stated",
+      "chunk_id": "chunk_0096",
+      "pass": "primary"
+    },
+    {
+      "reference": "ahırların tarafı",
+      "context": "Aymaro ve öteki İtalyanların her zaman oturdukları ahırların tarafından bir mırıltı işittik",
+      "reason": "Ambiguous whether it denotes physical stables or a named seating side; the place of assembly is not named",
+      "chunk_id": "chunk_0096",
+      "pass": "primary"
+    },
+    {
+      "reference": "orada",
+      "context": "sözlerinin orada hazır bulunan Bernardo ve öteki Avignon’lularca tartılacağını",
+      "reason": "'There' refers to the gathering location, which is not named in this chunk",
+      "chunk_id": "chunk_0096",
+      "pass": "primary"
+    },
+    {
+      "reference": "the place where the sermon was delivered",
+      "context": "P2402-P2405: Jorge preaches and then the monks go to their straw beds",
+      "reason": "the room/building hosting the sermon is not named in this chunk, so the origin of the monks' movement cannot be resolved",
+      "chunk_id": "chunk_0099",
+      "pass": "primary"
+    },
+    {
+      "reference": "ot yatakları",
+      "context": "Rahipler ... ot yataklarına yatmaya gittiler",
+      "reason": "the location of the straw beds (dormitory vs. cells) is not specified",
+      "chunk_id": "chunk_0099",
+      "pass": "primary"
+    },
+    {
+      "reference": "hacılar konukevi",
+      "context": "hacılar konukevinin basamaklarından çıkarken",
+      "reason": "no relative position of the guest house within the complex is given",
+      "chunk_id": "chunk_0099",
+      "pass": "primary"
+    },
+    {
+      "reference": "karşımızdaki sıralar",
+      "context": "William, karşımızdaki sıralarda, Jorge ile Tivolili Pacifico arasında boş bir yer gösterdi bana.",
+      "reason": "The exact position of these rows relative to the speaker ('us') is not specified; may imply two facing sets of stalls, but the viewpoint is unclear.",
+      "chunk_id": "chunk_0100",
+      "pass": "primary"
+    },
+    {
+      "reference": "boş bölme",
+      "context": "boş bölmeye gözlerini dikip bakmayı sürdüren Başrahip",
+      "reason": "The specific location of this empty stall among the church seats is not stated.",
+      "chunk_id": "chunk_0100",
+      "pass": "primary"
+    },
+    {
+      "reference": "Onları",
+      "context": "bundan sonraki cinayet at ahırlarının yakınlarında işlenebilir. Onları gözetlemeliyiz.",
+      "reason": "Antecedent is ambiguous between the stables and unspecified persons; cannot be resolved with certainty.",
+      "chunk_id": "chunk_0101",
+      "pass": "primary"
+    },
+    {
+      "reference": "orada",
+      "context": "konuşmak için orada daha çok vakti olacağını söyledi",
+      "reason": "Refers to the cellar, but resolution relies on the following narration rather than the immediately preceding noun.",
+      "chunk_id": "chunk_0101",
+      "pass": "primary"
+    },
+    {
+      "reference": "başka bir hazine",
+      "context": "Öteki kafatası başka bir hazinede olmalı",
+      "reason": "refers to an unspecified other treasury, no antecedent in this chunk",
+      "chunk_id": "chunk_0103",
+      "pass": "primary"
+    },
+    {
+      "reference": "öteki kafatası",
+      "context": "Öteki kafatası başka bir hazinede olmalı",
+      "reason": "refers to a skull mentioned only in the broader conversation, not located in this chunk",
+      "chunk_id": "chunk_0103",
+      "pass": "primary"
+    },
+    {
+      "reference": "where the dreamer was before the refectory",
+      "context": "Cehennemde miydim, yoksa ... bir cennette miydim, anlayamıyordum ... yemekhanenin eşiğine doğru itip içeri girmeye zorladılar",
+      "reason": "The place of origin before entering the refectory is explicitly unknown/questioned and has no antecedent in this chunk.",
+      "chunk_id": "chunk_0104",
+      "pass": "primary"
+    },
+    {
+      "reference": "the mirror",
+      "context": "aynanın derinliklerinden çarpıtılmış hortlaklar gibi dışarı uğruyorlardı; ayna paramparça oluyor",
+      "reason": "No prior mention or location of this mirror is given in the chunk; which physical mirror/place is meant is unclear.",
+      "chunk_id": "chunk_0104",
+      "pass": "primary"
+    },
+    {
+      "reference": "the labyrinth",
+      "context": "labirentin dört bir yanına saçılıyorlardı",
+      "reason": "The labyrinth appears only here in the chunk with no antecedent locating it in the abbey.",
+      "chunk_id": "chunk_0104",
+      "pass": "primary"
+    },
+    {
+      "reference": "the well of P2537",
+      "context": "Yakup kuyuyu kazarken",
+      "reason": "Whether this is the same well mentioned in P2534 or a distinct one is not stated.",
+      "chunk_id": "chunk_0104",
+      "pass": "primary"
+    },
+    {
+      "reference": "şölen (the feast/banquet venue)",
+      "context": "şölenin tüm konukları şimdi mahzende",
+      "reason": "the location where the feast takes place is never named in this chunk",
+      "chunk_id": "chunk_0105",
+      "pass": "primary"
+    },
+    {
+      "reference": "içeri dışarı (in and out)",
+      "context": "bu arada herkes içeri dışarı girip çıkıyor",
+      "reason": "no identifiable space is named for this coming and going",
+      "chunk_id": "chunk_0105",
+      "pass": "primary"
+    },
+    {
+      "reference": "aşağı (inmişti)",
+      "context": "William da onları uğurlamak için aşağı inmişti",
+      "reason": "the level/place from which William descended is not specified in this chunk",
+      "chunk_id": "chunk_0106",
+      "pass": "primary"
+    },
+    {
+      "reference": "gene mutfak oldu ('became the kitchen again')",
+      "context": "mahzen birden kırmızımsı çakıntılarla aydınlandı ve gene mutfak oldu",
+      "reason": "'again' points to an earlier kitchen state within the dream with no clear antecedent in the chunk",
+      "chunk_id": "chunk_0106",
+      "pass": "primary"
+    },
+    {
+      "reference": "az önce indiği yer (the place he had just descended from)",
+      "context": "William yeniden, az önce indiği yazı salonına çıkmak istiyordu.",
+      "reason": "the lower location from which he had just come down is not named in this chunk",
+      "chunk_id": "chunk_0107",
+      "pass": "primary"
+    },
+    {
+      "reference": "toplantı binası",
+      "context": "Başrahip'in evine doğru gitti ... toplantı binasına doğru yürümeye devam ettiler",
+      "reason": "It is not stated whether the meeting building is the same structure as the Abbot's house or a distinct one",
+      "chunk_id": "chunk_0110",
+      "pass": "primary"
+    },
+    {
+      "reference": "içeri",
+      "context": "Tam içeri girerlerken Nicola yatakhaneden çıktı; ... Jorge içeri girdikten sonra",
+      "reason": "The space entered is not named explicitly in this chunk",
+      "chunk_id": "chunk_0110",
+      "pass": "primary"
+    },
+    {
+      "reference": "biri",
+      "context": "Jorge içeri girdikten sonra, biri süre içeride kalmış",
+      "reason": "The person who stayed inside is not identified",
+      "chunk_id": "chunk_0110",
+      "pass": "primary"
+    },
+    {
+      "reference": "salon (the hall)",
+      "context": "salonda Alinardo ve Alessandria'lı Aymaro olduğundan onu uzun süre dışarıda beklemek zorunda kaldığını söyledi",
+      "reason": "which hall is meant (refectory hall, abbot's hall) is not identifiable from this chunk",
+      "chunk_id": "chunk_0111",
+      "pass": "primary"
+    },
+    {
+      "reference": "daracık yer (the narrow place)",
+      "context": "çünkü o daracık yerde çok hava yok sanırım",
+      "reason": "the exact space (wall cavity vs blind room) is not resolved",
+      "chunk_id": "chunk_0111",
+      "pass": "primary"
+    },
+    {
+      "reference": "üçayaklı (the tripod)",
+      "context": "William üçayaklının altında durmuş",
+      "reason": "what this tripod/stand is and its exact location in the church are not specified",
+      "chunk_id": "chunk_0111",
+      "pass": "primary"
+    },
+    {
+      "reference": "yerine gitti (went to his place)",
+      "context": "Çömezlerin öğretmeni, ardında başı öne eğik Benno, yerine gitti",
+      "reason": "the 'place' is not identified as a specific location",
+      "chunk_id": "chunk_0111",
+      "pass": "primary"
+    },
+    {
+      "reference": "Yazı salonuna çıktık (the place they climbed up from)",
+      "context": "Yazı salonuna çıktık; oradan labirente; az sonra güney kulesine ulaştık",
+      "reason": "no antecedent in this chunk identifies the origin location",
+      "chunk_id": "chunk_0112",
+      "pass": "primary"
+    },
+    {
+      "reference": "içeride (inside)",
+      "context": "Peki şimdi kim var içeride?",
+      "reason": "no unambiguous antecedent for which space 'inside' refers to",
+      "chunk_id": "chunk_0112",
+      "pass": "primary"
+    },
+    {
+      "reference": "İkinci kişi / Birincisi",
+      "context": "İkinci kişi. Birincisi finis Africae’de",
+      "reason": "counted persons cannot be identified from this chunk",
+      "chunk_id": "chunk_0112",
+      "pass": "primary"
+    },
+    {
+      "reference": "o daracık yer",
+      "context": "çünkü o daracık yerde çok hava yok sanırım",
+      "reason": "the cramped place is not explicitly named",
+      "chunk_id": "chunk_0112",
+      "pass": "primary"
+    },
+    {
+      "reference": "kendi merdiveni",
+      "context": "Şimdi kendi merdiveninden çıkmayı beceremediği için de öldü",
+      "reason": "which staircase is meant is ambiguous",
+      "chunk_id": "chunk_0112",
+      "pass": "primary"
+    },
+    {
+      "reference": "içeri",
+      "context": "Akşamları gizlice içeri girmeye kalkışacak meraklıları korkutmak için otlar hazırlamakla yetiniyordu.",
+      "reason": "The space entered ('içeri') is not named explicitly; could be finis Africae or the library/Aedificium.",
+      "chunk_id": "chunk_0113",
+      "pass": "primary"
+    },
+    {
+      "reference": "buraya",
+      "context": "katil olmasına yol açan o nesnede böylesine yasak olan şeyin ne olduğunu anlamak için dönüp buraya geldiği zaman",
+      "reason": "no antecedent place is identified in this chunk",
+      "chunk_id": "chunk_0114",
+      "pass": "primary"
+    },
+    {
+      "reference": "buraya",
+      "context": "buraya yanlış bir mantık sonucu ulaştığını gösteriyorsun",
+      "reason": "the place referred to as 'here' is never specified in this chunk",
+      "chunk_id": "chunk_0114",
+      "pass": "primary"
+    },
+    {
+      "reference": "Finis Africae'nin arkasından karanlığa daldım",
+      "context": "Finis Africae'nin arkasından karanlığa daldım; el yordamıyla lambayı aradım",
+      "reason": "the spatial relation between Adso, Finis Africae and the lamp is ambiguous; it cannot be determined whether the lamp lies behind Finis Africae or merely that he started from there",
+      "chunk_id": "chunk_0116",
+      "pass": "primary"
+    },
+    {
+      "reference": "salon",
+      "context": "yalnızca salonun değişik yerlerinde yırtılan kâğıtların sesini işitiyorduk",
+      "reason": "it is not explicitly stated in this chunk whether the 'salon' is identical with the accursed room (Finis Africae) or a different space",
+      "chunk_id": "chunk_0116",
+      "pass": "primary"
+    },
+    {
+      "reference": "bitişik oda",
+      "context": "arkamızda yırtılan kâğıtların sesini duyduk; bitişik odadan geldiği için biraz boğuk bir ses",
+      "reason": "the adjacent room is not further identified (name, function or exact position)",
+      "chunk_id": "chunk_0116",
+      "pass": "primary"
+    },
+    {
+      "reference": "lanetlenmiş oda",
+      "context": "Lanetlenmiş odadan dışarı çıktık; ama yaşlı adamın nereye doğru gittiği konusunda hiçbir fikrimiz yoktu",
+      "reason": "The cursed room is very likely Finis Africae, but this chunk does not explicitly identify the two names.",
+      "chunk_id": "chunk_0117",
+      "pass": "primary"
+    },
+    {
+      "reference": "öteki odalar / yangının sıçradığı odalar",
+      "context": "yangının ben aşağı inip çanları çalıncaya dek öteki odalara da sıçradığını anladım",
+      "reason": "The other rooms of the library that caught fire are not individually identified.",
+      "chunk_id": "chunk_0117",
+      "pass": "primary"
+    },
+    {
+      "reference": "yanımıza yaklaşmış olan Jorge / varlığımızı hissedince",
+      "context": "tam arkasında yeniden yanımıza yaklaşmış olan Jorge’yi gördüm",
+      "reason": "Refers to position within the room but no distinct place name is given.",
+      "chunk_id": "chunk_0117",
+      "pass": "primary"
+    },
+    {
+      "reference": "öteki odalar",
+      "context": "yangının ... öteki odalara da sıçradığını anladım",
+      "reason": "the specific other rooms of the Aedificium are not named in this chunk",
+      "chunk_id": "chunk_0118",
+      "pass": "primary"
+    },
+    {
+      "reference": "bu cehenneme girmenin",
+      "context": "o cehenneme girmenin artık olanaksız olduğunu açıklıyorlardı",
+      "reason": "metaphorical reference to the burning library; no distinct new space identified",
+      "chunk_id": "chunk_0118",
+      "pass": "primary"
+    },
+    {
+      "reference": "büyük oda",
+      "context": "Birden büyük oda, küpler taşıyan katırların istilâsına uğradı",
+      "reason": "which specific ground-floor room of the abbey is meant is not unambiguously identified",
+      "chunk_id": "chunk_0118",
+      "pass": "primary"
+    },
+    {
+      "reference": "orada",
+      "context": "Üstelik yangın yukarıdan yayılıyordu; bu nedenle de orada, alevleri söndürecek ... toplamak güçtü.",
+      "reason": "the exact upper location inside the church where fire spreads is not named",
+      "chunk_id": "chunk_0119",
+      "pass": "primary"
+    },
+    {
+      "reference": "burası",
+      "context": "Burası çok karıştı.",
+      "reason": "'this place' is not explicitly identified in the chunk",
+      "chunk_id": "chunk_0119",
+      "pass": "primary"
+    },
+    {
+      "reference": "istediği yere",
+      "context": "William, orada ilginç bir şey görüyor... ama sonunda istediği yere bakamıyor",
+      "reason": "the place/object William wanted to look at is not identified in this chunk",
+      "chunk_id": "chunk_0129",
+      "pass": "primary"
+    },
+    {
+      "reference": "dördün birincisi ve dördün yedincisi",
+      "context": "içeri giremiyorlar, çünkü dördün birincisinin ve dördün yedincisinin ne olduğunu bilmemektedirler",
+      "reason": "no antecedent in this chunk; refers to elements of the labyrinth riddle",
+      "chunk_id": "chunk_0129",
+      "pass": "primary"
+    },
+    {
+      "reference": "bulmuş olduğu kitap",
+      "context": "Severinus ölü bulunuyor; bulmuş olduğu kitap ortada yoktur",
+      "reason": "the book is not identified in this chunk",
+      "chunk_id": "chunk_0129",
+      "pass": "primary"
+    },
+    {
+      "reference": "bulunur bulunmaz kaybolan bir kitap",
+      "context": "üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap",
+      "reason": "the mysterious book is not identified in this chunk",
+      "chunk_id": "chunk_0129",
+      "pass": "primary"
+    },
+    {
+      "reference": "aynanın gizi",
+      "context": "Orazio ve arkadaşı aynanın gizini çözmek için P. kontunu çağırırlar",
+      "reason": "no antecedent in this chunk; belongs to a quoted 1953 note about a different work",
+      "chunk_id": "chunk_0129",
+      "pass": "primary"
+    },
+    {
+      "reference": "aşağıdaki şema",
+      "context": "aşağıdaki şemanın güvenilir olduğuna inanıyorum",
+      "reason": "the actual diagram/plan image is not contained in this text chunk, so its depicted layout cannot be resolved here",
+      "chunk_id": "chunk_v0001",
+      "pass": "verification"
+    },
+    {
+      "reference": "kapı (which gate/door)",
+      "context": "kapının altında görmüş olduğum tüylü ve pençeli melez hayvanlar",
+      "reason": "the particular gate/door and its location are not identified within this chunk",
+      "chunk_id": "chunk_v0002",
+      "pass": "verification"
+    },
+    {
+      "reference": "bu resimler",
+      "context": "kütüphaneci Adso'ya 'Gerçekten de bu resimler... söz ediyor' diyor; P459-P460'ta Adelmo'nun gerçek dışı resimlerinden söz ediliyor (resimler gösteriliyor).",
+      "reason": "Resimlerin/levhaların hangi mekânda (kilise, yazı salonu, başka bir yer) bulunduğu bu parçada belirtilmiyor.",
+      "chunk_id": "chunk_v0004",
+      "pass": "verification"
+    },
+    {
+      "reference": "burada (here)",
+      "context": "\"Ama senden, burada, sevgili arkadaşlarından biriyle birlikte bulunduğumuz sırada olanları daha kesin anımsamanı beklerdim...\"",
+      "reason": "the location rendered as 'here' where the group is gathered is not named or described in this chunk; only chapter-level context could place it, which is not in the provided text",
+      "chunk_id": "chunk_v0005",
+      "pass": "verification"
+    },
+    {
+      "reference": "bu camları (these glasses/windows)",
+      "context": "\"Ben bile ... davalar sırasında bu camları kullanmaktan kaçınarak gereksindiğim yazıları okumaları için gönüllü yazmanlara başvurmak zorunda kaldım\"",
+      "reason": "ambiguous whether 'camlar' denotes spectacle lenses (reading glasses) or architectural window panes; no antecedent in this chunk identifies any specific glass/window of the abbey",
+      "chunk_id": "chunk_v0005",
+      "pass": "verification"
+    },
+    {
+      "reference": "banyolar",
+      "context": "“Banyolar iyidir,” dedi Jorge",
+      "reason": "Spoken generically about baths; text does not state that they are part of this abbey",
+      "chunk_id": "chunk_v0006",
+      "pass": "verification"
+    },
+    {
+      "reference": "burada da var",
+      "context": "“Burada da var. Doğrusunu söylemek gerekirse, çok az bildiğim...",
+      "reason": "“Burada” refers to a place/the abbey but the antecedent space is not specified in this chunk",
+      "chunk_id": "chunk_v0006",
+      "pass": "verification"
+    },
+    {
+      "reference": "bir taşın üstüne çıktı",
+      "context": "eski zamanlarda komün başkanlarının üstüne çıkıp söylev çektikleri gibi bir taşın üstüne çıktı",
+      "reason": "an unspecified stone/rostrum, no location tied to the abbey",
+      "chunk_id": "chunk_v0012",
+      "pass": "verification"
+    },
+    {
+      "reference": "Bir küçük evini sattı",
+      "context": "Bir küçük evini sattı; parayı alınca da...",
+      "reason": "Gherardo's little house; no location or connection to the abbey stated",
+      "chunk_id": "chunk_v0012",
+      "pass": "verification"
+    },
+    {
+      "reference": "avlu (P1466)",
+      "context": "Komutan ve adamları gelip Michele’yi aldılar, avluya götürdüler",
+      "reason": "the building or city to which this courtyard belongs is not identified in the chunk",
+      "chunk_id": "chunk_v0016",
+      "pass": "verification"
+    },
+    {
+      "reference": "kapı (P1471)",
+      "context": "Sonunda kapıdan çıktık",
+      "reason": "not stated whether this gate is the same as Adalet Kapısı (Gate of Justice) or a different gate",
+      "chunk_id": "chunk_v0016",
+      "pass": "verification"
+    },
+    {
+      "reference": "manastır (P1494)",
+      "context": "Bütün çocukluğunu bir manastırda geçirmiş bir çömez",
+      "reason": "not stated whether this monastery is the abbey where the story takes place",
+      "chunk_id": "chunk_v0016",
+      "pass": "verification"
+    },
+    {
+      "reference": "the place from which Salvatore enters the kitchen",
+      "context": "Salvatore mutfağa girip kediyi öldürerek gözlerini oymak üzereydi",
+      "reason": "the origin of this movement is not named in this chunk",
+      "chunk_id": "chunk_v0019",
+      "pass": "verification"
+    },
+    {
+      "reference": "the place where the archers searched the girl",
+      "context": "Okçular, pis pis gülmeler, açık saçık sözler arasında kızın üstünü aradılar",
+      "reason": "no identifiable location is stated for this search in this chunk",
+      "chunk_id": "chunk_v0019",
+      "pass": "verification"
+    },
+    {
+      "reference": "araya girdiler / barikat",
+      "context": "Öteki Minoritler rahip kardeşlerini savunmak için koşup bir barikat oluşturdular",
+      "reason": "the hall/room where the brawl and barricade occur is not identified in this chunk",
+      "chunk_id": "chunk_v0020",
+      "pass": "verification"
+    },
+    {
+      "reference": "bir kalenin duvarlarının iki yanındaki kuşatanlarla kuşatılanlar",
+      "context": "bir kalenin duvarlarının iki yanındaki kuşatanlarla kuşatılanlar birbirlerine aşağılayıcı sözler ve itirazlar yağdırıyorlardı",
+      "reason": "this is a simile about a castle's walls, not a statement about the abbey's actual walls",
+      "chunk_id": "chunk_v0020",
+      "pass": "verification"
+    },
+    {
+      "reference": "Kilisede (P2239)",
+      "context": "Kilisede öteki insanlar gibi ellerini kavuşturup diz çökecek yerde",
+      "reason": "which church (the abbey church or another) and its location are not specified in this chunk",
+      "chunk_id": "chunk_v0020",
+      "pass": "verification"
+    },
+    {
+      "reference": "bu manastır / burada (P2231)",
+      "context": "bu manastırın rahipleri arasında kabul edilmeyi sağladım; ...burada kilerci olarak hizmet ediyorum",
+      "reason": "resolved only as the abbey of the story; no spatial location within the complex is given",
+      "chunk_id": "chunk_v0020",
+      "pass": "verification"
+    },
+    {
+      "reference": "vadide bekleyen ... ordusu",
+      "context": "Bizi vadide bekleyen Vercelli Piskopusu'nun ordusu tarafından yakalanmadan oradan ayrılabilmek için",
+      "reason": "The valley is mentioned only in a past narrative about Vercelli; its location relative to the abbey is not stated in this chunk",
+      "chunk_id": "chunk_v0021",
+      "pass": "verification"
+    },
+    {
+      "reference": "Dolcino'nun kalelerine ... geçitleri",
+      "context": "onlara Dolcino'nun kalelerine kolayca saldırabilecekleri geçitleri gösterdim",
+      "reason": "Passages to Dolcino's fortresses are referenced without any spatial anchor in this chunk",
+      "chunk_id": "chunk_v0021",
+      "pass": "verification"
+    },
+    {
+      "reference": "karşı yana",
+      "context": "Adso, birkaç saattir Benno karşı yana geçti. Şimdi öğrenmek istediği gizlerin bekçiliğini o yapıyor",
+      "reason": "Could indicate a change of role/side rather than a movement to an identifiable physical place; no clear physical antecedent in this chunk",
+      "chunk_id": "chunk_v0022",
+      "pass": "verification"
+    },
+    {
+      "reference": "the space where the abbot turned his back to the window",
+      "context": "Başrahip sırtını pencereye döndü",
+      "reason": "the room or building in which the abbot and the window are located is not specified in this chunk",
+      "chunk_id": "chunk_v0023",
+      "pass": "verification"
+    },
+    {
+      "reference": "burada",
+      "context": "Ama burada, burada... Jorge parmağıyla masanın üstüne, William'ın açık tuttuğu kitabın yanına vuruyordu",
+      "reason": "deictic pointing to the book/table in the scene; no identifiable abbey space named in this chunk",
+      "chunk_id": "chunk_v0024",
+      "pass": "verification"
+    },
+    {
+      "reference": "burada / burası",
+      "context": "\"Ama burada, burada...\" Şimdi Jorge parmağıyla masanın üstüne, William'ın açık tuttuğu kitabın yanına vuruyordu",
+      "reason": "the specific room/space where the conversation is taking place is not named anywhere in this chunk",
+      "chunk_id": "chunk_v6f8901e87f",
+      "pass": "verification"
+    },
+    {
+      "reference": "bu camlar (\"these glasses/windows\")",
+      "context": "Ben bile ... bu camları kullanmaktan kaçınarak gereksindiğim yazıları okumaları için gönüllü yazmanlara başvurmak zorunda kaldım",
+      "reason": "no antecedent in this chunk; 'cam' could mean reading lenses or windows and cannot be resolved as a physical place here",
+      "chunk_id": "chunk_v94062f84b0",
+      "pass": "verification"
+    },
+    {
+      "reference": "uzaklaşmakta olan Jorge (Jorge moving away)",
+      "context": "Yaşlı Jorge’nin uzaklaşmakta olduğunu görünce, bir saygı duygusunun etkisiyle elini öpmek için diz çöktüm.",
+      "reason": "Jorge departs, but no origin or destination place is identified, so no movement segment can be built",
+      "chunk_id": "chunk_v94062f84b0",
+      "pass": "verification"
+    },
+    {
+      "reference": "buraya",
+      "context": "Buraya bir Minorit manastırından mı geldin?",
+      "reason": "the location of the conversation is not explicitly named as the abbey in this chunk",
+      "chunk_id": "chunk_veb1d0aad87",
+      "pass": "verification"
+    },
+    {
+      "reference": "bir mahzen (in Ubertino's account)",
+      "context": "Geceyarısı bir mahzende toplanıyorlarmış ... mahzene kız çocukları taşıyorlardı",
+      "reason": "An indefinite cellar of the heretics' rites; its relation to or location within the abbey is never stated.",
+      "chunk_id": "chunk_vee24565932",
+      "pass": "verification"
+    }
+  ]
+}

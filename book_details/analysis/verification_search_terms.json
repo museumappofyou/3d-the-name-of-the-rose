@@ -1,0 +1,887 @@
+{
+  "entity_terms": {
+    "LIBRARY": [
+      "labyrinth",
+      "library"
+    ],
+    "CHURCH": [
+      "church"
+    ],
+    "ABBEY": [
+      "abbey"
+    ],
+    "SCRIPTORIUM": [
+      "scriptorium"
+    ],
+    "AEDIFICIUM": [
+      "aedificium"
+    ],
+    "KITCHEN": [
+      "kitchen"
+    ],
+    "INFIRMARY": [
+      "hospital",
+      "infirmary"
+    ],
+    "REFECTORY": [
+      "refectory"
+    ],
+    "CELL": [
+      "cell"
+    ],
+    "WALL": [
+      "wall"
+    ],
+    "COURTYARD": [
+      "courtyard"
+    ],
+    "MEETING_HALL": [
+      "assembly hall",
+      "meeting hall"
+    ],
+    "GARDEN": [
+      "botanical garden",
+      "garden"
+    ],
+    "CEMETERY": [
+      "cemetery"
+    ],
+    "STABLES": [
+      "horse stables",
+      "stables"
+    ],
+    "ROOM": [
+      "room"
+    ],
+    "DORMITORY": [
+      "dormitory"
+    ],
+    "WORKSHOP": [
+      "forge",
+      "workshop"
+    ],
+    "GATE": [
+      "gate"
+    ],
+    "CELLAR": [
+      "cellar"
+    ],
+    "STAIRCASE": [
+      "staircase",
+      "steps"
+    ],
+    "CRYPT": [
+      "crypt"
+    ],
+    "GUEST_HOUSE": [
+      "guest house"
+    ],
+    "FINIS_AFRICAE": [
+      "finis africae"
+    ],
+    "LABORATORY": [
+      "laboratory"
+    ],
+    "SOUTH_TOWER": [
+      "south tower"
+    ],
+    "VAT": [
+      "tub",
+      "vat"
+    ],
+    "TOWER": [
+      "tower"
+    ],
+    "ROAD": [
+      "road"
+    ],
+    "WINDOW": [
+      "window"
+    ],
+    "EAST_TOWER": [
+      "east tower"
+    ],
+    "CHAPEL": [
+      "chapel"
+    ],
+    "BATH": [
+      "bath",
+      "bath house",
+      "bathhouse"
+    ],
+    "TREASURY": [
+      "treasury"
+    ],
+    "CHOIR": [
+      "choir"
+    ],
+    "TABLE": [
+      "desk",
+      "table"
+    ],
+    "DOOR": [
+      "door",
+      "outer door"
+    ],
+    "MIRROR_ROOM": [
+      "mirror room"
+    ],
+    "ABBOT_HOUSE": [
+      "abbot house"
+    ],
+    "FIRST_BLIND_ROOM": [
+      "first blind room"
+    ],
+    "PRECIPICE": [
+      "cliff",
+      "precipice"
+    ],
+    "WEST_TOWER": [
+      "west tower"
+    ],
+    "SEVEN_SIDED_HALL": [
+      "seven sided hall"
+    ],
+    "MELK_MONASTERY": [
+      "melk abbey",
+      "melk monastery"
+    ],
+    "RELIC_CONTAINER": [
+      "relic container"
+    ],
+    "SAN_SALVATORE_CHURCH": [
+      "san salvatore church"
+    ],
+    "CORRIDOR": [
+      "corridor"
+    ],
+    "SPIRAL_STAIRCASE": [
+      "spiral staircase"
+    ],
+    "GRANARY": [
+      "barn",
+      "granary"
+    ],
+    "CENTRAL_OPENING": [
+      "central opening"
+    ],
+    "ROOM_S": [
+      "room s"
+    ],
+    "GLOBE": [
+      "armillary sphere",
+      "globe"
+    ],
+    "HALL": [
+      "hall"
+    ],
+    "HAYSTACK": [
+      "haystack",
+      "waste slope"
+    ],
+    "NORTH_TOWER": [
+      "north tower"
+    ],
+    "VALLEY": [
+      "valley"
+    ],
+    "VILLAGE": [
+      "village"
+    ],
+    "PLAIN": [
+      "plain"
+    ],
+    "HILL": [
+      "hill"
+    ],
+    "LAMP": [
+      "lamp"
+    ],
+    "SLIT": [
+      "slit"
+    ],
+    "MIRROR": [
+      "mirror"
+    ],
+    "LUNETTE": [
+      "lunette"
+    ],
+    "MOUNTAIN": [
+      "mountain"
+    ],
+    "ALTAR": [
+      "altar"
+    ],
+    "CLOISTER": [
+      "cloister"
+    ],
+    "MARY_STATUE": [
+      "mary statue"
+    ],
+    "LAND": [
+      "land"
+    ],
+    "CENTRAL_HEPTAGON": [
+      "central heptagon",
+      "heptagonal room"
+    ],
+    "ROOMS_ACAIA": [
+      "rooms acaia"
+    ],
+    "OLD_CHURCH_DOOR": [
+      "old church door"
+    ],
+    "WELL": [
+      "well",
+      "wells"
+    ],
+    "BOOK_CABINET": [
+      "book cabinet"
+    ],
+    "YSPANIA_Y_ROOM": [
+      "yspania y room"
+    ],
+    "MILL": [
+      "mill"
+    ],
+    "PARAPET_WALL": [
+      "parapet",
+      "parapet wall"
+    ],
+    "HEARTH": [
+      "hearth"
+    ],
+    "VINEYARD": [
+      "vineyard"
+    ],
+    "ORCHARD": [
+      "orchard"
+    ],
+    "SLOPE": [
+      "slope"
+    ],
+    "NOVICE_HOUSE": [
+      "novice house"
+    ],
+    "SEA": [
+      "sea"
+    ],
+    "CHICKEN_COOP": [
+      "chicken coop",
+      "chicken coops"
+    ],
+    "NORTH_GATE": [
+      "north gate"
+    ],
+    "APSE": [
+      "apse"
+    ],
+    "COLUMN": [
+      "column"
+    ],
+    "PASSAGE": [
+      "passage"
+    ],
+    "PASSAGE_BETWEEN_ROOMS": [
+      "passage between rooms"
+    ],
+    "CAULDRON": [
+      "cauldron"
+    ],
+    "LAND_MEASURE": [
+      "land measure"
+    ],
+    "ALAM": [
+      "alam"
+    ],
+    "GROVE": [
+      "grove"
+    ],
+    "BARRELS": [
+      "barrel",
+      "barrels",
+      "wine barrels"
+    ],
+    "BELL_TOWER": [
+      "bell tower"
+    ],
+    "OPEN_AREA": [
+      "open area"
+    ],
+    "WOOD_PILE": [
+      "wood pile"
+    ],
+    "SHEEPFOLDS": [
+      "sheepfolds"
+    ],
+    "MOUNTAIN_RANGE": [
+      "mountain range"
+    ],
+    "OVEN": [
+      "oven"
+    ],
+    "THRESHING_FLOOR": [
+      "threshing floor"
+    ],
+    "PIG_PENS": [
+      "pig pens"
+    ],
+    "LANDSCAPE": [
+      "landscape"
+    ],
+    "GROUND": [
+      "ground"
+    ],
+    "ABBOT_TABLE": [
+      "abbot table"
+    ],
+    "NAVE": [
+      "nave"
+    ],
+    "BELL": [
+      "bell",
+      "bells"
+    ],
+    "FORBIDDEN_FLOOR": [
+      "forbidden floor"
+    ],
+    "PENTAGONAL_ROOM": [
+      "pentagonal room"
+    ],
+    "CUPBOARD": [
+      "cabinet",
+      "cupboard"
+    ],
+    "SNOW": [
+      "site",
+      "snow"
+    ],
+    "CURTAIN": [
+      "curtain"
+    ],
+    "TREE": [
+      "tree"
+    ],
+    "SITE_LANDSCAPE": [
+      "site landscape"
+    ],
+    "GORGE": [
+      "gorge"
+    ],
+    "AULA": [
+      "aula"
+    ],
+    "NOVARA_ABBEY": [
+      "novara abbey"
+    ],
+    "MEETING_BUILDING": [
+      "meeting building"
+    ],
+    "UNDERGROUND_PASSAGE": [
+      "underground passage"
+    ],
+    "PLAQUE": [
+      "plaque"
+    ],
+    "BLIND_ROOM": [
+      "blind room"
+    ],
+    "STOOL": [
+      "stool"
+    ],
+    "ADJACENT_ROOM": [
+      "adjacent room"
+    ],
+    "SERVANT_QUARTERS": [
+      "servant quarters"
+    ],
+    "WATER_RESERVOIRS": [
+      "water reservoirs"
+    ],
+    "ABBAYE_DE_LA_SOURCE": [
+      "abbaye de la source"
+    ],
+    "GATE_OF_JUSTICE": [
+      "gate of justice"
+    ],
+    "PIGSTY": [
+      "pigsty"
+    ],
+    "FOSSANOVA_ABBEY": [
+      "fossanova abbey"
+    ],
+    "SMITHY": [
+      "smithy"
+    ],
+    "PINES": [
+      "pines"
+    ],
+    "VEGETATION": [
+      "vegetation"
+    ],
+    "THORNS": [
+      "thorns"
+    ],
+    "HERB_STORE": [
+      "herb store"
+    ],
+    "SOUTH_WALL": [
+      "south wall"
+    ],
+    "FARMS": [
+      "farms"
+    ],
+    "OIL_PRESS": [
+      "oil press"
+    ],
+    "FOREST": [
+      "forest"
+    ],
+    "OUTBUILDINGS": [
+      "outbuildings"
+    ],
+    "OX_STABLES": [
+      "ox stables"
+    ],
+    "SHEEP_PENS": [
+      "sheep pens"
+    ],
+    "LECTERN": [
+      "lectern"
+    ],
+    "LATRINES": [
+      "latrines"
+    ],
+    "SOUTH_PATH": [
+      "south path"
+    ],
+    "OLIVE_GROVE": [
+      "olive grove"
+    ],
+    "BEND": [
+      "bend"
+    ],
+    "PINE_TREES": [
+      "pine trees"
+    ],
+    "ROCKS": [
+      "rocks"
+    ],
+    "MOUNTAIN_SLOPE": [
+      "mountain slope"
+    ],
+    "PULPIT": [
+      "pulpit"
+    ],
+    "FAUCET": [
+      "faucet"
+    ],
+    "STIES": [
+      "sties"
+    ],
+    "FURNACE": [
+      "furnace"
+    ],
+    "CHIMNEY": [
+      "chimney"
+    ],
+    "FIREPLACE": [
+      "fireplace"
+    ],
+    "OCTAGONAL_COURTYARD": [
+      "octagonal courtyard"
+    ],
+    "BOOK_STAND": [
+      "book stand"
+    ],
+    "CHAIR": [
+      "chair"
+    ],
+    "OAK_TREE": [
+      "oak tree"
+    ],
+    "VERCELLI_LANDS": [
+      "vercelli lands"
+    ],
+    "NOVARA_MOUNTAINS": [
+      "novara mountains"
+    ],
+    "BED": [
+      "bed"
+    ],
+    "PORCH": [
+      "porch"
+    ],
+    "TRIPOD_LAMP": [
+      "tripod lamp"
+    ],
+    "BOOK": [
+      "book"
+    ],
+    "BREAD_OVEN": [
+      "bread oven"
+    ],
+    "BONE_CEMETERY": [
+      "bone cemetery"
+    ],
+    "ROOM_WITH_TABLE": [
+      "room with table"
+    ],
+    "EAST_STAIRCASE": [
+      "east staircase"
+    ],
+    "NORTH_DOOR": [
+      "north door"
+    ],
+    "ENTRANCE_TOWER": [
+      "entrance tower"
+    ],
+    "OIL_LAMP": [
+      "oil lamp"
+    ],
+    "VIRGIN_MARY_STATUE": [
+      "virgin mary statue"
+    ],
+    "THRESHOLD": [
+      "threshold"
+    ],
+    "FOUNTAIN": [
+      "fountain"
+    ],
+    "CLOTHING": [
+      "clothing"
+    ],
+    "BASIN": [
+      "basin"
+    ],
+    "NORTHERN_LANDS": [
+      "northern lands"
+    ],
+    "HUT": [
+      "hut"
+    ],
+    "MEADOW": [
+      "meadow"
+    ],
+    "STRAW_MATTRESS": [
+      "straw mattress"
+    ],
+    "MOUNTAIN_SLOPES": [
+      "mountain slopes"
+    ],
+    "PENINSULA": [
+      "peninsula"
+    ],
+    "HIGH_PLATEAU": [
+      "high plateau"
+    ],
+    "MOUNTAIN_PEAK": [
+      "mountain peak"
+    ],
+    "MOUNTAIN_TERRACE": [
+      "mountain terrace"
+    ],
+    "STRAITS": [
+      "straits"
+    ],
+    "HILLSIDE": [
+      "hillside"
+    ],
+    "THICKET": [
+      "thicket"
+    ],
+    "INNER_OCTAGON": [
+      "inner octagon"
+    ],
+    "ROOM_Y": [
+      "room y"
+    ],
+    "ROOM_P": [
+      "room p"
+    ],
+    "ROOM_E": [
+      "room e"
+    ],
+    "ROOM_T": [
+      "room t"
+    ],
+    "ROOM_BEHIND_MIRROR": [
+      "room behind mirror"
+    ],
+    "ROOMS_ANGLIA_GERMANI": [
+      "rooms anglia germani"
+    ],
+    "ROOMS_GALLIA": [
+      "rooms gallia"
+    ],
+    "ROOMS_HIBERNIA": [
+      "rooms hibernia"
+    ],
+    "ROOMS_ROMA_YSPANIA": [
+      "rooms roma yspania"
+    ],
+    "ROOMS_LEONESE_AEGYPTUS": [
+      "rooms leonese aegyptus"
+    ],
+    "ROOMS_IUDAEA_FONS_ADAE": [
+      "rooms iudaea fons adae"
+    ],
+    "OLD_CHURCH": [
+      "old church"
+    ],
+    "ENTRANCE_DOOR": [
+      "entrance door"
+    ],
+    "STAINED_GLASS_WINDOW": [
+      "stained glass window"
+    ],
+    "CASALE_ABBEY": [
+      "casale abbey"
+    ],
+    "TORTURE_ROOM": [
+      "torture room"
+    ],
+    "SHEEPFOLD": [
+      "sheepfold"
+    ],
+    "TRIPOD": [
+      "tripod"
+    ],
+    "VILLAGES": [
+      "villages"
+    ],
+    "LOW_PASSAGE": [
+      "low passage"
+    ],
+    "LAKE": [
+      "lake"
+    ],
+    "MOUND": [
+      "mound"
+    ],
+    "PIPE": [
+      "pipe"
+    ],
+    "BONE_ROOM": [
+      "bone room"
+    ],
+    "TREASURY_CELLAR": [
+      "treasury cellar"
+    ],
+    "NICHE": [
+      "niche"
+    ],
+    "CASK": [
+      "cask"
+    ],
+    "LODGINGS": [
+      "lodgings"
+    ],
+    "LARGE_ROOM": [
+      "large room"
+    ],
+    "CHAPTER_HALL": [
+      "chapter hall"
+    ],
+    "CAPITAL": [
+      "capital"
+    ],
+    "BOOKCASE": [
+      "bookcase"
+    ],
+    "EXECUTION_ROUTE": [
+      "execution route"
+    ],
+    "PRECONSUL_CORNER": [
+      "preconsul corner"
+    ],
+    "FONDAMENTI_DI_SANTA_LIPERATA": [
+      "fondamenti di santa liperata"
+    ],
+    "SAN_GIOVANNI": [
+      "san giovanni"
+    ],
+    "OLD_MARKET": [
+      "old market"
+    ],
+    "HOLY_CROSS": [
+      "holy cross"
+    ],
+    "MEADOW_OF_JUSTICE": [
+      "meadow of justice"
+    ],
+    "HORSEMEN_RING": [
+      "horsemen ring"
+    ],
+    "STAKE": [
+      "stake"
+    ],
+    "MONASTERY": [
+      "monastery"
+    ],
+    "PREACHERS_MONASTERY": [
+      "preachers monastery"
+    ],
+    "LATRINE": [
+      "latrine"
+    ],
+    "DUNGHILL": [
+      "dunghill"
+    ]
+  },
+  "base_place_terms": [
+    "manastır",
+    "kilise",
+    "kütüphane",
+    "yazı salonu",
+    "yazı odası",
+    "yazıhane",
+    "yemekhane",
+    "mutfak",
+    "revir",
+    "ahır",
+    "mezarlık",
+    "bahçe",
+    "bostan",
+    "duvar",
+    "kapı",
+    "kule",
+    "avlu",
+    "merdiven",
+    "mahzen",
+    "bodrum",
+    "hücre",
+    "koğuş",
+    "misafirhane",
+    "hamam",
+    "bina",
+    "yapı",
+    "aedificium",
+    "edifice",
+    "salon",
+    "oda",
+    "koridor",
+    "geçit",
+    "sundurma",
+    "revak",
+    "sütun",
+    "kubbe",
+    "çatı",
+    "ocak",
+    "şömine",
+    "pencere",
+    "sarnıç",
+    "ambar",
+    "kiler",
+    "atölye",
+    "demirci",
+    "değirmen",
+    "köprü",
+    "yol",
+    "patika",
+    "uçurum",
+    "tepe",
+    "dağ",
+    "geçit",
+    "giriş",
+    "çıkış",
+    "mezbele",
+    "şapel",
+    "kripta",
+    "sarnıç"
+  ],
+  "relation_terms": [
+    "üstünde",
+    "üstüne",
+    "üstündeki",
+    "üzerinde",
+    "altında",
+    "altındaki",
+    "yukarı",
+    "yukarıda",
+    "aşağı",
+    "aşağıda",
+    "yanında",
+    "yanındaki",
+    "arkasında",
+    "arkasındaki",
+    "önünde",
+    "önündeki",
+    "arasında",
+    "arasındaki",
+    "sağında",
+    "solunda",
+    "kuzey",
+    "güney",
+    "doğu",
+    "batı",
+    "penceresinden",
+    "penceresi",
+    "pencereden",
+    "merdiven",
+    "merdivenler",
+    "kapısından",
+    "kapıdan",
+    "geçitten",
+    "girişten",
+    "çıkışa",
+    "döndü",
+    "saptı",
+    "geçti",
+    "geçerek",
+    "tırmandı",
+    "çıktı",
+    "indi",
+    "girdi",
+    "girerek",
+    "ayrıldı",
+    "dolaştı",
+    "yürüdü",
+    "vardı",
+    "ulaştı",
+    "yaklaştı",
+    "uzaklaştı",
+    "götürdü",
+    "getirdi",
+    "görünüyordu",
+    "görülüyordu",
+    "bakıyordu",
+    "yükseliyordu",
+    "uzanıyordu",
+    "bitişik",
+    "karşısında",
+    "karşısındaki",
+    "çevresinde",
+    "etrafında",
+    "uzakta",
+    "yakınında",
+    "içinde",
+    "içindeki",
+    "dışında",
+    "dışındaki",
+    "açılıyordu",
+    "açılan",
+    "çıkan",
+    "inen",
+    "üst kat",
+    "alt kat",
+    "kat"
+  ],
+  "movement_verbs": [
+    "girdi",
+    "çıktı",
+    "geçti",
+    "döndü",
+    "saptı",
+    "tırmandı",
+    "indi",
+    "yürüdü",
+    "gitti",
+    "geldi",
+    "vardı",
+    "ayrıldı",
+    "dolaştı",
+    "ilerledi",
+    "koştu"
+  ]
+}

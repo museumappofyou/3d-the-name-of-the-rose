@@ -1,0 +1,1549 @@
+{
+  "root": "ABBEY",
+  "method": "programmatic containment relations merged with an LLM layout pass",
+  "nodes": {
+    "CHURCH": {
+      "children": [
+        "CHOIR",
+        "NAVE",
+        "ALTAR",
+        "VIRGIN_MARY_STATUE",
+        "CHURCH_DOOR",
+        "APSE",
+        "CHAPEL",
+        "CROSS",
+        "SIDE_NAVE",
+        "MAIN_ALTAR",
+        "PORTAL",
+        "WINDOWS",
+        "LEFT_NAVE",
+        "MIDDLE_NAVE",
+        "NORTH_DOOR",
+        "LEFT_WALL",
+        "GREAT_DOOR",
+        "CENTRAL_DOOR",
+        "TRANSEPT",
+        "CHURCH_FACADE",
+        "SOUTH_DOOR",
+        "PULPIT",
+        "REAR_PART",
+        "NORTH_GATE",
+        "BELL_TOWER",
+        "TOWER",
+        "CHURCH_TOWER"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "EXPLICIT",
+      "note": "TOWER parent ties CHURCH(1) vs INFIRMARY(1). MARY_STATUE inferred from CHURCH CONTAINS VIRGIN_MARY_STATUE(3)."
+    },
+    "CHOIR": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": null,
+      "source": "llm"
+    },
+    "AEDIFICIUM": {
+      "children": [
+        "KITCHEN",
+        "EAST_TOWER",
+        "LIBRARY",
+        "REFECTORY",
+        "SCRIPTORIUM",
+        "WEST_TOWER",
+        "SOUTH_TOWER",
+        "UPPER_FLOOR",
+        "NORTH_TOWER",
+        "CEMETERY",
+        "SOUTH_WING",
+        "SOUTH_WALL"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "EXPLICIT",
+      "note": "Also attested under AEDIFICIUM: INFIRMARY(3), COURTYARD(1), CEMETERY(1), FINIS_AFRICAE(1); those placed by higher parent counts."
+    },
+    "KITCHEN": {
+      "children": [
+        "HEARTH",
+        "BREAD_OVEN",
+        "DISHWASHING_PIT"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "EXPLICIT",
+      "note": null
+    },
+    "NAVE": {
+      "children": [
+        "CANDELABRA"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "EXPLICIT",
+      "note": null
+    },
+    "WALL": {
+      "children": [
+        "ABBEY",
+        "GATE",
+        "OUTBUILDINGS",
+        "WALL_PASSAGE",
+        "PLAQUE"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "EXPLICIT",
+      "note": "WALL CONTAINS ABBEY(9) contradicts ABBEY CONTAINS WALL(7). WALL CONTAINS LIBRARY(1) not used (LIBRARY placed higher)."
+    },
+    "ABBEY": {
+      "children": [
+        "COURTYARD",
+        "AEDIFICIUM",
+        "CHURCH",
+        "INFIRMARY",
+        "STABLES",
+        "CELL",
+        "GARDEN",
+        "CELLAR",
+        "MEETING_HALL",
+        "BATH",
+        "WORKSHOP",
+        "WINDOW",
+        "SHEEPFOLDS",
+        "DORMITORY",
+        "SMITHY",
+        "OCTAGONAL_COURTYARD",
+        "TORTURE_ROOM",
+        "SHEEPFOLD",
+        "TREASURY",
+        "WATER_RESERVOIRS"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "EXPLICIT",
+      "note": "Root: most-supported top-level entity. Reverse relation WALL CONTAINS ABBEY (9) also attested; treated as enclosure instead."
+    },
+    "ALTAR": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": "CHAPEL CONTAINS ALTAR(2) weaker than CHURCH(8).",
+      "source": "llm"
+    },
+    "EAST_TOWER": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": "SCRIPTORIUM/LIBRARY containment(1 each) weaker than AEDIFICIUM(7).",
+      "source": "llm"
+    },
+    "LIBRARY": {
+      "children": [
+        "FINIS_AFRICAE",
+        "GREAT_HALL",
+        "MIRROR",
+        "SCENTED_ROOM",
+        "CENTRAL_HEPTAGON",
+        "OCTAGON"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "EXPLICIT",
+      "note": "EAST/SOUTH/WEST/NORTH towers also attested under LIBRARY but placed under AEDIFICIUM by higher support."
+    },
+    "COURTYARD": {
+      "children": [
+        "COLUMN_CAPITAL",
+        "COLUMN",
+        "PARAPET_WALL"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "EXPLICIT",
+      "note": "MEETING_HALL CONTAINS COURTYARD(1) weaker than ABBEY(7)."
+    },
+    "INFIRMARY": {
+      "children": [
+        "LABORATORY",
+        "BOOK"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "EXPLICIT",
+      "note": "ABBEY(4) vs AEDIFICIUM(3) parent; ABBEY chosen by count."
+    },
+    "LABORATORY": {
+      "children": [
+        "GLOBE"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "EXPLICIT",
+      "note": null
+    },
+    "REFECTORY": {
+      "children": [
+        "DOOR",
+        "FAUCET"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "EXPLICIT",
+      "note": "ABBEY CONTAINS REFECTORY(4) tied with AEDIFICIUM(4)."
+    },
+    "SCRIPTORIUM": {
+      "children": [
+        "VENANTIUS_DESK",
+        "ADELMO_WORK_DESK",
+        "CATALOG",
+        "WORK_DESK"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "EXPLICIT",
+      "note": "Parent AEDIFICIUM(4) over ABBEY(3). TABLE parent tie FINIS_AFRICAE(3)/LABORATORY(3)."
+    },
+    "STABLES": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": null,
+      "source": "llm"
+    },
+    "CELL": {
+      "children": [
+        "BED",
+        "STRAW_MATTRESS"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "EXPLICIT",
+      "note": "Other parents: GUEST_HOUSE(2), WORKSHOP(1)."
+    },
+    "GARDEN": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": null,
+      "source": "llm"
+    },
+    "YSPANIA_Y_ROOM": {
+      "children": [
+        "BOOK_CABINET",
+        "WALL"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No CONTAINS parent; itself contains BOOK_CABINET(4), TABLE(2), WALL(1)."
+    },
+    "BOOK_CABINET": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": "YSPANIA_Y_ROOM(4) over LIBRARY(1).",
+      "source": "llm"
+    },
+    "WEST_TOWER": {
+      "children": [
+        "BLIND_ROOM"
+      ],
+      "certainty": "STRONG_INFERENCE",
+      "llm_certainty": "EXPLICIT",
+      "note": null
+    },
+    "CELLAR": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "WEAK_INFERENCE",
+      "note": "CELLAR CONTAINS WORKSHOP(1) unmapped; WORKSHOP placed under ABBEY.",
+      "source": "llm"
+    },
+    "VIRGIN_MARY_STATUE": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "FINIS_AFRICAE": {
+      "children": [
+        "TABLE",
+        "CUPBOARD"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "EXPLICIT",
+      "note": "LIBRARY(3) over AEDIFICIUM(1). TABLE(3) placed under SCRIPTORIUM."
+    },
+    "TABLE": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": "Parent tie FINIS_AFRICAE(3)/LABORATORY(3)/SCRIPTORIUM(3), also REFECTORY(2), MIRROR_ROOM(2), YSPANIA_Y_ROOM(2), INFIRMARY(1), KITCHEN(1), LIBRARY(1), WORKSHOP(1).",
+      "source": "llm"
+    },
+    "HEARTH": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": "KITCHEN(3) over SCRIPTORIUM(1).",
+      "source": "llm"
+    },
+    "DOOR": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": "Parents REFECTORY(3), GUEST_HOUSE(1 strong), INFIRMARY(1), KITCHEN(1).",
+      "source": "llm"
+    },
+    "VENANTIUS_DESK": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "SOUTH_TOWER": {
+      "children": [
+        "ROOM_OF_ARABIC_WORKS"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "EXPLICIT",
+      "note": "LIBRARY CONTAINS SOUTH_TOWER(1) weaker than AEDIFICIUM(2)."
+    },
+    "MEETING_HALL": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": null,
+      "source": "llm"
+    },
+    "BATH": {
+      "children": [
+        "FOUNTAIN"
+      ],
+      "certainty": "STRONG_INFERENCE",
+      "llm_certainty": "EXPLICIT",
+      "note": null
+    },
+    "WORKSHOP": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "STRONG_INFERENCE",
+      "note": "CELLAR CONTAINS WORKSHOP(1) explicit alternative; ABBEY placement has 2 claims.",
+      "source": "llm"
+    },
+    "WINDOW": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": "Other parents: SCRIPTORIUM(1 strong), STAIRCASE(1).",
+      "source": "llm"
+    },
+    "CHURCH_DOOR": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "APSE": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": null,
+      "source": "llm"
+    },
+    "CHAPEL": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "STRONG_INFERENCE",
+      "note": null,
+      "source": "llm"
+    },
+    "CROSS": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "SIDE_NAVE": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "MAIN_ALTAR": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "CORRIDOR": {
+      "children": [
+        "BONE_CEMETERY",
+        "NICHE"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "EXPLICIT",
+      "note": "Tie CRYPT(1)/LIBRARY(1)."
+    },
+    "BONE_CEMETERY": {
+      "children": [
+        "BONE_CEMETERY_PASSAGE"
+      ],
+      "certainty": "EXPLICIT"
+    },
+    "BREAD_OVEN": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "ADELMO_WORK_DESK": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "CATALOG": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "STAIRCASE_HALL": {
+      "children": [
+        "STAIRCASE"
+      ],
+      "certainty": "EXPLICIT"
+    },
+    "STAIRCASE": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": "Parent TOWER(2); also EAST/SOUTH/WEST_TOWER, SEVEN_SIDED_HALL (1 each).",
+      "source": "llm"
+    },
+    "GATE": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": "WALL(2) over ABBEY(1).",
+      "source": "llm"
+    },
+    "UPPER_FLOOR": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "NORTH_TOWER": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "STRONG_INFERENCE",
+      "note": "LIBRARY CONTAINS NORTH_TOWER(1) explicit alternative.",
+      "source": "llm"
+    },
+    "CEMETERY": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": "AEDIFICIUM CONTAINS CEMETERY(1) tie.",
+      "source": "llm"
+    },
+    "SOUTH_WING": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "SOUTH_WALL": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "SHEEPFOLDS": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": null,
+      "source": "llm"
+    },
+    "DORMITORY": {
+      "children": [
+        "LOWER_FLOOR"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "EXPLICIT",
+      "note": null
+    },
+    "SMITHY": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "OCTAGONAL_COURTYARD": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "TORTURE_ROOM": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "SHEEPFOLD": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "TREASURY": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "STRONG_INFERENCE",
+      "note": null,
+      "source": "llm"
+    },
+    "WATER_RESERVOIRS": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "PORTAL": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "WINDOWS": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "LEFT_NAVE": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "MIDDLE_NAVE": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "NORTH_DOOR": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "LEFT_WALL": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "GREAT_DOOR": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "CENTRAL_DOOR": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "TRANSEPT": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "CHURCH_FACADE": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "SOUTH_DOOR": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "PULPIT": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "REAR_PART": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "NORTH_GATE": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": null,
+      "source": "llm"
+    },
+    "BELL_TOWER": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": null,
+      "source": "llm"
+    },
+    "TOWER": {
+      "children": [
+        "SPIRAL_STAIRCASE"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "EXPLICIT",
+      "note": "Parent tie CHURCH(1) vs INFIRMARY(1). TOWER CONTAINS LIBRARY(1) AMBIGUOUS, not used."
+    },
+    "CHURCH_TOWER": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "LOWER_FLOOR": {
+      "children": [
+        "JORGE_CELL"
+      ],
+      "certainty": "EXPLICIT"
+    },
+    "ABBOT_HOUSE": {
+      "children": [
+        "HALL"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No CONTAINS parent."
+    },
+    "HALL": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": null,
+      "source": "llm"
+    },
+    "FOUNTAIN": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "BONE_CEMETERY_PASSAGE": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "BED": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "STRAW_MATTRESS": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "CENTRAL_OPENING": {
+      "children": [
+        "ROOM"
+      ],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No CONTAINS parent; CENTRAL_OPENING CONTAINS ROOM (weak)."
+    },
+    "ROOM": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": "Tie TOWER(1)/LIBRARY(1); CENTRAL_OPENING(1 weak).",
+      "source": "llm"
+    },
+    "COLUMN": {
+      "children": [
+        "CHIMNEY"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "STRONG_INFERENCE",
+      "note": null
+    },
+    "CHIMNEY": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "NICHE": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "COLUMN_CAPITAL": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "PARAPET_WALL": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": null,
+      "source": "llm"
+    },
+    "CRYPT": {
+      "children": [
+        "CORRIDOR"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "EXPLICIT",
+      "note": "Given as CRYPT BELOW ABBEY; no CONTAINS relation."
+    },
+    "CUPBOARD": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": null,
+      "source": "llm"
+    },
+    "GUEST_HOUSE": {
+      "children": [
+        "THRESHOLD"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "ADJACENT_TO SOUTH_PATH; no CONTAINS parent."
+    },
+    "THRESHOLD": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "BOOK": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "DISHWASHING_PIT": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "GLOBE": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": null,
+      "source": "llm"
+    },
+    "LAMP_ROOM": {
+      "children": [
+        "LAMP"
+      ],
+      "certainty": "EXPLICIT"
+    },
+    "LAMP": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "STRONG_INFERENCE",
+      "note": null,
+      "source": "llm"
+    },
+    "GREAT_HALL": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "MIRROR": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": null,
+      "source": "llm"
+    },
+    "SCENTED_ROOM": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "CENTRAL_HEPTAGON": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": null,
+      "source": "llm"
+    },
+    "OCTAGON": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "JORGE_CELL": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "MOUNTAIN": {
+      "children": [
+        "FOREST"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No CONTAINS parent; contains FOREST(1)."
+    },
+    "FOREST": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "CANDELABRA": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "FAUCET": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "WORK_DESK": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "ROOM_OF_ARABIC_WORKS": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "SPIRAL_STAIRCASE": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": null,
+      "source": "llm"
+    },
+    "VALLEY": {
+      "children": [
+        "VILLAGE"
+      ],
+      "certainty": "EXPLICIT",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No CONTAINS parent; contains VILLAGE(1)."
+    },
+    "VILLAGE": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": null,
+      "source": "llm"
+    },
+    "OUTBUILDINGS": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "WALL_PASSAGE": {
+      "children": [],
+      "certainty": "AMBIGUOUS"
+    },
+    "PLAQUE": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "EXPLICIT",
+      "note": null,
+      "source": "llm"
+    },
+    "BLIND_ROOM": {
+      "children": [],
+      "certainty": "AMBIGUOUS",
+      "llm_certainty": "STRONG_INFERENCE",
+      "note": null,
+      "source": "llm"
+    },
+    "MARY_STATUE": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "STRONG_INFERENCE",
+      "note": "Relation attested as CHURCH CONTAINS VIRGIN_MARY_STATUE(3).",
+      "source": "llm"
+    },
+    "MILL": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "ADJACENT_TO SOUTH_PATH; no CONTAINS parent.",
+      "source": "llm"
+    },
+    "GRANARY": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "ADJACENT_TO SOUTH_PATH; no CONTAINS parent.",
+      "source": "llm"
+    },
+    "NOVICE_HOUSE": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "ADJACENT_TO SOUTH_PATH; no CONTAINS parent.",
+      "source": "llm"
+    },
+    "MELK_MONASTERY": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No CONTAINS parent; contains LIBRARY(1).",
+      "source": "llm"
+    },
+    "SEVEN_SIDED_HALL": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No CONTAINS parent; contains STAIRCASE(1).",
+      "source": "llm"
+    },
+    "MIRROR_ROOM": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No CONTAINS parent; contains TABLE(2).",
+      "source": "llm"
+    },
+    "ROAD": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No CONTAINS parent; ROAD OPENS_INTO HAYSTACK/CHURCH.",
+      "source": "llm"
+    },
+    "HAYSTACK": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No CONTAINS parent; ROAD OPENS_INTO HAYSTACK; HAYSTACK BELOW ROCKS.",
+      "source": "llm"
+    },
+    "OVEN": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No CONTAINS parent; OVEN BELOW WEST_TOWER. (KITCHEN CONTAINS BREAD_OVEN is a different key.)",
+      "source": "llm"
+    },
+    "FIRST_BLIND_ROOM": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "PRECIPICE": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "RELIC_CONTAINER": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "SAN_SALVATORE_CHURCH": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "PLAIN": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "HILL": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "SLIT": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "LUNETTE": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "CLOISTER": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "LAND": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "ROOMS_ACAIA": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "OLD_CHURCH_DOOR": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "WELL": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "VINEYARD": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "ORCHARD": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "SLOPE": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "SEA": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "CHICKEN_COOP": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "PASSAGE": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "PASSAGE_BETWEEN_ROOMS": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "CAULDRON": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "LAND_MEASURE": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "ALAM": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "GROVE": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "BARRELS": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "OPEN_AREA": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "WOOD_PILE": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "MOUNTAIN_RANGE": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "THRESHING_FLOOR": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "PIG_PENS": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "LANDSCAPE": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "ABBOT_TABLE": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment parent; ABBOT_TABLE ABOVE MONKS_TABLES.",
+      "source": "llm"
+    },
+    "BELL": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "PENTAGONAL_ROOM": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "SNOW": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "CURTAIN": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "TREE": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "SITE_LANDSCAPE": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "GORGE": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "AULA": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "NOVARA_ABBEY": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "MEETING_BUILDING": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "UNDERGROUND_PASSAGE": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "STOOL": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "ADJACENT_ROOM": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "VAT": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "ROOM_S": {
+      "children": [],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "No attested containment relation.",
+      "source": "llm"
+    },
+    "UNKNOWN": {
+      "children": [
+        "YSPANIA_Y_ROOM",
+        "MIRROR_ROOM",
+        "CENTRAL_OPENING",
+        "ABBOT_HOUSE",
+        "MELK_MONASTERY",
+        "SEVEN_SIDED_HALL",
+        "VALLEY",
+        "MOUNTAIN",
+        "FIRST_BLIND_ROOM",
+        "PRECIPICE",
+        "SAN_SALVATORE_CHURCH",
+        "RELIC_CONTAINER",
+        "ROOM_S",
+        "GRANARY",
+        "HAYSTACK",
+        "PLAIN",
+        "HILL",
+        "SLIT",
+        "LUNETTE",
+        "CLOISTER",
+        "LAND",
+        "ROOMS_ACAIA",
+        "OLD_CHURCH_DOOR",
+        "WELL",
+        "MILL",
+        "VINEYARD",
+        "ORCHARD",
+        "SLOPE",
+        "NOVICE_HOUSE",
+        "SEA",
+        "CHICKEN_COOP",
+        "PASSAGE",
+        "PASSAGE_BETWEEN_ROOMS",
+        "CAULDRON",
+        "LAND_MEASURE",
+        "ALAM",
+        "GROVE",
+        "BARRELS",
+        "OPEN_AREA",
+        "WOOD_PILE",
+        "MOUNTAIN_RANGE",
+        "OVEN",
+        "THRESHING_FLOOR",
+        "PIG_PENS",
+        "LANDSCAPE",
+        "ABBOT_TABLE",
+        "BELL",
+        "PENTAGONAL_ROOM",
+        "SNOW",
+        "CURTAIN",
+        "TREE",
+        "SITE_LANDSCAPE",
+        "GORGE",
+        "AULA",
+        "NOVARA_ABBEY",
+        "MEETING_BUILDING",
+        "UNDERGROUND_PASSAGE",
+        "STOOL",
+        "ADJACENT_ROOM",
+        "GUEST_HOUSE",
+        "VAT",
+        "ROAD"
+      ],
+      "certainty": "WEAK_INFERENCE",
+      "llm_certainty": "AMBIGUOUS",
+      "note": "Synthetic grouping for entities with no attested containment parent (only adjacency or vertical relations, or no relation at all).",
+      "source": "llm"
+    }
+  },
+  "orphan_roots": [
+    "STAIRCASE_HALL",
+    "CRYPT",
+    "LAMP_ROOM",
+    "MARY_STATUE",
+    "UNKNOWN"
+  ],
+  "excluded_non_spatial": {
+    "FLOWER_GARDEN": [
+      "no spatial/architectural evidence"
+    ],
+    "FACADE": [
+      "no spatial/architectural evidence"
+    ],
+    "SOUTH_PATH": [
+      "no spatial/architectural evidence"
+    ],
+    "GROUND": [
+      "no spatial/architectural evidence"
+    ],
+    "FIREPLACE": [
+      "no spatial/architectural evidence"
+    ],
+    "BRONZE_TRIPOD": [
+      "no spatial/architectural evidence"
+    ],
+    "TRIPOD_LAMP": [
+      "no spatial/architectural evidence"
+    ],
+    "FORBIDDEN_FLOOR": [
+      "no spatial/architectural evidence"
+    ],
+    "PEW": [
+      "no spatial/architectural evidence"
+    ],
+    "OIL_LAMP": [
+      "no spatial/architectural evidence"
+    ],
+    "BASIN": [
+      "no spatial/architectural evidence"
+    ],
+    "ROOM_5": [
+      "no spatial/architectural evidence"
+    ],
+    "ROOM_U": [
+      "no spatial/architectural evidence"
+    ],
+    "ROOM_E": [
+      "no spatial/architectural evidence"
+    ],
+    "ROOMS_IUDAEA_AEGYPTUS": [
+      "no spatial/architectural evidence"
+    ],
+    "OLD_CHURCH": [
+      "no spatial/architectural evidence"
+    ],
+    "CASK": [
+      "no spatial/architectural evidence"
+    ],
+    "ROOF": [
+      "no spatial/architectural evidence"
+    ],
+    "EAVES": [
+      "no spatial/architectural evidence"
+    ],
+    "EXECUTION_ROUTE": [
+      "no spatial/architectural evidence"
+    ]
+  },
+  "unsupported": [],
+  "entity_counts": {
+    "ABBEY": 299,
+    "AEDIFICIUM": 169,
+    "BATH": 16,
+    "CHURCH": 325,
+    "INFIRMARY": 104,
+    "COURTYARD": 54,
+    "SHEEPFOLDS": 2,
+    "DORMITORY": 35,
+    "STABLES": 38,
+    "MEETING_HALL": 44,
+    "SMITHY": 1,
+    "LIBRARY": 441,
+    "MELK_MONASTERY": 10,
+    "CELL": 70,
+    "GARDEN": 43,
+    "CELLAR": 31,
+    "VILLAGE": 6,
+    "WALL": 55,
+    "TOWER": 18,
+    "ROAD": 18,
+    "HAYSTACK": 7,
+    "SLOPE": 3,
+    "PINES": 1,
+    "VEGETATION": 1,
+    "THORNS": 1,
+    "SOUTH_TOWER": 20,
+    "PRECIPICE": 12,
+    "GATE": 32,
+    "HERB_STORE": 1,
+    "CEMETERY": 41,
+    "WEST_TOWER": 12,
+    "NORTH_TOWER": 7,
+    "CORRIDOR": 9,
+    "ABBOT_HOUSE": 13,
+    "GUEST_HOUSE": 24,
+    "SOUTH_WALL": 1,
+    "FARMS": 1,
+    "MILL": 4,
+    "OIL_PRESS": 1,
+    "GRANARY": 8,
+    "NOVICE_HOUSE": 3,
+    "SCRIPTORIUM": 172,
+    "LABORATORY": 22,
+    "MOUNTAIN_RANGE": 2,
+    "SEA": 3,
+    "MOUNTAIN": 5,
+    "FOREST": 1,
+    "REFECTORY": 77,
+    "KITCHEN": 163,
+    "CHOIR": 14,
+    "OVEN": 2,
+    "THRESHING_FLOOR": 2,
+    "OUTBUILDINGS": 1,
+    "OX_STABLES": 1,
+    "CHICKEN_COOP": 3,
+    "SHEEP_PENS": 1,
+    "PIG_PENS": 2,
+    "EAST_TOWER": 17,
+    "STAIRCASE": 31,
+    "WINDOW": 18,
+    "TABLE": 14,
+    "LECTERN": 1,
+    "LANDSCAPE": 2,
+    "PARAPET_WALL": 4,
+    "LATRINES": 1,
+    "WORKSHOP": 33,
+    "CRYPT": 26,
+    "OLIVE_GROVE": 1,
+    "BEND": 1,
+    "PINE_TREES": 1,
+    "ROCKS": 1,
+    "PLAIN": 6,
+    "MOUNTAIN_SLOPE": 1,
+    "ABBOT_TABLE": 2,
+    "PULPIT": 1,
+    "FAUCET": 1,
+    "NORTH_GATE": 3,
+    "NAVE": 2,
+    "APSE": 3,
+    "ALTAR": 5,
+    "CLOISTER": 5,
+    "VAT": 20,
+    "STIES": 1,
+    "COLUMN": 3,
+    "HILL": 6,
+    "HEARTH": 4,
+    "DOOR": 14,
+    "VALLEY": 7,
+    "FURNACE": 1,
+    "CHIMNEY": 1,
+    "OCTAGONAL_COURTYARD": 1,
+    "BOOK_STAND": 1,
+    "VINEYARD": 4,
+    "CHAIR": 1,
+    "OAK_TREE": 1,
+    "CHAPEL": 17,
+    "VERCELLI_LANDS": 1,
+    "NOVARA_MOUNTAINS": 1,
+    "BED": 1,
+    "BELL": 2,
+    "PORCH": 1,
+    "SPIRAL_STAIRCASE": 9,
+    "BOOK": 1,
+    "BREAD_OVEN": 1,
+    "PASSAGE": 3,
+    "PASSAGE_BETWEEN_ROOMS": 3,
+    "BONE_CEMETERY": 1,
+    "ROOM_WITH_TABLE": 1,
+    "EAST_STAIRCASE": 1,
+    "SEVEN_SIDED_HALL": 12,
+    "ROOM": 36,
+    "PENTAGONAL_ROOM": 2,
+    "MIRROR_ROOM": 14,
+    "CENTRAL_OPENING": 8,
+    "LAMP": 6,
+    "CUPBOARD": 2,
+    "SLIT": 6,
+    "NORTH_DOOR": 1,
+    "SNOW": 2,
+    "ENTRANCE_TOWER": 1,
+    "VIRGIN_MARY_STATUE": 1,
+    "MARY_STATUE": 5,
+    "MIRROR": 6,
+    "THRESHOLD": 1,
+    "CURTAIN": 2,
+    "CAULDRON": 3,
+    "FOUNTAIN": 1,
+    "CLOTHING": 1,
+    "LAND": 5,
+    "LAND_MEASURE": 3,
+    "NORTHERN_LANDS": 1,
+    "HUT": 1,
+    "TREE": 2,
+    "SITE_LANDSCAPE": 2,
+    "MEADOW": 1,
+    "STRAW_MATTRESS": 1,
+    "MOUNTAIN_SLOPES": 1,
+    "PENINSULA": 1,
+    "HIGH_PLATEAU": 1,
+    "MOUNTAIN_PEAK": 1,
+    "MOUNTAIN_TERRACE": 1,
+    "GORGE": 2,
+    "STRAITS": 1,
+    "HILLSIDE": 1,
+    "THICKET": 1,
+    "ORCHARD": 4,
+    "INNER_OCTAGON": 1,
+    "CENTRAL_HEPTAGON": 5,
+    "FIRST_BLIND_ROOM": 13,
+    "ROOM_Y": 1,
+    "ROOM_P": 1,
+    "ROOM_S": 8,
+    "ROOM_T": 1,
+    "FINIS_AFRICAE": 24,
+    "ROOM_BEHIND_MIRROR": 1,
+    "ROOMS_ANGLIA_GERMANI": 1,
+    "ROOMS_GALLIA": 1,
+    "ROOMS_HIBERNIA": 1,
+    "ROOMS_ROMA_YSPANIA": 1,
+    "ROOMS_LEONESE_AEGYPTUS": 1,
+    "ROOMS_IUDAEA_FONS_ADAE": 1,
+    "ROOMS_ACAIA": 5,
+    "ENTRANCE_DOOR": 1,
+    "STAINED_GLASS_WINDOW": 1,
+    "OLD_CHURCH_DOOR": 5,
+    "LUNETTE": 6,
+    "AULA": 2,
+    "ALAM": 3,
+    "GLOBE": 8,
+    "NOVARA_ABBEY": 2,
+    "CASALE_ABBEY": 1,
+    "HALL": 8,
+    "TORTURE_ROOM": 1,
+    "SHEEPFOLD": 1,
+    "GROVE": 3,
+    "TRIPOD": 1,
+    "VILLAGES": 1,
+    "TREASURY": 16,
+    "RELIC_CONTAINER": 10,
+    "LOW_PASSAGE": 1,
+    "WELL": 5,
+    "LAKE": 1,
+    "BARRELS": 3,
+    "MOUND": 1,
+    "PIPE": 1,
+    "BONE_ROOM": 1,
+    "TREASURY_CELLAR": 1,
+    "MEETING_BUILDING": 2,
+    "UNDERGROUND_PASSAGE": 2,
+    "NICHE": 1,
+    "PLAQUE": 2,
+    "BLIND_ROOM": 2,
+    "STOOL": 2,
+    "ADJACENT_ROOM": 2,
+    "BOOK_CABINET": 5,
+    "YSPANIA_Y_ROOM": 5,
+    "BELL_TOWER": 3,
+    "LODGINGS": 1,
+    "SERVANT_QUARTERS": 2,
+    "WATER_RESERVOIRS": 2,
+    "LARGE_ROOM": 1,
+    "OPEN_AREA": 3,
+    "CHAPTER_HALL": 1,
+    "CAPITAL": 1,
+    "BOOKCASE": 1,
+    "ABBAYE_DE_LA_SOURCE": 2,
+    "SAN_SALVATORE_CHURCH": 10,
+    "PRECONSUL_CORNER": 1,
+    "FONDAMENTI_DI_SANTA_LIPERATA": 1,
+    "SAN_GIOVANNI": 1,
+    "OLD_MARKET": 1,
+    "HOLY_CROSS": 1,
+    "GATE_OF_JUSTICE": 2,
+    "MEADOW_OF_JUSTICE": 1,
+    "WOOD_PILE": 3,
+    "HORSEMEN_RING": 1,
+    "STAKE": 1,
+    "MONASTERY": 1,
+    "PIGSTY": 2,
+    "FOSSANOVA_ABBEY": 2,
+    "PREACHERS_MONASTERY": 1,
+    "LATRINE": 1,
+    "DUNGHILL": 1
+  }
+}

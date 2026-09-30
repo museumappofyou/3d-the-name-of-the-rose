@@ -1,0 +1,59 @@
+{
+  "total_paragraphs": 3520,
+  "novel_paragraphs": 2885,
+  "paratext_paragraphs": 635,
+  "paratext_included": false,
+  "paragraphs_covered": 2300,
+  "novel_paragraphs_covered": 2300,
+  "coverage_ratio": 0.7972,
+  "paragraphs_with_candidates": 119,
+  "zero_claim_chunks": [
+    "chunk_0012",
+    "chunk_0045",
+    "chunk_0047",
+    "chunk_0048",
+    "chunk_0054",
+    "chunk_0057",
+    "chunk_0083",
+    "chunk_0115",
+    "chunk_0126"
+  ],
+  "zero_claim_chunk_coverage": {
+    "chunk_0012": {
+      "paragraphs": 11,
+      "covered": 6
+    },
+    "chunk_0045": {
+      "paragraphs": 10,
+      "covered": 0
+    },
+    "chunk_0047": {
+      "paragraphs": 34,
+      "covered": 0
+    },
+    "chunk_0048": {
+      "paragraphs": 30,
+      "covered": 0
+    },
+    "chunk_0054": {
+      "paragraphs": 17,
+      "covered": 0
+    },
+    "chunk_0057": {
+      "paragraphs": 10,
+      "covered": 7
+    },
+    "chunk_0083": {
+      "paragraphs": 57,
+      "covered": 23
+    },
+    "chunk_0115": {
+      "paragraphs": 11,
+      "covered": 6
+    },
+    "chunk_0126": {
+      "paragraphs": 1,
+      "covered": 1
+    }
+  }
+}

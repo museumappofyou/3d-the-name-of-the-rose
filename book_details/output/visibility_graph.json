@@ -1,0 +1,1189 @@
+{
+  "edge_count": 90,
+  "edges": [
+    {
+      "observer_location": "ABBOT_HOUSE_HALL",
+      "observed": "AEDIFICIUM",
+      "kind": "overlooks",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002506",
+        "claim_002508"
+      ],
+      "evidence": [
+        "penceresinden dingin ve esintili günlerde manastır kilisesinin damı üzerinden Aedificium'un çizgileri görülebiliyordu",
+        "Bir pencerenin önünde ayakta duran Başrahip tam o sırada onu seyrediyordu"
+      ],
+      "support": 2
+    },
+    {
+      "observer_location": "CELL",
+      "observed": "AEDIFICIUM",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000187",
+        "claim_000188"
+      ],
+      "evidence": [
+        "hücrenin pencerelerinden seçilebilen",
+        "hücrenin pencerelerinden seçilebilen"
+      ],
+      "support": 2
+    },
+    {
+      "observer_location": "COURTYARD",
+      "observed": "AEDIFICIUM",
+      "kind": "sees",
+      "certainty": "STRONG_INFERENCE",
+      "claim_ids": [
+        "claim_000715",
+        "claim_002543"
+      ],
+      "evidence": [
+        "Benno, ara ara Aedificium’a doğru bakarak, söze William’ın başlamasını bekliyordu.",
+        "Aedificium'la avlu arasındaki alan olağanüstü canlıydı"
+      ],
+      "support": 2
+    },
+    {
+      "observer_location": "KITCHEN",
+      "observed": "CENTRAL_OPENING",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001387",
+        "claim_001408"
+      ],
+      "evidence": [
+        "ortadaki açıklığın, mutfaktan ve yazı salonundan görünen açıklığın",
+        "mutfaktan ve yazı salonundan görünen açıklık"
+      ],
+      "support": 2
+    },
+    {
+      "observer_location": "LIBRARY",
+      "observed": "WINDOW",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001220",
+        "claim_001221"
+      ],
+      "evidence": [
+        "Ama gece hiçbir ayrım görülmüyor",
+        "ışığın farklılığı hangi pencerelerin dışarıya, hangilerinin içeriye baktığını gösterirdi bize"
+      ],
+      "support": 2
+    },
+    {
+      "observer_location": "SCRIPTORIUM",
+      "observed": "CHURCH",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000444",
+        "claim_000451"
+      ],
+      "evidence": [
+        "Eliyle pencereden dışarıyı, kiliseyi gösterdi",
+        "Eliyle pencereden dışarıyı, kiliseyi gösterdi"
+      ],
+      "support": 2
+    },
+    {
+      "observer_location": "SCRIPTORIUM",
+      "observed": "CENTRAL_OPENING",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001388",
+        "claim_001409"
+      ],
+      "evidence": [
+        "mutfaktan ve yazı salonundan görünen açıklığın",
+        "mutfaktan ve yazı salonundan görünen açıklık"
+      ],
+      "support": 2
+    },
+    {
+      "observer_location": "ABBEY",
+      "observed": "CEMETERY",
+      "kind": "visible_from",
+      "certainty": "WEAK_INFERENCE",
+      "claim_ids": [
+        "claim_000178"
+      ],
+      "evidence": [
+        "Belki de ayırdına varmışsınızdır; mezarlık, kilisenin kuzey yanıyla Aedificium ve sebze bahçesi arasında"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "ABBEY",
+      "observed": null,
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001796"
+      ],
+      "evidence": [
+        "o siste kimsenin kimseyi göremeyeceği"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "ABBEY",
+      "observed": "AEDIFICIUM_SOUTH_WING",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002825"
+      ],
+      "evidence": [
+        "olağandışı bir parıltının görüldüğü pencerelerini gösteriyordum"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "ABBEY",
+      "observed": "VALLEY",
+      "kind": "overlooks",
+      "certainty": "WEAK_INFERENCE",
+      "claim_ids": [
+        "claim_003093"
+      ],
+      "evidence": [
+        "tüm manastır bakıp gülsün"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "ABBEY_APPROACH",
+      "observed": "WEST_TOWER",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000107"
+      ],
+      "evidence": [
+        "Aedificium’un batı kulesi önden, manastıra gelen ziyaretçilerin gözüne çarpıyordu"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "AEDIFICIUM_UPPER_FLOORS",
+      "observed": "COURTYARD",
+      "kind": "overlooks",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000357"
+      ],
+      "evidence": [
+        "her katta, yapının dış yüzünde olduğu gibi bu avluya bakan geniş pencereler vardı"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "BATH",
+      "observed": "TUB",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001593"
+      ],
+      "evidence": [
+        "yukarıdan ışık vurunca, dipte cansız, çıplak bir insan bedeni gördük"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "BEHIND_HALL_DOOR",
+      "observed": "ABBOT_HOUSE_HALL",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002514"
+      ],
+      "evidence": [
+        "aralık bıraktığım kapının arkasına saklandım"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "BELOW",
+      "observed": "AEDIFICIUM",
+      "kind": "overlooks",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000047"
+      ],
+      "evidence": [
+        "Aşağıdan bakıldığında, belli noktalarda kayalık, rengi ve dokusu değişmeksizin, gökyüzüne doğru uzuyormuş ve bir noktada burç ve kuleye dönüşüyormuş gibi görünüyordu"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "CELL",
+      "observed": "PLAIN",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002027"
+      ],
+      "evidence": [
+        "Hücrenin penceresinden dışarı baktım; ama hiçbir şey göremedim"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "CEMETERY",
+      "observed": "SKY",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001267"
+      ],
+      "evidence": [
+        "Güzel gece havası tanrısal bir şerbet gibiydi. Çevremizde yıldızlar parlıyordu"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "CHOIR",
+      "observed": "NAVE",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000523"
+      ],
+      "evidence": [
+        "özellikle koro yerinde hâlâ görülebilen olağanüstü mavi; ... nefe bir cennet ışığı yansıtıyor"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "CHURCH",
+      "observed": "GATE",
+      "kind": "visible_from",
+      "certainty": "WEAK_INFERENCE",
+      "claim_ids": [
+        "claim_002484"
+      ],
+      "evidence": [
+        "Minoritlerin kervanı kapıya doğru ilerlerken, William’la kilisenin önünde kaldık"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "CHURCH_ENTRANCE",
+      "observed": "DOOR",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000232"
+      ],
+      "evidence": [
+        "gölgede belli belirsiz seçilen asıl kapıya"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "CHURCH_ENTRANCE",
+      "observed": "FACADE",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000236"
+      ],
+      "evidence": [
+        "ışık, alınlığı aydınlatmaksızın yapının önyüzüne eğik olarak düşüyordu"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "COLUMN",
+      "observed": "CHAPEL",
+      "kind": "overlooks",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002593"
+      ],
+      "evidence": [
+        "oradan kafataslarının bulunduğu şapeli gözetleyebiliyorduk"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "COURTYARD",
+      "observed": "SCRIPTORIUM_WINDOW",
+      "kind": "visible_from",
+      "certainty": "STRONG_INFERENCE",
+      "claim_ids": [
+        "claim_001080"
+      ],
+      "evidence": [
+        "avluda, pencereden ışık sızdığını görecek birinin bulunmamasıydı"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "COURTYARD",
+      "observed": "DORMITORY",
+      "kind": "sees",
+      "certainty": "STRONG_INFERENCE",
+      "claim_ids": [
+        "claim_001653"
+      ],
+      "evidence": [
+        "O gece Berengar’ı gördüm -o muydu, değildi miydi, yemin edemem, çünkü uzaktan gördüm."
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "COURTYARD",
+      "observed": "torchlight",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001980"
+      ],
+      "evidence": [
+        "avluda meşalelerin parıltısını gördük"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "COURTYARD",
+      "observed": "archers holding Salvatore and a woman",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001985"
+      ],
+      "evidence": [
+        "Okçuların ... Salvatore'yle ağlamakta olan bir kadını sımsıkı tutmakta olduklarını gördük"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "CRYPT",
+      "observed": "CRYPT_CONTENTS",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002467"
+      ],
+      "evidence": [
+        "ben burada durmuş bunun sonucunu seyrediyordum"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "DORMITORY",
+      "observed": "SUN_AT_SUNRISE",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000127"
+      ],
+      "evidence": [
+        "güneş, sabah doğarken yatakhanelerdeki rahiplerle ahırlardaki hayvanları doğrudan uyandırabiliyordu"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "FINIS_AFRICAE",
+      "observed": "VAULT",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002685"
+      ],
+      "evidence": [
+        "Yüksekte tuttuğum lamba önce tonozu aydınlattı"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "GATE",
+      "observed": "WOOD_PILE",
+      "kind": "visible_from",
+      "certainty": "STRONG_INFERENCE",
+      "claim_ids": [
+        "claim_003053"
+      ],
+      "evidence": [
+        "karşımızda odun yığını ya da orada dedikleri gibi, “kulübe” göründü"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "GOAT_PATH",
+      "observed": "ABBEY",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000040"
+      ],
+      "evidence": [
+        "Dağın çevresinden dolanan dik keçi yolunu güçlükle tırmanırken manastırı gördüm"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "HALLUCINATION_ROOM",
+      "observed": "LIGHT_SOURCE",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001841"
+      ],
+      "evidence": [
+        "gene uzaktan ışığı gördük"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "HOLY_CROSS",
+      "observed": "STEPS",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_003048"
+      ],
+      "evidence": [
+        "basamaklarda kendi tarikatından rahiplerin"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "KITCHEN",
+      "observed": "SKY",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002976"
+      ],
+      "evidence": [
+        "mutfaktan gözalabildiğine uzakta ... üst katların tabanıyla çatının arasından açık gökyüzü görülüyordu"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "LABORATORY",
+      "observed": "DOOR",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002155"
+      ],
+      "evidence": [
+        "ben kapının yanındaydım; içeri girenleri gördüm"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "LAMP_ROOM",
+      "observed": "CEILING",
+      "kind": "sees",
+      "certainty": "AMBIGUOUS",
+      "claim_ids": [
+        "claim_001235"
+      ],
+      "evidence": [
+        "odanın tavanının eğilip üstüme doğru indiğini gördüm"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "LIBRARY",
+      "observed": "LAST_ROOM",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001227"
+      ],
+      "evidence": [
+        "sonuncu odaya doğru bir aydınlığın ayrımına vardık"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "LIBRARY",
+      "observed": "LAMP_ROOM",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001231"
+      ],
+      "evidence": [
+        "oldukça güçsüz bir ışığın sızdığı odanın eşiğine vardım"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "LIBRARY",
+      "observed": "SCRIPTORIUM",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002799"
+      ],
+      "evidence": [
+        "Aşağıda ay ışığı yazı salonunu belli belirsiz aydınlatıyordu"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "LIBRARY",
+      "observed": "VOID",
+      "kind": "overlooks",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002985"
+      ],
+      "evidence": [
+        "aşağıya, boşluğa bakan bir tür dehlizden başka bir şey değildi"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "MEETING_HALL_ENTRANCE",
+      "observed": "MEETING_HALL_BENCHES",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002070"
+      ],
+      "evidence": [
+        "İçeri girer girmez, iki heyetin tüm üyelerinin ... oturduklarını gördüm"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "MIRROR_ROOM",
+      "observed": "self",
+      "kind": "distorted_reflection",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001190"
+      ],
+      "evidence": [
+        "Lambanın şimdi daha iyi aydınlattığı oluklu cam bir levha üstünde"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "MIRROR_ROOM",
+      "observed": "ROOM",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001202"
+      ],
+      "evidence": [
+        "Önümüzde bir sıra üç ya da dört oda gördük; sonuncu odaya doğru bir aydınlığın ayrımına vardık"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "MIRROR_ROOM",
+      "observed": "INSCRIPTION",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002664"
+      ],
+      "evidence": [
+        "Lambaları kaldırıp çerçevenin üstündeki ayetleri aydınlattık"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "MOUNTAIN_ROUTE",
+      "observed": "SEA",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001737"
+      ],
+      "evidence": [
+        "bazı dönemeçlerden on mil ya da daha az uzaklıkta deniz hâlâ seçilebiliyordu"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "MOUNTAIN_ROUTE",
+      "observed": "FAR_COAST",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001742"
+      ],
+      "evidence": [
+        "boğazların uzak kıyılarına doğru açıldığı yerlerde bile ufuk yoktu"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "MOUNTAIN_SLOPES",
+      "observed": "MOUNTAIN_PEAK",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001735"
+      ],
+      "evidence": [
+        "dönüp dağın doruğuna baktığım zaman artık hiçbir şey göremedim"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "MOUNTAIN_SLOPES",
+      "observed": "AEDIFICIUM",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001736"
+      ],
+      "evidence": [
+        "Yamacın yarısından yukarıya dek, dağ doruğu, yüksek düzlük, Aedificium, her şey sisler arasında yitip gidiyordu"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "NAVE",
+      "observed": "APSE",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000606"
+      ],
+      "evidence": [
+        "Malachi’nin karanlıkta, yandaki apsisten çıktığını farkettik."
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "NAVE",
+      "observed": "ALTAR",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001017"
+      ],
+      "evidence": [
+        "Töreni nefte, üçüncü sunağı gözetleyerek izledik"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": null,
+      "observed": "GARDEN",
+      "kind": "visible_from",
+      "certainty": "AMBIGUOUS",
+      "claim_ids": [
+        "claim_000341"
+      ],
+      "evidence": [
+        "içeri girerken güzel bahçenin farkına vardığını"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": null,
+      "observed": "AEDIFICIUM",
+      "kind": "visible_from",
+      "certainty": "STRONG_INFERENCE",
+      "claim_ids": [
+        "claim_000529"
+      ],
+      "evidence": [
+        "başıyla Aedificium'u göstererek"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": null,
+      "observed": "light from AEDIFICIUM windows",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000537"
+      ],
+      "evidence": [
+        "Camlardan donuk bir ışık sızar"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": null,
+      "observed": "VENANTIUS_DESK",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000834"
+      ],
+      "evidence": [
+        "masaların en çok göz konanlarından biriydi"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": null,
+      "observed": "LIGHT_SOURCE",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001856"
+      ],
+      "evidence": [
+        "gene uzaktan ışığı gördük"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": null,
+      "observed": "faint shafts of light from the kitchen direction",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001967"
+      ],
+      "evidence": [
+        "belli belirsiz ışık çıkıntıları gördük"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": null,
+      "observed": "BATHHOUSE",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002094"
+      ],
+      "evidence": [
+        "gözümü ne hamamdan ayırıyorum, ne de hastaneden"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": null,
+      "observed": "INFIRMARY",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002095"
+      ],
+      "evidence": [
+        "gözümü ne hamamdan ayırıyorum, ne de hastaneden"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": null,
+      "observed": "STABLES",
+      "kind": "overlooks",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002733"
+      ],
+      "evidence": [
+        "bu akşam ahırları gözetlemekte direndim; orada, salt bir rastlantı sonucu, Adso bana finis Africae'ye girmenin ipucunu verdi."
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "OUTSIDE",
+      "observed": "EAST_TOWER; SOUTH_TOWER; WEST_TOWER; WALL",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001397"
+      ],
+      "evidence": [
+        "ve onları birleştiren duvarları uzaktan inceledik"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "OUTSIDE",
+      "observed": "HOSPITAL",
+      "kind": "visible_from",
+      "certainty": "STRONG_INFERENCE",
+      "claim_ids": [
+        "claim_002101"
+      ],
+      "evidence": [
+        "Ama hiç kimse dışarıdan bakmama engel olamaz."
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "OUTSIDE",
+      "observed": "WINDOWS_OF_SOUTH_WING",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002814"
+      ],
+      "evidence": [
+        "kaymaktaşından pervazlarının arasından olağandışı bir parıltının görüldüğü pencerelerini gösteriyordum"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "OUTSIDE",
+      "observed": "WINDOWS",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002819"
+      ],
+      "evidence": [
+        "Başlarını kaldırıp pencerelere bahan ilk rahipler korku sözcükleri mırıldanarak haç çıkardılar"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "OUTSIDE_ABBEY",
+      "observed": "MINORITE_DELEGATION",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001744"
+      ],
+      "evidence": [
+        "benim gördüğüm Minorit rahipler heyetinden"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "OUTSIDE_ABBEY",
+      "observed": "CHURCH, AEDIFICIUM, MEETING_HALL",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002033"
+      ],
+      "evidence": [
+        "yalnızca belli başlı birkaç yapı, kilise, Aedificium, toplantı salonu uzaktan seçilebiliyordu; geri kalan yapılarsa ancak birkaç adım yakından görülebiliyordu"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "OUTSIDE_MEETING_HALL",
+      "observed": "MEETING_HALL",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002281"
+      ],
+      "evidence": [
+        "toplantı salonunda olup bitenleri pencere ve yarıklardan izlemek"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "REFECTORY",
+      "observed": "moonlight through windows",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001498"
+      ],
+      "evidence": [
+        "Camlardan, o gece alabildiğine parlak olan ayın ışınları giriyordu içeri"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "ROOM",
+      "observed": "outside",
+      "kind": "light_filter",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001177"
+      ],
+      "evidence": [
+        "Gündüzleri güzel bir ışık sızdırıyor içeri, geceleriyse ayışığını bile geçirmiyor"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "ROOM",
+      "observed": "WINDOW",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001200"
+      ],
+      "evidence": [
+        "Gündüz olsaydı, ışığın farklılığı hangi pencerelerin dışarıya, hangilerinin içeriye baktığını gösterirdi bize"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "ROOM_NEAR_KITCHEN",
+      "observed": "KITCHEN",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001107"
+      ],
+      "evidence": [
+        "Mutfaktan doğru bir ışığın yaklaştığını gördüm"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "ROOM_T",
+      "observed": "INNER_OCTAGON",
+      "kind": "overlooks",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001893"
+      ],
+      "evidence": [
+        "iç sekizgene bakan bir penceresi olan bir T odası"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "ROOM_Y",
+      "observed": "OCTAGON",
+      "kind": "overlooks",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001881"
+      ],
+      "evidence": [
+        "sekizgende bir penceresi olan Y odası"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "SAN_SALVATORE_CHURCH_WINDOW",
+      "observed": "SAN_SALVATORE_CHURCH_INTERIOR",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_003031"
+      ],
+      "evidence": [
+        "içeride olup bitenleri görüp işitiyor"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "SCRIPTORIUM",
+      "observed": "outside",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000450"
+      ],
+      "evidence": [
+        "Eliyle pencereden dışarıyı, kiliseyi gösterdi"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "SCRIPTORIUM",
+      "observed": "LIBRARY_ENTRANCE",
+      "kind": "overlooks",
+      "certainty": "WEAK_INFERENCE",
+      "claim_ids": [
+        "claim_000831"
+      ],
+      "evidence": [
+        "rahipleri o bölümü merak etmekten caydırmak ve kütüphanecinin kitaplığın girişini daha kolay gözetlemesini sağlayacak biçimde akıllıca bir hesapla"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "SCRIPTORIUM",
+      "observed": "OCTAGONAL_COURTYARD",
+      "kind": "overlooks",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000837"
+      ],
+      "evidence": [
+        "manastırın ortasındaki sekizgene açılan bir pencere"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "SCRIPTORIUM",
+      "observed": "SCRIPTORIUM",
+      "kind": "overlooks",
+      "certainty": "STRONG_INFERENCE",
+      "claim_ids": [
+        "claim_000857"
+      ],
+      "evidence": [
+        "ocağın yanında bir iskemleye oturmuş, salonda olup biten her şeyi izliyormuş gibi görünüyordu"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "SCRIPTORIUM",
+      "observed": "PACIFICO",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001303"
+      ],
+      "evidence": [
+        "az ötemde, Tivoli'li Pacifico'nun ... eski bir cildi karıştırdığını görüyordum"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "SCRIPTORIUM",
+      "observed": "BERENGAR",
+      "kind": "sees",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001686"
+      ],
+      "evidence": [
+        "Önceki gün yazı salonunda burnunda görmüştüm"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "STABLES",
+      "observed": "SUN_AT_SUNRISE",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000128"
+      ],
+      "evidence": [
+        "ahırlardaki hayvanları doğrudan uyandırabiliyordu"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "STABLES",
+      "observed": "OUTSIDE_LANDSCAPE",
+      "kind": "overlooks",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000501"
+      ],
+      "evidence": [
+        "Ahırların arkasında dış duvarın daha alçak olduğunu, üstünden bakılınca arkasının görülebileceğini farkettik"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "SUN",
+      "observed": "ALTAR",
+      "kind": "illuminates",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_001176"
+      ],
+      "evidence": [
+        "Tansökümünde güneş sunağı aydınlatıyor"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "WINDOW",
+      "observed": "INFIRMARY",
+      "kind": "overlooks",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000389"
+      ],
+      "evidence": [
+        "hastaneye bakan pencereler de (birinci katta, uçuruma bakan tek pencereler)"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "WINDOW",
+      "observed": "PRECIPICE",
+      "kind": "overlooks",
+      "certainty": "STRONG_INFERENCE",
+      "claim_ids": [
+        "claim_002438"
+      ],
+      "evidence": [
+        "aşağıya, uçurumun dibine düşebileceğini söyleyip uyardı onu"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "YSPANIA_Y_ROOM",
+      "observed": "ADJACENT_ROOMS",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002797"
+      ],
+      "evidence": [
+        "çünkü yangın bitişik odaları da aydınlatıyordu"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "above (unspecified high point)",
+      "observed": "HAYSTACK",
+      "kind": "overlooks",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_000555"
+      ],
+      "evidence": [
+        "Bu akşam yukarıdan baktığımızda, saman yığınının üstünü örten karın çok az olduğunu görmüştük"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "near the church's western wall",
+      "observed": "SIDE_DOOR and CEMETERY and route to AEDIFICIUM",
+      "kind": "visible_from",
+      "certainty": "STRONG_INFERENCE",
+      "claim_ids": [
+        "claim_000750"
+      ],
+      "evidence": [
+        "Kilisenin batı duvarı boyunca yürürken, Berengar'ın yan kapıdan çıkıp mezarlığın içinden geçerek Aedificium'a yöneldiğini farkettik"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "outside",
+      "observed": "LIBRARY",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002097"
+      ],
+      "evidence": [
+        "hiç kimse dışarıdan bakmama engel olamaz"
+      ],
+      "support": 1
+    },
+    {
+      "observer_location": "outside STABLES",
+      "observed": "STABLES interior",
+      "kind": "visible_from",
+      "certainty": "EXPLICIT",
+      "claim_ids": [
+        "claim_002604"
+      ],
+      "evidence": [
+        "arasından içerisinin görülebileceği büyük bir madeni parmaklık"
+      ],
+      "support": 1
+    }
+  ]
+}
