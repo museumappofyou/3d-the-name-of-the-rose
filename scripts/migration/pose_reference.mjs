@@ -4,7 +4,7 @@
 // Skeleton3D/AnimationPlayer and must agree within tolerance.
 //
 //   node scripts/migration/pose_reference.mjs alinardo [more ids...]
-// -> migration/data/manifests/pose_reference_<id>.json
+// -> shared/data/manifests/pose_reference_<id>.json
 import { NodeIO } from '@gltf-transform/core';
 import { ALL_EXTENSIONS } from '@gltf-transform/extensions';
 import fs from 'fs';
@@ -16,7 +16,7 @@ const io = new NodeIO().registerExtensions(ALL_EXTENSIONS);
 const BONES = ['pelvis', 'spine_03', 'head', 'hand_l', 'hand_r', 'foot_l', 'foot_r', 'ball_l', 'ball_r', 'calf_l', 'thigh_r'];
 
 for (const id of process.argv.slice(2).length ? process.argv.slice(2) : ['alinardo']) {
-  const file = path.join(ROOT, `migration/godot/assets/characters/${id}/${id}.glb`);
+  const file = path.join(ROOT, `native/assets/characters/${id}/${id}.glb`);
   const doc = await io.read(file);
   const root = doc.getRoot();
   const person = root.listScenes()[0].listChildren().find(n => n.getName() === id);
@@ -45,7 +45,7 @@ for (const id of process.argv.slice(2).length ? process.argv.slice(2) : ['alinar
       out.clips[a.getName()].samples[t] = Object.fromEntries(BONES.map(b => [b, world.get(b).slice(12, 15).map(x => +x.toFixed(5))]));
     }
   }
-  const dst = path.join(ROOT, `migration/data/manifests/pose_reference_${id}.json`);
+  const dst = path.join(ROOT, `shared/data/manifests/pose_reference_${id}.json`);
   fs.writeFileSync(dst, JSON.stringify(out, null, 1) + '\n');
   console.log('wrote', path.relative(ROOT, dst), Object.keys(out.clips).length, 'clips');
 }

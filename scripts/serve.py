@@ -6,23 +6,37 @@ from urllib.parse import unquote, urlsplit
 import argparse
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def app_file(url):
+    """Keep public URLs stable while exposing only the two runtime directories."""
+    path = unquote(urlsplit(url).path)
+    if '..' in Path(path).parts or '\\' in path:
+        return None
+    if path in ('/', '/index.html'):
+        return ROOT / 'web/index.html'
+    for prefix, directory in [('/src/', 'web/src'), ('/lib/', 'web/lib'), ('/assets/', 'shared/assets')]:
+        if path.startswith(prefix):
+            base = (ROOT / directory).resolve()
+            target = (base / path[len(prefix):]).resolve()
+            if base not in target.parents or not target.is_file():
+                return None
+            return target
+    return None
+
+
 class AppHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(ROOT), **kwargs)
-    def do_GET(self):
-        path = unquote(urlsplit(self.path).path)
-        allowed = path in ('/', '/index.html') or path.startswith(('/src/', '/lib/', '/assets/'))
-        relative = Path(path.lstrip('/'))
-        if not allowed or '..' in relative.parts or (ROOT / relative).is_dir() and path != '/':
+    def translate_path(self, path):
+        target = app_file(path)
+        return str(target) if target is not None else str(ROOT / '.not-public')
+
+    def send_head(self):
+        if app_file(self.path) is None:
             self.send_error(404)
-            return
-        super().do_GET()
-    def do_HEAD(self):
-        path = unquote(urlsplit(self.path).path)
-        if not (path in ('/', '/index.html') or path.startswith(('/src/', '/lib/', '/assets/'))) or '..' in Path(path).parts:
-            self.send_error(404)
-            return
-        super().do_HEAD()
+            return None
+        return super().send_head()
     def list_directory(self, path):
         self.send_error(404)
         return None

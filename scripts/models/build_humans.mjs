@@ -1,11 +1,11 @@
 // Build the web derivatives for the abbey's people from Mesh2Motion's CC0
 // assets (github.com/Mesh2Motion/mesh2motion-app, LICENSE-CC0.MD):
-//   assets/models/human_anims.glb  — the 66-joint skeleton and the clips we
+//   shared/assets/models/human_anims.glb  — the 66-joint skeleton and the clips we
 //       use, from human-base / human-addon / human-mocap-animations.glb
 //       (Quaternius Universal Animation Library and CMU mocap retargets)
-//   assets/models/head_<id>.glb    — photoscanned CC0 characters by
+//   shared/assets/models/head_<id>.glb    — photoscanned CC0 characters by
 //       elbolilloduro; only the head, neck and hands are drawn in the abbey
-//       (the habit is made in src/world/people/habit.js), textures as JPEG
+//       (the habit is made in web/src/world/people/habit.js), textures as JPEG
 //
 //   node scripts/models/build_humans.mjs SRC_DIR   (needs @gltf-transform/*,
 //   meshoptimizer and sharp-free JPEG via ffmpeg on PATH)
@@ -18,7 +18,7 @@ import fs from 'fs';
 import path from 'path';
 
 const SRC = process.argv[2];
-const OUT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '../../assets/models');
+const OUT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '../../shared/assets/models');
 fs.mkdirSync(OUT, { recursive: true });
 await MeshoptEncoder.ready; await MeshoptDecoder.ready;
 const io = new NodeIO().registerExtensions(ALL_EXTENSIONS).registerDependencies({ 'meshopt.encoder': MeshoptEncoder, 'meshopt.decoder': MeshoptDecoder });

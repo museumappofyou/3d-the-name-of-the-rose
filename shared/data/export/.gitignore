@@ -1,0 +1,8 @@
+# Raw browser section export (reproducible with
+# scripts/migration/browser_driver.mjs slice_export.js); the selected
+# derivatives live in native/assets/world/. Keep the rules and the
+# census/manifest report under version control.
+*
+!.gitignore
+!slice_cells.json
+!slice_export.report.json

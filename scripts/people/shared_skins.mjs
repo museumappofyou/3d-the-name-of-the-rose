@@ -3,7 +3,7 @@
 // Blender's per-part quantization gives nine skins on the same 53 joints.
 // Bake the CONSTANT correction into vertices and share one skin per person.
 // Reject nonconstant corrections, shared primitive accessors and morphs.
-import { Matrix4 } from '../../lib/three/three.core.js';
+import { Matrix4 } from '../../web/lib/three/three.core.js';
 import { transformPrimitive } from '@gltf-transform/functions';
 
 export function shareCharacterSkins(doc) {

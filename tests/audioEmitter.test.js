@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { Sound } from '../src/systems/audio.js';
+import { Sound } from '../web/src/systems/audio.js';
 
 test('an unavailable animal position skips its call without poisoning subsequent audio ticks', () => {
   const sound = new Sound();

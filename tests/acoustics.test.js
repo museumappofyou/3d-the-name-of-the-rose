@@ -1,8 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { churchPath } from '../src/systems/audio/churchPaths.js';
-import { WorldState } from '../src/systems/worldState.js';
-import { CHURCH as C } from '../src/core/plan.js';
+import { churchPath } from '../web/src/systems/audio/churchPaths.js';
+import { WorldState } from '../web/src/systems/worldState.js';
+import { CHURCH as C } from '../web/src/core/plan.js';
 const world=()=>{const w=new WorldState();w.registerDoor({id:'church:westN',x:C.x0,z:C.zc-1.12,nx:-1,nz:0,w:1.3});w.registerDoor({id:'church:north',x:C.xChoir+4,z:C.zc-4.6,nx:0,nz:-1,w:1.9});w.registerDoor({id:'church:cloister',x:C.xCross-2.58,z:C.zS,nx:0,nz:1,w:1.6});return w;};
 const source={x:(C.xCross+C.xChoir)/2+1,y:2.4,z:C.zc};
 test('the west doorway changes level, filter and apparent position continuously',()=>{

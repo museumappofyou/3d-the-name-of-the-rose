@@ -1,54 +1,59 @@
-# Gülün Adı — The Abbey
+# The Abbey Project
 
-A walkable 3D reconstruction of the abbey in Umberto Eco’s *The Name of the Rose*, built from the Turkish edition and the plan printed in the novel. Explore the abbey, its working interiors and the 56-room library labyrinth through the canonical hours.
+A reconstructed abbey becomes a place for observation, manuscript investigations and discovery. Umberto Eco’s *The Name of the Rose* supplies the architectural and literary foundation. The recommended game is a series of authored investigations in a consistent monastery, alongside optional novel-derived scenarios and free study.
 
-## Run
+**Native is the primary product: Windows first, macOS second, developed on macOS in Godot. Web is an architectural explorer with a smaller scope.** Today the native build is a bounded migration proof; the browser still runs the larger, heavier reference reconstruction. The future lightweight viewer and the first original investigation are plans, not implemented features.
 
-Double-click **start.command** on macOS, or run from the repository root:
+## Run what exists
+
+Browser reference, with Python 3 and no dependency install:
 
 ```sh
 npm start
-# Alternatively, without Node:
-python3 scripts/serve.py
+# or: python3 scripts/serve.py --port 8000
 ```
 
-Open **http://localhost:8000**. Python 3 is required for the server; Node is needed for npm commands and the app tests. No dependency installation or internet connection is needed to explore: Three.js, fonts, textures, models and audio are included. Opening `index.html` directly will not load the modules.
+Open `http://localhost:8000`. `?quality=low` reduces rendering work; it does not guarantee smooth performance in populated interiors. WASD/arrows move, mouse looks, E examines, J opens notes, F lights the lantern; P switches aerial/walking view and M opens the plan. The current reference exposes novel secrets. It is not the proposed spoiler-safe web edition.
 
-The macOS launcher finds the first available port starting at 8000. To choose another port manually:
+Native proof, with the pinned **Godot 4.7.2 standard editor and matching export templates**:
 
 ```sh
-python3 scripts/serve.py --port 8001
+export GODOT_BIN=/absolute/path/to/Godot
+bash scripts/migration/build_phase1.sh --fresh --functional
+"$GODOT_BIN" --path native
 ```
 
-## Explore
+The build uses committed derivatives and needs neither private masters nor Chrome. It validates content, imports, tests and exports Windows/macOS development packages into ignored `builds/phase1/`. Native controls: WASD/arrows, mouse, E interact, J notebook, F lantern, Esc pause, F5 save, F9 load, F12 QA. Saves use the existing `AbbeySlice` user directory.
 
-Use the place index or plan to enter a location. On foot, **WASD / arrows** move, **Shift** hurries, the mouse looks, **E** examines, **F** lights the lantern and **J** opens your notes. **P** switches walking and aerial views, **M** opens the plan and **N** switches noon/night. The clock changes canonical hours; the seals control sound, weather and image quality.
+**Validated scope:** Alinardo’s porch → cloister → church → skull altar → first ossuary landing. Mac proof metrics: 104.6 FPS route / 100.5 FPS crowd at physical 1080p. Windows GPU runs, human audio/input review and the recurring stair unload hitch remain open. These measurements establish the slice’s feasibility, not whole-game performance.
 
-See the [exploration guide](docs/EXPLORATION.md) for story routes, hidden mechanisms, study navigation and reconstructed spaces. The [documentation index](docs/README.md) gathers development notes, design direction, audits, provenance and research.
-
-## Verify
+## Verify and build
 
 ```sh
-npm test
-(cd book_details && python3 -m unittest discover -s tests -v)
+npm test                         # 29 browser/domain tests
+npm run check:render              # render/collision conservation
+npm run check:data                # reviewed schemas, IDs, literary references
+npm run test:book                 # 21 extraction tests
+python3 scripts/check_repository.py
+npm run build:web:reference       # dist/web-reference; no research/private music
 ```
 
-The app tests cover library topology, room counts, route words and place data. Pipeline tests cover ingestion, extraction recovery, consolidation, verification and report generation; the real-book ingestion check is skipped when no local book is present.
-
-The latest recorded browser audit is in the [30 September implementation report](docs/realism/NEXT_PASS_REPORT.md). Debug controls and maintenance commands are in [Development](docs/DEVELOPMENT.md).
+Full native commands and the Windows W1/W2 procedure are in [Development](docs/DEVELOPMENT.md).
 
 ## Repository
 
-| Path | Contents |
+| Path | Responsibility |
 |---|---|
-| `index.html`, `src/` | Application, geometry, world, systems and interface |
-| `assets/` | Offline fonts, textures, models, audio, plan and in-app credits |
-| `lib/` | Vendored Three.js and three-mesh-bvh with their licence files |
-| `scripts/`, `start.command` | Restricted local server, launcher and asset/research tools |
-| `tests/` | App tests |
-| `book_details/` | Extraction pipeline, tests and structured evidence data |
-| `docs/` | All project documentation, generated book reports and audit evidence |
+| `native/` | Godot proof and future full game: domain, scene adapters, UI, tests, derivatives |
+| `web/` | Current Three.js browser reference and vendored runtime; future small viewer belongs here |
+| `shared/assets/` | Existing common source derivatives, credits, textures, recordings, fonts and plan |
+| `shared/data/` | Reviewed slice data, schemas, semantic IDs, section-export rules and manifests |
+| `shared/provenance/` | Reconstruction decisions, asset sources, character design notes, historical references |
+| `book_details/output/` | Nine unchanged source-derived evidence files; extraction code/tests beside them |
+| `scripts/` | Conversion, restricted serving, builds, validation and an inactive CI recipe |
+| `docs/evidence/` | Structured measurements, captures and audit records; not another documentation hierarchy |
+| `.local/`, `music/`, `builds/`, `dist/` | Ignored masters, checkpoints, source recordings and generated outputs |
 
-Source books, full normalized text, extraction caches, logs, local assistant state and the earlier `_legacy_gpt/` source stay local through `.gitignore`. The server exposes only the web application: `index.html`, `src/`, `lib/` and `assets/`.
+Read [Project](docs/PROJECT.md) for ownership and `WEB_EXPLORER_PLAN`, [Platforms](docs/PLATFORMS.md) for migration status, [Game design](docs/GAME_DESIGN.md) for the recommended experience and next Agent A mission, [Assets](docs/ASSETS.md) for provenance/licences, and [Development](docs/DEVELOPMENT.md) for maintenance. These five pages plus this README are the entire canonical project documentation.
 
-Asset authors, licences and conversion details are recorded in [audio sources](docs/assets/AUDIO_SOURCES.md), [model sources](docs/assets/MODEL_SOURCES.md) and the in-app Credits folio. Reconstruction decisions are traced in [Reconstruction](docs/RECONSTRUCTION.md) and the [provenance records](docs/provenance/).
+The extraction agent’s Markdown definition remains because the pipeline consumes it. Generated book reading reports are optional, local views in `book_details/reports/`; JSON/JSONL evidence is authoritative. `.local/` contains irreplaceable authored masters and recovery checkpoints: ignoring it is not a backup policy. The externally edited `VISUAL_BIBLE.txt` remains untouched and local.

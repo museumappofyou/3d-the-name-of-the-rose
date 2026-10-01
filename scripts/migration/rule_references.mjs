@@ -1,29 +1,29 @@
 // Engine-independent rule references computed by the BROWSER'S OWN modules,
-// for the native parity tests (migration/godot/tests/run_tests.gd).
+// for the native parity tests (native/tests/run_tests.gd).
 //
 //   node scripts/migration/rule_references.mjs
-// -> migration/data/manifests/rule_references.json
+// -> shared/data/manifests/rule_references.json
 //
-// Imports unchanged src/systems/horarium.js, src/world/people/schedule.js
-// and src/systems/audio/churchPaths.js (all pure modules).
+// Imports unchanged web/src/systems/horarium.js, web/src/world/people/schedule.js
+// and web/src/systems/audio/churchPaths.js (all pure modules).
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 import { fileURLToPath } from 'url';
-import { phaseAt, officeAt, aedificiumBarred, isDaylight } from '../../src/systems/horarium.js';
-import { scene } from '../../src/world/people/schedule.js';
-import { churchPath } from '../../src/systems/audio/churchPaths.js';
-import { aedificiumExitPermit } from '../../src/systems/worldState.js';
-import { canAskAlinardo, knowsAltar } from '../../src/data/discovery.js';
+import { phaseAt, officeAt, aedificiumBarred, isDaylight } from '../../web/src/systems/horarium.js';
+import { scene } from '../../web/src/world/people/schedule.js';
+import { churchPath } from '../../web/src/systems/audio/churchPaths.js';
+import { aedificiumExitPermit } from '../../web/src/systems/worldState.js';
+import { canAskAlinardo, knowsAltar } from '../../web/src/data/discovery.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const sha = f => crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT, f))).digest('hex');
-const exportRep = JSON.parse(fs.readFileSync(path.join(ROOT, 'migration/data/export/slice_export.report.json'), 'utf8')).result;
+const exportRep = JSON.parse(fs.readFileSync(path.join(ROOT, 'shared/data/export/slice_export.report.json'), 'utf8')).result;
 
 // --- horarium + Alinardo availability -------------------------------------
 const times = [];
 for (let i = 0; i <= 480; i++) times.push(+(i * 0.05).toFixed(4));
-const H = JSON.parse(fs.readFileSync(path.join(ROOT, 'migration/data/horarium.json'), 'utf8'));
+const H = JSON.parse(fs.readFileSync(path.join(ROOT, 'shared/data/horarium.json'), 'utf8'));
 for (const p of H.phases) for (const d of [-1e-6, 0, 1e-6]) { const t = +(p.t0 + d).toFixed(7); if (t >= 0 && t < 24) times.push(t); }
 const horarium = times.map(t => {
   const ph = phaseAt(t), of = officeAt(t);
@@ -71,9 +71,9 @@ for (const [x, z, inside, prev] of [[0, 2, true, false], [0, 0.9, true, false], 
 const out = {
   schema_version: 1,
   generator: 'scripts/migration/rule_references.mjs',
-  sources: Object.fromEntries(['src/systems/horarium.js', 'src/world/people/schedule.js', 'src/systems/audio/churchPaths.js', 'src/systems/worldState.js', 'src/data/discovery.js'].map(f => [f, sha(f)])),
+  sources: Object.fromEntries(['web/src/systems/horarium.js', 'web/src/world/people/schedule.js', 'web/src/systems/audio/churchPaths.js', 'web/src/systems/worldState.js', 'web/src/data/discovery.js'].map(f => [f, sha(f)])),
   horarium, predicates, church_doors: doorList, church_source: src, church, permits,
 };
-const dst = path.join(ROOT, 'migration/data/manifests/rule_references.json');
+const dst = path.join(ROOT, 'shared/data/manifests/rule_references.json');
 fs.writeFileSync(dst, JSON.stringify(out) + '\n');
 console.log('wrote', path.relative(ROOT, dst), horarium.length, 'hours', church.length, 'paths', permits.length, 'permits');

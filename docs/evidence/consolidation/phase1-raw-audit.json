@@ -1,0 +1,72 @@
+{
+  "route": {
+    "raw_frames": 12554,
+    "json_frames": 12554,
+    "fps_from_raw": 104.61199661278454,
+    "fps_json": 104.611996612785,
+    "p95_nearest_rank_ms": 11.05,
+    "json_p95_ms": 11.05035,
+    "max_ms": 64.04,
+    "frames_over_100ms": 0,
+    "viewport": [
+      1920,
+      1080
+    ]
+  },
+  "crowd": {
+    "raw_frames": 12066,
+    "json_frames": 12066,
+    "fps_from_raw": 100.534179271322,
+    "fps_json": 100.534179271322,
+    "p95_nearest_rank_ms": 11.208,
+    "json_p95_ms": 11.20875,
+    "max_ms": 17.842,
+    "frames_over_100ms": 0,
+    "viewport": [
+      1920,
+      1080
+    ]
+  },
+  "route_hires": {
+    "raw_frames": 10110,
+    "json_frames": 10110,
+    "fps_from_raw": 84.24093356952459,
+    "fps_json": 84.2409335695247,
+    "p95_nearest_rank_ms": 13.316,
+    "json_p95_ms": 13.31655,
+    "max_ms": 70.049,
+    "frames_over_100ms": 0,
+    "viewport": [
+      2304,
+      1150
+    ]
+  },
+  "crowd_hires": {
+    "raw_frames": 9901,
+    "json_frames": 9901,
+    "fps_from_raw": 82.4924906505039,
+    "fps_json": 82.4924906505037,
+    "p95_nearest_rank_ms": 13.424,
+    "json_p95_ms": 13.424,
+    "max_ms": 19.12,
+    "frames_over_100ms": 0,
+    "viewport": [
+      2304,
+      1150
+    ]
+  },
+  "soak": {
+    "raw_frames": 125244,
+    "json_frames": 125244,
+    "fps_from_raw": 104.36963705458714,
+    "fps_json": 104.369637054586,
+    "p95_nearest_rank_ms": 11.466,
+    "json_p95_ms": 11.466,
+    "max_ms": 70.302,
+    "frames_over_100ms": 0,
+    "viewport": [
+      1920,
+      1080
+    ]
+  }
+}

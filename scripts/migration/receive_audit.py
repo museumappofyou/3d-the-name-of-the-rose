@@ -5,7 +5,7 @@ from pathlib import Path
 import json
 import re
 
-ROOT = Path(__file__).resolve().parents[2] / "docs/migration/evidence"
+ROOT = Path(__file__).resolve().parents[2] / ".local/browser-review"
 ORIGIN = "http://localhost:8000"
 
 class Receiver(BaseHTTPRequestHandler):

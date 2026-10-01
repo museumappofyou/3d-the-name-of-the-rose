@@ -8,7 +8,7 @@ import { writeFileSync } from 'node:fs';
 import { auditLoweredHoods } from './fit_lowered_hoods.mjs';
 await MeshoptDecoder.ready;
 const io = new NodeIO().registerExtensions(ALL_EXTENSIONS).registerDependencies({ 'meshopt.decoder': MeshoptDecoder });
-const [before, after, tasks] = await Promise.all([io.read(process.argv[2]), io.read(process.argv[3]), io.read('assets/models/people/tasks.glb')]);
+const [before, after, tasks] = await Promise.all([io.read(process.argv[2]), io.read(process.argv[3]), io.read('shared/assets/models/people/tasks.glb')]);
 const hash = a => a && createHash('sha256').update(Buffer.from(a.buffer, a.byteOffset, a.byteLength)).digest('hex');
 const targets = new Map(after.getRoot().listNodes().map(n => [n.getName() + ':' + n.getSkin()?.getName(), n]));
 let unchangedParts = 0, tailoredHoods = 0;

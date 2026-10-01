@@ -5,14 +5,14 @@
 
 * Long recordings (chant:deus, wind) are copied UNCHANGED and streamed by
   Godot (AudioStreamMP3 decodes on the fly); the browser's clip window is
-  applied at playback from migration/data/sounds.json.
+  applied at playback from shared/data/sounds.json.
 * Short banks (footsteps, the altar creak) are cut into individual 16-bit
   PCM WAV clips at exactly the browser's crop windows from
-  assets/audio/manifest.json, because Godot has no clip-range playback of a
+  shared/assets/audio/manifest.json, because Godot has no clip-range playback of a
   sample. ffmpeg (pinned by `ffmpeg -version` in the manifest) decodes the
   original MP3; no resampling, level change or filtering is applied.
-Writes migration/data/manifests/audio_derivatives.json with source/output
-hashes, crop windows and licences. Review music under assets/audio/music/
+Writes shared/data/manifests/audio_derivatives.json with source/output
+hashes, crop windows and licences. Review music under shared/assets/audio/music/
 and the private music/ originals are never touched.
 """
 import hashlib
@@ -22,9 +22,9 @@ import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / 'migration/godot/assets/audio'
-SOUNDS = json.loads((ROOT / 'migration/data/sounds.json').read_text())
-MAN = json.loads((ROOT / 'assets/audio/manifest.json').read_text())['banks']
+OUT = ROOT / 'native/assets/audio'
+SOUNDS = json.loads((ROOT / 'shared/data/sounds.json').read_text())
+MAN = json.loads((ROOT / 'shared/assets/audio/manifest.json').read_text())['banks']
 
 
 def sha(p):
@@ -60,7 +60,7 @@ def main():
         dst = OUT / f'{oid}.wav'
         cut(src, o['clip'][0], o['clip'][1], dst)
         rec['clips'][oid] = {'source': o['source'], 'source_sha256': sha(src), 'credit': o['credit'], 'clips': [{'output': str(dst.relative_to(ROOT)), 'sha256': sha(dst), 'window': o['clip']}], 'recipe': 'ffmpeg crop, pcm_s16le'}
-    (ROOT / 'migration/data/manifests/audio_derivatives.json').write_text(json.dumps(rec, indent=1, ensure_ascii=False) + '\n')
+    (ROOT / 'shared/data/manifests/audio_derivatives.json').write_text(json.dumps(rec, indent=1, ensure_ascii=False) + '\n')
     n = sum(len(v['clips']) for v in rec['clips'].values())
     print('streams', list(rec['streams']), 'clips', n)
 

@@ -11,6 +11,8 @@
 
 # Dependencies, Python bytecode and environments
 node_modules/
+/scripts/models/node_modules
+/scripts/people/node_modules
 __pycache__/
 *.py[cod]
 .venv/
@@ -35,7 +37,22 @@ venv/
 !/book_details/data/possible_entity_merges.json
 !/book_details/data/unresolved_references.json
 /book_details/analysis/verification_candidates.jsonl
+/book_details/logs*.txt
+
+# Supplied recordings remain local; review derivatives are in shared/assets/audio/music
+/music/
+
+# Reproducible build outputs
+/builds/
 
 # Keep the extraction agent definition, excluding the local CLI installation
 /book_details/.opencode/*
 !/book_details/.opencode/agent/
+
+# External working visual notes and unassigned audio derivatives remain local
+/VISUAL_BIBLE.txt
+/shared/assets/audio/music/
+/dist/
+
+# Generated reading reports and inventories are not canonical documentation
+/shared/provenance/asset-inventory.local.json

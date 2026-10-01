@@ -13,8 +13,8 @@ samples with short fades, levelled so its loudest 100 ms sits at RMS 0.1
 (the convention of the old synthesised banks, so the mixer's gains keep
 their meaning) and packed with its siblings into one sprite per bank:
 
-    assets/audio/<bank>.mp3     sync click at 0.05 s, then the clips
-    assets/audio/manifest.json  { bank: { file, sr, ch, clips: [[t, dur], ...] } }
+    shared/assets/audio/<bank>.mp3     sync click at 0.05 s, then the clips
+    shared/assets/audio/manifest.json  { bank: { file, sr, ch, clips: [[t, dur], ...] } }
 
 The click lets the browser measure the decoder's priming delay, so clip
 offsets stay sample-exact whatever the MP3 decoder does. Loops are baked
@@ -25,7 +25,7 @@ import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, '..', '..'))
-OUT = os.path.join(ROOT, 'assets', 'audio')
+OUT = os.path.join(ROOT, 'shared', 'assets', 'audio')
 SR = 44100
 SYNC = 0.05
 

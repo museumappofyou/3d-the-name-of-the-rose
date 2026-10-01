@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """Markdown tables for the phase-1 proof report, read from the evidence JSON.
 
-    python3 scripts/migration/report_tables.py > docs/migration/phase-1/evidence/report_tables.md
+    python3 scripts/migration/report_tables.py > .local/phase1-tables.txt
 """
 import csv
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-EV = ROOT / 'docs/migration/phase-1/evidence'
+EV = ROOT / 'docs/evidence/phase1'
 
 
 def load(p):
@@ -61,7 +61,7 @@ if __name__ == '__main__':
     print(perf())
     print('\n## Residency cycles\n')
     print(cycles())
-    for n in ['functional_macos_package', 'functional-reload_macos_package', 'functional_headless', 'functional-reload_headless']:
+    for n in ['functional_mac_package', 'functional-reload_mac_package', 'functional_headless', 'functional-reload_headless']:
         t = steps(n)
         if t:
             print(f'\n## {n}\n\n| Result | Step |\n|---|---|\n' + t)

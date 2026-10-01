@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { PLACES, JOURNEY, CATEGORIES, byId } from '../src/data/places.js';
+import { PLACES, JOURNEY, CATEGORIES, byId } from '../web/src/data/places.js';
 
 test('every place has a folio, a view and a walking spawn', () => {
   const ids = new Set();

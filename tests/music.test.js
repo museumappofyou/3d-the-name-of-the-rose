@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { SUPPLIED, suppliedFor, hearingParam } from '../src/data/music.js';
-import { Office } from '../src/systems/audio/chant.js';
-import { Recording } from '../src/systems/audio/recording.js';
+import { SUPPLIED, suppliedFor, hearingParam } from '../web/src/data/music.js';
+import { Office } from '../web/src/systems/audio/chant.js';
+import { Recording } from '../web/src/systems/audio/recording.js';
 
 test('unauditioned music has no invented phrase edits or approved placement', () => {
   for (const [id, d] of Object.entries(SUPPLIED)) {

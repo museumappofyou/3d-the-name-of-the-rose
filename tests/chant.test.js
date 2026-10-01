@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { Office } from '../src/systems/audio/chant.js';
+import { Office } from '../web/src/systems/audio/chant.js';
 
 function rig() {
   const made = [], wanted = [];

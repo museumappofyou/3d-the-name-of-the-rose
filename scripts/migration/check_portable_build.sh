@@ -6,7 +6,7 @@
 # The project (without its import cache) is copied to
 #   <case-sensitive volume>/Test Ünïcode/Abbey Slice/godot
 # then imported fresh, tested and exported; the package hashes are compared
-# with the pipeline's (migration/builds/pipeline/package_sha256.txt).
+# with the pipeline's (builds/phase1/pipeline/package_sha256.txt).
 #
 #   GODOT_BIN=… scripts/migration/check_portable_build.sh <work-dir> [report.json]
 set -euo pipefail
@@ -22,22 +22,22 @@ trap 'hdiutil detach -quiet "$MNT" || hdiutil detach -quiet -force "$MNT"; rm -f
 diskutil info "$MNT" | grep -E "File System Personality|Name \(User Visible\)" || true
 P="$MNT/Test Ünïcode/Abbey Slice"
 mkdir -p "$P"
-rsync -a --exclude .godot "$ROOT/migration/godot/" "$P/godot/"
+rsync -a --exclude .godot "$ROOT/native/" "$P/godot/"
 LOG="$P/logs"; mkdir -p "$LOG"
 "$GODOT_BIN" --headless --path "$P/godot" --editor --import > "$LOG/import.log" 2>&1 || true
 # a case mismatch shows up as a missing resource / failed load
 MISSING=$(grep -E "Cannot open file|No loader found|Failed loading resource|Can't open|not found" "$LOG/import.log" | grep -v "ObjectDB" || true)
 "$GODOT_BIN" --headless --path "$P/godot" --script res://tests/run_tests.gd > "$LOG/tests.log" 2>&1 && T=PASS || T=FAIL
-"$GODOT_BIN" --headless --path "$P/godot" --script res://tests/pose_check.gd -- alinardo "$ROOT/migration/data/manifests/pose_reference_alinardo.json" > "$LOG/pose.log" 2>&1 && PO=PASS || PO=FAIL
+"$GODOT_BIN" --headless --path "$P/godot" --script res://tests/pose_check.gd -- alinardo "$ROOT/shared/data/manifests/pose_reference_alinardo.json" > "$LOG/pose.log" 2>&1 && PO=PASS || PO=FAIL
 "$GODOT_BIN" --headless --path "$P/godot" --script res://tests/anchor_check.gd > "$LOG/anchors.log" 2>&1 && A=PASS || A=FAIL
 mkdir -p "$P/out/windows" "$P/out/macos"
 "$GODOT_BIN" --headless --path "$P/godot" --export-release "Windows Desktop" "$P/out/windows/AbbeySlice.exe" > "$LOG/export_windows.log" 2>&1 || true
 "$GODOT_BIN" --headless --path "$P/godot" --export-release "macOS" "$P/out/macos/AbbeySlice.app" > "$LOG/export_macos.log" 2>&1 || true
 PCK_PORT=$(shasum -a 256 "$P/out/windows/AbbeySlice.pck" | cut -d' ' -f1)
 EXE_PORT=$(shasum -a 256 "$P/out/windows/AbbeySlice.exe" | cut -d' ' -f1)
-PCK_MAIN=$(grep "windows/AbbeySlice.pck" "$ROOT/migration/builds/pipeline/package_sha256.txt" | cut -d' ' -f1)
+PCK_MAIN=$(grep "windows/AbbeySlice.pck" "$ROOT/builds/phase1/pipeline/package_sha256.txt" | cut -d' ' -f1)
 cp "$P/out/windows/AbbeySlice.pck" "$WORK/portable_AbbeySlice.pck"
-python3 "$ROOT/scripts/migration/audit_package.py" --diff "$ROOT/migration/builds/windows/AbbeySlice.pck" "$WORK/portable_AbbeySlice.pck" > "$WORK/pck_diff.json"
+python3 "$ROOT/scripts/migration/audit_package.py" --diff "$ROOT/builds/phase1/windows/AbbeySlice.pck" "$WORK/portable_AbbeySlice.pck" > "$WORK/pck_diff.json"
 # run the packaged mac app once from the unicode/space path (functional rules, real physics)
 APP="$P/out/macos/AbbeySlice.app/Contents/MacOS/Abbey Slice"
 "$APP" --headless -- --scenario=functional --out="$P/out" --label=portable --save-dir=user://functional_portable > "$LOG/functional.log" 2>&1 || true

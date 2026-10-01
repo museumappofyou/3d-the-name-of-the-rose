@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Objective analysis of the packaged audio run (no human listening).
 
-    python3 scripts/migration/analyze_audio.py docs/migration/phase-1/evidence/audio/audio_mac.json
+    python3 scripts/migration/analyze_audio.py docs/evidence/phase1/audio/audio_mac.json
 
 Reads the scenario JSON (transport telemetry and marks) and the recorded
 master output `<same name>.wav` (16-bit PCM, written by AudioEffectRecord) and

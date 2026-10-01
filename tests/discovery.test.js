@@ -1,8 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { canAskAlinardo, knowsAltar, canConnectShelf } from '../src/data/discovery.js';
-import { restoreNotebook, Notebook, KEY } from '../src/systems/notes.js';
-import { aedificiumBarred } from '../src/systems/horarium.js';
+import { canAskAlinardo, knowsAltar, canConnectShelf } from '../web/src/data/discovery.js';
+import { restoreNotebook, Notebook, KEY } from '../web/src/systems/notes.js';
+import { aedificiumBarred } from '../web/src/systems/horarium.js';
 const notes = (...ids) => ({has:id=>ids.includes(id)});
 
 test('development review persists separately from player discoveries and legacy migration', () => {
@@ -51,7 +51,7 @@ test('the Aedificium bars follow the end of supper, including wrapped study hour
 });
 
 test('crossing a room boundary before the bar does not unlock a night entrance', async () => {
-  const { aedificiumExitPermit } = await import('../src/systems/worldState.js');
+  const { aedificiumExitPermit } = await import('../web/src/systems/worldState.js');
   const doors = [{ x: 0, z: 0, nx: 0, nz: 1, th: 1.2 }];
   let permit = false;
   for (const z of [3, 1, .4, -.1]) {

@@ -1,0 +1,214 @@
+{
+ "schema_version": 1,
+ "authority": "Curated source/author/licence/conversion records from the audited project; verify imported metadata and source notices before release.",
+ "records": [
+  {
+   "source_record": "docs/assets/MODEL_SOURCES.md",
+   "section": "People",
+   "fields": {
+    "Current derivative": "`people/cast.glb`, bodies, system eyes/brows/skin/short hair",
+    "Source / author": "[MakeHuman / MPFB](https://static.makehumancommunity.org/about/license.html), MakeHuman contributors",
+    "Licence": "CC0 1.0 exported assets",
+    "Conversion": "Blender 4.5.14 / MPFB 2.0.17; fitted single body proportions; hidden skin removed, meshes simplified; shared 1K skin/cloth and smaller detail textures; meshopt."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/assets/MODEL_SOURCES.md",
+   "section": "People",
+   "fields": {
+    "Current derivative": "Monk robe and hood variants in `people/cast.glb`",
+    "Source / author": "Donitz, [suits02](https://static.makehumancommunity.org/assets/assetpacks/suits02.html)",
+    "Licence": "CC0",
+    "Conversion": "Fitted to each body; dark wool/rope texture adaptation, tonsure, winter ankle boots, continuous seated/kneeling skirt weights. All 15 lowered hoods have a folded rest shape, shoulder/back weights and an authored `bendDrape` target fitted against the posed habit."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/assets/MODEL_SOURCES.md",
+   "section": "People",
+   "fields": {
+    "Current derivative": "Lay tunic, hose and boots",
+    "Source / author": "Rehman Polanski, suits02; MRT/toigo ankle boots, [shoes01](https://static.makehumancommunity.org/assets/assetpacks/shoes01.html)",
+    "Licence": "CC0",
+    "Conversion": "Tunic atlas mail/ornament removed with blurs masked to its UV islands (no pale seams, no dark mail band); plain russet/undyed/grey/dun/faded-woad cloth, stained footwear."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/assets/MODEL_SOURCES.md",
+   "section": "People",
+   "fields": {
+    "Current derivative": "Additional skin / hair treatments",
+    "Source / author": "onlytheghosts, jartur69, MRT/toigo incl. ginger ([skins02](https://static.makehumancommunity.org/assets/assetpacks/skins02.html)); cortu, culturalibre ([hair01](https://static.makehumancommunity.org/assets/assetpacks/hair01.html)); system short01/03/04",
+    "Licence": "CC0",
+    "Conversion": "Moderate complexion/hair calibration, age treatments; textures resized, shared, and stored as WebP (EXT_texture_webp) in `cast.glb`."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/assets/MODEL_SOURCES.md",
+   "section": "People",
+   "fields": {
+    "Current derivative": "Facial hair (lay men)",
+    "Source / author": "WDG `wdg_scruffy_beard`; RehmanPolanski `rehmanpolanski_beard_viking`, `rehmanpolanski_moustache_viking`; culturalibre `culturalibre_faun_beard`; grinsegold `grinsegold_beard_sigmund_wip` ([bodyparts05](https://static.makehumancommunity.org/assets/assetpacks/bodyparts05.html))",
+    "Licence": "CC0",
+    "Conversion": "Fitted to each face; alpha texture re-toned to the brown/grey of the cast's short hair so the per-person hair tint applies to beard and hair alike."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/assets/MODEL_SOURCES.md",
+   "section": "People",
+   "fields": {
+    "Current derivative": "Low medieval boots (seven lay men)",
+    "Source / author": "punkduck, `punkduck_medieval_boots` ([shoes03](https://static.makehumancommunity.org/assets/assetpacks/shoes03.html))",
+    "Licence": "**CC BY**, version unspecified by pack",
+    "Conversion": "Fitted, simplified, re-toned; credited in the in-app Credits."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/assets/MODEL_SOURCES.md",
+   "section": "People",
+   "fields": {
+    "Current derivative": "Worker apron",
+    "Source / author": "Elvaerwyn, `elvs_ladies_apron`, [dress02](https://static.makehumancommunity.org/assets/assetpacks/dress02.html)",
+    "Licence": "**CC BY**, version unspecified by pack",
+    "Conversion": "Fitted to male workers, simplified, adapted linen/leather textures, lifted 2 cm off the tunic along its normals (fitted as an under-layer it only showed as slivers). Attribution remains in the in-app Credits."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/assets/MODEL_SOURCES.md",
+   "section": "People",
+   "fields": {
+    "Current derivative": "`people/motions.glb`, `people/tasks.glb`",
+    "Source / author": "Existing Mesh2Motion/Quaternius/CMU motion sources below; original task authoring",
+    "Licence": "Existing motion terms below; original added task curves",
+    "Conversion": "Reference rotational retargeting preserves each body's bone lengths. Tasks baked against each of the 30 rigs at 24 fps, only those its dress is scheduled for (9 for a brother, 8 for a lay man; 255 fitted clips); grip matrices measured per person; any other clip falls back to the shared motion scaled to the body. No runtime cloth solver."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/assets/MODEL_SOURCES.md",
+   "section": "People",
+   "fields": {
+    "File": "`human_anims.glb` (1.9 MB)",
+    "Source": "[Mesh2Motion](https://github.com/Mesh2Motion/mesh2motion-app) `static/animations/human-base-animations.glb`, `human-addon-animations.glb`, `human-mocap-animations.glb` ([LICENSE-CC0.MD](https://github.com/Mesh2Motion/mesh2motion-app/blob/main/LICENSE-CC0.MD))",
+    "Author": "Quaternius ([Universal Animation Library](https://quaternius.com/packs/universalanimationlibrary.html)), Carnegie Mellon University motion capture, retargeted by Scott Petrovic / Mesh2Motion",
+    "Licence": "CC0 1.0",
+    "What we use / changes": "31 clips kept and renamed (walk, formal walk, carrying walk, idles, folded arms, sitting, kneeling, harvest, chop, push, pick-up, nod, sleep …); mannequin mesh, skin and textures removed; limb translation/scale channels dropped; resampled; meshopt (filter) compression."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/assets/MODEL_SOURCES.md",
+   "section": "People",
+   "fields": {
+    "File": "`head_male_5.glb`, `head_male_6.glb`, `head_male_10.glb`, `head_male_15.glb`, `head_male_32.glb`, `head_police_male.glb` (107–137 KB each)",
+    "Source": "Mesh2Motion `static/models-variation/human/*.glb` (listed as CC0 in `src/lib/RigModelVariations.ts`)",
+    "Author": "elbolilloduro (photoscanned characters)",
+    "Licence": "CC0 1.0",
+    "What we use / changes": "Texture re-encoded PNG → JPEG; material extensions removed. At runtime only the head, hands and a generated neck are drawn: the scans' modern clothes are cut away and replaced by the habits of `src/world/people/habit.js`, skinned to the same 66-joint skeleton."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/assets/MODEL_SOURCES.md",
+   "section": "Animals",
+   "fields": {
+    "File": "`animal_horse_rancher.glb`",
+    "Source": "[Realtime Rancher 3D model pack](https://opengameart.org/content/realtime-ranchers-3d-model-pack), [rigged horse derivative](https://opengameart.org/content/rigged-horse)",
+    "Author": "Lyndon Daniels; ChadM",
+    "Licence": "CC0 1.0",
+    "Changes": "Original full horse anatomy retained. Metres, withers 1.513 m before individual scale, hooves at ground; a new complete 23-joint rig weights eyes/mane/tail as well as body. Four restrained 12–18 s planted-hoof clips. Coat markings removed for Brunellus, shared 1K coat/normal/hair and 128 px eyes. 14,986 tris, meshopt. `scripts/models/horse_textures.py`, `horse_blender.py`, `pack_horse.mjs`."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/assets/MODEL_SOURCES.md",
+   "section": "Animals",
+   "fields": {
+    "File": "`animal_horse.glb` (horses, Brunellus), `animal_donkey.glb` (donkey, mules), `animal_cow.glb` (cows, calves), `animal_bull.glb` (oxen), `animal_husky.glb` (sheepdogs)",
+    "Source": "[poly.pizza/m/qvTrSG9pZF](https://poly.pizza/m/qvTrSG9pZF), [qmX6nhnvp7](https://poly.pizza/m/qmX6nhnvp7), [26zM1outCr](https://poly.pizza/m/26zM1outCr), [a8PIIYwF7r](https://poly.pizza/m/a8PIIYwF7r), [wcWiuEqwzq](https://poly.pizza/m/wcWiuEqwzq) — *Ultimate Animated Animals*",
+    "Author": "Quaternius",
+    "Licence": "CC0 1.0",
+    "Changes": "Vertices welded and smooth normals computed (the source is flat-shaded); clips kept: Idle, Idle_2, Idle_Headlow, Eating, Walk (duplicates removed); meshopt. Coats (black, bay, grey, chestnut, mule, ox …) and a fine hair normal map are applied at runtime (`src/world/animals.js`)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/assets/MODEL_SOURCES.md",
+   "section": "Animals",
+   "fields": {
+    "File": "`animal_pig.glb` (pigs)",
+    "Source": "\"Pig\", Sketchfab `6d78fe9cec03483ba6d3e4ff30dc6265`, fetched from the [Objaverse mirror](https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-023/6d78fe9cec03483ba6d3e4ff30dc6265.glb). The Sketchfab page (`sketchfab.com/3d-models/pig-6d78fe9cec03483ba6d3e4ff30dc6265`) now returns 404; title, author, source URL and licence are embedded in the file's `asset.extras` (kept in the derivative)",
+    "Author": "BojanBabic ([@bokadigimon](https://sketchfab.com/bokadigimon))",
+    "Licence": "**CC BY 4.0**",
+    "Changes": "A rigged, PBR-textured modern Large White (34,312 tris, 52-joint 3ds Max Biped skin, one 10 s clip). Sketchfab wrapper nodes, four unused UV sets and the tangents dropped; welded and simplified (meshoptimizer) to 14,000 tris, skin weights kept. Lower legs lengthened 6 cm at source scale (forearm/front cannon, rear gaskin/cannon) in the bind pose and re-bound, for a leggier medieval animal. Metres: withers 0.65 m before individual scale, centred, facing +z, lowest vertex over both clips at y = 0. Two clips: `Idle`, the whole source loop (looks about, sniffs the ground, looks up), and `Root`, its head-down 5.04–7.63 s (ends 2.8 cm apart; last 0.5 s blended into the frames before its start), the neck pitched up to 9.2° further where the head is low so the snout still meets the ground. Head/neck joints renamed; metalness off. 1K colour and normal maps (JPEG), 512 px occlusion/roughness; positions unquantized; meshopt, 626 KB. The pink map gives only detail: black, dark reddish-brown and belted coats are set at runtime (`src/world/animals.js`). `scripts/models/pack_pig.mjs`."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/assets/MODEL_SOURCES.md",
+   "section": "Animals",
+   "fields": {
+    "File": "`animal_sheep.glb` (sheep, lambs)",
+    "Source": "[Sheep, Sketchfab 67abff7459f34afca11e3effab62c761](https://sketchfab.com/3d-models/sheep-67abff7459f34afca11e3effab62c761), downloaded through Objaverse; original author/source/licence retained in `asset.extras`",
+    "Author": "[hendrikReyneke](https://sketchfab.com/hendrikReyneke)",
+    "Licence": "**CC BY 4.0**",
+    "Changes": "Static 4,372-triangle textured sheep; source node transforms baked, metric withers 0.65 m, hooves at zero, seven-joint region-weighted rig. New 12 s `Idle` and 10 s `Graze` clips keep legs planted; grazing muzzle clearance solved at 1.2 cm. 1K JPEG colour/normal maps, meshopt, unquantized positions, 652,740 bytes. Coats and scaled lamb proportions adapted at runtime. `scripts/models/pack_sheep.mjs`."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/assets/MODEL_SOURCES.md",
+   "section": "Animals",
+   "fields": {
+    "File": "`animal_cat.glb`",
+    "Source": "[poly.pizza/m/qKICY6xla2](https://poly.pizza/m/qKICY6xla2)",
+    "Author": "Quaternius",
+    "Licence": "CC0 1.0",
+    "Changes": "As above; Idle, Idle_Eating, Walk."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/assets/MODEL_SOURCES.md",
+   "section": "Animals",
+   "fields": {
+    "File": "`animal_hen1.glb` (hens)",
+    "Source": "[poly.pizza/m/8Unya0rw9tR](https://poly.pizza/m/8Unya0rw9tR) \"Hen\"",
+    "Author": "Poly by Google",
+    "Licence": "CC BY 3.0",
+    "Changes": "Welded/smoothed, meshopt. Static in the source: a body–neck–head skeleton is fitted at runtime so the hens peck and look about."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/assets/MODEL_SOURCES.md",
+   "section": "Animals",
+   "fields": {
+    "File": "`animal_rooster.glb`",
+    "Source": "[poly.pizza/m/6NTegstc5Jy](https://poly.pizza/m/6NTegstc5Jy) \"Rooster\"",
+    "Author": "Poly by Google",
+    "Licence": "CC BY 3.0",
+    "Changes": "As the hen. The fifth pass resizes only the oversized 2K PNG colour map to 1K (`scripts/models/resize_rooster.mjs`); decoded positions, normals, UVs and node transforms remain identical. Meshopt packing avoids applying the lossy normal filter again."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/assets/MODEL_SOURCES.md",
+   "section": "Animals",
+   "fields": {
+    "File": "`animal_goat1.glb` (goats)",
+    "Source": "[poly.pizza/m/d7dImmjtF8E](https://poly.pizza/m/d7dImmjtF8E) \"Goat\"",
+    "Author": "Poly by Google",
+    "Licence": "CC BY 3.0",
+    "Changes": "As the hen (neck and head rig)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  }
+ ]
+}

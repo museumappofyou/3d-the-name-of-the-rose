@@ -8,7 +8,7 @@ import sharp from 'sharp';
 
 await MeshoptEncoder.ready; await MeshoptDecoder.ready;
 const io = new NodeIO().registerExtensions(ALL_EXTENSIONS).registerDependencies({ 'meshopt.encoder': MeshoptEncoder, 'meshopt.decoder': MeshoptDecoder });
-const input = process.argv[2] || 'assets/models/animal_rooster.glb';
+const input = process.argv[2] || 'shared/assets/models/animal_rooster.glb';
 const output = process.argv[3] || input;
 const doc = await io.read(input), changes = [];
 for (const t of doc.getRoot().listTextures()) {

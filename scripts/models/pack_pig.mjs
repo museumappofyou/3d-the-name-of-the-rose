@@ -21,7 +21,7 @@
 //     lowest vertex over both clips at y = 0;
 //   - names the head and neck joints 'Head' and 'Neck' (the runtime nods
 //     them before a grunt) and the material 'pig.skin' (its coat is set in
-//     src/world/animals.js);
+//     web/src/world/animals.js);
 //   - keeps the 1K colour and normal maps (JPEG), the occlusion/roughness map
 //     at 512, metalness off; meshopt-packs, positions left unquantized so the
 //     runtime can read bind-pose metres for the coat.
@@ -35,7 +35,7 @@ import sharp from 'sharp';
 import fs from 'node:fs';
 
 const SRC = process.argv[2] || '.local/animals/src/pig_candidates/objaverse_pig_bokadigimon/model.glb';
-const OUT = 'assets/models/animal_pig.glb';
+const OUT = 'shared/assets/models/animal_pig.glb';
 const SHOULDER = 0.65;      // withers height, metres, before the per-animal scale
 const TRIS = 14000;         // simplification target
 const LEG = 0.06;           // added lower-leg length, source metres (front and rear alike)

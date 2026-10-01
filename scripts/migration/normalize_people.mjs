@@ -2,13 +2,13 @@
 //
 //   node scripts/migration/normalize_people.mjs [--people alinardo,monk_a,...] [--png]
 //
-// Input (unchanged): assets/models/people/cast.glb, tasks.glb, cast.json.
-// Output: migration/godot/assets/characters/<id>/<id>.glb and
-//         migration/data/manifests/people_derivatives.json
+// Input (unchanged): shared/assets/models/people/cast.glb, tasks.glb, cast.json.
+// Output: native/assets/characters/<id>/<id>.glb and
+//         shared/data/manifests/people_derivatives.json
 //
 // Godot 4.7.2 refuses the originals: EXT_meshopt_compression and
 // KHR_mesh_quantization are *required* extensions it does not implement
-// (docs/migration/phase-1/evidence/import/direct_import_original_cast_tasks.log).
+// (docs/evidence/phase1/import/direct_import_original_cast_tasks.log).
 // The transformation is deliberately minimal and loss-free for skinning:
 //   * meshopt buffers are decoded (bit-exact decode of the stored data);
 //   * POSITION / NORMAL / TANGENT / TEXCOORD are dequantized to float32
@@ -27,7 +27,7 @@ import { NodeIO } from '@gltf-transform/core';
 import { ALL_EXTENSIONS } from '@gltf-transform/extensions';
 import { dequantize, prune } from '@gltf-transform/functions';
 import { MeshoptDecoder } from 'meshoptimizer';
-import { Matrix3, Matrix4, Vector3 } from '../../lib/three/three.core.js';
+import { Matrix3, Matrix4, Vector3 } from '../../web/lib/three/three.core.js';
 import sharp from 'sharp';
 import crypto from 'crypto';
 import fs from 'fs';
@@ -36,9 +36,9 @@ import { fileURLToPath } from 'url';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '../..');
-const SRC = path.join(ROOT, 'assets/models/people');
-const OUT = path.join(ROOT, 'migration/godot/assets/characters');
-const MANIFEST = path.join(ROOT, 'migration/data/manifests/people_derivatives.json');
+const SRC = path.join(ROOT, 'shared/assets/models/people');
+const OUT = path.join(ROOT, 'native/assets/characters');
+const MANIFEST = path.join(ROOT, 'shared/data/manifests/people_derivatives.json');
 const arg = (k, d) => { const i = process.argv.indexOf(k); return i >= 0 ? process.argv[i + 1] : d; };
 const PEOPLE = arg('--people', 'alinardo').split(',').filter(Boolean);
 const PNG = process.argv.includes('--png');
@@ -57,9 +57,9 @@ Object.assign(manifest, {
   schema_version: 1,
   generator: 'scripts/migration/normalize_people.mjs',
   tool_versions: { '@gltf-transform/core': '4.5.1', meshoptimizer: '1.3.0', sharp: '0.35.5', node: process.version },
-  sources: Object.fromEntries(['cast.glb', 'tasks.glb', 'cast.json'].map(f => [`assets/models/people/${f}`, sha(path.join(SRC, f))])),
+  sources: Object.fromEntries(['cast.glb', 'tasks.glb', 'cast.json'].map(f => [`shared/assets/models/people/${f}`, sha(path.join(SRC, f))])),
   coordinate_convention: 'metres, +X east, +Y up, +Z south (glTF/Godot); character model front is +Z (Godot MODEL_FRONT), identical to the browser slot ry convention',
-  licence_note: 'Body/garment components keep the credits in docs/assets/MODEL_SOURCES.md, docs/provenance/people.md and assets/credits.json (CC0 MakeHuman/MPFB, CC BY boots/apron where used). Motion sources per those documents.',
+  licence_note: 'Body/garment components keep the credits in docs/ASSETS.md, shared/provenance/reconstruction-decisions.json and shared/assets/credits.json (CC0 MakeHuman/MPFB, CC BY boots/apron where used). Motion sources per those documents.',
 });
 manifest.people ||= {};
 
@@ -98,7 +98,7 @@ for (const id of PEOPLE) {
       bound++;
     }
     if (missing.length) throw new Error(`${a.getName()}: unbound targets ${missing.join(',')}`);
-    out.setExtras({ source_clip: a.getName(), source_file: 'assets/models/people/tasks.glb' });
+    out.setExtras({ source_clip: a.getName(), source_file: 'shared/assets/models/people/tasks.glb' });
     clips.push({ id: a.getName(), godot_name: clip, duration_s: +dur.toFixed(6), channels: bound });
   }
   // keep integer joints/weights/colours exactly; float the attributes that

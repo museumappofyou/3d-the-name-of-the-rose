@@ -1,0 +1,1393 @@
+{
+  "schema_version": 1,
+  "audited_at_utc": "2026-10-01T23:27:13.113034+00:00",
+  "scope": "Agent B repository consolidation; current runtime smoke/tests and source-only import reproduction. Recorded Phase-1 performance was independently audited, not rerun.",
+  "commands": {
+    "npm test": {
+      "pass": true,
+      "passed": 29,
+      "skipped": 0
+    },
+    "npm run check:render": {
+      "pass": true,
+      "positions_normals_uvs_colours_winding_collision_offsets_shadows_preserved": true
+    },
+    "python3 -m unittest discover -s book_details/tests -v": {
+      "pass": true,
+      "passed": 21,
+      "skipped": 0,
+      "local_epub_ingestion": "exercised on this machine"
+    },
+    "python3 scripts/migration/build_content.py --check": {
+      "pass": true,
+      "command": "python3 scripts/migration/build_content.py --check",
+      "read_only": true,
+      "stdout": "content OK: horarium, locations, entities, portals, routines, discoveries, interactions, sounds, anchors, provenance \n"
+    },
+    "python3 scripts/check_repository.py": {
+      "pass": true,
+      "canonical_markdown": 6,
+      "operational_markdown": 1,
+      "book_files": 9,
+      "relative_imports": "pass",
+      "public_routes_and_private_traversal_symlinks": "pass"
+    },
+    "bash scripts/migration/build_phase1.sh --fresh --functional": {
+      "pass": true,
+      "scope": "Fresh import/full exports before final supporting-script refinements"
+    },
+    "bash scripts/migration/build_phase1.sh --functional": {
+      "pass": true,
+      "scope": "Final full pipeline and both exports"
+    },
+    "Python syntax": {
+      "pass": true,
+      "files": 52
+    },
+    "bash -n": {
+      "pass": true,
+      "scripts": [
+        "build_phase1.sh",
+        "run_benchmarks.sh",
+        "run_package_evidence.sh"
+      ]
+    }
+  },
+  "native": {
+    "domain": {
+      "engine": "4.7.2-stable (official)",
+      "failures": 0,
+      "passed": 22,
+      "results": [
+        {
+          "pass": true,
+          "test": "test_content_references_and_evidence"
+        },
+        {
+          "pass": true,
+          "test": "test_condition_vocabulary_is_closed"
+        },
+        {
+          "pass": true,
+          "test": "test_horarium_matches_browser"
+        },
+        {
+          "pass": true,
+          "test": "test_alinardo_availability_matches_browser"
+        },
+        {
+          "pass": true,
+          "test": "test_discovery_predicates_match_browser"
+        },
+        {
+          "pass": true,
+          "test": "test_clock_signals_on_office_change"
+        },
+        {
+          "pass": true,
+          "test": "test_altar_alinardo_sequence"
+        },
+        {
+          "pass": true,
+          "test": "test_alinardo_absent_cannot_be_asked"
+        },
+        {
+          "pass": true,
+          "test": "test_descent_awards_passage_once"
+        },
+        {
+          "pass": true,
+          "test": "test_descent_requires_open_altar_approach"
+        },
+        {
+          "pass": true,
+          "test": "test_teleport_and_load_never_fabricate_traversal"
+        },
+        {
+          "pass": true,
+          "test": "test_descent_window_expires"
+        },
+        {
+          "pass": true,
+          "test": "test_stair_classification_has_no_flicker"
+        },
+        {
+          "pass": true,
+          "test": "test_exit_permit_matches_browser"
+        },
+        {
+          "pass": true,
+          "test": "test_curfew_outside_denied_inside_exit_allowed"
+        },
+        {
+          "pass": true,
+          "test": "test_church_path_matches_browser"
+        },
+        {
+          "pass": true,
+          "test": "test_office_does_not_restart_within_an_office"
+        },
+        {
+          "pass": true,
+          "test": "test_prime_lists_browser_pieces"
+        },
+        {
+          "pass": true,
+          "test": "test_lighting_and_chant_follow_the_canonical_clock"
+        },
+        {
+          "pass": true,
+          "test": "test_save_round_trip_and_idempotent_knowledge"
+        },
+        {
+          "pass": true,
+          "test": "test_save_recovery"
+        },
+        {
+          "pass": true,
+          "test": "test_save_rejects_tampering_and_unknown_ids"
+        }
+      ],
+      "total": 22
+    },
+    "pose_normal_checks": {
+      "alinardo": {
+        "checked_bone_samples": 297,
+        "clips": {
+          "dine": {
+            "godot_length": 9.04166698455811,
+            "max_err_m": 7.16473186912481e-06,
+            "ref_duration": 9.0416669845581
+          },
+          "kneelBow": {
+            "godot_length": 9.625,
+            "max_err_m": 6.98886788086384e-06,
+            "ref_duration": 9.625
+          },
+          "kneelPray": {
+            "godot_length": 9.625,
+            "max_err_m": 6.03156695433427e-06,
+            "ref_duration": 9.625
+          },
+          "read": {
+            "godot_length": 12.0416669845581,
+            "max_err_m": 6.09849030297482e-06,
+            "ref_duration": 12.0416669845581
+          },
+          "sitBench": {
+            "godot_length": 8.83333301544189,
+            "max_err_m": 7.7223467087606e-06,
+            "ref_duration": 8.83333301544189
+          },
+          "standBow": {
+            "godot_length": 10.4583330154419,
+            "max_err_m": 7.59304475650424e-06,
+            "ref_duration": 10.4583330154419
+          },
+          "standSleeves": {
+            "godot_length": 10.4583330154419,
+            "max_err_m": 7.94337029219605e-06,
+            "ref_duration": 10.4583330154419
+          },
+          "tend": {
+            "godot_length": 10.0416669845581,
+            "max_err_m": 6.62932870909572e-06,
+            "ref_duration": 10.0416669845581
+          },
+          "write": {
+            "godot_length": 15.625,
+            "max_err_m": 6.54301811664482e-06,
+            "ref_duration": 15.625
+          }
+        },
+        "max_error_m": 7.94337029219605e-06,
+        "normals": {
+          "boots": {
+            "face_agreement": 0.993948562783661,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 661
+          },
+          "brows": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 124
+          },
+          "eyes": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 96
+          },
+          "habit": {
+            "face_agreement": 0.919440745672437,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 3004
+          },
+          "hair": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 845
+          },
+          "hood_down": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 887
+          },
+          "hood_up": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 972
+          },
+          "lashes": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 250
+          },
+          "skin": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 3230
+          }
+        },
+        "normals_pass": true,
+        "pass": true,
+        "person": "alinardo",
+        "tolerance_m": 0.001,
+        "worst": "standSleeves t=5.208333 foot_r godot=(-0.100006, 0.098825, -0.020705) ref=[-0.10001, 0.09882, -0.02071]"
+      },
+      "monk_a": {
+        "checked_bone_samples": 297,
+        "clips": {
+          "dine": {
+            "godot_length": 9.04166698455811,
+            "max_err_m": 7.46512478144723e-06,
+            "ref_duration": 9.0416669845581
+          },
+          "kneelBow": {
+            "godot_length": 9.625,
+            "max_err_m": 7.45953457226278e-06,
+            "ref_duration": 9.625
+          },
+          "kneelPray": {
+            "godot_length": 9.625,
+            "max_err_m": 6.81019355397439e-06,
+            "ref_duration": 9.625
+          },
+          "read": {
+            "godot_length": 12.0416669845581,
+            "max_err_m": 6.79799677527626e-06,
+            "ref_duration": 12.0416669845581
+          },
+          "sitBench": {
+            "godot_length": 8.83333301544189,
+            "max_err_m": 8.25891765998676e-06,
+            "ref_duration": 8.83333301544189
+          },
+          "standBow": {
+            "godot_length": 10.4583330154419,
+            "max_err_m": 6.72539863444399e-06,
+            "ref_duration": 10.4583330154419
+          },
+          "standSleeves": {
+            "godot_length": 10.4583330154419,
+            "max_err_m": 7.44506905903108e-06,
+            "ref_duration": 10.4583330154419
+          },
+          "tend": {
+            "godot_length": 10.0416669845581,
+            "max_err_m": 7.25613472241093e-06,
+            "ref_duration": 10.0416669845581
+          },
+          "write": {
+            "godot_length": 15.625,
+            "max_err_m": 6.53829692964791e-06,
+            "ref_duration": 15.625
+          }
+        },
+        "max_error_m": 8.25891765998676e-06,
+        "normals": {
+          "boots": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 654
+          },
+          "brows": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 124
+          },
+          "eyes": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 96
+          },
+          "habit": {
+            "face_agreement": 0.921359546817727,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 3001
+          },
+          "hair": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 828
+          },
+          "hood_down": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 880
+          },
+          "hood_up": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 974
+          },
+          "lashes": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 250
+          },
+          "skin": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 2797
+          }
+        },
+        "normals_pass": true,
+        "pass": true,
+        "person": "monk_a",
+        "tolerance_m": 0.001,
+        "worst": "sitBench t=6.625 ball_l godot=(0.154276, 0.100375, 0.527815) ref=[0.15428, 0.10037, 0.52781]"
+      },
+      "scribe_a": {
+        "checked_bone_samples": 297,
+        "clips": {
+          "dine": {
+            "godot_length": 9.04166698455811,
+            "max_err_m": 7.22744744052761e-06,
+            "ref_duration": 9.0416669845581
+          },
+          "kneelBow": {
+            "godot_length": 9.625,
+            "max_err_m": 6.44864439891535e-06,
+            "ref_duration": 9.625
+          },
+          "kneelPray": {
+            "godot_length": 9.625,
+            "max_err_m": 6.9116936174396e-06,
+            "ref_duration": 9.625
+          },
+          "read": {
+            "godot_length": 12.0416669845581,
+            "max_err_m": 6.98475150784361e-06,
+            "ref_duration": 12.0416669845581
+          },
+          "sitBench": {
+            "godot_length": 8.83333301544189,
+            "max_err_m": 7.26451071386691e-06,
+            "ref_duration": 8.83333301544189
+          },
+          "standBow": {
+            "godot_length": 10.4583330154419,
+            "max_err_m": 7.01764020050177e-06,
+            "ref_duration": 10.4583330154419
+          },
+          "standSleeves": {
+            "godot_length": 10.4583330154419,
+            "max_err_m": 6.94083882990526e-06,
+            "ref_duration": 10.4583330154419
+          },
+          "tend": {
+            "godot_length": 10.0416669845581,
+            "max_err_m": 7.10977474227548e-06,
+            "ref_duration": 10.0416669845581
+          },
+          "write": {
+            "godot_length": 15.625,
+            "max_err_m": 7.27849737813813e-06,
+            "ref_duration": 15.625
+          }
+        },
+        "max_error_m": 7.27849737813813e-06,
+        "normals": {
+          "boots": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 652
+          },
+          "brows": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 124
+          },
+          "eyes": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 96
+          },
+          "habit": {
+            "face_agreement": 0.919171676686707,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 2994
+          },
+          "hair": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 829
+          },
+          "hood_down": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 881
+          },
+          "hood_up": {
+            "face_agreement": 0.998973305954825,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 974
+          },
+          "lashes": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 250
+          },
+          "skin": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 2803
+          }
+        },
+        "normals_pass": true,
+        "pass": true,
+        "person": "scribe_a",
+        "tolerance_m": 0.001,
+        "worst": "write t=11.708333 hand_r godot=(-0.042174, 1.060204, 0.417186) ref=[-0.04217, 1.0602, 0.41719]"
+      },
+      "monk_b": {
+        "checked_bone_samples": 297,
+        "clips": {
+          "dine": {
+            "godot_length": 9.04166698455811,
+            "max_err_m": 7.17588000043179e-06,
+            "ref_duration": 9.0416669845581
+          },
+          "kneelBow": {
+            "godot_length": 9.625,
+            "max_err_m": 7.47504145692801e-06,
+            "ref_duration": 9.625
+          },
+          "kneelPray": {
+            "godot_length": 9.625,
+            "max_err_m": 6.77315165376058e-06,
+            "ref_duration": 9.625
+          },
+          "read": {
+            "godot_length": 12.0416669845581,
+            "max_err_m": 5.91446587350219e-06,
+            "ref_duration": 12.0416669845581
+          },
+          "sitBench": {
+            "godot_length": 8.83333301544189,
+            "max_err_m": 6.11082168688881e-06,
+            "ref_duration": 8.83333301544189
+          },
+          "standBow": {
+            "godot_length": 10.4583330154419,
+            "max_err_m": 7.28487202650285e-06,
+            "ref_duration": 10.4583330154419
+          },
+          "standSleeves": {
+            "godot_length": 10.4583330154419,
+            "max_err_m": 7.21305468687206e-06,
+            "ref_duration": 10.4583330154419
+          },
+          "tend": {
+            "godot_length": 10.0416669845581,
+            "max_err_m": 6.29396163276397e-06,
+            "ref_duration": 10.0416669845581
+          },
+          "write": {
+            "godot_length": 15.625,
+            "max_err_m": 6.40632970316801e-06,
+            "ref_duration": 15.625
+          }
+        },
+        "max_error_m": 7.47504145692801e-06,
+        "normals": {
+          "boots": {
+            "face_agreement": 0.998463901689708,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 651
+          },
+          "brows": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 124
+          },
+          "eyes": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 96
+          },
+          "habit": {
+            "face_agreement": 0.919973324441481,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 2999
+          },
+          "hair": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 830
+          },
+          "hood_down": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 889
+          },
+          "hood_up": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 980
+          },
+          "lashes": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 250
+          },
+          "skin": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 2807
+          }
+        },
+        "normals_pass": true,
+        "pass": true,
+        "person": "monk_b",
+        "tolerance_m": 0.001,
+        "worst": "kneelBow t=4.833333 foot_r godot=(-0.123813, 0.099555, -0.249486) ref=[-0.12381, 0.09956, -0.24949]"
+      },
+      "novice_a": {
+        "checked_bone_samples": 297,
+        "clips": {
+          "dine": {
+            "godot_length": 9.04166698455811,
+            "max_err_m": 7.70718907006085e-06,
+            "ref_duration": 9.0416669845581
+          },
+          "kneelBow": {
+            "godot_length": 9.625,
+            "max_err_m": 7.54021220927825e-06,
+            "ref_duration": 9.625
+          },
+          "kneelPray": {
+            "godot_length": 9.625,
+            "max_err_m": 6.92558296577772e-06,
+            "ref_duration": 9.625
+          },
+          "read": {
+            "godot_length": 12.0416669845581,
+            "max_err_m": 7.27908400222077e-06,
+            "ref_duration": 12.0416669845581
+          },
+          "sitBench": {
+            "godot_length": 8.83333301544189,
+            "max_err_m": 7.78448429628043e-06,
+            "ref_duration": 8.83333301544189
+          },
+          "standBow": {
+            "godot_length": 10.4583330154419,
+            "max_err_m": 7.2071802605933e-06,
+            "ref_duration": 10.4583330154419
+          },
+          "standSleeves": {
+            "godot_length": 10.4583330154419,
+            "max_err_m": 7.48412958273548e-06,
+            "ref_duration": 10.4583330154419
+          },
+          "tend": {
+            "godot_length": 10.0416669845581,
+            "max_err_m": 7.23963739801547e-06,
+            "ref_duration": 10.0416669845581
+          },
+          "write": {
+            "godot_length": 15.625,
+            "max_err_m": 7.7219401646289e-06,
+            "ref_duration": 15.625
+          }
+        },
+        "max_error_m": 7.78448429628043e-06,
+        "normals": {
+          "boots": {
+            "face_agreement": 0.998491704374057,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 663
+          },
+          "brows": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 124
+          },
+          "eyes": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 96
+          },
+          "habit": {
+            "face_agreement": 0.919613075383589,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 2998
+          },
+          "hair": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 822
+          },
+          "hood_down": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 879
+          },
+          "hood_up": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 973
+          },
+          "lashes": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 250
+          },
+          "skin": {
+            "face_agreement": 1.0,
+            "pass": true,
+            "plus_z_share": 0.0,
+            "vertices": 2798
+          }
+        },
+        "normals_pass": true,
+        "pass": true,
+        "person": "novice_a",
+        "tolerance_m": 0.001,
+        "worst": "sitBench t=0.041667 ball_l godot=(0.135515, 0.088466, 0.442805) ref=[0.13552, 0.08847, 0.4428]"
+      }
+    },
+    "anchors": {
+      "checks": [
+        {
+          "error_m": 1.23262405393731e-06,
+          "expect_y": 0.77,
+          "godot_y": 0.770001232624054,
+          "id": "bench-contact",
+          "pass": true,
+          "surface": "stone"
+        },
+        {
+          "error_m": 6.43730163563117e-07,
+          "expect_y": 0.3,
+          "godot_y": 0.299999356269836,
+          "id": "cloister-walk-floor",
+          "pass": true,
+          "surface": "stone"
+        },
+        {
+          "error_m": 9.29832458473889e-07,
+          "expect_y": 0.35,
+          "godot_y": 0.349999070167542,
+          "id": "skull-chapel-floor",
+          "pass": true,
+          "surface": "churchStone"
+        },
+        {
+          "error_m": 4.29153442560448e-07,
+          "expect_y": -2.8,
+          "godot_y": -2.80000042915344,
+          "id": "landing-floor",
+          "pass": true,
+          "surface": "stone"
+        },
+        {
+          "error_m": 9.29832458473889e-07,
+          "expect_y": 0.35,
+          "godot_y": 0.349999070167542,
+          "id": "church-door-floor",
+          "pass": true,
+          "surface": "churchStone"
+        },
+        {
+          "expect": 0.31,
+          "id": "seat-root",
+          "pass": true,
+          "value": 0.31
+        },
+        {
+          "expect": [
+            14.652,
+            0.35,
+            -13.99
+          ],
+          "id": "altar-hinge",
+          "pass": true,
+          "value": [
+            14.6520004272461,
+            0.349999994039536,
+            -13.9899997711182
+          ]
+        },
+        {
+          "expect": "east corner south of the hinge, x < hinge.x + 0.2",
+          "id": "altar-pivot-direction",
+          "pass": true,
+          "value": [
+            14.8255243301392,
+            -12.5604934692383
+          ]
+        },
+        {
+          "id": "character-forward",
+          "pass": true,
+          "toe_ahead_of_ankle_z_m": [
+            0.126582249999046,
+            0.126582249999046
+          ]
+        },
+        {
+          "cast_head_m": 1.4998,
+          "cast_height_m": 1.6465,
+          "cast_pelvis_m": 0.8924,
+          "head_m": 1.49984657764435,
+          "id": "character-metric-scale",
+          "pass": true,
+          "pelvis_m": 0.892368733882904
+        }
+      ],
+      "pass": true,
+      "tolerance_m": 0.01
+    },
+    "functional": {
+      "pass": true,
+      "duration_s": 87.9360422222063,
+      "steps": [
+        {
+          "step": "15:00 Alinardo seated and present",
+          "pass": true
+        },
+        {
+          "step": "asked without observation: no hint",
+          "pass": true
+        },
+        {
+          "step": "altar inspected: altar-feature once, still closed",
+          "pass": true
+        },
+        {
+          "step": "closed altar blocks the descent",
+          "pass": true
+        },
+        {
+          "step": "hint granted with by: alinardo",
+          "pass": true
+        },
+        {
+          "step": "altar opened by normal input; no passage knowledge yet",
+          "pass": true
+        },
+        {
+          "step": "walked down: altar-passage and route 0 earned",
+          "pass": true
+        },
+        {
+          "step": "room classification skull → ossuary (no cemetery flash)",
+          "pass": true
+        },
+        {
+          "step": "saved (player, time, altar, knowledge)",
+          "pass": true
+        }
+      ]
+    },
+    "reload": {
+      "pass": true,
+      "duration_s": 3.17457700000002,
+      "steps": [
+        {
+          "step": "relaunch: save loaded",
+          "pass": true
+        },
+        {
+          "step": "knowledge survives exactly (no duplicates)",
+          "pass": true
+        },
+        {
+          "step": "altar state survives",
+          "pass": true
+        },
+        {
+          "step": "time survives",
+          "pass": true
+        },
+        {
+          "step": "player location survives",
+          "pass": true
+        },
+        {
+          "step": "close/reopen coherent after load",
+          "pass": true
+        },
+        {
+          "step": "debug jump below the altar grants nothing",
+          "pass": true
+        },
+        {
+          "step": "truncated save recovered safely and reported",
+          "pass": true
+        }
+      ]
+    },
+    "committed_derivative_and_font_hashes_verified": 154,
+    "package_audit": {
+      "bytes": 45646872,
+      "format": 4,
+      "engine": "4.7.2",
+      "file_count": 561,
+      "by_dir": {
+        ".godot/exported": {
+          "files": 39,
+          "bytes": 84216
+        },
+        ".godot/global_script_class_cache.cfg": {
+          "files": 1,
+          "bytes": 5162
+        },
+        ".godot/imported": {
+          "files": 193,
+          "bytes": 45070131
+        },
+        ".godot/uid_cache.bin": {
+          "files": 1,
+          "bytes": 12781
+        },
+        "assets/audio": {
+          "files": 81,
+          "bytes": 12731
+        },
+        "assets/characters": {
+          "files": 45,
+          "bytes": 12101
+        },
+        "assets/fonts": {
+          "files": 9,
+          "bytes": 14446
+        },
+        "assets/textures": {
+          "files": 33,
+          "bytes": 8381
+        },
+        "assets/world": {
+          "files": 69,
+          "bytes": 146274
+        },
+        "content/anchors.json": {
+          "files": 1,
+          "bytes": 6658
+        },
+        "content/cast.json": {
+          "files": 1,
+          "bytes": 1009
+        },
+        "content/content_manifest.json": {
+          "files": 1,
+          "bytes": 3462
+        },
+        "content/crowd.json": {
+          "files": 1,
+          "bytes": 6582
+        },
+        "content/discoveries.json": {
+          "files": 1,
+          "bytes": 3264
+        },
+        "content/entities.json": {
+          "files": 1,
+          "bytes": 1111
+        },
+        "content/horarium.json": {
+          "files": 1,
+          "bytes": 3089
+        },
+        "content/interactions.json": {
+          "files": 1,
+          "bytes": 2595
+        },
+        "content/locations.json": {
+          "files": 1,
+          "bytes": 3430
+        },
+        "content/portals.json": {
+          "files": 1,
+          "bytes": 1127
+        },
+        "content/provenance.json": {
+          "files": 1,
+          "bytes": 6468
+        },
+        "content/routines.json": {
+          "files": 1,
+          "bytes": 1003
+        },
+        "content/sounds.json": {
+          "files": 1,
+          "bytes": 4615
+        },
+        "content/world.json": {
+          "files": 1,
+          "bytes": 5143
+        },
+        "icon.svg": {
+          "files": 1,
+          "bytes": 314
+        },
+        "icon.svg.import": {
+          "files": 1,
+          "bytes": 193
+        },
+        "project.binary": {
+          "files": 1,
+          "bytes": 12731
+        },
+        "scenes/main.tscn.remap": {
+          "files": 1,
+          "bytes": 97
+        },
+        "scripts/adapters": {
+          "files": 18,
+          "bytes": 51997
+        },
+        "scripts/bench": {
+          "files": 4,
+          "bytes": 32644
+        },
+        "scripts/domain": {
+          "files": 38,
+          "bytes": 36321
+        },
+        "scripts/foundation_boot.gd.remap": {
+          "files": 1,
+          "bytes": 50
+        },
+        "scripts/foundation_boot.gdc": {
+          "files": 1,
+          "bytes": 960
+        },
+        "scripts/main.gd.remap": {
+          "files": 1,
+          "bytes": 39
+        },
+        "scripts/main.gdc": {
+          "files": 1,
+          "bytes": 10283
+        },
+        "scripts/ui": {
+          "files": 2,
+          "bytes": 10795
+        },
+        "shaders/abbey_pbr.gdshader": {
+          "files": 1,
+          "bytes": 224
+        },
+        "shaders/abbey_pbr.gdshaderinc": {
+          "files": 1,
+          "bytes": 10714
+        },
+        "shaders/abbey_pbr_alpha.gdshader": {
+          "files": 1,
+          "bytes": 242
+        },
+        "shaders/abbey_pbr_alpha_depth.gdshader": {
+          "files": 1,
+          "bytes": 243
+        },
+        "shaders/abbey_pbr_double.gdshader": {
+          "files": 1,
+          "bytes": 228
+        },
+        "shaders/browser_sky.gdshader": {
+          "files": 1,
+          "bytes": 4753
+        }
+      },
+      "forbidden_paths": [],
+      "forbidden_strings": [],
+      "pass": true
+    },
+    "development_packages": {
+      "builds/phase1/windows/AbbeySlice.exe": {
+        "sha256": "d34d36f3be1a6c49c56525ae86469b92e4f417ddf0b43cf00dd80c385c4b0562",
+        "bytes": 109268480
+      },
+      "builds/phase1/windows/AbbeySlice.pck": {
+        "sha256": "cb1db9c503fc3f248fef5b7a72dad300b2e60172213e17aad4442f5b6adbff74",
+        "bytes": 45646872
+      },
+      "builds/phase1/macos/AbbeySlice.app/Contents/MacOS/Abbey Slice": {
+        "sha256": "44634cb9893d1a9ff6eacd0bd37783ade91068134fe5c486a1f18730aa9fd259",
+        "bytes": 170963648
+      },
+      "builds/phase1/AbbeySlice-windows-x86_64.zip": {
+        "sha256": "85c91ebc40209aad683ce8e23a45d2b4253ebaa0ea1fe3f69daffc56479609e2",
+        "bytes": 79150794
+      },
+      "builds/phase1/AbbeySlice-macos-universal.zip": {
+        "sha256": "2d37891ef6207ce4b3f37ac62c623f1a428d7e0c9d20bfc24a49d3538b6a2032",
+        "bytes": 101695822
+      }
+    },
+    "visual_smoke": {
+      "rendered": true,
+      "draw_buffer": [
+        1280,
+        720
+      ],
+      "requested": [
+        "alinardo_front",
+        "cloister_day",
+        "altar_open",
+        "landing_boundary"
+      ],
+      "anomaly": "Filtered multi-shot cloister_day image duplicated alinardo_front; separate single-shot cloister_day showed the correct view matching frozen evidence.",
+      "full_visual_approval": false,
+      "captures": "Local ignored QA output; frozen original native/browser captures retained in docs/evidence/phase1/visual"
+    },
+    "diagnostics": "Known ObjectDB/resource-at-exit warnings in test/render harnesses; invalid-condition negative test intentionally emits an error. Import error gate passed; not an error-free harness claim."
+  },
+  "source_only_copy": {
+    "files": 1206,
+    "bytes": 194613076,
+    "private_masters": false,
+    "raw_export_cache": false,
+    "native_cache": false,
+    "runtime_content": false,
+    "method": "Copy of existing Git-tracked/eligible nonignored files before final staging; deleted paths omitted.",
+    "location": "Temporary path containing spaces and non-ASCII characters; not the mounted case-sensitive APFS trial",
+    "command": "bash scripts/migration/build_phase1.sh --fresh --functional --no-export",
+    "pass": true,
+    "domain": {
+      "engine": "4.7.2-stable (official)",
+      "failures": 0,
+      "passed": 22,
+      "results": [
+        {
+          "pass": true,
+          "test": "test_content_references_and_evidence"
+        },
+        {
+          "pass": true,
+          "test": "test_condition_vocabulary_is_closed"
+        },
+        {
+          "pass": true,
+          "test": "test_horarium_matches_browser"
+        },
+        {
+          "pass": true,
+          "test": "test_alinardo_availability_matches_browser"
+        },
+        {
+          "pass": true,
+          "test": "test_discovery_predicates_match_browser"
+        },
+        {
+          "pass": true,
+          "test": "test_clock_signals_on_office_change"
+        },
+        {
+          "pass": true,
+          "test": "test_altar_alinardo_sequence"
+        },
+        {
+          "pass": true,
+          "test": "test_alinardo_absent_cannot_be_asked"
+        },
+        {
+          "pass": true,
+          "test": "test_descent_awards_passage_once"
+        },
+        {
+          "pass": true,
+          "test": "test_descent_requires_open_altar_approach"
+        },
+        {
+          "pass": true,
+          "test": "test_teleport_and_load_never_fabricate_traversal"
+        },
+        {
+          "pass": true,
+          "test": "test_descent_window_expires"
+        },
+        {
+          "pass": true,
+          "test": "test_stair_classification_has_no_flicker"
+        },
+        {
+          "pass": true,
+          "test": "test_exit_permit_matches_browser"
+        },
+        {
+          "pass": true,
+          "test": "test_curfew_outside_denied_inside_exit_allowed"
+        },
+        {
+          "pass": true,
+          "test": "test_church_path_matches_browser"
+        },
+        {
+          "pass": true,
+          "test": "test_office_does_not_restart_within_an_office"
+        },
+        {
+          "pass": true,
+          "test": "test_prime_lists_browser_pieces"
+        },
+        {
+          "pass": true,
+          "test": "test_lighting_and_chant_follow_the_canonical_clock"
+        },
+        {
+          "pass": true,
+          "test": "test_save_round_trip_and_idempotent_knowledge"
+        },
+        {
+          "pass": true,
+          "test": "test_save_recovery"
+        },
+        {
+          "pass": true,
+          "test": "test_save_rejects_tampering_and_unknown_ids"
+        }
+      ],
+      "total": 22
+    },
+    "functional": {
+      "pass": true,
+      "duration_s": 87.9676709999827,
+      "steps": [
+        {
+          "step": "15:00 Alinardo seated and present",
+          "pass": true
+        },
+        {
+          "step": "asked without observation: no hint",
+          "pass": true
+        },
+        {
+          "step": "altar inspected: altar-feature once, still closed",
+          "pass": true
+        },
+        {
+          "step": "closed altar blocks the descent",
+          "pass": true
+        },
+        {
+          "step": "hint granted with by: alinardo",
+          "pass": true
+        },
+        {
+          "step": "altar opened by normal input; no passage knowledge yet",
+          "pass": true
+        },
+        {
+          "step": "walked down: altar-passage and route 0 earned",
+          "pass": true
+        },
+        {
+          "step": "room classification skull → ossuary (no cemetery flash)",
+          "pass": true
+        },
+        {
+          "step": "saved (player, time, altar, knowledge)",
+          "pass": true
+        }
+      ]
+    },
+    "reload": {
+      "pass": true,
+      "duration_s": 3.16944444444446,
+      "steps": [
+        {
+          "step": "relaunch: save loaded",
+          "pass": true
+        },
+        {
+          "step": "knowledge survives exactly (no duplicates)",
+          "pass": true
+        },
+        {
+          "step": "altar state survives",
+          "pass": true
+        },
+        {
+          "step": "time survives",
+          "pass": true
+        },
+        {
+          "step": "player location survives",
+          "pass": true
+        },
+        {
+          "step": "close/reopen coherent after load",
+          "pass": true
+        },
+        {
+          "step": "debug jump below the altar grants nothing",
+          "pass": true
+        },
+        {
+          "step": "truncated save recovered safely and reported",
+          "pass": true
+        }
+      ]
+    },
+    "migration_node_modules": false
+  },
+  "browser": {
+    "relocated_reference_shots": {
+      "module": "reference_shots.js",
+      "url": "http://localhost:8017/?debug&qa&quality=balanced&time=15",
+      "kit_js_sha256": "a50f7c6baa9ce69419181d6d19a91a9e6c387a74ad2a176df87a99a1e6bf42da",
+      "served_adapter_sha256": "957dbb596858e8a7edb829ceee6b19be46f004465d153e145c8e888db23b396c",
+      "result": [
+        {
+          "name": "cloister",
+          "file": ".local/agent-b-audit/browser-smoke/cloister_browser.png",
+          "zone": "cloister",
+          "feet": [
+            20.000000000000036,
+            0.299990011920926,
+            4.900000000000036
+          ],
+          "exposure": 0.6,
+          "time": 15
+        },
+        {
+          "name": "alinardo",
+          "file": ".local/agent-b-audit/browser-smoke/alinardo_browser.png",
+          "zone": "cloister",
+          "feet": [
+            -8.249999999999288,
+            0.299990011920926,
+            14.135000000002949
+          ],
+          "exposure": 0.6,
+          "time": 15
+        },
+        {
+          "name": "church",
+          "file": ".local/agent-b-audit/browser-smoke/church_browser.png",
+          "zone": "church",
+          "feet": [
+            25.000000000000007,
+            0.34998999403953257,
+            -5.45999999999999
+          ],
+          "exposure": 1.6475328590676956,
+          "time": 7.670000000000002
+        }
+      ]
+    },
+    "static_subpath_smoke": {
+      "pass": true,
+      "url": "http://127.0.0.1:8029/web-reference/",
+      "pageErrors": [],
+      "failedRequests": [],
+      "state": {
+        "zone": null,
+        "loaderDone": true,
+        "colliderMeshCount": 7
+      },
+      "browser": "Chrome/154.0.8037.93",
+      "scope": "Current heavier browser reference; not lightweight budgets"
+    },
+    "build": {
+      "product": "browser-reference",
+      "lightweight_explorer": false,
+      "files": 396,
+      "bytes": 52152150,
+      "excluded": [
+        "book_details",
+        ".local",
+        "native",
+        "docs",
+        "unassigned review music"
+      ]
+    }
+  },
+  "book_evidence_sha256": {
+    "abbey_hierarchy.json": "58afe7ff26572dc359f287f411761a4e97c5015a7da6d97cce97788c084e396f",
+    "access_graph.json": "ff0cddbc44b4f5bccb78061d46bf94bcba290bdd891bc92886656d5b84cc0b32",
+    "claims.jsonl": "f2ccb46a8418ce3bc6fd55ffc39349af2876105f28e9826c76dcc635b07cd89e",
+    "consolidation_summary.json": "744904b6be2a126c1b12e9e38e5ccd264c7495f31edd8573d5c6cba9f5bec469",
+    "facts.json": "8249626d15542d6c2de8619435916e352404252e5fa3ac54ac640409ffafd292",
+    "movement_graph.json": "61c860cc1411d8aeef58809952bfe975247107f3f7142036443edce68a95d772",
+    "reconstruction_constraints.json": "e8fc21619ad82b510f7cd74ddf14cbf203b6ddf1f1ed2b6cdb8d9c975ba2ca9a",
+    "spatial_graph.json": "e90476edfa30de19bd726b1c125de1dab425a73643dd80cc5b381bfb0dd9d6c2",
+    "visibility_graph.json": "b350663c4b8686cd319b57e3c311da7333365304607ec9bb1c057bdac5f1b5c6"
+  },
+  "not_tested": [
+    "Windows hardware W1/W2",
+    "Windows Vulkan/D3D12 runtime",
+    "Human audio listening",
+    "Complete focus/controller/keyboard-layout/audio-device matrix",
+    "Mac Intel",
+    "Public signing/notarization",
+    "Linux CI recipe",
+    "New lightweight web viewer budgets"
+  ],
+  "open_findings": [
+    "Stair unload 60–85 ms frame",
+    "Browser cast authored normals",
+    "Filtered multi-shot capture reliability",
+    "Source masters need durable backup",
+    "New original case needs implementation and unfamiliar-player tests"
+  ],
+  "historical_performance_audit": "docs/evidence/consolidation/phase1-raw-audit.json"
+}

@@ -4,7 +4,7 @@
 Godot writes a default `<file>.glb.import` on first import. For fitted task
 clips the defaults are lossy: animations are resampled at 30 fps and the
 AnimationPlayer keyframe optimizer drops keys (measured 4.9 mm hand drift
-on alinardo:tend, docs/migration/phase-1/evidence/import/). This tool rewrites
+on alinardo:tend, docs/evidence/phase1/import/). This tool rewrites
 the [params] so that:
   * animation/fps = 24  (the clips are keyed on exact multiples of 1/24 s)
   * the imported AnimationPlayer node: keyframe optimizer disabled (it is a
@@ -14,21 +14,21 @@ the [params] so that:
   * animation/remove_immutable_tracks stays true (Godot drops only tracks that
     equal the rest pose; the pose check proves the result)
 
-World cell GLBs (migration/data/manifests/world_derivatives.json): every
+World cell GLBs (shared/data/manifests/world_derivatives.json): every
 placeholder material, named by its browser semantic key, is bound at import
 time to the shared native material resource for that key; tangents are not
 generated (the abbey shader builds its tangent frame from UV derivatives,
 exactly as three does for these untangented meshes).
 
-Usage: python3 scripts/migration/godot_import_settings.py
+Usage: python3 scripts/native_import_settings.py
 """
 import json
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-MANIFEST = ROOT / 'migration/data/manifests/people_derivatives.json'
-WORLD = ROOT / 'migration/data/manifests/world_derivatives.json'
+MANIFEST = ROOT / 'shared/data/manifests/people_derivatives.json'
+WORLD = ROOT / 'shared/data/manifests/world_derivatives.json'
 
 
 def subresources(clips):

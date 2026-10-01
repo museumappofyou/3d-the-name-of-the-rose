@@ -10,6 +10,6 @@ const io=new NodeIO().registerExtensions(ALL_EXTENSIONS).registerDependencies({'
 const doc=await io.read(process.argv[2] || '.local/animals/work/horse.glb');
 if(doc.getRoot().listAnimations().length!==4)throw new Error('Expected four authored stable clips');
 await doc.transform(resample({tolerance:1e-4}),dedup(),prune(),reorder({encoder:MeshoptEncoder}),quantize(),meshopt({encoder:MeshoptEncoder,level:'medium'}));
-const out='assets/models/animal_horse_rancher.glb';
+const out='shared/assets/models/animal_horse_rancher.glb';
 await io.write(out,doc);
 console.log(out,fs.statSync(out).size,'bytes',doc.getRoot().listAnimations().map(a=>a.getName()));

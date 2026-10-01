@@ -20,7 +20,7 @@
 //     bisection so the lowest muzzle vertex over the clip rests just above
 //     the ground;
 //   - names the material 'sheep.fleece' (its coats are set in
-//     src/world/animals.js); keeps both maps at 1K as JPEG; meshopt-packs,
+//     web/src/world/animals.js); keeps both maps at 1K as JPEG; meshopt-packs,
 //     positions unquantized so the runtime can read bind-pose metres.
 //   node scripts/models/pack_sheep.mjs [SRC.glb]
 // (npm dependencies as in pack_pig.mjs)
@@ -32,7 +32,7 @@ import sharp from 'sharp';
 import fs from 'node:fs';
 
 const SRC = process.argv[2] || '.local/animals/src/sheep_candidates/67abff7459f34afca11e3effab62c761.glb';
-const OUT = 'assets/models/animal_sheep.glb';
+const OUT = 'shared/assets/models/animal_sheep.glb';
 const SHOULDER = 0.65;       // withers, metres, before the per-animal scale
 const FPS = 24, MUZZLE_CLEAR = 0.012;
 

@@ -1,5 +1,5 @@
 # Build the abbey's people: one GLB per designed person, from MakeHuman /
-# MPFB bodies with fitted CC0 garments (see docs/assets/MODEL_SOURCES.md).
+# MPFB bodies with fitted CC0 garments (see docs/ASSETS.md).
 #
 #   BLENDER_USER_RESOURCES=.local/tools/blender_user \
 #   .local/tools/Blender.app/Contents/MacOS/Blender -b --python scripts/people/build_people.py -- \

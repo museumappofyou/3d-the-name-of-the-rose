@@ -1,0 +1,666 @@
+{
+ "groups": [
+  {
+   "title": "Chant (human voices)",
+   "items": [
+    {
+     "title": "Deus in adjutorium meum intende (Vespers)",
+     "author": "Schola Gregoriana, Pallottine Seminary, Ołtarzew (cond. Dariusz Smolarek)",
+     "license": "CC BY-SA 3.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Schola_Gregoriana-Deus_in_adjutorium_meum_intende.ogg",
+     "note": "excerpt; shared under the same licence"
+    },
+    {
+     "title": "Veni creator spiritus (hymn)",
+     "author": "Membeth",
+     "license": "Public domain",
+     "url": "https://commons.wikimedia.org/wiki/File:Veni.creator.spiritus.ogg",
+     "note": "kept as source material; not sung in the November offices"
+    },
+    {
+     "title": "Lamentation III, Holy Saturday (tonus peregrinus)",
+     "author": "Membeth",
+     "license": "CC0 1.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Lamentation.III.Karsamstag.ogg",
+     "note": "kept as source material; not sung in the November offices"
+    },
+    {
+     "title": "Antiphona et Magnificat (Vespers) — Magnificat verses only",
+     "author": "Schola Gregoriana, Pallottine Seminary, Ołtarzew",
+     "license": "CC BY-SA 3.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Schola_Gregoriana-Antiphona_et_Magnificat.ogg",
+     "note": "excerpt; shared under the same licence"
+    },
+    {
+     "title": "San Antimo, monks singing Gregorian chant at a Sunday morning service",
+     "author": "Zyance (recording); the monks of Sant’Antimo",
+     "license": "CC BY-SA 3.0",
+     "url": "https://commons.wikimedia.org/wiki/File:Sanantimo_gregorian.ogg",
+     "note": "excerpt; shared under the same licence"
+    }
+   ]
+  },
+  {
+   "title": "Field and Foley recordings (Freesound)",
+   "items": [
+    {
+     "title": "Footsteps Dirt 01",
+     "author": "aglinder",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/264469/"
+    },
+    {
+     "title": "Digging a Hole and Shovelling Soil/Dirt 2",
+     "author": "Ali_6868",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/384362/"
+    },
+    {
+     "title": "metal bowl - hit - with wooden spoon 01.wav",
+     "author": "Anthousai",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/405665/"
+    },
+    {
+     "title": "Rooster crow",
+     "author": "arelitron",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/582624/"
+    },
+    {
+     "title": "Winter wind whistling through window.mp3",
+     "author": "audible-edge",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/69512/"
+    },
+    {
+     "title": "Fireplace.wav",
+     "author": "BonnyOrbit",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/484337/"
+    },
+    {
+     "title": "Fireplace crackling wood little flame.wav",
+     "author": "BonnyOrbit",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/484338/"
+    },
+    {
+     "title": "Fountain or water tap in monastery.wav",
+     "author": "BonnyOrbit",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/442539/"
+    },
+    {
+     "title": "Pot Lid",
+     "author": "bowlingballout",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/210100/"
+    },
+    {
+     "title": "Chicken clucking",
+     "author": "Breviceps",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/456803/"
+    },
+    {
+     "title": "Angelus chartres Cathedral",
+     "author": "bruno.auzet",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/796547/"
+    },
+    {
+     "title": "Ambience INT water drip dropping cave grotto spooky (quinta da regaleira portugal).flac",
+     "author": "corkob",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/392668/"
+    },
+    {
+     "title": "G38-16-Four Horse Snorts.wav",
+     "author": "craigsmith",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/437111/"
+    },
+    {
+     "title": "sfx-horse-steps-1.wav",
+     "author": "davilca",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/159498/"
+    },
+    {
+     "title": "Ladling soup.m4a",
+     "author": "frenchiefitz",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/644389/"
+    },
+    {
+     "title": "Chickens in the coop, morning",
+     "author": "fthgurdy",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/536693/"
+    },
+    {
+     "title": "Footsteps_Wood.wav",
+     "author": "Galbenshire",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/464519/"
+    },
+    {
+     "title": "Horse Eating",
+     "author": "gibarroule",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/365138/"
+    },
+    {
+     "title": "Horse chewing cud. 0.5m away",
+     "author": "gsparrysound",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/752136/"
+    },
+    {
+     "title": "Cough.wav",
+     "author": "Harris85",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/208761/"
+    },
+    {
+     "title": "Knife, Chopping",
+     "author": "HenKonen",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/757214/"
+    },
+    {
+     "title": "Muddy Footsteps",
+     "author": "Iman.Media",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/843134/"
+    },
+    {
+     "title": "Cow - Eating Trough - 96kHz.wav",
+     "author": "JarredGibb",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/233142/"
+    },
+    {
+     "title": "Church Clock Strikes 1.wav",
+     "author": "JarredGibb",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/219047/"
+    },
+    {
+     "title": "Cow - Moo (distant) - 96kHz.wav",
+     "author": "JarredGibb",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/233145/"
+    },
+    {
+     "title": "Big door creak.wav",
+     "author": "jemburyturner",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/273466/"
+    },
+    {
+     "title": "fire-crackling.wav",
+     "author": "jmehlferber",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/370938/"
+    },
+    {
+     "title": "Crow Caw",
+     "author": "Jofae",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/361470/"
+    },
+    {
+     "title": "Pour Splash metal bucket water.mp3",
+     "author": "JohnsonBrandEditing",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/173938/"
+    },
+    {
+     "title": "Hot metal in water.wav",
+     "author": "jokallset",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/395864/"
+    },
+    {
+     "title": "Ceramic clank and sliding over wooden table.wav",
+     "author": "kessir",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/264757/"
+    },
+    {
+     "title": "Pouring water in and out of different containers.wav",
+     "author": "kessir",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/264759/"
+    },
+    {
+     "title": "Opening Bench.mp3",
+     "author": "kingsrow",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/182689/"
+    },
+    {
+     "title": "winter wind 01a.aiff",
+     "author": "klangfabrik",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/117504/"
+    },
+    {
+     "title": "footsteps shoes walk hard floor stone patio nice.flac",
+     "author": "kyles",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/637555/"
+    },
+    {
+     "title": "Opening and closing a big old door.wav",
+     "author": "lazymonk",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/214307/"
+    },
+    {
+     "title": "Anvil - Lokomo A 100 kg - Forging very hot steel 1 time",
+     "author": "ldezem",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/386119/"
+    },
+    {
+     "title": "Anvil - Lokomo 125 kg - Hammer on 6mm steel 1 time short",
+     "author": "ldezem",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/386130/"
+    },
+    {
+     "title": "Wood - Chopping 1",
+     "author": "ldezem",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/386223/"
+    },
+    {
+     "title": "winter wind in trees.wav",
+     "author": "lwdickens",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/261226/"
+    },
+    {
+     "title": "Stable_chickens_horses.wav",
+     "author": "Lydmakeren",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/510915/"
+    },
+    {
+     "title": "Wood Door Close with Metal Latch 02",
+     "author": "MadMaxSFX",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/352329/"
+    },
+    {
+     "title": "Wooden Creak",
+     "author": "Mafon2",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/377552/"
+    },
+    {
+     "title": "Footsteps_Snow_07.wav",
+     "author": "MarcMatthewsMusic",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/420551/"
+    },
+    {
+     "title": "Horse Breathing.wav",
+     "author": "metaepitome",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/275388/"
+    },
+    {
+     "title": "Gate Latch",
+     "author": "mhtaylor67",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/126041/"
+    },
+    {
+     "title": "creaking floor OWI.wav",
+     "author": "miekyj",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/326460/"
+    },
+    {
+     "title": "Footsteps_6_Dirt_shoe.wav",
+     "author": "monte32",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/353799/"
+    },
+    {
+     "title": "steps_dry_grass.wav",
+     "author": "Mystikuum",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/377323/"
+    },
+    {
+     "title": "Footsteps on ice chunks.wav",
+     "author": "Navadaux",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/427524/"
+    },
+    {
+     "title": "Quill and Parchment.WAV",
+     "author": "Nickh69",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/507864/"
+    },
+    {
+     "title": "Iron_gate_courtyard_abbey_gardens_open_close_latch_mono.wav",
+     "author": "nickmaysoundmusic",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/460556/"
+    },
+    {
+     "title": "Footsteps_Boots_Tile_Mono.wav",
+     "author": "Nox_Sound",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/530588/"
+    },
+    {
+     "title": "Horse(snort)_3.wav",
+     "author": "o_ciz",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/475483/"
+    },
+    {
+     "title": "Cough (3)",
+     "author": "OwlStorm",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/151217/"
+    },
+    {
+     "title": "Goat bleating",
+     "author": "papimre",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/842964/"
+    },
+    {
+     "title": "Footsteps in Snow",
+     "author": "papimre",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/842972/"
+    },
+    {
+     "title": "male-foot-walk-marble-stereo.aif",
+     "author": "ragamuffin",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/118985/"
+    },
+    {
+     "title": "Footsteps Walking On Gravel Stones Medium Pace.wav",
+     "author": "ralph.whitehead",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/565720/"
+    },
+    {
+     "title": "old man cough",
+     "author": "riippumattog",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/848383/"
+    },
+    {
+     "title": "Renill de cavall / Horse Neigh",
+     "author": "Salsero_classic",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/826753/"
+    },
+    {
+     "title": "Broom Sweeping",
+     "author": "Sheyvan",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/831439/"
+    },
+    {
+     "title": "door creak 1.wav",
+     "author": "soundofsong",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/647646/"
+    },
+    {
+     "title": "sawing wood..wav",
+     "author": "Stefan21100190",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/593203/"
+    },
+    {
+     "title": "Cat Meow3.wav",
+     "author": "steffcaffrey",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/262314/"
+    },
+    {
+     "title": "Hooded crow.wav",
+     "author": "straget",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/404687/"
+    },
+    {
+     "title": "Donkeys - Squeaky High-Pitched Bray",
+     "author": "TheKingOfGeeks360",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/859477/"
+    },
+    {
+     "title": "Slow Footsteps With Natural Reverb.wav",
+     "author": "TrygveN",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/235438/"
+    },
+    {
+     "title": "1. Wood staircase, old, creaking, footsteps.WAV",
+     "author": "VMan533",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/575896/"
+    },
+    {
+     "title": "Footsteps Ice - Walk",
+     "author": "Vrymaa",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/785106/"
+    },
+    {
+     "title": "Footsteps Stone sequence.wav",
+     "author": "Wdomino",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/517141/"
+    },
+    {
+     "title": "Pig_Grunt_01.flac",
+     "author": "wwstudioswastaken",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/612680/"
+    },
+    {
+     "title": "Pig_Chewing_And_Grunting_01.flac",
+     "author": "wwstudioswastaken",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/620085/"
+    },
+    {
+     "title": "Pig_Grunt_04.flac",
+     "author": "wwstudioswastaken",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/612686/"
+    },
+    {
+     "title": "wet_footsteps_outside_06.flac",
+     "author": "wwstudioswastaken",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/624168/"
+    },
+    {
+     "title": "Turning page (heavy paper)",
+     "author": "xkeril",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/856497/"
+    },
+    {
+     "title": "sheep bleat outdoors",
+     "author": "Yuval",
+     "license": "CC0 1.0",
+     "url": "https://freesound.org/s/210511/"
+    }
+   ]
+  },
+  {
+   "title": "People",
+   "items": [
+    {
+     "title": "Authored bodies, system skins, eyes, brows, hair and rig (MakeHuman / MPFB)",
+     "author": "MakeHuman Community; Data Collection AB, Joel Palmius, Jonas Hauquier and contributors",
+     "license": "CC0 1.0 (exported assets)",
+     "url": "https://static.makehumancommunity.org/about/license.html"
+    },
+    {
+     "title": "Monk robe and raised/fallen hood; fitted, simplified, dark wool textures and sitting weights adapted",
+     "author": "Donitz",
+     "license": "CC0 1.0",
+     "url": "https://static.makehumancommunity.org/assets/assetpacks/suits02.html"
+    },
+    {
+     "title": "Lay tunic, trousers and boots; fitted and stripped of mail/ornament in the derived texture",
+     "author": "Rehman Polanski",
+     "license": "CC0 1.0",
+     "url": "https://static.makehumancommunity.org/assets/assetpacks/suits02.html"
+    },
+    {
+     "title": "Ankle boots, weathered skin variants",
+     "author": "MRT / toigo",
+     "license": "CC0 1.0",
+     "url": "https://static.makehumancommunity.org/assets/assetpacks/shoes01.html"
+    },
+    {
+     "title": "Additional old skin treatments",
+     "author": "onlytheghosts; jartur69",
+     "license": "CC0 1.0",
+     "url": "https://static.makehumancommunity.org/assets/assetpacks/skins02.html"
+    },
+    {
+     "title": "Short messy hair",
+     "author": "cortu",
+     "license": "CC0 1.0",
+     "url": "https://static.makehumancommunity.org/assets/assetpacks/hair01.html"
+    },
+    {
+     "title": "Ladies apron; fitted to workers, simplified and textured as stained linen / leather",
+     "author": "Elvaerwyn (elvs)",
+     "license": "CC BY (as supplied)",
+     "url": "https://static.makehumancommunity.org/assets/assetpacks/dress02.html"
+    },
+    {
+     "title": "Legacy photoscanned heads and hands (retained source assets; superseded in the live cast)",
+     "author": "elbolilloduro, via Mesh2Motion",
+     "license": "CC0 1.0",
+     "url": "https://github.com/Mesh2Motion/mesh2motion-app"
+    },
+    {
+     "title": "Universal Animation Library (motion clips)",
+     "author": "Quaternius, via Mesh2Motion",
+     "license": "CC0 1.0",
+     "url": "https://quaternius.com/packs/universalanimationlibrary.html"
+    },
+    {
+     "title": "Motion capture",
+     "author": "Carnegie Mellon University Graphics Lab, retargeted by Mesh2Motion",
+     "license": "free for all uses",
+     "url": "http://mocap.cs.cmu.edu/"
+    },
+    {
+     "title": "Low medieval boots worn by several lay servants; fitted, simplified, re-toned",
+     "author": "punkduck",
+     "license": "CC BY (as supplied)",
+     "url": "http://www.makehumancommunity.org/node/1381"
+    },
+    {
+     "title": "Scruffy beard (thresher, oldest kitchen servant)",
+     "author": "WDG",
+     "license": "CC0 1.0",
+     "url": "http://www.makehumancommunity.org/node/1769"
+    },
+    {
+     "title": "Rough beard and rough moustache (swineherd, carter)",
+     "author": "RehmanPolanski",
+     "license": "CC0 1.0",
+     "url": "http://www.makehumancommunity.org/node/2614"
+    },
+    {
+     "title": "Short chin beard (smith's striker, porter)",
+     "author": "culturalibre",
+     "license": "CC0 1.0",
+     "url": "http://www.makehumancommunity.org/node/2356"
+    },
+    {
+     "title": "Full trimmed beard (baker)",
+     "author": "grinsegold",
+     "license": "CC0 1.0",
+     "url": "http://www.makehumancommunity.org/node/877"
+    }
+   ]
+  },
+  {
+   "title": "Animals",
+   "items": [
+    {
+     "title": "Realtime Rancher horse mesh and photographic coat; metric conversion, new complete 23-joint rig, quiet planted-hoof motions and unmarked black coat adaptation",
+     "author": "Lyndon Daniels; ChadM (rigged source derivative)",
+     "license": "CC0 1.0",
+     "url": "https://opengameart.org/content/rigged-horse"
+    },
+    {
+     "title": "Pig (rigged, textured); simplified, lower legs lengthened, metric, idle and rooting clips; medieval black, brown and belted coats set in the app",
+     "author": "BojanBabic (@bokadigimon)",
+     "license": "CC BY 4.0",
+     "url": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-023/6d78fe9cec03483ba6d3e4ff30dc6265.glb",
+     "note": "Objaverse copy of Sketchfab 6d78fe9cec03483ba6d3e4ff30dc6265 (the Sketchfab page is gone; the licence is embedded in the file)"
+    },
+    {
+     "title": "Sheep; metric conversion, new seven-joint rig, planted-hoof idle and grazing motions; shared by sheep and lambs",
+     "author": "hendrikReyneke",
+     "license": "CC BY 4.0",
+     "url": "https://sketchfab.com/3d-models/sheep-67abff7459f34afca11e3effab62c761",
+     "note": "Downloaded source from the Objaverse mirror; author, source URL and licence preserved in GLB asset.extras. Rig, motions, texture compression and coat adaptation are modifications."
+    },
+    {
+     "title": "Ultimate Animated Animals / Farm Animals (legacy horse; donkey, cow, bull, dog, cat)",
+     "author": "Quaternius",
+     "license": "CC0 1.0",
+     "url": "https://poly.pizza/u/Quaternius"
+    },
+    {
+     "title": "Hen",
+     "author": "Poly by Google",
+     "license": "CC BY 3.0",
+     "url": "https://poly.pizza/m/8Unya0rw9tR"
+    },
+    {
+     "title": "Rooster",
+     "author": "Poly by Google",
+     "license": "CC BY 3.0",
+     "url": "https://poly.pizza/m/6NTegstc5Jy"
+    },
+    {
+     "title": "Goat",
+     "author": "Poly by Google",
+     "license": "CC BY 3.0",
+     "url": "https://poly.pizza/m/d7dImmjtF8E"
+    }
+   ]
+  },
+  {
+   "title": "Textures",
+   "items": [
+    {
+     "title": "PBR scans",
+     "author": "Poly Haven",
+     "license": "CC0 1.0",
+     "url": "https://polyhaven.com/license"
+    }
+   ]
+  }
+ ]
+}

@@ -5,7 +5,7 @@
 import { NodeIO } from '@gltf-transform/core';
 import { ALL_EXTENSIONS } from '@gltf-transform/extensions';
 import { MeshoptDecoder } from 'meshoptimizer';
-import { Matrix4, Vector3, Euler, Quaternion } from '../../lib/three/three.core.js';
+import { Matrix4, Vector3, Euler, Quaternion } from '../../web/lib/three/three.core.js';
 await MeshoptDecoder.ready;
 const io = new NodeIO().registerExtensions(ALL_EXTENSIONS).registerDependencies({ 'meshopt.decoder': MeshoptDecoder });
 const [before, after] = await Promise.all(process.argv.slice(2, 4).map(p => io.read(p)));

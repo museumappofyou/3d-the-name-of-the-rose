@@ -1,10 +1,10 @@
 // Pack the people built by build_people.py / build_motions.py for the web:
-//   assets/models/people/cast.glb     every designed person of cast.json in
+//   shared/assets/models/people/cast.glb     every designed person of cast.json in
 //                                     one file (shared textures stored once)
-//   assets/models/people/motions.glb  the motion library (reference skeleton
+//   shared/assets/models/people/motions.glb  the motion library (reference skeleton
 //                                     and clips), resampled
-//   assets/models/people/tasks.glb    work poses fitted to each person's rig
-//   assets/models/people/cast.json    what the runtime needs to know about
+//   shared/assets/models/people/tasks.glb    work poses fitted to each person's rig
+//   shared/assets/models/people/cast.json    what the runtime needs to know about
 //                                     each person and each clip
 // Meshopt-compressed like the abbey's other models.
 //   node scripts/people/pack_people.mjs [.local/mh/out]
@@ -38,7 +38,7 @@ if (process.argv[2] === '--decompress') {
 const TASKS_ONLY = process.argv.includes('--tasks-only');
 const SRC = path.resolve((process.argv[2] && !process.argv[2].startsWith('--') ? process.argv[2] : null) || path.join(ROOT, '.local/mh/out'));
 const outAt = process.argv.indexOf('--out');
-const OUT = path.resolve(outAt >= 0 ? process.argv[outAt + 1] : path.join(ROOT, 'assets/models/people'));
+const OUT = path.resolve(outAt >= 0 ? process.argv[outAt + 1] : path.join(ROOT, 'shared/assets/models/people'));
 fs.mkdirSync(OUT, { recursive: true });
 const CAST = JSON.parse(fs.readFileSync(path.join(HERE, 'cast.json'), 'utf8'));
 const report = Object.fromEntries(JSON.parse(fs.readFileSync(path.join(SRC, 'report.json'), 'utf8')).map(r => [r.id, r]));

@@ -1,0 +1,5 @@
+# Godot regenerates import caches and compiled resources.
+/.godot/
+/android/
+/content/
+*.translation

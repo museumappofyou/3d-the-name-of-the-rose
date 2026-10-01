@@ -1,0 +1,6326 @@
+{
+ "module": "slice_export.js",
+ "url": "http://localhost:8017/?debug&qa&quality=balanced&time=15",
+ "kit_js_sha256": "a50f7c6baa9ce69419181d6d19a91a9e6c387a74ad2a176df87a99a1e6bf42da",
+ "served_adapter_sha256": "957dbb596858e8a7edb829ceee6b19be46f004465d153e145c8e888db23b396c",
+ "result": {
+  "schema_version": 1,
+  "exporter": {
+   "three_revision": "180",
+   "gltf_exporter": "three r180 examples/jsm/exporters/GLTFExporter.js (pinned, scripts/migration/vendor)",
+   "only_visible": false
+  },
+  "coordinate_convention": "metres; +X east, +Y up, +Z south; same frame in Godot (no axis conversion)",
+  "snow_cover": 0.42,
+  "cells": [
+   {
+    "id": "ossuary_stair",
+    "rule": {
+     "batches": [
+      "ossuary"
+     ],
+     "center_box": {
+      "min": [
+       13.4,
+       -3.7,
+       -22.6
+      ],
+      "max": [
+       17.6,
+       1.3,
+       -13
+      ]
+     },
+     "clip_large": true,
+     "keep_plane": {
+      "origin": [
+       15.372,
+       -19.44
+      ],
+      "dir": [
+       0.628334,
+       -0.777944
+      ],
+      "max": 2.6,
+      "below_y": -0.2
+     }
+    },
+    "census": {
+     "parts": 289,
+     "tris": 41553,
+     "clipped": 2
+    },
+    "bounds": {
+     "min": [
+      13.872952,
+      -3.1,
+      -23.474777
+     ],
+     "max": [
+      18.826708,
+      1.80771,
+      -13.59
+     ]
+    },
+    "meshes": [
+     {
+      "key": "p.cryptStone",
+      "node": "ossuary_stair__p_cryptStone",
+      "triangles": 1060,
+      "vertices": 1600
+     },
+     {
+      "key": "flag",
+      "node": "ossuary_stair__flag",
+      "triangles": 10,
+      "vertices": 26
+     },
+     {
+      "key": "p.boneDark",
+      "node": "ossuary_stair__p_boneDark",
+      "triangles": 10658,
+      "vertices": 7346
+     },
+     {
+      "key": "p.bone",
+      "node": "ossuary_stair__p_bone",
+      "triangles": 22099,
+      "vertices": 15070
+     },
+     {
+      "key": "p.socket",
+      "node": "ossuary_stair__p_socket",
+      "triangles": 7726,
+      "vertices": 6144
+     }
+    ],
+    "collision": [
+     {
+      "surface": "stone",
+      "triangles": 366
+     },
+     {
+      "surface": "stoneWet",
+      "triangles": 4
+     }
+    ]
+   },
+   {
+    "id": "skull_chapel",
+    "rule": {
+     "batches": [
+      "church-interior",
+      "church-exterior"
+     ],
+     "center_box": {
+      "min": [
+       13,
+       -0.7,
+       -16.2
+      ],
+      "max": [
+       17.8,
+       9,
+       -12.75
+      ]
+     },
+     "clip_large": false
+    },
+    "census": {
+     "parts": 17,
+     "tris": 1502,
+     "clipped": 0
+    },
+    "bounds": {
+     "min": [
+      12.875,
+      -0.5,
+      -15.84
+     ],
+     "max": [
+      18.125,
+      8.43,
+      -12.89
+     ]
+    },
+    "meshes": [
+     {
+      "key": "church",
+      "node": "skull_chapel__church",
+      "triangles": 144,
+      "vertices": 288
+     },
+     {
+      "key": "roof",
+      "node": "skull_chapel__roof",
+      "triangles": 90,
+      "vertices": 197
+     },
+     {
+      "key": "plaster",
+      "node": "skull_chapel__plaster",
+      "triangles": 1152,
+      "vertices": 608
+     },
+     {
+      "key": "ashlar",
+      "node": "skull_chapel__ashlar",
+      "triangles": 116,
+      "vertices": 212
+     }
+    ],
+    "collision": [
+     {
+      "surface": "stoneOut",
+      "triangles": 144
+     },
+     {
+      "surface": "stone",
+      "triangles": 90
+     },
+     {
+      "surface": "churchStone",
+      "triangles": 116
+     }
+    ]
+   },
+   {
+    "id": "church_interior",
+    "rule": {
+     "batches": [
+      "church-interior"
+     ],
+     "center_box": {
+      "min": [
+       -13.6,
+       -0.65,
+       -19.6
+      ],
+      "max": [
+       51.6,
+       40,
+       3.4
+      ]
+     },
+     "clip_large": false
+    },
+    "census": {
+     "parts": 160,
+     "tris": 114570,
+     "clipped": 0
+    },
+    "bounds": {
+     "min": [
+      -13.02,
+      -0.15,
+      -19.32
+     ],
+     "max": [
+      51.220001,
+      17.869999,
+      2.52
+     ]
+    },
+    "meshes": [
+     {
+      "key": "churchIn",
+      "node": "church_interior__churchIn",
+      "triangles": 8576,
+      "vertices": 7901
+     },
+     {
+      "key": "plaster",
+      "node": "church_interior__plaster",
+      "triangles": 61776,
+      "vertices": 32604
+     },
+     {
+      "key": "ashlar",
+      "node": "church_interior__ashlar",
+      "triangles": 2470,
+      "vertices": 4302
+     },
+     {
+      "key": "wax",
+      "node": "church_interior__wax",
+      "triangles": 288,
+      "vertices": 324
+     },
+     {
+      "key": "flame",
+      "node": "church_interior__flame",
+      "triangles": 324,
+      "vertices": 297
+     },
+     {
+      "key": "woodDark",
+      "node": "church_interior__woodDark",
+      "triangles": 3336,
+      "vertices": 6672
+     },
+     {
+      "key": "bronze",
+      "node": "church_interior__bronze",
+      "triangles": 4230,
+      "vertices": 2826
+     },
+     {
+      "key": "gold",
+      "node": "church_interior__gold",
+      "triangles": 2996,
+      "vertices": 2460
+     },
+     {
+      "key": "p.linenWhite",
+      "node": "church_interior__p_linenWhite",
+      "triangles": 3906,
+      "vertices": 2272
+     },
+     {
+      "key": "fire",
+      "node": "church_interior__fire",
+      "triangles": 80,
+      "vertices": 61
+     },
+     {
+      "key": "iron",
+      "node": "church_interior__iron",
+      "triangles": 1776,
+      "vertices": 1374
+     },
+     {
+      "key": "wood",
+      "node": "church_interior__wood",
+      "triangles": 24656,
+      "vertices": 23884
+     },
+     {
+      "key": "p.vellum",
+      "node": "church_interior__p_vellum",
+      "triangles": 72,
+      "vertices": 144
+     },
+     {
+      "key": "p.leather",
+      "node": "church_interior__p_leather",
+      "triangles": 48,
+      "vertices": 96
+     },
+     {
+      "key": "parchment",
+      "node": "church_interior__parchment",
+      "triangles": 12,
+      "vertices": 24
+     },
+     {
+      "key": "linen",
+      "node": "church_interior__linen",
+      "triangles": 24,
+      "vertices": 48
+     }
+    ],
+    "collision": [
+     {
+      "surface": "churchStone",
+      "triangles": 8518
+     },
+     {
+      "surface": "wood",
+      "triangles": 3228
+     },
+     {
+      "surface": "stone",
+      "triangles": 3378
+     }
+    ]
+   },
+   {
+    "id": "church_exterior",
+    "rule": {
+     "batches": [
+      "church-exterior",
+      "thresholds"
+     ],
+     "center_box": {
+      "min": [
+       -16,
+       -1,
+       -21
+      ],
+      "max": [
+       52,
+       46,
+       4
+      ]
+     },
+     "exclude_keys": [
+      "tym.*"
+     ],
+     "clip_large": false
+    },
+    "census": {
+     "parts": 222,
+     "tris": 12010,
+     "clipped": 0
+    },
+    "bounds": {
+     "min": [
+      -18.969999,
+      -0.511202,
+      -19.870001
+     ],
+     "max": [
+      51.814865,
+      37.110001,
+      3.935
+     ]
+    },
+    "meshes": [
+     {
+      "key": "church",
+      "node": "church_exterior__church",
+      "triangles": 9680,
+      "vertices": 10141
+     },
+     {
+      "key": "glassOpaque",
+      "node": "church_exterior__glassOpaque",
+      "triangles": 660,
+      "vertices": 780
+     },
+     {
+      "key": "stained.2",
+      "node": "church_exterior__stained_2",
+      "triangles": 22,
+      "vertices": 26
+     },
+     {
+      "key": "stained.1",
+      "node": "church_exterior__stained_1",
+      "triangles": 132,
+      "vertices": 156
+     },
+     {
+      "key": "roof",
+      "node": "church_exterior__roof",
+      "triangles": 464,
+      "vertices": 996
+     },
+     {
+      "key": "stainedWarm",
+      "node": "church_exterior__stainedWarm",
+      "triangles": 176,
+      "vertices": 208
+     },
+     {
+      "key": "plasterExt",
+      "node": "church_exterior__plasterExt",
+      "triangles": 24,
+      "vertices": 48
+     },
+     {
+      "key": "flagExt",
+      "node": "church_exterior__flagExt",
+      "triangles": 56,
+      "vertices": 112
+     },
+     {
+      "key": "door",
+      "node": "church_exterior__door",
+      "triangles": 24,
+      "vertices": 48
+     },
+     {
+      "key": "iron",
+      "node": "church_exterior__iron",
+      "triangles": 108,
+      "vertices": 196
+     },
+     {
+      "key": "slate",
+      "node": "church_exterior__slate",
+      "triangles": 280,
+      "vertices": 616
+     },
+     {
+      "key": "bronze",
+      "node": "church_exterior__bronze",
+      "triangles": 384,
+      "vertices": 238
+     }
+    ],
+    "collision": [
+     {
+      "surface": "stoneOut",
+      "triangles": 7364
+     },
+     {
+      "surface": "stone",
+      "triangles": 808
+     },
+     {
+      "surface": "wood",
+      "triangles": 24
+     }
+    ]
+   },
+   {
+    "id": "cloister",
+    "rule": {
+     "batches": [
+      "claustrum-exterior",
+      "claustrum-interior",
+      "thresholds",
+      "nature"
+     ],
+     "center_box": {
+      "min": [
+       -11.7,
+       -1,
+       2.3
+      ],
+      "max": [
+       30.75,
+       13,
+       26.4
+      ]
+     },
+     "clip_large": false
+    },
+    "census": {
+     "parts": 181,
+     "tris": 32852,
+     "clipped": 0
+    },
+    "bounds": {
+     "min": [
+      -14.28,
+      -0.620354,
+      2.77
+     ],
+     "max": [
+      30.59,
+      7.6,
+      26.52
+     ]
+    },
+    "meshes": [
+     {
+      "key": "church",
+      "node": "cloister__church",
+      "triangles": 32064,
+      "vertices": 21964
+     },
+     {
+      "key": "flagExt",
+      "node": "cloister__flagExt",
+      "triangles": 48,
+      "vertices": 96
+     },
+     {
+      "key": "frieze",
+      "node": "cloister__frieze",
+      "triangles": 16,
+      "vertices": 32
+     },
+     {
+      "key": "roof",
+      "node": "cloister__roof",
+      "triangles": 16,
+      "vertices": 32
+     },
+     {
+      "key": "ashlar",
+      "node": "cloister__ashlar",
+      "triangles": 24,
+      "vertices": 48
+     },
+     {
+      "key": "aed",
+      "node": "cloister__aed",
+      "triangles": 120,
+      "vertices": 124
+     },
+     {
+      "key": "water",
+      "node": "cloister__water",
+      "triangles": 80,
+      "vertices": 84
+     },
+     {
+      "key": "beamExt",
+      "node": "cloister__beamExt",
+      "triangles": 36,
+      "vertices": 72
+     },
+     {
+      "key": "rubble",
+      "node": "cloister__rubble",
+      "triangles": 260,
+      "vertices": 408
+     },
+     {
+      "key": "stainedWarm",
+      "node": "cloister__stainedWarm",
+      "triangles": 88,
+      "vertices": 104
+     },
+     {
+      "key": "flag",
+      "node": "cloister__flag",
+      "triangles": 48,
+      "vertices": 80
+     },
+     {
+      "key": "beam",
+      "node": "cloister__beam",
+      "triangles": 16,
+      "vertices": 32
+     },
+     {
+      "key": "churchIn",
+      "node": "cloister__churchIn",
+      "triangles": 36,
+      "vertices": 72
+     }
+    ],
+    "collision": [
+     {
+      "surface": "stoneOut",
+      "triangles": 32348
+     },
+     {
+      "surface": "stone",
+      "triangles": 228
+     },
+     {
+      "surface": "wood",
+      "triangles": 36
+     }
+    ]
+   },
+   {
+    "id": "cloister_context",
+    "rule": {
+     "batches": [
+      "claustrum-exterior"
+     ],
+     "center_box": {
+      "min": [
+       -21,
+       -1,
+       2.3
+      ],
+      "max": [
+       52,
+       30,
+       42
+      ]
+     },
+     "exclude_keys": [
+      "chapterTympanum",
+      "hedge"
+     ],
+     "clip_large": false
+    },
+    "census": {
+     "parts": 114,
+     "tris": 8488,
+     "clipped": 0
+    },
+    "bounds": {
+     "min": [
+      -21.02,
+      -0.3,
+      2.22
+     ],
+     "max": [
+      51,
+      14,
+      45.099998
+     ]
+    },
+    "meshes": [
+     {
+      "key": "church",
+      "node": "cloister_context__church",
+      "triangles": 2784,
+      "vertices": 2343
+     },
+     {
+      "key": "flagExt",
+      "node": "cloister_context__flagExt",
+      "triangles": 20,
+      "vertices": 40
+     },
+     {
+      "key": "roof",
+      "node": "cloister_context__roof",
+      "triangles": 188,
+      "vertices": 380
+     },
+     {
+      "key": "aed",
+      "node": "cloister_context__aed",
+      "triangles": 120,
+      "vertices": 124
+     },
+     {
+      "key": "water",
+      "node": "cloister_context__water",
+      "triangles": 80,
+      "vertices": 84
+     },
+     {
+      "key": "beamExt",
+      "node": "cloister_context__beamExt",
+      "triangles": 36,
+      "vertices": 72
+     },
+     {
+      "key": "rubble",
+      "node": "cloister_context__rubble",
+      "triangles": 4004,
+      "vertices": 6202
+     },
+     {
+      "key": "glassOpaque",
+      "node": "cloister_context__glassOpaque",
+      "triangles": 1122,
+      "vertices": 1326
+     },
+     {
+      "key": "stainedWarm",
+      "node": "cloister_context__stainedWarm",
+      "triangles": 110,
+      "vertices": 130
+     },
+     {
+      "key": "door",
+      "node": "cloister_context__door",
+      "triangles": 24,
+      "vertices": 48
+     }
+    ],
+    "collision": [
+     {
+      "surface": "stoneOut",
+      "triangles": 5140
+     },
+     {
+      "surface": "stone",
+      "triangles": 192
+     },
+     {
+      "surface": "wood",
+      "triangles": 36
+     }
+    ]
+   }
+  ],
+  "excluded": {
+   "aed-exterior:aed": {
+    "parts": 306,
+    "tris": 12408
+   },
+   "aed-exterior:glass": {
+    "parts": 40,
+    "tris": 880
+   },
+   "aed-exterior:alabaster": {
+    "parts": 44,
+    "tris": 968
+   },
+   "aed-exterior:glassOpaque": {
+    "parts": 24,
+    "tris": 528
+   },
+   "aed-exterior:flag": {
+    "parts": 2,
+    "tris": 24
+   },
+   "aed-exterior:rubble": {
+    "parts": 1,
+    "tris": 44
+   },
+   "aed-exterior:roof": {
+    "parts": 5,
+    "tris": 1048
+   },
+   "aed-exterior:iron": {
+    "parts": 4,
+    "tris": 96
+   },
+   "aed-exterior:bronze": {
+    "parts": 4,
+    "tris": 1152
+   },
+   "aed-ground:flag": {
+    "parts": 1,
+    "tris": 344
+   },
+   "aed-ground:aedIn": {
+    "parts": 151,
+    "tris": 12928
+   },
+   "aed-ground:plaster": {
+    "parts": 31,
+    "tris": 67789
+   },
+   "aed-ground:water": {
+    "parts": 2,
+    "tris": 24
+   },
+   "aed-ground:rubbleIn": {
+    "parts": 3,
+    "tris": 722
+   },
+   "aed-ground:p.coal": {
+    "parts": 5,
+    "tris": 2684
+   },
+   "aed-ground:p.ember": {
+    "parts": 3,
+    "tris": 6960
+   },
+   "aed-ground:char": {
+    "parts": 3,
+    "tris": 216
+   },
+   "aed-ground:wood": {
+    "parts": 15,
+    "tris": 852
+   },
+   "aed-ground:p.bread": {
+    "parts": 64,
+    "tris": 5700
+   },
+   "aed-ground:bark": {
+    "parts": 2,
+    "tris": 1008
+   },
+   "aed-ground:p.grainSack": {
+    "parts": 5,
+    "tris": 1840
+   },
+   "aed-ground:straw": {
+    "parts": 4,
+    "tris": 524
+   },
+   "aed-ground:iron": {
+    "parts": 18,
+    "tris": 792
+   },
+   "aed-ground:p.roast": {
+    "parts": 1,
+    "tris": 224
+   },
+   "aed-ground:door": {
+    "parts": 1,
+    "tris": 12
+   },
+   "aed-ground:woodDark": {
+    "parts": 32,
+    "tris": 2244
+   },
+   "aed-ground:p.greens": {
+    "parts": 15,
+    "tris": 180
+   },
+   "aed-ground:p.onion": {
+    "parts": 15,
+    "tris": 2160
+   },
+   "aed-ground:p.cabbage": {
+    "parts": 3,
+    "tris": 8436
+   },
+   "aed-ground:p.earthenware": {
+    "parts": 87,
+    "tris": 27444
+   },
+   "aed-ground:p.glazeBrown": {
+    "parts": 62,
+    "tris": 24512
+   },
+   "aed-ground:p.earthenDark": {
+    "parts": 34,
+    "tris": 8808
+   },
+   "aed-ground:p.glass": {
+    "parts": 15,
+    "tris": 3360
+   },
+   "aed-ground:p.glazeGreen": {
+    "parts": 21,
+    "tris": 4704
+   },
+   "aed-ground:beam": {
+    "parts": 2,
+    "tris": 24
+   },
+   "aed-ground:p.twine": {
+    "parts": 30,
+    "tris": 540
+   },
+   "aed-ground:p.herbStem": {
+    "parts": 15,
+    "tris": 1008
+   },
+   "aed-ground:p.herbDry": {
+    "parts": 10,
+    "tris": 6880
+   },
+   "aed-ground:p.herbGreen": {
+    "parts": 5,
+    "tris": 3200
+   },
+   "aed-ground:pottery": {
+    "parts": 3,
+    "tris": 240
+   },
+   "aed-ground:flame": {
+    "parts": 4,
+    "tris": 144
+   },
+   "aed-ground:ashlar": {
+    "parts": 1,
+    "tris": 12
+   },
+   "aed-ground:bronze": {
+    "parts": 1,
+    "tris": 168
+   },
+   "aed-ground:wax": {
+    "parts": 1,
+    "tris": 32
+   },
+   "aed-ground:silver": {
+    "parts": 1,
+    "tris": 48
+   },
+   "aed-ground:parchment": {
+    "parts": 1,
+    "tris": 12
+   },
+   "aed-ground:fire": {
+    "parts": 4,
+    "tris": 144
+   },
+   "aed-scriptorium:boards": {
+    "parts": 1,
+    "tris": 568
+   },
+   "aed-scriptorium:p.strew": {
+    "parts": 110,
+    "tris": 220
+   },
+   "aed-scriptorium:plaster": {
+    "parts": 25,
+    "tris": 67565
+   },
+   "aed-scriptorium:aedIn": {
+    "parts": 137,
+    "tris": 9424
+   },
+   "aed-scriptorium:wood": {
+    "parts": 41,
+    "tris": 2940
+   },
+   "aed-scriptorium:woodDark": {
+    "parts": 70,
+    "tris": 2284
+   },
+   "aed-scriptorium:p.vellum": {
+    "parts": 66,
+    "tris": 20928
+   },
+   "aed-scriptorium:iron": {
+    "parts": 82,
+    "tris": 1488
+   },
+   "aed-scriptorium:p.leather": {
+    "parts": 26,
+    "tris": 312
+   },
+   "aed-scriptorium:p.boneDark": {
+    "parts": 40,
+    "tris": 4000
+   },
+   "aed-scriptorium:p.ink": {
+    "parts": 40,
+    "tris": 1280
+   },
+   "aed-scriptorium:p.quill": {
+    "parts": 40,
+    "tris": 560
+   },
+   "aed-scriptorium:ashlar": {
+    "parts": 40,
+    "tris": 480
+   },
+   "aed-scriptorium:parchment": {
+    "parts": 3,
+    "tris": 36
+   },
+   "aed-scriptorium:catalogueLeaf": {
+    "parts": 1,
+    "tris": 2
+   },
+   "aed-scriptorium:gold": {
+    "parts": 1,
+    "tris": 12
+   },
+   "aed-scriptorium:char": {
+    "parts": 1,
+    "tris": 64
+   },
+   "aed-scriptorium:p.ember": {
+    "parts": 1,
+    "tris": 2240
+   },
+   "aed-scriptorium:p.coal": {
+    "parts": 1,
+    "tris": 480
+   },
+   "aed-scriptorium:door": {
+    "parts": 2,
+    "tris": 48
+   },
+   "aed-library:terracotta": {
+    "parts": 2,
+    "tris": 452
+   },
+   "aed-library:plaster": {
+    "parts": 58,
+    "tris": 43972
+   },
+   "aed-library:aedIn": {
+    "parts": 282,
+    "tris": 15916
+   },
+   "aed-library:plasterStone": {
+    "parts": 100,
+    "tris": 4296
+   },
+   "aed-library:scroll_0": {
+    "parts": 1,
+    "tris": 18
+   },
+   "aed-library:scroll_1": {
+    "parts": 1,
+    "tris": 10
+   },
+   "aed-library:scroll_2": {
+    "parts": 1,
+    "tris": 12
+   },
+   "aed-library:scroll_3": {
+    "parts": 1,
+    "tris": 6
+   },
+   "aed-library:scroll_4": {
+    "parts": 1,
+    "tris": 2
+   },
+   "aed-library:scroll_5": {
+    "parts": 1,
+    "tris": 8
+   },
+   "aed-library:scroll_6": {
+    "parts": 1,
+    "tris": 14
+   },
+   "aed-library:scroll_7": {
+    "parts": 1,
+    "tris": 14
+   },
+   "aed-library:scroll_8": {
+    "parts": 1,
+    "tris": 4
+   },
+   "aed-library:scroll_9": {
+    "parts": 1,
+    "tris": 8
+   },
+   "aed-library:scroll_10": {
+    "parts": 1,
+    "tris": 2
+   },
+   "aed-library:scroll_11": {
+    "parts": 1,
+    "tris": 8
+   },
+   "aed-library:scroll_12": {
+    "parts": 1,
+    "tris": 4
+   },
+   "aed-library:scroll_13": {
+    "parts": 1,
+    "tris": 8
+   },
+   "aed-library:scroll_14": {
+    "parts": 1,
+    "tris": 4
+   },
+   "aed-library:scroll_15": {
+    "parts": 1,
+    "tris": 4
+   },
+   "aed-library:scroll_16": {
+    "parts": 1,
+    "tris": 4
+   },
+   "aed-library:scroll_17": {
+    "parts": 1,
+    "tris": 4
+   },
+   "aed-library:scroll_18": {
+    "parts": 1,
+    "tris": 4
+   },
+   "aed-library:scroll_19": {
+    "parts": 1,
+    "tris": 4
+   },
+   "aed-library:scroll_20": {
+    "parts": 1,
+    "tris": 4
+   },
+   "aed-library:scroll_21": {
+    "parts": 1,
+    "tris": 10
+   },
+   "aed-library:scroll_22": {
+    "parts": 1,
+    "tris": 4
+   },
+   "aed-library:scroll_23": {
+    "parts": 1,
+    "tris": 4
+   },
+   "aed-library:scroll_24": {
+    "parts": 1,
+    "tris": 4
+   },
+   "aed-library:scroll_25": {
+    "parts": 1,
+    "tris": 10
+   },
+   "aed-library:scroll_26": {
+    "parts": 1,
+    "tris": 12
+   },
+   "aed-library:scroll_27": {
+    "parts": 1,
+    "tris": 4
+   },
+   "aed-library:scroll_28": {
+    "parts": 1,
+    "tris": 4
+   },
+   "aed-library:scroll_29": {
+    "parts": 1,
+    "tris": 8
+   },
+   "aed-library:scroll_30": {
+    "parts": 1,
+    "tris": 4
+   },
+   "aed-library:scroll_31": {
+    "parts": 1,
+    "tris": 4
+   },
+   "aed-library:scroll_32": {
+    "parts": 1,
+    "tris": 4
+   },
+   "aed-library:scroll_33": {
+    "parts": 1,
+    "tris": 4
+   },
+   "aed-library:scroll_34": {
+    "parts": 1,
+    "tris": 4
+   },
+   "aed-library:scroll_35": {
+    "parts": 1,
+    "tris": 4
+   },
+   "aed-library:woodDark": {
+    "parts": 414,
+    "tris": 44500
+   },
+   "aed-library:p.leather": {
+    "parts": 237,
+    "tris": 16200
+   },
+   "aed-library:p.leatherBlack": {
+    "parts": 244,
+    "tris": 18336
+   },
+   "aed-library:p.vellum": {
+    "parts": 255,
+    "tris": 19716
+   },
+   "aed-library:p.leatherRed": {
+    "parts": 251,
+    "tris": 17292
+   },
+   "aed-library:p.books.0": {
+    "parts": 85,
+    "tris": 850
+   },
+   "aed-library:addressCase": {
+    "parts": 1,
+    "tris": 2
+   },
+   "aed-library:addressShelf": {
+    "parts": 1,
+    "tris": 2
+   },
+   "aed-library:addressPlace": {
+    "parts": 1,
+    "tris": 2
+   },
+   "aed-library:p.books.1": {
+    "parts": 84,
+    "tris": 840
+   },
+   "aed-library:p.books.2": {
+    "parts": 84,
+    "tris": 840
+   },
+   "aed-library:wood": {
+    "parts": 55,
+    "tris": 3948
+   },
+   "aed-library:door": {
+    "parts": 37,
+    "tris": 444
+   },
+   "aed-library:p.books.3": {
+    "parts": 83,
+    "tris": 830
+   },
+   "aed-library:page_greek": {
+    "parts": 1,
+    "tris": 112
+   },
+   "aed-library:redCloth": {
+    "parts": 3,
+    "tris": 36
+   },
+   "aed-library:iron": {
+    "parts": 3,
+    "tris": 96
+   },
+   "aed-library:pottery": {
+    "parts": 1,
+    "tris": 80
+   },
+   "aed-library:flame": {
+    "parts": 1,
+    "tris": 36
+   },
+   "aed-library:flag": {
+    "parts": 3,
+    "tris": 156
+   },
+   "aed-library:damp": {
+    "parts": 6,
+    "tris": 88
+   },
+   "aed-library:bronze": {
+    "parts": 1,
+    "tris": 112
+   },
+   "aed-library:ember": {
+    "parts": 1,
+    "tris": 100
+   },
+   "aed-library:page_apocalypse": {
+    "parts": 1,
+    "tris": 112
+   },
+   "aed-library:page_unicorn": {
+    "parts": 1,
+    "tris": 112
+   },
+   "church-exterior:church": {
+    "parts": 6,
+    "tris": 768
+   },
+   "church-exterior:roof": {
+    "parts": 1,
+    "tris": 24
+   },
+   "church-exterior:flagExt": {
+    "parts": 1,
+    "tris": 12
+   },
+   "church-exterior:tym.ground": {
+    "parts": 1,
+    "tris": 64
+   },
+   "church-exterior:tym.stone": {
+    "parts": 21,
+    "tris": 48318
+   },
+   "church-exterior:tym.green": {
+    "parts": 3,
+    "tris": 1720
+   },
+   "church-exterior:tym.sea": {
+    "parts": 1,
+    "tris": 812
+   },
+   "church-exterior:tym.gold": {
+    "parts": 4,
+    "tris": 14660
+   },
+   "church-exterior:tym.purple": {
+    "parts": 1,
+    "tris": 908
+   },
+   "church-exterior:tym.dark": {
+    "parts": 16,
+    "tris": 5890
+   },
+   "church-exterior:tym.white": {
+    "parts": 2,
+    "tris": 22128
+   },
+   "ossuary:p.cryptStone": {
+    "parts": 43,
+    "tris": 2268
+   },
+   "ossuary:flag": {
+    "parts": 3,
+    "tris": 60
+   },
+   "ossuary:p.boneDark": {
+    "parts": 1204,
+    "tris": 197080
+   },
+   "ossuary:p.bone": {
+    "parts": 2120,
+    "tris": 399480
+   },
+   "ossuary:p.socket": {
+    "parts": 531,
+    "tris": 104076
+   },
+   "ossuary:p.tFlag": {
+    "parts": 1,
+    "tris": 20
+   },
+   "ossuary:p.tStone": {
+    "parts": 22,
+    "tris": 464
+   },
+   "ossuary:p.cryptVault": {
+    "parts": 9,
+    "tris": 8208
+   },
+   "ossuary:woodDark": {
+    "parts": 5,
+    "tris": 264
+   },
+   "ossuary:p.tLinen": {
+    "parts": 3,
+    "tris": 7452
+   },
+   "ossuary:p.tGold": {
+    "parts": 12,
+    "tris": 3716
+   },
+   "ossuary:stained.2": {
+    "parts": 4,
+    "tris": 2720
+   },
+   "ossuary:p.tSilver": {
+    "parts": 7,
+    "tris": 1860
+   },
+   "ossuary:door": {
+    "parts": 3,
+    "tris": 108
+   },
+   "ossuary:iron": {
+    "parts": 5,
+    "tris": 268
+   },
+   "ossuary:p.tCloth": {
+    "parts": 4,
+    "tris": 4248
+   },
+   "ossuary:p.agate": {
+    "parts": 1,
+    "tris": 136
+   },
+   "ossuary:p.ruby": {
+    "parts": 1,
+    "tris": 252
+   },
+   "ossuary:p.lapis": {
+    "parts": 1,
+    "tris": 96
+   },
+   "ossuary:p.entombment": {
+    "parts": 2,
+    "tris": 4
+   },
+   "ossuary:p.porphyry": {
+    "parts": 1,
+    "tris": 12
+   },
+   "ossuary:glass": {
+    "parts": 2,
+    "tris": 1176
+   },
+   "ossuary:fire": {
+    "parts": 2,
+    "tris": 72
+   },
+   "claustrum-exterior:church": {
+    "parts": 2,
+    "tris": 104
+   },
+   "claustrum-exterior:flagExt": {
+    "parts": 1,
+    "tris": 20
+   },
+   "claustrum-exterior:rubble": {
+    "parts": 2,
+    "tris": 420
+   },
+   "claustrum-exterior:chapterTympanum": {
+    "parts": 1,
+    "tris": 90000
+   },
+   "claustrum-exterior:hedge": {
+    "parts": 29,
+    "tris": 27544
+   },
+   "claustrum-interior:flag": {
+    "parts": 4,
+    "tris": 80
+   },
+   "claustrum-interior:beam": {
+    "parts": 12,
+    "tris": 348
+   },
+   "claustrum-interior:boards": {
+    "parts": 4,
+    "tris": 136
+   },
+   "claustrum-interior:aedIn": {
+    "parts": 4,
+    "tris": 496
+   },
+   "claustrum-interior:char": {
+    "parts": 2,
+    "tris": 128
+   },
+   "claustrum-interior:p.ember": {
+    "parts": 2,
+    "tris": 4480
+   },
+   "claustrum-interior:p.coal": {
+    "parts": 2,
+    "tris": 960
+   },
+   "claustrum-interior:woodDark": {
+    "parts": 149,
+    "tris": 12912
+   },
+   "claustrum-interior:plaster": {
+    "parts": 57,
+    "tris": 12048
+   },
+   "claustrum-interior:door": {
+    "parts": 46,
+    "tris": 732
+   },
+   "claustrum-interior:p.curtain": {
+    "parts": 9,
+    "tris": 6912
+   },
+   "claustrum-interior:iron": {
+    "parts": 29,
+    "tris": 624
+   },
+   "claustrum-interior:p.sacking": {
+    "parts": 45,
+    "tris": 33792
+   },
+   "claustrum-interior:p.blanketGrey": {
+    "parts": 17,
+    "tris": 16144
+   },
+   "claustrum-interior:p.glazeGreen": {
+    "parts": 3,
+    "tris": 672
+   },
+   "claustrum-interior:p.glazeBrown": {
+    "parts": 10,
+    "tris": 3760
+   },
+   "claustrum-interior:p.earthenDark": {
+    "parts": 14,
+    "tris": 1904
+   },
+   "claustrum-interior:p.blanket": {
+    "parts": 29,
+    "tris": 27944
+   },
+   "claustrum-interior:p.earthenware": {
+    "parts": 14,
+    "tris": 6012
+   },
+   "claustrum-interior:p.glass": {
+    "parts": 12,
+    "tris": 2688
+   },
+   "claustrum-interior:p.linenWhite": {
+    "parts": 1,
+    "tris": 216
+   },
+   "claustrum-interior:p.bloodStain": {
+    "parts": 1,
+    "tris": 90
+   },
+   "claustrum-interior:pottery": {
+    "parts": 9,
+    "tris": 3840
+   },
+   "claustrum-interior:p.woolBlack": {
+    "parts": 5,
+    "tris": 6760
+   },
+   "claustrum-interior:flame": {
+    "parts": 12,
+    "tris": 432
+   },
+   "claustrum-interior:ashlar": {
+    "parts": 2,
+    "tris": 40
+   },
+   "claustrum-interior:churchIn": {
+    "parts": 4,
+    "tris": 48
+   },
+   "claustrum-interior:bronze": {
+    "parts": 2,
+    "tris": 336
+   },
+   "claustrum-interior:wax": {
+    "parts": 4,
+    "tris": 128
+   },
+   "claustrum-interior:redCloth": {
+    "parts": 1,
+    "tris": 12
+   },
+   "claustrum-interior:rubbleIn": {
+    "parts": 2,
+    "tris": 24
+   },
+   "claustrum-interior:straw": {
+    "parts": 2,
+    "tris": 56
+   },
+   "claustrum-interior:wood": {
+    "parts": 3,
+    "tris": 204
+   },
+   "claustrum-interior:p.bread": {
+    "parts": 1,
+    "tris": 168
+   },
+   "claustrum-interior:p.onion": {
+    "parts": 1,
+    "tris": 12
+   },
+   "claustrum-interior:parchment": {
+    "parts": 2,
+    "tris": 60
+   },
+   "claustrum-interior:bark": {
+    "parts": 1,
+    "tris": 288
+   },
+   "claustrum-interior:p.grainSack": {
+    "parts": 3,
+    "tris": 1104
+   },
+   "claustrum-interior:p.leather": {
+    "parts": 1,
+    "tris": 36
+   },
+   "outbuildings-exterior:wall": {
+    "parts": 257,
+    "tris": 3464
+   },
+   "outbuildings-exterior:woodDark": {
+    "parts": 4,
+    "tris": 1016
+   },
+   "outbuildings-exterior:flagExt": {
+    "parts": 2,
+    "tris": 148
+   },
+   "outbuildings-exterior:roof": {
+    "parts": 14,
+    "tris": 348
+   },
+   "outbuildings-exterior:plaster": {
+    "parts": 1,
+    "tris": 20
+   },
+   "outbuildings-exterior:door": {
+    "parts": 2,
+    "tris": 24
+   },
+   "outbuildings-exterior:rubble": {
+    "parts": 93,
+    "tris": 5648
+   },
+   "outbuildings-exterior:glassOpaque": {
+    "parts": 66,
+    "tris": 1452
+   },
+   "outbuildings-exterior:beamExt": {
+    "parts": 112,
+    "tris": 1796
+   },
+   "outbuildings-exterior:thatch": {
+    "parts": 3,
+    "tris": 72
+   },
+   "outbuildings-exterior:iron": {
+    "parts": 16,
+    "tris": 1192
+   },
+   "outbuildings-exterior:rubbleIn": {
+    "parts": 1,
+    "tris": 48
+   },
+   "outbuildings-exterior:water": {
+    "parts": 1,
+    "tris": 96
+   },
+   "outbuildings-exterior:p.earthenware": {
+    "parts": 1,
+    "tris": 1360
+   },
+   "outbuildings-exterior:p.bloodPool": {
+    "parts": 1,
+    "tris": 128
+   },
+   "outbuildings-exterior:wood": {
+    "parts": 4,
+    "tris": 612
+   },
+   "outbuildings-exterior:p.earthenDark": {
+    "parts": 1,
+    "tris": 252
+   },
+   "outbuildings-exterior:p.stain": {
+    "parts": 1,
+    "tris": 2048
+   },
+   "outbuildings-interior:flag": {
+    "parts": 11,
+    "tris": 250
+   },
+   "outbuildings-interior:beam": {
+    "parts": 43,
+    "tris": 2952
+   },
+   "outbuildings-interior:plasterStone": {
+    "parts": 2,
+    "tris": 128
+   },
+   "outbuildings-interior:woodDark": {
+    "parts": 119,
+    "tris": 12420
+   },
+   "outbuildings-interior:p.sacking": {
+    "parts": 24,
+    "tris": 15312
+   },
+   "outbuildings-interior:p.linen": {
+    "parts": 18,
+    "tris": 18738
+   },
+   "outbuildings-interior:p.linenWhite": {
+    "parts": 10,
+    "tris": 2604
+   },
+   "outbuildings-interior:p.blanketGrey": {
+    "parts": 7,
+    "tris": 5940
+   },
+   "outbuildings-interior:p.earthenDark": {
+    "parts": 58,
+    "tris": 16464
+   },
+   "outbuildings-interior:p.glazeGreen": {
+    "parts": 24,
+    "tris": 5376
+   },
+   "outbuildings-interior:p.blanket": {
+    "parts": 14,
+    "tris": 12476
+   },
+   "outbuildings-interior:p.glazeBrown": {
+    "parts": 38,
+    "tris": 14896
+   },
+   "outbuildings-interior:p.earthenware": {
+    "parts": 41,
+    "tris": 17508
+   },
+   "outbuildings-interior:p.glass": {
+    "parts": 33,
+    "tris": 7392
+   },
+   "outbuildings-interior:wood": {
+    "parts": 21,
+    "tris": 1916
+   },
+   "outbuildings-interior:curtain": {
+    "parts": 2,
+    "tris": 24
+   },
+   "outbuildings-interior:aedIn": {
+    "parts": 8,
+    "tris": 1128
+   },
+   "outbuildings-interior:p.vellum": {
+    "parts": 1,
+    "tris": 36
+   },
+   "outbuildings-interior:p.leather": {
+    "parts": 8,
+    "tris": 972
+   },
+   "outbuildings-interior:p.leatherBlack": {
+    "parts": 3,
+    "tris": 720
+   },
+   "outbuildings-interior:p.leatherRed": {
+    "parts": 1,
+    "tris": 60
+   },
+   "outbuildings-interior:p.books.1": {
+    "parts": 1,
+    "tris": 10
+   },
+   "outbuildings-interior:glass": {
+    "parts": 9,
+    "tris": 448
+   },
+   "outbuildings-interior:bronze": {
+    "parts": 4,
+    "tris": 892
+   },
+   "outbuildings-interior:silver": {
+    "parts": 3,
+    "tris": 780
+   },
+   "outbuildings-interior:gold": {
+    "parts": 1,
+    "tris": 24
+   },
+   "outbuildings-interior:p.twine": {
+    "parts": 20,
+    "tris": 360
+   },
+   "outbuildings-interior:p.herbStem": {
+    "parts": 10,
+    "tris": 664
+   },
+   "outbuildings-interior:p.herbDry": {
+    "parts": 7,
+    "tris": 4640
+   },
+   "outbuildings-interior:p.herbGreen": {
+    "parts": 3,
+    "tris": 2000
+   },
+   "outbuildings-interior:pottery": {
+    "parts": 5,
+    "tris": 400
+   },
+   "outbuildings-interior:flame": {
+    "parts": 5,
+    "tris": 180
+   },
+   "outbuildings-interior:iron": {
+    "parts": 53,
+    "tris": 4544
+   },
+   "outbuildings-interior:p.water": {
+    "parts": 8,
+    "tris": 532
+   },
+   "outbuildings-interior:p.curtain": {
+    "parts": 8,
+    "tris": 13568
+   },
+   "outbuildings-interior:p.wetFloor": {
+    "parts": 3,
+    "tris": 270
+   },
+   "outbuildings-interior:p.woolBlack": {
+    "parts": 1,
+    "tris": 1144
+   },
+   "outbuildings-interior:char": {
+    "parts": 3,
+    "tris": 192
+   },
+   "outbuildings-interior:p.ember": {
+    "parts": 3,
+    "tris": 6720
+   },
+   "outbuildings-interior:p.coal": {
+    "parts": 6,
+    "tris": 3700
+   },
+   "outbuildings-interior:p.ironRust": {
+    "parts": 2,
+    "tris": 548
+   },
+   "outbuildings-interior:bark": {
+    "parts": 4,
+    "tris": 952
+   },
+   "outbuildings-interior:church": {
+    "parts": 1,
+    "tris": 60
+   },
+   "outbuildings-interior:soil": {
+    "parts": 5,
+    "tris": 128
+   },
+   "outbuildings-interior:straw": {
+    "parts": 40,
+    "tris": 7480
+   },
+   "outbuildings-interior:p.hay": {
+    "parts": 56,
+    "tris": 18060
+   },
+   "outbuildings-interior:p.dung": {
+    "parts": 12,
+    "tris": 3870
+   },
+   "outbuildings-interior:p.grainSack": {
+    "parts": 82,
+    "tris": 30208
+   },
+   "outbuildings-interior:boards": {
+    "parts": 1,
+    "tris": 20
+   },
+   "outbuildings-interior:rubbleIn": {
+    "parts": 32,
+    "tris": 9460
+   },
+   "outbuildings-interior:p.flour": {
+    "parts": 3,
+    "tris": 372
+   },
+   "outbuildings-interior:p.oilRes": {
+    "parts": 4,
+    "tris": 362
+   },
+   "outbuildings-interior:p.glow": {
+    "parts": 2,
+    "tris": 360
+   },
+   "outbuildings-interior:ashlar": {
+    "parts": 1,
+    "tris": 88
+   },
+   "outbuildings-interior:ember": {
+    "parts": 3,
+    "tris": 36
+   },
+   "outbuildings-interior:stained.0": {
+    "parts": 6,
+    "tris": 72
+   },
+   "outbuildings-interior:stained.1": {
+    "parts": 6,
+    "tris": 72
+   },
+   "outbuildings-interior:stainedWarm": {
+    "parts": 5,
+    "tris": 60
+   },
+   "nature:wall": {
+    "parts": 29,
+    "tris": 10824
+   },
+   "nature:snow": {
+    "parts": 11,
+    "tris": 4024
+   },
+   "nature:p.graveEarth": {
+    "parts": 29,
+    "tris": 11290
+   },
+   "nature:beamExt": {
+    "parts": 14,
+    "tris": 1904
+   },
+   "nature:flagExt": {
+    "parts": 22,
+    "tris": 21384
+   },
+   "nature:church": {
+    "parts": 13,
+    "tris": 6048
+   },
+   "gardens:bedSoil": {
+    "parts": 99,
+    "tris": 13296
+   },
+   "gardens:wattle": {
+    "parts": 511,
+    "tris": 6456
+   },
+   "gardens:beamExt": {
+    "parts": 556,
+    "tris": 9812
+   },
+   "gardens:strawExt": {
+    "parts": 28,
+    "tris": 2310
+   },
+   "gardens:aed": {
+    "parts": 1,
+    "tris": 120
+   },
+   "gardens:water": {
+    "parts": 2,
+    "tris": 128
+   },
+   "gardens:woodDark": {
+    "parts": 2,
+    "tris": 288
+   },
+   "gardens:iron": {
+    "parts": 6,
+    "tris": 236
+   },
+   "gardens:kale": {
+    "parts": 3,
+    "tris": 398
+   },
+   "gardens:soil": {
+    "parts": 1,
+    "tris": 64
+   },
+   "gardens:dung": {
+    "parts": 3,
+    "tris": 1530
+   },
+   "dressing:soil": {
+    "parts": 3,
+    "tris": 1176
+   },
+   "dressing:straw": {
+    "parts": 6,
+    "tris": 108
+   },
+   "dressing:wood": {
+    "parts": 8,
+    "tris": 420
+   },
+   "dressing:woodDark": {
+    "parts": 11,
+    "tris": 1892
+   },
+   "dressing:water": {
+    "parts": 6,
+    "tris": 136
+   },
+   "dressing:bark": {
+    "parts": 2,
+    "tris": 952
+   },
+   "dressing:iron": {
+    "parts": 1,
+    "tris": 40
+   },
+   "dressing:char": {
+    "parts": 1,
+    "tris": 324
+   },
+   "dressing-interior:woodDark": {
+    "parts": 9,
+    "tris": 1208
+   },
+   "dressing-interior:water": {
+    "parts": 3,
+    "tris": 64
+   },
+   "dressing-interior:iron": {
+    "parts": 2,
+    "tris": 80
+   },
+   "dressing-interior:wood": {
+    "parts": 7,
+    "tris": 312
+   },
+   "dressing-interior:p.grainSack": {
+    "parts": 7,
+    "tris": 2576
+   },
+   "dressing-interior:straw": {
+    "parts": 7,
+    "tris": 148
+   },
+   "dressing-interior:pottery": {
+    "parts": 1,
+    "tris": 80
+   },
+   "dressing-interior:flame": {
+    "parts": 1,
+    "tris": 36
+   },
+   "thresholds:aed": {
+    "parts": 4,
+    "tris": 48
+   },
+   "thresholds:church": {
+    "parts": 6,
+    "tris": 72
+   },
+   "thresholds:flagExt": {
+    "parts": 43,
+    "tris": 516
+   }
+  },
+  "files": {
+   "cells/ossuary_stair.glb": {
+    "path": "shared/data/export/cells/ossuary_stair.glb",
+    "bytes": 1221620,
+    "sha256": "8b53388835a4967edc915e6fa5eeaefcbd7580d6c754fb641ffda2ae7057cd83"
+   },
+   "collision/ossuary_stair.glb": {
+    "path": "shared/data/export/collision/ossuary_stair.glb",
+    "bytes": 6336,
+    "sha256": "f5b0e2a3d6e11c44e049be286386d982ddfec39512c93770115c4360c0c26728"
+   },
+   "cells/skull_chapel.glb": {
+    "path": "shared/data/export/cells/skull_chapel.glb",
+    "bytes": 55664,
+    "sha256": "9e5d4f5d72cd5104f365799c73bb638cac0f9c435f0f6d946112dad9351bcd86"
+   },
+   "collision/skull_chapel.glb": {
+    "path": "shared/data/export/collision/skull_chapel.glb",
+    "bytes": 6280,
+    "sha256": "e73dc8dc57177279d81e04e93fc711a462ad45bb9658061bfb31f8630f52ee94"
+   },
+   "cells/church_interior.glb": {
+    "path": "shared/data/export/cells/church_interior.glb",
+    "bytes": 3435920,
+    "sha256": "e03c48c5b5d901b46777413f074ae20f3289f926b65e12a15d969f9134024c02"
+   },
+   "collision/church_interior.glb": {
+    "path": "shared/data/export/collision/church_interior.glb",
+    "bytes": 188332,
+    "sha256": "43cff97c95efc51a9c85a4f38bf9877adf1d4166b7f03eb8da092c4d1ebb661b"
+   },
+   "cells/church_exterior.glb": {
+    "path": "shared/data/export/cells/church_exterior.glb",
+    "bytes": 520552,
+    "sha256": "85451a8122a99cf92c75b5cca803cf515a50fbf97c2f159e65499fed609df127"
+   },
+   "collision/church_exterior.glb": {
+    "path": "shared/data/export/collision/church_exterior.glb",
+    "bytes": 101036,
+    "sha256": "1324fe714bf796d00fa14a083ebe4c3704e988c361ca50dcf3325ef93bda70cb"
+   },
+   "cells/cloister.glb": {
+    "path": "shared/data/export/cells/cloister.glb",
+    "bytes": 952888,
+    "sha256": "601dc24595c65c4fb01a471baff34e9d54c30cac33c5963be0735bb602ca8eae"
+   },
+   "collision/cloister.glb": {
+    "path": "shared/data/export/collision/cloister.glb",
+    "bytes": 380460,
+    "sha256": "f6cdf291fb2db4b2200e06570580ae14d709245b2751cf325f770797dd0fa33d"
+   },
+   "cells/cloister_context.glb": {
+    "path": "shared/data/export/cells/cloister_context.glb",
+    "bytes": 406760,
+    "sha256": "ef16964f5ae4ab758a6225335401a3689cca55ca334204f41da6d04f9c105099"
+   },
+   "collision/cloister_context.glb": {
+    "path": "shared/data/export/collision/cloister_context.glb",
+    "bytes": 67092,
+    "sha256": "2353e5559ed15b32bc5062e478ec53a6dd1c08f8ce59f593d0dac7cd8ecb2e1b"
+   },
+   "dynamic/altar_pivot.glb": {
+    "path": "shared/data/export/dynamic/altar_pivot.glb",
+    "bytes": 207832,
+    "sha256": "2c205aa768231732b50c79d103f0ae02ced1428aa1ca3f023b62c3758511a69b"
+   },
+   "props/garth_trees.glb": {
+    "path": "shared/data/export/props/garth_trees.glb",
+    "bytes": 3983316,
+    "sha256": "bab716ecb1e00d5c4c92f3d1d8a037cc150eda1c8eb10a554c62ab8239078592"
+   },
+   "fields/terrain_height.bin": {
+    "path": "shared/data/export/fields/terrain_height.bin",
+    "bytes": 24300,
+    "sha256": "d42b4ee61d45b1be08c42147cba79b31423878fb605dfc3543ed5834ff0b6ebc"
+   },
+   "fields/terrain_base.bin": {
+    "path": "shared/data/export/fields/terrain_base.bin",
+    "bytes": 24300,
+    "sha256": "deec60e6c91327b3036b770c514a150b2e2feb0fbd4247b33c75747f3b8edc93"
+   },
+   "fields/ground.bin": {
+    "path": "shared/data/export/fields/ground.bin",
+    "bytes": 524288,
+    "sha256": "906ac32c147ae9cc16cbaa2e6fde400eed989240fea07cc91807c3df8334f6c3"
+   },
+   "fields/trodden.bin": {
+    "path": "shared/data/export/fields/trodden.bin",
+    "bytes": 4194304,
+    "sha256": "c976a8e4eddfa89ce20102ec933164a0735fc5a20e4703c10d23daace5bab007"
+   }
+  },
+  "materials": {
+   "aed": {
+    "type": "MeshStandardMaterial",
+    "color": "b0b6b9",
+    "roughness": 1,
+    "metalness": 0,
+    "env": 1,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1.45,
+     1.45
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "shared/assets/textures/aed_stone_d.jpg",
+     "set": "aed_stone_d",
+     "repeat": [
+      0.3125,
+      0.3125
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "normal_map": {
+     "source": "shared/assets/textures/aed_stone_n.jpg",
+     "set": "aed_stone_n",
+     "repeat": [
+      0.3125,
+      0.3125
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "ao_map": {
+     "source": "shared/assets/textures/aed_stone_a.jpg",
+     "set": "aed_stone_a",
+     "repeat": [
+      0.3125,
+      0.3125
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": true,
+    "underground": false,
+    "has_on_before_compile": true,
+    "weathering": {
+     "snow_k": 1,
+     "min_up": 0.5,
+     "macro_streak_damp_soot": [
+      0.26,
+      0.32,
+      0.85,
+      0
+     ],
+     "lichen_drift_rough_wet": [
+      0.5,
+      1,
+      0.9,
+      0.8
+     ],
+     "tile_overlayAmount_overlayScale_cavity": [
+      1,
+      0,
+      2.5,
+      0.25
+     ],
+     "tint_a": "efebe4",
+     "tint_b": "d4dde2",
+     "saturation": 0.5,
+     "overlay_map": null,
+     "overlay_normal": null
+    }
+   },
+   "ashlar": {
+    "type": "MeshStandardMaterial",
+    "color": "d0c6b6",
+    "roughness": 1,
+    "metalness": 0,
+    "env": 0.4,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "shared/assets/textures/ashlar_d.jpg",
+     "set": "ashlar_d",
+     "repeat": [
+      0.285714,
+      0.285714
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "normal_map": {
+     "source": "shared/assets/textures/ashlar_n.jpg",
+     "set": "ashlar_n",
+     "repeat": [
+      0.285714,
+      0.285714
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "ao_map": {
+     "source": "shared/assets/textures/ashlar_a.jpg",
+     "set": "ashlar_a",
+     "repeat": [
+      0.285714,
+      0.285714
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": true,
+    "weathering": {
+     "snow_k": 0,
+     "min_up": 0.5,
+     "macro_streak_damp_soot": [
+      0.16,
+      0,
+      0,
+      0
+     ],
+     "lichen_drift_rough_wet": [
+      0,
+      0,
+      0.62,
+      0
+     ],
+     "tile_overlayAmount_overlayScale_cavity": [
+      1,
+      0,
+      2.5,
+      0.3
+     ],
+     "tint_a": "f6f0e6",
+     "tint_b": "dde4ea",
+     "saturation": 1,
+     "overlay_map": null,
+     "overlay_normal": null
+    }
+   },
+   "beam": {
+    "type": "MeshStandardMaterial",
+    "color": "846650",
+    "roughness": 1,
+    "metalness": 0,
+    "env": 0.45,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "shared/assets/textures/beam_d.jpg",
+     "set": "beam_d",
+     "repeat": [
+      0.5,
+      0.5
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "normal_map": {
+     "source": "shared/assets/textures/beam_n.jpg",
+     "set": "beam_n",
+     "repeat": [
+      0.5,
+      0.5
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "ao_map": {
+     "source": "shared/assets/textures/beam_a.jpg",
+     "set": "beam_a",
+     "repeat": [
+      0.5,
+      0.5
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": true,
+    "weathering": {
+     "snow_k": 0,
+     "min_up": 0.5,
+     "macro_streak_damp_soot": [
+      0.18,
+      0,
+      0,
+      0.3
+     ],
+     "lichen_drift_rough_wet": [
+      0,
+      0,
+      0.8,
+      0
+     ],
+     "tile_overlayAmount_overlayScale_cavity": [
+      1,
+      0,
+      2.5,
+      0.25
+     ],
+     "tint_a": "f6f0e6",
+     "tint_b": "dde4ea",
+     "saturation": 1,
+     "overlay_map": null,
+     "overlay_normal": null
+    }
+   },
+   "beamExt": {
+    "type": "MeshStandardMaterial",
+    "color": "846650",
+    "roughness": 1,
+    "metalness": 0,
+    "env": 1,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "shared/assets/textures/beam_d.jpg",
+     "set": "beam_d",
+     "repeat": [
+      0.5,
+      0.5
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "normal_map": {
+     "source": "shared/assets/textures/beam_n.jpg",
+     "set": "beam_n",
+     "repeat": [
+      0.5,
+      0.5
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "ao_map": {
+     "source": "shared/assets/textures/beam_a.jpg",
+     "set": "beam_a",
+     "repeat": [
+      0.5,
+      0.5
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": true,
+    "underground": false,
+    "has_on_before_compile": true,
+    "weathering": {
+     "snow_k": 1,
+     "min_up": 0.5,
+     "macro_streak_damp_soot": [
+      0.25,
+      0,
+      0.7,
+      0
+     ],
+     "lichen_drift_rough_wet": [
+      0.3,
+      0,
+      0.85,
+      0.6
+     ],
+     "tile_overlayAmount_overlayScale_cavity": [
+      1,
+      0,
+      2.5,
+      0.25
+     ],
+     "tint_a": "f6f0e6",
+     "tint_b": "dde4ea",
+     "saturation": 1,
+     "overlay_map": null,
+     "overlay_normal": null
+    }
+   },
+   "bronze": {
+    "type": "MeshStandardMaterial",
+    "color": "8a6a3a",
+    "roughness": 0.35,
+    "metalness": 1,
+    "env": 1,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": null,
+    "normal_map": null,
+    "ao_map": null,
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": false
+   },
+   "church": {
+    "type": "MeshStandardMaterial",
+    "color": "d2cbbd",
+    "roughness": 1,
+    "metalness": 0,
+    "env": 1,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1.35,
+     1.35
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "shared/assets/textures/church_stone_d.jpg",
+     "set": "church_stone_d",
+     "repeat": [
+      0.357143,
+      0.357143
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "normal_map": {
+     "source": "shared/assets/textures/church_stone_n.jpg",
+     "set": "church_stone_n",
+     "repeat": [
+      0.357143,
+      0.357143
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "ao_map": {
+     "source": "shared/assets/textures/church_stone_a.jpg",
+     "set": "church_stone_a",
+     "repeat": [
+      0.357143,
+      0.357143
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": true,
+    "underground": false,
+    "has_on_before_compile": true,
+    "weathering": {
+     "snow_k": 1,
+     "min_up": 0.5,
+     "macro_streak_damp_soot": [
+      0.2,
+      0.28,
+      0.75,
+      0
+     ],
+     "lichen_drift_rough_wet": [
+      0.35,
+      1,
+      0.86,
+      0.8
+     ],
+     "tile_overlayAmount_overlayScale_cavity": [
+      1,
+      0,
+      2.5,
+      0.25
+     ],
+     "tint_a": "f6eee2",
+     "tint_b": "e0e0dc",
+     "saturation": 0.7,
+     "overlay_map": null,
+     "overlay_normal": null
+    }
+   },
+   "churchIn": {
+    "type": "MeshStandardMaterial",
+    "color": "d4c8b4",
+    "roughness": 1,
+    "metalness": 0,
+    "env": 0.35,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1.2,
+     1.2
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "shared/assets/textures/church_stone_d.jpg",
+     "set": "church_stone_d",
+     "repeat": [
+      0.357143,
+      0.357143
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "normal_map": {
+     "source": "shared/assets/textures/church_stone_n.jpg",
+     "set": "church_stone_n",
+     "repeat": [
+      0.357143,
+      0.357143
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "ao_map": {
+     "source": "shared/assets/textures/church_stone_a.jpg",
+     "set": "church_stone_a",
+     "repeat": [
+      0.357143,
+      0.357143
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": true,
+    "weathering": {
+     "snow_k": 0,
+     "min_up": 0.5,
+     "macro_streak_damp_soot": [
+      0.14,
+      0,
+      0.25,
+      0.4
+     ],
+     "lichen_drift_rough_wet": [
+      0,
+      0,
+      0.8,
+      0
+     ],
+     "tile_overlayAmount_overlayScale_cavity": [
+      1,
+      0,
+      2.5,
+      0.25
+     ],
+     "tint_a": "f6f0e6",
+     "tint_b": "dde4ea",
+     "saturation": 0.75,
+     "overlay_map": null,
+     "overlay_normal": null
+    }
+   },
+   "door": {
+    "type": "MeshStandardMaterial",
+    "color": "927459",
+    "roughness": 1,
+    "metalness": 0,
+    "env": 1,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "shared/assets/textures/door_planks_d.jpg",
+     "set": "door_planks_d",
+     "repeat": [
+      0.454545,
+      0.454545
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "normal_map": {
+     "source": "shared/assets/textures/door_planks_n.jpg",
+     "set": "door_planks_n",
+     "repeat": [
+      0.454545,
+      0.454545
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "ao_map": {
+     "source": "shared/assets/textures/door_planks_a.jpg",
+     "set": "door_planks_a",
+     "repeat": [
+      0.454545,
+      0.454545
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": true,
+    "weathering": {
+     "snow_k": 0,
+     "min_up": 0.5,
+     "macro_streak_damp_soot": [
+      0.2,
+      0,
+      0.6,
+      0
+     ],
+     "lichen_drift_rough_wet": [
+      0,
+      0,
+      0.8,
+      0
+     ],
+     "tile_overlayAmount_overlayScale_cavity": [
+      1,
+      0,
+      2.5,
+      0.25
+     ],
+     "tint_a": "f6f0e6",
+     "tint_b": "dde4ea",
+     "saturation": 1,
+     "overlay_map": null,
+     "overlay_normal": null
+    }
+   },
+   "fire": {
+    "type": "MeshBasicMaterial",
+    "color": "ffa040",
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": false,
+    "normal_scale": null,
+    "ao_intensity": 1,
+    "map": null,
+    "normal_map": null,
+    "ao_map": null,
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": false
+   },
+   "flag": {
+    "type": "MeshStandardMaterial",
+    "color": "c9c0b1",
+    "roughness": 1,
+    "metalness": 0,
+    "env": 0.4,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "shared/assets/textures/flag_d.jpg",
+     "set": "flag_d",
+     "repeat": [
+      0.3125,
+      0.3125
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "normal_map": {
+     "source": "shared/assets/textures/flag_n.jpg",
+     "set": "flag_n",
+     "repeat": [
+      0.3125,
+      0.3125
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "ao_map": {
+     "source": "shared/assets/textures/flag_a.jpg",
+     "set": "flag_a",
+     "repeat": [
+      0.3125,
+      0.3125
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": true,
+    "weathering": {
+     "snow_k": 0,
+     "min_up": 0.5,
+     "macro_streak_damp_soot": [
+      0.22,
+      0,
+      0,
+      0
+     ],
+     "lichen_drift_rough_wet": [
+      0,
+      0,
+      0.78,
+      0
+     ],
+     "tile_overlayAmount_overlayScale_cavity": [
+      1,
+      0,
+      2.5,
+      0.35
+     ],
+     "tint_a": "f6f0e6",
+     "tint_b": "dde4ea",
+     "saturation": 1,
+     "overlay_map": null,
+     "overlay_normal": null
+    }
+   },
+   "flagExt": {
+    "type": "MeshStandardMaterial",
+    "color": "a99f91",
+    "roughness": 1,
+    "metalness": 0,
+    "env": 1,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "shared/assets/textures/flag_d.jpg",
+     "set": "flag_d",
+     "repeat": [
+      0.3125,
+      0.3125
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "normal_map": {
+     "source": "shared/assets/textures/flag_n.jpg",
+     "set": "flag_n",
+     "repeat": [
+      0.3125,
+      0.3125
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "ao_map": {
+     "source": "shared/assets/textures/flag_a.jpg",
+     "set": "flag_a",
+     "repeat": [
+      0.3125,
+      0.3125
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": true,
+    "underground": false,
+    "has_on_before_compile": true,
+    "weathering": {
+     "snow_k": 1,
+     "min_up": 0.5,
+     "macro_streak_damp_soot": [
+      0.32,
+      0,
+      0.35,
+      0
+     ],
+     "lichen_drift_rough_wet": [
+      0.3,
+      0,
+      0.8,
+      0.9
+     ],
+     "tile_overlayAmount_overlayScale_cavity": [
+      1,
+      0,
+      2.5,
+      0.45
+     ],
+     "tint_a": "f6f0e6",
+     "tint_b": "dde4ea",
+     "saturation": 1,
+     "overlay_map": null,
+     "overlay_normal": null
+    }
+   },
+   "flame": {
+    "type": "MeshBasicMaterial",
+    "color": "ffd080",
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": false,
+    "normal_scale": null,
+    "ao_intensity": 1,
+    "map": null,
+    "normal_map": null,
+    "ao_map": null,
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": false
+   },
+   "frieze": {
+    "type": "MeshStandardMaterial",
+    "color": "ffffff",
+    "roughness": 0.9,
+    "metalness": 0,
+    "env": 0.5,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "canvas",
+     "set": null,
+     "repeat": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1001
+     ],
+     "channel": 0,
+     "flipY": true,
+     "file": "generated/frieze_map.png"
+    },
+    "normal_map": {
+     "source": "canvas",
+     "set": null,
+     "repeat": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1001
+     ],
+     "channel": 0,
+     "flipY": true,
+     "file": "generated/frieze_normal_map.png"
+    },
+    "ao_map": null,
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": false
+   },
+   "glassOpaque": {
+    "type": "MeshStandardMaterial",
+    "color": "c9c4b0",
+    "roughness": 0.4,
+    "metalness": 0,
+    "env": 0.9,
+    "emissive": "ffa24a",
+    "emissive_intensity": 0,
+    "transparent": true,
+    "opacity": 0.85,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "canvas",
+     "set": null,
+     "repeat": [
+      1.2,
+      1.2
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true,
+     "file": "generated/glassOpaque_map.png"
+    },
+    "normal_map": null,
+    "ao_map": null,
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": {
+     "source": "canvas",
+     "set": null,
+     "repeat": [
+      1.2,
+      1.2
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true,
+     "file": "generated/glassOpaque_map.png"
+    },
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": false
+   },
+   "gold": {
+    "type": "MeshStandardMaterial",
+    "color": "d8b060",
+    "roughness": 0.25,
+    "metalness": 1,
+    "env": 1.4,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": null,
+    "normal_map": null,
+    "ao_map": null,
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": false
+   },
+   "iron": {
+    "type": "MeshStandardMaterial",
+    "color": "2b2a28",
+    "roughness": 0.55,
+    "metalness": 0.85,
+    "env": 1,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": null,
+    "normal_map": null,
+    "ao_map": null,
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": false
+   },
+   "linen": {
+    "type": "MeshStandardMaterial",
+    "color": "d7cdb8",
+    "roughness": 1,
+    "metalness": 0,
+    "env": 0.4,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 2,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": null,
+    "normal_map": null,
+    "ao_map": null,
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": false
+   },
+   "p.bone": {
+    "type": "MeshStandardMaterial",
+    "color": "bfb398",
+    "roughness": 0.78,
+    "metalness": 0,
+    "env": 0.35,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "canvas",
+     "set": null,
+     "repeat": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true,
+     "file": "generated/p_bone_map.png"
+    },
+    "normal_map": null,
+    "ao_map": null,
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": false
+   },
+   "p.boneDark": {
+    "type": "MeshStandardMaterial",
+    "color": "958667",
+    "roughness": 0.85,
+    "metalness": 0,
+    "env": 0.3,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "canvas",
+     "set": null,
+     "repeat": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true,
+     "file": "generated/p_boneDark_map.png"
+    },
+    "normal_map": null,
+    "ao_map": null,
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": false
+   },
+   "p.cryptStone": {
+    "type": "MeshStandardMaterial",
+    "color": "8f8a80",
+    "roughness": 1,
+    "metalness": 0,
+    "env": 0.2,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     0.75,
+     0.75
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "shared/assets/textures/rubble_d.jpg",
+     "set": "rubble_d",
+     "repeat": [
+      0.666667,
+      0.666667
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "normal_map": {
+     "source": "shared/assets/textures/rubble_n.jpg",
+     "set": "rubble_n",
+     "repeat": [
+      0.666667,
+      0.666667
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "ao_map": {
+     "source": "shared/assets/textures/rubble_a.jpg",
+     "set": "rubble_a",
+     "repeat": [
+      0.666667,
+      0.666667
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": true,
+    "weathering": {
+     "snow_k": 0,
+     "min_up": 0.5,
+     "macro_streak_damp_soot": [
+      0.35,
+      0.3,
+      0.55,
+      0.2
+     ],
+     "lichen_drift_rough_wet": [
+      0.1,
+      0,
+      0.9,
+      0.15
+     ],
+     "tile_overlayAmount_overlayScale_cavity": [
+      1,
+      0,
+      2.5,
+      0.25
+     ],
+     "tint_a": "e8e2d2",
+     "tint_b": "cfd2c8",
+     "saturation": 0.5,
+     "overlay_map": null,
+     "overlay_normal": null
+    }
+   },
+   "p.leather": {
+    "type": "MeshStandardMaterial",
+    "color": "ffffff",
+    "roughness": 0.7,
+    "metalness": 0,
+    "env": 0.4,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "canvas",
+     "set": null,
+     "repeat": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true,
+     "file": "generated/p_leather_map.png"
+    },
+    "normal_map": null,
+    "ao_map": null,
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": false
+   },
+   "p.linenWhite": {
+    "type": "MeshStandardMaterial",
+    "color": "ffffff",
+    "roughness": 1,
+    "metalness": 0,
+    "env": 0.3,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 2,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "canvas",
+     "set": null,
+     "repeat": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true,
+     "file": "generated/p_linenWhite_map.png"
+    },
+    "normal_map": null,
+    "ao_map": null,
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": false
+   },
+   "p.socket": {
+    "type": "MeshStandardMaterial",
+    "color": "0c0907",
+    "roughness": 1,
+    "metalness": 0,
+    "env": 0,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": null,
+    "normal_map": null,
+    "ao_map": null,
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": false
+   },
+   "p.vellum": {
+    "type": "MeshStandardMaterial",
+    "color": "ffffff",
+    "roughness": 0.85,
+    "metalness": 0,
+    "env": 0.35,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "canvas",
+     "set": null,
+     "repeat": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true,
+     "file": "generated/p_vellum_map.png"
+    },
+    "normal_map": null,
+    "ao_map": null,
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": false
+   },
+   "parchment": {
+    "type": "MeshStandardMaterial",
+    "color": "e9dcb8",
+    "roughness": 0.9,
+    "metalness": 0,
+    "env": 0.4,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": null,
+    "normal_map": null,
+    "ao_map": null,
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": false
+   },
+   "plaster": {
+    "type": "MeshStandardMaterial",
+    "color": "f6eee0",
+    "roughness": 1,
+    "metalness": 0,
+    "env": 0.6,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 0.4,
+    "map": {
+     "source": "shared/assets/textures/plaster_d.jpg",
+     "set": "plaster_d",
+     "repeat": [
+      0.4,
+      0.4
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "normal_map": {
+     "source": "shared/assets/textures/plaster_n.jpg",
+     "set": "plaster_n",
+     "repeat": [
+      0.4,
+      0.4
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "ao_map": {
+     "source": "shared/assets/textures/plaster_a.jpg",
+     "set": "plaster_a",
+     "repeat": [
+      0.4,
+      0.4
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": true,
+    "weathering": {
+     "snow_k": 0,
+     "min_up": 0.5,
+     "macro_streak_damp_soot": [
+      0.12,
+      0,
+      0.3,
+      0.32
+     ],
+     "lichen_drift_rough_wet": [
+      0,
+      0,
+      0.9,
+      0
+     ],
+     "tile_overlayAmount_overlayScale_cavity": [
+      1,
+      0,
+      2.5,
+      0.1
+     ],
+     "tint_a": "f6f0e6",
+     "tint_b": "dde4ea",
+     "saturation": 1,
+     "overlay_map": null,
+     "overlay_normal": null
+    }
+   },
+   "plasterExt": {
+    "type": "MeshStandardMaterial",
+    "color": "e2d9c6",
+    "roughness": 1,
+    "metalness": 0,
+    "env": 1,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "shared/assets/textures/plaster_d.jpg",
+     "set": "plaster_d",
+     "repeat": [
+      0.4,
+      0.4
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "normal_map": {
+     "source": "shared/assets/textures/plaster_n.jpg",
+     "set": "plaster_n",
+     "repeat": [
+      0.4,
+      0.4
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "ao_map": {
+     "source": "shared/assets/textures/plaster_a.jpg",
+     "set": "plaster_a",
+     "repeat": [
+      0.4,
+      0.4
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": true,
+    "underground": false,
+    "has_on_before_compile": true,
+    "weathering": {
+     "snow_k": 1,
+     "min_up": 0.5,
+     "macro_streak_damp_soot": [
+      0.2,
+      0.4,
+      0.9,
+      0
+     ],
+     "lichen_drift_rough_wet": [
+      0.3,
+      1,
+      0.92,
+      0.8
+     ],
+     "tile_overlayAmount_overlayScale_cavity": [
+      1,
+      0,
+      2.5,
+      0.25
+     ],
+     "tint_a": "f6f0e6",
+     "tint_b": "dde4ea",
+     "saturation": 1,
+     "overlay_map": null,
+     "overlay_normal": null
+    }
+   },
+   "roof": {
+    "type": "MeshStandardMaterial",
+    "color": "9a877b",
+    "roughness": 1,
+    "metalness": 0,
+    "env": 1,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1.3,
+     1.3
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "shared/assets/textures/roof_d.jpg",
+     "set": "roof_d",
+     "repeat": [
+      0.416667,
+      0.416667
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 1.570796,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "normal_map": {
+     "source": "shared/assets/textures/roof_n.jpg",
+     "set": "roof_n",
+     "repeat": [
+      0.416667,
+      0.416667
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 1.570796,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "ao_map": {
+     "source": "shared/assets/textures/roof_a.jpg",
+     "set": "roof_a",
+     "repeat": [
+      0.416667,
+      0.416667
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 1.570796,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": true,
+    "underground": false,
+    "has_on_before_compile": true,
+    "weathering": {
+     "snow_k": 1.35,
+     "min_up": 0.35,
+     "macro_streak_damp_soot": [
+      0.3,
+      0,
+      0,
+      0
+     ],
+     "lichen_drift_rough_wet": [
+      0.4,
+      0,
+      0.85,
+      0.6
+     ],
+     "tile_overlayAmount_overlayScale_cavity": [
+      1,
+      0,
+      2.5,
+      0.25
+     ],
+     "tint_a": "f0e2d2",
+     "tint_b": "b8b8b0",
+     "saturation": 1,
+     "overlay_map": null,
+     "overlay_normal": null
+    }
+   },
+   "rubble": {
+    "type": "MeshStandardMaterial",
+    "color": "c6c1b8",
+    "roughness": 1,
+    "metalness": 0,
+    "env": 1,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1.5,
+     1.5
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "shared/assets/textures/rubble_d.jpg",
+     "set": "rubble_d",
+     "repeat": [
+      0.384615,
+      0.384615
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "normal_map": {
+     "source": "shared/assets/textures/rubble_n.jpg",
+     "set": "rubble_n",
+     "repeat": [
+      0.384615,
+      0.384615
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "ao_map": {
+     "source": "shared/assets/textures/rubble_a.jpg",
+     "set": "rubble_a",
+     "repeat": [
+      0.384615,
+      0.384615
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": true,
+    "underground": false,
+    "has_on_before_compile": true,
+    "weathering": {
+     "snow_k": 1,
+     "min_up": 0.5,
+     "macro_streak_damp_soot": [
+      0.24,
+      0.3,
+      1,
+      0
+     ],
+     "lichen_drift_rough_wet": [
+      0.45,
+      1,
+      0.93,
+      0.8
+     ],
+     "tile_overlayAmount_overlayScale_cavity": [
+      1,
+      0.8,
+      1,
+      0.25
+     ],
+     "tint_a": "f6f0e6",
+     "tint_b": "dde4ea",
+     "saturation": 0.62,
+     "overlay_map": {
+      "source": "shared/assets/textures/plaster_d.jpg",
+      "set": "plaster_d",
+      "repeat": [
+       0.4,
+       0.4
+      ],
+      "offset": [
+       0,
+       0
+      ],
+      "rotation": 0,
+      "color_space": "srgb",
+      "wrap": [
+       1000,
+       1000
+      ],
+      "channel": 0,
+      "flipY": true
+     },
+     "overlay_normal": {
+      "source": "shared/assets/textures/plaster_n.jpg",
+      "set": "plaster_n",
+      "repeat": [
+       0.4,
+       0.4
+      ],
+      "offset": [
+       0,
+       0
+      ],
+      "rotation": 0,
+      "color_space": "",
+      "wrap": [
+       1000,
+       1000
+      ],
+      "channel": 0,
+      "flipY": true
+     }
+    }
+   },
+   "slate": {
+    "type": "MeshStandardMaterial",
+    "color": "6c6b69",
+    "roughness": 1,
+    "metalness": 0,
+    "env": 1,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "shared/assets/textures/roof_d.jpg",
+     "set": "roof_d",
+     "repeat": [
+      0.625,
+      0.625
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 1.570796,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "normal_map": {
+     "source": "shared/assets/textures/roof_n.jpg",
+     "set": "roof_n",
+     "repeat": [
+      0.625,
+      0.625
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 1.570796,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "ao_map": {
+     "source": "shared/assets/textures/roof_a.jpg",
+     "set": "roof_a",
+     "repeat": [
+      0.625,
+      0.625
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 1.570796,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": true,
+    "underground": false,
+    "has_on_before_compile": true,
+    "weathering": {
+     "snow_k": 1,
+     "min_up": 0.35,
+     "macro_streak_damp_soot": [
+      0.2,
+      0,
+      0,
+      0
+     ],
+     "lichen_drift_rough_wet": [
+      0,
+      0,
+      0.7,
+      0.8
+     ],
+     "tile_overlayAmount_overlayScale_cavity": [
+      1,
+      0,
+      2.5,
+      0.25
+     ],
+     "tint_a": "f6f0e6",
+     "tint_b": "dde4ea",
+     "saturation": 1,
+     "overlay_map": null,
+     "overlay_normal": null
+    }
+   },
+   "stained.1": {
+    "type": "MeshStandardMaterial",
+    "color": "ffffff",
+    "roughness": 0.3,
+    "metalness": 0,
+    "env": 1,
+    "emissive": "ffffff",
+    "emissive_intensity": 0.1425,
+    "transparent": true,
+    "opacity": 0.92,
+    "depth_write": false,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "canvas",
+     "set": null,
+     "repeat": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1001,
+      1001
+     ],
+     "channel": 0,
+     "flipY": true,
+     "file": "generated/stained_1_map.png"
+    },
+    "normal_map": null,
+    "ao_map": null,
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": {
+     "source": "canvas",
+     "set": null,
+     "repeat": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1001,
+      1001
+     ],
+     "channel": 0,
+     "flipY": true,
+     "file": "generated/stained_1_map.png"
+    },
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": false
+   },
+   "stained.2": {
+    "type": "MeshStandardMaterial",
+    "color": "ffffff",
+    "roughness": 0.3,
+    "metalness": 0,
+    "env": 1,
+    "emissive": "ffffff",
+    "emissive_intensity": 0.1425,
+    "transparent": true,
+    "opacity": 0.92,
+    "depth_write": false,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "canvas",
+     "set": null,
+     "repeat": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1001,
+      1001
+     ],
+     "channel": 0,
+     "flipY": true,
+     "file": "generated/stained_2_map.png"
+    },
+    "normal_map": null,
+    "ao_map": null,
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": {
+     "source": "canvas",
+     "set": null,
+     "repeat": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1001,
+      1001
+     ],
+     "channel": 0,
+     "flipY": true,
+     "file": "generated/stained_2_map.png"
+    },
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": false
+   },
+   "stainedWarm": {
+    "type": "MeshStandardMaterial",
+    "color": "ffffff",
+    "roughness": 0.3,
+    "metalness": 0,
+    "env": 1,
+    "emissive": "ffffff",
+    "emissive_intensity": 0.1425,
+    "transparent": true,
+    "opacity": 0.92,
+    "depth_write": false,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "canvas",
+     "set": null,
+     "repeat": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1001,
+      1001
+     ],
+     "channel": 0,
+     "flipY": true,
+     "file": "generated/stainedWarm_map.png"
+    },
+    "normal_map": null,
+    "ao_map": null,
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": {
+     "source": "canvas",
+     "set": null,
+     "repeat": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1001,
+      1001
+     ],
+     "channel": 0,
+     "flipY": true,
+     "file": "generated/stainedWarm_map.png"
+    },
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": false
+   },
+   "water": {
+    "type": "MeshStandardMaterial",
+    "color": "1d2a2c",
+    "roughness": 0.05,
+    "metalness": 0.1,
+    "env": 1.2,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": null,
+    "normal_map": null,
+    "ao_map": null,
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": false
+   },
+   "wax": {
+    "type": "MeshStandardMaterial",
+    "color": "f2e6c8",
+    "roughness": 0.6,
+    "metalness": 0,
+    "env": 0.4,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": null,
+    "normal_map": null,
+    "ao_map": null,
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": false
+   },
+   "wood": {
+    "type": "MeshStandardMaterial",
+    "color": "a98460",
+    "roughness": 1,
+    "metalness": 0,
+    "env": 0.45,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "shared/assets/textures/wood_d.jpg",
+     "set": "wood_d",
+     "repeat": [
+      0.625,
+      0.625
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "normal_map": {
+     "source": "shared/assets/textures/wood_n.jpg",
+     "set": "wood_n",
+     "repeat": [
+      0.625,
+      0.625
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "ao_map": {
+     "source": "shared/assets/textures/wood_a.jpg",
+     "set": "wood_a",
+     "repeat": [
+      0.625,
+      0.625
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": true,
+    "weathering": {
+     "snow_k": 0,
+     "min_up": 0.5,
+     "macro_streak_damp_soot": [
+      0.14,
+      0,
+      0,
+      0
+     ],
+     "lichen_drift_rough_wet": [
+      0,
+      0,
+      0.72,
+      0
+     ],
+     "tile_overlayAmount_overlayScale_cavity": [
+      1,
+      0,
+      2.5,
+      0.15
+     ],
+     "tint_a": "f6f0e6",
+     "tint_b": "dde4ea",
+     "saturation": 1,
+     "overlay_map": null,
+     "overlay_normal": null
+    }
+   },
+   "woodDark": {
+    "type": "MeshStandardMaterial",
+    "color": "6a4f37",
+    "roughness": 1,
+    "metalness": 0,
+    "env": 0.4,
+    "emissive": "000000",
+    "emissive_intensity": 1,
+    "transparent": false,
+    "opacity": 1,
+    "depth_write": true,
+    "side": 0,
+    "vertex_colors": false,
+    "alpha_test": 0,
+    "tone_mapped": true,
+    "normal_scale": [
+     1,
+     1
+    ],
+    "ao_intensity": 1,
+    "map": {
+     "source": "shared/assets/textures/wood_d.jpg",
+     "set": "wood_d",
+     "repeat": [
+      0.625,
+      0.625
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "srgb",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "normal_map": {
+     "source": "shared/assets/textures/wood_n.jpg",
+     "set": "wood_n",
+     "repeat": [
+      0.625,
+      0.625
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "ao_map": {
+     "source": "shared/assets/textures/wood_a.jpg",
+     "set": "wood_a",
+     "repeat": [
+      0.625,
+      0.625
+     ],
+     "offset": [
+      0,
+      0
+     ],
+     "rotation": 0,
+     "color_space": "",
+     "wrap": [
+      1000,
+      1000
+     ],
+     "channel": 0,
+     "flipY": true
+    },
+    "roughness_map": null,
+    "metalness_map": null,
+    "emissive_map": null,
+    "alpha_map": null,
+    "snow": false,
+    "underground": false,
+    "has_on_before_compile": true,
+    "weathering": {
+     "snow_k": 0,
+     "min_up": 0.5,
+     "macro_streak_damp_soot": [
+      0.16,
+      0,
+      0,
+      0
+     ],
+     "lichen_drift_rough_wet": [
+      0,
+      0,
+      0.7,
+      0
+     ],
+     "tile_overlayAmount_overlayScale_cavity": [
+      1,
+      0,
+      2.5,
+      0.15
+     ],
+     "tint_a": "f6f0e6",
+     "tint_b": "dde4ea",
+     "saturation": 1,
+     "overlay_map": null,
+     "overlay_normal": null
+    }
+   }
+  },
+  "images": [
+   {
+    "file": "generated/frieze_map.png",
+    "width": 1024,
+    "height": 256,
+    "path": "shared/data/export/generated/frieze_map.png",
+    "bytes": 551039,
+    "sha256": "4debb00f1f7695f20435f81915b9c18d6d01771591d90b73b38e21509b761d93",
+    "first_key": "frieze",
+    "slot": "map"
+   },
+   {
+    "file": "generated/frieze_normal_map.png",
+    "width": 1024,
+    "height": 256,
+    "path": "shared/data/export/generated/frieze_normal_map.png",
+    "bytes": 122154,
+    "sha256": "38fdf64768727cdc5887b22edf64d0e3fe36e3a7c2edf766e0dbbd9c906ba6d0",
+    "first_key": "frieze",
+    "slot": "normal_map"
+   },
+   {
+    "file": "generated/glassOpaque_map.png",
+    "width": 256,
+    "height": 256,
+    "path": "shared/data/export/generated/glassOpaque_map.png",
+    "bytes": 28651,
+    "sha256": "18213aea559b29b77fc88b91fcf92301ca20d44c72f6144f515470febd631047",
+    "first_key": "glassOpaque",
+    "slot": "map"
+   },
+   {
+    "file": "generated/p_bone_map.png",
+    "width": 256,
+    "height": 256,
+    "path": "shared/data/export/generated/p_bone_map.png",
+    "bytes": 78663,
+    "sha256": "b0afcd7ac4431cc1d414eaffa844a7e19271739bf25349190435d884a902aac3",
+    "first_key": "p.bone",
+    "slot": "map"
+   },
+   {
+    "file": "generated/p_boneDark_map.png",
+    "width": 256,
+    "height": 256,
+    "path": "shared/data/export/generated/p_boneDark_map.png",
+    "bytes": 78671,
+    "sha256": "8a0d8c1dc85647cbdf56bfd93b1ff67261dba7837c02a3141ee9baf618b8bd68",
+    "first_key": "p.boneDark",
+    "slot": "map"
+   },
+   {
+    "file": "generated/p_leather_map.png",
+    "width": 256,
+    "height": 256,
+    "path": "shared/data/export/generated/p_leather_map.png",
+    "bytes": 53845,
+    "sha256": "b702a5ccfba1220af598aefe9dec0b5afa3903057b921b81fe1ce3c51cb592da",
+    "first_key": "p.leather",
+    "slot": "map"
+   },
+   {
+    "file": "generated/p_linenWhite_map.png",
+    "width": 256,
+    "height": 256,
+    "path": "shared/data/export/generated/p_linenWhite_map.png",
+    "bytes": 60464,
+    "sha256": "5325ae3e8f076b9a575f9c0f67fb04104dcace0381029bd4e9f15378d187848c",
+    "first_key": "p.linenWhite",
+    "slot": "map"
+   },
+   {
+    "file": "generated/p_vellum_map.png",
+    "width": 256,
+    "height": 256,
+    "path": "shared/data/export/generated/p_vellum_map.png",
+    "bytes": 41512,
+    "sha256": "14b2e27c86d1a118e2532af27d087a5f56f57d4449331f2ff4657daa1cb7c994",
+    "first_key": "p.vellum",
+    "slot": "map"
+   },
+   {
+    "file": "generated/stained_1_map.png",
+    "width": 256,
+    "height": 512,
+    "path": "shared/data/export/generated/stained_1_map.png",
+    "bytes": 206142,
+    "sha256": "d0d31ef25d0a1a72052cfbe9ebee91bd22db73b790b1fa5ef4227f066563ccdc",
+    "first_key": "stained.1",
+    "slot": "map"
+   },
+   {
+    "file": "generated/stained_2_map.png",
+    "width": 256,
+    "height": 512,
+    "path": "shared/data/export/generated/stained_2_map.png",
+    "bytes": 209822,
+    "sha256": "f614a3f344df61a20dd76e20706086334bff586c6d4aa77a68875d9e7808d881",
+    "first_key": "stained.2",
+    "slot": "map"
+   },
+   {
+    "file": "generated/stainedWarm_map.png",
+    "width": 256,
+    "height": 512,
+    "path": "shared/data/export/generated/stainedWarm_map.png",
+    "bytes": 214479,
+    "sha256": "c1204ba7d3e7fc146e4ae3fd0d831a838b73e58843d4b35b9e60c208c3b2f13c",
+    "first_key": "stainedWarm",
+    "slot": "map"
+   }
+  ],
+  "fields": {
+   "terrain_height": {
+    "file": "fields/terrain_height.bin",
+    "base_file": "fields/terrain_base.bin",
+    "sunk_below_base_m": 0.8,
+    "format": "float32 row-major, z rows",
+    "x0": -24,
+    "z0": -30,
+    "step": 1,
+    "nx": 81,
+    "nz": 75,
+    "source": "web/src/world/terrain.js height(x,z) incl. building sinks; baseHeight(x,z) without; terrainCollider() skips cells with a corner sunk > 0.8 m (floors take over)"
+   },
+   "ground": {
+    "file": "fields/ground.bin",
+    "width": 256,
+    "height": 256,
+    "array": "Uint16Array",
+    "channels": 4,
+    "rect": [
+     -150,
+     -120,
+     300,
+     0
+    ],
+    "note": "weathering.js W.tGround: world rect x0,z0,size; R = ground height"
+   },
+   "trodden": {
+    "file": "fields/trodden.bin",
+    "width": 1024,
+    "height": 1024,
+    "array": "Uint8Array",
+    "channels": 4,
+    "rect": [
+     -150,
+     -120,
+     300,
+     0
+    ],
+    "note": "weathering.js W.tMask: world rect x0,z0,size; R = trodden path"
+   }
+  },
+  "anchors": {
+   "plan": {
+    "PX": 0.42,
+    "ORIGIN": [
+     330,
+     290
+    ],
+    "CHURCH": {
+     "x0": -13.02,
+     "xCross": 30.66,
+     "xChoir": 38.22,
+     "xApse": 46.62,
+     "zN": -13.44,
+     "zS": 2.52,
+     "zc": -5.46,
+     "transeptN": -19.32,
+     "vScale": 0.8
+    },
+    "CLOISTER": {
+     "x0": -10.5,
+     "x1": 30.24,
+     "z0": 3.78,
+     "z1": 25.2,
+     "walk": 3.6
+    },
+    "SKULL_CHAPEL": 15.372,
+    "CHAPELS": [
+     -2.1,
+     6.636,
+     15.372,
+     24.108
+    ]
+   },
+   "cloister.porch": {
+    "x": -9.88,
+    "y": 0.35,
+    "z": 14.135,
+    "ry": 1.570796,
+    "source": "web/src/world/people/schedule.js CLOIS.porch"
+   },
+   "cloister.porchBenchTop": {
+    "x": -9.88,
+    "y": 0.77,
+    "z": 14.135,
+    "source": "app.groundY ray at the porch slot (people.js resolveY)"
+   },
+   "alinardo.seatRoot": {
+    "x": -9.88,
+    "y": 0.31,
+    "z": 14.135,
+    "ry": 1.570796,
+    "source": "people.js resolveY: bench top − SEAT_H.sit (0.46)"
+   },
+   "church.skullChapel": [
+    15.372,
+    -12.24
+   ],
+   "church.westDoor": [
+    -16.02,
+    -5.46
+   ],
+   "church.northDoor": [
+    42.22,
+    -11.26
+   ],
+   "church.choir": [
+    32.66,
+    -5.46
+   ],
+   "church.nave": [
+    -7.02,
+    -5.46
+   ],
+   "ossuary.chapelBottom": [
+    15.372,
+    -20.64
+   ],
+   "ossuary.path": [
+    [
+     15.372,
+     -19.44
+    ],
+    [
+     17.6,
+     -22.2
+    ],
+    [
+     30,
+     -25.6
+    ],
+    [
+     44.6,
+     -27.8
+    ],
+    [
+     44.6,
+     -32.76
+    ]
+   ],
+   "altar.hinge": [
+    14.652,
+    0.35,
+    -13.99
+   ],
+   "altar.rotationPerOpen": -1.45,
+   "altar.collider": {
+    "min": [
+     0,
+     0,
+     -1.05
+    ],
+    "max": [
+     1.44,
+     1.05,
+     0
+    ],
+    "frame": "hinge-local"
+   },
+   "altar.interact": {
+    "pos": [
+     15.372,
+     1.15,
+     -13.59
+    ],
+    "radius": 2,
+    "label": "An altar carved with skulls above a heap of shin bones"
+   }
+  },
+  "doors": [
+   {
+    "id": "church:westN",
+    "building": "church",
+    "x": -13.02,
+    "y": 0.35,
+    "z": -6.58,
+    "nx": -1,
+    "nz": 0,
+    "w": 1.3,
+    "th": 1.4,
+    "open": 1,
+    "out": 6.5
+   },
+   {
+    "id": "church:westS",
+    "building": "church",
+    "x": -13.02,
+    "y": 0.35,
+    "z": -4.34,
+    "nx": -1,
+    "nz": 0,
+    "w": 1.3,
+    "th": 1.4,
+    "open": 1,
+    "out": 6.5
+   },
+   {
+    "id": "church:north",
+    "building": "church",
+    "x": 42.22,
+    "y": 0.35,
+    "z": -10.06,
+    "nx": 0,
+    "nz": -1,
+    "w": 1.9,
+    "th": 1.1,
+    "open": 1
+   },
+   {
+    "id": "church:cloister",
+    "building": "church",
+    "x": 28.076,
+    "y": 0.35,
+    "z": 2.52,
+    "nx": 0,
+    "nz": 1,
+    "w": 1.6,
+    "th": 1.1,
+    "open": 1
+   },
+   {
+    "id": "church:sacristy-south",
+    "building": "church",
+    "x": 43.82,
+    "y": 0.35,
+    "z": 2.52,
+    "nx": 0,
+    "nz": 1,
+    "w": 1.3,
+    "th": 1.1,
+    "open": 1
+   },
+   {
+    "id": "church:choir-sacristy",
+    "building": "church",
+    "x": 44.02,
+    "y": 0.35,
+    "z": -0.86,
+    "nx": 0,
+    "nz": 1,
+    "w": 1.2,
+    "th": 1.1,
+    "open": 1
+   },
+   {
+    "id": "church:belltower",
+    "building": "church",
+    "x": 32.77,
+    "y": 0.35,
+    "z": 0.28,
+    "nx": -1,
+    "nz": 0,
+    "w": 1.2,
+    "th": 0.4,
+    "open": 1
+   },
+   {
+    "id": "cloister:west5.5",
+    "building": "cloister",
+    "x": -10.5,
+    "y": 0.3,
+    "z": 8.27,
+    "nx": -1,
+    "nz": 0,
+    "w": 1.4,
+    "th": 0.7,
+    "open": 1,
+    "out": 1
+   },
+   {
+    "id": "cloister:west16.5",
+    "building": "cloister",
+    "x": -10.5,
+    "y": 0.3,
+    "z": 19.27,
+    "nx": -1,
+    "nz": 0,
+    "w": 1.4,
+    "th": 0.7,
+    "open": 1,
+    "out": 1
+   },
+   {
+    "id": "calefactory:west4.5",
+    "building": "calefactory",
+    "x": 30.24,
+    "y": 0.3,
+    "z": 7.27,
+    "nx": -1,
+    "nz": 0,
+    "w": 1.3,
+    "th": 0.7,
+    "open": 1
+   },
+   {
+    "id": "calefactory:west14",
+    "building": "calefactory",
+    "x": 30.24,
+    "y": 0.3,
+    "z": 16.77,
+    "nx": -1,
+    "nz": 0,
+    "w": 1.3,
+    "th": 0.7,
+    "open": 1
+   },
+   {
+    "id": "dormitory:north",
+    "building": "dormitory",
+    "x": 43.33,
+    "y": 0.3,
+    "z": 4.2,
+    "nx": 0,
+    "nz": -1,
+    "w": 1.3,
+    "th": 0.7,
+    "open": 1
+   },
+   {
+    "id": "dormitory:south",
+    "building": "dormitory",
+    "x": 43.33,
+    "y": 0.3,
+    "z": 38.2,
+    "nx": 0,
+    "nz": 1,
+    "w": 1.3,
+    "th": 0.7,
+    "open": 1
+   },
+   {
+    "id": "dormitory:passage-east",
+    "building": "dormitory",
+    "x": 46.22,
+    "y": 0.3,
+    "z": 3.185,
+    "nx": 1,
+    "nz": 0,
+    "w": 1,
+    "th": 0.6,
+    "open": 1
+   },
+   {
+    "id": "chapter:outer",
+    "building": "chapter",
+    "x": -14.28,
+    "y": 0.3,
+    "z": 31.08,
+    "nx": -1,
+    "nz": 0,
+    "w": 1.9,
+    "th": 0.9,
+    "open": 1
+   },
+   {
+    "id": "chapter:old-portal",
+    "building": "chapter",
+    "x": -5.88,
+    "y": 0.3,
+    "z": 31.08,
+    "nx": -1,
+    "nz": 0,
+    "w": 3.2,
+    "th": 1.2,
+    "open": 1
+   },
+   {
+    "id": "abbot:south",
+    "building": "abbot",
+    "x": 31.32,
+    "y": 0.3,
+    "z": 36.96,
+    "nx": 0,
+    "nz": 1,
+    "w": 1.4,
+    "th": 0.9,
+    "open": 1
+   }
+  ],
+  "interactables": [
+   {
+    "id": "virgin",
+    "pos": [
+     26.708,
+     1.95,
+     -12.04
+    ],
+    "radius": 2.5,
+    "label": "The stone Virgin, smiling, the Child in her arms",
+    "altar": false
+   },
+   {
+    "id": "altar",
+    "pos": [
+     43.62,
+     1.75,
+     -5.46
+    ],
+    "radius": 3,
+    "label": "The high altar, gold on every side",
+    "altar": false
+   },
+   {
+    "id": "tripod",
+    "pos": [
+     28.46,
+     2,
+     -5.46
+    ],
+    "radius": 3,
+    "label": "The great bronze tripod that burns all night",
+    "altar": false
+   },
+   {
+    "id": "bells",
+    "pos": [
+     34.44,
+     1.5,
+     -3.66
+    ],
+    "radius": 1.8,
+    "label": "The bell ropes",
+    "altar": false
+   },
+   {
+    "id": "belltower",
+    "pos": [
+     32.07,
+     1.55,
+     0.28
+    ],
+    "radius": 2,
+    "label": "The stair to the bell tower",
+    "altar": false
+   },
+   {
+    "id": "skull-altar",
+    "pos": [
+     15.372,
+     1.15,
+     -13.59
+    ],
+    "radius": 2,
+    "label": "An altar carved with skulls above a heap of shin bones",
+    "altar": true
+   },
+   {
+    "id": "treasury",
+    "pos": [
+     42.52,
+     -1.8,
+     -5.46
+    ],
+    "radius": 4.2,
+    "label": "The treasury crypt",
+    "altar": false
+   },
+   {
+    "id": "cloister",
+    "pos": [
+     9.87,
+     1.5,
+     5.17
+    ],
+    "radius": 12,
+    "label": "The cloister",
+    "altar": false
+   },
+   {
+    "id": "calefactory",
+    "pos": [
+     34.01,
+     1.4,
+     15
+    ],
+    "radius": 5,
+    "label": "The warming room",
+    "altar": false
+   },
+   {
+    "id": "dormitory",
+    "pos": [
+     43.89,
+     1.4,
+     16.2
+    ],
+    "radius": 6,
+    "label": "The dormitory: a cell for each monk",
+    "altar": false
+   },
+   {
+    "id": "berengar-cell",
+    "pos": [
+     42.29,
+     5.6,
+     21.15
+    ],
+    "radius": 2,
+    "label": "Berengar’s cell: under the straw mattress they found a white cloth stained with blood",
+    "altar": false
+   },
+   {
+    "id": "jorge-cell",
+    "pos": [
+     42.49,
+     1.4,
+     8.75
+    ],
+    "radius": 1.8,
+    "label": "A cell off the lower corridor — Jorge’s",
+    "altar": false
+   },
+   {
+    "id": "chapter-portal",
+    "pos": [
+     -7.88,
+     2.2,
+     31.08
+    ],
+    "radius": 4,
+    "label": "The old portal: Christ, the twelve apostles, the peoples of the world",
+    "altar": false
+   },
+   {
+    "id": "chapter-house",
+    "pos": [
+     2.12,
+     1.5,
+     31.08
+    ],
+    "radius": 6,
+    "label": "The chapter house",
+    "altar": false
+   },
+   {
+    "id": "chapter-garden",
+    "pos": [
+     6.09,
+     1.3,
+     41.54
+    ],
+    "radius": 5,
+    "label": "The chapter house garden",
+    "altar": false
+   },
+   {
+    "id": "abbot-hall",
+    "pos": [
+     28.14,
+     7.8,
+     27.96
+    ],
+    "radius": 3.2,
+    "label": "The Abbot’s hall: the Aedificium over the church roof",
+    "altar": false
+   },
+   {
+    "id": "abbot-chapel",
+    "pos": [
+     22.32,
+     1.4,
+     31.71
+    ],
+    "radius": 3,
+    "label": "The Abbot’s chapel",
+    "altar": false
+   },
+   {
+    "id": "cemetery",
+    "pos": [
+     40,
+     1.5,
+     -19
+    ],
+    "radius": 12,
+    "label": "The cemetery between the church and the Aedificium",
+    "altar": false
+   }
+  ],
+  "emitters": [
+   {
+    "x": -2.5,
+    "y": 1.67,
+    "z": -14.49,
+    "color": 16756832,
+    "intensity": 0.9,
+    "distance": 5,
+    "flicker": 0.25,
+    "small": true
+   },
+   {
+    "x": 6.236,
+    "y": 1.67,
+    "z": -14.49,
+    "color": 16756832,
+    "intensity": 0.9,
+    "distance": 5,
+    "flicker": 0.25,
+    "small": true
+   },
+   {
+    "x": 23.708,
+    "y": 1.67,
+    "z": -14.49,
+    "color": 16756832,
+    "intensity": 0.9,
+    "distance": 5,
+    "flicker": 0.25,
+    "small": true
+   },
+   {
+    "x": 27.408,
+    "y": 1.75,
+    "z": -11.64,
+    "color": 16756832,
+    "intensity": 0.9,
+    "distance": 5,
+    "flicker": 0.25,
+    "small": true
+   },
+   {
+    "x": 43.62,
+    "y": 2.82,
+    "z": -6.41,
+    "color": 16756832,
+    "intensity": 0.9,
+    "distance": 5,
+    "flicker": 0.25,
+    "small": true
+   },
+   {
+    "x": 43.62,
+    "y": 2.82,
+    "z": -4.51,
+    "color": 16756832,
+    "intensity": 0.9,
+    "distance": 5,
+    "flicker": 0.25,
+    "small": true
+   },
+   {
+    "x": 28.46,
+    "y": 4.1,
+    "z": -5.46,
+    "color": 16752720,
+    "intensity": 14,
+    "distance": 26,
+    "flicker": 0.3
+   },
+   {
+    "x": 43.77,
+    "y": -1.2,
+    "z": -8.54,
+    "color": 16751173,
+    "intensity": 4,
+    "distance": 3,
+    "flicker": 0.4
+   },
+   {
+    "x": 43.77,
+    "y": -1.2,
+    "z": -2.38,
+    "color": 16751173,
+    "intensity": 4,
+    "distance": 3,
+    "flicker": 0.4
+   },
+   {
+    "x": 34.01,
+    "y": 1.1,
+    "z": 23.6,
+    "color": 16745528,
+    "intensity": 7,
+    "distance": 11,
+    "flicker": 0.4
+   },
+   {
+    "x": 43.89,
+    "y": 3.55,
+    "z": 11.85,
+    "color": 16756832,
+    "intensity": 1.4,
+    "distance": 7,
+    "flicker": 0.25,
+    "small": true
+   },
+   {
+    "x": 43.89,
+    "y": 3.55,
+    "z": 24.25,
+    "color": 16756832,
+    "intensity": 1.4,
+    "distance": 7,
+    "flicker": 0.25,
+    "small": true
+   },
+   {
+    "x": 43.89,
+    "y": 3.55,
+    "z": 35.1,
+    "color": 16756832,
+    "intensity": 1.4,
+    "distance": 7,
+    "flicker": 0.25,
+    "small": true
+   },
+   {
+    "x": 43.89,
+    "y": 7.4,
+    "z": 11.85,
+    "color": 16756832,
+    "intensity": 1.4,
+    "distance": 7,
+    "flicker": 0.25,
+    "small": true
+   },
+   {
+    "x": 43.89,
+    "y": 7.4,
+    "z": 24.25,
+    "color": 16756832,
+    "intensity": 1.4,
+    "distance": 7,
+    "flicker": 0.25,
+    "small": true
+   },
+   {
+    "x": 43.89,
+    "y": 7.4,
+    "z": 35.1,
+    "color": 16756832,
+    "intensity": 1.4,
+    "distance": 7,
+    "flicker": 0.25,
+    "small": true
+   },
+   {
+    "x": 15.06,
+    "y": 1.9,
+    "z": 29.48,
+    "color": 16756832,
+    "intensity": 0.9,
+    "distance": 5,
+    "flicker": 0.25,
+    "small": true
+   },
+   {
+    "x": 20.52,
+    "y": 1.62,
+    "z": 31.26,
+    "color": 16756832,
+    "intensity": 0.9,
+    "distance": 5,
+    "flicker": 0.25,
+    "small": true
+   },
+   {
+    "x": 29.34,
+    "y": 8.05,
+    "z": 32.21,
+    "color": 16756832,
+    "intensity": 0.9,
+    "distance": 5,
+    "flicker": 0.25,
+    "small": true
+   }
+  ],
+  "sound_emitters": [
+   {
+    "kind": "chant",
+    "pos": [
+     35.44,
+     2.4,
+     -5.46
+    ],
+    "radius": 70,
+    "gain": 1,
+    "zone": [
+     "choir",
+     "church"
+    ]
+   },
+   {
+    "kind": "drip",
+    "pos": [
+     43.22,
+     -2.2,
+     -5.46
+    ],
+    "radius": 14,
+    "gain": 1,
+    "zone": "crypt"
+   },
+   {
+    "kind": "broom",
+    "pos": [
+     -8.5,
+     0.4,
+     7.78
+    ],
+    "radius": 18,
+    "gain": 1,
+    "zone": [
+     "cloister"
+    ]
+   },
+   {
+    "kind": "water",
+    "pos": [
+     9.87,
+     0.6,
+     15.99
+    ],
+    "radius": 9,
+    "gain": 0.35,
+    "zone": null
+   },
+   {
+    "kind": "hearth",
+    "pos": [
+     28.46,
+     4.1,
+     -5.46
+    ],
+    "radius": 14,
+    "gain": 1,
+    "zone": "church"
+   },
+   {
+    "kind": "hearth",
+    "pos": [
+     34.01,
+     1.1,
+     23.6
+    ],
+    "radius": 14,
+    "gain": 1,
+    "zone": "calefactory"
+   }
+  ],
+  "trees": [
+   {
+    "mesh": "fruit0_lod0",
+    "source": "fruit0:lod0",
+    "instances": [
+     [
+      0.29091,
+      0,
+      0.745232,
+      0,
+      0,
+      0.8,
+      0,
+      0,
+      -0.745232,
+      0,
+      0.29091,
+      0,
+      21.639999,
+      -0.266466,
+      10.67,
+      1
+     ],
+     [
+      -0.21442,
+      0,
+      -0.77073,
+      0,
+      0,
+      0.8,
+      0,
+      0,
+      0.77073,
+      0,
+      -0.21442,
+      0,
+      -1.9,
+      -0.229668,
+      17.6,
+      1
+     ],
+     [
+      0.371698,
+      0,
+      0.708407,
+      0,
+      0,
+      0.8,
+      0,
+      0,
+      -0.708407,
+      0,
+      0.371698,
+      0,
+      21.639999,
+      -0.260477,
+      17.6,
+      1
+     ]
+    ],
+    "triangles": 2068,
+    "material": {
+     "type": "MeshStandardMaterial",
+     "color": "ffffff",
+     "roughness": 0.92,
+     "metalness": 0,
+     "env": 0.55,
+     "emissive": "000000",
+     "emissive_intensity": 1,
+     "transparent": false,
+     "opacity": 1,
+     "depth_write": true,
+     "side": 2,
+     "vertex_colors": false,
+     "alpha_test": 0.42,
+     "tone_mapped": true,
+     "normal_scale": [
+      1,
+      1
+     ],
+     "ao_intensity": 1,
+     "map": {
+      "source": "data",
+      "set": null,
+      "repeat": [
+       1,
+       1
+      ],
+      "offset": [
+       0,
+       0
+      ],
+      "rotation": 0,
+      "color_space": "srgb",
+      "wrap": [
+       1001,
+       1001
+      ],
+      "channel": 0,
+      "flipY": false
+     },
+     "normal_map": {
+      "source": "data",
+      "set": null,
+      "repeat": [
+       1,
+       1
+      ],
+      "offset": [
+       0,
+       0
+      ],
+      "rotation": 0,
+      "color_space": "",
+      "wrap": [
+       1001,
+       1001
+      ],
+      "channel": 0,
+      "flipY": false
+     },
+     "ao_map": null,
+     "roughness_map": null,
+     "metalness_map": null,
+     "emissive_map": null,
+     "alpha_map": null,
+     "snow": true,
+     "underground": false,
+     "has_on_before_compile": true
+    }
+   },
+   {
+    "mesh": "fruit1_lod0",
+    "source": "fruit1:lod0",
+    "instances": [
+     [
+      0.170839,
+      0,
+      -0.781546,
+      0,
+      0,
+      0.8,
+      0,
+      0,
+      0.781546,
+      0,
+      0.170839,
+      0,
+      -1.9,
+      -0.27081,
+      10.67,
+      1
+     ],
+     [
+      0.281038,
+      0,
+      -0.749011,
+      0,
+      0,
+      0.8,
+      0,
+      0,
+      0.749011,
+      0,
+      0.281038,
+      0,
+      0.87,
+      -0.245343,
+      14.135,
+      1
+     ]
+    ],
+    "triangles": 2692,
+    "material": {
+     "type": "MeshStandardMaterial",
+     "color": "ffffff",
+     "roughness": 0.92,
+     "metalness": 0,
+     "env": 0.55,
+     "emissive": "000000",
+     "emissive_intensity": 1,
+     "transparent": false,
+     "opacity": 1,
+     "depth_write": true,
+     "side": 2,
+     "vertex_colors": false,
+     "alpha_test": 0.42,
+     "tone_mapped": true,
+     "normal_scale": [
+      1,
+      1
+     ],
+     "ao_intensity": 1,
+     "map": {
+      "source": "data",
+      "set": null,
+      "repeat": [
+       1,
+       1
+      ],
+      "offset": [
+       0,
+       0
+      ],
+      "rotation": 0,
+      "color_space": "srgb",
+      "wrap": [
+       1001,
+       1001
+      ],
+      "channel": 0,
+      "flipY": false
+     },
+     "normal_map": {
+      "source": "data",
+      "set": null,
+      "repeat": [
+       1,
+       1
+      ],
+      "offset": [
+       0,
+       0
+      ],
+      "rotation": 0,
+      "color_space": "",
+      "wrap": [
+       1001,
+       1001
+      ],
+      "channel": 0,
+      "flipY": false
+     },
+     "ao_map": null,
+     "roughness_map": null,
+     "metalness_map": null,
+     "emissive_map": null,
+     "alpha_map": null,
+     "snow": true,
+     "underground": false,
+     "has_on_before_compile": true
+    }
+   },
+   {
+    "mesh": "fruit2_lod0",
+    "source": "fruit2:lod0",
+    "instances": [
+     [
+      -0.793498,
+      0,
+      0.101789,
+      0,
+      0,
+      0.8,
+      0,
+      0,
+      -0.101789,
+      0,
+      -0.793498,
+      0,
+      18.870001,
+      -0.271997,
+      14.135,
+      1
+     ]
+    ],
+    "triangles": 2092,
+    "material": {
+     "type": "MeshStandardMaterial",
+     "color": "ffffff",
+     "roughness": 0.92,
+     "metalness": 0,
+     "env": 0.55,
+     "emissive": "000000",
+     "emissive_intensity": 1,
+     "transparent": false,
+     "opacity": 1,
+     "depth_write": true,
+     "side": 2,
+     "vertex_colors": false,
+     "alpha_test": 0.42,
+     "tone_mapped": true,
+     "normal_scale": [
+      1,
+      1
+     ],
+     "ao_intensity": 1,
+     "map": {
+      "source": "data",
+      "set": null,
+      "repeat": [
+       1,
+       1
+      ],
+      "offset": [
+       0,
+       0
+      ],
+      "rotation": 0,
+      "color_space": "srgb",
+      "wrap": [
+       1001,
+       1001
+      ],
+      "channel": 0,
+      "flipY": false
+     },
+     "normal_map": {
+      "source": "data",
+      "set": null,
+      "repeat": [
+       1,
+       1
+      ],
+      "offset": [
+       0,
+       0
+      ],
+      "rotation": 0,
+      "color_space": "",
+      "wrap": [
+       1001,
+       1001
+      ],
+      "channel": 0,
+      "flipY": false
+     },
+     "ao_map": null,
+     "roughness_map": null,
+     "metalness_map": null,
+     "emissive_map": null,
+     "alpha_map": null,
+     "snow": true,
+     "underground": false,
+     "has_on_before_compile": true
+    }
+   }
+  ],
+  "probes": [
+   {
+    "x": -9.88,
+    "z": 14.135,
+    "from": 1.07,
+    "y": 0.77
+   },
+   {
+    "x": 20,
+    "z": 4.9,
+    "from": 1.5,
+    "y": 0.3
+   },
+   {
+    "x": 15.372,
+    "z": -12.24,
+    "from": 1.5,
+    "y": 0.35
+   },
+   {
+    "x": 15.372,
+    "z": -20.64,
+    "from": -1,
+    "y": -2.8
+   },
+   {
+    "x": 28.076,
+    "z": 1.2,
+    "from": 1.5,
+    "y": 0.35
+   }
+  ]
+ }
+}

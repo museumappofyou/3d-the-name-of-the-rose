@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "references": [
+    {
+      "id": "history:catchwords",
+      "url": "https://trinitycollegelibrarycambridge.wordpress.com/2015/04/17/catchwords/",
+      "institution": "Trinity College Library, Cambridge",
+      "supports": "Catchwords connect the last verso of one quire to the first recto of the next in the illustrated manuscript.",
+      "use": "A possible physical collation clue; use in an original case remains design fiction."
+    },
+    {
+      "id": "history:palimpsests",
+      "url": "https://www.bl.uk/stories/blogs/posts/palimpsests-the-art-of-medieval-recycling",
+      "institution": "British Library",
+      "supports": "Manuscript leaves could be erased and reused; underlying texts sometimes remain recoverable.",
+      "use": "Historical inspiration for The Second Hand; no claim of a particular abbey event."
+    },
+    {
+      "id": "history:sewing",
+      "url": "https://colour-illuminated.fitzmuseum.cam.ac.uk/rebinding/rebinding",
+      "institution": "Fitzwilliam Museum",
+      "supports": "The illustrated rebinding follows medieval/early modern sewing examples.",
+      "use": "Reference for readable sewing/repair clues, not a universal 1327 practice."
+    }
+  ]
+}

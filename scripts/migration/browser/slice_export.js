@@ -1,5 +1,5 @@
 // Phase-1 semantic section export (runs inside the unchanged browser game,
-// driven by scripts/migration/browser_driver.mjs with migration/data/export/
+// driven by scripts/migration/browser_driver.mjs with shared/data/export/
 // slice_cells.json). Captures Batch parts BEFORE their broad material merge,
 // assigns each part to one semantic cell by explicit rules, merges only
 // within (cell, material key), and writes:
@@ -187,7 +187,7 @@ export async function run(cfg) {
   const bf = new Float32Array(nx * nz);
   for (let j = 0; j < nz; j++) for (let i = 0; i < nx; i++) bf[j * nx + i] = baseHeight(F.x0 + i * F.step, F.z0 + j * F.step);
   files['fields/terrain_base.bin'] = await save('fields/terrain_base.bin', bf.buffer);
-  const fields = { terrain_height: { file: 'fields/terrain_height.bin', base_file: 'fields/terrain_base.bin', sunk_below_base_m: 0.8, format: 'float32 row-major, z rows', x0: F.x0, z0: F.z0, step: F.step, nx, nz, source: 'src/world/terrain.js height(x,z) incl. building sinks; baseHeight(x,z) without; terrainCollider() skips cells with a corner sunk > 0.8 m (floors take over)' } };
+  const fields = { terrain_height: { file: 'fields/terrain_height.bin', base_file: 'fields/terrain_base.bin', sunk_below_base_m: 0.8, format: 'float32 row-major, z rows', x0: F.x0, z0: F.z0, step: F.step, nx, nz, source: 'web/src/world/terrain.js height(x,z) incl. building sinks; baseHeight(x,z) without; terrainCollider() skips cells with a corner sunk > 0.8 m (floors take over)' } };
   for (const [name, tex, rect] of [['ground', W.tGround.value, W.uGround.value], ['trodden', W.tMask.value, W.uMask.value]]) {
     const rec = await dumpTexture(tex, 'fields/' + name);
     if (rec) { files[rec.file] = rec.saved; delete rec.saved; fields[name] = { ...rec, rect: [rect.x, rect.y, rect.z, rect.w ?? 0].map(r6), note: name === 'ground' ? 'weathering.js W.tGround: world rect x0,z0,size; R = ground height' : 'weathering.js W.tMask: world rect x0,z0,size; R = trodden path' }; }
@@ -200,7 +200,7 @@ export async function run(cfg) {
   const region = box3(cfg.region);
   const anchors = {
     plan: { PX, ORIGIN, CHURCH: { x0: CHURCH.x0, xCross: CHURCH.xCross, xChoir: CHURCH.xChoir, xApse: CHURCH.xApse, zN: CHURCH.zN, zS: CHURCH.zS, zc, transeptN: CHURCH.transeptN, vScale: CHURCH.vScale }, CLOISTER: { ...CLOISTER }, SKULL_CHAPEL, CHAPELS },
-    'cloister.porch': { x: porch.x, y: 0.35, z: porch.z, ry: porch.ry, source: 'src/world/people/schedule.js CLOIS.porch' },
+    'cloister.porch': { x: porch.x, y: 0.35, z: porch.z, ry: porch.ry, source: 'web/src/world/people/schedule.js CLOIS.porch' },
     'cloister.porchBenchTop': { x: porch.x, y: benchTop, z: porch.z, source: 'app.groundY ray at the porch slot (people.js resolveY)' },
     'alinardo.seatRoot': { x: porch.x, y: benchTop - 0.46, z: porch.z, ry: porch.ry, source: 'people.js resolveY: bench top − SEAT_H.sit (0.46)' },
     'church.skullChapel': app.ctx.anchors.church.skullChapel,
@@ -303,7 +303,7 @@ function texInfo(t) {
   if (!t) return null;
   const src = t.image?.currentSrc || t.image?.src || '';
   const set = /assets\/textures\/([^/]+)\.(jpg|png|webp)/.exec(src);
-  return { source: set ? 'assets/textures/' + set[1] + '.' + set[2] : (t.image instanceof HTMLCanvasElement || t.isCanvasTexture ? 'canvas' : (t.isDataTexture ? 'data' : 'unknown')), set: set?.[1] ?? null,
+  return { source: set ? 'shared/assets/textures/' + set[1] + '.' + set[2] : (t.image instanceof HTMLCanvasElement || t.isCanvasTexture ? 'canvas' : (t.isDataTexture ? 'data' : 'unknown')), set: set?.[1] ?? null,
     repeat: [t.repeat.x, t.repeat.y].map(r6), offset: [t.offset.x, t.offset.y].map(r6), rotation: r6(t.rotation), color_space: t.colorSpace, wrap: [t.wrapS, t.wrapT], channel: t.channel ?? 0, flipY: t.flipY };
 }
 function materialInfo(m) {

@@ -1,4 +1,4 @@
-// Web derivatives of the abbey's livestock (see docs/assets/MODEL_SOURCES.md):
+// Web derivatives of the abbey's livestock (see docs/ASSETS.md):
 // Quaternius "Ultimate Animated Animals" / "Farm Animals" (CC0) via
 // poly.pizza, and three static Google Poly models (CC BY 3.0): hen, rooster,
 // goat. Each is welded and given smooth normals (the sources are flat-shaded

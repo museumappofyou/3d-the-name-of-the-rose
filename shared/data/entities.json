@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "entities",
+  "source": {"cast": "shared/assets/models/people/cast.json", "named": "web/src/world/people.js NAMED"},
+  "entities": [
+    {"id": "alinardo", "kind": "person", "role": "monk", "name": "Alinardo of Grottaferrata", "asset_id": "character:alinardo",
+     "evidence": [{"claim_id": "claim_000966", "status": "EXPLICIT", "use": "old Alinardo"}, {"claim_id": "claim_000989", "status": "EXPLICIT"}],
+     "height_m": 1.6465, "tint": {"hair": [1.05, 1.05, 1.03], "skin": [0.97, 0.94, 0.9]}},
+    {"id": "skull-altar", "kind": "pivot_portal", "location_id": "skull", "portal_id": "church:altar",
+     "evidence": [{"claim_id": "claim_001047", "status": "EXPLICIT"}]},
+    {"id": "fixture:door", "kind": "test_fixture", "location_id": "fixture", "portal_id": "fixture:door",
+     "note": "noncanonical door/curfew/egress fixture; not part of the reconstruction"}
+  ],
+  "benchmark_identities": {
+    "prefix": "bench:",
+    "note": "The 46-presentation stress mode creates synthetic ids bench:00..bench:45 that map to a small subset of fitted cast templates. They are not story identities, are never saved and never duplicate a named person.",
+    "templates": ["monk_a", "scribe_a", "monk_b", "novice_a"]
+  }
+}

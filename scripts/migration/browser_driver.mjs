@@ -5,15 +5,15 @@
 // Starts the normal reference server (scripts/serve.py) on a private port,
 // opens the unchanged browser game in headless Chrome with an isolated QA
 // notebook (`?debug&qa`), and runs one module from
-// scripts/migration/browser/ inside the page. Nothing in src/ is modified:
+// scripts/migration/browser/ inside the page. Nothing in web/src/ is modified:
 //   * /__migration/* requests are answered from scripts/migration/browser/
 //     and scripts/migration/vendor/ by request interception;
 //   * when globalThis.__MIGRATION_RETAIN_BATCHES is set (only by this
-//     driver), an appended snippet in the *served* copy of src/core/kit.js
+//     driver), an appended snippet in the *served* copy of web/src/core/kit.js
 //     keeps each Batch's pre-merge parts so sections can be captured before
 //     broad material merging. The on-disk file and normal play are untouched.
 // Files the module passes to window.__migrationSave(path, base64) are written
-// below --out (default migration/data/export).
+// below --out (default shared/data/export).
 import puppeteer from 'puppeteer-core';
 import { spawn } from 'child_process';
 import crypto from 'crypto';
@@ -29,7 +29,7 @@ const [VW, VH] = (process.env.BROWSER_VIEWPORT || '1280x720').split('x').map(Num
 const modName = process.argv[2];
 const cfgFile = process.argv[3] && !process.argv[3].startsWith('--') ? process.argv[3] : null;
 const outAt = process.argv.indexOf('--out');
-const OUT = path.resolve(outAt >= 0 ? process.argv[outAt + 1] : path.join(ROOT, 'migration/data/export'));
+const OUT = path.resolve(outAt >= 0 ? process.argv[outAt + 1] : path.join(ROOT, 'shared/data/export'));
 if (!modName) { console.error('usage: browser_driver.mjs <module> [config.json] [--out DIR]'); process.exit(2); }
 
 const RETAIN = `
@@ -73,7 +73,7 @@ try {
   });
   await page.evaluateOnNewDocument(() => { globalThis.__MIGRATION_RETAIN_BATCHES = true; });
   await page.setRequestInterception(true);
-  const kitPath = path.join(ROOT, 'src/core/kit.js');
+  const kitPath = path.join(ROOT, 'web/src/core/kit.js');
   page.on('request', req => {
     const u = new URL(req.url());
     if (u.pathname.startsWith('/__migration/')) {

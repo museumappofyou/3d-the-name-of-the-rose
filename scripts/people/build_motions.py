@@ -6,7 +6,7 @@
 #       --src .local/mh/human_anims_raw.glb [--out .local/mh/out/motions.glb] [--preview dir]
 #
 # 1. Retargeted recordings. The CC0 clips already used by the abbey
-#    (assets/models/human_anims.glb: Quaternius Universal Animation Library
+#    (shared/assets/models/human_anims.glb: Quaternius Universal Animation Library
 #    and CMU motion capture as retargeted by Mesh2Motion; the meshopt
 #    compression removed first, see pack_people.mjs --decompress) are read
 #    straight from the glTF (rest pose and curves), and each joint's
@@ -17,7 +17,7 @@
 #    kneeling in prayer, sitting on a bench, stirring, kneading, hammering,
 #    forking hay, carrying a sack, reading at a lectern. Built with Blender's
 #    IK against the real furniture heights of the abbey (desk/bench/table/
-#    anvil/vat, from src/world/furniture.js) and baked to plain rotations.
+#    anvil/vat, from web/src/world/furniture.js) and baked to plain rotations.
 import bpy, sys, os, json, math, struct
 import numpy as np
 from mathutils import Matrix, Quaternion, Vector

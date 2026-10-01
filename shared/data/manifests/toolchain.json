@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "godot": "4.7.2.stable.official.ed1daf0bf",
+  "release": "https://github.com/godotengine/godot/releases/tag/4.7.2-stable",
+  "sha256": {
+    "Godot_v4.7.2-stable_macos.universal.zip": "c58a24e31d720be9d62f60cb5627c4e695fb72f21b0cfe1bc9ccaa9a3b3ba63e",
+    "Godot.app/Contents/MacOS/Godot": "c7cccbf8fb143e34e02fd6521e09be2c2b974f0d5db080b19071c9c570718ccf",
+    "Godot_v4.7.2-stable_export_templates.tpz": "f298490b8d44d934be425a5a65a51bf15f422428b229a06a6e11d9ffea248011",
+    "Godot_v4.7.2-stable_win64.exe.zip": "731980f9608d61333e5baf54a2ef17210acc7a538446c0cb9969f002aca1e953",
+    "Godot_v4.7.2-stable_linux.x86_64.zip": "cadd3204e728a35d3f13adb7fd0d7902636b79f6b95c40c265eb73b6c35329e4"
+  },
+  "other_tools": {
+    "node_measured": "24.4.0",
+    "python_measured": "3.9.6",
+    "ffmpeg_measured": "9.0.1",
+    "three": "r180",
+    "npm_dependencies": "scripts/migration/package-lock.json"
+  },
+  "notice": "Pins transcribed from Phase-1 BUILD; local binary and archived downloads checked in the consolidation audit. Upgrade deliberately."
+}

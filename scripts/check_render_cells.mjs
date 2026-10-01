@@ -3,14 +3,14 @@
 import { registerHooks } from 'node:module';
 import { createHash } from 'node:crypto';
 import { writeFileSync } from 'node:fs';
-const base = new URL('../', import.meta.url);
+const base = new URL('../web/', import.meta.url);
 registerHooks({ resolve(specifier, context, next) {
   if (specifier === 'three') return { url: new URL('lib/three/three.module.js', base).href, shortCircuit: true };
   if (specifier.startsWith('three/addons/')) return { url: new URL('lib/three/addons/' + specifier.slice(13), base).href, shortCircuit: true };
   return next(specifier, context);
 } });
 const THREE = await import('three');
-const { Batch, box, cyl } = await import('../src/core/kit.js');
+const { Batch, box, cyl } = await import('../web/src/core/kit.js');
 const b = new Batch('check-interior', [11, 0, -9]);
 for (const [x, y, z] of [[-60, .3, -60], [-24, .3, 24], [-.5, 8.2, -.5], [24, 15.6, 48], [65, .3, -23]]) {
   b.add('stone', box(2, 3, 1, { x, y, z }));

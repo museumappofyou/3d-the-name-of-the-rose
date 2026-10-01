@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { cloisterRoute, fileRoute } from '../src/data/peopleRoutes.js';
+import { cloisterRoute, fileRoute } from '../web/src/data/peopleRoutes.js';
 test('a cloister circuit stays on the perimeter and returns without a position or heading jump',()=>{
   const w={cx:8,cz:12,w:15,h:8},total=cloisterRoute(w).total;
   let last=cloisterRoute(w,-.05);

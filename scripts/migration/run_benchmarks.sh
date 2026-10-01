@@ -7,13 +7,13 @@
 #
 # Scenarios default to: route route_hires crowd crowd_hires cycles.
 # Extra: soak (20 min), sdfgi, ssil, route_vsync.
-# Results: docs/migration/phase-1/evidence/performance/<scenario>_<label>.{json,csv}
+# Results: builds/phase1/evidence/performance/<scenario>_<label>.{json,csv}
 #          and <scenario>_<label>.rss.csv (1 s RSS samples, KiB)
 set -euo pipefail
 APP="$1"; LABEL="$2"; shift 2
 SCEN=("$@"); [ ${#SCEN[@]} -eq 0 ] && SCEN=(route route_hires crowd crowd_hires cycles)
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
-OUT="$ROOT/docs/migration/phase-1/evidence/performance"
+OUT="${EVIDENCE_OUT:-$ROOT/builds/phase1/evidence}/performance"
 mkdir -p "$OUT"
 run() { # name, resolution, args...
   local name="$1" res="$2"; shift 2
@@ -36,7 +36,7 @@ run() { # name, resolution, args...
     [ -n "$r" ] && echo "$t,$r" >> "$rss"
     sleep 1; t=$((t + 1))
   done
-  wait "$pid" || true
+  wait "$pid"
 }
 for s in "${SCEN[@]}"; do
   case "$s" in

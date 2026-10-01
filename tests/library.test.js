@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createLibrary, area, WORDS } from '../src/core/library.js';
+import { createLibrary, area, WORDS } from '../web/src/core/library.js';
 
 const L = createLibrary();
 const kinds = k => L.rooms.filter(r => r.kind === k).length;

@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { VERSE, MIRROR_KEYS } from '../src/data/mirror.js';
+import { VERSE, MIRROR_KEYS } from '../web/src/data/mirror.js';
 
 // The verse's buttons (ui.js) and the Q / R keys (main.js) must name the same
 // letters: the first and seventh of "quatuor" (a mismatch once made the

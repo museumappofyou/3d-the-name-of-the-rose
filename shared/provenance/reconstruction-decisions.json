@@ -1,0 +1,2197 @@
+{
+ "schema_version": 1,
+ "legend": {
+  "BOOK": "legacy literary attribution; resolve claim IDs and certainty",
+  "RECON": "textual or historical reconstruction; not automatically canon",
+  "AMBIENT": "added world detail; historical basis needs a source or remains design fiction"
+ },
+ "id_notation": "cNNNN = claim_00NNNN; kNNNN = con_00NNNN. Keep mixed classifications; review rather than guess.",
+ "records": [
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Animals",
+   "fields": {
+    "Object / decision": "Brunellus: black, five spans, small head, sharp ears, big eyes, full tail; first stall from the left",
+    "Ids": "claim_000060–claim_000086",
+    "Class": "BOOK",
+    "Note": "Placed as the black horse at the north (low‑z) end of the stall row; the west door with its grille is the \"left\" as you enter. Interaction label quotes the description."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Animals",
+   "fields": {
+    "Object / decision": "Other horses in a row behind the metal grille at the main door",
+    "Ids": "claim_002603, claim_002606",
+    "Class": "BOOK",
+    "Note": "6 further horses (bay/grey) in the stall row; the grille itself is built in outbuildings.js."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Animals",
+   "fields": {
+    "Object / decision": "Guests' mules (\"küçük katırlarımız\"), abbey mules",
+    "Ids": "D1 TANSÖKÜMÜ; D7 GECE",
+    "Class": "BOOK",
+    "Note": "Two mules at the door end of the stalls; one loose in the stable yard."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Animals",
+   "fields": {
+    "Object / decision": "Donkeys in the farmyard",
+    "Ids": "D7 GECE (katır ve eşekler)",
+    "Class": "BOOK",
+    "Note": "One donkey grazing in the stable yard."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Animals",
+   "fields": {
+    "Object / decision": "Oxen, heifers/cows, calves in the ox shed after the horse stables",
+    "Ids": "claim_000371, claim_001701, claim_001710",
+    "Class": "BOOK",
+    "Note": "5 oxen/cows at the ox‑shed mangers, 2 calves in the corner."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Animals",
+   "fields": {
+    "Object / decision": "Sheep and lambs in the folds",
+    "Ids": "claim_000373, claim_001706",
+    "Class": "BOOK",
+    "Note": "9 sheep + 3 lambs in the fold building."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Animals",
+   "fields": {
+    "Object / decision": "Sheep anatomy and restrained idle/grazing",
+    "Ids": "—",
+    "Class": "RECON",
+    "Note": "`Sheep` by hendrikReyneke, CC BY 4.0; seven-joint authored derivative, metric withers 0.65 m before individual scale. Lambs reuse the sheep with smaller bodies and slightly enlarged heads; they are adaptations, not independently authored juvenile anatomy. Sources/conversion in `docs/assets/MODEL_SOURCES.md`."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Animals",
+   "fields": {
+    "Object / decision": "Goats",
+    "Ids": "claim_000151, claim_000168",
+    "Class": "BOOK",
+    "Note": "3 goats with the flock (goatherds are named)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Animals",
+   "fields": {
+    "Object / decision": "Pigs in pens by the folds/blood vat; \"the season when they kill the pigs\"",
+    "Ids": "claim_000217, claim_000375",
+    "Class": "BOOK",
+    "Note": "6 pigs rooting in the fenced pens in front of the folds; one by the blood vat behind the choir."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Animals",
+   "fields": {
+    "Object / decision": "The pigs' look: darker, bristlier and longer-legged than a modern Large White; mostly slate-black and dark reddish-brown, two black with a pale belt over the shoulders and forelegs",
+    "Ids": "— (external historical reference, **not a book claim**: Ambrogio Lorenzetti, *Allegory and Effects of Good Government*, Sala dei Nove, Palazzo Pubblico, Siena, 1338–39, paints a black pig with a white belt, the Cinta Senese type)",
+    "Class": "AMBIENT",
+    "Note": "Model: \"Pig\" by BojanBabic, CC BY 4.0 (`docs/assets/MODEL_SOURCES.md`), lower legs lengthened, coats computed in `animals.js` over its skin detail. Withers 0.60–0.70 m (0.65 m × 0.92–1.08); hooves at the ground over both clips; the snout meets the ground when rooting; a pig lifts its snout before a grunt."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Animals",
+   "fields": {
+    "Object / decision": "Hens & one black rooster in the henhouse yard; blacksmith steals hens at night; a dead black rooster",
+    "Ids": "claim_000372, claim_001647",
+    "Class": "BOOK",
+    "Note": "13 fowl (one black = the rooster) wandering and pecking in the henhouse yard; 3 more by the granary door."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Animals",
+   "fields": {
+    "Object / decision": "Sheepdogs with the flocks",
+    "Ids": "D4 SABAH (shepherds shout to their dogs)",
+    "Class": "BOOK",
+    "Note": "Two dogs, one by the folds, one lying in the stable yard."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Animals",
+   "fields": {
+    "Object / decision": "Salvatore's black cat",
+    "Ids": "D4 AKŞAM / GECE",
+    "Class": "BOOK",
+    "Note": "One black cat by the granary (mouse‑hunting is AMBIENT on claim_000864 rats)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Animals",
+   "fields": {
+    "Object / decision": "Cats hunting mice in the granary/kitchen",
+    "Ids": "claim_000864 (rats)",
+    "Class": "AMBIENT",
+    "Note": "Only the granary cat is placed."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Animals",
+   "fields": {
+    "Object / decision": "Animal placement concentrated east behind the walls & threshing floor",
+    "Ids": "claim_000366–claim_000375",
+    "Class": "BOOK",
+    "Note": "Order granary→horses→oxen→coops→folds→pigs respected via plan.js zones."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Animals",
+   "fields": {
+    "Object / decision": "Subtle idle animation (breathing, head turn/graze, ear/tail flick, hens peck & wander, pigs root, cattle chew)",
+    "Ids": "—",
+    "Class": "AMBIENT",
+    "Note": "Behaviour only; distance‑gated (animate < ~40 m walk / 55 m aerial, hidden > 80/130 m)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Animals",
+   "fields": {
+    "Object / decision": "Sparse hoof/snort one‑shots near the listener",
+    "Ids": "claim_002606 (neighing), soundscape.js emitters",
+    "Class": "AMBIENT",
+    "Note": "Triggered rarely (every 5–13 s) via ctx.sound.npcSound to answer the existing stable emitters."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Service‑space dressing",
+   "fields": {
+    "Object / decision": "Stable mangers / hay racks",
+    "Ids": "claim_001712 (mangers)",
+    "Class": "BOOK",
+    "Note": "Hay racks + straw bedding along the stall line; grooms lead the animals to the mangers at Vespers (claim_000508)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Service‑space dressing",
+   "fields": {
+    "Object / decision": "Straw bedding in stalls & ox shed",
+    "Ids": "claim_001712; farmyard straw & dung",
+    "Class": "BOOK/AMBIENT",
+    "Note": "Straw scatter in each stall and the ox shed."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Service‑space dressing",
+   "fields": {
+    "Object / decision": "Water troughs & buckets in the stables/yard/folds/ox shed",
+    "Ids": "—",
+    "Class": "AMBIENT",
+    "Note": "Working watering; plausible for a stocked stable."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Service‑space dressing",
+   "fields": {
+    "Object / decision": "Harness pegs with a saddle, halters/ropes; pitchforks; feed sacks",
+    "Ids": "—",
+    "Class": "AMBIENT",
+    "Note": "Signs of use on the door wall; no claim, but standard stable furniture."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Service‑space dressing",
+   "fields": {
+    "Object / decision": "A hung lantern in the stables",
+    "Ids": "claim_000904/claim_001020 (lamps kept about the abbey)",
+    "Class": "AMBIENT",
+    "Note": "One oil lamp by the door."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Service‑space dressing",
+   "fields": {
+    "Object / decision": "Dung heaps by the sheds; a secluded orchard dung heap exists in the book",
+    "Ids": "claim_001792, claim_000504 (waste slope)",
+    "Class": "AMBIENT",
+    "Note": "Small dung heaps outside the stable yard, ox shed and folds."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Service‑space dressing",
+   "fields": {
+    "Object / decision": "Blood‑vat stirring stool & bucket",
+    "Ids": "claim_000375 (swineherds stir the blood)",
+    "Class": "BOOK",
+    "Note": "A stool and bucket by the great jar behind the choir."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Service‑space dressing",
+   "fields": {
+    "Object / decision": "Cart(s), baskets, woodpiles in the yards & threshing floor",
+    "Ids": "claim_000366 (threshing floor)",
+    "Class": "AMBIENT",
+    "Note": "Carts on the threshing floor and stable yard; loose straw heap on the threshing floor."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Service‑space dressing",
+   "fields": {
+    "Object / decision": "Granary grain measures / bin",
+    "Ids": "claim_001684 (Remigio and the seed sacks)",
+    "Class": "AMBIENT",
+    "Note": "Wooden measures by the granary door (sacks themselves built in outbuildings.js)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Service‑space dressing",
+   "fields": {
+    "Object / decision": "Mill sacks; smithy‑yard woodpile, charcoal heap, water trough",
+    "Ids": "claim_000513 (forges), claim_001714 (grain to the mills)",
+    "Class": "AMBIENT",
+    "Note": "Placed on the lane in front of the smithy (its yard south side is over the cliff, so props sit north on solid ground)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Later fixes (grounds pass)",
+   "fields": {
+    "Object / decision": "`F.sacks` rebuilt as slumped, lumpy, neck-tied sacks of dark rough cloth standing in rows (one in four lying), with a little spilt grain",
+    "Ids": "c1684",
+    "Class": "AMBIENT",
+    "Note": "Replaces the bright linen spheres stacked in the air. It is the shared helper, so every sack pile changes (granary, granaries, mill, stables, Aedificium)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Later fixes (grounds pass)",
+   "fields": {
+    "Object / decision": "Pigs kept inside the fenced pen (x0…x0+5 of the folds)",
+    "Ids": "c0217, c0375",
+    "Class": "BOOK",
+    "Note": "The old range reached x ≈ 92, which put a pig inside the stables."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Later fixes (grounds pass)",
+   "fields": {
+    "Object / decision": "Each pig turned (or nudged ≤ 1 m) until its 1.4 m body is clear of the pen fence, the trough, the two feeding boxes and the other pigs",
+    "Ids": "—",
+    "Class": "AMBIENT",
+    "Note": "A footprint of five discs along the spine; no new random draws, so the other animals keep their places."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/animals-dressing.md",
+   "section": "Later fixes (grounds pass)",
+   "fields": {
+    "Object / decision": "Sheepdog moved off the pen's corner post; sheep and lambs kept clear of the fold partitions; granary hens clear of the door steps; the granary cat on the boards (y 0.25), not the sunk terrain",
+    "Ids": "—",
+    "Class": "AMBIENT",
+    "Note": "Found by a feet-vs-collider check of all 59 animals."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-core.md",
+   "section": "Decisions",
+   "fields": {
+    "Object / decision": "West portal: two walkable openings either side of the trumeau, oak leaves swung back into the nave",
+    "Evidence": "c0230–c0269 k0171, k1011, k1012, k0172 H; c0270 k1905 M, c0294 k0466 H, c1286/c1289 k0689 H",
+    "Kind": "BOOK",
+    "Note": "Doors `church:westN` / `church:westS`. The leaves stand open."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-core.md",
+   "section": "Decisions",
+   "fields": {
+    "Object / decision": "Church elevation ×0.8 about the floor (`CHURCH.vScale`)",
+    "Evidence": "k0970 H, k1745 M, k1351 H (Aedificium \"like a crown above the church\"); c2506/c2508 k1732/k1733 M, k0024 H (its outline over the church roof from the Abbot's hall); c1010 k0646 H (\"often wider than tall\")",
+    "Kind": "RECON",
+    "Note": "Built heights: aisle wall 7.0 m, nave eave 12.2 m, nave ridge 15.7 m against a width of about 16 m, crossing-tower top 21.3 m, spire tip 35.3 m. Fittings keep true size (altars, stalls, pulpit, tripod, statues inside), and so do the door clear heights (`keepH`) and the newel stairs."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-core.md",
+   "section": "Decisions",
+   "fields": {
+    "Object / decision": "Crossing tower: square belfry with a recent pointed spire; square merlons on the first level",
+    "Evidence": "k1166 H, k1167/k1168 H, k1357/k1358 H",
+    "Kind": "BOOK",
+    "Note": "Scaled with the rest. The spire stands over the crossing, next to the choir."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-core.md",
+   "section": "Decisions",
+   "fields": {
+    "Object / decision": "Bell-tower entrance: a newel-stair turret in the crossing's south bay, with a low door facing west, rising to the belfry floor",
+    "Evidence": "c2806/c2807 k1954 M, k0609 H; c2809 k0610 H",
+    "Kind": "RECON",
+    "Note": "Moved out of the crossing so the choir, tripod and floor stay free. Route `F12` walks it to the top."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-core.md",
+   "section": "Decisions",
+   "fields": {
+    "Object / decision": "Crossing bays closed above the arcade (south bay wall, transept west wall) and a choir/apse arch",
+    "Evidence": "—",
+    "Kind": "RECON",
+    "Note": "These close sky gaps that the leak audit found between the low bay vaults and the crossing."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-core.md",
+   "section": "Decisions",
+   "fields": {
+    "Object / decision": "West lancets glazed with plain glass",
+    "Evidence": "c0524 k1179 H (\"recently repaired, of lesser quality\"); c0272",
+    "Kind": "BOOK",
+    "Note": ""
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-core.md",
+   "section": "Decisions",
+   "fields": {
+    "Object / decision": "Apse terrain footprint now follows the half-circle",
+    "Evidence": "—",
+    "Kind": "RECON",
+    "Note": "Removes the −9 m pits in the corners outside the apse."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-core.md",
+   "section": "Decisions",
+   "fields": {
+    "Object / decision": "Crypt stair: entered from the north side behind the high altar",
+    "Evidence": "c2367–c2372 k1657 M, k1893 M, k1004 H",
+    "Kind": "BOOK/RECON",
+    "Note": "The old parapet shut the head of the stair. Crypt routes pass both ways."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-core.md",
+   "section": "Decisions",
+   "fields": {
+    "Object / decision": "**Jorge's secret stair (F4)**: a newel stair (clear radius 1.1 m) in a round pier engaged in the finis Africae's S.hall/S.T4 wall. It runs from the ossuary (−2.8 m) to the library floor (15.6 m), through the kitchen's S-tower bay and the scriptorium.",
+    "Evidence": "c2624/c2625 k1601 M, k0080 H (very thick wall between the kitchen and the S tower); c2629 k0562 H, c2632 k1155 H (parallel to the spiral, straight up to the blind room); c2687 k1145 H",
+    "Kind": "BOOK + RECON",
+    "Note": "`HIDDEN_STAIR` in aedificium.js. The floors and vaults are cut round the shaft. The library wall stops at the pier. Bookcases stand clear of it."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-core.md",
+   "section": "Decisions",
+   "fields": {
+    "Object / decision": "Upper door: an oak cupboard that swings out from the pier; the weighted wheel stands beside it",
+    "Evidence": "c2686 k0530 H (a door behind the cupboard); c2688 (a wheel with weights, worked from above)",
+    "Kind": "BOOK",
+    "Note": "The cupboard is `finis-cupboard`, a dynamic collider."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-core.md",
+   "section": "Decisions",
+   "fields": {
+    "Object / decision": "Lower door: the blind wall of great squared stones with the worn plaque, on the left of the ossuary passage near the kitchen end, sinks into the floor",
+    "Evidence": "c2619/c2620 (a blind wall at the last niche, plaque of monograms); c2621 (knocking in the wall to the left); c2685 (the plate below works the lever above); c2632 (one mechanism opens both passages)",
+    "Kind": "BOOK",
+    "Note": "A short dog-leg passage links it to the foot of the shaft. The `plaque` interaction toggles the same state as the cupboard."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-core.md",
+   "section": "Decisions",
+   "fields": {
+    "Object / decision": "Closed by default",
+    "Evidence": "c2692/c2693 k0002 H (only Jorge knew it), k2253 S",
+    "Kind": "BOOK",
+    "Note": "Both colliders block while closed."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-core.md",
+   "section": "Decisions",
+   "fields": {
+    "Object / decision": "Ossuary descent moved 2.6 m east of the S-tower spiral (`AED.ossX`); the iron-clad door opens into the kitchen, and the S spiral's foot door turns east beside it",
+    "Evidence": "c2615/c2617 k1270 H, k1323 H (\"behind the hearth, at the foot of the spiral\"); c1054–c1068 k0799 H",
+    "Kind": "RECON",
+    "Note": "Before this change the door opened straight into the spiral shaft and the kitchen could not be reached from it. The door leaf, which had been standing shut, now swings back. The tunnel and the foundation opening moved with the descent."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-core.md",
+   "section": "Decisions",
+   "fields": {
+    "Object / decision": "Domed caps over the ossuary bends",
+    "Evidence": "—",
+    "Kind": "RECON",
+    "Note": "They close the open wedges between the barrel vaults."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-core.md",
+   "section": "Decisions",
+   "fields": {
+    "Object / decision": "Kitchen ground windows removed on the precipice faces; kept ground windows widened to 1.3–1.5 m of opaque glass",
+    "Evidence": "k1806 M, k0098/k1147 H",
+    "Kind": "BOOK",
+    "Note": "F8, done in the previous wave."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-core.md",
+   "section": "Decisions",
+   "fields": {
+    "Object / decision": "Refectory benches either side of each board (across the long axis)",
+    "Evidence": "c0582/c0584",
+    "Kind": "AMBIENT",
+    "Note": "So that seated diners line up with the tables."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-core.md",
+   "section": "Decisions",
+   "fields": {
+    "Object / decision": "Aedificium entrance leaves as separate pivots (`app.aed.doorLeaves`)",
+    "Evidence": "k0491/k0492 H, k1423/k1427/k1428 M (Malachi bars the doors after Compline)",
+    "Kind": "BOOK (behaviour in main.js)",
+    "Note": "Both pivots take the same angle (`open` = 1.2 means open, `closed` = 0). The s=−1 leaf sits in a mirrored frame."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-core.md",
+   "section": "Decisions",
+   "fields": {
+    "Object / decision": "E-tower lower flight: 2.52 turns so it meets the upper flight at the scriptorium doorway",
+    "Evidence": "c0827–c0830 k0741/k0555/k0556 H",
+    "Kind": "RECON",
+    "Note": "Makes R6 and R7 continuous."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-core.md",
+   "section": "Visibility check (F2), measured with rays against the built scene",
+   "fields": {
+    "Observer": "William's cell",
+    "Visible over the church": "S-tower peak, down to about 2 m below it (the \"crown\" reads as the S tower's cap over the nave roof)",
+    "Still hidden": "S-tower top edge, E-tower peak, the ridge and the eaves"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-core.md",
+   "section": "Visibility check (F2), measured with rays against the built scene",
+   "fields": {
+    "Observer": "Abbot's hall (west window)",
+    "Visible over the church": "E- and W-tower peaks",
+    "Still hidden": "Tower tops, the ridge and the eaves. The crossing tower and spire hide the S and N towers."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Hospice guest floor raised 2 m (h1 5.9), William's cell (3rd of 4) with a broad east window",
+    "Ids": "c0187/c0188 k0970 H, k1745 M, k1351 H",
+    "Class": "BOOK + RECON",
+    "Note": "So that the Aedificium rises \"like a crown above the church\" from the cell (F2). The height itself is RECON."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Hospice outside steps on the west side, 9 m flight from the flower-garden ground (−0.25) to a landing level with the guest floor (6.2), stepped parapet",
+    "Ids": "c2312/c2313 k1635/k1636 M, c2321, c0634",
+    "Class": "BOOK (steps) / RECON (placement, run)",
+    "Note": "The flight used to start 0.41 m above the trodden ground, too high for a first tread. Walked up and down (R2b, R3)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Hospice upper door, moved clear of the cell partition and registered (`hospice:upper`, 1.1 × 2.0 m)",
+    "Ids": "c0142–c0144 k0760/k0761 H, c2698 k0140 H",
+    "Class": "BOOK",
+    "Note": "The door opens from the landing straight into William's cell."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Hospice ground door and threshold (`hospice:west`)",
+    "Ids": "c0953 k0763 H, c1290 k1692 M",
+    "Class": "BOOK",
+    "Note": "Unchanged."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Abbot's upper hall raised 2 m (h1 6.2), internal stair",
+    "Ids": "c2504–c2508 k1348, k0590 H, k1732/k1733 M, k0024 H",
+    "Class": "BOOK + RECON",
+    "Note": "F2."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Abbot's hall door ajar at the stairhead (plaster lobby partition, leaf swung 75°)",
+    "Ids": "c2513/c2514 k1856 M, k0591 H",
+    "Class": "BOOK",
+    "Note": "F15 option: Adso hides behind the hall door. Leaf is non-colliding."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Dormitory night passage: new east door (`dormitory:passage-east`, 1.0 m) and a paved apron in the angle of apse and gable",
+    "Ids": "c0886–c0891 k1972 M, k0667 H",
+    "Class": "RECON",
+    "Note": "\"Left the dormitory, went round the apse, entered the choir by the north door\". Before this the dormitory had no outdoor exit except through the church or the latrine. The apron also closes a terrain pit left by the church's rectangular sink (see open issues)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Dormitory stair moved into the stair hall (west-rising flight along the north wall, stairwell rail upstairs)",
+    "Ids": "c0880, c0881–c0885 k1970/k1971 M",
+    "Class": "BOOK (two floors) / RECON (stair)",
+    "Note": "The old flight ran through the first east cell and its partition wall, and that cell had no door, so the upper floor could not be reached."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "One door per dormitory cell (0.9 m) on both floors, including Jorge's cell off the lower corridor",
+    "Ids": "c0883–c0885 k0737/k0715/k0621 H",
+    "Class": "BOOK",
+    "Note": "The doors were offset by one bay: the first cell (Jorge's) had none, and the last door fell outside the wall."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Latrine doorway aligned with the dormitory south door",
+    "Ids": "c0510 k1572 M",
+    "Class": "BOOK/RECON",
+    "Note": "Done by the previous wave; verified."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Cloister garth: step block in each parapet gap (garth ≈ 0.6 m below the walk)",
+    "Ids": "c0713/c0714 k0877/k0027 H, c0985",
+    "Class": "RECON",
+    "Note": "The garth could be entered but not left (0.6 m > 0.42 m step-up)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Chapter house old-portal leaves hinged open",
+    "Ids": "k0532 H, k2067/k2068 M",
+    "Class": "BOOK",
+    "Note": "F15."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Chapter house low slit in the north wall",
+    "Ids": "c2280/c2281 k0867 H, k1784 M",
+    "Class": "BOOK/RECON",
+    "Note": "F16: the novices watch \"through windows and cracks\"."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Chapter house garden (hedged herb plot on the south lane)",
+    "Ids": "c0542 k0051 H",
+    "Class": "BOOK/RECON",
+    "Note": "F13."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Smithy basement: cells with wall rings, reached by a stair from the forge hall",
+    "Ids": "c2017–c2021 k0146, k0967, k0624, k0625 H; c2248 k0931 H; c2153",
+    "Class": "BOOK/RECON",
+    "Note": "F7. Checked sealed (leak test, 265 points)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Laboratory: curtained bed inside the lab, armillary sphere left of the door",
+    "Ids": "c2156/c2157 k2183/k2184 M, c2119 k0039 H",
+    "Class": "BOOK",
+    "Note": "F11. The S18 door opens into the lab (R19c)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Stables great door with metal grille, not walkable (`noWalk`), side doors W20/W80 used",
+    "Ids": "c2603/c2604 k1309 H, k1800 M",
+    "Class": "BOOK",
+    "Note": "Horses are seen through the grille."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Henhouse hatch 0.8 × 1.4 m (`noWalk`)",
+    "Ids": "—",
+    "Class": "AMBIENT",
+    "Note": "A hen hatch, not a door."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Threshing floor moved beside the kitchen-yard side of the Aedificium",
+    "Ids": "c0364–c0366 k0490 H, k2155 M, k1342 H",
+    "Class": "BOOK/RECON",
+    "Note": "F9."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Stone cistern by the kitchen yard",
+    "Ids": "c2835 k0955 H",
+    "Class": "BOOK/RECON",
+    "Note": "F14: \"the wells and water reservoirs\" used in the fire."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Low parapet at the east-tower junction and behind the stables; refuse slope beyond",
+    "Ids": "c0497/c0501 k0976 H, c0505 k2189 M, c0560 k0876 H, c0552 k1563 M",
+    "Class": "BOOK",
+    "Note": "F10 (`LOW_WALL`)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Secret postern (1.0 × 1.95 m wicket) in the NW wall behind the infirmary, walkable",
+    "Ids": "c1670 k1535 M, c2265 k0947 H, c2266 k1691 M, c1553 k1559 M, c2013 k0079 H",
+    "Class": "BOOK/RECON",
+    "Note": "F5. It conflicts with k0756 H (\"only opening\"). That is read as \"the only open entrance\"; the postern is hidden."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Trodden paths to the Aedificium SW garden door and SE south entrance; procession across the cemetery",
+    "Ids": "c0330 k0502 H, c0335 k1621 M, c0592 k1623 M, c0611 k1914 M, c1014 k1931 M, k0014 H",
+    "Class": "BOOK",
+    "Note": "F6 (`PATHS`)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Girl's track: vegetable garden → orchard → round the infirmary's west end → along its blind back → postern",
+    "Ids": "c1549–c1553 k0457 H, k1558/k1559 M",
+    "Class": "BOOK/RECON",
+    "Note": "Replaces a track that ended against the infirmary's rear wall."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Sacks: slumped, lumpy, neck-tied cloth sacks standing in rows (one in four lying flopped), dark rough cloth, a little spilt grain",
+    "Ids": "c1684 (Remigio's seed sacks)",
+    "Class": "AMBIENT",
+    "Note": "Replaces bright linen spheres stacked in the air."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Buildings and openings",
+   "fields": {
+    "Object / decision": "Door steps from the registry (`thresholds.js`)",
+    "Ids": "—",
+    "Class": "RECON",
+    "Note": "Unchanged. Every walked door rises ≤ 0.55 m and gets steps."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Routes (`src/data/routes_grounds.js`)",
+   "fields": {
+    "Route": "R2a / R2b gate → courtyard → flower garden → hospice door; up the outside steps → William's cell",
+    "Ids": "c0095, c0115 k1984 M, c0142, c2312/c2313 k1635/k1636 M",
+    "Physical path": "Avenue, open court, hedged garden, ground door; garden → steps → landing → upper door"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Routes (`src/data/routes_grounds.js`)",
+   "fields": {
+    "Route": "R3 cell → down the steps → round the hospice → cloister west door → north walk → church south door",
+    "Ids": "c0247, c0634, c2321, k1553 M",
+    "Physical path": "West portal still unused (arch-core)"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Routes (`src/data/routes_grounds.js`)",
+   "fields": {
+    "Route": "R10 dormitory → night passage → east door → round the apse → north door → choir",
+    "Ids": "c0886–c0891 k1972 M, k0667 H",
+    "Physical path": "Via the new passage door"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Routes (`src/data/routes_grounds.js`)",
+   "fields": {
+    "Route": "R30a / R30b dormitory corridor → stair → upper corridor → a cell; lower corridor → Jorge's cell",
+    "Ids": "c1022, c1041/c1042 k1877 M, c0632 k1967 M; c0883–c0885 H",
+    "Physical path": "Monks retire to their cells"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Routes (`src/data/routes_grounds.js`)",
+   "fields": {
+    "Route": "R11 church south door → cloister walk → parapet gap → garth",
+    "Ids": "c0710/c0711, c0713/c0714 k0877 H, k1187 H",
+    "Physical path": "Uses the new garth step"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Routes (`src/data/routes_grounds.js`)",
+   "fields": {
+    "Route": "R19a–c blood vat → cemetery → vegetable garden (east gate) → herb garden → bath; bath → laboratory (S18)",
+    "Ids": "chunk_0025; c0698–c0703 k1618 M, k1637 M",
+    "Physical path": "Three legs, ≈170 m in all"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Routes (`src/data/routes_grounds.js`)",
+   "fields": {
+    "Route": "R20 infirmary (S62) → bath",
+    "Ids": "c1579 k0011 H, c2080, c2721",
+    "Physical path": ""
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Routes (`src/data/routes_grounds.js`)",
+   "fields": {
+    "Route": "R21a / R21b infirmary (lab door) → orchard → chapter outer door",
+    "Ids": "c2190 k2007 M",
+    "Physical path": "Split in two; one leg was 37.9 s, close to the limit"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Routes (`src/data/routes_grounds.js`)",
+   "fields": {
+    "Route": "R22 chapter outer door → narthex court → old portal → hall benches",
+    "Ids": "c2036–c2069 k0532 H, k2066–k2068 M",
+    "Physical path": "Ends in front of the bench rows"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Routes (`src/data/routes_grounds.js`)",
+   "fields": {
+    "Route": "R24a / R24b refectory (SE door) → round the apse → east of the dormitory → south lane → Abbot's south door → stair → lobby → hall door → hall",
+    "Ids": "c2503–c2514 k1855/k1856 M, k0591 H",
+    "Physical path": "The Abbot's house has no door on the cloister"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Routes (`src/data/routes_grounds.js`)",
+   "fields": {
+    "Route": "R26 stables W20 → round the pigsty pen → threshing floor → Aedificium SE door",
+    "Ids": "c1436, c0675 k0553 H",
+    "Physical path": "The pen is a real obstacle, so the route goes round it"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/arch-grounds.md",
+   "section": "Routes (`src/data/routes_grounds.js`)",
+   "fields": {
+    "Route": "R28a / R28b kitchen garden door → vegetable garden (east gate, along the cross path) → herb garden → orchard → round the infirmary's west end → postern → out",
+    "Ids": "c1549–c1553 k0457 H, k1558/k1559 M",
+    "Physical path": "The girl's route"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/environment.md",
+   "section": "Provenance — environment (materials, terrain, ground, sky, effects, lighting)",
+   "fields": {
+    "Object / decision": "Goat path passes a bend **below the east tower**",
+    "Claim / constraint ids": "c0551, con_001355 (H)",
+    "Class": "BOOK",
+    "Note": "ROAD in terrain.js: eastern-cliff-foot bend ~(116,−54) under E tower (69.5,−66)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/environment.md",
+   "section": "Provenance — environment (materials, terrain, ground, sky, effects, lighting)",
+   "fields": {
+    "Object / decision": "Lower bend **below the south side**",
+    "Claim / constraint ids": "c0083/c0084, con_001400 (H), con_000537 (H)",
+    "Class": "BOOK",
+    "Note": "ROAD lower bend ~(112,56) below the S tower (42,−39)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/environment.md",
+   "section": "Provenance — environment (materials, terrain, ground, sky, effects, lighting)",
+   "fields": {
+    "Object / decision": "Road forks **three ways** at the last bend",
+    "Claim / constraint ids": "con_001097 (H)",
+    "Class": "BOOK",
+    "Note": "ROAD fork ~(30,84); ROAD_SPUR is the right branch; main road = the descent + the (implicit) upper branch to the gate."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/environment.md",
+   "section": "Provenance — environment (materials, terrain, ground, sky, effects, lighting)",
+   "fields": {
+    "Object / decision": "Right branch dead-ends at the **straw-and-dung refuse slope** under the E tower",
+    "Claim / constraint ids": "c0061/c0062, con_001562 (M), con_001563 (M)",
+    "Class": "BOOK/RECON",
+    "Note": "ROAD_SPUR ends ~(104,−52) at the refuse slope; outbuildings.js `soil` plot (72–98,−74…−50) sits there."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/environment.md",
+   "section": "Provenance — environment (materials, terrain, ground, sky, effects, lighting)",
+   "fields": {
+    "Object / decision": "**Roof of snowy pines** over the road at the fork",
+    "Claim / constraint ids": "c-road (places.js), First Day Prime",
+    "Class": "BOOK",
+    "Note": "nature.js plants umbrella pines at ROAD end + pines on the E-tower slope (unchanged)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/environment.md",
+   "section": "Provenance — environment (materials, terrain, ground, sky, effects, lighting)",
+   "fields": {
+    "Object / decision": "Aedificium stone = the mountain's own grey rock",
+    "Claim / constraint ids": "con_000969 (H), claim_000047 (H)",
+    "Class": "BOOK",
+    "Note": "M.aed dressed grey, tinted toward the cliff rock; matches terrain rock tone."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/environment.md",
+   "section": "Provenance — environment (materials, terrain, ground, sky, effects, lighting)",
+   "fields": {
+    "Object / decision": "Straw **strewn** on the scriptorium floor to muffle footsteps",
+    "Claim / constraint ids": "places.js scriptorium; First Day",
+    "Class": "BOOK",
+    "Note": "M.straw now reads as scattered dry golden straw over grey stone flags (was a green mat)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/environment.md",
+   "section": "Provenance — environment (materials, terrain, ground, sky, effects, lighting)",
+   "fields": {
+    "Object / decision": "Snow patchy, trodden near buildings; fog days 4–5",
+    "Claim / constraint ids": "brief; First Day (snow), Fourth Day (fog)",
+    "Class": "BOOK",
+    "Note": "ground.js features + terrain shader; sky.js fog/exposure."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/environment.md",
+   "section": "Provenance — environment (materials, terrain, ground, sky, effects, lighting)",
+   "fields": {
+    "Object / decision": "Late-November cold, overcast, restrained winter sun",
+    "Claim / constraint ids": "brief",
+    "Class": "AMBIENT/BOOK",
+    "Note": "sky.js winter sun colour/intensity; interiors darker with warm local fire pools."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "Repairs",
+   "fields": {
+    "Object / decision": "Hospice walking entry in William's cell on the raised guest floor (feet 6.2)",
+    "Evidence": "claim_000140–000144 (the cell, the niche), F2 floor raise (docs/provenance/arch-grounds.md)",
+    "Class": "RECON",
+    "Note": "`places.js` hospice `walk.y` was 4.2 (below the 6.2 floor). `spawnOf()` now also settles any upper-floor spawn on the floor built under it. Same fault fixed for the Abbot's upper hall (4.5 → 6.5)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "Repairs",
+   "fields": {
+    "Object / decision": "Forge: one floor slab with the stair well cut; the flight between the two forges, down from the small north door, 5 m for 3.35 m; timber rail round the well; lamp at the foot",
+    "Evidence": "F7 cells beneath the smithy (c2017–c2021, c2248 k0931 H)",
+    "Class": "BOOK (cells) / RECON (stair position, rail, lamp)",
+    "Note": "The duplicate uncut slab from `building()` is gone (`floorMat: null`). Routes R29a/R29b walk it both ways."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "Repairs",
+   "fields": {
+    "Object / decision": "Smiths at their anvils, grooms at a manger and in a stall, cooks at the hearth front and the oven mouth",
+    "Evidence": "claim_000513 (forges at work until Vespers), claim_000508 (horses at the mangers), claim_000359 (kitchen)",
+    "Class": "BOOK (activity) / RECON (exact stations)",
+    "Note": "The smith's hammer stroke is procedural (no hammering clip exists in the CC0 library); hammer, tongs, fork and paddle are simple hand props."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "Repairs",
+   "fields": {
+    "Object / decision": "Terce and None as office phases in the horarium",
+    "Evidence": "claim_000635 (the office), First Day after None (scriptorium excused)",
+    "Class": "BOOK",
+    "Note": "Scriptorium and workshops keep working at the minor hours (`isDay()`)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "Repairs",
+   "fields": {
+    "Object / decision": "R9 final waypoint round the east end of the north stalls",
+    "Evidence": "c0592 k1623 M (monks enter the choir from the north door)",
+    "Class": "RECON",
+    "Note": "Route data only."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "The treasury's little temple",
+   "fields": {
+    "Object": "\"An elegant little temple with two columns of lapis lazuli and gold, framing an Entombment of Christ in thin silver in half relief; above it, on veined variegated porphyry, a cross inlaid with thirteen diamonds; its little base worked in agate and rubies in the shape of a scallop shell\"",
+    "Evidence": "Novel text, Sixth Day, *Tansökümü* (\"Yeraltı hazinesinin ziyaret edilişi…\"): «Yarı kabartmalı ince gümüşten bir İsa'nın Gömülüşü'nü çevreleyen, lapis lazuli ve altından iki sütunlu zarif bir küçük tapınak gösterdi; üstünde, damarlı alaca somaki üstüne, on üç elmas kakmalı bir haç vardı; küçük altlığıysa akik ve yakutlarla tarak kabuğu biçiminde işlenmişti.»",
+    "Class": "BOOK",
+    "Note": "Not in the extracted claims (the extraction captured the treasury's structure, claim_002370–002374, but not this object); verified in the novel's text. The relief composition (mourners behind a sarcophagus, the body on the rim) is **RECON** after the usual Entombment type; the silver plaque, lapis columns, porphyry cross and scallop base follow the sentence above."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "The treasury's little temple",
+   "fields": {
+    "Object": "Credence cloths falling in irregular flutes",
+    "Evidence": "—",
+    "Class": "AMBIENT",
+    "Note": "`cloth.js drape()`: two wavelengths, deeper with the fall."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "The notebook (`src/systems/notes.js`)",
+   "fields": {
+    "Note": "Numbers in the catalogue",
+    "Trigger": "E at the catalogue on Malachi's desk",
+    "Evidence": "claim_000423",
+    "Class": "BOOK (Adso's reading of the numbers)"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "The notebook (`src/systems/notes.js`)",
+   "fields": {
+    "Note": "… and the shelf labels",
+    "Trigger": "5 s physically in the library after the catalogue note",
+    "Evidence": "claim_001153",
+    "Class": "BOOK"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "The notebook (`src/systems/notes.js`)",
+   "fields": {
+    "Note": "Barred after supper",
+    "Trigger": "reaching a barred Aedificium door at night",
+    "Evidence": "claim_000173",
+    "Class": "BOOK"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "The notebook (`src/systems/notes.js`)",
+   "fields": {
+    "Note": "… open by day",
+    "Trigger": "the same door by day, once the night note exists",
+    "Evidence": "claim_000173; the kitchen/refectory day population of the schedule",
+    "Class": "BOOK + RECON"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "The notebook (`src/systems/notes.js`)",
+   "fields": {
+    "Note": "Herbs kept ready",
+    "Trigger": "E in the laboratory, or Severinus's answer in the herb garden",
+    "Evidence": "claim_000309, claim_000303",
+    "Class": "BOOK; Severinus's line is an authored paraphrase, not a quotation"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "The notebook (`src/systems/notes.js`)",
+   "fields": {
+    "Note": "Blood in the great jar",
+    "Trigger": "E at the jar",
+    "Evidence": "claim_000375, claim_000664",
+    "Class": "BOOK (no deduction about the later death)"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "The notebook (`src/systems/notes.js`)",
+   "fields": {
+    "Note": "The way under the altar",
+    "Trigger": "the altar turned, the player seen beside it, then walking down the steps with no study jump in between",
+    "Evidence": "claim_001047; ROUTES.md CHAPEL → CRYPT via ALTAR_OPENING + STAIRCASE",
+    "Class": "BOOK"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "The notebook (`src/systems/notes.js`)",
+   "fields": {
+    "Note": "The red line \"per ossuarium\" on the plan",
+    "Trigger": "each point of the ossuary passage reached on foot after that descent",
+    "Evidence": "as above",
+    "Class": "BOOK"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "Sound",
+   "fields": {
+    "Decision": "No Holy Saturday Lamentation at routine Matins; no *Veni Creator* at the ordinary hours",
+    "Evidence": "The novel's time is late November (editor's note; horarium.js)",
+    "Class": "RECON (liturgical judgement)",
+    "Note": "Both kept as source material only (docs/assets/AUDIO_SOURCES.md)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "Sound",
+   "fields": {
+    "Decision": "Chant direct in church/choir/skull chapel, through doors from porch, cloister, cemetery and narthex, scarcely from inside other buildings",
+    "Evidence": "claim_000635 etc. (the office is sung in choir)",
+    "Class": "RECON",
+    "Note": "`chant.occ` in emitters.js."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "Sound",
+   "fields": {
+    "Decision": "A quill's scratch as the notebook cue",
+    "Evidence": "—",
+    "Class": "AMBIENT",
+    "Note": "CC0 Quill and Parchment (Nickh69), already in the bank."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "Surfaces, props and light",
+   "fields": {
+    "Object / decision": "Flower-garden and chapter-garden hedges as clipped box under snow",
+    "Evidence": "Flower garden with hedged beds on the plan (claim of the plan key; places.js flower-garden)",
+    "Class": "BOOK (hedges) / RECON (form)",
+    "Note": "Sculpted runs (`sculpt.js hedgeRun`) with a procedural leaf texture."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "Surfaces, props and light",
+   "fields": {
+    "Object / decision": "Four focal graves by the cemetery entry (old leaning cross, worn stela, fresh grave sinking, settled slab)",
+    "Evidence": "\"newly erected gravestones and old stones bearing the marks of time\" (OTHER_BUILDINGS: CEMETERY)",
+    "Class": "BOOK (kinds) / RECON (these four)",
+    "Note": "Entry reframed toward the Aedificium tower and the oak at the edge (Second Day, Lauds: Benno behind the oak)."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "Surfaces, props and light",
+   "fields": {
+    "Object / decision": "Stable hayracks raised above the horses' heads; two lanterns over the aisle",
+    "Evidence": "claim_002603, claim_002606 (horses behind the grille)",
+    "Class": "RECON / AMBIENT",
+    "Note": "So a head over the manger is seen from the grille and aisle."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "Surfaces, props and light",
+   "fields": {
+    "Object / decision": "Grain sacks slumped in piles; meal dust and a lamp at the mill; chaff in uneven drifts",
+    "Evidence": "claim_001714 (peasants with wheat and millet at the mill)",
+    "Class": "BOOK (sacks, grain) / AMBIENT (dust, lamp)",
+    "Note": "`sculpt.js sack()`."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "Surfaces, props and light",
+   "fields": {
+    "Object / decision": "Herb bunches hung to dry in the infirmary and kitchen",
+    "Evidence": "—",
+    "Class": "AMBIENT",
+    "Note": "Replaces the cone shapes."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "Surfaces, props and light",
+   "fields": {
+    "Object / decision": "Fleece shader on the sheep, coarse hair on the goats",
+    "Evidence": "claim_000373, claim_001706",
+    "Class": "BOOK (animals) / AMBIENT (coat)",
+    "Note": "No UVs on the sheep: 3D noise in object space."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "Surfaces, props and light",
+   "fields": {
+    "Object / decision": "Winter crowns thinned; the cemetery oak keeps a few dead leaves",
+    "Evidence": "late November (horarium.js); the oak (Second Day, Lauds)",
+    "Class": "RECON / AMBIENT",
+    "Note": "Oaks are marcescent."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "Surfaces, props and light",
+   "fields": {
+    "Object / decision": "Trodden snow thinned on ground-level paving along paths; worn polish down the nave",
+    "Evidence": "—",
+    "Class": "AMBIENT",
+    "Note": "`weathering.js` (trodden mask); paths added through the old narthex and down the nave."
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "Surfaces, props and light",
+   "fields": {
+    "Object / decision": "Wall-base drifts in banks with gaps, less on south faces",
+    "Evidence": "—",
+    "Class": "AMBIENT",
+    "Note": ""
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "Surfaces, props and light",
+   "fields": {
+    "Object / decision": "Portal carving weathered with the wall (soot under ledges, streaks, lichen), paint kept",
+    "Evidence": "\"the cheerful softness of the colours\" (places.js portal)",
+    "Class": "BOOK (paint) / AMBIENT (weathering)",
+    "Note": ""
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/next-pass.md",
+   "section": "Surfaces, props and light",
+   "fields": {
+    "Object / decision": "Stained glass: seedy/streaked glass, finer leads, saddle bars, grime at edges",
+    "Evidence": "extraordinary blue choir glass (places.js, CHURCH.md)",
+    "Class": "BOOK (colour kept) / AMBIENT (wear)",
+    "Note": ""
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "60 monks + 150 servants total (never all shown; spawned per zone by hour)",
+    "ids": "#000166, #000167",
+    "class": "BOOK",
+    "note": "cap POOL=46; sparse, disciplined"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Full community 40–60 in the choir stalls at Matins/Lauds/Prime/Vespers/Compline",
+    "ids": "D2 GECEYARISI (\"altmış kişi\"), #000635",
+    "class": "BOOK",
+    "note": "`office.full` → all choir slots filled"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Smaller choir at Terce/Sext/None (scriptorium monks excused)",
+    "ids": "D1 İKİNDİDEN SONRA",
+    "class": "BOOK",
+    "note": "non-full offices cap the choir at ~10"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Prostration singing the first psalms at Matins",
+    "ids": "D2 GECEYARISI",
+    "class": "BOOK",
+    "note": "pose `prostrate` before 3:00"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Novices in the choir behind their masters",
+    "ids": "#000635",
+    "class": "BOOK",
+    "note": "`choir-novice`, standing/praying"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "A waker with a small hand lamp between the stalls at Matins",
+    "ids": "#002336, D2 GECEYARISI",
+    "class": "BOOK",
+    "note": "`waker` slot at Matins"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Acolytes at the altar just before Sext",
+    "ids": "#000912, #000922",
+    "class": "BOOK",
+    "note": "`acolytes` at Sext"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Ubertino praying before the stone Virgin",
+    "ids": "#000212, #001439",
+    "class": "BOOK",
+    "note": "`ubertino` kneeling by the Virgin"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Alinardo on the cloister porch, feeling no cold",
+    "ids": "#000989",
+    "class": "BOOK",
+    "note": "`alinardo` seated on the porch"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "1–3 monks praying off-hours; church empty late at night",
+    "ids": "#000988; #001025, #001040",
+    "class": "BOOK",
+    "note": "`prayers`; no figures 19:00→"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Monks walking the cloister in silence between Matins and Lauds and before supper",
+    "ids": "#000645, #000986",
+    "class": "BOOK",
+    "note": "`cloister-walk`, pose `walk` on the garth ring"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Novices to the chapter house to study psalms between Matins and Lauds",
+    "ids": "#000643",
+    "class": "BOOK",
+    "note": "`chapter-novices`, seated"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "~30 monks at the scriptorium desks by day, until Vespers",
+    "ids": "#000402, #000403",
+    "class": "BOOK",
+    "note": "`scriptorium`, pose `write`"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Malachi at his desk (chained catalogue)",
+    "ids": "#000421",
+    "class": "BOOK",
+    "note": "`malachi`"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Malachi & Berengar tidy the scriptorium at Vespers",
+    "ids": "#000456, #000526",
+    "class": "BOOK",
+    "note": "`tidy` at Vespers"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Refectory: monks seated in silence, hooded; abbot on the dais; reader at the pulpit",
+    "ids": "D1 AKŞAM, #000567–#000570, #000582–#000584",
+    "class": "BOOK",
+    "note": "`refectory`, `abbot`, `reader`; hoods-up favoured"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Two meals: Sext (winter midday) and supper before dark",
+    "ids": "editor's NOT; D1 AKŞAM",
+    "class": "BOOK",
+    "note": "phases `meal`, `supper`"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Kitchen full of servants and cooks by day; kneading at the great table, a cook at the hearth",
+    "ids": "#000359, #000778, #000782",
+    "class": "BOOK",
+    "note": "`kitchen` (knead), `cook` (stir)"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Kitchen usable until Compline",
+    "ids": "#000527",
+    "class": "BOOK",
+    "note": "kitchen figures through supper"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Swineherds stirring the blood vat so it won't clot",
+    "ids": "#000375, #000670",
+    "class": "BOOK",
+    "note": "`swineherds` at the BLOOD_JAR, pose `stir`"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Grooms leading animals to the mangers; cowherds at the stables",
+    "ids": "#000508, #001701",
+    "class": "BOOK",
+    "note": "`grooms` about the stables"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Peasants carrying spelt/millet sacks to the mills; bargaining at the granaries",
+    "ids": "#001714, #001631, #001684",
+    "class": "BOOK",
+    "note": "`peasants-mill`, `peasants-gran`, pose `carry` + sack"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Blacksmiths and glaziers work until Vespers, then quench the forges",
+    "ids": "#000513, #000517",
+    "class": "BOOK",
+    "note": "`smiths` cease at Vespers"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Severinus / a novice gathering herbs in the garden",
+    "ids": "#000309, #000303",
+    "class": "BOOK",
+    "note": "`gardener` in the herb garden"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Hooded file across the cemetery to the north door after supper",
+    "ids": "#000592–#000594",
+    "class": "BOOK",
+    "note": "`procession` phase 17.85–18.0"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Library stays empty (at most a librarian with a lamp by day)",
+    "ids": "#000204, #000206, #001063",
+    "class": "BOOK",
+    "note": "no library group"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Black cowled Benedictine habits; scapular, rope belt",
+    "ids": "—",
+    "class": "AMBIENT",
+    "note": "the Order's dress; the novel gives hoods (below) not colour"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Hoods up in the refectory and at Compline",
+    "ids": "D1 AKŞAM (#000592, \"başlıklarını taktılar\")",
+    "class": "BOOK",
+    "note": "monks favour hood-up (0.7)"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Servants and herdsmen in sheepskin cloaks",
+    "ids": "D2 SABAH #000788",
+    "class": "BOOK",
+    "note": "`sheep` cloak on servant/herd/peasant"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Novices smaller than the monks",
+    "ids": "#000635 (novices as a group)",
+    "class": "RECON",
+    "note": "scaled to ~1.42 m for silhouette"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Peasants with hoods and sacks",
+    "ids": "#001714",
+    "class": "BOOK",
+    "note": "peasant kind carries a sack"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Threshers sweeping the threshing floor; grooms in the yard",
+    "ids": "#000366",
+    "class": "AMBIENT",
+    "note": "plausible farm work at Terce–None"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Earlier procedural representation (historical)",
+   "fields": {
+    "Object / decision": "Footsteps / coughs / page turns / kneading clank / pouring near the camera",
+    "ids": "§4 sounds",
+    "class": "AMBIENT+BOOK",
+    "note": "via ctx.sound.npcSound, within 26 m, sparse"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Revision (vegetation-people wave): figure look and seating",
+   "fields": {
+    "Object / decision": "Black habit falling in folds to the ankle, fuller at the hem, mud on the hem",
+    "ids": "—",
+    "class": "AMBIENT",
+    "note": "folded lathe skirt, vertex-colour dirt fading up from the hem"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Revision (vegetation-people wave): figure look and seating",
+   "fields": {
+    "Object / decision": "Scapular front and back, cord girdle with a hanging end",
+    "ids": "—",
+    "class": "AMBIENT",
+    "note": "Benedictine dress; the book only says the monks wear the Order's habit"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Revision (vegetation-people wave): figure look and seating",
+   "fields": {
+    "Object / decision": "Cowl: raised hood framing a shadowed face, or fallen on the back over a shoulder cape",
+    "ids": "D1 AKŞAM (hoods up in the refectory, at Compline)",
+    "class": "BOOK/AMBIENT",
+    "note": "hood is a two-sided shell; the face is darkened inside it"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Revision (vegetation-people wave): figure look and seating",
+   "fields": {
+    "Object / decision": "Wide monastic sleeves, hands half inside; hands folded in the sleeves at rest",
+    "ids": "—",
+    "class": "AMBIENT",
+    "note": "`fold()` rest pose for monks"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Revision (vegetation-people wave): figure look and seating",
+   "fields": {
+    "Object / decision": "Tonsure (crown shaved, ring of hair); older monks grey/white or bald",
+    "ids": "—",
+    "class": "AMBIENT",
+    "note": "vertex-coloured head; Jorge/Alinardo-age monks exist in the book"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Revision (vegetation-people wave): figure look and seating",
+   "fields": {
+    "Object / decision": "Faces: nose, brow ridge, eye shadow, chin, ears; skin weathered, varied",
+    "ids": "—",
+    "class": "AMBIENT",
+    "note": "no bare spheres; not bright (no \"glow\" under torches)"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Revision (vegetation-people wave): figure look and seating",
+   "fields": {
+    "Object / decision": "Novices smaller (≈1.45 m), habit browner, no scapular",
+    "ids": "#000635",
+    "class": "BOOK/AMBIENT",
+    "note": ""
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Revision (vegetation-people wave): figure look and seating",
+   "fields": {
+    "Object / decision": "Servants/herdsmen/peasants: dun/brown/grey tunic to the knee, leather belt, hose, shoes, leg wrappings; greasy sheepskin cloaks; hoods up outdoors",
+    "ids": "#000788, #001714",
+    "class": "BOOK/AMBIENT",
+    "note": "fleece darkened to dirty grey-brown (the old off-white read as a paper doll)"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Revision (vegetation-people wave): figure look and seating",
+   "fields": {
+    "Object / decision": "Cooks with a stained linen apron",
+    "ids": "#000573, #001310",
+    "class": "BOOK (cooks)/AMBIENT (apron)",
+    "note": ""
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Revision (vegetation-people wave): figure look and seating",
+   "fields": {
+    "Object / decision": "Abbot with a small gold pectoral cross",
+    "ids": "—",
+    "class": "AMBIENT",
+    "note": ""
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Revision (vegetation-people wave): figure look and seating",
+   "fields": {
+    "Object / decision": "Scriptorium monks sit on the benches of the real desks (the 40 desks of aedificium.js), facing the page",
+    "ids": "#000402, #000403",
+    "class": "BOOK/RECON",
+    "note": "desk construction mirrored in schedule.js; subset interleaved long-wall/tower/well desks"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Revision (vegetation-people wave): figure look and seating",
+   "fields": {
+    "Object / decision": "Malachi on his chair at his table by the catalogue",
+    "ids": "#000421",
+    "class": "BOOK",
+    "note": "chair is 0.8 m north of the table"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Revision (vegetation-people wave): figure look and seating",
+   "fields": {
+    "Object / decision": "Refectory diners seated along both long sides of the trestles, facing the board",
+    "ids": "D1 AKŞAM",
+    "class": "BOOK",
+    "note": "seats follow the trestle axis as built (see note below)"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Revision (vegetation-people wave): figure look and seating",
+   "fields": {
+    "Object / decision": "Kitchen workers stand at the long side of each trestle, facing it; the oven cook faces the west-tower oven",
+    "ids": "#000359",
+    "class": "BOOK",
+    "note": ""
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Revision (vegetation-people wave): figure look and seating",
+   "fields": {
+    "Object / decision": "Choir: the two sides face each other across the choir",
+    "ids": "D2 GECEYARISI",
+    "class": "BOOK",
+    "note": "fixed a facing bug (north rows looked at the wall)"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Revision (vegetation-people wave): figure look and seating",
+   "fields": {
+    "Object / decision": "Matins prostration face down, arms before the head",
+    "ids": "D2 GECEYARISI",
+    "class": "BOOK",
+    "note": "fixed: they had been lying on their backs"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Revision (vegetation-people wave): figure look and seating",
+   "fields": {
+    "Object / decision": "Swineherds stand beside the blood jar (not inside it), stirring",
+    "ids": "#000375",
+    "class": "BOOK",
+    "note": ""
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/people.md",
+   "section": "Revision (vegetation-people wave): figure look and seating",
+   "fields": {
+    "Object / decision": "Outdoor figures step aside from props (straw heaps, carts, fences) onto clear ground",
+    "ids": "—",
+    "class": "RECON",
+    "note": "a downward ray against the colliders at the spot, cached"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Late November, snow on the ground, bare broadleaves",
+    "ids": "D1 TANSÖKÜMÜ, #001704",
+    "class": "BOOK",
+    "note": "elms, fruit trees and the oak are leafless; solid fine winter shoots replace the exposed flat twig fans, snow only on upper faces"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Evergreen pines on both sides of the upper road, \"white with snow\", forming a natural roof",
+    "ids": "#000056, #000080",
+    "class": "BOOK",
+    "note": "umbrella pines at ±4–5 m either side of the road 22–95 m below the gate, crowns meeting overhead (nature.js)"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Species of the roofing pines = stone pine (Pinus pinea)",
+    "ids": "—",
+    "class": "RECON",
+    "note": "the text says only \"çam\"; an umbrella crown is what makes a roof over a road. Firs/spruces line the rest of the road"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Firs, spruces and windswept pines on the slopes and along the lower road",
+    "ids": "#000316, #002266, #002957",
+    "class": "BOOK/AMBIENT",
+    "note": "forests and groves are named; species mix is ambient (silver fir, Norway spruce, a flagged pine at the cliff edge)"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Pines below the east tower, where the building drops sheer",
+    "ids": "#000556",
+    "class": "BOOK",
+    "note": "26 conifers on the slope under the east tower"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Tree-lined road from the gate to the church",
+    "ids": "#000098",
+    "class": "BOOK",
+    "note": "the avenue; species unstated"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Avenue species = elm",
+    "ids": "—",
+    "class": "AMBIENT",
+    "note": "vase-shaped pollard-free elms; could equally be planes"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Oak at the edge of the cemetery (Benno hides against it)",
+    "ids": "#000894",
+    "class": "BOOK",
+    "note": "one massive low oak; the exposed crown is bare in the current winter reconstruction"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Orchard fruit trees; \"cannot be crossed running\"",
+    "ids": "#002092, #002176",
+    "class": "BOOK",
+    "note": "pruned open-centre apple/pear forms with water sprouts, set close"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Fruit trees in the cloister garth",
+    "ids": "—",
+    "class": "AMBIENT",
+    "note": "requested by claustrum.js"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Dormant roses in the flower garden before the hospice",
+    "ids": "D1 TANSÖKÜMÜ (\"güzel bir çiçek bahçesi\")",
+    "class": "BOOK/AMBIENT",
+    "note": "a flower garden is stated; roses are the ambient choice"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Chestnuts",
+    "ids": "—",
+    "class": "not used",
+    "note": "not mentioned in the book"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Vegetable garden left of the road from the gate, with vegetables showing through the snow",
+    "ids": "#000099, #000304–#000306",
+    "class": "BOOK",
+    "note": "VEG_GARDEN in plan.js; winter crops (kale, leeks, cabbage stumps, garlic, turnips) poke through the snow"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Door from the vegetable garden to the kitchen; the well; cross paths",
+    "ids": "#001659",
+    "class": "BOOK/RECON",
+    "note": "the main trodden path runs from the kitchen side to the well"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Beds: irregular raised strips, wattle or plank edging, frozen earth, straw mulch, bean poles, dry stalks",
+    "ids": "#000308 (\"dry branches\")",
+    "class": "AMBIENT",
+    "note": "deliberately uneven sizes, skewed rows, harvest half done, some beds fallow"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Named vegetables: squash, onion, garlic, beans; kitchen roots: radish, turnip, carrot",
+    "ids": "D1 İKİNDİ, #001714",
+    "class": "BOOK",
+    "note": "onions/garlic as small shoots, beans as last summer's poles, turnip rosettes"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Botanical garden follows the curve of the walls round the baths, infirmary and herb store",
+    "ids": "#000101–#000103, con_000031",
+    "class": "BOOK→RECON",
+    "note": "beds laid in concentric arcs about the baths/infirmary corner, inside the HERB_GARDEN rectangle"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Severinus's herbs: sage/rosemary-type sub-shrubs, dead umbels (valerian, fennel), rosettes (sorrel, coltsfoot, marshmallow), burdock, juniper, beds under straw",
+    "ids": "D1 İKİNDİ, #000695, #000901",
+    "class": "BOOK/AMBIENT",
+    "note": "the list is the book's; which bed holds what is ambient"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "\"The good herbs grow in winter too\"",
+    "ids": "D1 İKİNDİ",
+    "class": "BOOK",
+    "note": "evergreen sub-shrubs are the green in the herb garden"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Compost heap in a wattle bin in the far corner of the vegetable garden; tools, baskets, handbarrow, hoe, rake",
+    "ids": "—",
+    "class": "AMBIENT",
+    "note": "minor props"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Dung heap in a secluded corner of the orchard \"where no one passes\"",
+    "ids": "#001792, #001793",
+    "class": "BOOK",
+    "note": "in the orchard corner behind the infirmary end, by the west wall, away from the gate and avenue"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/provenance/vegetation.md",
+   "section": "Provenance — trees, gardens, orchard (src/world/trees.js, src/core/barkTex.js, src/world/nature.js, src/world/gardens.js)",
+   "fields": {
+    "Object / decision": "Beds walkable (≤0.22 m high), plants and props non-colliding; hurdles leave gaps where the paths enter",
+    "ids": "—",
+    "class": "RECON",
+    "note": "the walker is never trapped"
+   },
+   "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  }
+ ]
+}

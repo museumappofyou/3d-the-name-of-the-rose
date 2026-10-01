@@ -42,13 +42,8 @@ class Paths:
         self.cache_consolidation = self.cache / "consolidation"
         self.output = self.root / "output"
         self.analysis = self.root / "analysis"
-        # Project reports belong with the other documentation. Custom roots
-        # remain self-contained for standalone runs and tests.
-        self.reports = (
-            REPO_ROOT.parent / "docs" / "research" / "book"
-            if self.root == REPO_ROOT
-            else self.root / "reports"
-        )
+        # Generated reading views are local; structured output/ is canonical evidence.
+        self.reports = self.root / "reports"
         for d in (
             self.data,
             self.chunks,

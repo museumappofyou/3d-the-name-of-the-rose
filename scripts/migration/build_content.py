@@ -3,17 +3,17 @@
 
     python3 scripts/migration/build_content.py [--check]
 
-1. Builds migration/data/provenance.json: the curated subset of
+1. Builds shared/data/provenance.json: the curated subset of
    book_details/output/claims.jsonl referenced by the reviewed data (original
    claim ids, certainty, entity/attribute/value, chapter label, paragraph
    index, evidence fragment), plus typed document references. The nine
    evidence files are only read; their hashes are recorded and checked.
-2. Validates every data file against migration/data/schemas/*.schema.json
+2. Validates every data file against shared/data/schemas/*.schema.json
    (a small JSON-Schema subset implemented here: type, required, properties,
    additionalProperties, items, enum, pattern, minimum/maximum) and checks
    cross-references (discovery/portal/anchor/entity/location ids, claim ids
    exist in the corpus, condition vocabulary is allowlisted).
-3. Writes migration/godot/content/*.json for the runtime. Shipped copies drop
+3. Writes native/content/*.json for the runtime. Shipped copies drop
    book fragments and source-file paths: the package carries ids, statuses
    and citations, never the raw book or extraction caches.
 --check validates without writing.
@@ -25,9 +25,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-DATA = ROOT / 'migration/data'
+DATA = ROOT / 'shared/data'
 SCHEMAS = DATA / 'schemas'
-OUT = ROOT / 'migration/godot/content'
+OUT = ROOT / 'native/content'
 EVIDENCE = ROOT / 'book_details/output'
 FILES = ['horarium', 'locations', 'entities', 'portals', 'routines', 'discoveries', 'interactions', 'sounds', 'anchors', 'provenance']
 CONDITION_KEYS = {'any', 'all', 'not', 'known', 'any_known', 'all_known', 'known_derived', 'phase_in', 'office_in', 'no_office', 'phase_start_after', 'hour_between', 'portal_target', 'curfew'}
@@ -84,13 +84,12 @@ def build_provenance():
         'claims': [claims[k] for k in sorted(claims)],
         'documents': sorted(refs['docs']),
         'assets': {
-            'people': 'migration/data/manifests/people_derivatives.json',
-            'world': 'migration/data/manifests/world_derivatives.json',
-            'audio': 'migration/data/sounds.json (credits per stream/bank)',
-            'credits': ['assets/credits.json', 'docs/assets/MODEL_SOURCES.md', 'docs/assets/AUDIO_SOURCES.md', 'docs/provenance/people.md'],
+            'people': 'shared/data/manifests/people_derivatives.json',
+            'world': 'shared/data/manifests/world_derivatives.json',
+            'audio': 'shared/data/sounds.json (credits per stream/bank)',
+            'credits': ['shared/assets/credits.json', 'shared/provenance/model-sources.json', 'scripts/audio/sources.json', 'scripts/audio/extra_sources.json', 'docs/ASSETS.md', 'shared/provenance/reconstruction-decisions.json'],
         },
     }
-    (DATA / 'provenance.json').write_text(json.dumps(prov, indent=1, ensure_ascii=False) + '\n')
     return prov
 
 
@@ -241,8 +240,9 @@ def strip_for_package(name, d):
 def main():
     check_only = '--check' in sys.argv
     before = {p.name: sha(p) for p in EVIDENCE.iterdir() if p.is_file()}
-    build_provenance()
+    provenance = build_provenance()
     data = {n: load(n) for n in FILES}
+    data['provenance'] = provenance
     errors = []
     for n in FILES:
         sp = SCHEMAS / f'{n}.schema.json'
@@ -258,6 +258,7 @@ def main():
         print('\n'.join('ERROR ' + e for e in errors))
         raise SystemExit(1)
     if not check_only:
+        (DATA / 'provenance.json').write_text(json.dumps(provenance, indent=1, ensure_ascii=False) + '\n')
         OUT.mkdir(parents=True, exist_ok=True)
         manifest = {'schema_version': 1, 'files': {}, 'evidence_corpus': after}
         for n in FILES:
@@ -273,10 +274,10 @@ def main():
                      'cells': [{'id': c['id'], 'bounds': c['bounds'], 'triangles': c['census']['tris'], 'collision': [x['surface'] for x in c['collision']]} for c in w['cells']]}
             (OUT / 'world.json').write_text(json.dumps(world, separators=(',', ':')) + '\n')
             manifest['files']['world'] = {'source_sha256': sha(wd), 'package_sha256': sha(OUT / 'world.json')}
-        cast = json.loads((ROOT / 'assets/models/people/cast.json').read_text())
+        cast = json.loads((ROOT / 'shared/assets/models/people/cast.json').read_text())
         pd = DATA / 'manifests/people_derivatives.json'
         used = sorted(json.loads(pd.read_text())['people']) if pd.exists() else ['alinardo']
-        castc = {'schema_version': 1, 'source': 'assets/models/people/cast.json', 'source_sha256': sha(ROOT / 'assets/models/people/cast.json'),
+        castc = {'schema_version': 1, 'source': 'shared/assets/models/people/cast.json', 'source_sha256': sha(ROOT / 'shared/assets/models/people/cast.json'),
                  'people': {k: {f: cast['people'][k].get(f) for f in ('dress', 'wool', 'hoods', 'tint', 'height', 'pelvis', 'head', 'tris')} for k in used}}
         (OUT / 'cast.json').write_text(json.dumps(castc, separators=(',', ':')) + '\n')
         manifest['files']['cast'] = {'source_sha256': castc['source_sha256'], 'package_sha256': sha(OUT / 'cast.json')}

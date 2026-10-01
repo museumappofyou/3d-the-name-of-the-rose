@@ -6,9 +6,9 @@
 import { NodeIO, Accessor } from '@gltf-transform/core';
 import { ALL_EXTENSIONS, EXTMeshoptCompression } from '@gltf-transform/extensions';
 import { MeshoptEncoder, MeshoptDecoder } from 'meshoptimizer';
-import * as THREE from '../../lib/three/three.module.js';
+import * as THREE from '../../web/lib/three/three.module.js';
 import { pathToFileURL } from 'node:url';
-import { loweredHoodBlend } from '../../src/world/people/garmentPose.js';
+import { loweredHoodBlend } from '../../web/src/world/people/garmentPose.js';
 
 const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 const smooth = v => { const t = clamp(v, 0, 1); return t * t * (3 - 2 * t); };
@@ -203,7 +203,7 @@ export function auditLoweredHoods(doc, tasks) {
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   await MeshoptEncoder.ready; await MeshoptDecoder.ready;
   const io = new NodeIO().registerExtensions(ALL_EXTENSIONS).registerDependencies({ 'meshopt.encoder': MeshoptEncoder, 'meshopt.decoder': MeshoptDecoder });
-  const input = process.argv[2], output = process.argv[3], taskPath = process.argv[4] || 'assets/models/people/tasks.glb';
+  const input = process.argv[2], output = process.argv[3], taskPath = process.argv[4] || 'shared/assets/models/people/tasks.glb';
   if (!input || !output) throw new Error('Supply input and output paths');
   const [doc, tasks] = await Promise.all([io.read(input), io.read(taskPath)]);
   const rows = fitLoweredHoods(doc, tasks);

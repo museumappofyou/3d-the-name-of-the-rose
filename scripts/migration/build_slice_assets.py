@@ -3,11 +3,11 @@
 
     python3 scripts/migration/build_slice_assets.py
 
-Input : migration/data/export/ (scripts/migration/browser/slice_export.js)
-Output: migration/godot/assets/world/{cells,collision,dynamic,props,generated,
-        materials,fields}/, migration/godot/assets/textures/ (only the
+Input : shared/data/export/ (scripts/migration/browser/slice_export.js)
+Output: native/assets/world/{cells,collision,dynamic,props,generated,
+        materials,fields}/, native/assets/textures/ (only the
         Poly Haven sets the slice uses), and
-        migration/data/manifests/world_derivatives.json (source/derivative
+        shared/data/manifests/world_derivatives.json (source/derivative
         hashes, licences, transformation recipe).
 
 Materials are written as text resources from the browser's own material
@@ -24,11 +24,11 @@ import struct
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-EXP = ROOT / 'migration/data/export'
-GD = ROOT / 'migration/godot'
-OUT = GD / 'assets/world'
-TEX = GD / 'assets/textures'
-MANIFEST = ROOT / 'migration/data/manifests/world_derivatives.json'
+EXP = ROOT / 'shared/data/export'
+GD = ROOT / 'native'
+OUT = GD / 'shared/assets/world'
+TEX = GD / 'shared/assets/textures'
+MANIFEST = ROOT / 'shared/data/manifests/world_derivatives.json'
 
 
 def sha(p):
@@ -247,14 +247,14 @@ def main():
     sources = set()
     for rec in r['materials'].values():
         for slot in ('map', 'normal_map', 'ao_map', 'roughness_map'):
-            if rec.get(slot) and rec[slot]['source'].startswith('assets/textures/'):
+            if rec.get(slot) and rec[slot]['source'].startswith('shared/assets/textures/'):
                 sources.add(rec[slot]['source'])
         ov = (rec.get('weathering') or {}).get('overlay_map')
-        if ov and ov['source'].startswith('assets/textures/'):
+        if ov and ov['source'].startswith('shared/assets/textures/'):
             sources.add(ov['source'])
     for s in ('snow', 'flag', 'church_stone'):
         for suf in ('d', 'n', 'a'):
-            sources.add(f'assets/textures/{s}_{suf}.jpg')
+            sources.add(f'shared/assets/textures/{s}_{suf}.jpg')
     tex_paths = {}
     for s in sorted(sources):
         src = ROOT / s
@@ -263,7 +263,7 @@ def main():
         role = 'normal' if src.stem.endswith('_n') else ('albedo' if src.stem.endswith('_d') else 'arm')
         write_texture_import(dst, role)
         tex_paths[s] = res_path(dst)
-        derivs.append({'output': str(dst.relative_to(ROOT)), 'sha256': sha(dst), 'source': s, 'source_sha256': sha(src), 'licence': 'CC0 1.0 (Poly Haven, assets/credits.json)', 'role': role, 'recipe': f'copy; Godot import VRAM compressed, mipmaps, {"normal map (RGTC)" if role == "normal" else "sRGB albedo" if role == "albedo" else "linear ARM: R occlusion, G roughness, B metalness"}'})
+        derivs.append({'output': str(dst.relative_to(ROOT)), 'sha256': sha(dst), 'source': s, 'source_sha256': sha(src), 'licence': 'CC0 1.0 (Poly Haven, shared/assets/credits.json)', 'role': role, 'recipe': f'copy; Godot import VRAM compressed, mipmaps, {"normal map (RGTC)" if role == "normal" else "sRGB albedo" if role == "albedo" else "linear ARM: R occlusion, G roughness, B metalness"}'})
     gen_paths = {}
     for img in r['images']:
         src = EXP / img['file']
@@ -299,7 +299,7 @@ def main():
     world = {
         'schema_version': 1,
         'generator': 'scripts/migration/build_slice_assets.py',
-        'export_report': {'path': 'migration/data/export/slice_export.report.json', 'sha256': sha(EXP / 'slice_export.report.json'), 'kit_js_sha256': rep['kit_js_sha256'], 'served_adapter_sha256': rep['served_adapter_sha256']},
+        'export_report': {'path': 'shared/data/export/slice_export.report.json', 'sha256': sha(EXP / 'slice_export.report.json'), 'kit_js_sha256': rep['kit_js_sha256'], 'served_adapter_sha256': rep['served_adapter_sha256']},
         'coordinate_convention': r['coordinate_convention'],
         'snow_cover': r['snow_cover'],
         'cells': [{k: c[k] for k in ('id', 'census', 'bounds', 'meshes', 'collision', 'rule')} for c in r['cells']],

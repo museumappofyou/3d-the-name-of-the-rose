@@ -2,12 +2,12 @@
 """Prepare full-length, -12 dB comparisons. Originals and phrasing stay intact.
 
 These files are for listening review, not the sync-click sprite bank format.
-Use the streaming player at assets/audio/music/audition.html. An audible
+Use the streaming player at shared/assets/audio/music/audition.html. An audible
 review must precede location/phrase/loop choices.
 """
 import hashlib, json, pathlib, subprocess
 ROOT = pathlib.Path(__file__).resolve().parents[2]
-OUT = ROOT / 'assets/audio/music'
+OUT = ROOT / 'shared/assets/audio/music'
 OUT.mkdir(parents=True, exist_ok=True)
 tracks = []
 for name in ('cold_stone_prayer', 'beneath_the_vault'):

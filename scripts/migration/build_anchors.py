@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Reviewed anchors for the phase-1 slice (migration/data/anchors.json).
+"""Reviewed anchors for the phase-1 slice (shared/data/anchors.json).
 
 Every anchor is derived from the browser builders through the section export
-(migration/data/export/slice_export.report.json) or from plan constants, with
+(shared/data/export/slice_export.report.json) or from plan constants, with
 its source recorded. Route waypoints from the Agent B audit are kept as
 verification references only, not as plan data.
     python3 scripts/migration/build_anchors.py
@@ -12,7 +12,7 @@ import math
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-r = json.loads((ROOT / 'migration/data/export/slice_export.report.json').read_text())['result']
+r = json.loads((ROOT / 'shared/data/export/slice_export.report.json').read_text())['result']
 A = r['anchors']
 plan = A['plan']
 C = plan['CHURCH']
@@ -31,7 +31,7 @@ anchors = {
     'schema_version': 1,
     'id': 'anchors',
     'coordinate_convention': r['coordinate_convention'],
-    'source': {'export': 'migration/data/export/slice_export.report.json', 'builders': ['src/core/plan.js', 'src/world/church.js', 'src/world/claustrum.js', 'src/world/people/schedule.js', 'src/world/people.js']},
+    'source': {'export': 'shared/data/export/slice_export.report.json', 'builders': ['web/src/core/plan.js', 'web/src/world/church.js', 'web/src/world/claustrum.js', 'web/src/world/people/schedule.js', 'web/src/world/people.js']},
     'plan': plan,
     'anchors': {
         'cloister.porch': {**A['cloister.porch']},
@@ -64,10 +64,10 @@ anchors = {
         {'id': 'church-door-floor', 'check': 'church floor inside the cloister door', 'expect_y': probes['28.076,1.2']['y'], 'at': [28.076, 1.2], 'from_y': 1.5},
     ],
     'route_references': {
-        'note': 'Agent B real-controller routes (docs/migration/evidence/walk-*.json): verification references, not plan data',
+        'note': 'Agent B real-controller routes (docs/evidence/browser-baseline/reviews.json): verification references, not plan data',
         'cloister_approach': [[20, 0.30, 4.9], [28.08, 0.30, 4.4], [28.08, 0.35, 2.5], [28.08, 0.35, 0.5], [25, 0.35, -5.46]],
         'altar_route_start': [15.37, 0.35, -14.10],
     },
 }
-(ROOT / 'migration/data/anchors.json').write_text(json.dumps(anchors, indent=1) + '\n')
+(ROOT / 'shared/data/anchors.json').write_text(json.dumps(anchors, indent=1) + '\n')
 print('anchors', len(anchors['anchors']), 'boundary', [round(x, 3) for x in bnd], 'stair rise/run', round(anchors['stair']['rise_m'], 4), round(anchors['stair']['run_m'], 4))

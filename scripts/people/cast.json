@@ -1,5 +1,5 @@
 {
- "about": "The designed cast of the abbey (see docs/provenance/people.md). Named people have their own person; the rest are a small set of generic brothers, novices and lay servants whose faces are fixed by id, never dealt at random. Phenotype values are MakeHuman macro sliders (age 0.5 = 25 years, 1.0 = 90; 0.19 = 11).",
+ "about": "The designed cast of the abbey (see shared/provenance/reconstruction-decisions.json). Named people have their own person; the rest are a small set of generic brothers, novices and lay servants whose faces are fixed by id, never dealt at random. Phenotype values are MakeHuman macro sliders (age 0.5 = 25 years, 1.0 = 90; 0.19 = 11).",
  "packs": [
   "makehuman_system_assets (CC0)",
   "suits02 (CC0: donitz_monk_robe*, rehmanpolanski_viking_*)",

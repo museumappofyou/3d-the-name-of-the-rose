@@ -1,0 +1,543 @@
+{
+ "schema_version": 1,
+ "id": "anchors",
+ "coordinate_convention": "metres; +X east, +Y up, +Z south; same frame in Godot (no axis conversion)",
+ "source": {
+  "export": "shared/data/export/slice_export.report.json",
+  "builders": [
+   "web/src/core/plan.js",
+   "web/src/world/church.js",
+   "web/src/world/claustrum.js",
+   "web/src/world/people/schedule.js",
+   "web/src/world/people.js"
+  ]
+ },
+ "plan": {
+  "PX": 0.42,
+  "ORIGIN": [
+   330,
+   290
+  ],
+  "CHURCH": {
+   "x0": -13.02,
+   "xCross": 30.66,
+   "xChoir": 38.22,
+   "xApse": 46.62,
+   "zN": -13.44,
+   "zS": 2.52,
+   "zc": -5.46,
+   "transeptN": -19.32,
+   "vScale": 0.8
+  },
+  "CLOISTER": {
+   "x0": -10.5,
+   "x1": 30.24,
+   "z0": 3.78,
+   "z1": 25.2,
+   "walk": 3.6
+  },
+  "SKULL_CHAPEL": 15.372,
+  "CHAPELS": [
+   -2.1,
+   6.636,
+   15.372,
+   24.108
+  ]
+ },
+ "anchors": {
+  "cloister.porch": {
+   "x": -9.88,
+   "y": 0.35,
+   "z": 14.135,
+   "ry": 1.570796,
+   "source": "web/src/world/people/schedule.js CLOIS.porch"
+  },
+  "cloister.porchBenchTop": {
+   "x": -9.88,
+   "y": 0.77,
+   "z": 14.135,
+   "source": "app.groundY ray at the porch slot (people.js resolveY)"
+  },
+  "alinardo.seatRoot": {
+   "x": -9.88,
+   "y": 0.31,
+   "z": 14.135,
+   "ry": 1.570796,
+   "source": "people.js resolveY: bench top \u2212 SEAT_H.sit (0.46)"
+  },
+  "alinardo.interact": {
+   "x": -9.88,
+   "y": 1.4100000000000001,
+   "z": 14.135,
+   "source": "main.js: Severinus/Alinardo interaction at rig position + 1.1 m"
+  },
+  "church.skullChapel": {
+   "x": 15.372,
+   "z": -12.24,
+   "source": "church.js ctx.anchors.church.skullChapel"
+  },
+  "church.choir": {
+   "x": 32.66,
+   "z": -5.46,
+   "source": "church.js ctx.anchors.church.choir"
+  },
+  "altar.hinge": {
+   "x": 14.652,
+   "y": 0.35,
+   "z": -13.99,
+   "source": "church.js skullAltarPivot: group at (skull.x0, y0, skull.z1)"
+  },
+  "altar.interact": {
+   "x": 15.372,
+   "y": 1.15,
+   "z": -13.59,
+   "radius": 2,
+   "source": "church.js ctx.interact skull-altar"
+  },
+  "altar.collider": {
+   "min": [
+    0,
+    0,
+    -1.05
+   ],
+   "max": [
+    1.44,
+    1.05,
+    0
+   ],
+   "frame": "hinge-local",
+   "source": "church.js ctx.addDynamic(pivot, box(w, 1.05, d))"
+  },
+  "ossuary.stairTop": {
+   "x": 15.372,
+   "y": 0.35,
+   "z": -14.09,
+   "source": "church.js ossuary(): zTop = skull.z1 \u2212 0.1"
+  },
+  "ossuary.stairFoot": {
+   "x": 15.372,
+   "y": -2.8,
+   "z": -19.44,
+   "source": "church.js OSSUARY_PATH[0] = [SKULL_CHAPEL, zN \u2212 6]"
+  },
+  "ossuary.chapelBottom": {
+   "x": 15.372,
+   "y": -2.8,
+   "z": -20.64,
+   "source": "church.js ctx.anchors.ossuary.chapelBottom; y = TUNNEL_Y"
+  },
+  "ossuary.path": {
+   "points": [
+    [
+     15.372,
+     -19.44
+    ],
+    [
+     17.6,
+     -22.2
+    ],
+    [
+     30,
+     -25.6
+    ],
+    [
+     44.6,
+     -27.8
+    ],
+    [
+     44.6,
+     -32.76
+    ]
+   ],
+   "source": "church.js OSSUARY_PATH (only point 0 lies inside the phase-1 slice)"
+  },
+  "boundary.ossuary": {
+   "x": 16.753879603105325,
+   "y": -2.8,
+   "z": -21.151843673505695,
+   "normal": [
+    0.6281270923206018,
+    -0.7781107606844069
+   ],
+   "along_from_stair_foot_m": 2.2,
+   "label": "Temporary phase-1 test boundary \u2014 the passage continues to the kitchen in the browser reference",
+   "source": "phase-1 scope: 2.2 m along the passage from the stair foot, 1.3 m beyond ossuary.chapelBottom"
+  },
+  "door.church:cloister": {
+   "id": "church:cloister",
+   "building": "church",
+   "x": 28.076,
+   "y": 0.35,
+   "z": 2.52,
+   "nx": 0,
+   "nz": 1,
+   "w": 1.6,
+   "th": 1.1,
+   "open": 1,
+   "source": "church.js south door to the cloister (ctx.door)"
+  },
+  "chant.source": {
+   "x": 35.44,
+   "y": 2.4,
+   "z": -5.46,
+   "source": "soundscape.js: (xCross + xChoir)/2 + 1, 2.4, zc"
+  },
+  "fixture.origin": {
+   "x": 200.0,
+   "y": 0.0,
+   "z": 200.0,
+   "source": "phase-1 noncanonical fixture area (outside the abbey)"
+  },
+  "fixture.door": {
+   "x": 200.0,
+   "y": 0.0,
+   "z": 201.0,
+   "nx": 0,
+   "nz": -1,
+   "w": 1.6,
+   "th": 0.7,
+   "source": "fixture: door in the north wall of a 4.8 \u00d7 4.8 m room"
+  }
+ },
+ "stair": {
+  "steps": 12,
+  "top_y": 0.35,
+  "bottom_y": -2.8,
+  "z_top": -14.09,
+  "z_bottom": -19.439999999999998,
+  "rise_m": 0.2625,
+  "run_m": 0.44583333333333314,
+  "width_m": 1.2,
+  "collision": "browser ramp collider (quad from top to foot), surface stoneWet",
+  "source": "church.js ossuary()"
+ },
+ "doors_in_slice": [
+  {
+   "id": "church:westN",
+   "building": "church",
+   "x": -13.02,
+   "y": 0.35,
+   "z": -6.58,
+   "nx": -1,
+   "nz": 0,
+   "w": 1.3,
+   "th": 1.4,
+   "open": 1,
+   "out": 6.5
+  },
+  {
+   "id": "church:westS",
+   "building": "church",
+   "x": -13.02,
+   "y": 0.35,
+   "z": -4.34,
+   "nx": -1,
+   "nz": 0,
+   "w": 1.3,
+   "th": 1.4,
+   "open": 1,
+   "out": 6.5
+  },
+  {
+   "id": "church:north",
+   "building": "church",
+   "x": 42.22,
+   "y": 0.35,
+   "z": -10.06,
+   "nx": 0,
+   "nz": -1,
+   "w": 1.9,
+   "th": 1.1,
+   "open": 1
+  },
+  {
+   "id": "church:cloister",
+   "building": "church",
+   "x": 28.076,
+   "y": 0.35,
+   "z": 2.52,
+   "nx": 0,
+   "nz": 1,
+   "w": 1.6,
+   "th": 1.1,
+   "open": 1
+  },
+  {
+   "id": "church:sacristy-south",
+   "building": "church",
+   "x": 43.82,
+   "y": 0.35,
+   "z": 2.52,
+   "nx": 0,
+   "nz": 1,
+   "w": 1.3,
+   "th": 1.1,
+   "open": 1
+  },
+  {
+   "id": "church:choir-sacristy",
+   "building": "church",
+   "x": 44.02,
+   "y": 0.35,
+   "z": -0.86,
+   "nx": 0,
+   "nz": 1,
+   "w": 1.2,
+   "th": 1.1,
+   "open": 1
+  },
+  {
+   "id": "church:belltower",
+   "building": "church",
+   "x": 32.77,
+   "y": 0.35,
+   "z": 0.28,
+   "nx": -1,
+   "nz": 0,
+   "w": 1.2,
+   "th": 0.4,
+   "open": 1
+  },
+  {
+   "id": "cloister:west5.5",
+   "building": "cloister",
+   "x": -10.5,
+   "y": 0.3,
+   "z": 8.27,
+   "nx": -1,
+   "nz": 0,
+   "w": 1.4,
+   "th": 0.7,
+   "open": 1,
+   "out": 1
+  },
+  {
+   "id": "cloister:west16.5",
+   "building": "cloister",
+   "x": -10.5,
+   "y": 0.3,
+   "z": 19.27,
+   "nx": -1,
+   "nz": 0,
+   "w": 1.4,
+   "th": 0.7,
+   "open": 1,
+   "out": 1
+  },
+  {
+   "id": "calefactory:west4.5",
+   "building": "calefactory",
+   "x": 30.24,
+   "y": 0.3,
+   "z": 7.27,
+   "nx": -1,
+   "nz": 0,
+   "w": 1.3,
+   "th": 0.7,
+   "open": 1
+  },
+  {
+   "id": "calefactory:west14",
+   "building": "calefactory",
+   "x": 30.24,
+   "y": 0.3,
+   "z": 16.77,
+   "nx": -1,
+   "nz": 0,
+   "w": 1.3,
+   "th": 0.7,
+   "open": 1
+  },
+  {
+   "id": "dormitory:north",
+   "building": "dormitory",
+   "x": 43.33,
+   "y": 0.3,
+   "z": 4.2,
+   "nx": 0,
+   "nz": -1,
+   "w": 1.3,
+   "th": 0.7,
+   "open": 1
+  },
+  {
+   "id": "dormitory:south",
+   "building": "dormitory",
+   "x": 43.33,
+   "y": 0.3,
+   "z": 38.2,
+   "nx": 0,
+   "nz": 1,
+   "w": 1.3,
+   "th": 0.7,
+   "open": 1
+  },
+  {
+   "id": "dormitory:passage-east",
+   "building": "dormitory",
+   "x": 46.22,
+   "y": 0.3,
+   "z": 3.185,
+   "nx": 1,
+   "nz": 0,
+   "w": 1,
+   "th": 0.6,
+   "open": 1
+  },
+  {
+   "id": "chapter:outer",
+   "building": "chapter",
+   "x": -14.28,
+   "y": 0.3,
+   "z": 31.08,
+   "nx": -1,
+   "nz": 0,
+   "w": 1.9,
+   "th": 0.9,
+   "open": 1
+  },
+  {
+   "id": "chapter:old-portal",
+   "building": "chapter",
+   "x": -5.88,
+   "y": 0.3,
+   "z": 31.08,
+   "nx": -1,
+   "nz": 0,
+   "w": 3.2,
+   "th": 1.2,
+   "open": 1
+  },
+  {
+   "id": "abbot:south",
+   "building": "abbot",
+   "x": 31.32,
+   "y": 0.3,
+   "z": 36.96,
+   "nx": 0,
+   "nz": 1,
+   "w": 1.4,
+   "th": 0.9,
+   "open": 1
+  }
+ ],
+ "probes": [
+  {
+   "x": -9.88,
+   "z": 14.135,
+   "from": 1.07,
+   "y": 0.77
+  },
+  {
+   "x": 20,
+   "z": 4.9,
+   "from": 1.5,
+   "y": 0.3
+  },
+  {
+   "x": 15.372,
+   "z": -12.24,
+   "from": 1.5,
+   "y": 0.35
+  },
+  {
+   "x": 15.372,
+   "z": -20.64,
+   "from": -1,
+   "y": -2.8
+  },
+  {
+   "x": 28.076,
+   "z": 1.2,
+   "from": 1.5,
+   "y": 0.35
+  }
+ ],
+ "anchor_checks": [
+  {
+   "id": "bench-contact",
+   "check": "Godot collision ray at the porch slot returns the bench top; Alinardo seat root = bench top \u2212 0.46",
+   "expect_y": 0.77,
+   "at": [
+    -9.88,
+    14.135
+   ],
+   "from_y": 1.07
+  },
+  {
+   "id": "cloister-walk-floor",
+   "check": "cloister north walk floor",
+   "expect_y": 0.3,
+   "at": [
+    20.0,
+    4.9
+   ],
+   "from_y": 1.5
+  },
+  {
+   "id": "skull-chapel-floor",
+   "check": "church floor at the skull-chapel anchor",
+   "expect_y": 0.35,
+   "at": [
+    15.372,
+    -12.24
+   ],
+   "from_y": 1.5
+  },
+  {
+   "id": "landing-floor",
+   "check": "floor at ossuary.chapelBottom (first landing)",
+   "expect_y": -2.8,
+   "at": [
+    15.372,
+    -20.64
+   ],
+   "from_y": -1.0
+  },
+  {
+   "id": "church-door-floor",
+   "check": "church floor inside the cloister door",
+   "expect_y": 0.35,
+   "at": [
+    28.076,
+    1.2
+   ],
+   "from_y": 1.5
+  }
+ ],
+ "route_references": {
+  "note": "Agent B real-controller routes (docs/evidence/browser-baseline/reviews.json): verification references, not plan data",
+  "cloister_approach": [
+   [
+    20,
+    0.3,
+    4.9
+   ],
+   [
+    28.08,
+    0.3,
+    4.4
+   ],
+   [
+    28.08,
+    0.35,
+    2.5
+   ],
+   [
+    28.08,
+    0.35,
+    0.5
+   ],
+   [
+    25,
+    0.35,
+    -5.46
+   ]
+  ],
+  "altar_route_start": [
+   15.37,
+   0.35,
+   -14.1
+  ]
+ }
+}

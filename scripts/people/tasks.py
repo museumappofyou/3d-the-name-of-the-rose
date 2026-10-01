@@ -7,7 +7,7 @@
 # rotations, so contacts hold exactly on the reference body: the quill on the
 # parchment, the pelvis on the bench, knees and toes on the floor, the paddle
 # in the pot. Distances are those of the abbey's furniture
-# (src/world/furniture.js, aedificium.js, outbuildings.js):
+# (web/src/world/furniture.js, aedificium.js, outbuildings.js):
 #   scriptorium desk: bench seat 0.50, 0.75 behind the desk's centre; the
 #     sloping top (0.32 rad) carries the parchment at 1.00, 0.71 ahead
 #   refectory: bench seat 0.46, board 0.78 high, bowl 0.56 ahead

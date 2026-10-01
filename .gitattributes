@@ -1,4 +1,6 @@
 * text=auto
 *.md text eol=lf whitespace=-blank-at-eol
-lib/** linguist-vendored -whitespace
-assets/fonts/*-OFL.txt -whitespace
+web/lib/** linguist-vendored -whitespace
+**/fonts/*-OFL.txt -whitespace
+
+scripts/migration/vendor/** linguist-vendored -whitespace

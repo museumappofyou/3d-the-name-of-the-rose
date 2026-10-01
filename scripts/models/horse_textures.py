@@ -1,11 +1,11 @@
-# Web textures for Brunellus and the stable horses (see docs/assets/MODEL_SOURCES.md).
+# Web textures for Brunellus and the stable horses (see docs/ASSETS.md).
 # Source: Lyndon Daniels, "Realtime Rancher's 3D Model Pack" horse (CC0, OpenGameArt),
 # 2048² photo-based colour, normal and AO maps. This script
 #   1. rasterises the body's UV islands and each texel's 3-D position (uv.json,
 #      written by horse_blender.py --dump-uv),
 #   2. removes the painted white markings (blaze, four socks, croup flecks) by
 #      push-pull inpainting, keeping the hair's high-frequency luminance, so
-#      markings can be chosen per horse at runtime (src/world/animals.js),
+#      markings can be chosen per horse at runtime (web/src/world/animals.js),
 #   3. multiplies in the (range-normalised) ambient-occlusion map,
 #   4. dilates the islands over the background so no beige seams bleed in at
 #      lower mip levels, and writes 1024² JPEG colour/normal and PNG hair maps.
