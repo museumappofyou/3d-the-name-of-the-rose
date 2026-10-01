@@ -1,0 +1,96 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "type": "object",
+ "required": [
+  "schema_version",
+  "id",
+  "portals"
+ ],
+ "properties": {
+  "schema_version": {
+   "type": "integer",
+   "minimum": 1,
+   "maximum": 1
+  },
+  "id": {
+   "type": "string"
+  },
+  "portals": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "kind"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+     },
+     "kind": {
+      "enum": [
+       "pivot",
+       "opening",
+       "barred_door"
+      ]
+     },
+     "anchor_id": {
+      "type": "string"
+     },
+     "rotation_per_open_rad": {
+      "type": "number"
+     },
+     "damp_rate": {
+      "type": "number",
+      "minimum": 0
+     },
+     "collider_enabled_below_open": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+     },
+     "connects": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+      }
+     },
+     "curfew_rule": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+     },
+     "evidence": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "claim_id": {
+         "type": "string",
+         "pattern": "^claim_[0-9]{6}$"
+        },
+        "doc": {
+         "type": "string"
+        },
+        "status": {
+         "enum": [
+          "EXPLICIT",
+          "RECONSTRUCTION",
+          "INFERRED"
+         ]
+        },
+        "use": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "status"
+       ]
+      }
+     }
+    }
+   }
+  }
+ }
+}

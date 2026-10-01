@@ -1,0 +1,1 @@
+== crowd_hires (2304x1149) --scenario=crowd --vsync=off --duration=120  [GPU utilization before launch: 0% after 1s settle]

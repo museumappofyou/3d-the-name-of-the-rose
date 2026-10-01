@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "description": "Phase-1 cell rules for scripts/migration/browser/slice_export.js. A Batch part goes to the FIRST cell whose batches include it and whose centre_box contains its bounding-box centre. clip_large cells also take triangles (centroid inside the box) of larger parts that only overlap them. keep_plane trims underground triangles beyond the temporary boundary along the ossuary passage. World metres, +X east, +Y up, +Z south.",
+  "region": {
+    "min": [
+      -14.5,
+      -3.6,
+      -22.5
+    ],
+    "max": [
+      52.0,
+      46.0,
+      42.0
+    ]
+  },
+  "cells": [
+    {
+      "id": "ossuary_stair",
+      "batches": [
+        "ossuary"
+      ],
+      "clip_large": true,
+      "center_box": {
+        "min": [
+          13.4,
+          -3.7,
+          -22.6
+        ],
+        "max": [
+          17.6,
+          1.3,
+          -13.0
+        ]
+      },
+      "keep_plane": {
+        "origin": [
+          15.372,
+          -19.44
+        ],
+        "dir": [
+          0.628334,
+          -0.777944
+        ],
+        "max": 2.6,
+        "below_y": -0.2
+      },
+      "note": "12 steps, stair walls/vault and the first metres of the passage to ossuary.chapelBottom; boundary 2.2 m along the passage from the stair foot"
+    },
+    {
+      "id": "skull_chapel",
+      "batches": [
+        "church-interior",
+        "church-exterior"
+      ],
+      "center_box": {
+        "min": [
+          13.0,
+          -0.7,
+          -16.2
+        ],
+        "max": [
+          17.8,
+          9.0,
+          -12.75
+        ]
+      },
+      "note": "third north-aisle chapel: apse walls, roof, split floor beside the altar opening"
+    },
+    {
+      "id": "church_interior",
+      "batches": [
+        "church-interior"
+      ],
+      "center_box": {
+        "min": [
+          -13.6,
+          -0.65,
+          -19.6
+        ],
+        "max": [
+          51.6,
+          40.0,
+          3.4
+        ]
+      },
+      "note": "nave, aisles, crossing, choir and apse interior; parts centred below -0.65 m (treasury crypt) are excluded"
+    },
+    {
+      "id": "church_exterior",
+      "batches": [
+        "church-exterior",
+        "thresholds"
+      ],
+      "exclude_keys": [
+        "tym.*"
+      ],
+      "center_box": {
+        "min": [
+          -16.0,
+          -1.0,
+          -21.0
+        ],
+        "max": [
+          52.0,
+          46.0,
+          4.0
+        ]
+      },
+      "note": "outer shell, roofs, tower and spire; the west-portal tympanum (tym.*) faces away from the slice route and is excluded"
+    },
+    {
+      "id": "cloister",
+      "batches": [
+        "claustrum-exterior",
+        "claustrum-interior",
+        "thresholds",
+        "nature"
+      ],
+      "center_box": {
+        "min": [
+          -11.7,
+          -1.0,
+          2.3
+        ],
+        "max": [
+          30.75,
+          13.0,
+          26.4
+        ]
+      },
+      "note": "the four walks, arcades, lean-to roofs, Alinardo's bench, outer west wall, garth well"
+    },
+    {
+      "id": "cloister_context",
+      "batches": [
+        "claustrum-exterior"
+      ],
+      "center_box": {
+        "min": [
+          -21.0,
+          -1.0,
+          2.3
+        ],
+        "max": [
+          52.0,
+          30.0,
+          42.0
+        ]
+      },
+      "note": "frozen reference shells seen across the garth (east range, dormitory, chapter house, Abbot's house, hospice): exterior only, no interiors; the chapter-house tympanum relief (90K tris) and garden hedges are excluded",
+      "exclude_keys": [
+        "chapterTympanum",
+        "hedge"
+      ]
+    }
+  ],
+  "trees": {
+    "box": {
+      "min": [
+        -7.5,
+        -2.0,
+        6.0
+      ],
+      "max": [
+        27.2,
+        20.0,
+        22.2
+      ]
+    }
+  },
+  "fields": {
+    "x0": -24.0,
+    "x1": 56.0,
+    "z0": -30.0,
+    "z1": 44.0,
+    "step": 1.0
+  },
+  "probes": [
+    [
+      -9.88,
+      14.135,
+      1.07
+    ],
+    [
+      20.0,
+      4.9,
+      1.5
+    ],
+    [
+      15.372,
+      -12.24,
+      1.5
+    ],
+    [
+      15.372,
+      -20.64,
+      -1.0
+    ],
+    [
+      28.076,
+      1.2,
+      1.5
+    ]
+  ]
+}

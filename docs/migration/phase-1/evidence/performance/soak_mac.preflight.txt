@@ -1,0 +1,1 @@
+== soak (1920x1080) --scenario=soak --vsync=off --duration=1200  [GPU utilization before launch: 0% after 1s settle]

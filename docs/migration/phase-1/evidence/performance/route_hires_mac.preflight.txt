@@ -1,0 +1,1 @@
+== route_hires (2304x1149) --scenario=route --vsync=off --duration=120  [GPU utilization before launch: 0% after 0s settle]

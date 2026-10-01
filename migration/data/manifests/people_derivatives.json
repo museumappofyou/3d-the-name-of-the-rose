@@ -1,0 +1,1729 @@
+{
+  "people": {
+    "alinardo": {
+      "asset_id": "character:alinardo",
+      "output": "migration/godot/assets/characters/alinardo/alinardo.glb",
+      "output_sha256": "66935ad45aa1f6d874123df980c5c3bf0b5533063f257414787ad0dd1c53d864",
+      "output_bytes": 1533676,
+      "height_m": 1.6465,
+      "pelvis_m": 0.8924,
+      "head_m": 1.4998,
+      "joints": [
+        {
+          "skin": "alinardo",
+          "joints": 53
+        }
+      ],
+      "skins_count": 1,
+      "parts": [
+        {
+          "node": "alinardo.boots",
+          "part": "boots",
+          "material": "boots:toigo_ankle_boots_male",
+          "skin": "alinardo",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "NORMAL": "5126",
+            "TEXCOORD_0": "5126"
+          }
+        },
+        {
+          "node": "alinardo.brows",
+          "part": "brows",
+          "material": "brow:eyebrow010",
+          "skin": "alinardo",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "alinardo.eyes",
+          "part": "eyes",
+          "material": "eye:eye_bluegreen_blno.jpg",
+          "skin": "alinardo",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "alinardo.habit",
+          "part": "habit",
+          "material": "habit:black",
+          "skin": "alinardo",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "alinardo.hair",
+          "part": "hair",
+          "material": "hair:hair_short02_grey.png",
+          "skin": "alinardo",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "COLOR_0": "5121n",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "alinardo.hood_down",
+          "part": "hood_down",
+          "material": "habit:black",
+          "skin": "alinardo",
+          "encodings": {
+            "TEXCOORD_0": "5126",
+            "JOINTS_0": "5123",
+            "WEIGHTS_0": "5126",
+            "POSITION": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "alinardo.hood_up",
+          "part": "hood_up",
+          "material": "habit:black",
+          "skin": "alinardo",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "alinardo.lashes",
+          "part": "lashes",
+          "material": "lash",
+          "skin": "alinardo",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "alinardo.skin",
+          "part": "skin",
+          "material": "skin:onlytheghosts_old_eurasian_male",
+          "skin": "alinardo",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        }
+      ],
+      "morph_targets": {
+        "hood_down": [
+          "bendDrape"
+        ]
+      },
+      "triangles": 17227,
+      "clips": [
+        {
+          "id": "alinardo:write",
+          "godot_name": "write",
+          "duration_s": 15.625,
+          "channels": 159
+        },
+        {
+          "id": "alinardo:sitBench",
+          "godot_name": "sitBench",
+          "duration_s": 8.833333,
+          "channels": 159
+        },
+        {
+          "id": "alinardo:kneelPray",
+          "godot_name": "kneelPray",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "alinardo:kneelBow",
+          "godot_name": "kneelBow",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "alinardo:read",
+          "godot_name": "read",
+          "duration_s": 12.041667,
+          "channels": 159
+        },
+        {
+          "id": "alinardo:tend",
+          "godot_name": "tend",
+          "duration_s": 10.041667,
+          "channels": 159
+        },
+        {
+          "id": "alinardo:standSleeves",
+          "godot_name": "standSleeves",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "alinardo:standBow",
+          "godot_name": "standBow",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "alinardo:dine",
+          "godot_name": "dine",
+          "duration_s": 9.041667,
+          "channels": 159
+        }
+      ],
+      "textures": [
+        {
+          "name": "boots_toigo_ankle_boots_male",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "robe_normal",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "robe_black",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "hair_short02_grey",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "lash01",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "eye_bluegreen_blno",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "brow_eyebrow010",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "skin_onlytheghosts_old_eurasian_male",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        }
+      ],
+      "extensions_used": [
+        "EXT_texture_webp",
+        "KHR_materials_specular"
+      ],
+      "transformations": [
+        "meshopt decode",
+        "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+        "retain integer JOINTS/WEIGHTS/COLOR",
+        "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
+        "bind 9 fitted task clips by joint name",
+        "WebP kept (EXT_texture_webp)"
+      ],
+      "normal_restoration": [
+        {
+          "node": "alinardo.brows",
+          "vertices": 124,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.194e-7,
+          "max_position_residual_m": 2.265e-7
+        },
+        {
+          "node": "alinardo.eyes",
+          "vertices": 96,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 7.911e-8,
+          "max_position_residual_m": 2.319e-7
+        },
+        {
+          "node": "alinardo.habit",
+          "vertices": 3004,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 5.913e-8,
+          "max_position_residual_m": 3.143e-7
+        },
+        {
+          "node": "alinardo.hair",
+          "vertices": 845,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.074e-7,
+          "max_position_residual_m": 2.512e-7
+        },
+        {
+          "node": "alinardo.hood_up",
+          "vertices": 972,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 7.513e-8,
+          "max_position_residual_m": 2.512e-7
+        },
+        {
+          "node": "alinardo.lashes",
+          "vertices": 250,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 7.004e-8,
+          "max_position_residual_m": 2.378e-7
+        },
+        {
+          "node": "alinardo.skin",
+          "vertices": 3230,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 7.191e-8,
+          "max_position_residual_m": 3.199e-7
+        }
+      ],
+      "note": "Alinardo of Grottaferrata: 'old Alinardo' (claim_000966), frail, sits on the porch (claim_000989)"
+    },
+    "monk_a": {
+      "asset_id": "character:monk_a",
+      "output": "migration/godot/assets/characters/monk_a/monk_a.glb",
+      "output_sha256": "9483561833bc312aac36369134ff8e1d2b99c84488d8d49fcff0af9db08283cb",
+      "output_bytes": 1463688,
+      "height_m": 1.7491,
+      "pelvis_m": 0.944,
+      "head_m": 1.5976,
+      "joints": [
+        {
+          "skin": "monk_a",
+          "joints": 53
+        }
+      ],
+      "skins_count": 1,
+      "parts": [
+        {
+          "node": "monk_a.boots",
+          "part": "boots",
+          "material": "boots:toigo_ankle_boots_male",
+          "skin": "monk_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "NORMAL": "5126",
+            "TEXCOORD_0": "5126"
+          }
+        },
+        {
+          "node": "monk_a.brows",
+          "part": "brows",
+          "material": "brow:eyebrow001",
+          "skin": "monk_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_a.eyes",
+          "part": "eyes",
+          "material": "eye:eye_brown_brot.jpg",
+          "skin": "monk_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_a.habit",
+          "part": "habit",
+          "material": "habit:black",
+          "skin": "monk_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_a.hair",
+          "part": "hair",
+          "material": "hair:hair_short02_brown.png",
+          "skin": "monk_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "COLOR_0": "5121n",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_a.hood_down",
+          "part": "hood_down",
+          "material": "habit:black",
+          "skin": "monk_a",
+          "encodings": {
+            "TEXCOORD_0": "5126",
+            "JOINTS_0": "5123",
+            "WEIGHTS_0": "5126",
+            "POSITION": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_a.hood_up",
+          "part": "hood_up",
+          "material": "habit:black",
+          "skin": "monk_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_a.lashes",
+          "part": "lashes",
+          "material": "lash",
+          "skin": "monk_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_a.skin",
+          "part": "skin",
+          "material": "skin:middleage_caucasian_male",
+          "skin": "monk_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        }
+      ],
+      "morph_targets": {
+        "hood_down": [
+          "bendDrape"
+        ]
+      },
+      "triangles": 16430,
+      "clips": [
+        {
+          "id": "monk_a:write",
+          "godot_name": "write",
+          "duration_s": 15.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_a:sitBench",
+          "godot_name": "sitBench",
+          "duration_s": 8.833333,
+          "channels": 159
+        },
+        {
+          "id": "monk_a:kneelPray",
+          "godot_name": "kneelPray",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_a:kneelBow",
+          "godot_name": "kneelBow",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_a:read",
+          "godot_name": "read",
+          "duration_s": 12.041667,
+          "channels": 159
+        },
+        {
+          "id": "monk_a:tend",
+          "godot_name": "tend",
+          "duration_s": 10.041667,
+          "channels": 159
+        },
+        {
+          "id": "monk_a:standSleeves",
+          "godot_name": "standSleeves",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "monk_a:standBow",
+          "godot_name": "standBow",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "monk_a:dine",
+          "godot_name": "dine",
+          "duration_s": 9.041667,
+          "channels": 159
+        }
+      ],
+      "textures": [
+        {
+          "name": "boots_toigo_ankle_boots_male",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "eye_brown_brot",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "robe_normal",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "robe_black",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "lash01",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "skin_middleage_caucasian_male",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "hair_short02_brown",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "brow_eyebrow001",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        }
+      ],
+      "extensions_used": [
+        "EXT_texture_webp",
+        "KHR_materials_specular"
+      ],
+      "transformations": [
+        "meshopt decode",
+        "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+        "retain integer JOINTS/WEIGHTS/COLOR",
+        "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
+        "bind 9 fitted task clips by joint name",
+        "WebP kept (EXT_texture_webp)"
+      ],
+      "normal_restoration": [
+        {
+          "node": "monk_a.brows",
+          "vertices": 124,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.657e-7,
+          "max_position_residual_m": 2.266e-7
+        },
+        {
+          "node": "monk_a.eyes",
+          "vertices": 96,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.657e-7,
+          "max_position_residual_m": 2.317e-7
+        },
+        {
+          "node": "monk_a.habit",
+          "vertices": 3001,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.048e-7,
+          "max_position_residual_m": 3.166e-7
+        },
+        {
+          "node": "monk_a.hair",
+          "vertices": 828,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.062e-7,
+          "max_position_residual_m": 2.471e-7
+        },
+        {
+          "node": "monk_a.hood_up",
+          "vertices": 974,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.633e-7,
+          "max_position_residual_m": 2.533e-7
+        },
+        {
+          "node": "monk_a.lashes",
+          "vertices": 250,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.061e-7,
+          "max_position_residual_m": 2.356e-7
+        },
+        {
+          "node": "monk_a.skin",
+          "vertices": 2797,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.088e-7,
+          "max_position_residual_m": 3.18e-7
+        }
+      ],
+      "note": "a brother, middle-aged, average build"
+    },
+    "scribe_a": {
+      "asset_id": "character:scribe_a",
+      "output": "migration/godot/assets/characters/scribe_a/scribe_a.glb",
+      "output_sha256": "eb2d54d690eedb50056175bace699cb2fecb54b4b2f67aa7efee40faa64927e5",
+      "output_bytes": 1465284,
+      "height_m": 1.7426,
+      "pelvis_m": 0.9383,
+      "head_m": 1.596,
+      "joints": [
+        {
+          "skin": "scribe_a",
+          "joints": 53
+        }
+      ],
+      "skins_count": 1,
+      "parts": [
+        {
+          "node": "scribe_a.boots",
+          "part": "boots",
+          "material": "boots:toigo_ankle_boots_male",
+          "skin": "scribe_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "NORMAL": "5126",
+            "TEXCOORD_0": "5126"
+          }
+        },
+        {
+          "node": "scribe_a.brows",
+          "part": "brows",
+          "material": "brow:eyebrow002",
+          "skin": "scribe_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "scribe_a.eyes",
+          "part": "eyes",
+          "material": "eye:eye_brownlight_brus.jpg",
+          "skin": "scribe_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "scribe_a.habit",
+          "part": "habit",
+          "material": "habit:black",
+          "skin": "scribe_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "scribe_a.hair",
+          "part": "hair",
+          "material": "hair:hair_short02_brown.png",
+          "skin": "scribe_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "COLOR_0": "5121n",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "scribe_a.hood_down",
+          "part": "hood_down",
+          "material": "habit:black",
+          "skin": "scribe_a",
+          "encodings": {
+            "TEXCOORD_0": "5126",
+            "JOINTS_0": "5123",
+            "WEIGHTS_0": "5126",
+            "POSITION": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "scribe_a.hood_up",
+          "part": "hood_up",
+          "material": "habit:black",
+          "skin": "scribe_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "scribe_a.lashes",
+          "part": "lashes",
+          "material": "lash",
+          "skin": "scribe_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "scribe_a.skin",
+          "part": "skin",
+          "material": "skin:young_caucasian_male",
+          "skin": "scribe_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        }
+      ],
+      "morph_targets": {
+        "hood_down": [
+          "bendDrape"
+        ]
+      },
+      "triangles": 16429,
+      "clips": [
+        {
+          "id": "scribe_a:write",
+          "godot_name": "write",
+          "duration_s": 15.625,
+          "channels": 159
+        },
+        {
+          "id": "scribe_a:sitBench",
+          "godot_name": "sitBench",
+          "duration_s": 8.833333,
+          "channels": 159
+        },
+        {
+          "id": "scribe_a:kneelPray",
+          "godot_name": "kneelPray",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "scribe_a:kneelBow",
+          "godot_name": "kneelBow",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "scribe_a:read",
+          "godot_name": "read",
+          "duration_s": 12.041667,
+          "channels": 159
+        },
+        {
+          "id": "scribe_a:tend",
+          "godot_name": "tend",
+          "duration_s": 10.041667,
+          "channels": 159
+        },
+        {
+          "id": "scribe_a:standSleeves",
+          "godot_name": "standSleeves",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "scribe_a:standBow",
+          "godot_name": "standBow",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "scribe_a:dine",
+          "godot_name": "dine",
+          "duration_s": 9.041667,
+          "channels": 159
+        }
+      ],
+      "textures": [
+        {
+          "name": "boots_toigo_ankle_boots_male",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "robe_normal",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "robe_black",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "lash01",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "hair_short02_brown",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "eye_brownlight_brus",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "brow_eyebrow002",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "skin_young_caucasian_male",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        }
+      ],
+      "extensions_used": [
+        "EXT_texture_webp",
+        "KHR_materials_specular"
+      ],
+      "transformations": [
+        "meshopt decode",
+        "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+        "retain integer JOINTS/WEIGHTS/COLOR",
+        "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
+        "bind 9 fitted task clips by joint name",
+        "WebP kept (EXT_texture_webp)"
+      ],
+      "normal_restoration": [
+        {
+          "node": "scribe_a.brows",
+          "vertices": 124,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.084e-7,
+          "max_position_residual_m": 2.361e-7
+        },
+        {
+          "node": "scribe_a.eyes",
+          "vertices": 96,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.338e-7,
+          "max_position_residual_m": 2.342e-7
+        },
+        {
+          "node": "scribe_a.habit",
+          "vertices": 2994,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.061e-7,
+          "max_position_residual_m": 3.208e-7
+        },
+        {
+          "node": "scribe_a.hair",
+          "vertices": 829,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.488e-7,
+          "max_position_residual_m": 2.419e-7
+        },
+        {
+          "node": "scribe_a.hood_up",
+          "vertices": 974,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.205e-7,
+          "max_position_residual_m": 2.475e-7
+        },
+        {
+          "node": "scribe_a.lashes",
+          "vertices": 250,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.317e-7,
+          "max_position_residual_m": 2.375e-7
+        },
+        {
+          "node": "scribe_a.skin",
+          "vertices": 2803,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.117e-7,
+          "max_position_residual_m": 3.218e-7
+        }
+      ],
+      "note": "a younger brother, slender, a scribe"
+    },
+    "monk_b": {
+      "asset_id": "character:monk_b",
+      "output": "migration/godot/assets/characters/monk_b/monk_b.glb",
+      "output_sha256": "609cdd49affff06ccc5b32fd6e4498f0004542708be1ba76d9a836ee41787016",
+      "output_bytes": 1523444,
+      "height_m": 1.7148,
+      "pelvis_m": 0.9283,
+      "head_m": 1.5668,
+      "joints": [
+        {
+          "skin": "monk_b",
+          "joints": 53
+        }
+      ],
+      "skins_count": 1,
+      "parts": [
+        {
+          "node": "monk_b.boots",
+          "part": "boots",
+          "material": "boots:toigo_ankle_boots_male",
+          "skin": "monk_b",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "NORMAL": "5126",
+            "TEXCOORD_0": "5126"
+          }
+        },
+        {
+          "node": "monk_b.brows",
+          "part": "brows",
+          "material": "brow:eyebrow005",
+          "skin": "monk_b",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_b.eyes",
+          "part": "eyes",
+          "material": "eye:eye_brown_brot.jpg",
+          "skin": "monk_b",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_b.habit",
+          "part": "habit",
+          "material": "habit:black",
+          "skin": "monk_b",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_b.hair",
+          "part": "hair",
+          "material": "hair:hair_short02_grey.png",
+          "skin": "monk_b",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "COLOR_0": "5121n",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_b.hood_down",
+          "part": "hood_down",
+          "material": "habit:black",
+          "skin": "monk_b",
+          "encodings": {
+            "TEXCOORD_0": "5126",
+            "JOINTS_0": "5123",
+            "WEIGHTS_0": "5126",
+            "POSITION": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_b.hood_up",
+          "part": "hood_up",
+          "material": "habit:black",
+          "skin": "monk_b",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_b.lashes",
+          "part": "lashes",
+          "material": "lash",
+          "skin": "monk_b",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_b.skin",
+          "part": "skin",
+          "material": "skin:old_caucasian_male",
+          "skin": "monk_b",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        }
+      ],
+      "morph_targets": {
+        "hood_down": [
+          "bendDrape"
+        ]
+      },
+      "triangles": 16431,
+      "clips": [
+        {
+          "id": "monk_b:write",
+          "godot_name": "write",
+          "duration_s": 15.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_b:sitBench",
+          "godot_name": "sitBench",
+          "duration_s": 8.833333,
+          "channels": 159
+        },
+        {
+          "id": "monk_b:kneelPray",
+          "godot_name": "kneelPray",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_b:kneelBow",
+          "godot_name": "kneelBow",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_b:read",
+          "godot_name": "read",
+          "duration_s": 12.041667,
+          "channels": 159
+        },
+        {
+          "id": "monk_b:tend",
+          "godot_name": "tend",
+          "duration_s": 10.041667,
+          "channels": 159
+        },
+        {
+          "id": "monk_b:standSleeves",
+          "godot_name": "standSleeves",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "monk_b:standBow",
+          "godot_name": "standBow",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "monk_b:dine",
+          "godot_name": "dine",
+          "duration_s": 9.041667,
+          "channels": 159
+        }
+      ],
+      "textures": [
+        {
+          "name": "boots_toigo_ankle_boots_male",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "eye_brown_brot",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "robe_normal",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "robe_black",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "hair_short02_grey",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "lash01",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "skin_old_caucasian_male",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "brow_eyebrow005",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        }
+      ],
+      "extensions_used": [
+        "EXT_texture_webp",
+        "KHR_materials_specular"
+      ],
+      "transformations": [
+        "meshopt decode",
+        "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+        "retain integer JOINTS/WEIGHTS/COLOR",
+        "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
+        "bind 9 fitted task clips by joint name",
+        "WebP kept (EXT_texture_webp)"
+      ],
+      "normal_restoration": [
+        {
+          "node": "monk_b.brows",
+          "vertices": 124,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 8.627e-8,
+          "max_position_residual_m": 2.334e-7
+        },
+        {
+          "node": "monk_b.eyes",
+          "vertices": 96,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 7.535e-8,
+          "max_position_residual_m": 2.334e-7
+        },
+        {
+          "node": "monk_b.habit",
+          "vertices": 2999,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 9.707e-8,
+          "max_position_residual_m": 3.316e-7
+        },
+        {
+          "node": "monk_b.hair",
+          "vertices": 830,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 8.218e-8,
+          "max_position_residual_m": 2.451e-7
+        },
+        {
+          "node": "monk_b.hood_up",
+          "vertices": 980,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.311e-7,
+          "max_position_residual_m": 2.547e-7
+        },
+        {
+          "node": "monk_b.lashes",
+          "vertices": 250,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.289e-7,
+          "max_position_residual_m": 2.08e-7
+        },
+        {
+          "node": "monk_b.skin",
+          "vertices": 2807,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 5.546e-8,
+          "max_position_residual_m": 3.187e-7
+        }
+      ],
+      "note": "an older brother, heavy"
+    },
+    "novice_a": {
+      "asset_id": "character:novice_a",
+      "output": "migration/godot/assets/characters/novice_a/novice_a.glb",
+      "output_sha256": "ca5cc3631f9380d277cf4af396f3dd2e6fbf07ee59abe6e81f0bd4c3b5a8b2c8",
+      "output_bytes": 1472516,
+      "height_m": 1.4965,
+      "pelvis_m": 0.7832,
+      "head_m": 1.354,
+      "joints": [
+        {
+          "skin": "novice_a",
+          "joints": 53
+        }
+      ],
+      "skins_count": 1,
+      "parts": [
+        {
+          "node": "novice_a.boots",
+          "part": "boots",
+          "material": "boots:toigo_ankle_boots_male",
+          "skin": "novice_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "NORMAL": "5126",
+            "TEXCOORD_0": "5126"
+          }
+        },
+        {
+          "node": "novice_a.brows",
+          "part": "brows",
+          "material": "brow:eyebrow002",
+          "skin": "novice_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "novice_a.eyes",
+          "part": "eyes",
+          "material": "eye:eye_brownlight_brus.jpg",
+          "skin": "novice_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "novice_a.habit",
+          "part": "habit",
+          "material": "habit:black",
+          "skin": "novice_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "novice_a.hair",
+          "part": "hair",
+          "material": "hair:hair_short02_brown.png",
+          "skin": "novice_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "COLOR_0": "5121n",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "novice_a.hood_down",
+          "part": "hood_down",
+          "material": "habit:black",
+          "skin": "novice_a",
+          "encodings": {
+            "TEXCOORD_0": "5126",
+            "JOINTS_0": "5123",
+            "WEIGHTS_0": "5126",
+            "POSITION": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "novice_a.hood_up",
+          "part": "hood_up",
+          "material": "habit:black",
+          "skin": "novice_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "novice_a.lashes",
+          "part": "lashes",
+          "material": "lash",
+          "skin": "novice_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "novice_a.skin",
+          "part": "skin",
+          "material": "skin:young_caucasian_male",
+          "skin": "novice_a",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        }
+      ],
+      "morph_targets": {
+        "hood_down": [
+          "bendDrape"
+        ]
+      },
+      "triangles": 16430,
+      "clips": [
+        {
+          "id": "novice_a:write",
+          "godot_name": "write",
+          "duration_s": 15.625,
+          "channels": 159
+        },
+        {
+          "id": "novice_a:sitBench",
+          "godot_name": "sitBench",
+          "duration_s": 8.833333,
+          "channels": 159
+        },
+        {
+          "id": "novice_a:kneelPray",
+          "godot_name": "kneelPray",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "novice_a:kneelBow",
+          "godot_name": "kneelBow",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "novice_a:read",
+          "godot_name": "read",
+          "duration_s": 12.041667,
+          "channels": 159
+        },
+        {
+          "id": "novice_a:tend",
+          "godot_name": "tend",
+          "duration_s": 10.041667,
+          "channels": 159
+        },
+        {
+          "id": "novice_a:standSleeves",
+          "godot_name": "standSleeves",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "novice_a:standBow",
+          "godot_name": "standBow",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "novice_a:dine",
+          "godot_name": "dine",
+          "duration_s": 9.041667,
+          "channels": 159
+        }
+      ],
+      "textures": [
+        {
+          "name": "boots_toigo_ankle_boots_male",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "robe_normal",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "robe_black",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "lash01",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "hair_short02_brown",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "eye_brownlight_brus",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "brow_eyebrow002",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "skin_young_caucasian_male",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        }
+      ],
+      "extensions_used": [
+        "EXT_texture_webp",
+        "KHR_materials_specular"
+      ],
+      "transformations": [
+        "meshopt decode",
+        "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+        "retain integer JOINTS/WEIGHTS/COLOR",
+        "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
+        "bind 9 fitted task clips by joint name",
+        "WebP kept (EXT_texture_webp)"
+      ],
+      "normal_restoration": [
+        {
+          "node": "novice_a.brows",
+          "vertices": 124,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 7.206e-8,
+          "max_position_residual_m": 2.361e-7
+        },
+        {
+          "node": "novice_a.eyes",
+          "vertices": 96,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.133e-7,
+          "max_position_residual_m": 2.377e-7
+        },
+        {
+          "node": "novice_a.habit",
+          "vertices": 2998,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 7.27e-8,
+          "max_position_residual_m": 3.062e-7
+        },
+        {
+          "node": "novice_a.hair",
+          "vertices": 822,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 6.772e-8,
+          "max_position_residual_m": 2.461e-7
+        },
+        {
+          "node": "novice_a.hood_up",
+          "vertices": 973,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 6.703e-8,
+          "max_position_residual_m": 2.546e-7
+        },
+        {
+          "node": "novice_a.lashes",
+          "vertices": 250,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.238e-7,
+          "max_position_residual_m": 2.348e-7
+        },
+        {
+          "node": "novice_a.skin",
+          "vertices": 2798,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 9.733e-8,
+          "max_position_residual_m": 3.215e-7
+        }
+      ],
+      "note": "a novice, about seventeen, slight"
+    }
+  },
+  "schema_version": 1,
+  "generator": "scripts/migration/normalize_people.mjs",
+  "tool_versions": {
+    "@gltf-transform/core": "4.5.1",
+    "meshoptimizer": "1.3.0",
+    "sharp": "0.35.5",
+    "node": "v24.4.0"
+  },
+  "sources": {
+    "assets/models/people/cast.glb": "beffd6a188fe80c3f9f43e0e29a609feb4c3715c04768569faebe268e4845be4",
+    "assets/models/people/tasks.glb": "45368893acc694c5df87ad39ed98c68271fbedfb4bbc463dc4fbbb67e363d62e",
+    "assets/models/people/cast.json": "4a33056acc3e1645ba72b0921a88e982d927f6bd28715a3cf864ccc152f08839"
+  },
+  "coordinate_convention": "metres, +X east, +Y up, +Z south (glTF/Godot); character model front is +Z (Godot MODEL_FRONT), identical to the browser slot ry convention",
+  "licence_note": "Body/garment components keep the credits in docs/assets/MODEL_SOURCES.md, docs/provenance/people.md and assets/credits.json (CC0 MakeHuman/MPFB, CC BY boots/apron where used). Motion sources per those documents."
+}

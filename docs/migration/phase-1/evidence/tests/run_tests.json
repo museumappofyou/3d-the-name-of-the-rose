@@ -1,0 +1,96 @@
+{
+  "engine": "4.7.2-stable (official)",
+  "failures": 0,
+  "passed": 22,
+  "results": [
+    {
+      "pass": true,
+      "test": "test_content_references_and_evidence"
+    },
+    {
+      "pass": true,
+      "test": "test_condition_vocabulary_is_closed"
+    },
+    {
+      "pass": true,
+      "test": "test_horarium_matches_browser"
+    },
+    {
+      "pass": true,
+      "test": "test_alinardo_availability_matches_browser"
+    },
+    {
+      "pass": true,
+      "test": "test_discovery_predicates_match_browser"
+    },
+    {
+      "pass": true,
+      "test": "test_clock_signals_on_office_change"
+    },
+    {
+      "pass": true,
+      "test": "test_altar_alinardo_sequence"
+    },
+    {
+      "pass": true,
+      "test": "test_alinardo_absent_cannot_be_asked"
+    },
+    {
+      "pass": true,
+      "test": "test_descent_awards_passage_once"
+    },
+    {
+      "pass": true,
+      "test": "test_descent_requires_open_altar_approach"
+    },
+    {
+      "pass": true,
+      "test": "test_teleport_and_load_never_fabricate_traversal"
+    },
+    {
+      "pass": true,
+      "test": "test_descent_window_expires"
+    },
+    {
+      "pass": true,
+      "test": "test_stair_classification_has_no_flicker"
+    },
+    {
+      "pass": true,
+      "test": "test_exit_permit_matches_browser"
+    },
+    {
+      "pass": true,
+      "test": "test_curfew_outside_denied_inside_exit_allowed"
+    },
+    {
+      "pass": true,
+      "test": "test_church_path_matches_browser"
+    },
+    {
+      "pass": true,
+      "test": "test_office_does_not_restart_within_an_office"
+    },
+    {
+      "pass": true,
+      "test": "test_prime_lists_browser_pieces"
+    },
+    {
+      "pass": true,
+      "test": "test_lighting_and_chant_follow_the_canonical_clock"
+    },
+    {
+      "pass": true,
+      "test": "test_save_round_trip_and_idempotent_knowledge"
+    },
+    {
+      "pass": true,
+      "test": "test_save_recovery"
+    },
+    {
+      "pass": true,
+      "test": "test_save_rejects_tampering_and_unknown_ids"
+    }
+  ],
+  "total": 22
+}

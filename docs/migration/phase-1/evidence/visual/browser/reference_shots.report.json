@@ -1,0 +1,140 @@
+{
+ "module": "reference_shots.js",
+ "url": "http://localhost:8017/?debug&qa&quality=balanced&time=15",
+ "kit_js_sha256": "a50f7c6baa9ce69419181d6d19a91a9e6c387a74ad2a176df87a99a1e6bf42da",
+ "served_adapter_sha256": "957dbb596858e8a7edb829ceee6b19be46f004465d153e145c8e888db23b396c",
+ "result": [
+  {
+   "name": "alinardo_front",
+   "file": "docs/migration/phase-1/evidence/visual/browser/alinardo_front_browser.png",
+   "zone": "cloister",
+   "feet": [
+    -8.249999999999956,
+    0.299990011920926,
+    14.135000000000078
+   ],
+   "exposure": 0.6,
+   "time": 15
+  },
+  {
+   "name": "porch_wide",
+   "file": "docs/migration/phase-1/evidence/visual/browser/porch_wide_browser.png",
+   "zone": "garth",
+   "feet": [
+    -6.200055570497217,
+    -0.23134105473370625,
+    17.499981114426355
+   ],
+   "exposure": 0.6,
+   "time": 15
+  },
+  {
+   "name": "cloister_day",
+   "file": "docs/migration/phase-1/evidence/visual/browser/cloister_day_browser.png",
+   "zone": "cloister",
+   "feet": [
+    -7.999999999999963,
+    0.299990011920926,
+    6.000000000000059
+   ],
+   "exposure": 0.6,
+   "time": 15
+  },
+  {
+   "name": "church_door",
+   "file": "docs/migration/phase-1/evidence/visual/browser/church_door_browser.png",
+   "zone": "cloister",
+   "feet": [
+    28.080000000000165,
+    0.299990011920926,
+    6.20000000000014
+   ],
+   "exposure": 0.6,
+   "time": 15
+  },
+  {
+   "name": "nave_north_aisle",
+   "file": "docs/migration/phase-1/evidence/visual/browser/nave_north_aisle_browser.png",
+   "zone": "church",
+   "feet": [
+    25.000000000000007,
+    0.34998999403953257,
+    -5.45999999999999
+   ],
+   "exposure": 0.8399998840221202,
+   "time": 15
+  },
+  {
+   "name": "altar_closed",
+   "file": "docs/migration/phase-1/evidence/visual/browser/altar_closed_browser.png",
+   "zone": "church",
+   "feet": [
+    15.372000000000156,
+    0.34998999403953257,
+    -11.89999999999986
+   ],
+   "exposure": 0.8399999999995001,
+   "time": 15
+  },
+  {
+   "name": "altar_open",
+   "file": "docs/migration/phase-1/evidence/visual/browser/altar_open_browser.png",
+   "zone": "church",
+   "feet": [
+    15.372000000000124,
+    0.34998999403953257,
+    -11.899999999999899
+   ],
+   "exposure": 0.84,
+   "time": 15
+  },
+  {
+   "name": "stair_down",
+   "file": "docs/migration/phase-1/evidence/visual/browser/stair_down_browser.png",
+   "zone": "skull",
+   "feet": [
+    15.372000000000124,
+    0.34998999403953257,
+    -13.399168982012178
+   ],
+   "exposure": 0.8999998842300398,
+   "time": 15
+  },
+  {
+   "name": "choir_prime",
+   "file": "docs/migration/phase-1/evidence/visual/browser/choir_prime_browser.png",
+   "zone": "church",
+   "feet": [
+    27.000000000000043,
+    0.34998999403953257,
+    -5.459999999999951
+   ],
+   "exposure": 1.6639866344620824,
+   "time": 7.66
+  },
+  {
+   "name": "cloister_night",
+   "file": "docs/migration/phase-1/evidence/visual/browser/cloister_night_browser.png",
+   "zone": "cloister",
+   "feet": [
+    -7.999999999999465,
+    0.299990011920926,
+    6.000000000000158
+   ],
+   "exposure": 1.920000624517159,
+   "time": 20
+  },
+  {
+   "name": "nave_night_lamps",
+   "file": "docs/migration/phase-1/evidence/visual/browser/nave_night_lamps_browser.png",
+   "zone": "church",
+   "feet": [
+    20.000000000000078,
+    0.34998999403953257,
+    -5.459999999999951
+   ],
+   "exposure": 2.5599990139295934,
+   "time": 20
+  }
+ ]
+}

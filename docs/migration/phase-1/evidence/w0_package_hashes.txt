@@ -1,0 +1,5 @@
+# W0 foundation packages, 2026-10-01T14:50:26Z
+d34d36f3be1a6c49c56525ae86469b92e4f417ddf0b43cf00dd80c385c4b0562  migration/builds/windows/AbbeySlice.exe
+af78933885bda16485f0933846be223774273784b6e32c13c9a63848bc4a2404  migration/builds/windows/AbbeySlice.pck
+e69c11d035eb467ea563ebf9a7ee4def14cd652dc9521d69cdbedcdd3e40b964  migration/builds/macos/AbbeySlice.app/Contents/MacOS/Abbey Slice
+af78933885bda16485f0933846be223774273784b6e32c13c9a63848bc4a2404  migration/builds/macos/AbbeySlice.app/Contents/Resources/Abbey Slice.pck

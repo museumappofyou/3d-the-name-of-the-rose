@@ -1,0 +1,3 @@
+cold wall_s=2.22 ticks_ms {"cells_resident": 5, "first_frame_ms": 1954, "playable_ms": 2017, "scene_ready_ms": 1888}
+warm1 wall_s=1.10 ticks_ms {"cells_resident": 5, "first_frame_ms": 836, "playable_ms": 896, "scene_ready_ms": 796}
+warm2 wall_s=1.11 ticks_ms {"cells_resident": 5, "first_frame_ms": 847, "playable_ms": 906, "scene_ready_ms": 808}

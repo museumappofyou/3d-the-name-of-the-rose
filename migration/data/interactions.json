@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "interactions",
+  "source": {"module": "src/main.js act()/interactionLabel()/nearest()", "positions": "migration/data/anchors.json"},
+  "note": "Reach/visibility semantics follow nearest(): within radius, |Δy| ≤ 2.8 m, an unobstructed sight ray, and for small targets (radius < 4) facing > 0.3 unless closer than 1.3 m. Text is player-facing content; evidence stays on the discovery records.",
+  "interactions": [
+    {
+      "id": "skull-altar", "entity_id": "skull-altar", "anchor_id": "altar.interact", "radius": 2.0,
+      "kind": "pivot_portal", "portal_id": "church:altar",
+      "label": "An altar carved with skulls above a heap of shin bones",
+      "label_when": [
+        {"if": {"all": [{"known_derived": "knows-altar"}, {"portal_target": ["church:altar", 1]}]}, "label": "The open altar — turn it back"},
+        {"if": {"known_derived": "knows-altar"}, "label": "The fourth skull from the right — press its eyes"}
+      ],
+      "rules": [
+        {"if": {"all": [{"not": {"known_derived": "knows-altar"}}, {"portal_target": ["church:altar", 0]}]},
+         "do": [{"note": "altar-feature"}, {"toast": "Skulls carved in the same stone as the altar, above a heap of shin bones. Their eye sockets are unusually deep.", "ms": 6000}]},
+        {"if": {"portal_target": ["church:altar", 0]},
+         "do": [{"portal_target": ["church:altar", 1]}, {"sound": "creak"}, {"toast": "You press the eyes of the fourth skull from the right. The altar turns on a hidden pivot: damp steps go down into the dark.", "ms": 6000}]},
+        {"if": {"portal_target": ["church:altar", 1]},
+         "do": [{"portal_target": ["church:altar", 0]}, {"sound": "creak"}, {"toast": "The altar turns back into place.", "ms": 6000}]}
+      ]
+    },
+    {
+      "id": "alinardo", "entity_id": "alinardo", "anchor_id": "alinardo.interact", "radius": 2.6,
+      "kind": "person", "requires_present": true,
+      "label": "Alinardo, resting on the porch",
+      "rules": [
+        {"if": {"not": {"known_derived": "can-ask-alinardo"}},
+         "do": [{"toast": "Alinardo rests on the porch. The old monk remembers the abbey’s earlier days; for now he listens quietly.", "ms": 6000}]},
+        {"if": {"known_derived": "can-ask-alinardo"},
+         "do": [{"toast": "Alinardo recalls an entrance beneath the church. At the altar of skulls, he says, press the eyes of the fourth skull from the right.", "ms": 8500}, {"note": "alinardo-hint", "extra": {"by": "alinardo"}}]}
+      ]
+    },
+    {
+      "id": "fixture-door", "entity_id": "fixture:door", "anchor_id": "fixture.door", "radius": 2.2,
+      "kind": "observe", "fixture": true,
+      "label": "Test door (noncanonical fixture)",
+      "rules": [
+        {"if": {"curfew": "aedificium-barred"}, "do": [{"toast": "Test fixture: barred from within by the curfew rule. Nothing is noted.", "ms": 4000}]},
+        {"if": {"not": {"curfew": "aedificium-barred"}}, "do": [{"toast": "Test fixture: open by day.", "ms": 3000}]}
+      ]
+    }
+  ]
+}

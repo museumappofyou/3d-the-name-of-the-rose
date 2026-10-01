@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "routines",
+  "source": {"module": "src/world/people/schedule.js scene()", "seat": "src/world/people.js resolveY + SEAT_H", "pose": "src/world/people/figure.js MOTION.brother"},
+  "routines": [
+    {
+      "entity_id": "alinardo",
+      "available_when": {"any": [
+        {"phase_in": ["vigil", "supper", "procession", "retire"]},
+        {"all": [{"phase_in": ["work"]}, {"no_office": true}, {"phase_start_after": 13.0}]}
+      ]},
+      "slot": {"anchor_id": "alinardo.seatRoot", "pose": "sit", "seat": true, "seat_height_m": 0.46},
+      "location_id": "cloister",
+      "evidence": [{"claim_id": "claim_000989", "status": "EXPLICIT", "use": "sits on the outer part of the porch"}],
+      "reconstruction": "The afternoon (work after None) and short evening availability are the browser's reconstruction so that someone who has just found the barred doors can consult him before the community retires; the bench itself is a reconstruction (claustrum.js).",
+      "look_at_player_within_m": 3.2,
+      "presentation": {"asset_id": "character:alinardo", "seed": 41, "hood": "down", "phase": 0.338}
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+ "animations": {
+  "dine": {
+   "length": 9.04166698455811,
+   "tracks": 51
+  },
+  "kneelBow": {
+   "length": 9.625,
+   "tracks": 51
+  },
+  "kneelPray": {
+   "length": 9.625,
+   "tracks": 51
+  },
+  "read": {
+   "length": 12.0416669845581,
+   "tracks": 51
+  },
+  "sitBench": {
+   "length": 8.83333301544189,
+   "tracks": 51
+  },
+  "standBow": {
+   "length": 10.4583330154419,
+   "tracks": 51
+  },
+  "standSleeves": {
+   "length": 10.4583330154419,
+   "tracks": 51
+  },
+  "tend": {
+   "length": 10.0416669845581,
+   "tracks": 51
+  },
+  "write": {
+   "length": 15.625,
+   "tracks": 51
+  }
+ },
+ "distinct_skins": 1,
+ "meshes": [
+  {
+   "blend_shapes": [],
+   "material": "boots:toigo_ankle_boots_male",
+   "name": "alinardo_boots",
+   "skeleton": "..",
+   "skin_id": -9223372006873889269,
+   "surfaces": 1,
+   "triangles": 900
+  },
+  {
+   "blend_shapes": [],
+   "material": "brow:eyebrow010",
+   "name": "alinardo_brows",
+   "skeleton": "..",
+   "skin_id": -9223372006873889269,
+   "surfaces": 1,
+   "triangles": 192
+  },
+  {
+   "blend_shapes": [],
+   "material": "eye:eye_bluegreen_blno.jpg",
+   "name": "alinardo_eyes",
+   "skeleton": "..",
+   "skin_id": -9223372006873889269,
+   "surfaces": 1,
+   "triangles": 172
+  },
+  {
+   "blend_shapes": [],
+   "material": "habit:black",
+   "name": "alinardo_habit",
+   "skeleton": "..",
+   "skin_id": -9223372006873889269,
+   "surfaces": 1,
+   "triangles": 5199
+  },
+  {
+   "blend_shapes": [],
+   "material": "hair:hair_short02_grey.png",
+   "name": "alinardo_hair",
+   "skeleton": "..",
+   "skin_id": -9223372006873889269,
+   "surfaces": 1,
+   "triangles": 1400
+  },
+  {
+   "blend_shapes": [
+    "bendDrape"
+   ],
+   "material": "habit:black",
+   "name": "alinardo_hood_down",
+   "skeleton": "..",
+   "skin_id": -9223372006873889269,
+   "surfaces": 1,
+   "triangles": 1599
+  },
+  {
+   "blend_shapes": [],
+   "material": "habit:black",
+   "name": "alinardo_hood_up",
+   "skeleton": "..",
+   "skin_id": -9223372006873889269,
+   "surfaces": 1,
+   "triangles": 1800
+  },
+  {
+   "blend_shapes": [],
+   "material": "lash",
+   "name": "alinardo_lashes",
+   "skeleton": "..",
+   "skin_id": -9223372006873889269,
+   "surfaces": 1,
+   "triangles": 368
+  },
+  {
+   "blend_shapes": [],
+   "material": "skin:onlytheghosts_old_eurasian_male",
+   "name": "alinardo_skin",
+   "skeleton": "..",
+   "skin_id": -9223372006873889269,
+   "surfaces": 1,
+   "triangles": 5597
+  }
+ ],
+ "path": "res://assets/characters/alinardo/alinardo.glb",
+ "skeletons": [
+  {
+   "bones": 53,
+   "names": [
+    "Root",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "hand_l",
+    "index_01_l",
+    "index_02_l",
+    "index_03_l",
+    "middle_01_l",
+    "middle_02_l",
+    "middle_03_l",
+    "pinky_01_l",
+    "pinky_02_l",
+    "pinky_03_l",
+    "ring_01_l",
+    "ring_02_l",
+    "ring_03_l",
+    "thumb_01_l",
+    "thumb_02_l",
+    "thumb_03_l",
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "hand_r",
+    "index_01_r",
+    "index_02_r",
+    "index_03_r",
+    "middle_01_r",
+    "middle_02_r",
+    "middle_03_r",
+    "pinky_01_r",
+    "pinky_02_r",
+    "pinky_03_r",
+    "ring_01_r",
+    "ring_02_r",
+    "ring_03_r",
+    "thumb_01_r",
+    "thumb_02_r",
+    "thumb_03_r",
+    "neck_01",
+    "head",
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "ball_l",
+    "thigh_r",
+    "calf_r",
+    "foot_r",
+    "ball_r"
+   ],
+   "path": "alinardo/Skeleton3D"
+  }
+ ],
+ "triangles": 17227
+}

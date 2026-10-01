@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "portals",
+  "portals": [
+    {
+      "id": "church:altar", "kind": "pivot", "entity_id": "skull-altar", "browser_binding": "WorldState.altar (src/world/church.js skullAltarPivot)",
+      "anchor_id": "altar.hinge", "rotation_axis": "y", "rotation_per_open_rad": -1.45,
+      "damp_rate": 1.6, "collider_enabled_below_open": 0.4, "acoustic_leak_per_open": 0.025,
+      "connects": ["skull", "ossuary"], "initial": {"open": 0.0, "target": 0},
+      "evidence": [{"claim_id": "claim_001047", "status": "EXPLICIT"}, {"doc": "ROUTES.md: CHAPEL → CRYPT via ALTAR_OPENING + STAIRCASE", "status": "EXPLICIT"}]
+    },
+    {
+      "id": "church:cloister", "kind": "opening", "browser_binding": "door church:cloister (church.js south door to the cloister)",
+      "anchor_id": "door.church:cloister", "always_open": true, "connects": ["church", "cloister"]
+    },
+    {
+      "id": "fixture:door", "kind": "barred_door", "fixture": true, "anchor_id": "fixture.door",
+      "curfew_rule": "aedificium-barred", "shut_rate": 1.5, "connects": ["fixture", "exterior"],
+      "note": "Noncanonical test fixture exercising the browser's Aedificium curfew and safe-egress rule (main.js updateCurfew + worldState.js aedificiumExitPermit). It does not award `barred`."
+    }
+  ]
+}

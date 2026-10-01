@@ -1,0 +1,10 @@
+{
+  "renderMeshes": 11,
+  "originalTriangles": 324,
+  "positionsNormalsUvsColorsAndWindingPreserved": true,
+  "collisionUnchanged": true,
+  "offsetsPreserved": true,
+  "shadowPolicyPreserved": true,
+  "coloredMaterialsRetainNeutralPlainPieces": true,
+  "singleBuildingRetainsOneMaterialBatch": true
+}

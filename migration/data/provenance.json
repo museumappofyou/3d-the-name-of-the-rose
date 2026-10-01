@@ -1,0 +1,148 @@
+{
+ "schema_version": 1,
+ "id": "provenance",
+ "corpus": {
+  "path": "book_details/output",
+  "files": {
+   "abbey_hierarchy.json": "58afe7ff26572dc359f287f411761a4e97c5015a7da6d97cce97788c084e396f",
+   "access_graph.json": "ff0cddbc44b4f5bccb78061d46bf94bcba290bdd891bc92886656d5b84cc0b32",
+   "claims.jsonl": "f2ccb46a8418ce3bc6fd55ffc39349af2876105f28e9826c76dcc635b07cd89e",
+   "consolidation_summary.json": "744904b6be2a126c1b12e9e38e5ccd264c7495f31edd8573d5c6cba9f5bec469",
+   "facts.json": "8249626d15542d6c2de8619435916e352404252e5fa3ac54ac640409ffafd292",
+   "movement_graph.json": "61c860cc1411d8aeef58809952bfe975247107f3f7142036443edce68a95d772",
+   "reconstruction_constraints.json": "e8fc21619ad82b510f7cd74ddf14cbf203b6ddf1f1ed2b6cdb8d9c975ba2ca9a",
+   "spatial_graph.json": "e90476edfa30de19bd726b1c125de1dab425a73643dd80cc5b381bfb0dd9d6c2",
+   "visibility_graph.json": "b350663c4b8686cd319b57e3c311da7333365304607ec9bb1c057bdac5f1b5c6"
+  }
+ },
+ "note": "Curated subset for the phase-1 slice. Original claim ids, certainty and citations are preserved; EXPLICIT evidence and RECONSTRUCTION decisions stay distinct on the referencing records. Runtime packages omit evidence fragments.",
+ "claims": [
+  {
+   "claim_id": "claim_000173",
+   "certainty": "EXPLICIT",
+   "entity": "AEDIFICIUM",
+   "attribute": "lock_rule",
+   "value": "the Aedificium is locked after the evening meal",
+   "category": "access_security",
+   "chapter": "SABAH William, Başrahip’le öğretici bir konuşma yapıyor.",
+   "section": null,
+   "paragraph_start": 165,
+   "paragraph_end": 165,
+   "evidence_fragment": "Akşam yemeğinden sonra Aedificium kilitlenir",
+   "notes": null
+  },
+  {
+   "claim_id": "claim_000592",
+   "certainty": "EXPLICIT",
+   "entity": "CHURCH",
+   "attribute": "movement",
+   "value": "after the meal the monks go from the refectory to the choir, passing in a long row through the cemetery and entering the choir by the north gate",
+   "category": "movement",
+   "chapter": "GÜNBATIMI William’la Adso manastırın geri kalan bölümlerini ziyaret ediyorlar. William, Adelmo’nun ölümüne ilişkin bazı sonuçlar çıkarıyor; cama rahiple okuma camları ve gereğinden çok okumak isteyenlerin gördükleri hortlaklar üstünde konuşuluyor.",
+   "section": "AKŞAM William ile Adso Başrahibin içtenlikti konukseverliğinin ve Jorge’nin öfkeli konuşmasının tadını çıkarıyorlar.",
+   "paragraph_start": 554,
+   "paragraph_end": 554,
+   "evidence_fragment": "uzun bir sıra halinde gömütlüğü geçerek kuzey kapısından koro yerine girdiler.",
+   "notes": null
+  },
+  {
+   "claim_id": "claim_000632",
+   "certainty": "EXPLICIT",
+   "entity": "DORMITORY",
+   "attribute": "waking_round",
+   "value": "wakers move through the dormitory and the pilgrims' guesthouse ringing a bell",
+   "category": "movement",
+   "chapter": "İKİNCİ GÜN",
+   "section": null,
+   "paragraph_start": 573,
+   "paragraph_end": 573,
+   "evidence_fragment": "yatakhanede ve hacılar konukevinde çan çalarak dolaşanlarca uyandırıldık",
+   "notes": null
+  },
+  {
+   "claim_id": "claim_000740",
+   "certainty": "EXPLICIT",
+   "entity": "CHURCH",
+   "attribute": "exit",
+   "value": "servants and novices come out of the church after the service",
+   "category": "movement",
+   "chapter": "TANSÖKÜMÜ Upsala’lı Benno bazı gizler açıklıyor Arundel’li Berengar da. Adso ise gerçek tövbenin ne olduğunu öğreniyor.",
+   "section": null,
+   "paragraph_start": 677,
+   "paragraph_end": 677,
+   "evidence_fragment": "Ayinin ardından, hizmetçilerle çömezler kiliseden çıkıyorlardı",
+   "notes": null
+  },
+  {
+   "claim_id": "claim_000966",
+   "certainty": "EXPLICIT",
+   "entity": "LIBRARY",
+   "attribute": "existence_and_access",
+   "value": "there is a labyrinth and a way to enter it",
+   "category": "general_layout",
+   "chapter": "İKİNDİ Başrahip manastırının zengin teriyle övündüğünü, sapkınlardan çekindiğini gösteriyor; sonunda Adso dünyayı dolaşmakla kötü bir şey mi yaptığından kuşku duyuyor.",
+   "section": null,
+   "paragraph_start": 915,
+   "paragraph_end": 915,
+   "evidence_fragment": "yaşlı Alinardo, labirente ve oraya nasıl girileceğine dair çok ilginç şeyler anlatıyor",
+   "notes": "Stated in a section heading/summary; its identity (likely the library) is not stated in this chunk."
+  },
+  {
+   "claim_id": "claim_000989",
+   "certainty": "EXPLICIT",
+   "entity": "PORCH",
+   "attribute": "seating_area",
+   "value": "Alinardo sat on the outer part of the porch",
+   "category": "building_space",
+   "chapter": "İKİNDİ Başrahip manastırının zengin teriyle övündüğünü, sapkınlardan çekindiğini gösteriyor; sonunda Adso dünyayı dolaşmakla kötü bir şey mi yaptığından kuşku duyuyor.",
+   "section": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+   "paragraph_start": 920,
+   "paragraph_end": 920,
+   "evidence_fragment": "sundurmanın dış kısmında oturuyordu",
+   "notes": null
+  },
+  {
+   "claim_id": "claim_001026",
+   "certainty": "EXPLICIT",
+   "entity": "AEDIFICIUM",
+   "attribute": "entrance_hint",
+   "value": "Alinardo gave a hint about how to enter the Aedificium",
+   "category": "access_security",
+   "chapter": "GÜNBATIMINDAN SONRA Bu kısa bölümde yaşlı Alinardo, labirente ve oraya nasıl girileceğine dair çok ilginç şeyler anlatıyor.",
+   "section": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+   "paragraph_start": 958,
+   "paragraph_end": 958,
+   "evidence_fragment": "Aedificium'a nasıl girileceği konusunda bize ipucu verdiğine inanıyorum",
+   "notes": null
+  },
+  {
+   "claim_id": "claim_001047",
+   "certainty": "EXPLICIT",
+   "entity": "CHAPEL",
+   "attribute": "secret_mechanism",
+   "value": "pressing the eyes of the fourth skull from the right opens the altar",
+   "category": "access_security",
+   "chapter": "GÜNBATIMINDAN SONRA Bu kısa bölümde yaşlı Alinardo, labirente ve oraya nasıl girileceğine dair çok ilginç şeyler anlatıyor.",
+   "section": "AKŞAM William’la Adso Aedificium’a giriyorlar; gizemli bir ziyaretçiyle karşılaşıyorlar; üstünde büyüsel imler olan gizli bir mesaj buluyorlar; bulunur bulunmaz kaybolan bir de kitap; bu bölümü izleyen birçok bölümde aranacak, ama bulunamayacaktır; William’ın değerli merceklerinin çalınması, olayların sonuncusu değildir.",
+   "paragraph_start": 966,
+   "paragraph_end": 966,
+   "evidence_fragment": "sağdan dördüncü kafatası, gözlerine bas",
+   "notes": "Alinardo's instructions repeated by William"
+  }
+ ],
+ "documents": [
+  "ROUTES.md: CHAPEL → CRYPT via ALTAR_OPENING + STAIRCASE",
+  "editor's note (sunrise ≈ 7:30, sunset ≈ 16:40)"
+ ],
+ "assets": {
+  "people": "migration/data/manifests/people_derivatives.json",
+  "world": "migration/data/manifests/world_derivatives.json",
+  "audio": "migration/data/sounds.json (credits per stream/bank)",
+  "credits": [
+   "assets/credits.json",
+   "docs/assets/MODEL_SOURCES.md",
+   "docs/assets/AUDIO_SOURCES.md",
+   "docs/provenance/people.md"
+  ]
+ }
+}

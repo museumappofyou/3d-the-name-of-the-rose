@@ -1,0 +1,656 @@
+{
+ "args": {
+  "label": "mac_package",
+  "out": "/Users/memre/Desktop/gulun_adı/docs/migration/phase-1/evidence/functional",
+  "save-dir": "user://functional_mac",
+  "scenario": "functional-reload"
+ },
+ "audio_restarts": 0,
+ "audio_telemetry_tail": [
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0894653433423008,
+   "lp": 1432.25918912915,
+   "office": "",
+   "playing": false,
+   "pos": [
+    28.0655612945557,
+    1.79999995231628,
+    2.51785254478455
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "cloister",
+   "t": 0.133333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249993516787155,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 0.3
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249994620746929,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 0.416666666666667
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249995654172468,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 0.55
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249996394178834,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 0.666666666666667
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249997086904688,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 0.800000000000001
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.024999764654876,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 0.933333333333335
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249998098677817,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 1.06666666666667
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249938736530146,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 1.18333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249998725505626,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 1.31666666666667
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249998942526192,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 1.43333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999145680873,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 1.56666666666667
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999291154109,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 1.68333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999427332763,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 1.81666666666667
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999524846389,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 1.93333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999616129672,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 2.06666666666666
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.024999968149501,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 2.18333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999742684024,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 2.31666666666666
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.024999978649972,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 2.43333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999827515943,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 2.56666666666666
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999856886483,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 2.68333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999884380479,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 2.81666666666666
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999904068141,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 2.93333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999922497917,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 3.06666666666666
+  }
+ ],
+ "duration_s": 3.15375866666666,
+ "events": [],
+ "fixture_log_tail": [
+  {
+   "actor": [
+    201.5,
+    196.0
+   ],
+   "actor_inside": false,
+   "bar_solid": false,
+   "curfew": false,
+   "exit_permit": false,
+   "hours": 15.0,
+   "nav_link": true,
+   "player_inside": false,
+   "t": 0.5,
+   "transmission": 1.0
+  },
+  {
+   "actor": [
+    201.5,
+    196.0
+   ],
+   "actor_inside": false,
+   "bar_solid": false,
+   "curfew": false,
+   "exit_permit": false,
+   "hours": 15.0,
+   "nav_link": true,
+   "player_inside": false,
+   "t": 1.0,
+   "transmission": 1.0
+  },
+  {
+   "actor": [
+    201.5,
+    196.0
+   ],
+   "actor_inside": false,
+   "bar_solid": false,
+   "curfew": false,
+   "exit_permit": false,
+   "hours": 15.0,
+   "nav_link": true,
+   "player_inside": false,
+   "t": 1.5,
+   "transmission": 1.0
+  },
+  {
+   "actor": [
+    201.5,
+    196.0
+   ],
+   "actor_inside": false,
+   "bar_solid": false,
+   "curfew": false,
+   "exit_permit": false,
+   "hours": 15.0,
+   "nav_link": true,
+   "player_inside": false,
+   "t": 2.0,
+   "transmission": 1.0
+  },
+  {
+   "actor": [
+    201.5,
+    196.0
+   ],
+   "actor_inside": false,
+   "bar_solid": false,
+   "curfew": false,
+   "exit_permit": false,
+   "hours": 15.0,
+   "nav_link": true,
+   "player_inside": false,
+   "t": 2.5,
+   "transmission": 1.0
+  },
+  {
+   "actor": [
+    201.5,
+    196.0
+   ],
+   "actor_inside": false,
+   "bar_solid": false,
+   "curfew": false,
+   "exit_permit": false,
+   "hours": 15.0,
+   "nav_link": true,
+   "player_inside": false,
+   "t": 2.99999999999999,
+   "transmission": 1.0
+  }
+ ],
+ "label": "mac_package",
+ "pass": true,
+ "route_loops": 0,
+ "scenario": "functional-reload",
+ "startup_ms": {
+  "first_frame_ms": 844,
+  "scene_ready_ms": 806
+ },
+ "steps": [
+  {
+   "detail": [],
+   "pass": true,
+   "step": "relaunch: save loaded",
+   "t": 0.13
+  },
+  {
+   "detail": [
+    "alinardo-hint",
+    "altar-feature",
+    "altar-passage"
+   ],
+   "pass": true,
+   "step": "knowledge survives exactly (no duplicates)",
+   "t": 0.13
+  },
+  {
+   "detail": {
+    "church:altar": {
+     "open": 0.999966141935114,
+     "target": 1
+    }
+   },
+   "pass": true,
+   "step": "altar state survives",
+   "t": 0.13
+  },
+  {
+   "detail": 15.0,
+   "pass": true,
+   "step": "time survives",
+   "t": 0.13
+  },
+  {
+   "detail": [
+    15.3720111846924,
+    -2.79000020027161,
+    -20.0689888000488
+   ],
+   "pass": true,
+   "step": "player location survives",
+   "t": 0.13
+  },
+  {
+   "detail": {
+    "church:altar": {
+     "open": 0.999993164174593,
+     "target": 1
+    }
+   },
+   "pass": true,
+   "step": "close/reopen coherent after load",
+   "t": 1.13
+  },
+  {
+   "detail": [
+    "alinardo-hint"
+   ],
+   "pass": true,
+   "step": "debug jump below the altar grants nothing",
+   "t": 3.15
+  },
+  {
+   "detail": [
+    "main: invalid (truncated)",
+    "backup: absent"
+   ],
+   "pass": true,
+   "step": "truncated save recovered safely and reported",
+   "t": 3.15
+  }
+ ],
+ "system": {
+  "adapter": "Apple M1 Pro (Apple7)",
+  "adapter_type": 1,
+  "api": "4.0",
+  "cpu": "Apple M1 Pro",
+  "cpu_count": 10,
+  "driver": "metal",
+  "engine": "4.7.2-stable (official)",
+  "executable": "/Users/memre/Desktop/gulun_adı/migration/builds/macos/AbbeySlice.app/Contents/MacOS/Abbey Slice",
+  "gi": "none",
+  "memory_info": {
+   "available": 7882227712,
+   "free": 6588874752,
+   "physical": 34359738368,
+   "stack": 8372224
+  },
+  "msaa_3d": 1,
+  "os": "macOS",
+  "os_version": "26.5.2",
+  "physics": "Jolt Physics",
+  "renderer": "forward_plus",
+  "scaling_3d_scale": 1.0,
+  "screen": 0,
+  "screen_count": 2,
+  "screen_scale": 2.0,
+  "screens": [
+   {
+    "refresh_hz": 120.0,
+    "scale": 2.0,
+    "size": [
+     3456,
+     2234
+    ]
+   },
+   {
+    "refresh_hz": 75.0,
+    "scale": 1.0,
+    "size": [
+     3840,
+     2160
+    ]
+   }
+  ],
+  "shadow_atlas": 4096,
+  "ssao": true,
+  "user_dir": "/Users/memre/Library/Application Support/AbbeySlice",
+  "vendor": "Apple",
+  "viewport_texture_px": [
+   1920,
+   1080
+  ],
+  "vsync": 1,
+  "window_position": [
+   4608,
+   610
+  ],
+  "window_px": [
+   1920,
+   1080
+  ]
+ },
+ "warmup_s": 5.0
+}

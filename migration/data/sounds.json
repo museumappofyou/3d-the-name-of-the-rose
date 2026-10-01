@@ -1,0 +1,279 @@
+{
+  "schema_version": 1,
+  "id": "sounds",
+  "source": {
+    "manifest": "assets/audio/manifest.json",
+    "credits": "docs/assets/AUDIO_SOURCES.md, assets/credits.json",
+    "office": "src/systems/audio/chant.js",
+    "paths": "src/systems/audio/churchPaths.js",
+    "steps": "src/systems/audio/steps.js"
+  },
+  "streams": {
+    "chant:deus": {
+      "source": "assets/audio/chant_deus.mp3",
+      "native": "res://assets/audio/chant_deus.mp3",
+      "clip": [
+        0.2,
+        55.99451
+      ],
+      "lvl": 1.0,
+      "stream": true,
+      "credit": {
+        "title": "Deus in adjutorium meum intende (Vespers)",
+        "author": "Schola Gregoriana, Pallottine Seminary, Ołtarzew (cond. Dariusz Smolarek)",
+        "licence": "CC BY-SA 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Schola_Gregoriana-Deus_in_adjutorium_meum_intende.ogg",
+        "note": "trimmed and levelled derivative shared under the same licence"
+      }
+    },
+    "wind": {
+      "source": "assets/audio/wind.mp3",
+      "native": "res://assets/audio/wind.mp3",
+      "clip": [
+        0.2,
+        58.99032
+      ],
+      "loop": true,
+      "lvl": 1.0,
+      "credit": {
+        "title": "winter wind 01a.aiff",
+        "author": "klangfabrik",
+        "licence": "CC0 1.0",
+        "url": "https://freesound.org/s/117504/"
+      }
+    }
+  },
+  "office": {
+    "chant_for": {
+      "matins": [
+        "chant:deus"
+      ],
+      "lauds": [
+        "chant:deus"
+      ],
+      "prime": [
+        "chant:deus"
+      ],
+      "terce": [
+        "chant:deus"
+      ],
+      "sext": [
+        "chant:deus"
+      ],
+      "nones": [
+        "chant:deus"
+      ],
+      "vespers": [
+        "chant:deus"
+      ],
+      "compline": [
+        "chant:deus"
+      ]
+    },
+    "browser_chant_for": {
+      "matins": [
+        "chant:deus",
+        "chant:psalm"
+      ],
+      "lauds": [
+        "chant:deus",
+        "chant:psalm"
+      ],
+      "prime": [
+        "chant:deus"
+      ],
+      "terce": [
+        "chant:deus"
+      ],
+      "sext": [
+        "chant:deus"
+      ],
+      "nones": [
+        "chant:deus"
+      ],
+      "vespers": [
+        "chant:deus",
+        "chant:psalm",
+        "chant:magnificat"
+      ],
+      "compline": [
+        "chant:deus",
+        "chant:psalm"
+      ]
+    },
+    "phase1_subset_note": "Phase 1 streams one existing office recording (chant:deus, the piece sung at every hour). Psalm and Magnificat follow in later phases; Prime uses exactly the browser list.",
+    "start_delay_s": [
+      2.0,
+      4.0
+    ],
+    "rest_between_s": [
+      3.5,
+      8.0
+    ],
+    "rest_after_cycle_s": [
+      45.0,
+      95.0
+    ],
+    "fade_in_s": 0.6,
+    "fade_out_s": 1.4,
+    "swell_tc_s": 1.2,
+    "die_away_tc_s": 2.2,
+    "source_emitter": {
+      "pos": [
+        35.44,
+        2.4,
+        -5.46
+      ],
+      "radius": 70,
+      "ref": 4,
+      "zones": [
+        "choir",
+        "church"
+      ]
+    }
+  },
+  "church_path": {
+    "portals": [
+      "church:westN",
+      "church:westS",
+      "church:north",
+      "church:cloister"
+    ],
+    "altar_leak": {
+      "source": [
+        15.372,
+        0.35,
+        -15.44
+      ],
+      "per_open": 0.025,
+      "fade_m": [
+        5,
+        14
+      ],
+      "below_listener_y": 0.65,
+      "lowpass_hz": 650,
+      "derivation": "churchPaths.js: sx = x0 + 6.5·(xCross − x0)/10, sz = zN − 2"
+    },
+    "note": "port of churchPaths.js; doors outside the slice keep their browser openness (westN/westS/north stand open by day as in the browser), only church:cloister is walkable"
+  },
+  "steps": {
+    "stride_m": {
+      "walk": 0.82,
+      "run": 1.25
+    },
+    "surface_alias": {
+      "snow": "snowPacked",
+      "earth": "dirt",
+      "soil": "dirt",
+      "grass": "dirt",
+      "church": "churchStone",
+      "board": "wood",
+      "boards": "wood",
+      "stairs": "wood",
+      "hay": "straw"
+    },
+    "play": {
+      "stone": [
+        14000,
+        0.95
+      ],
+      "stoneWet": [
+        12000,
+        0.85
+      ],
+      "churchStone": [
+        11000,
+        0.62
+      ],
+      "wood": [
+        12000,
+        0.95
+      ],
+      "snowPacked": [
+        13000,
+        0.62
+      ],
+      "snowFresh": [
+        9000,
+        0.55
+      ]
+    },
+    "stoneOut_rule": "clear weather: sin(1.3x)·sin(1.7z) > 0.3 → snowPacked else stoneWet (main.js surfaceUnder)",
+    "terrain_rule": "trodden mask > 0.35 → snowPacked else snowFresh (subset of terrain.js groundAt; plot/straw/ice masks are outside the slice)",
+    "banks": {
+      "step:stone": {
+        "source": "assets/audio/step_stone.mp3",
+        "credit": {
+          "title": "Footsteps Stone sequence.wav",
+          "author": "Wdomino",
+          "licence": "CC0 1.0",
+          "url": "https://freesound.org/s/517141/"
+        }
+      },
+      "step:churchStone": {
+        "source": "assets/audio/step_churchStone.mp3",
+        "credit": {
+          "title": "Slow Footsteps With Natural Reverb.wav",
+          "author": "TrygveN",
+          "licence": "CC0 1.0",
+          "url": "https://freesound.org/s/235438/"
+        }
+      },
+      "step:stoneWet": {
+        "source": "assets/audio/step_stoneWet.mp3",
+        "credit": {
+          "title": "wet_footsteps_outside_06.flac",
+          "author": "wwstudioswastaken",
+          "licence": "CC0 1.0",
+          "url": "https://freesound.org/s/624168/"
+        }
+      },
+      "step:snowPacked": {
+        "source": "assets/audio/step_snowPacked.mp3",
+        "credit": {
+          "title": "Footsteps_Snow_07.wav",
+          "author": "MarcMatthewsMusic",
+          "licence": "CC0 1.0",
+          "url": "https://freesound.org/s/420551/"
+        }
+      },
+      "step:snowFresh": {
+        "source": "assets/audio/step_snowFresh.mp3",
+        "credit": {
+          "title": "Footsteps in Snow",
+          "author": "papimre",
+          "licence": "CC0 1.0",
+          "url": "https://freesound.org/s/842972/"
+        }
+      },
+      "step:wood": {
+        "source": "assets/audio/step_wood.mp3",
+        "credit": {
+          "title": "Footsteps_Wood.wav",
+          "author": "Galbenshire",
+          "licence": "CC0 1.0",
+          "url": "https://freesound.org/s/464519/"
+        }
+      }
+    }
+  },
+  "one_shots": {
+    "creak": {
+      "source": "assets/audio/doorCreak.mp3",
+      "clip": [
+        0.2,
+        4.05
+      ],
+      "credit": {
+        "title": "Big door creak.wav",
+        "author": "jemburyturner",
+        "licence": "CC0 1.0",
+        "url": "https://freesound.org/s/273466/"
+      }
+    }
+  },
+  "excluded": [
+    "assets/audio/music/* (supplied review music: no gameplay/distribution assignment)",
+    "music/ (private supplied originals)"
+  ]
+}

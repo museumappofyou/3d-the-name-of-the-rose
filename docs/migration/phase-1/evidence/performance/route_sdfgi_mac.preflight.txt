@@ -1,0 +1,1 @@
+== route_sdfgi (1920x1080) --scenario=route --vsync=off --duration=120 --gi=sdfgi  [GPU utilization before launch: 0% after 1s settle]

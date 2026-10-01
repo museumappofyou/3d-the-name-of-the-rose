@@ -1,0 +1,92 @@
+{
+ "checks": [
+  {
+   "error_m": 1.23262405393731e-06,
+   "expect_y": 0.77,
+   "godot_y": 0.770001232624054,
+   "id": "bench-contact",
+   "pass": true,
+   "surface": "stone"
+  },
+  {
+   "error_m": 6.43730163563117e-07,
+   "expect_y": 0.3,
+   "godot_y": 0.299999356269836,
+   "id": "cloister-walk-floor",
+   "pass": true,
+   "surface": "stone"
+  },
+  {
+   "error_m": 9.29832458473889e-07,
+   "expect_y": 0.35,
+   "godot_y": 0.349999070167542,
+   "id": "skull-chapel-floor",
+   "pass": true,
+   "surface": "churchStone"
+  },
+  {
+   "error_m": 4.29153442560448e-07,
+   "expect_y": -2.8,
+   "godot_y": -2.80000042915344,
+   "id": "landing-floor",
+   "pass": true,
+   "surface": "stone"
+  },
+  {
+   "error_m": 9.29832458473889e-07,
+   "expect_y": 0.35,
+   "godot_y": 0.349999070167542,
+   "id": "church-door-floor",
+   "pass": true,
+   "surface": "churchStone"
+  },
+  {
+   "expect": 0.31,
+   "id": "seat-root",
+   "pass": true,
+   "value": 0.31
+  },
+  {
+   "expect": [
+    14.652,
+    0.35,
+    -13.99
+   ],
+   "id": "altar-hinge",
+   "pass": true,
+   "value": [
+    14.6520004272461,
+    0.349999994039536,
+    -13.9899997711182
+   ]
+  },
+  {
+   "expect": "east corner south of the hinge, x < hinge.x + 0.2",
+   "id": "altar-pivot-direction",
+   "pass": true,
+   "value": [
+    14.8255243301392,
+    -12.5604934692383
+   ]
+  },
+  {
+   "id": "character-forward",
+   "pass": true,
+   "toe_ahead_of_ankle_z_m": [
+    0.126582249999046,
+    0.126582249999046
+   ]
+  },
+  {
+   "cast_head_m": 1.4998,
+   "cast_height_m": 1.6465,
+   "cast_pelvis_m": 0.8924,
+   "head_m": 1.49984657764435,
+   "id": "character-metric-scale",
+   "pass": true,
+   "pelvis_m": 0.892368733882904
+  }
+ ],
+ "pass": true,
+ "tolerance_m": 0.01
+}

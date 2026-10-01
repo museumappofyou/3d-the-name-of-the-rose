@@ -1,0 +1,43 @@
+test_coverage_and_overlap (test_pipeline.ChunkTests) ... ok
+test_no_split_inside_paragraph (test_pipeline.ChunkTests) ... ok
+test_paratext_detection (test_pipeline.ChunkTests) ... ok
+test_alias_normalization (test_pipeline.ConsolidationTests) ... [aliases] 1 alias mappings, 0 uncertain merges (kept separate)
+ok
+test_dedupe_merges_identical_and_keeps_sources (test_pipeline.ConsolidationTests) ... [dedupe] 2 claims -> 1 unique facts
+ok
+test_graph_edges (test_pipeline.ConsolidationTests) ... [graphs] spatial=1 movement=1 visibility=0 access=0
+ok
+test_uncertain_merges_are_not_applied (test_pipeline.ConsolidationTests) ... [aliases] 0 alias mappings, 1 uncertain merges (kept separate)
+ok
+test_failed_chunk_recovery (test_pipeline.ExtractorTests) ... ok
+test_processed_plus_failed_equals_total (test_pipeline.ExtractorTests) ... ok
+test_processing_and_cache_roundtrip (test_pipeline.ExtractorTests) ... ok
+test_salvage_truncated_claim_output (test_pipeline.ExtractorTests) ... ok
+test_epub_ingest_on_real_book (test_pipeline.IngestTests) ... ok
+test_txt_ingest (test_pipeline.IngestTests) ... ok
+test_reports_preserve_research_data_and_use_documentation_directory (test_pipeline.ReportTests) ... [report] wrote /private/var/folders/z9/q7pl4fln5vs9sdtl_9cbprrc0000gn/T/tmpfgf_i_0h/reports/ABBEY_OVERVIEW.md
+[report] wrote /private/var/folders/z9/q7pl4fln5vs9sdtl_9cbprrc0000gn/T/tmpfgf_i_0h/reports/SPACES.md
+[report] wrote /private/var/folders/z9/q7pl4fln5vs9sdtl_9cbprrc0000gn/T/tmpfgf_i_0h/reports/AEDIFICIUM.md
+[report] wrote /private/var/folders/z9/q7pl4fln5vs9sdtl_9cbprrc0000gn/T/tmpfgf_i_0h/reports/LIBRARY.md
+[report] wrote /private/var/folders/z9/q7pl4fln5vs9sdtl_9cbprrc0000gn/T/tmpfgf_i_0h/reports/SCRIPTORIUM.md
+[report] wrote /private/var/folders/z9/q7pl4fln5vs9sdtl_9cbprrc0000gn/T/tmpfgf_i_0h/reports/CHURCH.md
+[report] wrote /private/var/folders/z9/q7pl4fln5vs9sdtl_9cbprrc0000gn/T/tmpfgf_i_0h/reports/OTHER_BUILDINGS.md
+[report] wrote /private/var/folders/z9/q7pl4fln5vs9sdtl_9cbprrc0000gn/T/tmpfgf_i_0h/reports/ROUTES.md
+[report] wrote /private/var/folders/z9/q7pl4fln5vs9sdtl_9cbprrc0000gn/T/tmpfgf_i_0h/reports/UNCERTAINTIES.md
+[report] wrote /private/var/folders/z9/q7pl4fln5vs9sdtl_9cbprrc0000gn/T/tmpfgf_i_0h/reports/RECONSTRUCTION_NOTES.md
+[report] wrote /private/var/folders/z9/q7pl4fln5vs9sdtl_9cbprrc0000gn/T/tmpfgf_i_0h/reports/COVERAGE_REPORT.md
+ok
+test_invalid_relation_and_category_handled (test_pipeline.SchemaTests) ... ok
+test_missing_entity_rejected_not_dropped_from_record (test_pipeline.SchemaTests) ... ok
+test_parse_and_salvage_truncated_output (test_pipeline.SchemaTests) ... ok
+test_valid_claim (test_pipeline.SchemaTests) ... ok
+test_estimate_tokens_monotonic (test_pipeline.UtilTests) ... ok
+test_norm_key_turkish (test_pipeline.UtilTests) ... ok
+test_verification_excludes_paratext_by_default (test_pipeline.VerificationTests) ... [verify] novel 0/4 paragraphs covered (+3 paratext excluded); 4 candidate misses; 0 zero-claim chunks
+[verify] novel 0/4 paragraphs covered (+3 paratext excluded); 7 candidate misses; 0 zero-claim chunks
+ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.175s
+
+OK

@@ -1,0 +1,1 @@
+== route_vsync (1920x1080) --scenario=route --duration=120  [GPU utilization before launch: 0% after 1s settle]

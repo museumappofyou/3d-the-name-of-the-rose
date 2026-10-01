@@ -1,0 +1,45 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "type": "object",
+ "required": [
+  "schema_version",
+  "id",
+  "claims",
+  "corpus"
+ ],
+ "properties": {
+  "schema_version": {
+   "type": "integer",
+   "minimum": 1,
+   "maximum": 1
+  },
+  "id": {
+   "type": "string"
+  },
+  "claims": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "claim_id",
+     "certainty"
+    ],
+    "properties": {
+     "claim_id": {
+      "type": "string",
+      "pattern": "^claim_[0-9]{6}$"
+     },
+     "certainty": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "corpus": {
+   "type": "object",
+   "required": [
+    "files"
+   ]
+  }
+ }
+}

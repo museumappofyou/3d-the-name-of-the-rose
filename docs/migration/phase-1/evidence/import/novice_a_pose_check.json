@@ -1,0 +1,113 @@
+
+{
+  "checked_bone_samples": 297,
+  "clips": {
+    "dine": {
+      "godot_length": 9.04166698455811,
+      "max_err_m": 0.00000770718907006085,
+      "ref_duration": 9.0416669845581
+    },
+    "kneelBow": {
+      "godot_length": 9.625,
+      "max_err_m": 0.00000754021220927825,
+      "ref_duration": 9.625
+    },
+    "kneelPray": {
+      "godot_length": 9.625,
+      "max_err_m": 0.00000692558296577772,
+      "ref_duration": 9.625
+    },
+    "read": {
+      "godot_length": 12.0416669845581,
+      "max_err_m": 0.00000727908400222077,
+      "ref_duration": 12.0416669845581
+    },
+    "sitBench": {
+      "godot_length": 8.83333301544189,
+      "max_err_m": 0.00000778448429628043,
+      "ref_duration": 8.83333301544189
+    },
+    "standBow": {
+      "godot_length": 10.4583330154419,
+      "max_err_m": 0.0000072071802605933,
+      "ref_duration": 10.4583330154419
+    },
+    "standSleeves": {
+      "godot_length": 10.4583330154419,
+      "max_err_m": 0.00000748412958273548,
+      "ref_duration": 10.4583330154419
+    },
+    "tend": {
+      "godot_length": 10.0416669845581,
+      "max_err_m": 0.00000723963739801547,
+      "ref_duration": 10.0416669845581
+    },
+    "write": {
+      "godot_length": 15.625,
+      "max_err_m": 0.0000077219401646289,
+      "ref_duration": 15.625
+    }
+  },
+  "max_error_m": 0.00000778448429628043,
+  "normals": {
+    "boots": {
+      "face_agreement": 0.998491704374057,
+      "pass": true,
+      "plus_z_share": 0.0,
+      "vertices": 663
+    },
+    "brows": {
+      "face_agreement": 1.0,
+      "pass": true,
+      "plus_z_share": 0.0,
+      "vertices": 124
+    },
+    "eyes": {
+      "face_agreement": 1.0,
+      "pass": true,
+      "plus_z_share": 0.0,
+      "vertices": 96
+    },
+    "habit": {
+      "face_agreement": 0.919613075383589,
+      "pass": true,
+      "plus_z_share": 0.0,
+      "vertices": 2998
+    },
+    "hair": {
+      "face_agreement": 1.0,
+      "pass": true,
+      "plus_z_share": 0.0,
+      "vertices": 822
+    },
+    "hood_down": {
+      "face_agreement": 1.0,
+      "pass": true,
+      "plus_z_share": 0.0,
+      "vertices": 879
+    },
+    "hood_up": {
+      "face_agreement": 1.0,
+      "pass": true,
+      "plus_z_share": 0.0,
+      "vertices": 973
+    },
+    "lashes": {
+      "face_agreement": 1.0,
+      "pass": true,
+      "plus_z_share": 0.0,
+      "vertices": 250
+    },
+    "skin": {
+      "face_agreement": 1.0,
+      "pass": true,
+      "plus_z_share": 0.0,
+      "vertices": 2798
+    }
+  },
+  "normals_pass": true,
+  "pass": true,
+  "person": "novice_a",
+  "tolerance_m": 0.001,
+  "worst": "sitBench t=0.041667 ball_l godot=(0.135515, 0.088466, 0.442805) ref=[0.13552, 0.08847, 0.4428]"
+}

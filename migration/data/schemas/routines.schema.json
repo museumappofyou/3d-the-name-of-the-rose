@@ -1,0 +1,94 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "type": "object",
+ "required": [
+  "schema_version",
+  "id",
+  "routines"
+ ],
+ "properties": {
+  "schema_version": {
+   "type": "integer",
+   "minimum": 1,
+   "maximum": 1
+  },
+  "id": {
+   "type": "string"
+  },
+  "routines": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "entity_id",
+     "available_when",
+     "slot"
+    ],
+    "properties": {
+     "entity_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+     },
+     "available_when": {
+      "type": "object"
+     },
+     "slot": {
+      "type": "object",
+      "required": [
+       "anchor_id",
+       "pose"
+      ],
+      "properties": {
+       "anchor_id": {
+        "type": "string"
+       },
+       "pose": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+       },
+       "seat": {
+        "type": "boolean"
+       },
+       "seat_height_m": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+       }
+      }
+     },
+     "evidence": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "claim_id": {
+         "type": "string",
+         "pattern": "^claim_[0-9]{6}$"
+        },
+        "doc": {
+         "type": "string"
+        },
+        "status": {
+         "enum": [
+          "EXPLICIT",
+          "RECONSTRUCTION",
+          "INFERRED"
+         ]
+        },
+        "use": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "status"
+       ]
+      }
+     },
+     "reconstruction": {
+      "type": "string"
+     }
+    }
+   }
+  }
+ }
+}

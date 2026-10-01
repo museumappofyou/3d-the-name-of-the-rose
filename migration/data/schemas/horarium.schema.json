@@ -1,0 +1,171 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "type": "object",
+ "required": [
+  "schema_version",
+  "id",
+  "offices",
+  "phases",
+  "curfew_rules"
+ ],
+ "properties": {
+  "schema_version": {
+   "type": "integer",
+   "minimum": 1,
+   "maximum": 1
+  },
+  "id": {
+   "type": "string"
+  },
+  "offices": {
+   "type": "array",
+   "minItems": 8,
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "t0",
+     "t1",
+     "full"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+     },
+     "t0": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 24
+     },
+     "t1": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 24
+     },
+     "full": {
+      "type": "boolean"
+     },
+     "latin": {
+      "type": "string"
+     },
+     "en": {
+      "type": "string"
+     },
+     "tr": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "phases": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "t0",
+     "t1"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+     },
+     "t0": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 24
+     },
+     "t1": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 24
+     },
+     "office": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+     }
+    },
+    "additionalProperties": false
+   }
+  },
+  "curfew_rules": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "object",
+    "required": [
+     "barred_from_phase_end",
+     "barred_until_hour"
+    ],
+    "properties": {
+     "barred_from_phase_end": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+     },
+     "barred_until_hour": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 24
+     },
+     "evidence": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "claim_id": {
+         "type": "string",
+         "pattern": "^claim_[0-9]{6}$"
+        },
+        "doc": {
+         "type": "string"
+        },
+        "status": {
+         "enum": [
+          "EXPLICIT",
+          "RECONSTRUCTION",
+          "INFERRED"
+         ]
+        },
+        "use": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "status"
+       ]
+      }
+     }
+    }
+   }
+  },
+  "evidence": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "claim_id": {
+      "type": "string",
+      "pattern": "^claim_[0-9]{6}$"
+     },
+     "doc": {
+      "type": "string"
+     },
+     "status": {
+      "enum": [
+       "EXPLICIT",
+       "RECONSTRUCTION",
+       "INFERRED"
+      ]
+     },
+     "use": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "status"
+    ]
+   }
+  }
+ }
+}

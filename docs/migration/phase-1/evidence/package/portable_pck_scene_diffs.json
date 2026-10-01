@@ -1,0 +1,190 @@
+{
+ "pipeline_pck": "migration/builds/windows/AbbeySlice.pck",
+ "portable_pck_sha256": "33761de7bcc8d46d81fcc6f16fd11af543eb763fe28d0f930c26908f37481999",
+ "files": 561,
+ "byte_identical": 541,
+ "differing": 20,
+ "all_differences_are_node_ids": true,
+ "scenes": {
+  ".godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn": {
+   "decompressed_bytes": 710,
+   "same_size": true,
+   "diff_bytes": 4,
+   "node_ids": [
+    1
+   ],
+   "all_diffs_inside_node_ids": true
+  },
+  ".godot/imported/alinardo.glb-44479520169c0e5e0b950b3afbdc0d07.scn": {
+   "decompressed_bytes": 3584788,
+   "same_size": true,
+   "diff_bytes": 51,
+   "node_ids": [
+    13
+   ],
+   "all_diffs_inside_node_ids": true
+  },
+  ".godot/imported/altar_pivot.glb-c60ee415ba2065aec0f337cb01598232.scn": {
+   "decompressed_bytes": 251825,
+   "same_size": true,
+   "diff_bytes": 23,
+   "node_ids": [
+    6
+   ],
+   "all_diffs_inside_node_ids": true
+  },
+  ".godot/imported/church_exterior.glb-123164f7b59a663a13223efa9815a00e.scn": {
+   "decompressed_bytes": 540636,
+   "same_size": true,
+   "diff_bytes": 56,
+   "node_ids": [
+    14
+   ],
+   "all_diffs_inside_node_ids": true
+  },
+  ".godot/imported/church_exterior.glb-ded74e554f8cdfc4662f8cbf62c6f460.scn": {
+   "decompressed_bytes": 296593,
+   "same_size": true,
+   "diff_bytes": 31,
+   "node_ids": [
+    8
+   ],
+   "all_diffs_inside_node_ids": true
+  },
+  ".godot/imported/church_interior.glb-3dde870a2c3ff432e37ed83dab19c1f4.scn": {
+   "decompressed_bytes": 546007,
+   "same_size": true,
+   "diff_bytes": 32,
+   "node_ids": [
+    8
+   ],
+   "all_diffs_inside_node_ids": true
+  },
+  ".godot/imported/church_interior.glb-9bfaa607b60184c78e093aacb333a42d.scn": {
+   "decompressed_bytes": 4443266,
+   "same_size": true,
+   "diff_bytes": 71,
+   "node_ids": [
+    18
+   ],
+   "all_diffs_inside_node_ids": true
+  },
+  ".godot/imported/cloister.glb-43fef7af63e0935b6da5be05f0ee29ec.scn": {
+   "decompressed_bytes": 1260720,
+   "same_size": true,
+   "diff_bytes": 60,
+   "node_ids": [
+    15
+   ],
+   "all_diffs_inside_node_ids": true
+  },
+  ".godot/imported/cloister.glb-c71e2eacabd5ab0d2d9bff429d776457.scn": {
+   "decompressed_bytes": 1175555,
+   "same_size": true,
+   "diff_bytes": 32,
+   "node_ids": [
+    8
+   ],
+   "all_diffs_inside_node_ids": true
+  },
+  ".godot/imported/cloister_context.glb-2a6c83cf9a56b12050df720b7dfeedf1.scn": {
+   "decompressed_bytes": 403172,
+   "same_size": true,
+   "diff_bytes": 48,
+   "node_ids": [
+    12
+   ],
+   "all_diffs_inside_node_ids": true
+  },
+  ".godot/imported/cloister_context.glb-d3c20fc65e67de164277a34430190754.scn": {
+   "decompressed_bytes": 194787,
+   "same_size": true,
+   "diff_bytes": 32,
+   "node_ids": [
+    8
+   ],
+   "all_diffs_inside_node_ids": true
+  },
+  ".godot/imported/garth_trees.glb-9cc6bc1811f2e128172d4c8b76212c80.scn": {
+   "decompressed_bytes": 298674,
+   "same_size": true,
+   "diff_bytes": 20,
+   "node_ids": [
+    5
+   ],
+   "all_diffs_inside_node_ids": true
+  },
+  ".godot/imported/monk_a.glb-2edccda0440875a8e1b0feb912db59f5.scn": {
+   "decompressed_bytes": 3555794,
+   "same_size": true,
+   "diff_bytes": 52,
+   "node_ids": [
+    13
+   ],
+   "all_diffs_inside_node_ids": true
+  },
+  ".godot/imported/monk_b.glb-4243b8864e0151e35561060bc1136735.scn": {
+   "decompressed_bytes": 3555741,
+   "same_size": true,
+   "diff_bytes": 52,
+   "node_ids": [
+    13
+   ],
+   "all_diffs_inside_node_ids": true
+  },
+  ".godot/imported/novice_a.glb-0f1429a7f296ef900d90779fe746437d.scn": {
+   "decompressed_bytes": 3556481,
+   "same_size": true,
+   "diff_bytes": 52,
+   "node_ids": [
+    13
+   ],
+   "all_diffs_inside_node_ids": true
+  },
+  ".godot/imported/ossuary_stair.glb-4c493608e52715b7a2893087617d656f.scn": {
+   "decompressed_bytes": 14612,
+   "same_size": true,
+   "diff_bytes": 24,
+   "node_ids": [
+    6
+   ],
+   "all_diffs_inside_node_ids": true
+  },
+  ".godot/imported/ossuary_stair.glb-908c794a0c19a584b59092f0f597fc78.scn": {
+   "decompressed_bytes": 1614784,
+   "same_size": true,
+   "diff_bytes": 28,
+   "node_ids": [
+    7
+   ],
+   "all_diffs_inside_node_ids": true
+  },
+  ".godot/imported/scribe_a.glb-96d8b9d625461f67054555c07de685f9.scn": {
+   "decompressed_bytes": 3556489,
+   "same_size": true,
+   "diff_bytes": 52,
+   "node_ids": [
+    13
+   ],
+   "all_diffs_inside_node_ids": true
+  },
+  ".godot/imported/skull_chapel.glb-cb6d86c37e4dfdd8747b39fe5f361bc0.scn": {
+   "decompressed_bytes": 64310,
+   "same_size": true,
+   "diff_bytes": 24,
+   "node_ids": [
+    6
+   ],
+   "all_diffs_inside_node_ids": true
+  },
+  ".godot/imported/skull_chapel.glb-dbcac2bc0790a5161449feddee9251a1.scn": {
+   "decompressed_bytes": 14145,
+   "same_size": true,
+   "diff_bytes": 32,
+   "node_ids": [
+    8
+   ],
+   "all_diffs_inside_node_ids": true
+  }
+ }
+}

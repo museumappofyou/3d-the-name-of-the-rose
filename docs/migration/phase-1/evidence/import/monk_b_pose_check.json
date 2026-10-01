@@ -1,0 +1,113 @@
+
+{
+  "checked_bone_samples": 297,
+  "clips": {
+    "dine": {
+      "godot_length": 9.04166698455811,
+      "max_err_m": 0.00000717588000043179,
+      "ref_duration": 9.0416669845581
+    },
+    "kneelBow": {
+      "godot_length": 9.625,
+      "max_err_m": 0.00000747504145692801,
+      "ref_duration": 9.625
+    },
+    "kneelPray": {
+      "godot_length": 9.625,
+      "max_err_m": 0.00000677315165376058,
+      "ref_duration": 9.625
+    },
+    "read": {
+      "godot_length": 12.0416669845581,
+      "max_err_m": 0.00000591446587350219,
+      "ref_duration": 12.0416669845581
+    },
+    "sitBench": {
+      "godot_length": 8.83333301544189,
+      "max_err_m": 0.00000611082168688881,
+      "ref_duration": 8.83333301544189
+    },
+    "standBow": {
+      "godot_length": 10.4583330154419,
+      "max_err_m": 0.00000728487202650285,
+      "ref_duration": 10.4583330154419
+    },
+    "standSleeves": {
+      "godot_length": 10.4583330154419,
+      "max_err_m": 0.00000721305468687206,
+      "ref_duration": 10.4583330154419
+    },
+    "tend": {
+      "godot_length": 10.0416669845581,
+      "max_err_m": 0.00000629396163276397,
+      "ref_duration": 10.0416669845581
+    },
+    "write": {
+      "godot_length": 15.625,
+      "max_err_m": 0.00000640632970316801,
+      "ref_duration": 15.625
+    }
+  },
+  "max_error_m": 0.00000747504145692801,
+  "normals": {
+    "boots": {
+      "face_agreement": 0.998463901689708,
+      "pass": true,
+      "plus_z_share": 0.0,
+      "vertices": 651
+    },
+    "brows": {
+      "face_agreement": 1.0,
+      "pass": true,
+      "plus_z_share": 0.0,
+      "vertices": 124
+    },
+    "eyes": {
+      "face_agreement": 1.0,
+      "pass": true,
+      "plus_z_share": 0.0,
+      "vertices": 96
+    },
+    "habit": {
+      "face_agreement": 0.919973324441481,
+      "pass": true,
+      "plus_z_share": 0.0,
+      "vertices": 2999
+    },
+    "hair": {
+      "face_agreement": 1.0,
+      "pass": true,
+      "plus_z_share": 0.0,
+      "vertices": 830
+    },
+    "hood_down": {
+      "face_agreement": 1.0,
+      "pass": true,
+      "plus_z_share": 0.0,
+      "vertices": 889
+    },
+    "hood_up": {
+      "face_agreement": 1.0,
+      "pass": true,
+      "plus_z_share": 0.0,
+      "vertices": 980
+    },
+    "lashes": {
+      "face_agreement": 1.0,
+      "pass": true,
+      "plus_z_share": 0.0,
+      "vertices": 250
+    },
+    "skin": {
+      "face_agreement": 1.0,
+      "pass": true,
+      "plus_z_share": 0.0,
+      "vertices": 2807
+    }
+  },
+  "normals_pass": true,
+  "pass": true,
+  "person": "monk_b",
+  "tolerance_m": 0.001,
+  "worst": "kneelBow t=4.833333 foot_r godot=(-0.123813, 0.099555, -0.249486) ref=[-0.12381, 0.09956, -0.24949]"
+}

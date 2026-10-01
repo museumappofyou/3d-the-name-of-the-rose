@@ -1,0 +1,274 @@
+{
+ "native_label": "mac",
+ "regions": {
+  "centre": [
+   0.25,
+   0.18,
+   0.5,
+   0.36
+  ],
+  "left": [
+   0.05,
+   0.25,
+   0.18,
+   0.45
+  ],
+  "right": [
+   0.77,
+   0.2,
+   0.18,
+   0.45
+  ],
+  "low": [
+   0.3,
+   0.62,
+   0.4,
+   0.12
+  ]
+ },
+ "note": "mean Rec.709 luma of 8-bit sRGB output (0-255), native / browser",
+ "shots": {
+  "alinardo_front": {
+   "centre": {
+    "native": 44.3,
+    "browser": 38.3,
+    "ratio": 1.16
+   },
+   "left": {
+    "native": 54.7,
+    "browser": 51.4,
+    "ratio": 1.06
+   },
+   "right": {
+    "native": 51.2,
+    "browser": 44.4,
+    "ratio": 1.15
+   },
+   "low": {
+    "native": 58.6,
+    "browser": 61.5,
+    "ratio": 0.95
+   }
+  },
+  "altar_closed": {
+   "centre": {
+    "native": 37,
+    "browser": 45.6,
+    "ratio": 0.81
+   },
+   "left": {
+    "native": 41.8,
+    "browser": 34.6,
+    "ratio": 1.21
+   },
+   "right": {
+    "native": 41.4,
+    "browser": 41.5,
+    "ratio": 1
+   },
+   "low": {
+    "native": 53.9,
+    "browser": 54.9,
+    "ratio": 0.98
+   }
+  },
+  "altar_open": {
+   "centre": {
+    "native": 33,
+    "browser": 48.9,
+    "ratio": 0.67
+   },
+   "left": {
+    "native": 39.5,
+    "browser": 44,
+    "ratio": 0.9
+   },
+   "right": {
+    "native": 41.7,
+    "browser": 45.5,
+    "ratio": 0.92
+   },
+   "low": {
+    "native": 36.8,
+    "browser": 56.3,
+    "ratio": 0.65
+   }
+  },
+  "choir_prime": {
+   "centre": {
+    "native": 36.2,
+    "browser": 25.5,
+    "ratio": 1.42
+   },
+   "left": {
+    "native": 34.3,
+    "browser": 28.1,
+    "ratio": 1.22
+   },
+   "right": {
+    "native": 36.2,
+    "browser": 27,
+    "ratio": 1.34
+   },
+   "low": {
+    "native": 39.4,
+    "browser": 38,
+    "ratio": 1.04
+   }
+  },
+  "church_door": {
+   "centre": {
+    "native": 58.7,
+    "browser": 63.4,
+    "ratio": 0.93
+   },
+   "left": {
+    "native": 53.2,
+    "browser": 58.5,
+    "ratio": 0.91
+   },
+   "right": {
+    "native": 69.9,
+    "browser": 77.1,
+    "ratio": 0.91
+   },
+   "low": {
+    "native": 80.7,
+    "browser": 86.6,
+    "ratio": 0.93
+   }
+  },
+  "cloister_day": {
+   "centre": {
+    "native": 89.4,
+    "browser": 86.8,
+    "ratio": 1.03
+   },
+   "left": {
+    "native": 60,
+    "browser": 54.9,
+    "ratio": 1.09
+   },
+   "right": {
+    "native": 69,
+    "browser": 60.9,
+    "ratio": 1.13
+   },
+   "low": {
+    "native": 90.9,
+    "browser": 92.8,
+    "ratio": 0.98
+   }
+  },
+  "cloister_night": {
+   "centre": {
+    "native": 11.3,
+    "browser": 11.6,
+    "ratio": 0.97
+   },
+   "left": {
+    "native": 4,
+    "browser": 4.6,
+    "ratio": 0.87
+   },
+   "right": {
+    "native": 16.1,
+    "browser": 16,
+    "ratio": 1.01
+   },
+   "low": {
+    "native": 30.8,
+    "browser": 23.6,
+    "ratio": 1.31
+   }
+  },
+  "nave_night_lamps": {
+   "centre": {
+    "native": 34.8,
+    "browser": 30.9,
+    "ratio": 1.13
+   },
+   "left": {
+    "native": 36.3,
+    "browser": 32.9,
+    "ratio": 1.1
+   },
+   "right": {
+    "native": 32.3,
+    "browser": 28.4,
+    "ratio": 1.14
+   },
+   "low": {
+    "native": 111.5,
+    "browser": 110.3,
+    "ratio": 1.01
+   }
+  },
+  "nave_north_aisle": {
+   "centre": {
+    "native": 44.1,
+    "browser": 49.1,
+    "ratio": 0.9
+   },
+   "left": {
+    "native": 82.8,
+    "browser": 75.3,
+    "ratio": 1.1
+   },
+   "right": {
+    "native": 54.5,
+    "browser": 53.2,
+    "ratio": 1.02
+   },
+   "low": {
+    "native": 61.4,
+    "browser": 68.2,
+    "ratio": 0.9
+   }
+  },
+  "porch_wide": {
+   "centre": {
+    "native": 52.9,
+    "browser": 45.9,
+    "ratio": 1.15
+   },
+   "left": {
+    "native": 55,
+    "browser": 49.5,
+    "ratio": 1.11
+   },
+   "right": {
+    "native": 65.6,
+    "browser": 57.1,
+    "ratio": 1.15
+   },
+   "low": {
+    "native": 80.1,
+    "browser": 69.2,
+    "ratio": 1.16
+   }
+  },
+  "stair_down": {
+   "centre": {
+    "native": 25,
+    "browser": 26.9,
+    "ratio": 0.93
+   },
+   "left": {
+    "native": 31.7,
+    "browser": 29.9,
+    "ratio": 1.06
+   },
+   "right": {
+    "native": 35.5,
+    "browser": 31.6,
+    "ratio": 1.12
+   },
+   "low": {
+    "native": 24.1,
+    "browser": 38.4,
+    "ratio": 0.63
+   }
+  }
+ }
+}

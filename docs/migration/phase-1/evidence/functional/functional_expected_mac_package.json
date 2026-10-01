@@ -1,0 +1,42 @@
+{
+  "clock": {
+    "day": 1,
+    "hours": 15.0
+  },
+  "knowledge": {
+    "notes": {
+      "alinardo-hint": {
+        "at": 1790889606054,
+        "by": "alinardo",
+        "day": 1,
+        "hours": 15.0
+      },
+      "altar-feature": {
+        "at": 1790889576679,
+        "day": 1,
+        "hours": 15.0
+      },
+      "altar-passage": {
+        "at": 1790889636875
+      }
+    },
+    "rooms": [],
+    "route": 0
+  },
+  "player": {
+    "pitch": -0.548105836143267,
+    "position": [
+      15.3720111846924,
+      -2.79000020027161,
+      -20.0689888000488
+    ],
+    "room": "ossuary",
+    "yaw": 0.0000457459676172334
+  },
+  "portals": {
+    "church:altar": {
+      "open": 0.999966141935114,
+      "target": 1
+    }
+  }
+}

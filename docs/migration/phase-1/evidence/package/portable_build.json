@@ -1,0 +1,123 @@
+{
+ "filesystem": "Case-sensitive APFS (sparse image)",
+ "project_path": "<volume>/Test Ünïcode/Abbey Slice/godot",
+ "import_missing_resource_lines": [],
+ "domain_tests": "PASS",
+ "pose_alinardo": "PASS",
+ "anchors": "PASS",
+ "packaged_functional_from_unicode_path": "PASS",
+ "pck_sha256": "33761de7bcc8d46d81fcc6f16fd11af543eb763fe28d0f930c26908f37481999",
+ "pipeline_pck_sha256": "b8655a6904d858a4c2135a2dbd9f041642b6b25875e7430a73a965ae5ba8344e",
+ "pck_identical_to_pipeline": false,
+ "windows_exe_sha256": "d34d36f3be1a6c49c56525ae86469b92e4f417ddf0b43cf00dd80c385c4b0562",
+ "pck_file_diff": {
+  "files_a": 561,
+  "files_b": 561,
+  "only_a": [],
+  "only_b": [],
+  "content_differs": [
+   {
+    "path": ".godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn",
+    "size_a": 710,
+    "size_b": 710
+   },
+   {
+    "path": ".godot/imported/alinardo.glb-44479520169c0e5e0b950b3afbdc0d07.scn",
+    "size_a": 1168450,
+    "size_b": 1168451
+   },
+   {
+    "path": ".godot/imported/altar_pivot.glb-c60ee415ba2065aec0f337cb01598232.scn",
+    "size_a": 175423,
+    "size_b": 175419
+   },
+   {
+    "path": ".godot/imported/church_exterior.glb-123164f7b59a663a13223efa9815a00e.scn",
+    "size_a": 277432,
+    "size_b": 277432
+   },
+   {
+    "path": ".godot/imported/church_exterior.glb-ded74e554f8cdfc4662f8cbf62c6f460.scn",
+    "size_a": 57170,
+    "size_b": 57171
+   },
+   {
+    "path": ".godot/imported/church_interior.glb-3dde870a2c3ff432e37ed83dab19c1f4.scn",
+    "size_a": 108806,
+    "size_b": 108805
+   },
+   {
+    "path": ".godot/imported/church_interior.glb-9bfaa607b60184c78e093aacb333a42d.scn",
+    "size_a": 2808681,
+    "size_b": 2808676
+   },
+   {
+    "path": ".godot/imported/cloister.glb-43fef7af63e0935b6da5be05f0ee29ec.scn",
+    "size_a": 683621,
+    "size_b": 683622
+   },
+   {
+    "path": ".godot/imported/cloister.glb-c71e2eacabd5ab0d2d9bff429d776457.scn",
+    "size_a": 235562,
+    "size_b": 235559
+   },
+   {
+    "path": ".godot/imported/cloister_context.glb-2a6c83cf9a56b12050df720b7dfeedf1.scn",
+    "size_a": 205013,
+    "size_b": 205009
+   },
+   {
+    "path": ".godot/imported/cloister_context.glb-d3c20fc65e67de164277a34430190754.scn",
+    "size_a": 38765,
+    "size_b": 38763
+   },
+   {
+    "path": ".godot/imported/garth_trees.glb-9cc6bc1811f2e128172d4c8b76212c80.scn",
+    "size_a": 218291,
+    "size_b": 218288
+   },
+   {
+    "path": ".godot/imported/monk_a.glb-2edccda0440875a8e1b0feb912db59f5.scn",
+    "size_a": 1144418,
+    "size_b": 1144417
+   },
+   {
+    "path": ".godot/imported/monk_b.glb-4243b8864e0151e35561060bc1136735.scn",
+    "size_a": 1155346,
+    "size_b": 1155345
+   },
+   {
+    "path": ".godot/imported/novice_a.glb-0f1429a7f296ef900d90779fe746437d.scn",
+    "size_a": 1149451,
+    "size_b": 1149449
+   },
+   {
+    "path": ".godot/imported/ossuary_stair.glb-4c493608e52715b7a2893087617d656f.scn",
+    "size_a": 3782,
+    "size_b": 3781
+   },
+   {
+    "path": ".godot/imported/ossuary_stair.glb-908c794a0c19a584b59092f0f597fc78.scn",
+    "size_a": 1173229,
+    "size_b": 1173234
+   },
+   {
+    "path": ".godot/imported/scribe_a.glb-96d8b9d625461f67054555c07de685f9.scn",
+    "size_a": 1149306,
+    "size_b": 1149307
+   },
+   {
+    "path": ".godot/imported/skull_chapel.glb-cb6d86c37e4dfdd8747b39fe5f361bc0.scn",
+    "size_a": 36567,
+    "size_b": 36565
+   },
+   {
+    "path": ".godot/imported/skull_chapel.glb-dbcac2bc0790a5161449feddee9251a1.scn",
+    "size_a": 2922,
+    "size_b": 2927
+   }
+  ],
+  "identical_contents": false
+ },
+ "pass": true
+}

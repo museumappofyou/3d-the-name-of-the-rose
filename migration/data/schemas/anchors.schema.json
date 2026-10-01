@@ -1,0 +1,58 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "type": "object",
+ "required": [
+  "schema_version",
+  "id",
+  "anchors",
+  "anchor_checks",
+  "stair"
+ ],
+ "properties": {
+  "schema_version": {
+   "type": "integer",
+   "minimum": 1,
+   "maximum": 1
+  },
+  "id": {
+   "type": "string"
+  },
+  "anchors": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "object",
+    "required": [
+     "source"
+    ]
+   }
+  },
+  "anchor_checks": {
+   "type": "array",
+   "minItems": 3,
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "expect_y",
+     "at",
+     "from_y"
+    ]
+   }
+  },
+  "stair": {
+   "type": "object",
+   "required": [
+    "steps",
+    "top_y",
+    "bottom_y"
+   ],
+   "properties": {
+    "steps": {
+     "type": "integer",
+     "minimum": 12,
+     "maximum": 12
+    }
+   }
+  }
+ }
+}

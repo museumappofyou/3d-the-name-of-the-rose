@@ -1,0 +1,41 @@
+
+> gulun-adi-abbey@2.0.0 test
+> node --test tests/*.test.js
+
+✔ the west doorway changes level, filter and apparent position continuously (1.873875ms)
+✔ the north opening is the apparent source in the cemetery and shared blocked state reduces leakage (0.096542ms)
+✔ another storey is silent; the lower passage only gets a local leak from the open altar (0.093875ms)
+✔ an unavailable animal position skips its call without poisoning subsequent audio ticks (1.110333ms)
+✔ audio enabled before the bank manifest still starts the appropriate office (4.432959ms)
+✔ listener movement leaves the phrase and its scheduled pause intact (0.234792ms)
+✔ development review persists separately from player discoveries and legacy migration (2.5485ms)
+✔ altar knowledge follows observation and Alinardo; descent alone preserves a returning player’s knowledge (0.112875ms)
+✔ the shelf comparison requires both the physical label and the catalogue, in either order (0.065625ms)
+✔ notebook migration keeps old discoveries/chart but does not invent the new shelf inspection (0.47675ms)
+✔ the Aedificium bars follow the end of supper, including wrapped study hours (0.102167ms)
+✔ crossing a room boundary before the bar does not unlock a night entrance (0.570041ms)
+✔ the counts of Third Day, Vespers (0.522292ms)
+✔ rooms tile the floor without degenerate polygons (0.312333ms)
+✔ every room is reachable from the east tower except the finis Africae (0.133792ms)
+✔ room S has passages to Y, P, E and U, and U only to T and S (0.0905ms)
+✔ each word is spelled by a chain of adjacent rooms (0.382083ms)
+✔ from FONS the way to ANGLIA leads round by the south and west (0.152708ms)
+✔ mirror keys are the q and r of quatuor, by position in the verse (0.579833ms)
+✔ unauditioned music has no invented phrase edits or approved placement (0.723041ms)
+✔ supplied recordings stay out of the abbey until assigned or asked for (0.220166ms)
+✔ a full streamed audition keeps its time while walking and rests after its actual ending (0.925542ms)
+✔ media stalls do not run an ending fade ahead of the recording, and early endings release it (0.253584ms)
+✔ a rejected play or a late metadata callback cannot revive a disposed recording (0.341333ms)
+✔ a cloister circuit stays on the perimeter and returns without a position or heading jump (7.163834ms)
+✔ a carrying lane retraces its real endpoints and a procession stays at its destination (0.269291ms)
+✔ every place has a folio, a view and a walking spawn (0.579167ms)
+✔ the plan key letters of the novel are all present (0.10225ms)
+✔ the journey visits real places in the order of the days (0.101417ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 69.594083

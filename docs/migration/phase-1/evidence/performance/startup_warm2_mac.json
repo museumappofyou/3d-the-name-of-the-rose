@@ -1,0 +1,102 @@
+{
+ "args": {
+  "label": "mac",
+  "name": "startup_warm2",
+  "out": "/Users/memre/Desktop/gulun_adı/docs/migration/phase-1/evidence/performance",
+  "scenario": "startup"
+ },
+ "audio_restarts": 0,
+ "audio_telemetry_tail": [
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0894653433423008,
+   "lp": 1432.25918912915,
+   "office": "",
+   "playing": false,
+   "pos": [
+    28.0655612945557,
+    1.79999995231628,
+    2.51785254478455
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "cloister",
+   "t": 0.133333333333333
+  }
+ ],
+ "duration_s": 0.216666666666667,
+ "events": [],
+ "fixture_log_tail": [],
+ "label": "mac",
+ "route_loops": 0,
+ "scenario": "startup",
+ "startup_ms": {
+  "cells_resident": 5,
+  "first_frame_ms": 847,
+  "playable_ms": 906,
+  "scene_ready_ms": 808
+ },
+ "system": {
+  "adapter": "Apple M1 Pro (Apple7)",
+  "adapter_type": 1,
+  "api": "4.0",
+  "cpu": "Apple M1 Pro",
+  "cpu_count": 10,
+  "driver": "metal",
+  "engine": "4.7.2-stable (official)",
+  "executable": "/Users/memre/Desktop/gulun_adı/migration/builds/macos/AbbeySlice.app/Contents/MacOS/Abbey Slice",
+  "gi": "none",
+  "memory_info": {
+   "available": 7807025152,
+   "free": 6513672192,
+   "physical": 34359738368,
+   "stack": 8372224
+  },
+  "msaa_3d": 1,
+  "os": "macOS",
+  "os_version": "26.5.2",
+  "physics": "Jolt Physics",
+  "renderer": "forward_plus",
+  "scaling_3d_scale": 1.0,
+  "screen": 0,
+  "screen_count": 2,
+  "screen_scale": 2.0,
+  "screens": [
+   {
+    "refresh_hz": 120.0,
+    "scale": 2.0,
+    "size": [
+     3456,
+     2234
+    ]
+   },
+   {
+    "refresh_hz": 75.0,
+    "scale": 1.0,
+    "size": [
+     3840,
+     2160
+    ]
+   }
+  ],
+  "shadow_atlas": 4096,
+  "ssao": true,
+  "user_dir": "/Users/memre/Library/Application Support/AbbeySlice",
+  "vendor": "Apple",
+  "viewport_texture_px": [
+   1920,
+   1080
+  ],
+  "vsync": 1,
+  "window_position": [
+   4608,
+   610
+  ],
+  "window_px": [
+   1920,
+   1080
+  ]
+ },
+ "warmup_s": 5.0
+}

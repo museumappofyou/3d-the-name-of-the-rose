@@ -1,0 +1,38 @@
+# Direct import of the unchanged browser people assets into an empty Godot 4.7.2 project
+# 2026-10-01T19:55:29Z; command: godot --headless --path <empty project> --editor --import
+# source sha256 beffd6a188fe80c3f9f43e0e29a609feb4c3715c04768569faebe268e4845be4  cast.glb
+# source sha256 45368893acc694c5df87ad39ed98c68271fbedfb4bbc463dc4fbbb67e363d62e  tasks.glb
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+[ DONE ] first_scan_filesystem
+[ DONE ] _update_scan_actions
+ERROR: glTF: Buffer 1 has no data and cannot be loaded.
+   at: _parse_buffers (modules/gltf/gltf_document.cpp:798)
+ERROR: glTF: Can't import file 'cast', required extension 'EXT_meshopt_compression' is not supported. Are you missing a GLTFDocumentExtension plugin?
+   at: _parse_gltf_extensions (modules/gltf/gltf_document.cpp:7378)
+ERROR: glTF: Can't import file 'cast', required extension 'KHR_mesh_quantization' is not supported. Are you missing a GLTFDocumentExtension plugin?
+   at: _parse_gltf_extensions (modules/gltf/gltf_document.cpp:7378)
+ERROR: Condition "err != OK" is true. Returning: ERR_PARSE_ERROR
+   at: _parse_gltf_state (modules/gltf/gltf_document.cpp:7123)
+ERROR: Condition "err != OK" is true. Returning: err
+   at: _parse (modules/gltf/gltf_document.cpp:6717)
+ERROR: Condition "err != OK" is true. Returning: err
+   at: append_from_file (modules/gltf/gltf_document.cpp:7355)
+[ DONE ] import
+ERROR: Error importing 'res://cast.glb'.
+   at: _reimport_file (editor/file_system/editor_file_system.cpp:3093)
+ERROR: glTF: Buffer 1 has no data and cannot be loaded.
+   at: _parse_buffers (modules/gltf/gltf_document.cpp:798)
+ERROR: glTF: Can't import file 'tasks', required extension 'EXT_meshopt_compression' is not supported. Are you missing a GLTFDocumentExtension plugin?
+   at: _parse_gltf_extensions (modules/gltf/gltf_document.cpp:7378)
+ERROR: Condition "err != OK" is true. Returning: ERR_PARSE_ERROR
+   at: _parse_gltf_state (modules/gltf/gltf_document.cpp:7123)
+ERROR: Condition "err != OK" is true. Returning: err
+   at: _parse (modules/gltf/gltf_document.cpp:6717)
+ERROR: Condition "err != OK" is true. Returning: err
+   at: append_from_file (modules/gltf/gltf_document.cpp:7355)
+[ DONE ] import
+ERROR: Error importing 'res://tasks.glb'.
+   at: _reimport_file (editor/file_system/editor_file_system.cpp:3093)
+[ DONE ] reimport
+[ DONE ] reimport
+[ DONE ] loading_editor_layout

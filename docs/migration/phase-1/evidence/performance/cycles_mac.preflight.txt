@@ -1,0 +1,1 @@
+== cycles (1920x1080) --scenario=cycles --vsync=off  [GPU utilization before launch: 0% after 0s settle]

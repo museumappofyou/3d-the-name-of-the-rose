@@ -1,0 +1,104 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "type": "object",
+ "required": [
+  "schema_version",
+  "id",
+  "rooms",
+  "acoustic_spaces"
+ ],
+ "properties": {
+  "schema_version": {
+   "type": "integer",
+   "minimum": 1,
+   "maximum": 1
+  },
+  "id": {
+   "type": "string"
+  },
+  "rooms": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "priority",
+     "indoor",
+     "darkness",
+     "acoustic",
+     "boxes"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+     },
+     "priority": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000
+     },
+     "indoor": {
+      "type": "boolean"
+     },
+     "darkness": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+     },
+     "acoustic": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+     },
+     "floor": {
+      "type": "string"
+     },
+     "boxes": {
+      "type": "array",
+      "items": {
+       "type": "array",
+       "minItems": 6,
+       "items": {
+        "type": "number"
+       }
+      }
+     },
+     "aliases": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+      }
+     }
+    }
+   }
+  },
+  "acoustic_spaces": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "object",
+    "required": [
+     "rt",
+     "wet",
+     "dry"
+    ],
+    "properties": {
+     "rt": {
+      "type": "number",
+      "minimum": 0
+     },
+     "wet": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+     },
+     "dry": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+     }
+    }
+   }
+  }
+ }
+}
