@@ -1,4 +1,5 @@
 import { PLACES, CATEGORIES, byId, JOURNEY } from '../data/places.js';
+import { VERSE } from '../data/mirror.js';
 import { HOURS, hourAt } from '../systems/sky.js';
 import { toPlan, AED } from '../core/plan.js';
 import { LIB } from '../world/aedLibrary.js';
@@ -429,9 +430,8 @@ export class UI {
 
   // --- mirror verse --------------------------------------------------------------------
   bindMirror() {
-    const verse = 'Super thronos viginti quatuor';
     const box = $('verseLetters');
-    [...verse].forEach((ch, i) => {
+    [...VERSE].forEach((ch, i) => {
       const b = document.createElement('button'); b.textContent = ch; b.dataset.i = i;
       if (ch === ' ') { b.disabled = true; b.innerHTML = '&nbsp;'; }
       b.onclick = () => this.app.pressLetter(i, ch, b);

@@ -9,7 +9,9 @@
 // labyrinth chart of the small map) and how far along the passage under the
 // church the player has actually gone (the one route drawn on the plan).
 
-const KEY = 'abbey.notebook.v1';
+export const KEY = 'abbey.notebook.v2';
+const OLD_KEY = 'abbey.notebook.v1';
+import { SHELF_EXAMPLE } from '../data/discovery.js';
 
 export const NOTES = {
   'shelf-marks': {
@@ -18,7 +20,7 @@ export const NOTES = {
     reading: 'Adso works them out as a book’s place: its position on the shelf, the shelf, and the case.',
     evidence: [{ id: 'claim_000423', status: 'EXPLICIT' }],
     // added only once the shelves themselves have been seen, in the library
-    more: { id: 'shelf-labels', where: 'the library', seen: 'Up in the library every shelf carries a written label — the same numbers as in the catalogue.', evidence: [{ id: 'claim_001153', status: 'EXPLICIT' }] },
+    more: { id: 'shelf-labels', where: 'the entrance heptagon', seen: `The catalogue’s worked example “${SHELF_EXAMPLE.text}” points to place ii on gradus III in cabinet I. You compared it with that physical shelf. This address is an illustrative reconstruction; the notation and matching labels are described in the novel.`, evidence: [{ id: 'claim_001153', status: 'EXPLICIT' }, { id: 'shelf-example-placement', status: 'RECONSTRUCTION' }] },
   },
   barred: {
     place: 'aedificium', where: 'the doors of the Aedificium', title: 'Barred after supper',
@@ -46,17 +48,46 @@ export const NOTES = {
     reading: 'A passage runs from the church down among the bones — toward the Aedificium.',
     evidence: [{ id: 'claim_001047', status: 'EXPLICIT' }, { id: 'ROUTES.md: CHAPEL → CRYPT via ALTAR_OPENING + STAIRCASE', status: 'EXPLICIT' }],
   },
+  'altar-feature': {
+    place: 'skull-chapel', where: 'the chapel of skulls', title: 'Eyes in the stone',
+    seen: 'A row of carved skulls stands above the shin bones. Their eye sockets are deeply recessed.',
+    evidence: [{ id: 'claim_001047', status: 'EXPLICIT' }],
+  },
+  'alinardo-hint': {
+    place: 'cloister', where: 'Alinardo, on the porch', title: 'Alinardo’s recollection',
+    seen: 'Alinardo recalls a way beneath the church: press the eyes of the fourth skull from the right.',
+    reading: 'The old monk’s instruction makes the carved altar worth returning to.',
+    evidence: [{ id: 'claim_001026', status: 'EXPLICIT' }, { id: 'claim_001047', status: 'EXPLICIT' }],
+  },
 };
 
+const fresh = () => ({ version: 2, notes: {}, rooms: [], route: -1 });
+export function restoreNotebook(v) {
+  const s = fresh();
+  if (!v || typeof v !== 'object') return s;
+  const allowed = new Set([...Object.keys(NOTES), ...Object.values(NOTES).map(n => n.more?.id).filter(Boolean), 'shelf-example-seen']);
+  for (const [id, n] of Object.entries(v.notes && typeof v.notes === 'object' ? v.notes : {})) {
+    if (!allowed.has(id) || !n || typeof n !== 'object') continue;
+    // Earlier builds awarded this line just for entering any library room.
+    // Keep the observations and chart, but earn the new comparison in situ.
+    if (id === 'shelf-labels' && (v.version !== 2 || !v.notes['shelf-example-seen'])) continue;
+    s.notes[id] = { at: Number.isFinite(n.at) ? n.at : 0, ...(typeof n.by === 'string' ? { by: n.by } : {}) };
+  }
+  s.rooms = Array.isArray(v.rooms) ? [...new Set(v.rooms.filter(x => typeof x === 'string'))].slice(0, 56) : [];
+  s.route = Number.isInteger(v.route) ? Math.max(-1, Math.min(100, v.route)) : -1;
+  return s;
+}
+
 export class Notebook {
-  constructor() {
-    this.s = { notes: {}, rooms: [], route: -1 };
-    try { const v = JSON.parse(localStorage.getItem(KEY) || 'null'); if (v && v.notes) this.s = { ...this.s, ...v }; } catch (e) { /* private window: remembered for this visit only */ }
+  constructor(key = KEY) {
+    this.key = key;
+    this.s = fresh();
+    try { this.s = restoreNotebook(JSON.parse(localStorage.getItem(key) || (key === KEY && localStorage.getItem(OLD_KEY)) || 'null')); } catch (e) { /* private window */ }
     this.rooms = new Set(this.s.rooms);
   }
   save() {
     this.s.rooms = [...this.rooms];
-    try { localStorage.setItem(KEY, JSON.stringify(this.s)); } catch (e) { /* not persisted */ }
+    try { localStorage.setItem(this.key, JSON.stringify(this.s)); } catch (e) { /* not persisted */ }
   }
   has(id) { return !!this.s.notes[id]; }
   // record a note (or the extra line of one); true if it is new
@@ -80,5 +111,5 @@ export class Notebook {
   // points) the player has physically walked
   routeTo(i) { if (i <= this.s.route) return false; this.s.route = i; this.save(); return true; }
   get route() { return this.s.route; }
-  clear() { this.s = { notes: {}, rooms: [], route: -1 }; this.rooms = new Set(); this.save(); }
+  clear() { this.s = fresh(); this.rooms = new Set(); this.save(); }
 }

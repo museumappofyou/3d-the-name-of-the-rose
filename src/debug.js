@@ -8,7 +8,11 @@ import { LIB } from './world/aedLibrary.js';
 export function installDebug(a) {
   console.info('[abbey] scriptorium desks:', stats.scriptoriumDesks, '· library rooms:', LIB.rooms.length, '· colliders tris:', a.walker.colliders[0].mesh.geometry.attributes.position.count / 3);
   window.a = a; window.THREE = THREE; a.THREE_ = THREE;
-  import('./debug/audit.js').then(m => m.installAudit(a));
+  import('./debug/audit.js').then(async m => {
+    m.installAudit(a);
+    (await import('./debug/peopleAudit.js')).installPeopleAudit(a, window.__audit);
+    if (new URLSearchParams(location.search).has('qa')) (await import('./debug/review.js')).installReview(a, window.__audit);
+  });
   window.__step = n => { for (let i = 0; i < n; i++) { a.clock.getDelta(); a.clock.oldTime -= 50; a.frame(); } };
   window.__go = (t, p, n = 4) => { if (a.mode !== 'aerial') a.setMode('aerial', true); a.aerial.flyTo(t, p, 0.01); window.__step(n); };
   window.__view = (x, y, z, yaw, pitch = 0, n = 25) => {

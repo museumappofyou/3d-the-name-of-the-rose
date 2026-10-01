@@ -5,7 +5,7 @@ import { AED } from './core/plan.js';
 import { Atmosphere, HOURS } from './systems/sky.js';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
-import { GTAOPass } from 'three/addons/postprocessing/GTAOPass.js';
+import { ContactAOPass } from './core/contactAO.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { buildTerrain, terrainCollider, buildSea, addSink, addPaths, getMask, paintPlots, paintGround, groundAt, setTerrainStraw, baseHeight, ROAD } from './world/terrain.js';
@@ -25,12 +25,16 @@ import { Walker } from './systems/player.js';
 import { Aerial } from './systems/aerial.js';
 import { Effects } from './systems/effects.js';
 import { Sound, BELL_TOWER } from './systems/audio.js';
-import { officeAt, phaseAt } from './systems/horarium.js';
+import { hearingParam } from './data/music.js';
+import { officeAt, phaseAt, aedificiumBarred } from './systems/horarium.js';
 import { zoneAt } from './systems/zones.js';
 import { UI } from './ui/ui.js';
 import { PLACES, byId } from './data/places.js';
 import { Notebook, NOTES } from './systems/notes.js';
 import { OSSUARY_PATH } from './world/church.js';
+import { MIRROR_KEYS } from './data/mirror.js';
+import { SHELF_EXAMPLE, canAskAlinardo, knowsAltar, canConnectShelf } from './data/discovery.js';
+import { WorldState, aedificiumExitPermit } from './systems/worldState.js';
 
 const tick = () => new Promise(r => setTimeout(r, 0));
 const SURFACES = ['terrain', 'stone', 'stoneOut'];
@@ -41,8 +45,9 @@ class App {
     this.mode = 'aerial';
     this.cut = 0;
     this.weather = 'clear';
-    this.quality = 'high';
-    this.qualityIndex = matchMedia('(pointer: coarse)').matches ? 1 : 0;
+    const requestedQuality = params.get('quality');
+    this.quality = ['high', 'balanced', 'low'].includes(requestedQuality) ? requestedQuality : 'balanced';
+    this.qualityIndex = ['high', 'balanced', 'low'].indexOf(this.quality);
     this.lantern = false;
     this.timeTarget = null;
     this.indoor = 0;
@@ -63,18 +68,20 @@ class App {
     this.atmo = new Atmosphere(r, this.scene);
     this.aerial = new Aerial(this.camera, canvas);
     this.walker = new Walker(this.camera, canvas);
-    this.sound = new Sound();
-    this.notes = new Notebook();
+    this.sound = new Sound({ hear: hearingParam() });
+    this.world = new WorldState(); this.sound.world = this.world;
+    this.world.canSee = (p, eye) => this.visibleInteraction(p, eye);
+    this.notes = new Notebook(params.has('debug') && params.has('qa') ? 'abbey.notebook.review.v2' : undefined);
     this.ui = new UI(this);
     this.ui.loader(0.05, 'Laying the foundations…');
     this.emitters = []; this.interactables = []; this.doors = [];
     const ctx = this.ctx = {
-      scene: this.scene, anchors: {}, trees: [], plots: [], paths: [], ground: [],
+      scene: this.scene, world: this.world, anchors: {}, trees: [], plots: [], paths: [], ground: [],
       emit: o => this.emitters.push(o),
       interact: o => this.interactables.push(o),
       sink: (poly, depth, band) => addSink(poly, depth, band),
       addDynamic: (obj, geo) => this.walker.addDynamic(obj, geo),
-      door: o => this.doors.push(o),
+      door: o => { this.doors.push(this.world.registerDoor(o)); },
       // per-frame hooks of living things (people, animals): f(dt, state)
       updaters: [], onUpdate: f => ctx.updaters.push(f),
       // ambient sound sources: registered now, sounding once audio starts
@@ -152,6 +159,7 @@ class App {
     this.walker.onStep = (feet, run) => { const s = this.surfaceUnder(feet); this.lastSurface = s; this.sound.step(s, run); };
     this.walker.onFall = () => this.walkTo(byId.gate);
     this.setupCurfew();
+    this.world.altar = this.church.altar;
     this.setupPost();
     this.bindInput();
     this.fit(); addEventListener('resize', () => this.fit());
@@ -201,7 +209,7 @@ class App {
     const rt = new THREE.WebGLRenderTarget(size.x, size.y, { type: THREE.HalfFloatType, samples: 4 });
     const c = this.composer = new EffectComposer(r, rt);
     c.addPass(new RenderPass(this.scene, this.camera));
-    const ao = this.gtao = new GTAOPass(this.scene, this.camera, size.x, size.y);
+    const ao = this.gtao = new ContactAOPass(this.scene, this.camera, size.x, size.y);
     ao.updateGtaoMaterial({ radius: 0.85, distanceExponent: 1.4, thickness: 1.2, scale: 1.0, samples: 12, distanceFallOff: 1.0 });
     ao.updatePdMaterial({ lumaPhi: 10, depthPhi: 2, normalPhi: 3, radius: 5, radiusExponent: 1, rings: 2, samples: 12 });
     ao.blendIntensity = 0.9;
@@ -221,7 +229,7 @@ class App {
           gl_FragColor = vec4(x, c.a); }`,
     });
     c.addPass(this.grade);
-    this.usePost = true;
+    this.usePost = this.quality !== 'low';
   }
   render() {
     if (this.usePost && this.composer && !this.cut) { this.grade.uniforms.uTime.value = shared.uTime.value; this.composer.render(); }
@@ -246,6 +254,12 @@ class App {
     if (fp) { this.canvas.style.width = w + 'px'; this.canvas.style.height = h + 'px'; }
     this.camera.aspect = w / h; this.camera.updateProjectionMatrix();
     if (this.composer) { this.composer.setPixelRatio(this.renderer.getPixelRatio()); this.composer.setSize(w, h); }
+    // Preserve contact shading at a practical default. Full-resolution
+    // normals/AO and 4K shadows remain available through Fine.
+    if (this.gtao && this.quality === 'balanced') {
+      const size = this.renderer.getDrawingBufferSize(new THREE.Vector2());
+      this.gtao.setSize(Math.max(1, Math.round(size.x / 2)), Math.max(1, Math.round(size.y / 2)));
+    }
     if (this.effects) this.effects.smokeU.uScale.value = this.effects.glowU.uScale.value = h;
   }
 
@@ -343,7 +357,7 @@ class App {
     this.ui.setCut(level);
   }
   setTime(t, animate) {
-    if (animate) { this.timeTarget = ((t % 24) + 24) % 24; this.sound.bell(this.hourBells(t)); }
+    if (animate) { this.timeTarget = ((t % 24) + 24) % 24; }
     else { this.timeTarget = null; this.atmo.set(t); this.ui.updateTime(this.atmo.time); }
   }
   hourBells(t) { const i = HOURS.findIndex(h => Math.abs(h.t - t) < 0.05); return i < 0 ? 1 : [3, 2, 1, 1, 2, 1, 3, 2][i]; }
@@ -363,7 +377,7 @@ class App {
       if (e.code === 'KeyF' && this.mode === 'walk') { this.lantern = !this.lantern; this.ui.toast(this.lantern ? 'You light the lantern' : 'The lantern is out', 1800); }
       if (e.code === 'KeyP') this.setMode(this.mode === 'walk' ? 'aerial' : 'walk');
       if (e.code === 'KeyN') this.setTime(this.atmo.time < 6 || this.atmo.time > 18 ? 12 : 23, true);
-      if (this.mirrorOpen && (e.code === 'KeyQ' || e.code === 'KeyR')) this.pressLetter(e.code === 'KeyQ' ? 23 : 29, e.code === 'KeyQ' ? 'q' : 'r');
+      if (this.mirrorOpen && (e.code === 'KeyQ' || e.code === 'KeyR')) { const ch = e.code === 'KeyQ' ? 'q' : 'r'; this.pressLetter(MIRROR_KEYS[ch], ch); }
       if (e.code === 'Escape' && this.mirrorOpen) this.closeMirror();
     });
     const stick = document.getElementById('stick'), knob = stick.firstElementChild;
@@ -383,7 +397,7 @@ class App {
   }
 
   // --- interactions ----------------------------------------------------------------
-  // F17: after Compline the Aedificium is barred from within and only the
+  // F17: after supper the Aedificium is barred from within and only the
   // ossuary way remains (k0491/k0492 H, k1423/k1427/k1428 M: Malachi closes
   // the doors; William and Adso get in by the skull altar). The bars drop
   // for someone already inside, who can always unbar the door to leave.
@@ -403,14 +417,16 @@ class App {
   }
   updateCurfew(dt) {
     if (!this.curfew?.length) return;
-    const t = this.atmo.time, night = t >= 19.2 || t < 5.2;
+    const t = this.atmo.time, night = aedificiumBarred(t);
     const f = this.walker.feet, inside = this.mode === 'walk' && ['kitchen', 'refectory', 'scriptorium', 'library'].includes(zoneAt(f.x, f.y + 0.3, f.z).id);
+    this.world.aedExitAllowed = this.mode === 'walk' && aedificiumExitPermit(f, inside, this.curfew.map(q=>q.d), this.world.aedExitAllowed);
     for (const q of this.curfew) {
-      q.c.enabled = night && !inside;
-      q.shut += ((night ? 1 : 0) - q.shut) * Math.min(1, dt * 1.5);
+      q.d.blocked = q.c.enabled = night && !this.world.aedExitAllowed;
+      q.shut += ((q.d.blocked ? 1 : 0) - q.shut) * Math.min(1, dt * 1.5);
+      q.d.open = 1 - q.shut;
       if (q.leaves) for (const p of q.leaves.pivots) p.rotation.y = q.leaves.open + (q.leaves.closed - q.leaves.open) * q.shut;
       if (q.c.enabled && this.mode === 'walk' && Math.hypot(f.x - q.d.x, f.z - q.d.z) < 3.2) {
-        if (!q.told || performance.now() - q.told > 20000) { q.told = performance.now(); this.ui.toast('The door is barred from within. After Compline Malachi closes the Aedificium; only the way under the church remains.', 5500); }
+        if (!q.told || performance.now() - q.told > 20000) { q.told = performance.now(); this.ui.toast('The door is barred from within. After supper the Aedificium is locked.', 4500); }
         this.note('barred');
       }
       // the same door by day, once it has been found barred at night
@@ -428,6 +444,7 @@ class App {
     for (const it of this.interactables) {
       const d = it.pos.distanceTo(cam);
       if (d > it.radius) continue;
+      if (Math.abs(it.pos.y - cam.y) > 2.8 || !this.visibleInteraction(it.pos, cam, d)) continue;
       const small = it.radius < 4;
       const facing = it.pos.clone().sub(cam).normalize().dot(dir);
       if (small && facing < 0.3 && d > 1.3) continue;
@@ -436,12 +453,36 @@ class App {
     }
     return best;
   }
+  visibleInteraction(pos, cam = this.camera.position, distance = pos.distanceTo(cam)) {
+    if (distance < 0.25) return true;
+    const ray = new THREE.Ray(cam.clone(), pos.clone().sub(cam).normalize());
+    const geo = this.walker.colliders[0]?.mesh.geometry;
+    // Ignore the last few centimetres occupied by the inspected object.
+    if (geo?.boundsTree.raycastFirst(ray, THREE.DoubleSide, 0.08, distance - 0.18)) return false;
+    for (const c of this.walker.colliders) {
+      if (c.static || !c.enabled) continue;
+      c.mesh.updateWorldMatrix(true, false);
+      const local = ray.clone().applyMatrix4(c.mesh.matrixWorld.clone().invert());
+      if (c.geometry.boundsTree?.raycastFirst(local, THREE.DoubleSide, 0.08, distance - 0.18)) return false;
+    }
+    return true;
+  }
+  interactionLabel(it) {
+    if (it?.id === 'skull-altar' && knowsAltar(this.notes)) return this.church.altar.target ? 'The open altar — turn it back' : 'The fourth skull from the right — press its eyes';
+    return it?.label || null;
+  }
   act() {
     const it = this.current; if (!it) return;
+    if (this.mode !== 'walk' || this.nearest() !== it) return;
     const T = (s, ms) => this.ui.toast(s, ms || 6000);
     if (it.altar) {
+      if (it.id === 'skull-altar' && !knowsAltar(this.notes) && !it.altar.target) {
+        this.note('altar-feature');
+        T('Skulls carved in the same stone as the altar, above a heap of shin bones. Their eye sockets are unusually deep.');
+        return;
+      }
       it.altar.target = it.altar.target ? 0 : 1;
-      this.sound.creak();
+      this.sound.creak(it.pos);
       const tx = it.altar.text;
       T(tx ? (it.altar.target ? tx.open : tx.close) : it.altar.target ? 'You press the eyes of the fourth skull from the right. The altar turns on a hidden pivot: damp steps go down into the dark.' : 'The altar turns back into place.');
       return;
@@ -453,7 +494,7 @@ class App {
     }
     if (it.vision) { this.vision(); return; }
     const lines = {
-      catalogue: 'The catalogue: “iii, IV gradus, V in prima graecorum; ii, V gradus, VII in tertia anglorum”. Some shelf marks read “finis Africae” — those books are lost.',
+      catalogue: `The catalogue orders an address by place, gradus, then cabinet. A worked example on the open leaf reads “${SHELF_EXAMPLE.text}”: place ii, shelf III, cabinet I in the entrance heptagon. The example is reconstructed; no manuscript’s exact location is asserted.`,
       'adelmo-desk': 'Adelmo’s psalter leaf, still fastened to the desk: in the margins a world upside down — dogs fleeing hares, deer hunting lions, a monkey with antlers.',
       'venantius-desk': 'Venantius’s desk, its back to the warm flue: a Greek book on the rest, loose Latin sheets on the low shelf.',
       'jorge-stool': 'Jorge often sat here by the fire, listening to Malachi’s steps in the straw as he climbed to the library.',
@@ -475,22 +516,36 @@ class App {
       this.note('herb-jars', { by: 'severinus' });
       return;
     }
+    if (it.id === 'alinardo') {
+      if (!canAskAlinardo(this.notes)) T('Alinardo rests on the porch. The old monk remembers the abbey’s earlier days; for now he listens quietly.');
+      else {
+        T('Alinardo recalls an entrance beneath the church. At the altar of skulls, he says, press the eyes of the fourth skull from the right.', 8500);
+        this.note('alinardo-hint', { by: 'alinardo' });
+      }
+      return;
+    }
+    if (it.id === SHELF_EXAMPLE.id) {
+      this.notes.add('shelf-example-seen');
+      T(`Cabinet I. The third gradus is marked III; its second place bears ii. ${this.notes.has('shelf-marks') ? 'The three parts match the worked entry in the chained catalogue.' : 'These labels seem to describe a book’s address.'}`, 7500);
+      if (canConnectShelf(this.notes)) this.noteMore('shelf-marks');
+      return;
+    }
     const noted = { catalogue: 'shelf-marks', 'blood-jar': 'blood-vat', laboratory: 'herb-jars' }[it.id];
-    if (lines[it.id]) { T(lines[it.id], 8000); if (noted) setTimeout(() => this.note(noted), 900); return; }
+    if (lines[it.id]) { T(lines[it.id], 8000); if (noted) this.note(noted); if (it.id === 'catalogue' && canConnectShelf(this.notes)) this.noteMore('shelf-marks'); return; }
     T(it.label, 4000);
     const zp = this.zone?.place && byId[this.zone.place];
     if (zp) this.ui.select(zp.id, { fly: false });
   }
   pressLetter(i, ch, btn) {
     if (!this.mirrorState) return;
-    const ok = (i === 23 && ch === 'q') || (i === 29 && ch === 'r');
+    const ok = MIRROR_KEYS[ch] === i;
     const b = btn || document.querySelector(`#verseLetters button[data-i="${i}"]`);
     if (!ok) { this.ui.toast('Nothing. The letter does not move.', 2000); this.pressed = []; document.querySelectorAll('#verseLetters button').forEach(x => x.classList.remove('pressed')); return; }
     b?.classList.add('pressed');
     this.sound.chime();
     if (!this.pressed.includes(ch)) this.pressed.push(ch);
     if (this.pressed.length === 2) {
-      this.mirrorState.target = 1; this.sound.creak();
+      this.mirrorState.target = 1; this.sound.creak(this.interactables.find(it => it.id === 'mirror')?.pos);
       this.ui.toast('The q clicks, then the r. The frame shakes and the glass springs back: the mirror is a door, and it swings toward you.', 6500);
       setTimeout(() => this.closeMirror(), 900);
     } else this.ui.toast('A dry click inside the wall…', 1800);
@@ -535,8 +590,9 @@ class App {
   }
 
   // --- the frame ---------------------------------------------------------------------
-  frame() {
-    const dt = Math.min(this.clock.getDelta(), 0.1);
+  frame(stepSeconds, draw = true) {
+    // Explicit fixed stepping is only used by the development review.
+    const dt = Math.min(stepSeconds ?? this.clock.getDelta(), 0.1);
     shared.uTime.value += dt;
     const T = shared.uTime.value;
     if (this.timeTarget != null) {
@@ -583,11 +639,12 @@ class App {
       // Severinus answers only where and when he is actually at work
       if (!this._sev) { this._sev = { id: 'severinus', pos: new THREE.Vector3(0, -999, 0), radius: 2.6, label: 'Severinus, the herbalist' }; this.interactables.push(this._sev); }
       { const r = this.ctx.people?.rigs.find(q => q.named === 'severinus'); if (r && r.g.visible && r.group?.id === 'gardener') this._sev.pos.set(r.g.position.x, r.g.position.y + 1.5, r.g.position.z); else this._sev.pos.y = -999; }
-      // the catalogue's numbers, found again on the shelves themselves
-      if (z.id === 'library' && this.notes.has('shelf-marks')) { this._libT = (this._libT || 0) + dt; if (this._libT > 5) this.noteMore('shelf-marks'); } else this._libT = 0;
+      if (!this._ali) { this._ali = { id: 'alinardo', pos: new THREE.Vector3(0, -999, 0), radius: 2.6, label: 'Alinardo, resting on the porch' }; this.interactables.push(this._ali); }
+      { const r = this.ctx.people?.rigs.find(q => q.named === 'alinardo'); if (r && r.g.visible) this._ali.pos.set(r.g.position.x, r.g.position.y + 1.1, r.g.position.z); else this._ali.pos.y = -999; }
       this.trackPassage(f, z.id);
       const it = this.mirrorOpen ? null : this.nearest();
-      if (it !== this.current) { this.current = it; this.ui.prompt(it ? it.label : null); }
+      const label = this.interactionLabel(it);
+      if (it !== this.current || label !== this._prompt) { this.current = it; this._prompt = label; this.ui.prompt(label); }
       // the clock gives way while something low and near is looked at
       const low = it && it.radius < 4 && it.pos.y < cam.y - 0.45 && it.pos.distanceTo(cam) < 3.2;
       if (low !== this._inspecting) { this._inspecting = low; document.body.classList.toggle('inspecting', !!low); }
@@ -660,6 +717,10 @@ class App {
         if (!atStair && cam.y > 0.5) d = Infinity;
       }
       g.visible = d < (this.mode === 'walk' ? 45 : 150) || (this.cut > 0 && g.userData.tag === 'aed');
+      if (g.userData.renderCells) {
+        const limit = this.mode === 'walk' ? 45 : 150;
+        for (const mesh of g.children) mesh.visible = this.cut > 0 && g.userData.tag === 'aed' || mesh.userData.visibilityBox.distanceToPoint(cam) < limit;
+      }
     }
 
     // Adso's vision
@@ -683,7 +744,7 @@ class App {
 
     this._mapT = (this._mapT || 0) + dt;
     if (this._mapT > 0.2) { this._mapT = 0; this.ui.drawMappa(zid === 'library' ? (this.room?.id || '') : null); }
-    this.render();
+    if (draw) this.render();
   }
 }
 

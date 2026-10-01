@@ -28,15 +28,19 @@ export function model(name) {
 // clone a (possibly skinned) hierarchy: meshes share geometry and
 // materials, bones are duplicated and rebound
 export function cloneSkinned(src) {
-  const map = new Map();
+  const map = new Map(), source = new Map(), skeletons = new Map();
   const out = src.clone(true);
-  const walk = (a, b) => { map.set(a, b); for (let i = 0; i < a.children.length; i++) walk(a.children[i], b.children[i]); };
+  const walk = (a, b) => { map.set(a, b); source.set(b, a); for (let i = 0; i < a.children.length; i++) walk(a.children[i], b.children[i]); };
   walk(src, out);
   out.traverse(o => {
     if (!o.isSkinnedMesh) return;
-    const s = [...map.entries()].find(([, v]) => v === o)[0];
-    const bones = s.skeleton.bones.map(b => map.get(b));
-    o.bind(new THREE.Skeleton(bones, s.skeleton.boneInverses), s.bindMatrix);
+    const s = source.get(o);
+    let skeleton = skeletons.get(s.skeleton);
+    if (!skeleton) {
+      skeleton = new THREE.Skeleton(s.skeleton.bones.map(b => map.get(b)), s.skeleton.boneInverses);
+      skeletons.set(s.skeleton, skeleton);
+    }
+    o.bind(skeleton, s.bindMatrix);
   });
   return out;
 }

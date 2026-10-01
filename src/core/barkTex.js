@@ -418,9 +418,9 @@ function oakLeaves(g, W, H, r) {
 export function makeTreeAtlases() {
   // broadleaf trees and the rose bushes
   const wood = new Atlas(2048, 1024), R = {};
-  R.elm = wood.tiled(0, 0, 320, 640, 16, 'elm', 11, 3.2, [0.55, 1.1]);
-  R.oak = wood.tiled(352, 0, 320, 640, 16, 'oak', 12, 3.8, [0.6, 1.2]);
-  R.fruit = wood.tiled(704, 0, 320, 640, 16, 'fruit', 13, 2.8, [0.4, 0.8]);
+  R.elm = wood.tiled(0, 0, 320, 640, 16, 'elm', 11, 3.2, [1.8, 2.7]);
+  R.oak = wood.tiled(352, 0, 320, 640, 16, 'oak', 12, 3.8, [3.6, 3.8]);
+  R.fruit = wood.tiled(704, 0, 320, 640, 16, 'fruit', 13, 2.8, [0.85, 1.4]);
   R.cane = wood.tiled(1056, 0, 64, 64, 16, 'cane', 14, 1, [0.05, 0.3]);
   R.hips = wood.tiled(1152, 0, 64, 64, 16, 'hips', 15, 1, [0.05, 0.05]);
   R.twig = wood.card(1536, 512, 512, 512, (g, w, h, r) => twigs(g, w, h, r, { zig: 0.3, main: 3, stepLen: 28, depth: 3 }), { bg: [84, 77, 70], seed: 21 });

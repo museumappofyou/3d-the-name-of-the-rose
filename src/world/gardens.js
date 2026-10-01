@@ -147,7 +147,12 @@ function stalk(seed) {
   const r = rng(seed), parts = [];
   const h = 0.4 + r() * 0.5;
   const s = cyl(0.006, 0.01, h, 4, {}); s.rotateZ((r() - 0.5) * 0.35); parts.push(s);
-  if (r() < 0.6) { const u = cyl(0.07, 0.005, 0.04, 6, { y: h - 0.02 }); u.rotateZ((r() - 0.5) * 0.3); parts.push(u); }
+  if (r() < 0.6) for(let i=0;i<5;i++) {
+    const a=i*1.26+r()*.3,rad=.035+r()*.035;
+    const end=[Math.cos(a)*rad,h+.015+r()*.025,Math.sin(a)*rad];
+    parts.push(plantStem([0,h-.035,0],end,.0025));
+    parts.push(sphere(.007,{x:end[0],y:end[1],z:end[2],sy:1.3},4,3));
+  }
   if (r() < 0.6) { const b = cyl(0.004, 0.006, h * 0.5, 4, { y: h * 0.4 }); b.rotateZ(0.7); parts.push(b); }
   // a bent-over stalk: the frost has broken it
   if (r() < 0.4) { const b = cyl(0.004, 0.006, h * 0.6, 4, {}); b.rotateZ(1.9); b.translate(0, h * 0.55, 0); parts.push(b); }
@@ -155,20 +160,23 @@ function stalk(seed) {
 }
 // evergreen sub-shrub (sage, rosemary, thyme, hyssop, rue): woody stems with
 // small grey-green leaf tufts, not a ball
+function plantStem(a,c,r){const A=new THREE.Vector3(...a),B=new THREE.Vector3(...c),d=B.clone().sub(A);const g=cyl(r,r*1.4,d.length(),4,{});g.applyQuaternion(new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0,1,0),d.normalize()));g.translate(...a);return g;}
+function plantColor(g,hex){const c=new THREE.Color(hex),v=new Float32Array(g.attributes.position.count*3);for(let i=0;i<v.length;i+=3){v[i]=c.r;v[i+1]=c.g;v[i+2]=c.b;}g.setAttribute('color',new THREE.BufferAttribute(v,3));return g;}
 function herbBush(seed, s = 1) {
   const r = rng(seed), parts = [];
-  const n = 7 + Math.floor(r() * 4);
+  const n = 5 + Math.floor(r() * 3);
   for (let i = 0; i < n; i++) {
     const a = r() * 6.3, tilt = 0.2 + r() * 0.75, L = (0.16 + r() * 0.16) * s;
     const dx = Math.sin(tilt) * Math.cos(a), dy = Math.cos(tilt), dz = Math.sin(tilt) * Math.sin(a);
     const st = cyl(0.004 * s, 0.008 * s, L, 3, {});
-    st.rotateZ(-tilt); st.rotateY(-a); parts.push(st);
-    // narrow leaves in tufts along the upper half of each stem
-    for (let k = 0; k < 4; k++) {
-      const q = 0.4 + k * 0.18, bl = blade(0.022 * s, (0.07 + r() * 0.04) * s, { curl: 0.05, cup: 0.4, seg: 1 });
-      bl.rotateX(-0.3 - r() * 0.9); bl.rotateY(r() * 6.3);
+    st.rotateZ(-tilt); st.rotateY(-a); parts.push(plantColor(st,0x635644));
+    // Short, curved paired leaves on exposed woody stems. The former
+    // one-segment blades read as geometric spikes at walking height.
+    for (let k = 0; k < 6; k++) {
+      const q = 0.30 + Math.floor(k/2)*0.20, bl = blade(0.010 * s, (0.032 + r() * 0.018) * s, { curl: 0.18, cup: 0.18, seg: 4 });
+      bl.rotateX(-1.0-r()*.35); bl.rotateY(a+(k%2)*Math.PI+r()*.25);
       bl.translate(dx * L * q, dy * L * q, dz * L * q);
-      parts.push(bl);
+      parts.push(plantColor(bl,k%3 ? 0x777c69 : 0x646c58));
     }
   }
   return merge(parts);
@@ -196,12 +204,16 @@ function burdock(seed) {
 }
 // a young juniper at a bed end
 function juniper(seed) {
-  const r = rng(seed), parts = [cyl(0.02, 0.03, 0.2, 5, {})];
-  // several leaning, ragged sprays rather than one cone
-  for (let i = 0; i < 6; i++) {
-    const a = r() * 6.3, h = 0.35 + r() * 0.45, lean = 0.1 + r() * 0.25;
-    const c = cyl(0.015, 0.07 + r() * 0.05, h, 6, {}); c.rotateZ(lean); c.rotateY(a); c.translate(Math.cos(a) * 0.05, 0.05 + r() * 0.1, Math.sin(a) * 0.05);
-    parts.push(c);
+  const r = rng(seed), parts = [];
+  parts.push(plantColor(plantStem([0,0,0],[.01,.52,0],.009),0x554c3b));
+  for (let i = 0; i < 7; i++) {
+    const a=i*2.4,h=.12+i*.045,L=.22+r()*.10;
+    const end=[Math.cos(a)*L,h+.12+r()*.15,Math.sin(a)*L];
+    parts.push(plantColor(plantStem([0,h,0],end,.003),0x635a47));
+    for(let k=0;k<5;k++)for(let j=0;j<3;j++){
+      const q=(k+.6)/5,b=blade(.008,.038,{curl:.08,cup:.2,seg:2});b.rotateX(-.8);b.rotateY(a+j*2.1);
+      b.translate(end[0]*q,h+(end[1]-h)*q,end[2]*q);parts.push(plantColor(b,0x455b4b));
+    }
   }
   return merge(parts);
 }
@@ -215,8 +227,8 @@ export function buildGardens(M, ctx) {
   M.cabbage = leafMat(0x6b7556, 0.6);     // loose outer leaves, yellowing
   M.leek = leafMat(0x4c5b4b, 0.5);
   M.deadStalk = withSnow(new THREE.MeshStandardMaterial({ color: 0x5a4a38, roughness: 0.95 }), { minUp: 0.6, strength: 0.6 });
-  M.herb = leafMat(0x69705f, 0.9, 0.9);   // sage, rosemary, thyme: grey-green, dusted with snow
-  M.juniper = leafMat(0x28362b, 0.9, 0.9);
+  M.herb = leafMat(0xffffff, 0.8, 0.9); M.herb.vertexColors=true;
+  M.juniper = leafMat(0xffffff, 0.8, 0.9); M.juniper.vertexColors=true;
   M.burdock = leafMat(0x3e3b2a, 0.5, 0.9);
   M.turnipLeaf = leafMat(0x44503a, 0.7);
   M.strawExt = withSnow(M.straw.clone(), { minUp: 0.4, strength: 0.8 });

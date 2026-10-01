@@ -17,6 +17,7 @@ import { BankLibrary, STEP_BANKS } from './audio/banks.js';
 import { SURFACES, SURFACE_ALIAS, STEP_PLAY } from './audio/steps.js';
 import { SPACES, ZONE_ACOUSTIC, makeIR } from './audio/reverb.js';
 import { KINDS } from './audio/emitters.js';
+import { churchPath } from './audio/churchPaths.js';
 import { rand, dB } from './audio/dsp.js';
 
 export { SURFACES, KINDS, SPACES };
@@ -54,13 +55,20 @@ class Emitter {
     this.far = o.far ?? this.K.far ?? 0; this.spot = o.spot || null; this.onHit = o.onHit || null; this.lead = o.lead ?? 0.3; this.dist = 99;
   }
   get pos() { return this._pos; }
-  set pos(p) { if (Array.isArray(p)) { this._pos.x = p[0]; this._pos.y = p[1]; this._pos.z = p[2]; } else { this._pos.x = p.x; this._pos.y = p.y; this._pos.z = p.z; } }
+  set pos(p) { this.setPosition(p); }
+  setPosition(p) {
+    const [x, y, z] = Array.isArray(p) ? p : [p?.x, p?.y, p?.z];
+    if (![x, y, z].every(Number.isFinite)) return false;
+    Object.assign(this._pos, { x, y, z });
+    return true;
+  }
   remove() { this.snd.removeEmitter(this); }
 }
 
 export class Sound {
   constructor(opts = {}) {
     this.on = false; this.ctx = null; this.opts = opts;
+    this.hear = opts.hear ?? null;   // ?hear=<supplied recording>: an in-place listening test
     this.emitters = []; this.bellPos = null;
     this.banks = new Map(); this.irs = new Map(); this.queue = []; this.synthMs = {}; this.lib = null;
     this.voices = 0; this.errors = 0;
@@ -300,10 +308,16 @@ export class Sound {
   _tickEmitter(e, d, now) {
     const K = e.K, S = this.S;
     e.dist = d;
-    if (!e.active) { if (d < e.radius) this._activate(e, now); else return; }
-    else if (d > e.radius * 1.15 + 2) { this._deactivate(e); return; }
+    if (!e.active) { if (K.persistent || d < e.radius) this._activate(e, now); else return; }
+    else if (!K.persistent && d > e.radius * 1.15 + 2) { this._deactivate(e); return; }
     const n = e.n;
-    if (n.pan && (n.px !== e._pos.x || n.py !== e._pos.y || n.pz !== e._pos.z)) { setPos(n.pan, e._pos.x, e._pos.y, e._pos.z); n.px = e._pos.x; n.py = e._pos.y; n.pz = e._pos.z; }
+    const path = e.kind === 'chant' ? (e.path = churchPath(S, e.pos, this.world, e.ref)) : null;
+    const p = path?.pos || e._pos;
+    if (n.pan && (n.px !== p.x || n.py !== p.y || n.pz !== p.z)) {
+      if (path && n.pan.positionX) { smooth(n.pan.positionX,p.x,now,.2);smooth(n.pan.positionY,p.y,now,.2);smooth(n.pan.positionZ,p.z,now,.2); }
+      else setPos(n.pan,p.x,p.y,p.z);
+      n.px=p.x;n.py=p.y;n.pz=p.z;
+    }
     // occlusion 0 (same room) .. 1 (one wall or door) .. 2 (another building)
     const occ = K.occ ? K.occ(S) : this._occ(e);
     const act = K.act ? K.act(S) : 1;
@@ -311,7 +325,8 @@ export class Sound {
     if (e.flat) { const u = Math.max(0, 1 - d / e.radius); lvl *= u * u; send = 0.7; }
     else send = Math.sqrt(e.ref / Math.max(d, e.ref));        // the room keeps sounding as the source recedes
     // air and walls
-    const lpf = occ > 1 ? 420 : occ > 0.5 ? 700 + (1 - occ) * 1400 : occ > 0.3 ? 2200 : Math.max(1800, 18000 / (1 + d / 30));
+    let lpf = occ > 1 ? 420 : occ > 0.5 ? 700 + (1 - occ) * 1400 : occ > 0.3 ? 2200 : Math.max(1800, 18000 / (1 + d / 30));
+    if (path) { lvl=e.gain*K.gain*path.level;send=path.wet;lpf=path.lp; }
     const c = e.cache;
     if (Math.abs(c[0] - lvl) > 0.002) { smooth(n.g.gain, lvl, now, 0.25); c[0] = lvl; }
     if (Math.abs(c[1] - send) > 0.01) { smooth(n.sg.gain, send, now, 0.25); c[1] = send; }
@@ -337,7 +352,7 @@ export class Sound {
         if (on) e.liveOff = null;
         else {
           if (e.liveOff == null) e.liveOff = now;
-          if (now - e.liveOff > 8) { e.live.stop(); e.live = null; e.liveOff = null; }
+          if (!K.persistent && now - e.liveOff > 8) { e.live.stop(); e.live = null; e.liveOff = null; }
         }
       }
     }
@@ -350,7 +365,7 @@ export class Sound {
         if (!ev.gen) {
           // too close for a sound that has no visible maker, or nobody to make it
           if (Math.random() > act || (e.far && d < e.far)) { ev.next = t + rand(...ev.d.gap); continue; }
-          if (e.spot) { const p = e.spot(ev.d); if (!p) { ev.next = t + rand(...ev.d.gap); continue; } e.pos = p; }
+          if (e.spot && !e.setPosition(e.spot(ev.d))) { ev.next = t + rand(...ev.d.gap); continue; }
           ev.gen = ev.d.run(api);
         }
         api.t = t;
@@ -433,7 +448,7 @@ export class Sound {
     gn.gain.value = g * (1 - 0.684 * occ) * dB(rand(-1.5, 1.5));
     lp.type = 'lowpass'; lp.frequency.value = occ > 0.5 ? 700 : Math.min(o.lp ?? 18000, Math.max(1500, 18000 / (1 + d / 30)));
     pan.panningModel = 'equalpower'; pan.distanceModel = 'inverse'; pan.refDistance = ref; pan.rolloffFactor = 1; setPos(pan, x, y, z);
-    sg.gain.value = Math.sqrt(ref / Math.max(d, ref));
+    sg.gain.value = 0.35 * (ref / Math.max(d, ref)) ** 2;
     gn.connect(lp); lp.connect(pan); pan.connect(this.dry); lp.connect(sg); sg.connect(this.send);
     const s = this._src(buf, o.when ?? C.currentTime, r); s.connect(gn);
     s.addEventListener('ended', () => { gn.disconnect(); lp.disconnect(); pan.disconnect(); sg.disconnect(); });
@@ -464,7 +479,7 @@ export class Sound {
     if (!this.ctx || !this.on) return;
     const m = NPC[kind]; if (!m) return;
     const S = this.S, d = Math.hypot(x - S.x, y - S.y, z - S.z);
-    if (d > 30) return;
+    if (d > 30 || Math.abs(y - S.y) > 3.5) return;
     let bank = m[0];
     if (kind === 'chop' && S.indoor < 0.5) bank = 'axe';
     let occ = 0;
@@ -527,13 +542,10 @@ export class Sound {
     s.addEventListener('ended', () => { f.disconnect(); g.disconnect(); });
   }
   // a heavy hinge (the mirror door, the secret passages)
-  creak() {
+  creak(pos) {
     if (!this.ctx || !this.on) return;
-    const bk = this._bank('doorCreak'); if (!bk) return;
-    const C = this.ctx, buf = bk.bufs[0];
-    const g = C.createGain(); g.gain.value = 0.7; g.connect(this.dry); g.connect(this.send);
-    const s = this._src(buf, C.currentTime, rand(0.9, 1.05)); s.connect(g);
-    s.addEventListener('ended', () => g.disconnect());
+    const p=pos || this.S;
+    this._shot('doorCreak',p.x,p.y,p.z,.4,{ref:2,rate:.94});
   }
 }
 

@@ -5,6 +5,7 @@ import { createLibrary, rot, sectorPoints, pointInPoly } from '../core/library.j
 import { Batch, wall, wallLoop, spiral, prism, vault, box, cyl, merge, place, quad, sphere, lathe, vaultSmooth } from '../core/kit.js';
 import { scrollTexture, canvasTex } from '../core/materials.js';
 import * as F from './furniture.js';
+import { shelfAddress } from './discoveryProps.js';
 import { STAIR_E, WELL, HIDDEN_STAIR } from './aedificium.js';
 import { Reflector } from 'three/addons/objects/Reflector.js';
 
@@ -122,7 +123,7 @@ export function buildLibrary(M, ctx, { emit, interact, toWorld }) {
       if (e.door || e.mirror) openingsOf.get(id).push({ e, w: e.mirror ? 1.5 : doorW + 0.5 });
     }
   }
-  let variant = 0;
+  let variant = 0, examplePlaced = false;
   const rooms3 = [];
   for (const room of L.rooms) {
     const poly = room.poly;
@@ -159,6 +160,10 @@ export function buildLibrary(M, ctx, { emit, interact, toWorld }) {
         const ok = left[0] * n[0] + left[1] * n[1] > 0;
         const h = isWinEdge ? 1.55 : 2.7;
         F.bookcase(b, ok ? p : q, ok ? q : p, y, h, 0.42, { variant: variant++ });
+        if (room.id === 'E.hall' && h > 2 && !examplePlaced) {
+          shelfAddress(b, M, ok ? p : q, ok ? q : p, y, h, 0.42, interact);
+          examplePlaced = true;
+        }
       }
       void ops;
     }

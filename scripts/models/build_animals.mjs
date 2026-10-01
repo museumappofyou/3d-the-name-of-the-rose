@@ -3,6 +3,8 @@
 // poly.pizza, and three static Google Poly models (CC BY 3.0): hen, rooster,
 // goat. Each is welded and given smooth normals (the sources are flat-shaded
 // low-poly), stripped to the calm clips the abbey uses, and meshopt-packed.
+// (The pig and the sheep are no longer Quaternius': animal_pig.glb and
+// animal_sheep.glb come from pack_pig.mjs and pack_sheep.mjs.)
 //   node scripts/models/build_animals.mjs SRC_DIR OUT_DIR
 import { NodeIO } from '@gltf-transform/core';
 import { ALL_EXTENSIONS, EXTMeshoptCompression } from '@gltf-transform/extensions';
@@ -14,7 +16,7 @@ const [,, SRC, OUT] = process.argv;
 await MeshoptEncoder.ready; await MeshoptDecoder.ready;
 const io = new NodeIO().registerExtensions(ALL_EXTENSIONS).registerDependencies({ 'meshopt.encoder': MeshoptEncoder, 'meshopt.decoder': MeshoptDecoder });
 const KEEP = /^(Idle|Idle_2|Idle_Headlow|Idle_Eating|Eating|Walk)$/;
-const LIST = ['horse', 'donkey', 'cow', 'bull', 'pig', 'sheep', 'husky', 'cat', 'hen1', 'rooster', 'goat1'];
+const LIST = ['horse', 'donkey', 'cow', 'bull', 'husky', 'cat', 'hen1', 'rooster', 'goat1'];
 for (const id of LIST) {
   const doc = await io.read(path.join(SRC, id + '.glb'));
   const r = doc.getRoot(), seen = new Set();

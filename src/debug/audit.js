@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { computeBoundsTree, acceleratedRaycast } from 'three-mesh-bvh';
 import { zoneAt, ZONES } from '../systems/zones.js';
+import { yieldTask } from './taskYield.js';
 
 // Structural audits, run from the console with ?debug:
 //   await __audit.leaks()      rays cast upward from every enclosed floor;
@@ -103,7 +104,7 @@ export function installAudit(app) {
   const routes = async (list, opts) => {
     if (!list) list = (await import('../data/routes.js')).ROUTES;
     const out = [];
-    for (const r of list) { out.push(await walk(r, opts)); await new Promise(res => setTimeout(res, 0)); }
+    for (const r of list) { out.push(await walk(r, opts)); await yieldTask(); }
     return out;
   };
   // every registered door, walked from outside to inside and back
@@ -118,7 +119,7 @@ export function installAudit(app) {
       const r1 = await walk({ id: d.id + ' in', pts: [[ox, gy + 0.1, oz], [d.x + d.nx * 0.3, d.y, d.z + d.nz * 0.3], [ix, d.y, iz]] }, { timeout: 12 });
       const r2 = await walk({ id: d.id + ' out', pts: [[ix, d.y + 0.05, iz], [ox, gy, oz]] }, { timeout: 12 });
       out.push({ id: d.id, in: r1.ok, out: r2.ok, rise: +(d.y - gy).toFixed(2), stuck: r1.log[0]?.stuck || r2.log[0]?.stuck || null });
-      await new Promise(res => setTimeout(res, 0));
+      await yieldTask();
     }
     return out;
   };

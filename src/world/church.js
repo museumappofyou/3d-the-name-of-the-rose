@@ -6,6 +6,7 @@ import * as SC from './props/sacred.js';
 import * as CL from './props/cloth.js';
 import { propMaterials } from '../core/propMaterials.js';
 import { dress } from '../core/weathering.js';
+import { underground } from '../core/materials.js';
 import { entombmentRelief } from '../core/relief.js';
 import * as F from './furniture.js';
 
@@ -370,7 +371,7 @@ export function buildChurch(M, ctx) {
   // knobs on the arm-rests, dividers between the monks.
   for (const s of [-1, 1]) {
     const ry = s < 0 ? 0 : Math.PI;
-    const xs = xC + 0.6, xe = xCh + 3.4, L = xe - xs, n = Math.round(L / 0.62), w = L / n;
+    const xs = xC + 0.6, xe = xCh + 3.4, L = xe - xs, n = Math.round(L / 0.72), w = L / n;
     for (const [row, off, rise] of [[0, 2.45, 0], [1, 3.35, 0.35]]) {
       const zz = zc + s * off;
       const st = SC.stallRow(n, { w, back: row ? 2.3 : 0.95, platform: 0.2 + rise });
@@ -821,25 +822,37 @@ function bones(b, x, y, z, ang, kind, f = [0, 1]) {
 // columns"; dusty display cases; relics and curiosities.
 function crypt(und, inn, M, ctx, y0, ax) {
   const y = -3.0, xa = xCh + 0.6, xb = xA + 0.1, za = zc - 3.8, zb = zc + 3.8;
-  und.add('flag', prism([[xa, za], [xb, za], [xb, zb], [xa, zb]], y - 0.3, y));
-  und.add('damp', wallLoop([[xa, za], [xb, za], [xb, zb], [xa, zb]], y, -0.1, 0.8, { 1: [{ t: 3.8, w: 1.3, y0: 0, y1: 1.7, arch: 'round' }] }));
+  // The crypt "resembles the room where the dead monks' bones lie, but is
+  // more magnificent" (claim_002459, EXPLICIT): the ossuary's own
+  // rough-hewn rock, not the architecture's wet rubble ('damp') nor white
+  // lime. Under ground the weathering pass sees every point as the foot of
+  // a wall (terrain above), so 'damp' went fully wet from floor to crown:
+  // roughness ~0.4 under normalScale 1.6, and at the torches' grazing
+  // incidence the rubble broke into crumpled-foil glints; the white plaster
+  // vault (albedo #f6eee0, the brightest surface in the room) sat 0.3-0.5 m
+  // above the flames and burned gold. Both now take p.cryptStone (grain
+  // 1.5 m, normal 0.75, rough 0.9) and a sooted vault (p.cryptVault).
+  const RS = 'p.tStone';
+  treasureMats(M);
+  und.add('p.tFlag', prism([[xa, za], [xb, za], [xb, zb], [xa, zb]], y - 0.3, y));
+  und.add(RS, wallLoop([[xa, za], [xb, za], [xb, zb], [xa, zb]], y, -0.1, 0.8, { 1: [{ t: 3.8, w: 1.3, y0: 0, y1: 1.7, arch: 'round' }] }), { surface: 'stoneWet' });
   const cols = [[xa + 2.4, zc - 1.9], [xa + 5.0, zc - 1.9], [xa + 2.4, zc + 1.9], [xa + 5.0, zc + 1.9]];
-  for (const [cx, cz] of cols) und.add('damp', cyl(0.48, 0.52, 1.8, 10, { x: cx, y, z: cz }));
+  for (const [cx, cz] of cols) und.add(RS, cyl(0.48, 0.52, 1.8, 10, { x: cx, y, z: cz }), { surface: 'stoneWet' });
   const xs = [xa, xa + 2.4, xa + 5.0, xb], zs = [za, zc - 1.9, zc + 1.9, zb];
-  for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++) und.add('plaster', vaultSmooth([[xs[i], zs[j]], [xs[i + 1], zs[j]], [xs[i + 1], zs[j + 1]], [xs[i], zs[j + 1]]], y + 1.8, 0.85, { archRise: 0.9 }), { collide: false });
+  for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++) und.add('p.cryptVault', vaultSmooth([[xs[i], zs[j]], [xs[i + 1], zs[j]], [xs[i + 1], zs[j + 1]], [xs[i], zs[j + 1]]], y + 1.8, 0.85, { archRise: 0.9 }), { collide: false });
   // stair down from behind the high altar, heading west under the apse
   const n = 12, sx0 = xA + 3.8, sx1 = xA + 0.2;
   for (let i = 0; i < n; i++) {
     const x1 = sx0 - (i + 1) * (sx0 - sx1) / n, yy = y0 - (i + 1) * (y0 - y) / n;
-    und.add('damp', box((sx0 - sx1) / n + 0.02, 0.4, 1.2, { x: x1 + (sx0 - sx1) / n / 2, y: yy - 0.4, z: zc }), { collide: false });
+    und.add(RS, box((sx0 - sx1) / n + 0.02, 0.4, 1.2, { x: x1 + (sx0 - sx1) / n / 2, y: yy - 0.4, z: zc }), { collide: false });
   }
-  und.add('damp', box(0.9, 0.4, 1.2, { x: sx1 - 0.45 + 0.9, y: y - 0.4 + 0.02, z: zc }), { collide: false });
+  und.add(RS, box(0.9, 0.4, 1.2, { x: sx1 - 0.45 + 0.9, y: y - 0.4 + 0.02, z: zc }), { collide: false });
   und.collider(quad([sx0, y0, zc - 0.62], [sx0, y0, zc + 0.62], [sx1, y, zc + 0.62], [sx1, y, zc - 0.62], 0, 1, 0, 1, true), 'stoneWet');
   // parapets round the stairwell; the north one stops short of the top step so
   // one steps in from the north side, behind the altar (claim_002367 k1657 M)
-  for (const s of [-1, 1]) und.add('damp', wall([s < 0 ? sx0 - 1.35 : sx0 + 0.3, zc + s * 0.85], [xb - 0.4, zc + s * 0.85], y, y0 + 0.9, 0.45));
-  und.add('damp', wall([sx0 - 1.35, zc - 0.85], [sx0 + 0.3, zc - 0.85], y, y0 - 0.02, 0.45));
-  und.add('damp', wall([sx0 + 0.3, zc - 0.85], [sx0 + 0.3, zc + 0.85], y, y0 + 0.9, 0.45));
+  for (const s of [-1, 1]) und.add(RS, wall([s < 0 ? sx0 - 1.35 : sx0 + 0.3, zc + s * 0.85], [xb - 0.4, zc + s * 0.85], y, y0 + 0.9, 0.45), { surface: 'stoneWet' });
+  und.add(RS, wall([sx0 - 1.35, zc - 0.85], [sx0 + 0.3, zc - 0.85], y, y0 - 0.02, 0.45), { surface: 'stoneWet' });
+  und.add(RS, wall([sx0 + 0.3, zc - 0.85], [sx0 + 0.3, zc + 0.85], y, y0 + 0.9, 0.45), { surface: 'stoneWet' });
   // the treasure: iron-bound chests with their lids raised, credence
   // tables under cloths bearing reliquaries and plate, and at the centre
   // "a little temple" of lapis columns framing a silver Entombment; the
@@ -852,13 +865,13 @@ function crypt(und, inn, M, ctx, y0, ax) {
     if (!big && i % 2 === 1) {
       const ch = SC.chest(1.15, 0.55, 0.55, { open: 1.2 });
       und.add('door', o(ch.wood)); und.add('iron', o(ch.iron), { collide: false });
-      und.add('redCloth', o(CL.drape(0.95, 0.4, 0.42, { hang: 0.02, seed: 950 + i, rumple: 1.5, floor: 0.4 })), { collide: false });
-      und.add('gold', o(SC.chalice(1.1), -0.2, 0.44, 0), { collide: false });
-      und.add('silver', o(SC.ciborium(1), 0.2, 0.44, 0.02), { collide: false });
+      und.add('p.tCloth', o(CL.drape(0.95, 0.4, 0.42, { hang: 0.02, seed: 950 + i, rumple: 1.5, floor: 0.4 })), { collide: false });
+      und.add('p.tGold', o(SC.chalice(1.1), -0.2, 0.44, 0), { collide: false });
+      und.add('p.tSilver', o(SC.ciborium(1), 0.2, 0.44, 0.02), { collide: false });
       return;
     }
     const cr = SC.credence(big ? 1.6 : 1.3, 0.62, 0.92);
-    und.add('woodDark', o(cr.wood)); und.add(big ? 'redCloth' : 'p.linenWhite', o(cr.cloth), { collide: false, shadow: false });
+    und.add('woodDark', o(cr.wood)); und.add(big ? 'p.tCloth' : 'p.tLinen', o(cr.cloth), { collide: false, shadow: false });
     const top = 0.94;
     if (big) {
       // the little temple (BOOK, the treasury visit: "an elegant little
@@ -867,44 +880,97 @@ function crypt(und, inn, M, ctx, y0, ax) {
       // veined variegated porphyry, a cross inlaid with thirteen diamonds;
       // its little base worked in agate and rubies in the shape of a
       // scallop shell"). The same relief faces both ways.
-      const T = treasureMats(M), b0 = top + 0.075;
+      const b0 = top + 0.075;
       und.add('p.agate', o(scallop(0.3, 0.07), 0, top, 0), { collide: false });
       const rub = []; for (let k = 0; k < 7; k++) { const a = Math.PI * (0.12 + 0.76 * k / 6); rub.push(o(sphere(0.009, { x: Math.cos(a) * 0.12, y: 0.045 + Math.sin(a) * 0.02, z: -Math.sin(a) * 0.1 + 0.03 }, 6, 4))); }
       und.add('p.ruby', merge(rub), { collide: false, shadow: false });
-      und.add('gold', merge([o(box(0.52, 0.02, 0.17, {}), 0, b0 - 0.02, 0), o(box(0.56, 0.035, 0.2, {}), 0, b0 + 0.43, 0),
+      und.add('p.tGold', merge([o(box(0.52, 0.02, 0.17, {}), 0, b0 - 0.02, 0), o(box(0.56, 0.035, 0.2, {}), 0, b0 + 0.43, 0),
         o(prism([[-0.28, 0], [0.28, 0], [0, -0.1]], -0.09, 0.09).rotateX(Math.PI / 2), 0, b0 + 0.465, 0),
         ...[-0.22, 0.22].flatMap(x => [o(cyl(0.042, 0.046, 0.035, 12, {}), x, b0, 0), o(cyl(0.046, 0.036, 0.04, 12, {}), x, b0 + 0.39, 0)])]), { collide: false });
       und.add('p.lapis', merge([-0.22, 0.22].map(x => o(cyl(0.026, 0.03, 0.355, 12, {}), x, b0 + 0.035, 0))), { collide: false });
-      und.add('silver', o(box(0.36, 0.25, 0.03, {}), 0, b0 + 0.08, 0), { collide: false });
+      und.add('p.tSilver', o(box(0.36, 0.25, 0.03, {}), 0, b0 + 0.08, 0), { collide: false });
       for (const side of [-1, 1]) { const pl = new THREE.PlaneGeometry(0.34, 0.234); if (side < 0) pl.rotateY(Math.PI); und.add('p.entombment', o(pl, 0, b0 + 0.08 + 0.125, side * 0.0162), { collide: false, shadow: false }); }
-      void T;
       // the cross of thirteen stones on its porphyry, above the pediment
       und.add('p.porphyry', o(box(0.15, 0.2, 0.03, {}), 0, b0 + 0.56, 0), { collide: false });
-      und.add('gold', merge([o(box(0.024, 0.15, 0.036, {}), 0, b0 + 0.585, 0), o(box(0.1, 0.024, 0.036, {}), 0, b0 + 0.66, 0)]), { collide: false });
+      und.add('p.tGold', merge([o(box(0.024, 0.15, 0.036, {}), 0, b0 + 0.585, 0), o(box(0.1, 0.024, 0.036, {}), 0, b0 + 0.66, 0)]), { collide: false });
       const dia = []; for (let k = 0; k < 13; k++) { const vtc = k < 8; const q = vtc ? [0, b0 + 0.597 + k * 0.0175] : [-0.04 + (k - 8) * 0.02, b0 + 0.672]; for (const sd of [-1, 1]) dia.push(o(sphere(0.0065, { x: q[0], y: q[1], z: sd * 0.019 }, 6, 4))); }
       und.add('glass', merge(dia), { collide: false, shadow: false });
       const jb = SC.jewelBox();
-      und.add('woodDark', o(jb.wood, 0.55, top, 0.05, 0.3), { collide: false }); und.add('gold', o(jb.gold, 0.55, top, 0.05, 0.3), { collide: false });
+      und.add('woodDark', o(jb.wood, 0.55, top, 0.05, 0.3), { collide: false }); und.add('p.tGold', o(jb.gold, 0.55, top, 0.05, 0.3), { collide: false });
       und.add('stained.2', o(jb.green, 0.55, top, 0.05, 0.3), { collide: false }); und.add('glass', o(jb.quartz, 0.55, top, 0.05, 0.3), { collide: false });
     } else {
       const k = SC.chasse(0.42, 0.2, 0.2);
-      und.add('gold', o(k.gold, -0.3, top, 0), { collide: false }); und.add('stained.2', o(k.stones, -0.3, top, 0), { collide: false });
-      und.add('silver', o(SC.armReliquary(1.1), 0.25, top, -0.05), { collide: false });
-      und.add('gold', o(SC.chalice(1), 0.48, top, 0.12), { collide: false });
+      und.add('p.tGold', o(k.gold, -0.3, top, 0), { collide: false }); und.add('stained.2', o(k.stones, -0.3, top, 0), { collide: false });
+      und.add('p.tSilver', o(SC.armReliquary(1.1), 0.25, top, -0.05), { collide: false });
+      und.add('p.tGold', o(SC.chalice(1), 0.48, top, 0.12), { collide: false });
     }
   });
-  for (const [cx, cz] of [[xa + 0.3, zc - 1.0], [xa + 0.3, zc + 1.0]]) F.torch(und, cx, y + 1.3, cz, Math.PI / 2, ctx.emit);
+  // The treasure "gleamed in the light of the torches" Nicola's two
+  // assistants had lit (claim_002375, EXPLICIT), seen "now in abundant
+  // light, now in half-darkness" (claim_002400, EXPLICIT). Both torches
+  // used to hang on the west wall directly behind the little temple, so
+  // the relief's face toward the stair got only back-light, and their
+  // flames sat above the vault springing, 0.3-0.5 m under the vault. They
+  // now stand in brackets on the north and south walls just east of the
+  // temple (in the gap between the chests and credences), below the
+  // springing: a raking light across the relief and the cases, with the
+  // far west end left in half-darkness. (A shorter reach than the
+  // furniture torch: the flame pool gives every light decay 1.6, so a torch
+  // with an 11 m window floods this 7×7 m room evenly; a 3 m window —
+  // 6.3 m in the pool — lets the light fall away into the corners.)
+  const emitT = e => ctx.emit({ ...e, intensity: 4, distance: 3 });
+  for (const s of [-1, 1]) F.torch(und, xa + 4.95, y + 0.95, zc + s * 3.5, s < 0 ? 0 : Math.PI, emitT);
   ctx.interact({ id: 'treasury', pos: new THREE.Vector3(xa + 3.7, y + 1.2, zc), radius: 4.2, label: 'The treasury crypt' });
   ctx.anchors.crypt = [xa + 3.7, zc];
   void ax; void M;
 }
 
+// What the treasure's metal and stone reflect. A metal has no diffuse
+// term: it shows only its surroundings and the lamps' highlights. Here the
+// surroundings were the scene environment, the night *sky* PMREM, at
+// scene.environmentIntensity 0.097 — and three r180 substitutes that value
+// for every material's own envMapIntensity whenever material.envMap is
+// null, so the Entombment's 1.25 and the gold's 1.4 never applied. The
+// silver relief therefore read black beside torch-lit rock. This is a
+// small equirect of the crypt itself as the temple sees it: dark sooted
+// vault, torch-lit rock in a band at eye level brightest toward the two
+// torches (north and south, a little east), dim flags below, and the
+// flames as small hot spots. Linear radiance, half float, 128×64; three
+// prefilters it (PMREM) on first use. Only the treasury's materials take it.
+function cryptEnv() {
+  const W = 128, H = 64, d = new Uint16Array(W * H * 4), h = THREE.DataUtils.toHalfFloat;
+  const torches = [[1.25, 0.55, -3.08], [1.25, 0.55, 3.08]].map(v => { const l = Math.hypot(...v); return v.map(c => c / l); });
+  let sd = 5; const r = () => (sd = (sd * 16807) % 2147483647) / 2147483647;
+  const lumps = Array.from({ length: 40 }, () => [r() * 2 * Math.PI, (r() - 0.3) * 0.9, 0.15 + r() * 0.25, 0.4 + r() * 0.8]);
+  for (let j = 0; j < H; j++) for (let i = 0; i < W; i++) {
+    // three's equirectUv: u = atan(z, x)/2π + .5, v = asin(y)/π + .5
+    const az = ((i + 0.5) / W - 0.5) * 2 * Math.PI, el = ((j + 0.5) / H - 0.5) * Math.PI;
+    const dir = [Math.cos(el) * Math.cos(az), Math.sin(el), Math.cos(el) * Math.sin(az)];
+    let lit = 0; for (const t of torches) lit = Math.max(lit, dir[0] * t[0] + dir[1] * t[1] + dir[2] * t[2]);
+    const band = Math.exp(-(((el - 0.12) / 0.45) ** 2));          // torch-lit walls at eye level
+    let L = el < -0.25 ? 0.012 : el > 0.7 ? 0.018 : 0.022 + 0.075 * band * (0.35 + 0.65 * Math.max(0, lit) ** 3);
+    for (const [la, le, lr, lk] of lumps) { const da = Math.atan2(Math.sin(az - la), Math.cos(az - la)); L *= 1 + 0.35 * (lk - 0.8) * Math.exp(-(da * da + (el - le) ** 2) / (lr * lr)); }
+    L += 3.2 * Math.exp(-((1 - lit) / 0.0035));                   // the flames (≈5° across)
+    const o = (j * W + i) * 4;
+    d[o] = h(L * 1.0); d[o + 1] = h(L * 0.66); d[o + 2] = h(L * 0.4); d[o + 3] = h(1);
+  }
+  const t = new THREE.DataTexture(d, W, H, THREE.RGBAFormat, THREE.HalfFloatType);
+  t.mapping = THREE.EquirectangularReflectionMapping; t.colorSpace = THREE.LinearSRGBColorSpace;
+  t.magFilter = t.minFilter = THREE.LinearFilter; t.generateMipmaps = false; t.needsUpdate = true;
+  return t;
+}
 // the treasury's precious materials (relief maps made once)
 function treasureMats(M) {
   const P = M.p || (M.p = {});
   if (P.entombment) return P;
-  const R = entombmentRelief();
-  P.entombment = new THREE.MeshStandardMaterial({ color: 0xe2e2e6, map: R.map, normalMap: R.normalMap, normalScale: new THREE.Vector2(1.3, 1.3), metalness: 0.92, roughness: 0.36, envMapIntensity: 1.25 });
+  const R = entombmentRelief(), env = cryptEnv();
+  // (silver and gold of the crypt's own: the church's M.gold/M.silver keep
+  // the sky environment of the choir above; old silver a little warm and
+  // dulled, the gilding slightly less polished than new leaf)
+  P.tSilver = new THREE.MeshStandardMaterial({ color: 0xc4c0b8, roughness: 0.3, metalness: 1, envMap: env, envMapIntensity: 1 });
+  P.tGold = new THREE.MeshStandardMaterial({ color: 0xd2a95a, roughness: 0.3, metalness: 1, envMap: env, envMapIntensity: 1 });
+  P.entombment = new THREE.MeshStandardMaterial({ color: 0xe2e2e6, map: R.map, normalMap: R.normalMap, normalScale: new THREE.Vector2(1.3, 1.3), metalness: 0.92, roughness: 0.36, envMap: env, envMapIntensity: 1 });
+  P.tCloth = M.redCloth.clone(); P.tLinen = M.p.linenWhite.clone();
   // lapis lazuli: deep blue with flecks of pyrite; porphyry: purple-red
   // with pale veins; agate: warm translucent banding
   const fleck = (base, spots, n, veins) => {
@@ -920,6 +986,9 @@ function treasureMats(M) {
   P.porphyry = new THREE.MeshStandardMaterial({ map: fleck('#6a2332', ['#d8b8b0', '#8a3a48'], 180, 'rgba(230,200,190,0.55)'), roughness: 0.25, envMapIntensity: 1.0 });
   P.agate = new THREE.MeshStandardMaterial({ map: fleck('#a8612f', ['#e0a060', '#7a3a18'], 120, 'rgba(240,200,150,0.5)'), roughness: 0.22, envMapIntensity: 1.0 });
   P.ruby = new THREE.MeshStandardMaterial({ color: 0x9c0f22, roughness: 0.12, metalness: 0.1, emissive: 0x2a0005, envMapIntensity: 1.6 });
+  for (const k of ['lapis', 'porphyry', 'agate', 'ruby']) { P[k].envMap = env; P[k].envMapIntensity = 1; }
+  // everything on show down here is closed to the church's lights above
+  for (const k of ['tSilver', 'tGold', 'entombment', 'tCloth', 'tLinen', 'lapis', 'porphyry', 'agate', 'ruby']) underground(P[k]);
   return P;
 }
 // a scallop shell lying open, hinge at the back: ribs radiating in a fan

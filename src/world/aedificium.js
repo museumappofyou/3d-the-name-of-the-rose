@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { catalogueSpread } from './discoveryProps.js';
 import * as CL from './props/cloth.js';
 import * as SP from './props/sculpt.js';
 import { pointInPoly as pointIn } from '../core/library.js';
@@ -582,7 +583,7 @@ function kitchen(b, M, emit, interact, ossPoly, OSS) {
       b.add('woodDark', place(box(0.1, 0.02, 0.025, {}), { x: px - 0.12, y: top + 0.045, z: pz - 0.06, ry: r + 0.5 }), { collide: false, shadow: false });
       for (let k = 0; k < 5; k++) b.add('p.greens', place(box(0.05, 0.02, 0.03, {}), { x: px - 0.1 + k * 0.05, y: top + 0.045, z: pz + 0.08, ry: k }), { collide: false, shadow: false }); }
     for (let k = 0; k < 4; k++) { const [px, pz] = T(0.95 + (k % 2) * 0.1, 0.2 + k * 0.07); b.add('p.onion', sphere(0.04, { x: px, y: top + 0.04, z: pz, sy: 0.85 }, 8, 6), { collide: false }); }
-    { const [px, pz] = T(1.35, -0.2); b.add('p.greens', place(SP.mound(0.22, 0.22, 0.16, { seed: 830 + ti }), { x: px, y: top, z: pz }), { collide: false }); }
+    { const [px, pz] = T(1.35, -0.2); b.add('p.cabbage', place(SP.cabbage(830 + ti, { r: 0.095 + ti * 0.01 }), { x: px, y: top - 0.01, z: pz, ry: ti * 1.7 }), { collide: false }); }
     { const [px, pz] = T(1.5, 0.25); b.add('p.earthenware', place(CL.bowl(0.16, 0.08), { x: px, y: top, z: pz }), { collide: false }); b.add('p.glazeBrown', place(CL.jug(1.1), { x: px + 0.2, y: top, z: pz - 0.1 }), { collide: false }); }
     { const [px, pz] = T(-1.9, 0.75); b.add('straw', lathe([[0, 0], [0.22, 0], [0.3, 0.32], [0.27, 0.34], [0.2, 0.04], [0, 0.04]], 16, { x: px, y, z: pz }));
       b.add('p.onion', place(SP.mound(0.45, 0.45, 0.1, { seed: 840 + ti }), { x: px, y: y + 0.27, z: pz }), { collide: false }); }
@@ -682,7 +683,10 @@ function scriptorium(b, M, emit, interact, ring) {
       const toC = [tc[0] - mid[0], tc[1] - mid[1]], L = Math.hypot(...toC);
       const off = A.wallOut / 2 + 0.55;
       const x = mid[0] + toC[0] / L * off, z = mid[1] + toC[1] / L * off;
-      const ry = Math.atan2(toC[0], toC[1]) + Math.PI;
+      // The desk's +z is the seated side: bench toward the tower centre,
+      // page toward the window (claim_000403). The previous half-turn put
+      // the bench, neck and shins inside the exterior wall.
+      const ry = Math.atan2(toC[0], toC[1]);
       F.desk(b, x, y, z, ry, { small: false, rest: (f + k) % 2 === 0 });
       count++;
     }
@@ -702,6 +706,7 @@ function scriptorium(b, M, emit, interact, ring) {
   F.table(b, md[0], y, md[1], 0, 1.6, 0.8, 0.82);
   F.lectern(b, md[0] - 0.9, y, md[1] + 1.5, Math.PI / 2);
   b.add('parchment', box(0.55, 0.14, 0.4, { x: md[0] + 0.3, y: y + 0.82, z: md[1] }), { collide: false });
+  catalogueSpread(b, M, md[0] + 0.3, y + 0.964, md[1]);
   b.add('gold', box(0.02, 0.02, 0.5, { x: md[0] + 0.5, y: y + 0.83, z: md[1] + 0.25 }), { collide: false });
   F.chair(b, md[0], y, md[1] - 0.8, 0);
   interact({ id: 'catalogue', pos: [md[0], y + 1.1, md[1]], radius: 2.0, label: 'The catalogue, chained to Malachi’s desk' });

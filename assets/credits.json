@@ -511,7 +511,49 @@
    "title": "People",
    "items": [
     {
-     "title": "Photoscanned characters (heads and hands)",
+     "title": "Authored bodies, system skins, eyes, brows, hair and rig (MakeHuman / MPFB)",
+     "author": "MakeHuman Community; Data Collection AB, Joel Palmius, Jonas Hauquier and contributors",
+     "license": "CC0 1.0 (exported assets)",
+     "url": "https://static.makehumancommunity.org/about/license.html"
+    },
+    {
+     "title": "Monk robe and raised/fallen hood; fitted, simplified, dark wool textures and sitting weights adapted",
+     "author": "Donitz",
+     "license": "CC0 1.0",
+     "url": "https://static.makehumancommunity.org/assets/assetpacks/suits02.html"
+    },
+    {
+     "title": "Lay tunic, trousers and boots; fitted and stripped of mail/ornament in the derived texture",
+     "author": "Rehman Polanski",
+     "license": "CC0 1.0",
+     "url": "https://static.makehumancommunity.org/assets/assetpacks/suits02.html"
+    },
+    {
+     "title": "Ankle boots, weathered skin variants",
+     "author": "MRT / toigo",
+     "license": "CC0 1.0",
+     "url": "https://static.makehumancommunity.org/assets/assetpacks/shoes01.html"
+    },
+    {
+     "title": "Additional old skin treatments",
+     "author": "onlytheghosts; jartur69",
+     "license": "CC0 1.0",
+     "url": "https://static.makehumancommunity.org/assets/assetpacks/skins02.html"
+    },
+    {
+     "title": "Short messy hair",
+     "author": "cortu",
+     "license": "CC0 1.0",
+     "url": "https://static.makehumancommunity.org/assets/assetpacks/hair01.html"
+    },
+    {
+     "title": "Ladies apron; fitted to workers, simplified and textured as stained linen / leather",
+     "author": "Elvaerwyn (elvs)",
+     "license": "CC BY (as supplied)",
+     "url": "https://static.makehumancommunity.org/assets/assetpacks/dress02.html"
+    },
+    {
+     "title": "Legacy photoscanned heads and hands (retained source assets; superseded in the live cast)",
      "author": "elbolilloduro, via Mesh2Motion",
      "license": "CC0 1.0",
      "url": "https://github.com/Mesh2Motion/mesh2motion-app"
@@ -527,6 +569,36 @@
      "author": "Carnegie Mellon University Graphics Lab, retargeted by Mesh2Motion",
      "license": "free for all uses",
      "url": "http://mocap.cs.cmu.edu/"
+    },
+    {
+     "title": "Low medieval boots worn by several lay servants; fitted, simplified, re-toned",
+     "author": "punkduck",
+     "license": "CC BY (as supplied)",
+     "url": "http://www.makehumancommunity.org/node/1381"
+    },
+    {
+     "title": "Scruffy beard (thresher, oldest kitchen servant)",
+     "author": "WDG",
+     "license": "CC0 1.0",
+     "url": "http://www.makehumancommunity.org/node/1769"
+    },
+    {
+     "title": "Rough beard and rough moustache (swineherd, carter)",
+     "author": "RehmanPolanski",
+     "license": "CC0 1.0",
+     "url": "http://www.makehumancommunity.org/node/2614"
+    },
+    {
+     "title": "Short chin beard (smith's striker, porter)",
+     "author": "culturalibre",
+     "license": "CC0 1.0",
+     "url": "http://www.makehumancommunity.org/node/2356"
+    },
+    {
+     "title": "Full trimmed beard (baker)",
+     "author": "grinsegold",
+     "license": "CC0 1.0",
+     "url": "http://www.makehumancommunity.org/node/877"
     }
    ]
   },
@@ -534,7 +606,27 @@
    "title": "Animals",
    "items": [
     {
-     "title": "Ultimate Animated Animals, Farm Animals (horse, donkey, cow, bull, pig, sheep, dog, cat)",
+     "title": "Realtime Rancher horse mesh and photographic coat; metric conversion, new complete 23-joint rig, quiet planted-hoof motions and unmarked black coat adaptation",
+     "author": "Lyndon Daniels; ChadM (rigged source derivative)",
+     "license": "CC0 1.0",
+     "url": "https://opengameart.org/content/rigged-horse"
+    },
+    {
+     "title": "Pig (rigged, textured); simplified, lower legs lengthened, metric, idle and rooting clips; medieval black, brown and belted coats set in the app",
+     "author": "BojanBabic (@bokadigimon)",
+     "license": "CC BY 4.0",
+     "url": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-023/6d78fe9cec03483ba6d3e4ff30dc6265.glb",
+     "note": "Objaverse copy of Sketchfab 6d78fe9cec03483ba6d3e4ff30dc6265 (the Sketchfab page is gone; the licence is embedded in the file)"
+    },
+    {
+     "title": "Sheep; metric conversion, new seven-joint rig, planted-hoof idle and grazing motions; shared by sheep and lambs",
+     "author": "hendrikReyneke",
+     "license": "CC BY 4.0",
+     "url": "https://sketchfab.com/3d-models/sheep-67abff7459f34afca11e3effab62c761",
+     "note": "Downloaded source from the Objaverse mirror; author, source URL and licence preserved in GLB asset.extras. Rig, motions, texture compression and coat adaptation are modifications."
+    },
+    {
+     "title": "Ultimate Animated Animals / Farm Animals (legacy horse; donkey, cow, bull, dog, cat)",
      "author": "Quaternius",
      "license": "CC0 1.0",
      "url": "https://poly.pizza/u/Quaternius"

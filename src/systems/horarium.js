@@ -51,7 +51,7 @@ export const PHASES = [
   { id: 'night', t0: 19.2, t1: 24 },
 ];
 
-const wrap = t => ((t % 24) + 24) % 24;
+const wrap = t => Math.round((((t % 24) + 24) % 24) * 1e9) / 1e9;
 export function phaseAt(t) {
   t = wrap(t);
   for (const p of PHASES) if (t >= p.t0 && t < p.t1) return p;
@@ -64,3 +64,7 @@ export function officeAt(t) {
 // is this an hour at which daily work goes on (fields, kitchen, forge)?
 export const isWork = t => { const p = phaseAt(t).id; return p === 'work' || (p === 'office' && !officeAt(t)?.full); };
 export const isDaylight = t => { t = wrap(t); return t > 7.3 && t < 16.8; };
+// claim_000173: locked after the evening meal. The implementation's meal
+// boundary is shared with the people; these are study hours, not a clock
+// that rings bells while the user scrubs a preview.
+export const aedificiumBarred = t => { t = wrap(t); return t >= PHASES.find(p => p.id === 'supper').t1 || t < 5.2; };

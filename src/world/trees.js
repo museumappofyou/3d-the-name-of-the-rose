@@ -357,7 +357,7 @@ function stonePineGeo(seed, A) {
 }
 
 // ---------------------------------------------------------------------
-// broadleaf trees: recursive, curved, tapering branches; twig cards
+// Broadleaf trees: bare tapering limbs and solid fine winter shoots.
 // ---------------------------------------------------------------------
 const rand = (r, [a, b]) => a + (b - a) * r();
 function perp(d) { const a = Math.abs(d.y) < 0.9 ? UP : V(1, 0, 0); return V().crossVectors(d, a).normalize(); }
@@ -409,19 +409,13 @@ function broadleafGeo(seed, S, A) {
       }
     }
     if (!next || L.cards) {
-      // twig cards continue the branch into a fan of fine shoots
+      // Real shoots replace the overlapping flat fans at exposed crowns.
       terminals++;
-      const nc = S.cardsPer;
-      const tip = pts[pts.length - 1], base = at(S.cardAt).p;
-      for (let k = 0; k < nc; k++) {
-        const dd = d.clone().addScaledVector(V(r() - 0.5, (r() - 0.5) * 0.6, r() - 0.5), 0.5).normalize();
-        const a = perp(dd).applyAxisAngle(dd, r() * Math.PI);
-        const H = S.card * (0.8 + r() * 0.4), Wd = H * 0.95;
-        const o = base.clone().lerp(tip, k / Math.max(1, nc));
-        const reg = S.cardReg[(r() * S.cardReg.length) | 0];
-        sheet(g, 1, 1, (s, t) => o.clone().addScaledVector(a, (s - 0.5) * Wd).addScaledVector(dd, t * H),
-          (s, t, p) => p.clone().sub(center).normalize().add(V(0, 0.5, 0)).normalize(),
-          reg, () => 0.1, () => 0.95);
+      for (let k = 0; k < 3; k++) {
+        const q=at(.5+k*.22),dd=q.d.clone().addScaledVector(perp(q.d).applyAxisAngle(q.d,k*2.4),.35).normalize();
+        const len=S.card*(.35+r()*.3),mid=q.p.clone().addScaledVector(dd,len*.55),tip=mid.clone().addScaledVector(dd,len*.45).addScaledVector(UP,(r()-.5)*.10);
+        tube(g,[q.p,mid,tip],[.007,.004,.0015],{radial:3,reg:bark,snow:()=>.06,ao:()=>.95});
+        if(k!==1){const fork=mid.clone().addScaledVector(dd,len*.25).addScaledVector(perp(dd),(k?-.12:.12));tube(g,[mid,fork],[.0035,.001],{radial:3,reg:bark,snow:()=>0,ao:()=>.95});}
       }
     }
   };
@@ -457,7 +451,7 @@ const BROADLEAF = {
   // the cemetery oak: massive, low, wide tortuous limbs
   oak: (v, R) => ({
     bark: 'oak', trunkL: 3.6, trunkR: 0.62, lean: 0.12, flare: 1.0, flareH: 1.6, lobes: 6, crownY: 7,
-    // a few dead leaves hang on in winter (oaks keep them), most twigs are bare
+    // The exposed cemetery crown is bare in this winter reconstruction.
     card: 1.0, cardAt: 0.45, cardsPer: 2, cardReg: [R.twig, R.twigB, R.twig, R.twigB, R.leaves],
     levels: [
       { segs: 8, radial: 12, gnarl: 0.08, taper: 0.62 },

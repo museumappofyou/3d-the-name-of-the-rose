@@ -109,6 +109,29 @@ export function withSnow(m, { strength = 1, minUp = 0.5 } = {}) {
   return m;
 }
 
+// A surface of a room under the church: the point lights of the flame pool
+// cast no shadows, so without this the crossing's great tripod (14 m away,
+// 7 m up, reach 55 m) lit the treasury crypt through its vault — +25 % on
+// the whole frame, +36 % on the cloth tops, and the agate base mirrored it
+// at L≈214. A light whose world height is above y0 fades out by y1 (the
+// player's lantern carried down the stair fades back in as it descends).
+// World y of a view-space point p: dot(viewMatrix[1].xyz, p - viewMatrix[3].xyz),
+// the view matrix being a rotation and a translation. Use only on materials
+// that are never above ground.
+export function underground(m, y0 = 0.3, y1 = 2.2) {
+  const prev = m.onBeforeCompile, k0 = m.customProgramCacheKey();
+  m.onBeforeCompile = (sh, r) => {
+    prev?.call(m, sh, r);
+    sh.fragmentShader = sh.fragmentShader.replace('#include <lights_fragment_begin>', THREE.ShaderChunk.lights_fragment_begin.replace(
+      'getPointLightInfo( pointLight, geometryPosition, directLight );',
+      `getPointLightInfo( pointLight, geometryPosition, directLight );
+		directLight.color *= 1.0 - smoothstep( ${y0.toFixed(2)}, ${y1.toFixed(2)}, dot( viewMatrix[ 1 ].xyz, pointLight.position - viewMatrix[ 3 ].xyz ) );`));
+  };
+  m.customProgramCacheKey = () => k0 + ':ug' + y0 + ':' + y1;
+  m.userData.underground = true;
+  return m;
+}
+
 function canvasTex(w, h, draw, { srgb = true, repeat = false } = {}) {
   const c = document.createElement('canvas'); c.width = w; c.height = h;
   const g = c.getContext('2d'); draw(g, w, h);

@@ -285,3 +285,106 @@ export function smallBone(len = 0.04, { seed = 1 } = {}) {
 }
 
 export { place };
+
+// --- kitchen and hearth ------------------------------------------------------
+// vertex colours are linear: author them in sRGB and convert
+const lin = c => Math.pow(Math.max(0, c), 2.2);
+// A late-November cabbage: a pale, tight heart wrapped by overlapping
+// leaves, each a crinkled spherical patch with a raised midrib; the outer
+// leaves stand open and curl back at the rim, darker blue-green, veined
+// paler toward the stalk. Vertex colours carry the shading of the leaves
+// (material 'p.cabbage', double-sided).
+export function cabbage(seed = 1, { r = 0.1 } = {}) {
+  const R = rng(seed), parts = [];
+  const leaf = (th0, span, phi0, phi1, rad, open, curl, tone) => {
+    const nu = 10, nv = 8, pos = [], col = [], idx = [];
+    for (let j = 0; j <= nv; j++) for (let i = 0; i <= nu; i++) {
+      const u = i / nu, v = j / nv;
+      const width = span * (0.62 + 0.38 * Math.sin(Math.PI * Math.min(1, 0.2 + v * 0.8)));
+      const th = th0 + (u - 0.5) * width;
+      const phi = phi0 + (phi1 - phi0) * v;
+      const rib = Math.exp(-(((u - 0.5) / 0.07) ** 2));
+      const crinkle = fbm3(Math.cos(th) * 14, phi * 5, Math.sin(th) * 14, seed, 3);
+      let rr = rad * (1 + open * v * v) + rad * (0.05 * crinkle * v + 0.03 * rib * (1 - v * 0.5));
+      // the rim curls outward and down
+      const back = curl * Math.max(0, v - 0.7) / 0.3;
+      const ph = phi - back * 0.5;
+      rr += rad * back * 0.25;
+      pos.push(rr * Math.cos(ph) * Math.cos(th), rad * 0.9 + rr * Math.sin(ph), rr * Math.cos(ph) * Math.sin(th));
+      // pale at the base and along the rib, darker toward the rim
+      const k = Math.min(1, 0.25 + 0.75 * v) * (1 - 0.45 * rib), n = 0.9 + 0.2 * crinkle;
+      col.push(...tone.base.map((c, q) => lin((c + (tone.rim[q] - c) * k) * n)));
+    }
+    for (let j = 0; j < nv; j++) for (let i = 0; i < nu; i++) {
+      const a = j * (nu + 1) + i, b = a + 1, c = a + nu + 1, d = c + 1;
+      idx.push(a, c, b, b, c, d);
+    }
+    const g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+    g.setAttribute('color', new THREE.Float32BufferAttribute(col, 3));
+    g.setIndex(idx); g.computeVertexNormals();
+    parts.push(g.toNonIndexed());
+  };
+  const heart = { base: [0.5, 0.53, 0.32], rim: [0.38, 0.46, 0.24] };
+  const outer = { base: [0.4, 0.45, 0.28], rim: [0.15, 0.23, 0.15] };
+  // the heart, then two wrapping rings, then the open outer leaves
+  const core = new THREE.SphereGeometry(r * 0.8, 14, 10);
+  core.scale(1, 0.92, 1); core.translate(0, r * 0.9, 0);
+  const cp = core.attributes.position, cc = [];
+  for (let i = 0; i < cp.count; i++) { const f = 0.9 + 0.12 * fbm3(cp.getX(i) * 40, cp.getY(i) * 40, cp.getZ(i) * 40, seed + 5, 2); cc.push(lin(0.52 * f), lin(0.55 * f), lin(0.34 * f)); }
+  core.setAttribute('color', new THREE.Float32BufferAttribute(cc, 3));
+  parts.push(core.toNonIndexed());
+  // a dense ball: three wrapping rings hug the heart and close almost over
+  // its crown; only the outermost leaves stand loose round its lower half
+  for (let ring = 0; ring < 3; ring++) for (let k = 0; k < 4; k++)
+    leaf(k * TAU / 4 + ring * 0.8 + R() * 0.3, 2.4, -1.15, 1.45 - ring * 0.22, r * (0.84 + ring * 0.05), 0.02 + ring * 0.03, 0.08 * ring, ring < 2 ? heart : outer);
+  const n = 4 + Math.floor(R() * 2);
+  for (let k = 0; k < n; k++)
+    leaf(k * TAU / n + R() * 0.4, 2.0 + R() * 0.4, -1.2, 0.25 + R() * 0.3, r * (1.0 + R() * 0.06), 0.25 + R() * 0.15, 0.4 + R() * 0.3, outer);
+  const g = merge(parts);
+  return boxUV(g, 1);
+}
+
+// A bed of embers: a continuous low heap of coals whose ash crust is broken
+// by glowing cracks, hottest at the heart of the fire, with loose coals on
+// top, most glowing from within, a few gone dark. Returns { hot, dark }:
+// 'hot' for an unlit vertex-coloured material ('p.ember'), 'dark' for the
+// lit coal. Local frame: centred, on y = 0.
+export function embers(w, d, { seed = 1, n = 24, s = 0.035 } = {}) {
+  const R = rng(seed), hot = [], dark = [];
+  const glow = t => [lin(0.1 + 0.9 * t), lin(0.035 + 0.6 * t ** 1.5), lin(0.02 + 0.32 * t ** 3)];
+  {
+    const g = new THREE.PlaneGeometry(1, 1, 30, 16); g.rotateX(-Math.PI / 2);
+    const p = g.attributes.position, col = [];
+    for (let i = 0; i < p.count; i++) {
+      const u = p.getX(i) * 2, v = p.getZ(i) * 2, e = u * u + v * v, body = e < 1 ? Math.pow(1 - e, 0.6) : 0;
+      const lump = fbm3(u * 6, v * 6, 0, seed, 3), crack = fbm3(u * 11 + 3, v * 11, 1, seed + 9, 3);
+      p.setXYZ(i, u * w / 2, 0.055 * body * (0.75 + 0.5 * lump) - 0.012 * (1 - body), v * d / 2);
+      const t = Math.min(1, Math.max(0, body ** 0.8 * (0.35 + 1.3 * Math.max(0, crack + 0.12)) - 0.05));
+      col.push(...glow(t));
+    }
+    g.setAttribute('color', new THREE.Float32BufferAttribute(col, 3));
+    g.computeVertexNormals(); hot.push(g.toNonIndexed());
+  }
+  for (let k = 0; k < n; k++) {
+    const g = new THREE.IcosahedronGeometry(1, 1), p = g.attributes.position;
+    const sx = s * (0.6 + R() * 0.9), sy = sx * (0.5 + R() * 0.35), sz = sx * (0.7 + R() * 0.6);
+    const ra = Math.sqrt(R()) * 0.42, ta = R() * TAU, cx = Math.cos(ta) * ra * w, cz = Math.sin(ta) * ra * d;
+    const mid = 1 - ra * 2.2, heat = Math.min(1, R() * 0.6 + mid * 0.55);
+    const cy = 0.055 * Math.pow(Math.max(0, 1 - (2 * ra) ** 2), 0.6) + sy * 0.25;
+    const col = [];
+    for (let i = 0; i < p.count; i++) {
+      const x = p.getX(i), y = p.getY(i), z = p.getZ(i);
+      const f = 1 + 0.3 * fbm3(x * 2.5 + k, y * 2.5, z * 2.5, seed + k, 2);
+      p.setXYZ(i, cx + x * sx * f, cy + y * sy * f, cz + z * sz * f);
+      // glow in the cracks and underneath; the tops skin over with ash
+      const crack = Math.max(0, fbm3(x * 5 + k * 3, y * 5, z * 5, seed + 31, 3) + 0.15) * 1.6;
+      col.push(...glow(Math.min(1, (0.3 + 0.7 * heat) * (0.5 + crack) * (1 - 0.4 * Math.max(0, y)))));
+    }
+    g.deleteAttribute('uv'); g.computeVertexNormals();
+    if (heat < 0.3) { dark.push(g); continue; }
+    g.setAttribute('color', new THREE.Float32BufferAttribute(col, 3));
+    hot.push(g);
+  }
+  return { hot: merge(hot), dark: dark.length ? merge(dark) : null };
+}

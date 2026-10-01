@@ -1,14 +1,15 @@
 import * as THREE from 'three';
 import { phaseAt, officeAt } from '../systems/horarium.js';
 import { height, baseHeight } from './terrain.js';
-import { makeFigure, setPose, updateFigure, setHood, sackMesh, loadFigures } from './people/figure.js';
+import { makeFigure, setPose, updateFigure, setHood, sackMesh, loadFigures, personFor, setDetail, lookAt } from './people/figure.js';
 import { scene as sceneFor } from './people/schedule.js';
+import { cloisterRoute, fileRoute } from '../data/peopleRoutes.js';
 
 // The inhabitants of the abbey: monks, novices, lay brothers, cooks,
 // servants, herdsmen and peasants, placed and moved by the horarium.
 //
-// A capped pool of skinned characters (people/figure.js: scanned heads and
-// hands, fitted habits, recorded motion) is reassigned each cycle to the slots
+// A capped pool of authored MakeHuman bodies and fitted garments is
+// reassigned each cycle to the slots
 // the current canonical hour calls for, nearest the camera first, so the
 // scene is populated where you are looking without ever animating a crowd.
 // Distance activation: rigs animate only within ~60 m; beyond that they
@@ -23,39 +24,42 @@ const ACTIVE_R = 60;      // animate within this radius
 const DRAW_R = 155;       // beyond this, hide on foot
 const LIVE = 46;          // hard cap on figures drawn at once
 const RECYCLE = 0.45;     // seconds between reassignments
-// The wardrobe: rigs are permanently dressed, so each kind has its own
-// pool, sized for the largest call on it (the full choir: 36 monks in the
-// stalls, the waker and a few at the altar; six novices). Named people have
-// a rig of their own, so Malachi or Alinardo keep one face at every hour.
-const POOLS = { monk: 40, novice: 6, servant: 10, herd: 4, peasant: 4 };
-// the head each named person wears (figure.js HEADS), and his kind
+// Who is who. Named people have a rig of their own and always the same
+// designed person (scripts/people/cast.json), so Malachi or Alinardo keep one
+// face at every hour and after a reload. Every other place is filled by a
+// member of the community with a stable identity: the brother at desk 5 is
+// always the same brother (a hash of the place), and a brother is never in
+// two places at once. Rigs are pooled per designed person; a rig only ever
+// shows the person it was dressed as.
+const COMMUNITY = { monk: 48, novice: 8, servant: 14, herd: 6, peasant: 6, abbot: 1 };
+const PER_TEMPLATE = 18;  // rigs of one designed person drawn at once
 const NAMED = {
-  abbot: { kind: 'abbot', head: 'male_32', seed: 11 },
-  malachi: { kind: 'monk', head: 'male_10', seed: 23, hood: true },
-  ubertino: { kind: 'monk', head: 'male_5', seed: 37 },
-  alinardo: { kind: 'monk', head: 'male_32', seed: 41, hood: true },
-  severinus: { kind: 'monk', head: 'male_6', seed: 53 },
+  abbot: { kind: 'abbot', person: 'abbot', seed: 11 },
+  malachi: { kind: 'monk', person: 'malachi', seed: 23, hood: true },
+  ubertino: { kind: 'monk', person: 'ubertino', seed: 37 },
+  alinardo: { kind: 'monk', person: 'alinardo', seed: 41 },
+  severinus: { kind: 'monk', person: 'severinus', seed: 53 },
 };
+// the seat heights the task loops were authored for (scripts/people/tasks.py)
+const SEAT_H = { write: 0.5, dine: 0.46, sit: 0.46 };
+function hash(str) { let a = 2166136261; for (let i = 0; i < str.length; i++) a = Math.imul(a ^ str.charCodeAt(i), 16777619); return a >>> 0; }
 
 export function buildPeople(M, ctx) {
   loadFigures();
   const root = new THREE.Group(); root.name = 'people';
   ctx.scene.add(root);
 
-  // Each rig hides until assigned. Within a pool the scanned faces are dealt
-  // round, so neighbours seldom share one (and assign() below avoids it).
-  const rigs = [], byKind = {}, named = {};
+  // Each rig hides until assigned; rigs are made the first time a place
+  // needs one of their person (loading does not pay for the full choir)
+  const rigs = [], byTpl = {}, named = {};
   const addRig = (kind, seed, opts) => {
     const g = makeFigure(kind, seed, opts);
     g.visible = false; g.matrixAutoUpdate = true; root.add(g);
-    const rig = { g, kind, busy: false, slot: null, key: null, phase: (seed * 0.618) % 1, pose: 'stand', group: null, idx: rigs.length };
+    const rig = { g, kind, tpl: opts.person, busy: false, slot: null, key: null, phase: (seed * 0.618) % 1, pose: 'stand', group: null, idx: rigs.length };
     rigs.push(rig); return rig;
   };
-  // rigs are dressed the first time a slot of their kind needs one (up to
-  // the pool's size), so loading does not pay for the full choir up front
-  const newOf = kind => { const pool = byKind[kind], i = pool.length; if (i >= (POOLS[kind] || 0)) return null; const r = addRig(kind, (i + 1) * 2654435761 % 100000 + kind.length * 7, { deal: i }); pool.push(r); return r; };
-  for (const kind of Object.keys(POOLS)) byKind[kind] = [];
-  const namedRig = name => { if (!named[name]) { const o = NAMED[name]; named[name] = addRig(o.kind, o.seed, { head: o.head, hood: o.hood }); named[name].named = name; } return named[name]; };
+  const newOf = (kind, tpl) => { const pool = byTpl[tpl] ||= []; if (pool.length >= PER_TEMPLATE) return null; const r = addRig(kind, (rigs.length + 1) * 2654435761 % 100000 + kind.length * 7, { person: tpl }); pool.push(r); return r; };
+  const namedRig = name => { if (!named[name]) { const o = NAMED[name]; named[name] = addRig(o.kind, o.seed, { person: o.person, hood: o.hood }); named[name].named = name; } return named[name]; };
   // a few carried sacks, attached when a peasant carries
   const sacks = [];
   const stats = { wanted: 0, drawn: 0, short: {} };
@@ -65,9 +69,17 @@ export function buildPeople(M, ctx) {
   // (ground:true or area/file) sit on the terrain. Where a builder has
   // sunk the ground under a footprint (height ≪ base), fall back to the
   // true terrain so outdoor figures near a building don't drop into a pit.
-  const groundY = (x, z) => {
+  const terrainY = (x, z) => {
     const h = height(x, z), b = baseHeight(x, z);
     return (h < b - 1.0 ? b : h) - 0.02;
+  };
+  // what is really underfoot: the built floor (cloister flags, a threshold,
+  // a path) where there is one over the terrain, else the terrain
+  const groundY = (x, z) => {
+    const h = terrainY(x, z), app = globalThis.__abbey;
+    if (!app?.walker?.colliders?.[0]?.mesh?.geometry?.boundsTree) return h;
+    const hit = app.groundY(x, z, h + 1.4);
+    return hit > h - 0.6 && hit < h + 1.2 ? hit : h;
   };
 
   // Outdoor figures must stand on the ground, not inside a straw heap, a
@@ -79,16 +91,41 @@ export function buildPeople(M, ctx) {
     const key = Math.round(x * 10) + ',' + Math.round(z * 10);
     if (clearCache.has(key)) return clearCache.get(key);
     const app = globalThis.__abbey;
-    if (!app?.walker?.colliders?.[0]?.mesh?.geometry?.boundsTree) return [x, z, groundY(x, z)];
+    if (!app?.walker?.colliders?.[0]?.mesh?.geometry?.boundsTree) return [x, z, terrainY(x, z)];
     let res = null;
     for (let k = 0; k < 10 && !res; k++) {
       const a = k * 2.4, rr = k ? 0.5 + k * 0.3 : 0, px = x + Math.cos(a) * rr, pz = z + Math.sin(a) * rr;
-      const gy = groundY(px, pz), hy = app.groundY(px, pz, gy + 2.2);
+      const gy = terrainY(px, pz), hy = app.groundY(px, pz, gy + 2.2);
       if (hy < gy + 0.3) res = [px, pz, Math.max(gy, hy - 0.02)];
     }
-    res = res || [x, z, groundY(x, z)];
+    res = res || [x, z, terrainY(x, z)];
     clearCache.set(key, res);
     return res;
+  };
+  // Indoor places stand on what is really built there: the floor or stall
+  // platform under the feet, or for a seated task the seat itself (its top
+  // found by a ray, the figure set so that its authored seat height meets it)
+  const yCache = new Map();
+  const resolveY = (s, pose) => {
+    const app = globalThis.__abbey;
+    if (!app?.walker?.colliders?.[0]?.mesh?.geometry?.boundsTree) return s.y;
+    const key = Math.round(s.x * 20) + ',' + Math.round(s.z * 20) + ',' + Math.round((s.y || 0) * 20) + ',' + (SEAT_H[pose] ? pose : '');
+    if (yCache.has(key)) return yCache.get(key);
+    let y = s.y ?? 0;
+    if (s.seat && SEAT_H[pose]) {
+      // (from below any rail or bookboard over the seat, such as the lower
+      // choir row's, whose top stands over its own seats)
+      const hit = app.groundY(s.x, s.z, y + 0.72);
+      if (hit > y + 0.25 && hit < y + 0.72) y = hit - SEAT_H[pose];
+    } else if (!s.seat) {
+      const hit = app.groundY(s.x, s.z, y + 0.7);
+      // A floor correction can cover a small threshold, not a seat or
+      // bookboard above the stated platform. The former 75 cm tolerance
+      // put the last upper-row brothers on the lower row's rail.
+      if (Math.abs(hit - y) < 0.18) y = hit;
+    }
+    yCache.set(key, y);
+    return y;
   };
   // Expand a group's declaration into concrete target slots, each with a
   // stable key (the same seat keeps the same person between reassignments)
@@ -97,7 +134,7 @@ export function buildPeople(M, ctx) {
     if (group.slots) {
       group.slots.forEach((s, i) => {
         const key = group.id + ':' + i;
-        if (!s.ground) { list.push({ ...s, key }); return; }
+        if (!s.ground) { list.push({ ...s, y: group.indoor || s.y != null ? resolveY(s, group.pose) : s.y, key }); return; }
         const [x, z, y] = clearGround(s.x, s.z);
         list.push({ ...s, x, z, y, key });
       });
@@ -105,9 +142,10 @@ export function buildPeople(M, ctx) {
     if (group.walkers) {
       // monks pacing the cloister ring
       const w = group.walkers, cap = group.cap || 4;
+      const total = cloisterRoute(w).total;
       for (let i = 0; i < cap; i++) {
-        const t = (i / cap) * Math.PI * 2;
-        list.push({ x: w.cx + Math.cos(t) * w.w, z: w.cz + Math.sin(t) * w.h, ry: Math.atan2(-w.w * Math.sin(t), w.h * Math.cos(t)), y: groundY(w.cx + Math.cos(t) * w.w, w.cz + Math.sin(t) * w.h), ring: true, key: group.id + ':w' + i });
+        const dist=i/cap*total, q=cloisterRoute(w,dist);
+        list.push({x:q.x,z:q.z,ry:q.ry,y:groundY(q.x,q.z),dist,ring:true,key:group.id+':w'+i});
       }
     }
     if (group.file) {
@@ -123,7 +161,9 @@ export function buildPeople(M, ctx) {
         const f = seg[k] ? (dist - acc) / seg[k] : 0;
         const x = pts[k][0] + (pts[k + 1][0] - pts[k][0]) * f, z = pts[k][1] + (pts[k + 1][1] - pts[k][1]) * f;
         const ry = Math.atan2(pts[k + 1][0] - pts[k][0], pts[k + 1][1] - pts[k][1]); // figures face local +z
-        list.push({ x, z, ry, y: groundY(x, z), file: true, dist, seg, pts, total, key: group.id + ':f' + i });
+        const arrival = group.arrivals?.[i];
+        const lane = arrival ? [...pts, ...(group.arrivalVia || []), [arrival.x, group.arrivalRowZ ?? arrival.z], [arrival.x, arrival.z]] : pts;
+        list.push({ x, z, ry, y: groundY(x, z), file: true, dist, pts: lane, arriveRy: arrival?.ry, total, key: group.id + ':f' + i });
       }
     }
     if (group.area) {
@@ -136,12 +176,21 @@ export function buildPeople(M, ctx) {
         list.push({ x, z, ry, y, scatter: true, key: group.id + ':a' + i });
       }
     }
-    return list;
+    return list.map(t => {
+      const si=+(/(\d+)$/.exec(t.key)?.[1] || 0), n=COMMUNITY[group.kind] || 8;
+      return {...t,member:group.kind+':'+t.key,person:group.cast?group.cast[si%group.cast.length]:personFor(group.kind,group.kind+((hash(group.id)+si)%n))};
+    });
   }
 
-  // where each moving slot has got to (targets are rebuilt at every recycle)
-  const motion = new Map();
-  const mstate = t => { let m = motion.get(t.key); if (!m) { m = {}; motion.set(t.key, m); } return m; };
+  // Route phase continues even when no render rig is assigned. Selection,
+  // floor/room visibility, sound reach and animation use the CURRENT point,
+  // not the worker's initial anchor at the other end of a lane.
+  let routeAge = 0, routePhase = '';
+  const located = (t, group) => {
+    const q = t.ring ? cloisterRoute(group.walkers, t.dist + routeAge) :
+      t.file ? fileRoute(t.pts, t.dist + routeAge * 0.95, !!group.carry) : null;
+    return q ? { ...t, ...q, ry: q.finished ? t.arriveRy ?? q.ry : q.ry, y: groundY(q.x, q.z) } : t;
+  };
 
   // Assignment state
   let sinceRecycle = 1e3;
@@ -156,7 +205,8 @@ export function buildPeople(M, ctx) {
     // build a flat list of (group, target) with distance, filter to draw radius
     const cands = [];
     for (const grp of groups) {
-      for (const t of targets(grp)) {
+      for (const anchor of targets(grp)) {
+        const t = located(anchor, grp);
         const d = Math.hypot(t.x - cam.x, t.z - cam.z);
         // aerial far: keep only outdoor walkers/processions
         if (st.mode === 'aerial') {
@@ -164,6 +214,13 @@ export function buildPeople(M, ctx) {
           if (farCam && !(grp.walkers || grp.file || grp.area)) continue;
           if (d > 400) continue;
         } else if (d > DRAW_R) continue;
+        // another floor of a building (the refectory under the scriptorium,
+        // the scriptorium under the library) is neither drawn nor animated
+        else if (grp.indoor && Math.abs((t.y ?? 0) - (cam.y - 1.6)) > 3.0) continue;
+        // Do not spend a rig/animation/shadow on people beyond an opaque
+        // room wall. The BVH includes the shared moving access barriers.
+        if(st.mode==='walk' && (d>10 && grp.indoor || Math.abs((t.y ?? 0)-(cam.y-1.6))>3) && ctx.world?.canSee &&
+          !ctx.world.canSee(new THREE.Vector3(t.x,(t.y ?? 0)+1.4,t.z),cam)) continue;
         cands.push({ grp, t, d });
       }
     }
@@ -178,25 +235,27 @@ export function buildPeople(M, ctx) {
     chosen.forEach((c, i) => {
       if (out[i]) return;
       const r = held.get(c.t.key);
-      if (r && !r.busy && !r.named && r.kind === c.grp.kind) bind(i, r);
+      if (r && !r.busy && !r.named && r.kind === c.grp.kind && r.tpl === c.t.person) bind(i, r);
     });
-    // 3. the rest, nearest first, from the pool of their own dress: prefer a
-    // rig that is hidden now (no one vanishes from view to reappear
-    // elsewhere) and a face unlike those of the neighbours already seated
+    // 3. the rest: each place's own member of the community (stable by the
+    // place, never two places at once), shown by a rig of that person's
+    // design; prefer the rig that showed this place last time, then a
+    // hidden one (no one vanishes from view to reappear elsewhere)
     chosen.forEach((c, i) => {
       if (out[i]) return;
-      const pool = byKind[c.grp.kind] || [];
+      // Logical cast IDs belong to places, never to pool assignment order.
+      // Camera distance and reloads therefore cannot change a worker's face.
+      const kind=c.grp.kind,member=c.t.member,tpl=c.t.person;
+      const pool = byTpl[tpl] || [];
       let best = null, bs = Infinity;
       for (const r of pool) {
         if (r.busy) continue;
-        let s = r.g.visible ? 4 : 0;
-        const head = r.g.userData.head;
-        for (const o of out) if (o && o.rig.g.userData.head === head && Math.hypot(o.t.x - c.t.x, o.t.z - c.t.z) < 3.4) s += 10;
-        if (s < bs) { bs = s; best = r; if (s === 0) break; }
+        const s2 = r.key === c.t.key ? -1 : r.g.visible ? 4 : 0;
+        if (s2 < bs) { bs = s2; best = r; if (s2 < 0) break; }
       }
-      if (!best) best = newOf(c.grp.kind);
-      if (best) bind(i, best);
-      else stats.short[c.grp.kind] = (stats.short[c.grp.kind] || 0) + 1;   // better an empty place than the wrong dress
+      if (!best) best = newOf(kind, tpl);
+      if (best) { bind(i, best); best.member = member; }
+      else stats.short[kind] = (stats.short[kind] || 0) + 1;   // better an empty place than the wrong person
     });
     assigns = out.filter(Boolean);
     stats.drawn = assigns.length;
@@ -206,54 +265,53 @@ export function buildPeople(M, ctx) {
   }
 
   const _v = new THREE.Vector3();
-  let soundClock = 0;
 
   ctx.onUpdate((dt, st) => {
     if (ctx.people.frozen) return;   // (debug: a posed figure held for inspection)
+    const phaseKey = st.phase.id + ':' + st.phase.t0 + ':' + (st.office?.id || '');
+    if (phaseKey !== routePhase) { routePhase = phaseKey; routeAge = 0; }
+    else routeAge += dt;
     sinceRecycle += dt;
     const key = st.phase.id + (st.office?.id || '') + st.mode + (st.office?.id === 'matins' && st.time > 2.75 ? ':lessons' : '');
     if (sinceRecycle > RECYCLE || key !== lastKey) { recycle(st); sinceRecycle = 0; lastKey = key; }
 
     const cam = st.cam;
-    soundClock -= dt;
+    let scratches = 0;
     for (const a of assigns) {
       const { rig, t, grp } = a;
       const g = rig.g;
       g.visible = true;
       // position
-      g.position.set(t.x, t.y ?? 0, t.z);
-      const d = Math.hypot(t.x - cam.x, t.z - cam.z);
+      const at = located(t, grp);
+      g.position.set(at.x, at.y ?? 0, at.z);
+      // A stair/study jump can change storeys before the next pool recycle.
+      // Hide the old floor immediately, including its task sounds.
+      if (st.mode === 'walk' && grp.indoor && Math.abs((at.y ?? 0) - (cam.y - 1.6)) > 3) { g.visible = false; continue; }
+      const d = Math.hypot(at.x - cam.x, at.z - cam.z);
       const active = d < ACTIVE_R && st.mode === 'walk';
 
       // movement for walkers / processions along their ring / file
-      if (grp.walkers && active) {
+      if (grp.walkers) {
         // pacing the cloister walk at an unhurried 1 m/s, the stride of the
         // recorded formal walk
-        const w = grp.walkers;
-        const m = mstate(t);
-        const ang = m.ringAng ?? (m.ringAng = Math.atan2((t.z - w.cz) / w.h, (t.x - w.cx) / w.w));
-        const na = ang + dt * 1.0 / ((w.w + w.h) / 2);
-        m.ringAng = na;
-        const nx = w.cx + Math.cos(na) * w.w, nz = w.cz + Math.sin(na) * w.h;
-        g.position.set(nx, groundY(nx, nz), nz);
-        g.rotation.y = Math.atan2(-w.w * Math.sin(na), w.h * Math.cos(na));
-        setPose(g, 'walk', rig.phase, st.time);
-      } else if (grp.file && active) {
-        // a procession moves along its file (and comes round again)
-        const m = mstate(t);
-        m.dist = ((m.dist ?? t.dist) + dt * 0.95) % t.total;
-        const dist = m.dist;
-        let acc = 0, k = 0;
-        while (k < t.seg.length - 1 && acc + t.seg[k] < dist) { acc += t.seg[k]; k++; }
-        const f = t.seg[k] ? (dist - acc) / t.seg[k] : 0, P0 = t.pts[k], P1 = t.pts[k + 1];
-        const nx = P0[0] + (P1[0] - P0[0]) * f, nz = P0[1] + (P1[1] - P0[1]) * f;
-        g.position.set(nx, groundY(nx, nz), nz);
-        g.rotation.y = Math.atan2(P1[0] - P0[0], P1[1] - P0[1]);
-        setPose(g, 'walk', rig.phase, st.time);
+        g.rotation.y = at.ry;
+        setPose(g, active ? 'walk' : 'stand', rig.phase, st.time);
+      } else if (grp.file) {
+        g.rotation.y = at.ry;
+        setPose(g, at.finished ? 'stand' : grp.carry ? 'carry' : active ? 'walk' : 'stand', rig.phase, st.time);
       } else {
         g.rotation.y = t.ry || 0;
         const pose = t.work || grp.work || grp.pose || 'stand';
         setPose(g, active ? pose : staticPose(pose), rig.phase, st.time);
+      }
+      // detail by distance, with a little hysteresis: faces' small parts
+      // within ~9 m; the sun's shadow outdoors within 45 m, indoors only near
+      // and by day (the vaults keep the sun off them anyway)
+      {
+        const U = g.userData, dd = Math.hypot(g.position.x - cam.x, g.position.y - cam.y, g.position.z - cam.z);
+        const face = U.face ? dd < 10 : dd < 8.5;
+        const shadow = grp.indoor ? dd < (U.shadow ? 11 : 9) && st.night < 0.5 : dd < (U.shadow ? 48 : 44);
+        setDetail(g, face, shadow);
       }
       // hoods up at table and at Compline (BOOK, D1 AKŞAM)
       setHood(g, grp.zone === 'refectory' || st.office?.id === 'compline' || grp.hood === true || (rig.named && NAMED[rig.named].hood));
@@ -261,10 +319,19 @@ export function buildPeople(M, ctx) {
       if (active) {
         rig.acc = (rig.acc || 0) + dt;
         if (d < 30 || (rig.tick = !rig.tick)) {
-          const hit = updateFigure(g, rig.acc); rig.acc = 0;
-          // a blow of the hammer on the anvil, a stroke of the broom, heard
-          // on the frame the recorded motion strikes
-          if (hit && grp.hits && d < 24 && ctx.sound) ctx.sound.npcSound(grp.hits, t.x, g.position.y + 0.9, t.z, 0.8);
+          const evs = updateFigure(g, rig.acc);
+          // Severinus and Alinardo look up at someone who comes close
+          if (rig.named === 'severinus' || rig.named === 'alinardo') lookAt(g, d < 3.2 && st.mode === 'walk' ? cam : null, rig.acc);
+          rig.acc = 0;
+          // the sound of what the figure visibly does, on the frame it does
+          // it: a footfall, the quill on the leaf, the hammer on the iron
+          if (evs && ctx.sound) for (const ev of evs) {
+            const snd = EVENT_SOUND[ev] === 'step' ? surfaceStep(grp.surface) : ev === 'hot' || ev === 'hit' ? (grp.hits || 'hot') : EVENT_SOUND[ev];
+            if (!snd || d > (EVENT_REACH[ev] ?? 16)) continue;
+            // a room of scribes: only the few nearest are heard one by one
+            if (ev === 'scratch' && ++scratches > 3) continue;
+            ctx.sound.npcSound(snd, g.position.x, g.position.y + (ev === 'step' ? 0.05 : 0.9), g.position.z, EVENT_GAIN[ev] ?? 0.5, { zone: grp.zone });
+          }
         }
       }
 
@@ -274,25 +341,20 @@ export function buildPeople(M, ctx) {
         if (!sacks[idx]) { sacks[idx] = sackMesh(); g.add(sacks[idx]); }
         sacks[idx].visible = true;
         // held against the chest, as the recorded carrying walk holds it
-        sacks[idx].position.set(0, g.userData.h * 0.62, 0.3);
+        sacks[idx].position.set(0, (g.userData.h || 1.75) * 0.6, 0.3);
       } else if (sacks[idx]) sacks[idx].visible = false;
 
-      // sparse footstep / work sound near the camera
-      if (soundClock <= 0 && active && d < 26 && ctx.sound) {
-        const roll = Math.random();
-        if (grp.walkers || grp.file) { if (roll < 0.5) ctx.sound.npcSound(surfaceStep(grp.surface), t.x, g.position.y, t.z, 0.5, { zone: grp.zone }); }
-        else if (grp.zone === 'scriptorium') { if (roll < 0.4) ctx.sound.npcSound('pageTurn', t.x, g.position.y + 0.8, t.z, 0.5, { zone: grp.zone }); }
-        else if (grp.zone === 'church' && st.office) { if (roll < 0.2) ctx.sound.npcSound('cough', t.x, g.position.y + 1.3, t.z, 0.4, { zone: grp.zone }); }
-        else if ((t.work || grp.work || grp.pose) === 'knead' || (t.work || grp.work || grp.pose) === 'stir') { if (roll < 0.4) ctx.sound.npcSound(roll < 0.2 ? 'chop' : 'clank', t.x, g.position.y + 0.8, t.z, 0.5, { zone: grp.zone }); }
-        else if (grp.id === 'swineherds') { if (roll < 0.4) ctx.sound.npcSound('pour', t.x, g.position.y + 0.6, t.z, 0.5); }
-      }
     }
-    if (soundClock <= 0) soundClock = 0.7 + Math.random() * 1.2;
     void _v; void phaseAt; void officeAt;
   });
 
   return { batches: [] };
 }
+
+// what each contact event of a figure sounds like, how far it carries, how loud
+const EVENT_SOUND = { step: 'step', scratch: 'scratch', pageTurn: 'pageTurn', sweep: 'sweep', strawRustle: 'strawRustle', knead: null, spoon: null, stir: null, pour: 'pour' };
+const EVENT_REACH = { step: 14, scratch: 7, pageTurn: 10, hot: 26, hit: 26, sweep: 14, strawRustle: 12, pour: 12 };
+const EVENT_GAIN = { step: 0.35, scratch: 0.35, pageTurn: 0.4, hot: 0.8, hit: 0.8, sweep: 0.4, strawRustle: 0.35, pour: 0.3 };
 
 // map a walking pose to a still one for out-of-range figures
 function staticPose(pose) {

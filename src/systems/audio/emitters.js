@@ -126,17 +126,14 @@ export const KINDS = {
     loop: { bank: 'cave', gain: 0.5, flicker: 0.05 }, events: [],
   },
   chant: {
-    // (a long reference distance: the voices fill the church to its west door)
-    indoor: true, ref: 11, gain: 0.9, banks: [], events: [],
+    // One small continuously running performance, including when nobody
+    // is near it. The listener hears a room/opening path, not a restart.
+    indoor: true, ref: 4, gain: 0.22, persistent: true, banks: [], events: [],
     live: (snd, e) => new Office(snd, e), liveOn: s => !!s.office,
     // heard directly in church and choir; through a door or a wall from the
     // places that touch the church (the porch, the cloister walk, the
     // cemetery at the north door, the skull chapel); scarcely at all from
     // inside another building
-    occ: s => (s.zone === 'church' || s.zone === 'choir' || s.zone === 'skull') ? 0
-      : s.zone === 'porch' ? 0.45
-      : (s.zone === 'cloister' || s.zone === 'garth' || s.zone === 'cemetery' || s.zone === 'narthex') ? 0.8
-      : s.inside ? 1.85 : 1.35,
   },
   // murmured prayer and far talk: silence is better than an invented voice
   murmur: { indoor: true, ref: 2, gain: 0, banks: [], events: [] },

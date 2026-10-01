@@ -1,5 +1,5 @@
 // Recorded sound banks. Every sound of the abbey is cut from a real field
-// or Foley recording (CC0; authors, sources and cut times in
+// or Foley recording (CC0 Foley, CC BY-SA/public-domain chant; sources and cut times in
 // docs/assets/AUDIO_SOURCES.md and scripts/audio/cuts.json). The clips of a bank
 // share one MP3 sprite that starts with a sync click at `manifest.sync`
 // seconds: the decoder's priming delay is measured on that click, so clip

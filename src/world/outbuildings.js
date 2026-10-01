@@ -280,11 +280,22 @@ export function buildOutbuildings(M, ctx) {
     const B = building(ex, inn, { name: 'folds', ...r, h: 3.2, ridge: 4.8, roof: 'thatch', open: 'S', floorMat: 'soil' });
     sink(B);
     for (let i = 1; i < 4; i++) inn.add('beam', B.T(box(0.08, 1.2, r.W - 1, { x: -r.L / 2 + i * r.L / 4, y: 0.2, z: 0 })));
-    for (let i = 0; i < 4; i++) inn.add('woodDark', B.T(box(2.2, 0.35, 0.5, { x: -r.L / 2 + (i + 0.5) * r.L / 4, y: 0.2, z: r.W / 2 - 1.2 })));
+    // a plank feeding trough at the front of each pen, with hay in it
+    for (let i = 0; i < 4; i++) {
+      const o = { x: -r.L / 2 + (i + 0.5) * r.L / 4, y: 0.2, z: r.W / 2 - 1.2 };
+      inn.add('woodDark', B.T(place(plankTrough(2.2, 0.5, 0.35, true), o)));
+      inn.add('straw', B.T(box(2.0, 0.07, 0.3, { ...o, y: 0.2 + 0.1 })), { collide: false });
+    }
     // pig pens in front, fenced — kept clear of the stables' west doors
     // (the fence used to cross the W20 side door: k0073 H stables beside the wall)
     fence(ex, [[FOLDS.x0, FOLDS.z1 + 0.5], [FOLDS.x0, FOLDS.z1 + 9], [FOLDS.x0 + 5, FOLDS.z1 + 9], [FOLDS.x0 + 5, FOLDS.z1 + 0.5]]);
-    for (const [x, z] of [[FOLDS.x0 + 1.4, FOLDS.z1 + 7.5], [FOLDS.x0 + 3.4, FOLDS.z1 + 7.5]]) inn.add('woodDark', box(1.6, 0.4, 0.6, { x, y: baseHeight(x, z), z }));
+    // the pigs' two feeding troughs, of the same weathered, snow-dusted timber
+    // as the fence, with a dark wet board floor (formerly flat blocks)
+    for (const [x, z, ry] of [[FOLDS.x0 + 1.4, FOLDS.z1 + 7.5, 0.03], [FOLDS.x0 + 3.4, FOLDS.z1 + 7.5, -0.04]]) {
+      const y = baseHeight(x, z);
+      ex.add('beamExt', place(plankTrough(1.6, 0.6, 0.42), { x, y, z, ry }));
+      inn.add('woodDark', box(1.44, 0.04, 0.38, { x, y: y + 0.07, z, ry }), { collide: false });
+    }
     it('folds', [FOLDS.x0 + 6, 1.5, FOLDS.z1 + 4], 7, 'The sheepfolds and pigsties');
   }
   {
@@ -398,9 +409,11 @@ export function buildOutbuildings(M, ctx) {
     // the vat: thrown earthenware, broad-shouldered, a thick rolled rim;
     // the blood within dark and glossy, a stirring pole left in it, runs down
     // the side; beside it the killing trestle, pails, a knife and a basin
-    const vat = C.vat(0.86, 1.62);
+    // (1.3 m to its lip: a great jar a swineherd can still stir standing on
+    // the ground, scripts/people/tasks.py 'stirVat')
+    const vat = C.vat(0.82, 1.3);
     ex.add('p.earthenware', place(vat, { x: jx, y: jy - 0.08, z: jz, ry: 0.7 }));
-    ex.add('p.bloodPool', cyl(0.6, 0.6, 0.01, 32, { x: jx, y: jy - 0.08 + 1.5, z: jz }), { collide: false });
+    ex.add('p.bloodPool', cyl(0.56, 0.56, 0.01, 32, { x: jx, y: jy - 0.08 + 1.2, z: jz }), { collide: false });
     ex.add('beamExt', place(cyl(0.028, 0.03, 2.3, 8, {}), { x: jx + 0.25, y: jy + 0.35, z: jz - 0.1, rx: 0.12, rz: -0.45 }), { collide: false });
     F.trestle(ex, jx - 1.9, jy - 0.02, jz + 1.1, 0.5, 1.8, 0.6, 0.72);
     ex.add('iron', place(box(0.28, 0.004, 0.04, {}), { x: jx - 1.85, y: jy + 0.71, z: jz + 1.05, ry: 0.9 }), { collide: false, shadow: false });
@@ -443,16 +456,39 @@ export function buildOutbuildings(M, ctx) {
       inn.add('beam', merge([box(2.6, 0.9, 0.22, { x: mx, y: 0.25, z: mz - 1.1 }), box(2.6, 0.9, 0.22, { x: mx, y: 0.25, z: mz + 1.1 }), box(0.22, 0.9, 2.4, { x: mx - 1.2, y: 0.25, z: mz }), box(0.22, 0.9, 2.4, { x: mx + 1.2, y: 0.25, z: mz }), box(2.6, 0.08, 2.6, { x: mx, y: 1.1, z: mz })]));
       inn.add('rubbleIn', lathe([[0, 0], [0.95, 0], [0.97, 0.22], [0.9, 0.26], [0, 0.24]], 32, { x: mx, y: 1.18, z: mz }));
       inn.add('rubbleIn', lathe([[0.12, 0.26], [0.92, 0.27], [0.94, 0.5], [0.86, 0.53], [0.18, 0.52], [0.12, 0.45]], 32, { x: mx, y: 1.18, z: mz }));
-      // the tun (stone case) and the meal spout into the bin
-      inn.add('woodDark', lathe([[1.02, 0], [1.08, 0], [1.08, 0.6], [1.02, 0.6]], 32, { x: mx, y: 1.18, z: mz }), { collide: false });
+      // the tun round the stones: coopered staves, each a little uneven,
+      // held by two iron hoops; then the meal spout into the bin
+      {
+        const staves = [];
+        for (let k = 0; k < 26; k++) {
+          const a = k / 26 * Math.PI * 2, h = 0.6 + ((k * 7) % 5 - 2) * 0.008, rr = 1.05 + ((k * 3) % 4) * 0.003;
+          staves.push(place(box(0.245, h, 0.045, {}), { x: mx + Math.sin(a) * rr, y: 1.18, z: mz + Math.cos(a) * rr, ry: a }));
+        }
+        inn.add('woodDark', merge(staves), { collide: false });
+        for (const hy of [0.1, 0.47]) inn.add('iron', lathe([[1.075, 0], [1.095, 0], [1.095, 0.045], [1.075, 0.045]], 32, { x: mx, y: 1.18 + hy, z: mz }), { collide: false });
+      }
       inn.add('woodDark', place(box(0.3, 0.12, 0.7, {}), { x: mx, y: 1.0, z: mz + 1.45, rx: 0.4 }), { collide: false });
       inn.add('woodDark', merge([box(1.1, 0.5, 0.05, { x: mx, y: 0.25, z: mz + 1.55 }), box(1.1, 0.5, 0.05, { x: mx, y: 0.25, z: mz + 2.25 }), box(0.05, 0.5, 0.7, { x: mx - 0.55, y: 0.25, z: mz + 1.9 }), box(0.05, 0.5, 0.7, { x: mx + 0.55, y: 0.25, z: mz + 1.9 })]));
       inn.add('p.linenWhite', box(1.0, 0.02, 0.62, { x: mx, y: 0.55, z: mz + 1.9 }), { collide: false });
-      // hopper on its horse
-      inn.add('woodDark', lathe([[0.12, 0], [0.18, 0], [0.62, 0.7], [0.56, 0.72], [0.12, 0.06]], 4, { x: mx, y: 1.95, z: mz, ry: Math.PI / 4 }), { collide: false });
-      inn.add('beam', merge([box(0.1, 1.2, 0.1, { x: mx - 0.75, y: 1.18, z: mz }), box(0.1, 1.2, 0.1, { x: mx + 0.75, y: 1.18, z: mz }), box(1.6, 0.08, 0.1, { x: mx, y: 2.3, z: mz })]), { collide: false });
-      // spindle and the sweep for the beast, high enough to walk under
-      inn.add('beam', cyl(0.1, 0.12, 3.9, 10, { x: mx, y: 0.25, z: mz }));
+      // the hopper stands beside the drive shaft on its own frame (the
+      // horse) and feeds the runner's eye through an inclined shoe; heaped
+      // with grain. Boards of light, worn wood, not a solid pyramid
+      {
+        const hx = mx + 0.62, hz = mz - 0.1, hy = 2.0;
+        inn.add('wood', lathe([[0.1, 0], [0.15, 0], [0.5, 0.58], [0.45, 0.6], [0.1, 0.05]], 4, { x: hx, y: hy, z: hz, ry: Math.PI / 4 }), { collide: false });
+        inn.add('p.grainSack', place(S.mound(0.62, 0.62, 0.12, { seed: 671 }), { x: hx, y: hy + 0.5, z: hz }), { collide: false, shadow: false });
+        const shoe = box(0.14, 0.03, 0.62, {}); shoe.rotateX(0.32); shoe.rotateY(Math.PI / 2 + 0.12);
+        inn.add('wood', place(shoe, { x: (hx + mx + 0.14) / 2, y: 1.84, z: hz }), { collide: false });
+        // the horse: four legs on the tun's rim, rails under the hopper
+        const legs = [];
+        for (const [dx, dz] of [[-0.42, -0.42], [0.42, -0.42], [-0.42, 0.42], [0.42, 0.42]]) legs.push(box(0.07, 0.62, 0.07, { x: hx + dx, y: 1.78, z: hz + dz }));
+        legs.push(box(0.92, 0.06, 0.07, { x: hx, y: 2.2, z: hz - 0.42 }), box(0.92, 0.06, 0.07, { x: hx, y: 2.2, z: hz + 0.42 }));
+        inn.add('beam', merge(legs), { collide: false });
+      }
+      // the drive shaft comes down from the sweep to the runner stone, the
+      // sweep high enough for the beast and the miller to walk under
+      inn.add('beam', cyl(0.1, 0.12, 2.3, 10, { x: mx, y: 1.7, z: mz }));
+      inn.add('iron', cyl(0.13, 0.13, 0.08, 10, { x: mx, y: 1.7, z: mz }), { collide: false });
       const sweep = box(5.6, 0.16, 0.18, { x: 2.8, y: 3.3 }); sweep.rotateY(0.9); sweep.translate(mx, 0.25, mz); inn.add('beam', sweep, { collide: false });
       // chaff and straw kicked about in uneven drifts, not one square mat;
       // meal dust whitening the case, the bin and the floor below the spout
@@ -541,6 +577,19 @@ function pyramidHalf(x, r, yE, yP) {
 }
 
 // wattle fences of posts and rails
+// A plank trough as merged geometry at the origin (length along x): two
+// splayed boards a side nailed to end boards that stand on the ground, their
+// tops capped; with floor, a board floor inside
+function plankTrough(L, W, H, floor = false) {
+  const parts = [], bh = H * 0.36, y0 = H * 0.17;
+  for (const s of [-1, 1]) {
+    parts.push(box(L - 0.04, bh, 0.04, { y: y0, z: s * (W / 2 - 0.08), rx: s * 0.12 }), box(L - 0.04, bh, 0.04, { y: y0 + bh + 0.005, z: s * (W / 2 - 0.06), rx: s * 0.12 }));
+    parts.push(box(0.05, H, W, { x: s * (L / 2 - 0.05) }), box(0.07, 0.05, W, { x: s * (L / 2 - 0.05), y: H }));
+  }
+  if (floor) parts.push(box(L - 0.16, 0.04, W - 0.22, { y: y0 }));
+  return merge(parts);
+}
+
 export function fence(b, pts) {
   for (let i = 0; i < pts.length - 1; i++) {
     const a = pts[i], c = pts[i + 1], L = Math.hypot(c[0] - a[0], c[1] - a[1]);

@@ -1,0 +1,1711 @@
+{
+ "about": "The designed cast of the abbey (see docs/provenance/people.md). Named people have their own person; the rest are a small set of generic brothers, novices and lay servants whose faces are fixed by id, never dealt at random. Phenotype values are MakeHuman macro sliders (age 0.5 = 25 years, 1.0 = 90; 0.19 = 11).",
+ "packs": [
+  "makehuman_system_assets (CC0)",
+  "suits02 (CC0: donitz_monk_robe*, rehmanpolanski_viking_*)",
+  "skins02 (CC0)",
+  "shoes01 (CC0)",
+  "pants01 (CC0)",
+  "hair01 (CC0)",
+  "dress02 (CC BY: elvs_ladies_apron)",
+  "bodyparts05 (CC0: wdg_scruffy_beard, rehmanpolanski_beard_viking, rehmanpolanski_moustache_viking, culturalibre_faun_beard, grinsegold_beard_sigmund_wip)",
+  "shoes03 (CC BY: punkduck_medieval_boots)"
+ ],
+ "budgets": {
+  "skin": 5600,
+  "donitz_monk_robe_hood_off": 1600,
+  "donitz_monk_robe_hood": 1800,
+  "donitz_monk_robe": 5200,
+  "boots": 900,
+  "viking_tunic": 3000,
+  "viking_pants": 1200,
+  "wool_pants": 1200,
+  "apron": 900,
+  "short0": 1400,
+  "cortu_short": 1400,
+  "beard": 1100,
+  "moustache": 500,
+  "culturalibre_hair": 1400
+ },
+ "wools": {
+  "black": {
+   "name": "black",
+   "wool": [
+    0.21,
+    0.195,
+    0.185
+   ],
+   "belt": [
+    0.2,
+    0.14,
+    0.1
+   ]
+  },
+  "undyed": {
+   "name": "undyed",
+   "wool": [
+    0.47,
+    0.42,
+    0.35
+   ]
+  },
+  "russet": {
+   "name": "russet",
+   "wool": [
+    0.36,
+    0.25,
+    0.18
+   ]
+  },
+  "grey": {
+   "name": "grey",
+   "wool": [
+    0.36,
+    0.35,
+    0.33
+   ]
+  },
+  "dun": {
+   "name": "dun",
+   "wool": [
+    0.4,
+    0.34,
+    0.26
+   ]
+  },
+  "blue": {
+   "name": "blue",
+   "wool": [
+    0.26,
+    0.29,
+    0.34
+   ]
+  }
+ },
+ "hose": {
+  "brown": [
+   0.62,
+   0.5,
+   0.38
+  ],
+  "grey": [
+   0.5,
+   0.48,
+   0.45
+  ]
+ },
+ "people": [
+  {
+   "id": "abbot",
+   "dress": "monk",
+   "note": "the Abbot: a man of authority, well fed, upright (reconstruction by role)",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.73,
+    "muscle": 0.45,
+    "weight": 0.62,
+    "height": 0.56,
+    "proportions": 0.5
+   },
+   "targets": {
+    "head-square": 0.35,
+    "chin-prominent-incr": 0.35,
+    "nose-scale-vert-incr": 0.3,
+    "nose-hump-incr": 0.3,
+    "neck-double-incr": 0.25,
+    "l-cheek-volume-incr": 0.25,
+    "r-cheek-volume-incr": 0.25
+   },
+   "skin": "middleage_caucasian_male",
+   "eyebrows": "eyebrow004",
+   "hair": "short02",
+   "tonsure": 0.062,
+   "hairMul": [
+    0.62,
+    0.6,
+    0.58
+   ],
+   "hairTone": "ab",
+   "clothes": [
+    "donitz_monk_robe",
+    "toigo_ankle_boots_male"
+   ],
+   "hoods": {
+    "up": "donitz_monk_robe_hood",
+    "down": "donitz_monk_robe_hood_off"
+   },
+   "wool": "black",
+   "eye": {
+    "file": "brown",
+    "sat": 0.5,
+    "mul": [
+     0.72,
+     0.68,
+     0.62
+    ]
+   },
+   "eyeTone": "brot",
+   "hairSat": 0.35,
+   "skinMul": [
+    0.98,
+    0.95,
+    0.93
+   ]
+  },
+  {
+   "id": "malachi",
+   "dress": "monk",
+   "note": "Malachi the librarian: lean, tall, reserved (reconstruction by role; claim_000456, claim_000464 for his duties)",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.66,
+    "muscle": 0.4,
+    "weight": 0.3,
+    "height": 0.6,
+    "proportions": 0.6
+   },
+   "targets": {
+    "head-oval": 0.4,
+    "l-cheek-bones-incr": 0.45,
+    "r-cheek-bones-incr": 0.45,
+    "l-cheek-volume-decr": 0.4,
+    "r-cheek-volume-decr": 0.4,
+    "nose-scale-vert-incr": 0.4,
+    "chin-height-incr": 0.3,
+    "eyebrows-angle-down": 0.3
+   },
+   "skin": "young_caucasian_male2",
+   "eyebrows": "eyebrow007",
+   "hair": "short02",
+   "tonsure": 0.062,
+   "hairMul": [
+    0.5,
+    0.44,
+    0.38
+   ],
+   "hairTone": "ma",
+   "clothes": [
+    "donitz_monk_robe",
+    "toigo_ankle_boots_male"
+   ],
+   "hoods": {
+    "up": "donitz_monk_robe_hood",
+    "down": "donitz_monk_robe_hood_off"
+   },
+   "wool": "black",
+   "eye": {
+    "file": "brown",
+    "sat": 0.5,
+    "mul": [
+     0.72,
+     0.68,
+     0.62
+    ]
+   },
+   "eyeTone": "brhi"
+  },
+  {
+   "id": "ubertino",
+   "dress": "monk",
+   "note": "Ubertino: an old man who rises with difficulty (claim_000283), much in prayer in the church (claim_000212)",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.85,
+    "muscle": 0.3,
+    "weight": 0.36,
+    "height": 0.46,
+    "proportions": 0.5
+   },
+   "targets": {
+    "head-age-incr": 0.5,
+    "l-eye-bag-incr": 0.5,
+    "r-eye-bag-incr": 0.5,
+    "nose-scale-horiz-incr": 0.25,
+    "chin-prominent-decr": 0.2,
+    "l-cheek-volume-decr": 0.3,
+    "r-cheek-volume-decr": 0.3,
+    "forehead-scale-vert-incr": 0.3
+   },
+   "skin": "old_caucasian_male",
+   "eyebrows": "eyebrow009",
+   "hair": "short02",
+   "tonsure": 0.062,
+   "hairMul": [
+    0.95,
+    0.94,
+    0.92
+   ],
+   "hairTone": "ub",
+   "clothes": [
+    "donitz_monk_robe",
+    "toigo_ankle_boots_male"
+   ],
+   "hoods": {
+    "up": "donitz_monk_robe_hood",
+    "down": "donitz_monk_robe_hood_off"
+   },
+   "wool": "black",
+   "eye": {
+    "file": "bluegreen",
+    "sat": 0.35,
+    "mul": [
+     0.75,
+     0.75,
+     0.72
+    ]
+   },
+   "eyeTone": "blno",
+   "hairSat": 0.05
+  },
+  {
+   "id": "alinardo",
+   "dress": "monk",
+   "note": "Alinardo of Grottaferrata: 'old Alinardo' (claim_000966), frail, sits on the porch (claim_000989)",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.97,
+    "muscle": 0.2,
+    "weight": 0.26,
+    "height": 0.38,
+    "proportions": 0.5
+   },
+   "targets": {
+    "head-age-incr": 0.8,
+    "l-eye-bag-incr": 0.7,
+    "r-eye-bag-incr": 0.7,
+    "l-cheek-volume-decr": 0.6,
+    "r-cheek-volume-decr": 0.6,
+    "nose-scale-vert-incr": 0.35,
+    "nose-hump-incr": 0.4,
+    "chin-height-decr": 0.2,
+    "neck-scale-horiz-decr": 0.3
+   },
+   "skin": "onlytheghosts_old_eurasian_male",
+   "eyebrows": "eyebrow010",
+   "hair": "short02",
+   "tonsure": 0.07,
+   "hairMul": [
+    1.05,
+    1.05,
+    1.03
+   ],
+   "hairTone": "al",
+   "clothes": [
+    "donitz_monk_robe",
+    "toigo_ankle_boots_male"
+   ],
+   "hoods": {
+    "up": "donitz_monk_robe_hood",
+    "down": "donitz_monk_robe_hood_off"
+   },
+   "wool": "black",
+   "eye": {
+    "file": "bluegreen",
+    "sat": 0.35,
+    "mul": [
+     0.75,
+     0.75,
+     0.72
+    ]
+   },
+   "eyeTone": "bldo",
+   "hairSat": 0.0,
+   "skinMul": [
+    0.97,
+    0.94,
+    0.9
+   ]
+  },
+  {
+   "id": "severinus",
+   "dress": "monk",
+   "note": "Severinus the herbalist: of the gardens, baths and infirmary (claim_000303); sturdy, outdoor complexion (reconstruction)",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.69,
+    "muscle": 0.55,
+    "weight": 0.56,
+    "height": 0.5,
+    "proportions": 0.5
+   },
+   "targets": {
+    "head-round": 0.35,
+    "nose-scale-horiz-incr": 0.35,
+    "l-cheek-volume-incr": 0.3,
+    "r-cheek-volume-incr": 0.3,
+    "chin-width-incr": 0.25,
+    "eyebrows-angle-up": 0.25
+   },
+   "skin": "old_caucasian_male",
+   "eyebrows": "eyebrow003",
+   "hair": "short02",
+   "tonsure": 0.062,
+   "hairMul": [
+    0.55,
+    0.5,
+    0.45
+   ],
+   "hairTone": "se",
+   "clothes": [
+    "donitz_monk_robe",
+    "toigo_ankle_boots_male"
+   ],
+   "hoods": {
+    "up": "donitz_monk_robe_hood",
+    "down": "donitz_monk_robe_hood_off"
+   },
+   "wool": "black",
+   "eye": {
+    "file": "brownlight",
+    "sat": 0.55,
+    "mul": [
+     0.8,
+     0.78,
+     0.7
+    ]
+   },
+   "eyeTone": "brus",
+   "skinMul": [
+    1.0,
+    0.93,
+    0.86
+   ],
+   "skinSat": 1.1
+  },
+  {
+   "id": "monk_a",
+   "dress": "monk",
+   "note": "a brother, middle-aged, average build",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.66,
+    "muscle": 0.45,
+    "weight": 0.48,
+    "height": 0.52,
+    "proportions": 0.5
+   },
+   "targets": {
+    "nose-scale-vert-incr": 0.25,
+    "chin-prominent-incr": 0.2,
+    "head-oval": 0.3
+   },
+   "skin": "middleage_caucasian_male",
+   "eyebrows": "eyebrow001",
+   "hair": "short02",
+   "tonsure": 0.062,
+   "hairMul": [
+    0.9,
+    0.82,
+    0.74
+   ],
+   "hairTone": "a",
+   "clothes": [
+    "donitz_monk_robe",
+    "toigo_ankle_boots_male"
+   ],
+   "hoods": {
+    "up": "donitz_monk_robe_hood",
+    "down": "donitz_monk_robe_hood_off"
+   },
+   "wool": "black",
+   "eye": {
+    "file": "brown",
+    "sat": 0.5,
+    "mul": [
+     0.72,
+     0.68,
+     0.62
+    ]
+   },
+   "eyeTone": "br_a",
+   "budget": {
+    "skin": 4800,
+    "habit": 4600
+   }
+  },
+  {
+   "id": "scribe_a",
+   "dress": "monk",
+   "note": "a younger brother, slender, a scribe",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.56,
+    "muscle": 0.35,
+    "weight": 0.38,
+    "height": 0.5,
+    "proportions": 0.5
+   },
+   "targets": {
+    "nose-scale-horiz-decr": 0.3,
+    "head-rectangular": 0.25,
+    "l-cheek-bones-incr": 0.3,
+    "r-cheek-bones-incr": 0.3
+   },
+   "skin": "young_caucasian_male",
+   "eyebrows": "eyebrow002",
+   "hair": "short02",
+   "tonsure": 0.062,
+   "hairMul": [
+    0.75,
+    0.62,
+    0.5
+   ],
+   "hairTone": "b",
+   "clothes": [
+    "donitz_monk_robe",
+    "toigo_ankle_boots_male"
+   ],
+   "hoods": {
+    "up": "donitz_monk_robe_hood",
+    "down": "donitz_monk_robe_hood_off"
+   },
+   "wool": "black",
+   "eye": {
+    "file": "brownlight",
+    "sat": 0.55,
+    "mul": [
+     0.8,
+     0.78,
+     0.7
+    ]
+   },
+   "eyeTone": "br_a",
+   "budget": {
+    "skin": 4800,
+    "habit": 4600
+   }
+  },
+  {
+   "id": "monk_b",
+   "dress": "monk",
+   "note": "an older brother, heavy",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.8,
+    "muscle": 0.4,
+    "weight": 0.7,
+    "height": 0.46,
+    "proportions": 0.5
+   },
+   "targets": {
+    "head-fat-incr": 0.4,
+    "neck-double-incr": 0.4,
+    "nose-scale-horiz-incr": 0.3,
+    "chin-width-incr": 0.3,
+    "l-eye-bag-incr": 0.3,
+    "r-eye-bag-incr": 0.3
+   },
+   "skin": "old_caucasian_male",
+   "eyebrows": "eyebrow005",
+   "hair": "short02",
+   "tonsure": 0.062,
+   "hairMul": [
+    0.8,
+    0.78,
+    0.76
+   ],
+   "hairTone": "c",
+   "clothes": [
+    "donitz_monk_robe",
+    "toigo_ankle_boots_male"
+   ],
+   "hoods": {
+    "up": "donitz_monk_robe_hood",
+    "down": "donitz_monk_robe_hood_off"
+   },
+   "wool": "black",
+   "eye": {
+    "file": "brown",
+    "sat": 0.5,
+    "mul": [
+     0.72,
+     0.68,
+     0.62
+    ]
+   },
+   "eyeTone": "br_b",
+   "hairSat": 0.25,
+   "budget": {
+    "skin": 4800,
+    "habit": 4600
+   }
+  },
+  {
+   "id": "monk_c",
+   "dress": "monk",
+   "note": "a brother, tall and narrow, fair and freckled",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.6,
+    "muscle": 0.4,
+    "weight": 0.35,
+    "height": 0.56,
+    "proportions": 0.5
+   },
+   "targets": {
+    "head-oval": 0.35,
+    "nose-scale-vert-incr": 0.3,
+    "chin-height-incr": 0.25,
+    "l-ear-scale-incr": 0.2,
+    "r-ear-scale-incr": 0.2
+   },
+   "skin": "toigo_light_skin_male_freckles",
+   "eyebrows": "eyebrow006",
+   "hair": "short02",
+   "tonsure": 0.062,
+   "hairMul": [
+    1.2,
+    0.95,
+    0.72
+   ],
+   "hairTone": "d",
+   "clothes": [
+    "donitz_monk_robe",
+    "toigo_ankle_boots_male"
+   ],
+   "hoods": {
+    "up": "donitz_monk_robe_hood",
+    "down": "donitz_monk_robe_hood_off"
+   },
+   "wool": "black",
+   "eye": {
+    "file": "blue",
+    "sat": 0.45,
+    "mul": [
+     0.78,
+     0.8,
+     0.82
+    ]
+   },
+   "eyeTone": "bl_c",
+   "skinSat": 0.7,
+   "budget": {
+    "skin": 4800,
+    "habit": 4600
+   }
+  },
+  {
+   "id": "monk_d",
+   "dress": "monk",
+   "note": "an old brother, small, stooping",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.9,
+    "muscle": 0.3,
+    "weight": 0.4,
+    "height": 0.36,
+    "proportions": 0.5
+   },
+   "targets": {
+    "head-age-incr": 0.5,
+    "l-cheek-volume-decr": 0.35,
+    "r-cheek-volume-decr": 0.35,
+    "nose-hump-incr": 0.3,
+    "l-eye-bag-incr": 0.4,
+    "r-eye-bag-incr": 0.4
+   },
+   "skin": "jartur69_old_slavic_male_with_genitals_and_beard",
+   "eyebrows": "eyebrow008",
+   "hair": "short02",
+   "tonsure": 0.062,
+   "hairMul": [
+    1.0,
+    1.0,
+    0.98
+   ],
+   "hairTone": "e",
+   "clothes": [
+    "donitz_monk_robe",
+    "toigo_ankle_boots_male"
+   ],
+   "hoods": {
+    "up": "donitz_monk_robe_hood",
+    "down": "donitz_monk_robe_hood_off"
+   },
+   "wool": "black",
+   "eye": {
+    "file": "bluegreen",
+    "sat": 0.35,
+    "mul": [
+     0.75,
+     0.75,
+     0.72
+    ]
+   },
+   "eyeTone": "bl_d",
+   "hairSat": 0.0,
+   "budget": {
+    "skin": 4800,
+    "habit": 4600
+   }
+  },
+  {
+   "id": "monk_e",
+   "dress": "monk",
+   "note": "a brother of middle years, stocky, weathered",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.7,
+    "muscle": 0.62,
+    "weight": 0.58,
+    "height": 0.48,
+    "proportions": 0.5
+   },
+   "targets": {
+    "head-square": 0.3,
+    "chin-width-incr": 0.35,
+    "nose-scale-horiz-incr": 0.2,
+    "eyebrows-trans-down": 0.2
+   },
+   "skin": "toigo_light_skin_male_bronze",
+   "eyebrows": "eyebrow003",
+   "hair": "short02",
+   "tonsure": 0.062,
+   "hairMul": [
+    0.55,
+    0.48,
+    0.42
+   ],
+   "hairTone": "f",
+   "clothes": [
+    "donitz_monk_robe",
+    "toigo_ankle_boots_male"
+   ],
+   "hoods": {
+    "up": "donitz_monk_robe_hood",
+    "down": "donitz_monk_robe_hood_off"
+   },
+   "wool": "black",
+   "eye": {
+    "file": "brown",
+    "sat": 0.5,
+    "mul": [
+     0.72,
+     0.68,
+     0.62
+    ]
+   },
+   "eyeTone": "br_e",
+   "skinSat": 0.55,
+   "skinMul": [
+    0.95,
+    0.95,
+    0.95
+   ],
+   "budget": {
+    "skin": 4800,
+    "habit": 4600
+   }
+  },
+  {
+   "id": "novice_a",
+   "dress": "monk",
+   "note": "a novice, about seventeen, slight",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.34,
+    "muscle": 0.3,
+    "weight": 0.3,
+    "height": 0.42,
+    "proportions": 0.5
+   },
+   "targets": {
+    "head-round": 0.2,
+    "nose-scale-vert-decr": 0.2,
+    "chin-prominent-decr": 0.2
+   },
+   "skin": "young_caucasian_male",
+   "eyebrows": "eyebrow002",
+   "hair": "short02",
+   "tonsure": 0.055,
+   "hairMul": [
+    0.85,
+    0.7,
+    0.55
+   ],
+   "hairTone": "g",
+   "clothes": [
+    "donitz_monk_robe",
+    "toigo_ankle_boots_male"
+   ],
+   "hoods": {
+    "up": "donitz_monk_robe_hood",
+    "down": "donitz_monk_robe_hood_off"
+   },
+   "wool": "black",
+   "eye": {
+    "file": "brownlight",
+    "sat": 0.55,
+    "mul": [
+     0.8,
+     0.78,
+     0.7
+    ]
+   },
+   "eyeTone": "br_a",
+   "budget": {
+    "skin": 4800,
+    "habit": 4600
+   }
+  },
+  {
+   "id": "novice_b",
+   "dress": "monk",
+   "note": "a novice, about nineteen",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.37,
+    "muscle": 0.4,
+    "weight": 0.4,
+    "height": 0.5,
+    "proportions": 0.5
+   },
+   "targets": {
+    "head-rectangular": 0.2,
+    "nose-scale-horiz-incr": 0.2,
+    "l-ear-flap-incr": 0.3,
+    "r-ear-flap-incr": 0.3
+   },
+   "skin": "young_caucasian_male2",
+   "eyebrows": "eyebrow001",
+   "hair": "short02",
+   "tonsure": 0.055,
+   "hairMul": [
+    0.6,
+    0.5,
+    0.42
+   ],
+   "hairTone": "h",
+   "clothes": [
+    "donitz_monk_robe",
+    "toigo_ankle_boots_male"
+   ],
+   "hoods": {
+    "up": "donitz_monk_robe_hood",
+    "down": "donitz_monk_robe_hood_off"
+   },
+   "wool": "black",
+   "eye": {
+    "file": "brown",
+    "sat": 0.5,
+    "mul": [
+     0.72,
+     0.68,
+     0.62
+    ]
+   },
+   "eyeTone": "br_b",
+   "budget": {
+    "skin": 4800,
+    "habit": 4600
+   }
+  },
+  {
+   "id": "lay_cook",
+   "dress": "lay",
+   "note": "a kitchen servant: undyed tunic, hose, boots, a linen apron",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.64,
+    "muscle": 0.5,
+    "weight": 0.66,
+    "height": 0.44,
+    "proportions": 0.45
+   },
+   "targets": {
+    "nose-scale-horiz-incr": 0.35,
+    "head-round": 0.35,
+    "chin-width-incr": 0.3,
+    "neck-double-incr": 0.3
+   },
+   "skin": "jartur69_middleage_slavic_male_with_genitals_and_beard",
+   "eyebrows": "eyebrow003",
+   "hair": "short02",
+   "hairMul": [
+    0.8,
+    0.72,
+    0.64
+   ],
+   "hairTone": "k",
+   "clothes": [
+    "rehmanpolanski_viking_tunic",
+    "rehmanpolanski_viking_pants",
+    "rehmanpolanski_viking_boots",
+    "elvs_ladies_apron"
+   ],
+   "tunic": "undyed",
+   "hose": "brown",
+   "eye": {
+    "file": "brown",
+    "sat": 0.5,
+    "mul": [
+     0.72,
+     0.68,
+     0.62
+    ]
+   },
+   "eyeTone": "brok",
+   "budget": {
+    "skin": 4800
+   },
+   "apronTone": "linen"
+  },
+  {
+   "id": "lay_groom",
+   "dress": "lay",
+   "note": "a groom: lean, russet tunic, grey hose",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.55,
+    "muscle": 0.55,
+    "weight": 0.36,
+    "height": 0.52,
+    "proportions": 0.45
+   },
+   "targets": {
+    "nose-scale-vert-incr": 0.3,
+    "head-oval": 0.3,
+    "l-cheek-bones-incr": 0.3,
+    "r-cheek-bones-incr": 0.3
+   },
+   "skin": "young_caucasian_male2",
+   "eyebrows": "eyebrow006",
+   "hair": "cortu_short_messy_hair",
+   "hairMul": [
+    0.55,
+    0.45,
+    0.36
+   ],
+   "hairTone": "m",
+   "clothes": [
+    "rehmanpolanski_viking_tunic",
+    "rehmanpolanski_viking_pants",
+    "rehmanpolanski_viking_boots"
+   ],
+   "tunic": "russet",
+   "hose": "grey",
+   "eye": {
+    "file": "brownlight",
+    "sat": 0.55,
+    "mul": [
+     0.8,
+     0.78,
+     0.7
+    ]
+   },
+   "eyeTone": "brom",
+   "budget": {
+    "skin": 4800
+   }
+  },
+  {
+   "id": "lay_smith",
+   "dress": "lay",
+   "note": "a smith: broad, a leather apron",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.6,
+    "muscle": 0.8,
+    "weight": 0.55,
+    "height": 0.5,
+    "proportions": 0.45
+   },
+   "targets": {
+    "head-square": 0.35,
+    "neck-scale-horiz-incr": 0.35,
+    "chin-width-incr": 0.35,
+    "nose-scale-horiz-incr": 0.2
+   },
+   "skin": "toigo_light_skin_male_bronze",
+   "eyebrows": "eyebrow005",
+   "hair": "short02",
+   "hairMul": [
+    0.45,
+    0.4,
+    0.36
+   ],
+   "hairTone": "s",
+   "clothes": [
+    "rehmanpolanski_viking_tunic",
+    "rehmanpolanski_viking_pants",
+    "rehmanpolanski_viking_boots",
+    "elvs_ladies_apron"
+   ],
+   "tunic": "grey",
+   "hose": "brown",
+   "eye": {
+    "file": "brown",
+    "sat": 0.5,
+    "mul": [
+     0.72,
+     0.68,
+     0.62
+    ]
+   },
+   "eyeTone": "brth",
+   "budget": {
+    "skin": 4800
+   },
+   "apronTone": "leather",
+   "skinSat": 0.55
+  },
+  {
+   "id": "lay_herd",
+   "dress": "lay",
+   "note": "a herdsman: older, weathered, undyed wool",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.76,
+    "muscle": 0.5,
+    "weight": 0.45,
+    "height": 0.45,
+    "proportions": 0.45
+   },
+   "targets": {
+    "head-age-incr": 0.3,
+    "nose-hump-incr": 0.3,
+    "l-eye-bag-incr": 0.3,
+    "r-eye-bag-incr": 0.3,
+    "chin-prominent-incr": 0.2
+   },
+   "skin": "jartur69_old_slavic_male_with_genitals_and_beard",
+   "eyebrows": "eyebrow009",
+   "hair": "short02",
+   "hairMul": [
+    0.9,
+    0.88,
+    0.85
+   ],
+   "hairTone": "h2",
+   "clothes": [
+    "rehmanpolanski_viking_tunic",
+    "rehmanpolanski_viking_pants",
+    "rehmanpolanski_viking_boots"
+   ],
+   "tunic": "undyed",
+   "hose": "grey",
+   "eye": {
+    "file": "bluegreen",
+    "sat": 0.35,
+    "mul": [
+     0.75,
+     0.75,
+     0.72
+    ]
+   },
+   "eyeTone": "blrd",
+   "budget": {
+    "skin": 4800
+   },
+   "hairSat": 0.1
+  },
+  {
+   "id": "lay_baker",
+   "dress": "lay",
+   "note": "the baker at the oven: stout, round-faced, a short full beard",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.62,
+    "muscle": 0.5,
+    "weight": 0.72,
+    "height": 0.46,
+    "proportions": 0.45
+   },
+   "targets": {
+    "head-round": 0.4,
+    "neck-double-incr": 0.35,
+    "l-cheek-volume-incr": 0.3,
+    "r-cheek-volume-incr": 0.3,
+    "nose-scale-horiz-incr": 0.2
+   },
+   "skin": "middleage_caucasian_male",
+   "eyebrows": "eyebrow010",
+   "hair": "short03",
+   "hairMul": [
+    0.55,
+    0.45,
+    0.36
+   ],
+   "hairTone": "bak",
+   "clothes": [
+    "rehmanpolanski_viking_tunic",
+    "rehmanpolanski_viking_pants",
+    "punkduck_medieval_boots",
+    "grinsegold_beard_sigmund_wip",
+    "elvs_ladies_apron"
+   ],
+   "tunic": "undyed",
+   "hose": "brown",
+   "eye": {
+    "file": "brown",
+    "sat": 0.5,
+    "mul": [
+     0.72,
+     0.68,
+     0.62
+    ]
+   },
+   "eyeTone": "bak",
+   "budget": {
+    "skin": 4800
+   },
+   "apronTone": "linen"
+  },
+  {
+   "id": "lay_scullion",
+   "dress": "lay",
+   "note": "a kitchen servant past fifty, spare and hollow-cheeked",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.72,
+    "muscle": 0.4,
+    "weight": 0.3,
+    "height": 0.5,
+    "proportions": 0.5
+   },
+   "targets": {
+    "head-age-incr": 0.3,
+    "l-cheek-volume-decr": 0.4,
+    "r-cheek-volume-decr": 0.4,
+    "nose-hump-incr": 0.25,
+    "chin-prominent-incr": 0.2
+   },
+   "skin": "old_caucasian_male",
+   "eyebrows": "eyebrow008",
+   "hair": "short04",
+   "hairMul": [
+    1.05,
+    1.04,
+    1.0
+   ],
+   "hairTone": "scu",
+   "clothes": [
+    "rehmanpolanski_viking_tunic",
+    "rehmanpolanski_viking_pants",
+    "rehmanpolanski_viking_boots",
+    "elvs_ladies_apron"
+   ],
+   "tunic": "grey",
+   "hose": "grey",
+   "eye": {
+    "file": "bluegreen",
+    "sat": 0.35,
+    "mul": [
+     0.75,
+     0.75,
+     0.72
+    ]
+   },
+   "eyeTone": "scu",
+   "budget": {
+    "skin": 4800
+   },
+   "apronTone": "linen",
+   "hairSat": 0.1
+  },
+  {
+   "id": "lay_youth",
+   "dress": "lay",
+   "note": "a kitchen boy of about fifteen, slight",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.3,
+    "muscle": 0.35,
+    "weight": 0.35,
+    "height": 0.47,
+    "proportions": 0.5
+   },
+   "targets": {
+    "head-round": 0.25,
+    "nose-scale-vert-decr": 0.2,
+    "chin-prominent-decr": 0.2
+   },
+   "skin": "young_caucasian_male",
+   "eyebrows": "eyebrow002",
+   "hair": "culturalibre_hair_02",
+   "hairMul": [
+    0.75,
+    0.6,
+    0.42
+   ],
+   "hairTone": "you",
+   "clothes": [
+    "rehmanpolanski_viking_tunic",
+    "rehmanpolanski_viking_pants",
+    "punkduck_medieval_boots",
+    "elvs_ladies_apron"
+   ],
+   "tunic": "dun",
+   "hose": "brown",
+   "eye": {
+    "file": "brownlight",
+    "sat": 0.55,
+    "mul": [
+     0.8,
+     0.78,
+     0.7
+    ]
+   },
+   "eyeTone": "you",
+   "budget": {
+    "skin": 4800
+   },
+   "apronTone": "linen"
+  },
+  {
+   "id": "lay_old",
+   "dress": "lay",
+   "note": "the oldest of the kitchen servants, bent, white-bearded",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.82,
+    "muscle": 0.35,
+    "weight": 0.4,
+    "height": 0.42,
+    "proportions": 0.45
+   },
+   "targets": {
+    "head-age-incr": 0.4,
+    "l-eye-bag-incr": 0.35,
+    "r-eye-bag-incr": 0.35,
+    "nose-scale-vert-incr": 0.3
+   },
+   "skin": "old_caucasian_male",
+   "eyebrows": "eyebrow009",
+   "hair": "short01",
+   "hairMul": [
+    1.25,
+    1.25,
+    1.22
+   ],
+   "hairTone": "old",
+   "clothes": [
+    "rehmanpolanski_viking_tunic",
+    "rehmanpolanski_viking_pants",
+    "punkduck_medieval_boots",
+    "wdg_scruffy_beard",
+    "elvs_ladies_apron"
+   ],
+   "tunic": "undyed",
+   "hose": "grey",
+   "eye": {
+    "file": "grey",
+    "sat": 0.4,
+    "mul": [
+     0.8,
+     0.8,
+     0.8
+    ]
+   },
+   "eyeTone": "old",
+   "budget": {
+    "skin": 4800
+   },
+   "apronTone": "linen",
+   "hairSat": 0.1
+  },
+  {
+   "id": "lay_striker",
+   "dress": "lay",
+   "note": "the smith's striker: young, heavy-shouldered, red-haired",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.52,
+    "muscle": 0.85,
+    "weight": 0.55,
+    "height": 0.54,
+    "proportions": 0.45
+   },
+   "targets": {
+    "head-square": 0.3,
+    "neck-scale-horiz-incr": 0.4,
+    "chin-width-incr": 0.3
+   },
+   "skin": "toigo_light_skin_male_ginger",
+   "eyebrows": "eyebrow005",
+   "hair": "short01",
+   "hairMul": [
+    1.4,
+    0.88,
+    0.55
+   ],
+   "hairTone": "str",
+   "clothes": [
+    "rehmanpolanski_viking_tunic",
+    "rehmanpolanski_viking_pants",
+    "rehmanpolanski_viking_boots",
+    "culturalibre_faun_beard",
+    "elvs_ladies_apron"
+   ],
+   "tunic": "russet",
+   "hose": "brown",
+   "eye": {
+    "file": "blue",
+    "sat": 0.45,
+    "mul": [
+     0.78,
+     0.8,
+     0.82
+    ]
+   },
+   "eyeTone": "str",
+   "budget": {
+    "skin": 4800
+   },
+   "apronTone": "leather"
+  },
+  {
+   "id": "lay_swine",
+   "dress": "lay",
+   "note": "the swineherd: short, thick-set, grizzled, a rough beard",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.7,
+    "muscle": 0.6,
+    "weight": 0.68,
+    "height": 0.4,
+    "proportions": 0.45
+   },
+   "targets": {
+    "head-fat-incr": 0.3,
+    "nose-scale-horiz-incr": 0.35,
+    "chin-height-decr": 0.2,
+    "neck-double-incr": 0.2
+   },
+   "skin": "jartur69_middleage_slavic_male_with_genitals_and_beard",
+   "eyebrows": "eyebrow011",
+   "hair": "short02",
+   "hairMul": [
+    1.0,
+    0.97,
+    0.93
+   ],
+   "hairTone": "swi",
+   "clothes": [
+    "rehmanpolanski_viking_tunic",
+    "rehmanpolanski_viking_pants",
+    "rehmanpolanski_viking_boots",
+    "rehmanpolanski_beard_viking"
+   ],
+   "tunic": "undyed",
+   "hose": "brown",
+   "eye": {
+    "file": "brown",
+    "sat": 0.5,
+    "mul": [
+     0.72,
+     0.68,
+     0.62
+    ]
+   },
+   "eyeTone": "swi",
+   "budget": {
+    "skin": 4800
+   },
+   "hairSat": 0.3
+  },
+  {
+   "id": "lay_stableboy",
+   "dress": "lay",
+   "note": "a stable lad of about eighteen, lanky",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.38,
+    "muscle": 0.4,
+    "weight": 0.28,
+    "height": 0.58,
+    "proportions": 0.5
+   },
+   "targets": {
+    "head-oval": 0.3,
+    "nose-scale-vert-incr": 0.3,
+    "l-ear-flap-incr": 0.3,
+    "r-ear-flap-incr": 0.3
+   },
+   "skin": "young_caucasian_male2",
+   "eyebrows": "eyebrow006",
+   "hair": "short03",
+   "hairMul": [
+    0.36,
+    0.29,
+    0.23
+   ],
+   "hairTone": "stb",
+   "clothes": [
+    "rehmanpolanski_viking_tunic",
+    "rehmanpolanski_viking_pants",
+    "punkduck_medieval_boots"
+   ],
+   "tunic": "grey",
+   "hose": "brown",
+   "eye": {
+    "file": "brown",
+    "sat": 0.5,
+    "mul": [
+     0.72,
+     0.68,
+     0.62
+    ]
+   },
+   "eyeTone": "stb",
+   "budget": {
+    "skin": 4800
+   }
+  },
+  {
+   "id": "lay_thresher",
+   "dress": "lay",
+   "note": "a thresher: lean and sinewy, weathered, a short beard",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.62,
+    "muscle": 0.7,
+    "weight": 0.32,
+    "height": 0.5,
+    "proportions": 0.45
+   },
+   "targets": {
+    "head-rectangular": 0.3,
+    "l-cheek-bones-incr": 0.35,
+    "r-cheek-bones-incr": 0.35,
+    "nose-hump-incr": 0.2
+   },
+   "skin": "toigo_light_skin_male_bronze",
+   "eyebrows": "eyebrow004",
+   "hair": "culturalibre_hair_02",
+   "hairMul": [
+    0.45,
+    0.38,
+    0.3
+   ],
+   "hairTone": "thr",
+   "clothes": [
+    "rehmanpolanski_viking_tunic",
+    "rehmanpolanski_viking_pants",
+    "rehmanpolanski_viking_boots",
+    "wdg_scruffy_beard"
+   ],
+   "tunic": "dun",
+   "hose": "grey",
+   "eye": {
+    "file": "bluegreen",
+    "sat": 0.35,
+    "mul": [
+     0.75,
+     0.75,
+     0.72
+    ]
+   },
+   "eyeTone": "thr",
+   "budget": {
+    "skin": 4800
+   }
+  },
+  {
+   "id": "lay_carter",
+   "dress": "lay",
+   "note": "a carter: big, slow, broad-faced, a heavy moustache",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.66,
+    "muscle": 0.65,
+    "weight": 0.7,
+    "height": 0.56,
+    "proportions": 0.45
+   },
+   "targets": {
+    "head-square": 0.35,
+    "chin-width-incr": 0.35,
+    "nose-scale-horiz-incr": 0.3
+   },
+   "skin": "middleage_caucasian_male",
+   "eyebrows": "eyebrow012",
+   "hair": "short01",
+   "hairMul": [
+    0.42,
+    0.35,
+    0.28
+   ],
+   "hairTone": "car",
+   "clothes": [
+    "rehmanpolanski_viking_tunic",
+    "rehmanpolanski_viking_pants",
+    "rehmanpolanski_viking_boots",
+    "rehmanpolanski_moustache_viking"
+   ],
+   "tunic": "blue",
+   "hose": "brown",
+   "eye": {
+    "file": "brown",
+    "sat": 0.5,
+    "mul": [
+     0.72,
+     0.68,
+     0.62
+    ]
+   },
+   "eyeTone": "car",
+   "budget": {
+    "skin": 4800
+   }
+  },
+  {
+   "id": "lay_miller",
+   "dress": "lay",
+   "note": "the miller's man: pale with flour, clean-shaven",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.58,
+    "muscle": 0.55,
+    "weight": 0.5,
+    "height": 0.48,
+    "proportions": 0.5
+   },
+   "targets": {
+    "head-oval": 0.25,
+    "nose-point-up": 0.2,
+    "chin-height-incr": 0.2
+   },
+   "skin": "young_caucasian_male",
+   "eyebrows": "eyebrow003",
+   "hair": "short04",
+   "hairMul": [
+    0.7,
+    0.62,
+    0.52
+   ],
+   "hairTone": "mil",
+   "clothes": [
+    "rehmanpolanski_viking_tunic",
+    "rehmanpolanski_viking_pants",
+    "punkduck_medieval_boots",
+    "elvs_ladies_apron"
+   ],
+   "tunic": "undyed",
+   "hose": "grey",
+   "eye": {
+    "file": "blue",
+    "sat": 0.45,
+    "mul": [
+     0.78,
+     0.8,
+     0.82
+    ]
+   },
+   "eyeTone": "mil",
+   "budget": {
+    "skin": 4800
+   },
+   "apronTone": "linen"
+  },
+  {
+   "id": "lay_porter",
+   "dress": "lay",
+   "note": "a porter: tall and long-armed, dark, a short chin beard",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.56,
+    "muscle": 0.6,
+    "weight": 0.42,
+    "height": 0.53,
+    "proportions": 0.55
+   },
+   "targets": {
+    "head-oval": 0.35,
+    "chin-prominent-incr": 0.3,
+    "forehead-scale-vert-incr": 0.2
+   },
+   "skin": "young_caucasian_male2",
+   "eyebrows": "eyebrow007",
+   "hair": "short01",
+   "hairMul": [
+    0.3,
+    0.25,
+    0.2
+   ],
+   "hairTone": "por",
+   "clothes": [
+    "rehmanpolanski_viking_tunic",
+    "rehmanpolanski_viking_pants",
+    "rehmanpolanski_viking_boots",
+    "culturalibre_faun_beard"
+   ],
+   "tunic": "russet",
+   "hose": "grey",
+   "eye": {
+    "file": "brown",
+    "sat": 0.5,
+    "mul": [
+     0.72,
+     0.68,
+     0.62
+    ]
+   },
+   "eyeTone": "por",
+   "budget": {
+    "skin": 4800
+   }
+  },
+  {
+   "id": "monk_f",
+   "dress": "monk",
+   "note": "a younger brother, round-faced and fair",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.55,
+    "muscle": 0.4,
+    "weight": 0.55,
+    "height": 0.47,
+    "proportions": 0.5
+   },
+   "targets": {
+    "head-round": 0.35,
+    "l-cheek-volume-incr": 0.3,
+    "r-cheek-volume-incr": 0.3,
+    "nose-scale-vert-decr": 0.2
+   },
+   "skin": "young_caucasian_male",
+   "eyebrows": "eyebrow002",
+   "hair": "short02",
+   "tonsure": 0.062,
+   "hairMul": [
+    0.85,
+    0.72,
+    0.55
+   ],
+   "hairTone": "mf",
+   "clothes": [
+    "donitz_monk_robe",
+    "toigo_ankle_boots_male"
+   ],
+   "hoods": {
+    "up": "donitz_monk_robe_hood",
+    "down": "donitz_monk_robe_hood_off"
+   },
+   "wool": "black",
+   "eye": {
+    "file": "blue",
+    "sat": 0.45,
+    "mul": [
+     0.78,
+     0.8,
+     0.82
+    ]
+   },
+   "eyeTone": "mf",
+   "budget": {
+    "skin": 4800,
+    "habit": 4600
+   }
+  },
+  {
+   "id": "monk_g",
+   "dress": "monk",
+   "note": "an old brother, very lean and long-faced",
+   "phenotype": {
+    "gender": 1.0,
+    "age": 0.84,
+    "muscle": 0.3,
+    "weight": 0.25,
+    "height": 0.55,
+    "proportions": 0.55
+   },
+   "targets": {
+    "head-oval": 0.45,
+    "l-cheek-volume-decr": 0.45,
+    "r-cheek-volume-decr": 0.45,
+    "head-age-incr": 0.35,
+    "nose-scale-vert-incr": 0.35
+   },
+   "skin": "old_caucasian_male",
+   "eyebrows": "eyebrow009",
+   "hair": "short02",
+   "tonsure": 0.07,
+   "hairMul": [
+    1.3,
+    1.3,
+    1.28
+   ],
+   "hairTone": "mg",
+   "clothes": [
+    "donitz_monk_robe",
+    "toigo_ankle_boots_male"
+   ],
+   "hoods": {
+    "up": "donitz_monk_robe_hood",
+    "down": "donitz_monk_robe_hood_off"
+   },
+   "wool": "black",
+   "eye": {
+    "file": "grey",
+    "sat": 0.4,
+    "mul": [
+     0.8,
+     0.8,
+     0.8
+    ]
+   },
+   "eyeTone": "mg",
+   "budget": {
+    "skin": 4800,
+    "habit": 4600
+   },
+   "hairSat": 0.1
+  }
+ ],
+ "aprons": {
+  "linen": [
+   0.55,
+   0.5,
+   0.42
+  ],
+  "leather": [
+   0.27,
+   0.19,
+   0.13
+  ]
+ },
+ "kinds": {
+  "monk": [
+   "monk_a",
+   "scribe_a",
+   "monk_b",
+   "monk_c",
+   "monk_d",
+   "monk_e",
+   "monk_f",
+   "monk_g"
+  ],
+  "novice": [
+   "novice_a",
+   "novice_b"
+  ],
+  "abbot": [
+   "abbot"
+  ],
+  "servant": [
+   "lay_cook",
+   "lay_baker",
+   "lay_scullion",
+   "lay_youth",
+   "lay_old",
+   "lay_smith",
+   "lay_striker",
+   "lay_thresher",
+   "lay_miller"
+  ],
+  "herd": [
+   "lay_herd",
+   "lay_swine",
+   "lay_groom",
+   "lay_stableboy",
+   "lay_carter"
+  ],
+  "peasant": [
+   "lay_miller",
+   "lay_porter",
+   "lay_carter",
+   "lay_thresher"
+  ]
+ }
+}

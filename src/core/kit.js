@@ -10,7 +10,8 @@ export const TAU = Math.PI * 2;
 export function clean(g) {
   let n = g.index ? g.toNonIndexed() : g;
   if (n !== g) g.dispose();
-  for (const k of Object.keys(n.attributes)) if (!['position', 'normal', 'uv'].includes(k)) n.deleteAttribute(k);
+  // vertex colour survives only for materials that use it (embers, cabbage)
+  for (const k of Object.keys(n.attributes)) if (!['position', 'normal', 'uv', 'color'].includes(k)) n.deleteAttribute(k);
   if (!n.attributes.normal) n.computeVertexNormals();
   if (!n.attributes.uv) n.setAttribute('uv', new THREE.BufferAttribute(new Float32Array(n.attributes.position.count * 2), 2));
   n.clearGroups();
@@ -144,6 +145,8 @@ export function merge(list) {
   const ok = list.filter(Boolean).map(clean);
   if (!ok.length) return new THREE.BufferGeometry();
   if (ok.length === 1) return ok[0];
+  if (ok.some(g => g.attributes.color) && !ok.every(g => g.attributes.color))
+    for (const g of ok) if (!g.attributes.color) g.setAttribute('color', new THREE.BufferAttribute(new Float32Array(g.attributes.position.count * 3).fill(1), 3));
   const m = mergeGeometries(ok, false);
   ok.forEach(g => g.dispose());
   return m;
@@ -635,18 +638,47 @@ export class Batch {
   build(M) {
     const group = new THREE.Group();
     group.name = this.name;
+    const interior = /interior|ground|scriptorium|library|ossuary/.test(this.name);
+    const cellWidth = 24, centre = new V3(), size = new V3();
+    const footprint = new THREE.Box3();
+    if (interior) for (const list of this.parts.values()) for (const part of list) {
+      part.computeBoundingBox(); footprint.union(part.boundingBox);
+    }
+    footprint.getSize(size);
+    // Splitting a single building adds submission cost for little benefit.
+    // Partition only compounds/passages spanning more than 80 metres.
+    const partition = interior && Math.max(size.x, size.z) > 80;
+    group.userData.renderCells = partition;
     for (const [key, list] of this.parts) {
       const mat = key.split('.').reduce((o, k) => o?.[k], M);
       if (!mat) { console.warn('missing material', key); continue; }
-      const g = merge(list.map(x => x.clone()));
-      g.computeBoundingSphere();
-      const mesh = new THREE.Mesh(g, mat);
-      mesh.name = `${this.name}:${key}`;
-      mesh.position.set(...this.offset);
-      const transparent = mat.transparent;
-      mesh.castShadow = !transparent && !this.noShadow.has(key);
-      mesh.receiveShadow = true;
-      group.add(mesh);
+      const cells = new Map();
+      for (const part of list) {
+        let cell = 'all';
+        if (partition) {
+          part.boundingBox.getCenter(centre); part.boundingBox.getSize(size);
+          // Large floors/walls remain complete. Keep them out of furniture
+          // cells so their wide bounds cannot defeat local frustum culling.
+          const wide = Math.max(size.x, size.z) > cellWidth * 1.5 ? 'wide:' : '';
+          cell = wide + Math.floor((centre.x + this.offset[0]) / cellWidth) + ':' + Math.floor((centre.z + this.offset[2]) / cellWidth);
+        }
+        if (!cells.has(cell)) cells.set(cell, []);
+        cells.get(cell).push(part);
+      }
+      for (const [cell, pieces] of cells) {
+        const g = merge(pieces.map(x => x.clone()));
+        // A coloured material may have plain pieces in another cell. Keep
+        // their neutral white attribute, as the original merged batch did.
+        if (mat.vertexColors && !g.attributes.color) g.setAttribute('color', new THREE.BufferAttribute(new Float32Array(g.attributes.position.count * 3).fill(1), 3));
+        g.computeBoundingBox(); g.computeBoundingSphere();
+        const mesh = new THREE.Mesh(g, mat);
+        mesh.name = `${this.name}:${key}` + (partition ? ':' + cell : '');
+        mesh.position.set(...this.offset);
+        mesh.castShadow = !mat.transparent && !this.noShadow.has(key);
+        mesh.receiveShadow = true;
+        if (partition) mesh.userData.visibilityBox = g.boundingBox.clone().translate(mesh.position);
+        group.add(mesh);
+      }
     }
     return group;
   }

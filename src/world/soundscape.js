@@ -26,7 +26,7 @@ export function buildSoundscape(sound, ctx) {
   // the Aedificium
   const A = (x, z) => [AED.x + x, AED.z + z];
   { const [x, z] = A(-12, 11); E('kitchen', x, 1.6, z, { zone: 'kitchen', radius: 30 }); }
-  for (const [dx, dz] of [[-17, 6], [14, -12], [4, 18], [-6, -19]]) { const [x, z] = A(dx, dz); E('scriptorium', x, AED.y1 + 1.3, z, { zone: 'scriptorium', radius: 16 }); }
+  // Quills/pages now belong to the visible authored writing loops.
   for (let i = 0; i < 8; i++) {
     const a = i * Math.PI / 4 + Math.PI / 8, [x, z] = A(Math.cos(a) * 24, Math.sin(a) * 24);
     E('wind-slit', x, AED.y2 + 1.6, z, { zone: 'library', radius: 9 });

@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { pbr, canvasTex, rng } from './materials.js';
+import { pbr, canvasTex, rng, underground } from './materials.js';
 import { dress } from './weathering.js';
 
 // Materials for the sculpted props and room dressing (src/world/props/):
@@ -165,7 +165,17 @@ export function propMaterials(M) {
   // the ossuary's rough-hewn rock: a finer grain and a duller, damp sheen
   // (the architecture's wet rubble, under a lantern at arm's length, broke
   // into large glossy facets)
-  p.cryptStone = dressed('rubble', { scale: 1.5, color: 0x8f8a80, env: 0.2, normal: 0.75 }, { macro: 0.35, streak: 0.3, damp: 0.55, soot: 0.2, lichen: 0.1, rough: 0.9, wet: 0.15, tintA: 0xe8e2d2, tintB: 0xcfd2c8, sat: 0.5 });
+  const cs = [{ scale: 1.5, color: 0x8f8a80, env: 0.2, normal: 0.75 }, { macro: 0.35, streak: 0.3, damp: 0.55, soot: 0.2, lichen: 0.1, rough: 0.9, wet: 0.15, tintA: 0xe8e2d2, tintB: 0xcfd2c8, sat: 0.5 }];
+  p.cryptStone = dressed('rubble', ...cs);
+  // the treasury's own rock and flags are the ossuary's and the church's
+  // materials again, but closed to the lights of the church above
+  // (core/materials.js underground())
+  p.tStone = underground(dressed('rubble', ...cs));
+  p.tFlag = underground(dressed('flag', { scale: 3.2, color: 0xc9c0b1, env: 0.4 }, { macro: 0.22, rough: 0.78, cavity: 0.35 }));
+  // its low vault: old lime over the rock, greyed and smoked by centuries
+  // of torches (the church's white plaster, #f6eee0, lit from half a metre,
+  // burned to gold leaf). Albedo about a third of that.
+  p.cryptVault = underground(dressed('plaster_stone', { scale: 2.2, color: 0x9a9184, env: 0.2, normal: 0.9 }, { macro: 0.3, streak: 0.12, damp: 0.2, soot: 0.55, rough: 0.94, cavity: 0.25, tintA: 0xe6e0d4, tintB: 0xd0d0c8, sat: 0.55 }));
   p.bone = std({ map: boneTex(3), color: 0xbfb398, roughness: 0.78, envMapIntensity: 0.35 });
   p.boneDark = std({ map: boneTex(7), color: 0x958667, roughness: 0.85, envMapIntensity: 0.3 });
   p.socket = std({ color: 0x0c0907, roughness: 1, envMapIntensity: 0 });
@@ -188,7 +198,10 @@ export function propMaterials(M) {
   p.glazeBrown = std({ map: potTex(13, '#6b4424'), roughness: 0.3, envMapIntensity: 0.7 });
   p.glass = std({ color: 0x7d8d6a, roughness: 0.12, metalness: 0, transparent: true, opacity: 0.55, envMapIntensity: 1.2, depthWrite: false });
   p.stain = std({ map: stainTex(17), transparent: true, roughness: 0.35, envMapIntensity: 0.8, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -4 });
-  p.bloodPool = std({ color: 0x2a0303, roughness: 0.08, envMapIntensity: 1.1 });
+  // Thick, opaque blood retains a restrained wet sheen. The grazing sky
+  // reflection was still whitening the entire vat in the rendered snow.
+  p.bloodPool = new THREE.MeshPhysicalMaterial({ color: 0x380607, roughness: 0.42, metalness: 0,
+    envMapIntensity: 0.12, specularIntensity: 0.22, specularColor: 0xbb6655 });
   p.water = std({ color: 0x1c2220, roughness: 0.08, metalness: 0, envMapIntensity: 0.45, transparent: true, opacity: 0.9 });
   p.wetFloor = std({ color: 0x141614, roughness: 0.12, envMapIntensity: 0.5, transparent: true, opacity: 0.35, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -2 });
   p.hay = std({ map: strewTex(23, ['#b89a5a', '#a88a4c', '#c9ae70', '#8d7440', '#d8c48c']), transparent: true, alphaTest: 0.35, roughness: 1, envMapIntensity: 0.2, side: THREE.DoubleSide });
@@ -203,11 +216,17 @@ export function propMaterials(M) {
   p.ironRust = std({ color: 0x3b2d24, roughness: 0.8, metalness: 0.6, envMapIntensity: 0.5 });
   p.coal = std({ color: 0x151210, roughness: 0.95 });
   p.glow = new THREE.MeshBasicMaterial({ color: 0xff6a20, toneMapped: false });
+  // coals glowing from within, each vertex its own heat (props/sculpt.js embers)
+  p.ember = new THREE.MeshBasicMaterial({ vertexColors: true, toneMapped: false });
   p.wine = std({ color: 0x2c0a10, roughness: 0.1, envMapIntensity: 1 });
   p.oilRes = std({ color: 0x2e2812, roughness: 0.4, envMapIntensity: 0.35 });
   p.bread = std({ color: 0xa07040, roughness: 0.9 });
   p.onion = std({ color: 0xb78a52, roughness: 0.6 });
+  // meat browning on the spit: dark and fatty, not the pale crust of bread
+  p.roast = std({ color: 0x3e1f12, roughness: 0.55, envMapIntensity: 0.3 });
   p.greens = std({ color: 0x4a5a2c, roughness: 0.9 });
+  // leaf shading in vertex colour (props/sculpt.js cabbage), waxy bloom
+  p.cabbage = std({ vertexColors: true, roughness: 0.62, envMapIntensity: 0.3, side: THREE.DoubleSide });
   p.books = [101, 102, 103, 104].map(sd => { const t = bookShelf(sd); const m = std({ map: t.map, normalMap: t.nm, roughness: 0.78, envMapIntensity: 0.3 }); m.normalScale.set(1.4, 1.4); return m; });
   return p;
 }

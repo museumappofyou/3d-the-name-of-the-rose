@@ -23,28 +23,33 @@ export function desk(b, x, y, z, ry, { small = false, rest = true } = {}) {
   const top = box(w, 0.045, d, {});
   top.rotateX(0.32); top.translate(0, 0.95, 0.02);
   parts.push(top);
-  parts.push(box(w, 0.08, 0.05, { y: 0.9, z: d / 2 - 0.02 })); // lip
-  // shelf beneath
-  parts.push(box(w - 0.12, 0.03, d * 0.7, { y: 0.45, z: -0.02 }));
+  parts.push(box(w, 0.08, 0.05, { y: 0.87, z: d / 2 - 0.02 })); // lip, flush with the leaf's lower edge
+  // shelf beneath, set back so that a seated scribe's knees pass under it
+  parts.push(box(w - 0.12, 0.03, d * 0.42, { y: 0.45, z: -0.16 }));
   const g = merge(parts); at(g, x, y, z, ry); b.add('wood', g);
   // bench
   const bench = merge([box(w * 0.9, 0.05, 0.32, { y: 0.45, z: 0 }), box(0.06, 0.45, 0.28, { x: -w * 0.38 }), box(0.06, 0.45, 0.28, { x: w * 0.38 })]);
-  const [bx, bz] = rot(0, 0.75, ry);
+  // (0.62 behind the desk's centre: close enough that a seated scribe writes
+  // with his elbow bent and his back upright; scripts/people/tasks.py 'write')
+  const [bx, bz] = rot(0, 0.62, ry);
   at(bench, x + bx, y, z + bz, ry); b.add('woodDark', bench);
   // the work: a leaf of parchment pinned flat by a lead weight, the open
   // exemplar on its rest, the inkhorn set in the desk's edge, a quill (vane
   // and all) and the penknife laid by, a pumice stone
   const T = (g, dx, dy, dz, tilt = 0.32) => { g.rotateX(tilt); g.translate(dx, dy, dz); return at(g, x, y, z, ry); };
-  b.add('p.vellum', T(C.drape(w * 0.42, 0.34, 0.0, { hang: 0.006, seed: Math.round(x * 31 + z * 17), rumple: 0.15, floor: -0.5 }), -w * 0.14, 1.003, 0.04), { collide: false, shadow: false });
-  b.add('iron', T(box(0.05, 0.02, 0.03, {}), -w * 0.14 + w * 0.2, 1.0, -0.08), { collide: false, shadow: false });
+  // (the leaf lies centre-right under the writing hand; the exemplar on its
+  // rest to the left; the inkhorn at the right edge)
+  const PX = w * 0.02, RX = -w * 0.25;
+  b.add('p.vellum', T(C.drape(w * 0.42, 0.34, 0.0, { hang: 0.006, seed: Math.round(x * 31 + z * 17), rumple: 0.15, floor: -0.5 }), PX, 1.003, 0.04), { collide: false, shadow: false });
+  b.add('iron', T(box(0.05, 0.02, 0.03, {}), PX - w * 0.2, 1.0, -0.08), { collide: false, shadow: false });
   if (rest) {
-    const r = merge([box(0.46, 0.3, 0.025, { x: w * 0.25, y: 0.99, z: -0.18 }), box(0.46, 0.03, 0.06, { x: w * 0.25, y: 0.99, z: -0.14 })]);
+    const r = merge([box(0.46, 0.3, 0.025, { x: RX, y: 0.99, z: -0.18 }), box(0.46, 0.03, 0.06, { x: RX, y: 0.99, z: -0.14 })]);
     r.rotateX(-0.25); at(r, x, y, z, ry); b.add('woodDark', r, { collide: false });
     // the open codex: two leaves bowed up from the spine, boards beneath
     const leaf = s2 => { const g = C.drape(0.19, 0.27, 0, { hang: 0.004, seed: 3 + s2, rumple: 0.15, floor: -0.5 }); g.rotateZ(s2 * 0.12); g.translate(s2 * 0.1, 0, 0); return g; };
-    const book = merge([leaf(-1), leaf(1)]); book.rotateX(Math.PI / 2 - 0.25); book.translate(w * 0.25, 1.15, -0.12); at(book, x, y, z, ry);
+    const book = merge([leaf(-1), leaf(1)]); book.rotateX(Math.PI / 2 - 0.25); book.translate(RX, 1.15, -0.12); at(book, x, y, z, ry);
     b.add('p.vellum', book, { collide: false, shadow: false });
-    const boards = box(0.42, 0.29, 0.02, { x: w * 0.25, y: 1.0, z: -0.145 }); boards.rotateX(-0.25); at(boards, x, y, z, ry); b.add('p.leather', boards, { collide: false });
+    const boards = box(0.42, 0.29, 0.02, { x: RX, y: 1.0, z: -0.145 }); boards.rotateX(-0.25); at(boards, x, y, z, ry); b.add('p.leather', boards, { collide: false });
   }
   const horn = lathe([[0, 0], [0.028, 0], [0.034, 0.05], [0.03, 0.1], [0.022, 0.12], [0, 0.11]], 10, {}); horn.rotateZ(0.35); horn.translate(w * 0.43, 0.97, 0.2); at(horn, x, y, z, ry);
   b.add('p.boneDark', horn, { collide: false });
@@ -186,6 +191,13 @@ export function bookcase(b, a, c, y, h = 2.7, d = 0.42, { shelves = 5, variant =
   b.add(`p.books.${variant % 4}`, sg, { collide: false });
 }
 
+// a bed of coals in a fire's local frame (o: its centre), glowing and dark
+function emberBed(b, w, d, o, x, y, z, ry, seed, n = 24) {
+  const { hot, dark } = S.embers(w, d, { seed, n });
+  hot.translate(o.x, o.y, o.z); at(hot, x, y, z, ry); b.add('p.ember', hot, { collide: false, shadow: false });
+  if (dark) { dark.translate(o.x, o.y, o.z); at(dark, x, y, z, ry); b.add('p.coal', dark, { collide: false }); }
+}
+
 // "a huge bread oven, mouth open, blazing red": a masonry dome on a
 // plinth, the mouth an arched opening in a thick front with a real depth,
 // the fire drawn to the back of the floor as glowing embers and a few
@@ -198,8 +210,7 @@ export function breadOven(b, x, y, z, ry, emit) {
   const g = merge(parts); at(g, x, y, z, ry); b.add('rubbleIn', g);
   // the dark hollow behind the mouth
   const cav = box(1.1, 0.6, 1.6, { y: 1.02, z: 0.45 }); at(cav, x, y, z, ry); b.add('p.coal', cav, { collide: false, shadow: false });
-  const embers = merge([0, 1, 2, 3, 4].map(k => { const e = sphere(0.09 + (k % 2) * 0.04, {}, 6, 4); e.scale(1.6, 0.35, 1.2); e.translate((k - 2) * 0.16, 1.03, 0.2 + (k % 3) * 0.12); return e; }));
-  at(embers, x, y, z, ry); b.add('p.glow', embers, { collide: false, shadow: false });
+  emberBed(b, 0.8, 0.5, { x: 0, y: 1.0, z: 0.35 }, x, y, z, ry, 41, 18);
   const logs = merge([-0.12, 0.14].map((dx, k) => { const l = cyl(0.06, 0.07, 0.6, 7, {}); l.rotateX(Math.PI / 2); l.rotateY(k ? 0.5 : -0.4); l.translate(dx, 1.1, 0.3); return l; }));
   at(logs, x, y, z, ry); b.add('char', logs, { collide: false });
   const door = box(0.8, 0.62, 0.08, {}); door.rotateX(-0.12); door.rotateY(0.3); door.translate(1.0, 0, 1.9); at(door, x, y, z, ry); b.add('rubbleIn', door);
@@ -235,8 +246,7 @@ export function hearth(b, x, y, z, ry, emit, { w = 3.4, hoodTop = 6.6 } = {}) {
   // the fire: a bed of ash and coals, embers glowing through it, logs
   // burning across firedogs
   const bed = C.drape(1.5, 1.0, 0.47, { hang: 0.05, seed: 17, rumple: 3, floor: 0.45 }); at(bed, x, y, z, ry); b.add('p.coal', bed, { collide: false });
-  const emb = merge([0, 1, 2, 3, 4, 5, 6].map(k => { const e = sphere(0.1 + (k % 3) * 0.03, {}, 6, 4); e.scale(1.8, 0.3, 1.3); e.translate(-0.5 + k * 0.17, 0.5, -0.2 + (k % 2) * 0.3); return e; }));
-  at(emb, x, y, z, ry); b.add('p.glow', emb, { collide: false, shadow: false });
+  emberBed(b, 1.2, 0.6, { x: 0, y: 0.49, z: -0.05 }, x, y, z, ry, 43, 30);
   const logs = merge([[-0.25, 0.4], [0.2, -0.5], [0, 0.1]].map(([dx, a2]) => { const l = cyl(0.07, 0.08, 0.95, 8, {}); l.rotateZ(Math.PI / 2); l.rotateY(a2); l.translate(dx, 0.6, 0.05); return l; }));
   at(logs, x, y, z, ry); b.add('char', logs, { collide: false });
   const dogs = merge([-0.55, 0.55].map(dx => merge([box(0.05, 0.3, 0.05, { x: dx, y: 0.45, z: 0.4 }), box(0.04, 0.04, 0.8, { x: dx, y: 0.56, z: 0.0 })])));
@@ -248,7 +258,9 @@ export function hearth(b, x, y, z, ry, emit, { w = 3.4, hoodTop = 6.6 } = {}) {
   }
   const spit = merge([box(w - 0.3, 0.04, 0.04, { y: 1.15, z: 0.6 }), box(0.06, 1.2, 0.06, { x: -(w / 2 - 0.2), z: 0.6 }), box(0.06, 1.2, 0.06, { x: w / 2 - 0.2, z: 0.6 })]);
   at(spit, x, y, z, ry); b.add('iron', spit, { collide: false });
-  const meat = sphere(0.26, {}, 10, 8); meat.scale(1.5, 0.8, 0.8); meat.translate(0.2, 1.15, 0.6); at(meat, x, y, z, ry); b.add('p.bread', meat, { collide: false });
+  // a haunch turning on the spit: thick at the rump, narrowing to the shank
+  const meat = lathe([[0, 0], [0.1, 0.02], [0.14, 0.1], [0.14, 0.24], [0.1, 0.34], [0.06, 0.42], [0.04, 0.5], [0.035, 0.56], [0, 0.57]], 14, {});
+  meat.scale(1, 1, 0.82); meat.rotateZ(Math.PI / 2); meat.translate(0.45, 1.15, 0.6); at(meat, x, y, z, ry); b.add('p.roast', meat, { collide: false });
   const [fx, fz] = rot(0, 1.3, ry);
   emit?.({ x: x + fx, y: y + 1.0, z: z + fz, color: 0xff8a3a, intensity: 10, distance: 14, flicker: 0.45 });
 }
@@ -264,8 +276,7 @@ export function fireplace(b, x, y, z, ry, emit, { w = 2.6, h = 4.2 } = {}) {
   const logs = merge([cyl(0.09, 0.09, 1.1, 8, {}), cyl(0.08, 0.08, 1.0, 8, {})]);
   logs.rotateZ(Math.PI / 2); logs.translate(0.5, 0.35, 0.35);
   at(logs, x, y, z, ry); b.add('char', logs, { collide: false });
-  const emb = merge([0, 1, 2, 3].map(k => { const e = sphere(0.08 + (k % 2) * 0.03, {}, 6, 4); e.scale(1.8, 0.3, 1.2); e.translate(-0.3 + k * 0.2, 0.27, 0.3 + (k % 2) * 0.1); return e; }));
-  at(emb, x, y, z, ry); b.add('p.glow', emb, { collide: false, shadow: false });
+  emberBed(b, 0.9, 0.45, { x: 0.15, y: 0.25, z: 0.35 }, x, y, z, ry, 47, 22);
   const [fx, fz] = rot(0, 1.0, ry);
   emit?.({ x: x + fx, y: y + 0.8, z: z + fz, color: 0xff8438, intensity: 7, distance: 11, flicker: 0.4 });
 }

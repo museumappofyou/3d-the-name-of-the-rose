@@ -71,9 +71,15 @@ export function credence(w = 1.3, d = 0.65, h = 0.9) {
 export function stallRow(n, { w = 0.62, back = 2.3, platform = 0.25 } = {}) {
   const parts = [], carv = [];
   const L = n * w;
-  parts.push(box(L + 0.1, platform, 0.9, { z: -0.1 }));                         // the raised floor of the row
+  parts.push(box(L + 0.1, platform, 1.1, { z: 0 }));                          // room for standing boots before the seat
   parts.push(box(L + 0.1, back, 0.06, { y: platform, z: -0.47 }));               // panelled back
-  parts.push(box(L + 0.2, 0.1, 0.4, { y: platform + back, z: -0.3 }));           // canopy rail
+  // canopy rail over a high back. On a low back (the lower choir row) the
+  // rail is the bookboard of the row behind, so it lies behind the panel
+  // (local z -0.70..-0.50): at z -0.5..-0.1 it hung over the row's own
+  // seats at 1.15 m and met the seated monks' necks and forearms (placement
+  // audit, pass 3). Seats, heights and the upper row are unchanged.
+  if (back > 1.5) parts.push(box(L + 0.2, 0.1, 0.4, { y: platform + back, z: -0.3 }));
+  else parts.push(box(L + 0.1, 0.05, 0.2, { y: platform + back, z: -0.6 }));
   for (let i = 0; i < n; i++) {
     const cx = -L / 2 + (i + 0.5) * w;
     parts.push(box(w - 0.06, 0.04, 0.42, { x: cx, y: platform + 0.44, z: -0.2 }));   // seat
@@ -97,15 +103,18 @@ export function stallRow(n, { w = 0.62, back = 2.3, platform = 0.25 } = {}) {
   }
   // the carved cheeks closing each row, rising in a scroll
   for (const sx of [-1, 1]) {
-    const ch = Math.min(back, 1.5);
+    const ch = Math.min(back, 0.76);
     parts.push(box(0.07, ch, 0.62, { x: sx * (L / 2 + 0.04), y: platform, z: -0.18 }));
     const sc = clean(new THREE.TorusGeometry(0.13, 0.035, 6, 14, Math.PI * 1.4)); sc.rotateY(Math.PI / 2); sc.translate(sx * (L / 2 + 0.04), platform + ch, 0.0); carv.push(sc);
   }
   for (let i = 0; i <= n; i++) {
     const x = -L / 2 + i * w;
-    parts.push(box(0.07, 1.05, 0.48, { x, y: platform, z: -0.22 }));             // divider
-    const knob = new THREE.SphereGeometry(0.055, 10, 8); knob.scale(1, 1.3, 1); knob.translate(x, platform + 1.1, 0.0); carv.push(clean(knob));
-    const ah = cyl(0.03, 0.04, 0.5, 8, { x, y: platform + 1.05, z: -0.22 }); ah.rotateX(0); carv.push(ah);
+    // An armrest is above the seat, below a seated shoulder. The old 1.05 m
+    // panel reached through the elbows of coherent adult bodies in every
+    // stall; 0.76 m leaves the forearms resting above the carved divider.
+    parts.push(box(0.07, 0.76, 0.48, { x, y: platform, z: -0.22 }));
+    const knob = new THREE.SphereGeometry(0.055, 10, 8); knob.scale(1, 1.3, 1); knob.translate(x, platform + 0.81, 0.0); carv.push(clean(knob));
+    carv.push(cyl(0.03, 0.04, 0.05, 8, { x, y: platform + 0.76, z: -0.22 }));
   }
   return { wood: merge(parts), carving: merge(carv), L };
 }

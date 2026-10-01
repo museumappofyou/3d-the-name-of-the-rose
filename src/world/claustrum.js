@@ -77,6 +77,15 @@ export function buildClaustrum(M, ctx) {
   roofQ([X1 + 0.3, outerTop, Z0 - 0.3], [X1 + 0.3, outerTop, Z1 + 0.3], [gx1 + 0.4, innerTop, gz1 - 0.4], [gx1 + 0.4, innerTop, gz0 + 0.4]);
   roofQ([X1 + 0.3, outerTop, Z1 + 0.3], [X0 - 0.3, outerTop, Z1 + 0.3], [gx0 - 0.4, innerTop, gz1 - 0.4], [gx1 + 0.4, innerTop, gz1 - 0.4]);
   roofQ([X0 - 0.3, outerTop, Z1 + 0.3], [X0 - 0.3, outerTop, Z0 - 0.3], [gx0 - 0.4, innerTop, gz0 + 0.4], [gx0 - 0.4, innerTop, gz1 - 0.4]);
+  // a stone bench against the outer wall of the west walk, where Alinardo
+  // sits "on the outer part of the porch" (claim_000989; the bench itself is
+  // a reconstruction: cloister walks commonly had them for reading)
+  {
+    const zc2 = (Z0 + Z1) / 2;
+    // (the west wall is 0.7 thick on X0: the walk begins at X0 + 0.35)
+    ex.add('ashlar', box(0.42, 0.42, 2.6, { x: X0 + 0.58, y: y0, z: zc2 }));
+    ex.add('ashlar', box(0.46, 0.05, 2.7, { x: X0 + 0.59, y: y0 + 0.42, z: zc2 }));
+  }
   // timber ceiling under the walk roofs
   for (const [a, b, c, d] of [[[X0, Z0], [X1, Z0], [gx1, gz0], [gx0, gz0]], [[X1, Z0], [X1, Z1], [gx1, gz1], [gx1, gz0]], [[X1, Z1], [X0, Z1], [gx0, gz1], [gx1, gz1]], [[X0, Z1], [X0, Z0], [gx0, gz0], [gx0, gz1]]]) {
     inn.add('beam', quad([a[0], outerTop - 0.35, a[1]], [b[0], outerTop - 0.35, b[1]], [c[0], innerTop - 0.3, c[1]], [d[0], innerTop - 0.3, d[1]], 0, 20, 0, 4, true), { collide: false });
@@ -321,11 +330,14 @@ function chapterHouse(ex, inn, M, ctx, y0) {
   const tcx = x1 - 3.0;
   F.table(inn, tcx, y0, zc, Math.PI / 2, 4.2, 1.2, 0.8, 'woodDark');
   for (const s of [-1, 1]) F.chair(inn, tcx + 1.0, y0, zc + s * 0.9, -Math.PI / 2);
+  // each plank runs along the ellipse (its tangent), so the brothers sit
+  // square to it facing the table; the outer row is drawn in a little at
+  // its ends to keep clear of the columns and the side walls
   for (let r = 0; r < 2; r++) for (let i = 0; i < 7; i++) {
-    const a = -Math.PI / 2 + (i + 0.5) / 7 * Math.PI;
+    const a = (-Math.PI / 2 + (i + 0.5) / 7 * Math.PI) * (r ? 0.86 : 1);
     const R = 5.2 + r * 1.2;
     const bx = tcx - 2.2 - Math.cos(a) * R * 1.35, bz = zc + Math.sin(a) * R * 0.78;
-    F.bench(inn, bx, y0, bz, -a, 2.2);
+    F.bench(inn, bx, y0, bz, Math.atan2(-Math.cos(a) * R * 0.78, Math.sin(a) * R * 1.35), 2.2);
   }
   F.candlestick(inn, tcx, y0 + 0.8, zc - 1.6, 0.4, ctx.emit);
   interact_(ctx, 'chapter-house', [xn + 8, 1.5, zc], 6, 'The chapter house');
