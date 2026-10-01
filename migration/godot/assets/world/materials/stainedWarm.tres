@@ -1,0 +1,26 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3]
+
+[ext_resource type="Shader" path="res://shaders/abbey_pbr_alpha.gdshader" id="1"]
+[ext_resource type="Texture2D" path="res://assets/world/generated/stainedWarm_map.png" id="2"]
+
+[resource]
+resource_name = "stainedWarm"
+render_priority = 0
+shader = ExtResource("1")
+shader_parameter/albedo_color = Color(1.000000, 1.000000, 1.000000, 1.000000)
+shader_parameter/uv_repeat = Vector2(1.000000, 1.000000)
+shader_parameter/uv_offset = Vector2(0.000000, 0.000000)
+shader_parameter/uv_rotation = 0.000000
+shader_parameter/has_albedo_tex = true
+shader_parameter/albedo_tex = ExtResource("2")
+shader_parameter/has_normal_tex = false
+shader_parameter/has_arm_tex = false
+shader_parameter/roughness_value = 0.3000
+shader_parameter/rough_from_arm = false
+shader_parameter/metallic_value = 0.0000
+shader_parameter/opacity = 0.9200
+shader_parameter/env_intensity = 1.0000
+shader_parameter/emission_color = Color(1.000000, 1.000000, 1.000000, 1.000000)
+shader_parameter/emission_energy = 0.1425
+shader_parameter/emission_from_albedo_tex = true
+shader_parameter/weathering = false

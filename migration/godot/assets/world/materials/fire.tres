@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=1 format=3]
+
+[resource]
+resource_name = "fire"
+shading_mode = 0
+albedo_color = Color(1.000000, 0.627451, 0.250980, 1.000000)

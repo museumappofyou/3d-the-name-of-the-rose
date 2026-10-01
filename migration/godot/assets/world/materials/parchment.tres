@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=1 format=3]
+
+[resource]
+resource_name = "parchment"
+albedo_color = Color(0.913725, 0.862745, 0.721569, 1.000000)
+roughness = 0.9000
+metallic = 0.0000
+metallic_specular = 0.5

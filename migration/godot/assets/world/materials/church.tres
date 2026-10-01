@@ -1,0 +1,37 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3]
+
+[ext_resource type="Shader" path="res://shaders/abbey_pbr.gdshader" id="1"]
+[ext_resource type="Texture2D" path="res://assets/textures/church_stone_d.jpg" id="2"]
+[ext_resource type="Texture2D" path="res://assets/textures/church_stone_n.jpg" id="3"]
+[ext_resource type="Texture2D" path="res://assets/textures/church_stone_a.jpg" id="4"]
+
+[resource]
+resource_name = "church"
+render_priority = 0
+shader = ExtResource("1")
+shader_parameter/albedo_color = Color(0.823529, 0.796078, 0.741176, 1.000000)
+shader_parameter/uv_repeat = Vector2(0.357143, 0.357143)
+shader_parameter/uv_offset = Vector2(0.000000, 0.000000)
+shader_parameter/uv_rotation = 0.000000
+shader_parameter/has_albedo_tex = true
+shader_parameter/albedo_tex = ExtResource("2")
+shader_parameter/has_normal_tex = true
+shader_parameter/normal_tex = ExtResource("3")
+shader_parameter/normal_strength = 1.3500
+shader_parameter/has_arm_tex = true
+shader_parameter/arm_tex = ExtResource("4")
+shader_parameter/ao_strength = 1.0000
+shader_parameter/roughness_value = 1.0000
+shader_parameter/rough_from_arm = false
+shader_parameter/metallic_value = 0.0000
+shader_parameter/opacity = 1.0000
+shader_parameter/env_intensity = 1.0000
+shader_parameter/weathering = true
+shader_parameter/wz_a = Vector4(0.200000, 0.280000, 0.750000, 0.000000)
+shader_parameter/wz_b = Vector4(0.350000, 1.000000, 0.860000, 0.800000)
+shader_parameter/wz_c = Vector4(1.000000, 0.000000, 2.500000, 0.250000)
+shader_parameter/tint_a = Color(0.964706, 0.933333, 0.886275, 1.000000)
+shader_parameter/tint_b = Color(0.878431, 0.878431, 0.862745, 1.000000)
+shader_parameter/saturation = 0.7000
+shader_parameter/snow_k = 1.0000
+shader_parameter/min_up = 0.5000

@@ -1,0 +1,37 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3]
+
+[ext_resource type="Shader" path="res://shaders/abbey_pbr.gdshader" id="1"]
+[ext_resource type="Texture2D" path="res://assets/textures/flag_d.jpg" id="2"]
+[ext_resource type="Texture2D" path="res://assets/textures/flag_n.jpg" id="3"]
+[ext_resource type="Texture2D" path="res://assets/textures/flag_a.jpg" id="4"]
+
+[resource]
+resource_name = "flag"
+render_priority = 0
+shader = ExtResource("1")
+shader_parameter/albedo_color = Color(0.788235, 0.752941, 0.694118, 1.000000)
+shader_parameter/uv_repeat = Vector2(0.312500, 0.312500)
+shader_parameter/uv_offset = Vector2(0.000000, 0.000000)
+shader_parameter/uv_rotation = 0.000000
+shader_parameter/has_albedo_tex = true
+shader_parameter/albedo_tex = ExtResource("2")
+shader_parameter/has_normal_tex = true
+shader_parameter/normal_tex = ExtResource("3")
+shader_parameter/normal_strength = 1.0000
+shader_parameter/has_arm_tex = true
+shader_parameter/arm_tex = ExtResource("4")
+shader_parameter/ao_strength = 1.0000
+shader_parameter/roughness_value = 1.0000
+shader_parameter/rough_from_arm = false
+shader_parameter/metallic_value = 0.0000
+shader_parameter/opacity = 1.0000
+shader_parameter/env_intensity = 0.4000
+shader_parameter/weathering = true
+shader_parameter/wz_a = Vector4(0.220000, 0.000000, 0.000000, 0.000000)
+shader_parameter/wz_b = Vector4(0.000000, 0.000000, 0.780000, 0.000000)
+shader_parameter/wz_c = Vector4(1.000000, 0.000000, 2.500000, 0.350000)
+shader_parameter/tint_a = Color(0.964706, 0.941176, 0.901961, 1.000000)
+shader_parameter/tint_b = Color(0.866667, 0.894118, 0.917647, 1.000000)
+shader_parameter/saturation = 1.0000
+shader_parameter/snow_k = 0.0000
+shader_parameter/min_up = 0.5000
