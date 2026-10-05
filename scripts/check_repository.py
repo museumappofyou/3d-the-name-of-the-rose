@@ -13,6 +13,24 @@ ROOT = Path(__file__).resolve().parents[1]
 CANONICAL = {'README.md', 'docs/PROJECT.md', 'docs/PLATFORMS.md',
              'docs/GAME_DESIGN.md', 'docs/ASSETS.md', 'docs/DEVELOPMENT.md'}
 OPERATIONAL = {'book_details/.opencode/agent/abbey-extractor.md'}
+# Finite supporting design evidence, never a second active roadmap. Additional
+# task reports still fail this check unless their durable retention is reviewed.
+SUPPORTING = {
+    'story-council/round-1/council-generalist-systems-designer.md',
+    'story-council/round-1/systems-and-structure.md',
+    'story-council/round-1/unassigned-role.md',
+    'story-council/round-3-adso/01-claude-literary.md',
+    'story-council/round-3-adso/02-gpt-progression.md',
+    'story-council/round-3-adso/03-grok-contrarian.md',
+    'story-council/round-3-adso/04-deepseek-feasibility.md',
+    'story-council/round-3-adso/05-gemini-experience.md',
+    'story-council/round-4-library-labyrinth/01-claude-literary-labyrinth.md',
+    'story-council/round-4-library-labyrinth/02-gpt-labyrinth-systems.md',
+    'story-council/round-4-library-labyrinth/03-glm-contrarian-library.md',
+    'story-council/round-4-library-labyrinth/04-deepseek-library-feasibility.md',
+    'story-council/round-4-library-labyrinth/05-gemini-spatial-experience.md',
+    'story-council/day-1/OPUS_DAY1_DESIGN.md',
+}
 
 
 def require(ok, message):
@@ -25,7 +43,8 @@ def main():
         ['git', 'ls-files', '-z', '--cached', '--others', '--exclude-standard'], cwd=ROOT)
     files = {n.decode() for n in names.split(b'\0') if n and (ROOT / n.decode()).is_file()}
     md = {n for n in files if n.lower().endswith('.md')}
-    require(md == CANONICAL | OPERATIONAL, 'unexpected Markdown set: ' + str(md ^ (CANONICAL | OPERATIONAL)))
+    expected_md = CANONICAL | OPERATIONAL | SUPPORTING
+    require(md == expected_md, 'unexpected Markdown set: ' + str(md ^ expected_md))
     for name in CANONICAL:
         text = (ROOT / name).read_text()
         for target in re.findall(r'\]\(([^)]+)\)', text):
@@ -65,7 +84,8 @@ def main():
         require(server.app_file('/src/escape.js') is None, 'escape symlink accepted')
         server.ROOT = old
     print(json.dumps({'pass': True, 'canonical_markdown': len(CANONICAL),
-                      'operational_markdown': len(OPERATIONAL), 'book_evidence_files': len(actual),
+                      'operational_markdown': len(OPERATIONAL),
+                      'supporting_markdown': len(SUPPORTING), 'book_evidence_files': len(actual),
                       'relative_module_imports': 'pass', 'public_boundaries': 'pass'}, indent=2))
 
 

@@ -1,8 +1,10 @@
 # The Abbey Project
 
-A reconstructed abbey becomes a place for observation, manuscript investigations and discovery. Umberto Eco’s *The Name of the Rose* supplies the architectural and literary foundation. The recommended game is a series of authored investigations in a consistent monastery, alongside optional novel-derived scenarios and free study.
+A first-person historical investigation game in which the player is **Adapted Adso**, arriving beside William and learning the abbey through residence. Umberto Eco’s *The Name of the Rose* supplies the architectural and literary foundation. A continuous multi-day campaign contains bounded authored investigations; knowledge of places, hours and people is the player's progression.
 
-**Native is the primary product: Windows first, macOS second, developed on macOS in Godot. Web is an architectural explorer with a smaller scope.** Today the native build is a bounded migration proof; the browser still runs the larger, heavier reference reconstruction. The future lightweight viewer and the first original investigation are plans, not implemented features.
+**Native is the primary product: Windows first, macOS second, developed on macOS in Godot. Web is an architectural explorer with a smaller scope.** The last committed native checkpoint is a bounded migration proof. Day-1A implementation is underway in the working tree and awaits review. The browser still runs the larger reference reconstruction; the future lightweight viewer and Day-1B investigation are plans.
+
+Current PM state, the active Day-1A brief, roadmap and agent log live in [Project](docs/PROJECT.md#pm-ledger). Product decisions live in [Game design](docs/GAME_DESIGN.md). Check Git before continuing: local implementation is not yet a verified checkpoint.
 
 ## Run what exists
 
@@ -20,7 +22,7 @@ Native proof, with the pinned **Godot 4.7.2 standard editor and matching export 
 ```sh
 export GODOT_BIN=/absolute/path/to/Godot
 bash scripts/migration/build_phase1.sh --fresh --functional
-"$GODOT_BIN" --path native
+"$GODOT_BIN" --path native -- --mode=proof
 ```
 
 The build uses committed derivatives and needs neither private masters nor Chrome. It validates content, imports, tests and exports Windows/macOS development packages into ignored `builds/phase1/`. Native controls: WASD/arrows, mouse, E interact, J notebook, F lantern, Esc pause, F5 save, F9 load, F12 QA. Saves use the existing `AbbeySlice` user directory.
@@ -54,6 +56,6 @@ Full native commands and the Windows W1/W2 procedure are in [Development](docs/D
 | `docs/evidence/` | Structured measurements, captures and audit records; not another documentation hierarchy |
 | `.local/`, `music/`, `builds/`, `dist/` | Ignored masters, checkpoints, source recordings and generated outputs |
 
-Read [Project](docs/PROJECT.md) for ownership and `WEB_EXPLORER_PLAN`, [Platforms](docs/PLATFORMS.md) for migration status, [Game design](docs/GAME_DESIGN.md) for the recommended experience and next Agent A mission, [Assets](docs/ASSETS.md) for provenance/licences, and [Development](docs/DEVELOPMENT.md) for maintenance. These five pages plus this README are the entire canonical project documentation.
+Read [Project](docs/PROJECT.md) for PM state, the active mission, ownership and `WEB_EXPLORER_PLAN`, [Platforms](docs/PLATFORMS.md) for migration status, [Game design](docs/GAME_DESIGN.md) for the current experience and decision history, [Assets](docs/ASSETS.md) for provenance/licences, and [Development](docs/DEVELOPMENT.md) for maintenance. These five pages plus this README are the entire canonical project documentation. The explicitly retained `story-council/` files are supporting design evidence; their proposals and old implementation briefs do not override the active mission.
 
 The extraction agent’s Markdown definition remains because the pipeline consumes it. Generated book reading reports are optional, local views in `book_details/reports/`; JSON/JSONL evidence is authoritative. `.local/` contains irreplaceable authored masters and recovery checkpoints: ignoring it is not a backup policy. The externally edited `VISUAL_BIBLE.txt` remains untouched and local.

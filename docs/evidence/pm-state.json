@@ -1,0 +1,416 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-05T13:53:53.550926+00:00",
+  "purpose": "Reusable PM intake/state evidence; source inspection and read-only baseline checks, not Day-1A acceptance.",
+  "owner": "Codex PM",
+  "canonical_locations": {
+    "state_mission_roadmap_agent_log": "docs/PROJECT.md#pm-ledger",
+    "decisions": "docs/GAME_DESIGN.md#decision-history",
+    "platforms": "docs/PLATFORMS.md"
+  },
+  "git": {
+    "branch": "migration/phase-1-godot",
+    "head_at_intake": "7c6f836afd17a87d407172c9727e8d4e26818598",
+    "remote": "origin",
+    "remote_url": "git@github-moy:museumappofyou/3d-the-name-of-the-rose.git",
+    "live_remote_branch_tip": "7c6f836afd17a87d407172c9727e8d4e26818598",
+    "live_remote_check": "git ls-remote --heads origin migration/phase-1-godot",
+    "ahead_behind_at_intake": [
+      0,
+      0
+    ],
+    "preexisting_status": [
+      " M native/scripts/adapters/world_cells.gd",
+      " M native/scripts/domain/content_data.gd",
+      " M native/scripts/main.gd",
+      " M scripts/migration/browser/slice_export.js",
+      " M scripts/migration/build_content.py",
+      " M scripts/migration/build_slice_assets.py",
+      " M scripts/migration/godot_import_settings.py",
+      " M shared/data/export/.gitignore",
+      "?? council-generalist-systems-designer.md",
+      "?? native/assets/textures/floorboards_a.jpg",
+      "?? native/assets/textures/floorboards_a.jpg.import",
+      "?? native/assets/textures/floorboards_d.jpg",
+      "?? native/assets/textures/floorboards_d.jpg.import",
+      "?? native/assets/textures/floorboards_n.jpg",
+      "?? native/assets/textures/floorboards_n.jpg.import",
+      "?? native/assets/textures/soil_a.jpg",
+      "?? native/assets/textures/soil_a.jpg.import",
+      "?? native/assets/textures/soil_d.jpg",
+      "?? native/assets/textures/soil_d.jpg.import",
+      "?? native/assets/textures/soil_n.jpg",
+      "?? native/assets/textures/soil_n.jpg.import",
+      "?? native/assets/textures/wall_stone_a.jpg",
+      "?? native/assets/textures/wall_stone_a.jpg.import",
+      "?? native/assets/textures/wall_stone_d.jpg",
+      "?? native/assets/textures/wall_stone_d.jpg.import",
+      "?? native/assets/textures/wall_stone_n.jpg",
+      "?? native/assets/textures/wall_stone_n.jpg.import",
+      "?? native/assets/world/day1a/",
+      "?? native/assets/world/materials/alabaster.tres",
+      "?? native/assets/world/materials/bark.tres",
+      "?? native/assets/world/materials/bedSoil.tres",
+      "?? native/assets/world/materials/boards.tres",
+      "?? native/assets/world/materials/dung.tres",
+      "?? native/assets/world/materials/glass.tres",
+      "?? native/assets/world/materials/hedge.tres",
+      "?? native/assets/world/materials/kale.tres",
+      "?? native/assets/world/materials/p_blanket.tres",
+      "?? native/assets/world/materials/p_blanketGrey.tres",
+      "?? native/assets/world/materials/p_bread.tres",
+      "?? native/assets/world/materials/p_earthenDark.tres",
+      "?? native/assets/world/materials/p_earthenware.tres",
+      "?? native/assets/world/materials/p_glazeBrown.tres",
+      "?? native/assets/world/materials/p_onion.tres",
+      "?? native/assets/world/materials/p_sacking.tres",
+      "?? native/assets/world/materials/p_woolBlack.tres",
+      "?? native/assets/world/materials/pottery.tres",
+      "?? native/assets/world/materials/rubbleIn.tres",
+      "?? native/assets/world/materials/soil.tres",
+      "?? native/assets/world/materials/straw.tres",
+      "?? native/assets/world/materials/strawExt.tres",
+      "?? native/assets/world/materials/tym_ground.tres",
+      "?? native/assets/world/materials/wall.tres",
+      "?? native/assets/world/materials/wattle.tres",
+      "?? native/scripts/adapters/day1a/",
+      "?? native/scripts/bench/day1a_runner.gd",
+      "?? native/scripts/bench/day1a_runner.gd.uid",
+      "?? scripts/migration/build_day1a_assets.py",
+      "?? shared/data/export/day1a/",
+      "?? shared/data/export/day1a_cells.json",
+      "?? shared/data/manifests/world_day1a_derivatives.json",
+      "?? story-council/",
+      "?? systems-and-structure.md",
+      "?? unassigned-role.md"
+    ],
+    "implementation_files_changed_during_inspection": true,
+    "pm_checkpoint_scope": "Canonical docs, explicit supporting design sources, governance checker and this evidence only; unfinished implementation excluded.",
+    "pm_checkpoint_subject": "Record PM handoff and bound Day-1A development"
+  },
+  "active_mission": {
+    "id": "day1a",
+    "status": "implementation_in_progress_review_pending",
+    "developer": "unconfirmed_at_intake",
+    "preferred_developer_from_owner": "Claude Opus 5.5 xHigh if available; not a confirmed assignment",
+    "product_question": "Does living in the abbey as Adso feel compelling before mystery systems arrive?",
+    "stop": "Nones; no Day-1B, Vespers/night, Day 2 or library migration"
+  },
+  "supporting_sources": [
+    {
+      "path": "story-council/day-1/OPUS_DAY1_DESIGN.md",
+      "sha256": "1f19a44440771ad0835f99b893fc2fbeab401cdddc22e1935ca1d99606626c14",
+      "bytes_unchanged_since_intake": true,
+      "status": "supporting design evidence; recommendations may be superseded"
+    },
+    {
+      "path": "story-council/round-1/council-generalist-systems-designer.md",
+      "sha256": "73bab146b4649939fc6339ed52e98cc714b08e60f693fc6637e9275f5bfbd6cb",
+      "bytes_unchanged_since_intake": true,
+      "status": "supporting design evidence; recommendations may be superseded"
+    },
+    {
+      "path": "story-council/round-1/systems-and-structure.md",
+      "sha256": "070c8a52c5eae71035ed7271772d65f7f6e9bda6b1b81302d412ca195d6bd905",
+      "bytes_unchanged_since_intake": true,
+      "status": "supporting design evidence; recommendations may be superseded"
+    },
+    {
+      "path": "story-council/round-1/unassigned-role.md",
+      "sha256": "b3249b1d5555e52e3f32f078bbc8181010b774468eb90c96510d989b387efa5d",
+      "bytes_unchanged_since_intake": true,
+      "status": "supporting design evidence; recommendations may be superseded"
+    },
+    {
+      "path": "story-council/round-3-adso/01-claude-literary.md",
+      "sha256": "494d19c41206c5cd77a09e06f248223975974a4524046a35ea616483f762d082",
+      "bytes_unchanged_since_intake": true,
+      "status": "supporting design evidence; recommendations may be superseded"
+    },
+    {
+      "path": "story-council/round-3-adso/02-gpt-progression.md",
+      "sha256": "2430e43ac935cc95ad8fa768619f1891327cb59c6250eb62acfc50abcbeb251b",
+      "bytes_unchanged_since_intake": true,
+      "status": "supporting design evidence; recommendations may be superseded"
+    },
+    {
+      "path": "story-council/round-3-adso/03-grok-contrarian.md",
+      "sha256": "2859da5f18e2cc42c9fef57dd3608a532a7c03b3731a60ac136496f36a50a5b2",
+      "bytes_unchanged_since_intake": true,
+      "status": "supporting design evidence; recommendations may be superseded"
+    },
+    {
+      "path": "story-council/round-3-adso/04-deepseek-feasibility.md",
+      "sha256": "3aa06be3876d6d0b05e35bc7bb3aca9a7c6632af03d075ca93582df01da8105e",
+      "bytes_unchanged_since_intake": true,
+      "status": "supporting design evidence; recommendations may be superseded"
+    },
+    {
+      "path": "story-council/round-3-adso/05-gemini-experience.md",
+      "sha256": "57176b661543eae5a4ef6711a73da154f5169d5deffd9b839e0c77d0507b03d8",
+      "bytes_unchanged_since_intake": true,
+      "status": "supporting design evidence; recommendations may be superseded"
+    },
+    {
+      "path": "story-council/round-4-library-labyrinth/01-claude-literary-labyrinth.md",
+      "sha256": "27600a44fa2512fdd1bc87a7ff7ac51876d86ffde67051518033066cc628f3b4",
+      "bytes_unchanged_since_intake": true,
+      "status": "supporting design evidence; recommendations may be superseded"
+    },
+    {
+      "path": "story-council/round-4-library-labyrinth/02-gpt-labyrinth-systems.md",
+      "sha256": "9b692dd1f37d746937098a65911ed4ea0caa6a7b2880c15158eb4aff62fa6e05",
+      "bytes_unchanged_since_intake": true,
+      "status": "supporting design evidence; recommendations may be superseded"
+    },
+    {
+      "path": "story-council/round-4-library-labyrinth/03-glm-contrarian-library.md",
+      "sha256": "cee05aa7f357b6ec27657b597dadc6f02d827ca0e14c653d825dd2408ee6d74e",
+      "bytes_unchanged_since_intake": true,
+      "status": "supporting design evidence; recommendations may be superseded"
+    },
+    {
+      "path": "story-council/round-4-library-labyrinth/04-deepseek-library-feasibility.md",
+      "sha256": "e56cdc040e98e5e38044b0e7aeb216eee535aef84f4bea3930f1242909b1c4cb",
+      "bytes_unchanged_since_intake": true,
+      "status": "supporting design evidence; recommendations may be superseded"
+    },
+    {
+      "path": "story-council/round-4-library-labyrinth/05-gemini-spatial-experience.md",
+      "sha256": "b69e6091581411559fb9b5af6aab2e17e94cce795814a10777cfc5c1cf42ce03",
+      "bytes_unchanged_since_intake": true,
+      "status": "supporting design evidence; recommendations may be superseded"
+    }
+  ],
+  "source_moves": [
+    {
+      "from": "council-generalist-systems-designer.md",
+      "to": "story-council/round-1/council-generalist-systems-designer.md",
+      "sha256": "73bab146b4649939fc6339ed52e98cc714b08e60f693fc6637e9275f5bfbd6cb",
+      "bytes_preserved": true,
+      "reason": "Unique Round-1 role-placeholder council evidence; relocate out of repository root"
+    },
+    {
+      "from": "systems-and-structure.md",
+      "to": "story-council/round-1/systems-and-structure.md",
+      "sha256": "070c8a52c5eae71035ed7271772d65f7f6e9bda6b1b81302d412ca195d6bd905",
+      "bytes_preserved": true,
+      "reason": "Unique Round-1 role-placeholder council evidence; relocate out of repository root"
+    },
+    {
+      "from": "unassigned-role.md",
+      "to": "story-council/round-1/unassigned-role.md",
+      "sha256": "b3249b1d5555e52e3f32f078bbc8181010b774468eb90c96510d989b387efa5d",
+      "bytes_preserved": true,
+      "reason": "Unique Round-1 role-placeholder council evidence; relocate out of repository root"
+    }
+  ],
+  "checks": [
+    {
+      "command": "npm test",
+      "exit_code": 0,
+      "tests_passed": 29,
+      "scope": "browser/domain regression"
+    },
+    {
+      "command": "npm run check:render",
+      "exit_code": 0,
+      "scope": "synthetic render/collision conservation; not Day-1A rendered QA"
+    },
+    {
+      "command": "python3 scripts/migration/build_content.py --check",
+      "exit_code": 0,
+      "validated_domains": [
+        "horarium",
+        "locations",
+        "entities",
+        "portals",
+        "routines",
+        "discoveries",
+        "interactions",
+        "sounds",
+        "anchors",
+        "provenance"
+      ],
+      "scope": "existing shared schema domains; optional Day-1A scenario validation not established"
+    },
+    {
+      "command": "python3 -m unittest discover -s book_details/tests -v",
+      "exit_code": 0,
+      "tests_passed": 21
+    },
+    {
+      "command": "independent SHA-256 comparison with shared/data/provenance.json corpus.files",
+      "pass": true,
+      "literary_files": 9
+    },
+    {
+      "command": ".local/tools/godot-4.7.2/Godot.app/Contents/MacOS/Godot --version",
+      "exit_code": 0,
+      "version": "4.7.2.stable.official.ed1daf0bf",
+      "scope": "version only"
+    },
+    {
+      "command": "independent Day-1A derivative manifest hash comparison",
+      "manifest_outputs": 91,
+      "matching": 91,
+      "mismatches": [],
+      "scope": "files only; not import/render/functional validation"
+    },
+    {
+      "command": "independent phase1 raw export comparison",
+      "comparisons": {
+        "cells/ossuary_stair.glb": true,
+        "collision/ossuary_stair.glb": true,
+        "cells/skull_chapel.glb": true,
+        "collision/skull_chapel.glb": true,
+        "cells/church_interior.glb": true,
+        "collision/church_interior.glb": true,
+        "cells/church_exterior.glb": true,
+        "collision/church_exterior.glb": true,
+        "cells/cloister.glb": true,
+        "collision/cloister.glb": true,
+        "cells/cloister_context.glb": true,
+        "collision/cloister_context.glb": true
+      },
+      "scope": "geometry export preservation only"
+    },
+    {
+      "command": "python3 scripts/check_repository.py",
+      "phase": "before PM repair",
+      "exit_code": 1,
+      "finding": "14 supporting council/design Markdown files rejected by the former exact-set rule"
+    },
+    {
+      "command": "python3 scripts/check_repository.py",
+      "phase": "after PM repair",
+      "exit_code": 0,
+      "canonical_markdown": 6,
+      "operational_markdown": 1,
+      "supporting_markdown": 14,
+      "book_evidence_files": 9,
+      "relative_module_imports": "pass",
+      "public_boundaries": "pass"
+    },
+    {
+      "command": "git diff --check",
+      "phase": "after canonical PM edits",
+      "exit_code": 0
+    },
+    {
+      "command": "supporting source SHA-256 comparison against pre-intake snapshot",
+      "pass": true,
+      "sources": 14,
+      "relocations": 3
+    }
+  ],
+  "day1a_observed": {
+    "implementation": "partial",
+    "verified": "source presence and derivative file hashes only",
+    "experientially_validated": "NOT RUN",
+    "manifest": "shared/data/manifests/world_day1a_derivatives.json",
+    "cells": [
+      {
+        "id": "gate",
+        "triangles": 838
+      },
+      {
+        "id": "hospice",
+        "triangles": 10592
+      },
+      {
+        "id": "flower_garden",
+        "triangles": 18880
+      },
+      {
+        "id": "church_west",
+        "triangles": 64
+      },
+      {
+        "id": "west_context",
+        "triangles": 5804
+      },
+      {
+        "id": "gardens_west",
+        "triangles": 34638
+      },
+      {
+        "id": "aedificium",
+        "triangles": 17148
+      }
+    ],
+    "scene_scaffolding": [
+      "native/scripts/adapters/day1a/day1a.gd",
+      "native/scripts/bench/day1a_runner.gd"
+    ],
+    "claims_not_made": [
+      "complete sequence",
+      "playtime achieved",
+      "William relationship implemented",
+      "Nones world transition implemented",
+      "save/reload complete",
+      "new-route performance passed"
+    ]
+  },
+  "open_gates": [
+    {
+      "id": "windows_w1_w2",
+      "status": "NOT RUN / no repository evidence found",
+      "procedure": "docs/DEVELOPMENT.md#windows-w1w2--still-required"
+    },
+    {
+      "id": "human_listening",
+      "status": "NOT RUN in recorded proof; no new human result verified"
+    },
+    {
+      "id": "input_controller_focus",
+      "status": "incomplete; no new human result verified"
+    },
+    {
+      "id": "stair_unload_hitch",
+      "status": "OPEN",
+      "historical_ms": [
+        60,
+        85
+      ],
+      "reproduced_this_intake": false
+    },
+    {
+      "id": "browser_cast_normals",
+      "status": "OPEN according to retained proof/audit; no repair found in current diff",
+      "reproduced_this_intake": false
+    },
+    {
+      "id": "day1_canon_review",
+      "status": "OPEN",
+      "notes": "Finished-book reviewer needed; design names/roles and arrival-day staging remain provisional. Absence of names in architecture extraction is not clearance."
+    },
+    {
+      "id": "day1a_product_validation",
+      "status": "NOT RUN"
+    }
+  ],
+  "not_run_this_intake": [
+    "native import/build/export",
+    "native domain/pose/anchor/functional tests",
+    "new GPU benchmarks or soak",
+    "Windows runtime",
+    "human listening",
+    "controller/focus trials",
+    "external player testing"
+  ],
+  "path_findings": {
+    "phase_1_proof_report_removed_by_consolidation": true,
+    "phases_md_present": false,
+    "windows_evidence_directory_present": false,
+    "round2_reports_located": false,
+    "preserved_local_paths": [
+      ".local/",
+      "music/",
+      "builds/phase1-original/",
+      "VISUAL_BIBLE.txt"
+    ]
+  },
+  "pm_assessment": "Repair canonical continuity; continue the already active bounded Day-1A implementation. No advancement or completion acceptance.",
+  "pm_review_at_utc": "2026-10-05T13:55:24.787216+00:00"
+}

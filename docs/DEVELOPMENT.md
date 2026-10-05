@@ -1,6 +1,6 @@
 # Development and validation
 
-Run commands from the repository root unless noted. `README.md` gets you running, `PROJECT.md` defines ownership, `PLATFORMS.md` qualifies the evidence, `GAME_DESIGN.md` bounds the next mission and `ASSETS.md` protects sources/licences. Do not regenerate literary extraction to implement a game feature.
+Run commands from the repository root unless noted. `README.md` gets you running; `PROJECT.md` holds current PM state, the active mission and ownership; `PLATFORMS.md` qualifies the evidence; `GAME_DESIGN.md` holds product decisions; `ASSETS.md` protects sources/licences. Do not regenerate literary extraction to implement a game feature.
 
 ## Toolchain and setup
 
@@ -30,7 +30,7 @@ Browser tests cover library topology, place IDs, discovery/notebook migration, m
 
 `build_content.py --check` validates without writing. Publishing generates `native/content/`, validates ten schema domains and cross-references, and strips literary evidence fragments for packaging. It never modifies `book_details/output/`. `build_manifest.py` verifies 154 known output/font hashes and records current runtime-content hashes. Changing a derivative requires a deliberate recipe/manifest update, not merely accepting a changed checksum.
 
-Repository checks ensure the canonical Markdown set stays small, its links resolve, literary hashes match, relocated module imports resolve, runtime routes do not expose research/private directories, and unknown/symlink/traversal requests stay outside the public mapping. Historical evidence/provenance can deliberately retain old paths.
+Repository checks keep six canonical Markdown pages plus explicit operational/supporting sources, validate canonical links, literary hashes and relocated module imports, and ensure runtime routes do not expose research/private directories or accept unknown/symlink/traversal requests. The retained council/design files are supporting evidence, not additional active plans. Historical evidence/provenance can deliberately retain old paths.
 
 ## Native import, tests and exports
 
@@ -73,7 +73,7 @@ The CI recipe in `scripts/ci/github-actions-phase1.yml` remains inactive. It che
 
 ```sh
 APP="$PWD/builds/phase1/macos/AbbeySlice.app/Contents/MacOS/Abbey Slice"
-"$APP"
+"$APP" -- --mode=proof
 "$APP" --resolution 1920x1080 -- --scenario=shots --out="$PWD/builds/phase1/evidence/visual" --label=mac
 "$APP" -- --scenario=functional --out="$PWD/builds/phase1/evidence/functional" --label=mac --save-dir=user://functional_mac
 "$APP" -- --scenario=functional-reload --out="$PWD/builds/phase1/evidence/functional" --label=mac --save-dir=user://functional_mac
@@ -175,6 +175,14 @@ The static build includes only application/runtime assets and a size manifest. I
 
 From `book_details/`, `python3 main.py report` writes the eleven optional local Markdown reading views. `status` inspects extraction state. `scan`, `extract`, `consolidate`, `verify`, `all` are separate research operations and may invoke an LLM/change evidence; do not run them as game build steps. The current backend is `opencode-cli`; an OpenAI-compatible backend reads local environment/auth configuration. Credentials, raw EPUB/PDF/TXT, normalized full text, chunk/cache/log output stay ignored. The operational extractor definition is the one deliberately retained Markdown file outside canonical project docs.
 
-Do not delete `.local/` for hygiene, commit raw books/private source packs, overwrite external visual notes, or silently change source authority. Keep IDs/metres/coordinate conventions stable. Put curated machine evidence in `docs/evidence`, routine outputs in `builds`/`.local`, and provenance in structured records. Keep the canonical six-page documentation set; update existing pages rather than appending pass reports or historical prompts. Obsolete reports are consolidated and removed, not migrated into a large Markdown archive.
+Do not delete `.local/` for hygiene, commit raw books/private source packs, overwrite external visual notes, or silently change source authority. Keep IDs/metres/coordinate conventions stable. Put curated machine evidence in `docs/evidence`, routine outputs in `builds`/`.local`, and provenance in structured records. Keep the canonical six-page documentation set; update existing pages rather than appending pass reports or historical prompts. The finite council/design sources explicitly listed in `scripts/check_repository.py` preserve unique decision evidence. Their retention does not authorize a new report for every agent run. Inspect references, uniqueness, reproducibility and supersession before moving, consolidating or deleting other files.
 
-Commit native, tooling/evidence, repository structure and design changes coherently. Preserve pre-existing user work separately; record provenance against checkpoints. Push the current branch normally after checks. Do not force-push, reset unrelated edits or change the configured remote to bypass a failure.
+## PM continuity and Git checkpoints
+
+Use `PROJECT.md#pm-ledger` for current state, the active mission, roadmap and compact agent history; use `GAME_DESIGN.md#decision-history` for ACTIVE/EXPERIMENTAL/SUPERSEDED/REJECTED decisions. Do not create a parallel `project-management/` hierarchy. Each developer must be able to continue from these pages, the source and a fresh Git diff without private conversation context.
+
+Before assignment or review, check the root, branch, status (including staged/untracked work), recent commits, remotes and ahead/behind state. Verify remote freshness when meaningful; a cached tracking ref alone is not a current remote check. Preserve the existing repository/history and branch. Never initialize nested repositories, reset unrelated work, merge automatically, rewrite history or force-push. If files are changing concurrently, establish who owns them before assigning overlapping work.
+
+Give each mission a product question, scope, exclusions, acceptance criteria, validation requirements, developer/owner status and stop condition. After a developer handoff, inspect the actual diff and appropriate checks/rendered result; track IMPLEMENTED, VERIFIED and EXPERIENTIALLY VALIDATED separately. Decide ACCEPT/FIX/ITERATE/REVERT/ADVANCE explicitly. Record evidence, remaining gaps and the resulting commit/range in the ledger. If interrupted, record completed/partial/untouched work, known failures and the next safe action.
+
+Make coherent recovery checkpoints before risky work and after verified milestones, with messages describing intent. Stage only the reviewed mission files; inspect the staged diff, generated/binary eligibility and obvious credentials before committing. Do not bundle another developer's live implementation into a PM/documentation checkpoint or call an unfinished feature complete. Push normally when authorized and reviewed, keeping important local-only commits visible in the ledger. Periodically audit ignore rules, duplicate/dead systems/assets, generated outputs, documentation accuracy and pending platform/performance gates; update canonical state rather than adding another large report.
