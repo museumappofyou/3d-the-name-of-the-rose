@@ -31,7 +31,11 @@ func setup(m: Node3D) -> void:
 		var h: float = main.cells.terrain_height_at(x, z)
 		return 0.0 if is_nan(h) else h
 	limits = WalkLimits.new(data.get("walk_limits", []))
-	saves = Day1aSave.new(String(m.args.get("save-dir", "user://saves")))
+	# scripted runs (day1-* scenarios) never write into the player's slot
+	var scripted: bool = String(m.args.get("scenario", "")).begins_with("day1-")
+	saves = Day1aSave.new(String(m.args.get("save-dir", "user://day1a_runs/saves" if scripted else "user://saves")))
+	if scripted and not m.args.has("telemetry-dir"):
+		m.args["telemetry-dir"] = "user://day1a_runs/telemetry"
 	session_id = Time.get_datetime_string_from_system(false, true).replace(":", "-").replace(" ", "_")
 	# the office as Day 1 sings it (opening versicle, then a psalm)
 	var D: Dictionary = m.content.doc("sounds").get("day1a", {})

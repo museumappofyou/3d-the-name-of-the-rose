@@ -49,8 +49,8 @@ for s in "${SCEN[@]}"; do
     crowd_hires)  run crowd_hires 2304x1149 --scenario=crowd --vsync=off --duration=120 ;;
     cycles)       run cycles 1920x1080 --scenario=cycles --vsync=off ;;
     soak)         run soak 1920x1080 --scenario=soak --vsync=off --duration=1200 ;;
-    day1_walk)    run day1_walk 1920x1080 --scenario=day1-walk --style=normal --vsync=off ;;
-    day1_cycles)  run day1_cycles 1920x1080 --scenario=day1-cycles --vsync=off --cycles=10 ;;
+    day1_walk)    run day1_walk 1920x1080 --scenario=day1-walk --style=normal --vsync=off --save-dir=user://day1a_runs/saves --telemetry-dir=user://day1a_runs/telemetry ;;
+    day1_cycles)  run day1_cycles 1920x1080 --scenario=day1-cycles --vsync=off --cycles=10 --save-dir=user://day1a_runs/saves --telemetry-dir=user://day1a_runs/telemetry ;;
     sdfgi)        run route_sdfgi 1920x1080 --scenario=route --vsync=off --duration=120 --gi=sdfgi ;;
     ssil)         run route_ssil 1920x1080 --scenario=route --vsync=off --duration=120 --gi=ssil ;;
     *) echo "unknown scenario $s" >&2 ;;
