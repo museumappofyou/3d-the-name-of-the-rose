@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Build the committed native proof without private masters or Chrome.
+# Build the committed native proof and the Day-1A slice without private
+# masters or Chrome.
 # Regeneration is explicit: --regenerate-assets [--browser-export].
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
@@ -17,6 +18,7 @@ esac; done
 VER="$("$GODOT_BIN" --version)"
 case "$VER" in 4.7.2.stable*) ;; *) echo "expected Godot 4.7.2.stable, got $VER"; exit 2;; esac
 GD=native
+PEOPLE="alinardo monk_a scribe_a monk_b novice_a monk_c monk_d monk_e monk_f monk_g novice_b lay_old lay_herd"
 LOG="$ROOT/builds/phase1/pipeline"
 CHECKS="${EVIDENCE_OUT:-$ROOT/builds/phase1/checks}"
 mkdir -p "$LOG" "$CHECKS/import" "$CHECKS/functional"
@@ -28,12 +30,16 @@ if [ "$REGENERATE" = 1 ]; then
   [ -d scripts/migration/node_modules ] || npm ci --prefix scripts/migration --no-audit --no-fund
   if [ "$BROWSER" = 1 ]; then
     node scripts/migration/browser_driver.mjs slice_export.js shared/data/export/slice_cells.json --out shared/data/export
+    node scripts/migration/browser_driver.mjs slice_export.js shared/data/export/day1a_cells.json --out shared/data/export/day1a
   fi
   [ -d shared/data/export/cells ] || { echo "raw geometry missing; use --browser-export"; exit 1; }
   step "regenerate characters, world, audio, anchors, crowd and pose references"
-  node scripts/migration/normalize_people.mjs --people alinardo,monk_a,scribe_a,monk_b,novice_a
-  node scripts/migration/pose_reference.mjs alinardo monk_a scribe_a monk_b novice_a
+  node scripts/migration/normalize_people.mjs --people "${PEOPLE// /,}"
+  node scripts/migration/pose_reference.mjs $PEOPLE
+  node scripts/migration/normalize_animals.mjs
   python3 scripts/migration/build_slice_assets.py
+  python3 scripts/migration/build_day1a_assets.py
+  python3 scripts/migration/day1a_scenario.py
   python3 scripts/migration/build_audio.py
   python3 scripts/migration/build_anchors.py
   node scripts/migration/crowd_layout.mjs
@@ -53,7 +59,8 @@ if grep -E '^(ERROR|SCRIPT ERROR)' "$LOG/import.log" | grep -v 'resources still 
 fi
 step "domain, fitted-pose/normal and anchor tests"
 ABBEY_TEST_REPORT="$CHECKS/domain.json" "$GODOT_BIN" --headless --path "$GD" --script res://tests/run_tests.gd > "$LOG/tests.log" 2>&1
-for p in alinardo monk_a scribe_a monk_b novice_a; do
+ABBEY_TEST_REPORT="$CHECKS/day1a.json" "$GODOT_BIN" --headless --path "$GD" --script res://tests/day1a_tests.gd > "$LOG/day1a_tests.log" 2>&1
+for p in $PEOPLE; do
   "$GODOT_BIN" --headless --path "$GD" --script res://tests/pose_check.gd -- "$p" "$ROOT/shared/data/manifests/pose_reference_$p.json" > "$LOG/pose_$p.log" 2>&1
 done
 "$GODOT_BIN" --headless --path "$GD" --script res://tests/anchor_check.gd > "$LOG/anchors.log" 2>&1

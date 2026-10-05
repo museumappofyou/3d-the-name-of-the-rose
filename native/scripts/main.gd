@@ -1,8 +1,13 @@
 extends Node3D
-## Phase-1 slice composition. User args after `--`:
+## Slice composition. User args after `--`:
+##   --mode=day1a|proof   (default: day1a for play and day1-* scenarios, proof
+##                         for the phase-1 scenarios below)
 ##   --scenario=play|route|crowd|cycles|soak|shots|functional|functional-reload|fixture|startup
+##              (phase-1 proof) | day1-* (Day-1A, scripts/bench/day1a_runner.gd)
 ##   --gi=none|sdfgi|ssil   --vsync=off   --out=<absolute dir>   --duration=<s>
 ##   --time=<hours>   --save-dir=user://...   --crowd (add the 46-presentation choir)
+
+const PROOF_SCENARIOS: PackedStringArray = ["route", "crowd", "cycles", "soak", "shots", "functional", "functional-reload", "fixture", "audio", "startup"]
 
 var content: ContentData
 var session: GameSession
@@ -17,6 +22,8 @@ var hud: Hud
 var fixture: DoorFixture
 var crowd: CrowdFixture
 var args: Dictionary = {}
+var mode: String = "day1a"
+var day1: Day1a = null
 var paused: bool = false
 var boundary_points: Array = []
 
@@ -32,10 +39,15 @@ func _ready() -> void:
 		get_viewport().msaa_3d = {"0": Viewport.MSAA_DISABLED, "2": Viewport.MSAA_2X, "4": Viewport.MSAA_4X}.get(String(args["msaa"]), Viewport.MSAA_2X)
 	if String(args.get("vsync", "on")) == "off":
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+	var sc0: String = String(args.get("scenario", "play"))
+	mode = String(args.get("mode", "proof" if PROOF_SCENARIOS.has(sc0) else "day1a"))
+	if mode == "day1a" and content.doc("world_day1a").is_empty():
+		push_error("Day-1A content missing (native/content/world_day1a.json); running the phase-1 proof")
+		mode = "proof"
 	cells = WorldCells.new()
 	cells.name = "world"
 	add_child(cells)
-	cells.setup(content)
+	cells.setup(content, mode)
 	altar = AltarPortal.new()
 	altar.name = "skull_altar"
 	add_child(altar)
@@ -48,17 +60,24 @@ func _ready() -> void:
 	player.name = "player"
 	add_child(player)
 	player.setup(session, cells)
-	alinardo = AlinardoPresence.new()
-	alinardo.name = "alinardo"
-	add_child(alinardo)
-	alinardo.player_eye = func() -> Variant: return player.eye_position()
-	alinardo.setup(session, content)
+	if mode == "proof":
+		alinardo = AlinardoPresence.new()
+		alinardo.name = "alinardo"
+		add_child(alinardo)
+		alinardo.player_eye = func() -> Variant: return player.eye_position()
+		alinardo.setup(session, content)
 	probe = InteractionProbe.new()
 	probe.name = "interaction"
 	add_child(probe)
 	probe.setup(session, player, content)
-	probe.set_presence("alinardo", func() -> bool: return session.available("alinardo"))
-	probe.set_presence("fixture-door", func() -> bool: return session.room_id.begins_with("fixture"))
+	if mode == "proof":
+		probe.set_presence("alinardo", func() -> bool: return session.available("alinardo"))
+		probe.set_presence("fixture-door", func() -> bool: return session.room_id.begins_with("fixture"))
+	else:
+		# Day 1: the porch resident is absent, the skull altar is an ordinary
+		# side chapel's furniture and the door fixture does not exist
+		for pid: String in ["alinardo", "skull-altar", "fixture-door"]:
+			probe.set_presence(pid, func() -> bool: return false)
 	audio = AudioDirector.new()
 	audio.name = "audio"
 	add_child(audio)
@@ -71,7 +90,13 @@ func _ready() -> void:
 	fixture.name = "door_fixture"
 	add_child(fixture)
 	fixture.setup(session, content, player)
-	_boundaries()
+	if mode == "proof":
+		_boundaries()
+	else:
+		day1 = Day1a.new()
+		day1.name = "day1a"
+		add_child(day1)
+		day1.setup(self)
 	if String(args.get("sun-shadow", "on")) == "off":
 		lighting.sun.shadow_enabled = false
 	if args.has("crowd") or String(args.get("scenario", "")) in ["crowd", "soak"]:
@@ -81,13 +106,21 @@ func _ready() -> void:
 	session.clock.time_set.connect(func(h: float, _j: bool) -> void: lighting.apply_time(h))
 	session.clock.phase_changed.connect(func(_a: String, _b: String) -> void: lighting.apply_time(session.clock.hours))
 	hud.request.connect(_on_request)
-	# start on the cloister walk before Alinardo's bench, looking at him
-	var porch: Vector3 = content.anchor_pos("cloister.porch")
-	player.teleport(Vector3(porch.x + 2.4, 0.3, porch.z), PI / 2.0, "start")
+	if mode == "proof":
+		# start on the cloister walk before Alinardo's bench, looking at him
+		var porch: Vector3 = content.anchor_pos("cloister.porch")
+		player.teleport(Vector3(porch.x + 2.4, 0.3, porch.z), PI / 2.0, "start")
+	else:
+		day1.start()
 	lighting.apply_time(session.clock.hours)
 	_on_room("", session.room_id)
-	var sc: String = String(args.get("scenario", "play"))
-	if sc != "play":
+	var sc: String = sc0
+	if sc.begins_with("day1-"):
+		var r := Day1aRunner.new()
+		r.name = "day1a_runner"
+		add_child(r)
+		r.setup(self, sc, args)
+	elif sc != "play":
 		var b := Benchmark.new()
 		b.name = "benchmark"
 		add_child(b)
@@ -192,6 +225,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			set_paused(not paused)
 	elif paused:
 		return
+	elif mode == "day1a" and day1 != null and day1.handle_input(event):
+		get_viewport().set_input_as_handled()
 	elif event.is_action_pressed("interact"):
 		var r: Dictionary = probe.activate()
 		if String(r.get("sound", "")) != "":

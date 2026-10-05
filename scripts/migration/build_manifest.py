@@ -3,7 +3,8 @@
 
     python3 scripts/migration/build_manifest.py
 
-Reads the per-domain manifests (people, world, audio), the reviewed content
+Reads the per-domain manifests (people, world, Day-1A world, animals, audio),
+the reviewed content
 manifest and the pinned tool inputs, verifies every listed output hash
 against the file on disk, and writes shared/data/manifests/phase1_manifest.json.
 Exit 1 if any output no longer matches its recorded hash.
@@ -23,6 +24,8 @@ def sha(p):
 def main():
     people = json.loads((M / 'people_derivatives.json').read_text())
     world = json.loads((M / 'world_derivatives.json').read_text())
+    world_d1 = json.loads((M / 'world_day1a_derivatives.json').read_text())
+    animals = json.loads((M / 'animal_derivatives.json').read_text())
     audio = json.loads((M / 'audio_derivatives.json').read_text())
     content = json.loads((ROOT / 'native/content/content_manifest.json').read_text())
     entries, bad = [], []
@@ -39,9 +42,11 @@ def main():
         add(r['output'], r['output_sha256'], ['shared/assets/models/people/cast.glb', 'shared/assets/models/people/tasks.glb', 'shared/assets/models/people/cast.json'],
             [src['shared/assets/models/people/cast.glb'], src['shared/assets/models/people/tasks.glb'], src['shared/assets/models/people/cast.json']],
             people['licence_note'], r['transformations'], 'character')
-    for d in world['derivatives']:
+    for d in world['derivatives'] + world_d1['derivatives']:
         lic = d.get('licence') or ('project-authored procedural geometry (browser builders), see docs/PROJECT.md and shared/provenance/' if d['output'].endswith('.glb') else 'project-authored')
         add(d['output'], d['sha256'], d['source'], d.get('source_sha256'), lic, d['recipe'], 'world')
+    for aid, r in animals['animals'].items():
+        add(r['output'], r['output_sha256'], r['source'], r['source_sha256'], r['licence'], r['transformations'], 'animal')
     for sid, s in audio['streams'].items():
         c = s['credit']
         add(s['output'], s['output_sha256'], s['source'], s['source_sha256'], f"{c['licence']} — {c.get('title', '')} by {c.get('author', '')} ({c.get('url', '')})", s['recipe'], 'audio-stream')

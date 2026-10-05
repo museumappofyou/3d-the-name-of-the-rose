@@ -26,8 +26,8 @@
    "package_sha256": "006e679f0c49ed53e346777002c730ef34afe45379f3de39d97fedc6986466c7"
   },
   "locations": {
-   "source_sha256": "01efa81d453a19cec87f4d443d26e29710ee50d0b1dcd0dcde9b12ecbc49b500",
-   "package_sha256": "4450724ac268b451ef43845b4da512f5980414890fb6472c0ab5be9166bb8404"
+   "source_sha256": "29efdb812ac9e7963363614b77bcb03158761499c3827b7c62821143b246a48b",
+   "package_sha256": "057b1bb36fb6768f0af507e304ec9cebd0efa07f1394b102a6f25e2f7621259a"
   },
   "entities": {
    "source_sha256": "090808d5deeb528e28c0e4e8bb40a422e583fbb7f790c38ccb7973b2522a9424",
@@ -50,8 +50,8 @@
    "package_sha256": "2d7abc0e434af36d3fe3fd0db24ed776ec3779ec3308d048c94d80a6b4ad957b"
   },
   "sounds": {
-   "source_sha256": "97bfe85efc2a4990e86011c861d494b0259d9fa94def72646936a63adedf58e2",
-   "package_sha256": "4961c41060e58fae8be1954a49297ff7b6ba6bd0ed261b2cb1926b302ce7b04e"
+   "source_sha256": "1d7ce16ec028095a7789e0257b3728f7b4362577f6dac47a3dd15bae6d970068",
+   "package_sha256": "7114856fe703dbdabbab5806a7d9d87c407ba6b62fbd6f53b727c7d3e9ae8ac8"
   },
   "anchors": {
    "source_sha256": "7d90d7e670b4267927d5e789a65ef89ad0513254527b5881914c808b5eb5ac26",
@@ -65,13 +65,25 @@
    "source_sha256": "214af4288132295cf4c464a04d6988c275dad57d9e4cfde5c2f66309ef1ff435",
    "package_sha256": "4c6c005807e61e4214a9a15bdf34f4baff78ea755e3cef64ece0407faa5a903f"
   },
+  "world_day1a": {
+   "source_sha256": "c2e16a17127d924986e233d14e7007ea84d6a2100d9dee740f5d986856177418",
+   "package_sha256": "617e0560f7370ed58d16ef5be49cf89ef526f3ca9376a3e6ee334903ecbf8145"
+  },
+  "animals": {
+   "source_sha256": "1ac4d70af4374b10aec2823d326ce2197f3fca4141031c8c89d5e35fb2b837ea",
+   "package_sha256": "7f8b666f4ee6f151b442edd098906ae03c9e55c488c6d1fc979e9641620aa310"
+  },
   "cast": {
    "source_sha256": "4a33056acc3e1645ba72b0921a88e982d927f6bd28715a3cf864ccc152f08839",
-   "package_sha256": "2064327ee01a4f1c0cd63f41fd3ae9c68b6530ef7696762f608c8dc9e52e78b3"
+   "package_sha256": "bcfe58a83caa8ce8abbb6b9ec722f02964150e112181efe6478061cc06cc00ad"
   },
   "crowd": {
    "source_sha256": "5636984beccf8ec16c9b526a39bd4235c1b326350de056488dc2e4df31c65332",
    "package_sha256": "2bd9e7051b2fa8fc5e35f23d9afc0f4201ba35500636a846c0baa74d0627292d"
+  },
+  "day1a": {
+   "source_sha256": "01519d0bd5a56e62c67bb432822690a7518cf953828092fab82c38225429e07f",
+   "package_sha256": "7ad2b55ac4a834578b34f32013140b4fcf5086409f392476a86d8f62d3eba1e8"
   }
  },
  "evidence_corpus": {
@@ -120,7 +132,7 @@
   {
    "kind": "character",
    "output": "native/assets/characters/monk_a/monk_a.glb",
-   "output_sha256": "9483561833bc312aac36369134ff8e1d2b99c84488d8d49fcff0af9db08283cb",
+   "output_sha256": "e866fac8ae4eea4ac3c6c5053519e07ca9c0286638f5f2a0f10da5e7c49b0164",
    "verified": true,
    "source": [
     "shared/assets/models/people/cast.glb",
@@ -139,13 +151,14 @@
     "retain integer JOINTS/WEIGHTS/COLOR",
     "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
     "bind 9 fitted task clips by joint name",
+    "bind 17 shared motions (figure.js clipFor rule)",
     "WebP kept (EXT_texture_webp)"
    ]
   },
   {
    "kind": "character",
    "output": "native/assets/characters/scribe_a/scribe_a.glb",
-   "output_sha256": "eb2d54d690eedb50056175bace699cb2fecb54b4b2f67aa7efee40faa64927e5",
+   "output_sha256": "64ed245c35ddb86d7145b454ed32d4fd9179fa64faf8404f1770f0f7e1267aaa",
    "verified": true,
    "source": [
     "shared/assets/models/people/cast.glb",
@@ -164,13 +177,14 @@
     "retain integer JOINTS/WEIGHTS/COLOR",
     "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
     "bind 9 fitted task clips by joint name",
+    "bind 17 shared motions (figure.js clipFor rule)",
     "WebP kept (EXT_texture_webp)"
    ]
   },
   {
    "kind": "character",
    "output": "native/assets/characters/monk_b/monk_b.glb",
-   "output_sha256": "609cdd49affff06ccc5b32fd6e4498f0004542708be1ba76d9a836ee41787016",
+   "output_sha256": "5586737a0f646a639e0f329539759e914171f1eba4dd59c7e1386a5e737191ea",
    "verified": true,
    "source": [
     "shared/assets/models/people/cast.glb",
@@ -189,13 +203,14 @@
     "retain integer JOINTS/WEIGHTS/COLOR",
     "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
     "bind 9 fitted task clips by joint name",
+    "bind 17 shared motions (figure.js clipFor rule)",
     "WebP kept (EXT_texture_webp)"
    ]
   },
   {
    "kind": "character",
    "output": "native/assets/characters/novice_a/novice_a.glb",
-   "output_sha256": "ca5cc3631f9380d277cf4af396f3dd2e6fbf07ee59abe6e81f0bd4c3b5a8b2c8",
+   "output_sha256": "309cb15f7a40cd8e40961faf142694d5d08d5b1d35c4612a5892fca6daa1d859",
    "verified": true,
    "source": [
     "shared/assets/models/people/cast.glb",
@@ -214,6 +229,215 @@
     "retain integer JOINTS/WEIGHTS/COLOR",
     "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
     "bind 9 fitted task clips by joint name",
+    "bind 17 shared motions (figure.js clipFor rule)",
+    "WebP kept (EXT_texture_webp)"
+   ]
+  },
+  {
+   "kind": "character",
+   "output": "native/assets/characters/monk_c/monk_c.glb",
+   "output_sha256": "2a7e05c4285496ce7e1c75f5ae384a50c4918d4c6b0bea699372d361ab755f24",
+   "verified": true,
+   "source": [
+    "shared/assets/models/people/cast.glb",
+    "shared/assets/models/people/tasks.glb",
+    "shared/assets/models/people/cast.json"
+   ],
+   "source_sha256": [
+    "beffd6a188fe80c3f9f43e0e29a609feb4c3715c04768569faebe268e4845be4",
+    "45368893acc694c5df87ad39ed98c68271fbedfb4bbc463dc4fbbb67e363d62e",
+    "4a33056acc3e1645ba72b0921a88e982d927f6bd28715a3cf864ccc152f08839"
+   ],
+   "licence": "Body/garment components keep the credits in docs/ASSETS.md, shared/provenance/reconstruction-decisions.json and shared/assets/credits.json (CC0 MakeHuman/MPFB, CC BY boots/apron where used). Motion sources per those documents.",
+   "recipe": [
+    "meshopt decode",
+    "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+    "retain integer JOINTS/WEIGHTS/COLOR",
+    "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
+    "bind 9 fitted task clips by joint name",
+    "bind 17 shared motions (figure.js clipFor rule)",
+    "WebP kept (EXT_texture_webp)"
+   ]
+  },
+  {
+   "kind": "character",
+   "output": "native/assets/characters/monk_e/monk_e.glb",
+   "output_sha256": "e8e243136c3ca7f916e2aa9c3d41b336ed67aefa124782a6f13fd6005726db55",
+   "verified": true,
+   "source": [
+    "shared/assets/models/people/cast.glb",
+    "shared/assets/models/people/tasks.glb",
+    "shared/assets/models/people/cast.json"
+   ],
+   "source_sha256": [
+    "beffd6a188fe80c3f9f43e0e29a609feb4c3715c04768569faebe268e4845be4",
+    "45368893acc694c5df87ad39ed98c68271fbedfb4bbc463dc4fbbb67e363d62e",
+    "4a33056acc3e1645ba72b0921a88e982d927f6bd28715a3cf864ccc152f08839"
+   ],
+   "licence": "Body/garment components keep the credits in docs/ASSETS.md, shared/provenance/reconstruction-decisions.json and shared/assets/credits.json (CC0 MakeHuman/MPFB, CC BY boots/apron where used). Motion sources per those documents.",
+   "recipe": [
+    "meshopt decode",
+    "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+    "retain integer JOINTS/WEIGHTS/COLOR",
+    "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
+    "bind 9 fitted task clips by joint name",
+    "bind 17 shared motions (figure.js clipFor rule)",
+    "WebP kept (EXT_texture_webp)"
+   ]
+  },
+  {
+   "kind": "character",
+   "output": "native/assets/characters/monk_f/monk_f.glb",
+   "output_sha256": "118d1c548ea4e33fe982a34be3bffedd76ffd0c6a72e657c51747d771b5b7051",
+   "verified": true,
+   "source": [
+    "shared/assets/models/people/cast.glb",
+    "shared/assets/models/people/tasks.glb",
+    "shared/assets/models/people/cast.json"
+   ],
+   "source_sha256": [
+    "beffd6a188fe80c3f9f43e0e29a609feb4c3715c04768569faebe268e4845be4",
+    "45368893acc694c5df87ad39ed98c68271fbedfb4bbc463dc4fbbb67e363d62e",
+    "4a33056acc3e1645ba72b0921a88e982d927f6bd28715a3cf864ccc152f08839"
+   ],
+   "licence": "Body/garment components keep the credits in docs/ASSETS.md, shared/provenance/reconstruction-decisions.json and shared/assets/credits.json (CC0 MakeHuman/MPFB, CC BY boots/apron where used). Motion sources per those documents.",
+   "recipe": [
+    "meshopt decode",
+    "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+    "retain integer JOINTS/WEIGHTS/COLOR",
+    "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
+    "bind 9 fitted task clips by joint name",
+    "bind 17 shared motions (figure.js clipFor rule)",
+    "WebP kept (EXT_texture_webp)"
+   ]
+  },
+  {
+   "kind": "character",
+   "output": "native/assets/characters/monk_d/monk_d.glb",
+   "output_sha256": "725052e62aec2fe1c29b416a70d7b005397e7a08cc194801c81584249f65943a",
+   "verified": true,
+   "source": [
+    "shared/assets/models/people/cast.glb",
+    "shared/assets/models/people/tasks.glb",
+    "shared/assets/models/people/cast.json"
+   ],
+   "source_sha256": [
+    "beffd6a188fe80c3f9f43e0e29a609feb4c3715c04768569faebe268e4845be4",
+    "45368893acc694c5df87ad39ed98c68271fbedfb4bbc463dc4fbbb67e363d62e",
+    "4a33056acc3e1645ba72b0921a88e982d927f6bd28715a3cf864ccc152f08839"
+   ],
+   "licence": "Body/garment components keep the credits in docs/ASSETS.md, shared/provenance/reconstruction-decisions.json and shared/assets/credits.json (CC0 MakeHuman/MPFB, CC BY boots/apron where used). Motion sources per those documents.",
+   "recipe": [
+    "meshopt decode",
+    "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+    "retain integer JOINTS/WEIGHTS/COLOR",
+    "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
+    "bind 9 fitted task clips by joint name",
+    "bind 17 shared motions (figure.js clipFor rule)",
+    "WebP kept (EXT_texture_webp)"
+   ]
+  },
+  {
+   "kind": "character",
+   "output": "native/assets/characters/monk_g/monk_g.glb",
+   "output_sha256": "1e91e5700e0d2688743ec90c342934cbb9ad90d2c3b7ff81e00d0d430336561b",
+   "verified": true,
+   "source": [
+    "shared/assets/models/people/cast.glb",
+    "shared/assets/models/people/tasks.glb",
+    "shared/assets/models/people/cast.json"
+   ],
+   "source_sha256": [
+    "beffd6a188fe80c3f9f43e0e29a609feb4c3715c04768569faebe268e4845be4",
+    "45368893acc694c5df87ad39ed98c68271fbedfb4bbc463dc4fbbb67e363d62e",
+    "4a33056acc3e1645ba72b0921a88e982d927f6bd28715a3cf864ccc152f08839"
+   ],
+   "licence": "Body/garment components keep the credits in docs/ASSETS.md, shared/provenance/reconstruction-decisions.json and shared/assets/credits.json (CC0 MakeHuman/MPFB, CC BY boots/apron where used). Motion sources per those documents.",
+   "recipe": [
+    "meshopt decode",
+    "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+    "retain integer JOINTS/WEIGHTS/COLOR",
+    "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
+    "bind 9 fitted task clips by joint name",
+    "bind 17 shared motions (figure.js clipFor rule)",
+    "WebP kept (EXT_texture_webp)"
+   ]
+  },
+  {
+   "kind": "character",
+   "output": "native/assets/characters/novice_b/novice_b.glb",
+   "output_sha256": "22d45ca8e71d1bb7f3940407f216a548fb18773d6d71ddb2d23a3f3644f3d219",
+   "verified": true,
+   "source": [
+    "shared/assets/models/people/cast.glb",
+    "shared/assets/models/people/tasks.glb",
+    "shared/assets/models/people/cast.json"
+   ],
+   "source_sha256": [
+    "beffd6a188fe80c3f9f43e0e29a609feb4c3715c04768569faebe268e4845be4",
+    "45368893acc694c5df87ad39ed98c68271fbedfb4bbc463dc4fbbb67e363d62e",
+    "4a33056acc3e1645ba72b0921a88e982d927f6bd28715a3cf864ccc152f08839"
+   ],
+   "licence": "Body/garment components keep the credits in docs/ASSETS.md, shared/provenance/reconstruction-decisions.json and shared/assets/credits.json (CC0 MakeHuman/MPFB, CC BY boots/apron where used). Motion sources per those documents.",
+   "recipe": [
+    "meshopt decode",
+    "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+    "retain integer JOINTS/WEIGHTS/COLOR",
+    "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
+    "bind 9 fitted task clips by joint name",
+    "bind 17 shared motions (figure.js clipFor rule)",
+    "WebP kept (EXT_texture_webp)"
+   ]
+  },
+  {
+   "kind": "character",
+   "output": "native/assets/characters/lay_old/lay_old.glb",
+   "output_sha256": "7b04da7db02cc8f8ee3c65834d5aed46bb476e7a27cf0a57cdb6e6dbfb56d6d6",
+   "verified": true,
+   "source": [
+    "shared/assets/models/people/cast.glb",
+    "shared/assets/models/people/tasks.glb",
+    "shared/assets/models/people/cast.json"
+   ],
+   "source_sha256": [
+    "beffd6a188fe80c3f9f43e0e29a609feb4c3715c04768569faebe268e4845be4",
+    "45368893acc694c5df87ad39ed98c68271fbedfb4bbc463dc4fbbb67e363d62e",
+    "4a33056acc3e1645ba72b0921a88e982d927f6bd28715a3cf864ccc152f08839"
+   ],
+   "licence": "Body/garment components keep the credits in docs/ASSETS.md, shared/provenance/reconstruction-decisions.json and shared/assets/credits.json (CC0 MakeHuman/MPFB, CC BY boots/apron where used). Motion sources per those documents.",
+   "recipe": [
+    "meshopt decode",
+    "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+    "retain integer JOINTS/WEIGHTS/COLOR",
+    "restore authored NORMAL on 9 part(s) from the round-three master (see normal_restoration)",
+    "bind 8 fitted task clips by joint name",
+    "bind 18 shared motions (figure.js clipFor rule)",
+    "WebP kept (EXT_texture_webp)"
+   ]
+  },
+  {
+   "kind": "character",
+   "output": "native/assets/characters/lay_herd/lay_herd.glb",
+   "output_sha256": "763ad9ee85fd4c11e018b41b2a00e935837dec6be6093af3fa40163133c16b00",
+   "verified": true,
+   "source": [
+    "shared/assets/models/people/cast.glb",
+    "shared/assets/models/people/tasks.glb",
+    "shared/assets/models/people/cast.json"
+   ],
+   "source_sha256": [
+    "beffd6a188fe80c3f9f43e0e29a609feb4c3715c04768569faebe268e4845be4",
+    "45368893acc694c5df87ad39ed98c68271fbedfb4bbc463dc4fbbb67e363d62e",
+    "4a33056acc3e1645ba72b0921a88e982d927f6bd28715a3cf864ccc152f08839"
+   ],
+   "licence": "Body/garment components keep the credits in docs/ASSETS.md, shared/provenance/reconstruction-decisions.json and shared/assets/credits.json (CC0 MakeHuman/MPFB, CC BY boots/apron where used). Motion sources per those documents.",
+   "recipe": [
+    "meshopt decode",
+    "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+    "retain integer JOINTS/WEIGHTS/COLOR",
+    "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
+    "bind 8 fitted task clips by joint name",
+    "bind 18 shared motions (figure.js clipFor rule)",
     "WebP kept (EXT_texture_webp)"
    ]
   },
@@ -838,6 +1062,929 @@
    "recipe": "cropped to the slice; half → float32 for ground"
   },
   {
+   "kind": "world",
+   "output": "native/assets/world/day1a/cells/gate.glb",
+   "output_sha256": "8775df04f47be4f909699e1df52775366fb53990089cdfae1df8d344032f480d",
+   "verified": true,
+   "source": "shared/data/export/day1a/cells/gate.glb",
+   "source_sha256": null,
+   "licence": "project-authored procedural geometry (browser builders), see docs/PROJECT.md and shared/provenance/",
+   "recipe": "slice_export.js section capture (unchanged copy)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/collision/gate.glb",
+   "output_sha256": "bc9307759c6139d1c77120e17bfcf7a541d456a7c8253091248cdf9c4a8185d4",
+   "verified": true,
+   "source": "shared/data/export/day1a/collision/gate.glb",
+   "source_sha256": null,
+   "licence": "project-authored procedural geometry (browser builders), see docs/PROJECT.md and shared/provenance/",
+   "recipe": "slice_export.js collision capture (unchanged copy)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/cells/hospice.glb",
+   "output_sha256": "5f4fae9bf68c8f8673c2eccf33f1238379510b1644cafac9e07abf3e74aac5fa",
+   "verified": true,
+   "source": "shared/data/export/day1a/cells/hospice.glb",
+   "source_sha256": null,
+   "licence": "project-authored procedural geometry (browser builders), see docs/PROJECT.md and shared/provenance/",
+   "recipe": "slice_export.js section capture (unchanged copy)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/collision/hospice.glb",
+   "output_sha256": "9baf9b9a61a82432949674f962b38b6c3b4b7e24fb8992f79608bc855d14b22f",
+   "verified": true,
+   "source": "shared/data/export/day1a/collision/hospice.glb",
+   "source_sha256": null,
+   "licence": "project-authored procedural geometry (browser builders), see docs/PROJECT.md and shared/provenance/",
+   "recipe": "slice_export.js collision capture (unchanged copy)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/cells/flower_garden.glb",
+   "output_sha256": "8f26e3d74880b9a247955091b7f92e344b335a08fd013beee0c3c18976cbe681",
+   "verified": true,
+   "source": "shared/data/export/day1a/cells/flower_garden.glb",
+   "source_sha256": null,
+   "licence": "project-authored procedural geometry (browser builders), see docs/PROJECT.md and shared/provenance/",
+   "recipe": "slice_export.js section capture (unchanged copy)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/collision/flower_garden.glb",
+   "output_sha256": "ae387b9c3ed242cea7c86d88a1ae47552a5f36d05eb6b46702e550ed9140e738",
+   "verified": true,
+   "source": "shared/data/export/day1a/collision/flower_garden.glb",
+   "source_sha256": null,
+   "licence": "project-authored procedural geometry (browser builders), see docs/PROJECT.md and shared/provenance/",
+   "recipe": "slice_export.js collision capture (unchanged copy)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/cells/church_west.glb",
+   "output_sha256": "580ffbbfcadfdb04b9538a0aa4b1e80f34f6734eb48dfda2d82a313b04d4c7d7",
+   "verified": true,
+   "source": "shared/data/export/day1a/cells/church_west.glb",
+   "source_sha256": null,
+   "licence": "project-authored procedural geometry (browser builders), see docs/PROJECT.md and shared/provenance/",
+   "recipe": "slice_export.js section capture (unchanged copy)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/cells/west_context.glb",
+   "output_sha256": "3c306d2e44e146cdfbed61a4146efe261f8803d0fedbf70cf828f068c51cd2a8",
+   "verified": true,
+   "source": "shared/data/export/day1a/cells/west_context.glb",
+   "source_sha256": null,
+   "licence": "project-authored procedural geometry (browser builders), see docs/PROJECT.md and shared/provenance/",
+   "recipe": "slice_export.js section capture (unchanged copy)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/collision/west_context.glb",
+   "output_sha256": "bbc920f16381cdb698aa51cea4e85659d678914017d4bd5fb3b6fbbd0023010c",
+   "verified": true,
+   "source": "shared/data/export/day1a/collision/west_context.glb",
+   "source_sha256": null,
+   "licence": "project-authored procedural geometry (browser builders), see docs/PROJECT.md and shared/provenance/",
+   "recipe": "slice_export.js collision capture (unchanged copy)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/cells/gardens_west.glb",
+   "output_sha256": "e59f0f882067e2c62f73e41a7dc8a9728e6bd72cef876d6a83065df8d9d45816",
+   "verified": true,
+   "source": "shared/data/export/day1a/cells/gardens_west.glb",
+   "source_sha256": null,
+   "licence": "project-authored procedural geometry (browser builders), see docs/PROJECT.md and shared/provenance/",
+   "recipe": "slice_export.js section capture (unchanged copy)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/cells/aedificium.glb",
+   "output_sha256": "27f81105c0e9cca6d3eb0ef55008fcc5100cb1bf6871a1e516b5dd37b6d7c71f",
+   "verified": true,
+   "source": "shared/data/export/day1a/cells/aedificium.glb",
+   "source_sha256": null,
+   "licence": "project-authored procedural geometry (browser builders), see docs/PROJECT.md and shared/provenance/",
+   "recipe": "slice_export.js section capture (unchanged copy)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/textures/floorboards_a.jpg",
+   "output_sha256": "116ab73d95753a4b3cfb0874ced155280388a2ab6f734967500147b6167706a1",
+   "verified": true,
+   "source": "shared/assets/textures/floorboards_a.jpg",
+   "source_sha256": "116ab73d95753a4b3cfb0874ced155280388a2ab6f734967500147b6167706a1",
+   "licence": "CC0 1.0 (Poly Haven, shared/assets/credits.json)",
+   "recipe": "copy; Godot import VRAM compressed, mipmaps"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/textures/floorboards_d.jpg",
+   "output_sha256": "0553a3f0f395ff8dac42723088c8e18884c5fe42ac96e9fa0e4dd7f8493cffdf",
+   "verified": true,
+   "source": "shared/assets/textures/floorboards_d.jpg",
+   "source_sha256": "0553a3f0f395ff8dac42723088c8e18884c5fe42ac96e9fa0e4dd7f8493cffdf",
+   "licence": "CC0 1.0 (Poly Haven, shared/assets/credits.json)",
+   "recipe": "copy; Godot import VRAM compressed, mipmaps"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/textures/floorboards_n.jpg",
+   "output_sha256": "36df2759a6126ea8a5fd79ec182ea8619838c8016f4b4cd757a61e7917fee565",
+   "verified": true,
+   "source": "shared/assets/textures/floorboards_n.jpg",
+   "source_sha256": "36df2759a6126ea8a5fd79ec182ea8619838c8016f4b4cd757a61e7917fee565",
+   "licence": "CC0 1.0 (Poly Haven, shared/assets/credits.json)",
+   "recipe": "copy; Godot import VRAM compressed, mipmaps"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/textures/soil_a.jpg",
+   "output_sha256": "b32a0d6fd3c7578fbb83911f36947069ed8388816fc5cf4a7e421c41b7f6ed1e",
+   "verified": true,
+   "source": "shared/assets/textures/soil_a.jpg",
+   "source_sha256": "b32a0d6fd3c7578fbb83911f36947069ed8388816fc5cf4a7e421c41b7f6ed1e",
+   "licence": "CC0 1.0 (Poly Haven, shared/assets/credits.json)",
+   "recipe": "copy; Godot import VRAM compressed, mipmaps"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/textures/soil_d.jpg",
+   "output_sha256": "60f04213762aec26faa82f42e5d2fdcf1eb91777b731ce52b70fa7440c505489",
+   "verified": true,
+   "source": "shared/assets/textures/soil_d.jpg",
+   "source_sha256": "60f04213762aec26faa82f42e5d2fdcf1eb91777b731ce52b70fa7440c505489",
+   "licence": "CC0 1.0 (Poly Haven, shared/assets/credits.json)",
+   "recipe": "copy; Godot import VRAM compressed, mipmaps"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/textures/soil_n.jpg",
+   "output_sha256": "878d182c0a5db1e2f5fa4dcc51ac9972b3a3275df0fcddc2f4ec2b029376a276",
+   "verified": true,
+   "source": "shared/assets/textures/soil_n.jpg",
+   "source_sha256": "878d182c0a5db1e2f5fa4dcc51ac9972b3a3275df0fcddc2f4ec2b029376a276",
+   "licence": "CC0 1.0 (Poly Haven, shared/assets/credits.json)",
+   "recipe": "copy; Godot import VRAM compressed, mipmaps"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/textures/wall_stone_a.jpg",
+   "output_sha256": "0b922a2ffa56774aeb1f328389d28e66fce908d6b5e5fcab9986d12497eb99f2",
+   "verified": true,
+   "source": "shared/assets/textures/wall_stone_a.jpg",
+   "source_sha256": "0b922a2ffa56774aeb1f328389d28e66fce908d6b5e5fcab9986d12497eb99f2",
+   "licence": "CC0 1.0 (Poly Haven, shared/assets/credits.json)",
+   "recipe": "copy; Godot import VRAM compressed, mipmaps"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/textures/wall_stone_d.jpg",
+   "output_sha256": "9e9547ef1f4b3028d50026cb41c079b372680b5951db7182e1287d25ae34a6e9",
+   "verified": true,
+   "source": "shared/assets/textures/wall_stone_d.jpg",
+   "source_sha256": "9e9547ef1f4b3028d50026cb41c079b372680b5951db7182e1287d25ae34a6e9",
+   "licence": "CC0 1.0 (Poly Haven, shared/assets/credits.json)",
+   "recipe": "copy; Godot import VRAM compressed, mipmaps"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/textures/wall_stone_n.jpg",
+   "output_sha256": "a78891f81519598edcf0d9b278e7c3503c636a53918581d5cc325c31e08c9901",
+   "verified": true,
+   "source": "shared/assets/textures/wall_stone_n.jpg",
+   "source_sha256": "a78891f81519598edcf0d9b278e7c3503c636a53918581d5cc325c31e08c9901",
+   "licence": "CC0 1.0 (Poly Haven, shared/assets/credits.json)",
+   "recipe": "copy; Godot import VRAM compressed, mipmaps"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/generated/alabaster_map.png",
+   "output_sha256": "ed65227afca0903b27554d75fa2377b46a9edc45113376302ca66363fad18003",
+   "verified": true,
+   "source": "canvas texture of material alabaster (map)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "HTMLCanvasElement.toBlob PNG in the browser (procedural, project-authored)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/generated/glass_map.png",
+   "output_sha256": "78dba7bb18338d255c803ea1432d910a562b5fc8bfd15a7cf5aa12f39b04b549",
+   "verified": true,
+   "source": "canvas texture of material glass (map)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "HTMLCanvasElement.toBlob PNG in the browser (procedural, project-authored)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/generated/glassOpaque_map.png",
+   "output_sha256": "104fe21308713b76a84ff5024f3c94dbbc691ed517d5a44f113866faf300f406",
+   "verified": true,
+   "source": "canvas texture of material glassOpaque (map)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "HTMLCanvasElement.toBlob PNG in the browser (procedural, project-authored)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/generated/hedge_map.png",
+   "output_sha256": "30c184dc69f0c080dfcc9de3cdebd327ce98484fa3a99d38826999aa19932d8b",
+   "verified": true,
+   "source": "canvas texture of material hedge (map)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "HTMLCanvasElement.toBlob PNG in the browser (procedural, project-authored)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/generated/hedge_normal_map.png",
+   "output_sha256": "5ec4299e95c78605515d38ca40d2a8caaca618c00bc94a3a2b1239ffc6edd076",
+   "verified": true,
+   "source": "canvas texture of material hedge (normal_map)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "HTMLCanvasElement.toBlob PNG in the browser (procedural, project-authored)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/generated/p_blanket_map.png",
+   "output_sha256": "215d812eb115cc4604f50a0ada27ea2475d85b6e3600b0d8666cb35795ee7ef6",
+   "verified": true,
+   "source": "canvas texture of material p.blanket (map)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "HTMLCanvasElement.toBlob PNG in the browser (procedural, project-authored)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/generated/p_blanketGrey_map.png",
+   "output_sha256": "dc20363040ca4dd4dc6bb6ccd26529333c6812e479d4f882e5f39329b4f05c75",
+   "verified": true,
+   "source": "canvas texture of material p.blanketGrey (map)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "HTMLCanvasElement.toBlob PNG in the browser (procedural, project-authored)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/generated/p_earthenDark_map.png",
+   "output_sha256": "56303a0d4ec1df5da9ce726f7bc0f34f73dc9e0b54e27376f6d56601088c27eb",
+   "verified": true,
+   "source": "canvas texture of material p.earthenDark (map)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "HTMLCanvasElement.toBlob PNG in the browser (procedural, project-authored)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/generated/p_earthenware_map.png",
+   "output_sha256": "73de68035de8eb7bfced8f88861af703531f0e944ca722856a265b2463076509",
+   "verified": true,
+   "source": "canvas texture of material p.earthenware (map)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "HTMLCanvasElement.toBlob PNG in the browser (procedural, project-authored)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/generated/p_glazeBrown_map.png",
+   "output_sha256": "96198383d4ca94632b1446785c373ee9a58463f5466b9f7fc0f02b1843e3faa6",
+   "verified": true,
+   "source": "canvas texture of material p.glazeBrown (map)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "HTMLCanvasElement.toBlob PNG in the browser (procedural, project-authored)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/generated/p_sacking_map.png",
+   "output_sha256": "ad7cec432b3df5bc81922f64cb5d34a59c0cdb8461337cd9472de15f2f138fbc",
+   "verified": true,
+   "source": "canvas texture of material p.sacking (map)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "HTMLCanvasElement.toBlob PNG in the browser (procedural, project-authored)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/generated/straw_map.png",
+   "output_sha256": "24f75515f9bbf6a7ff9537c4c65f3708b7b4d79cda8513416d40fe3cc5eba6ea",
+   "verified": true,
+   "source": "canvas texture of material straw (map)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "HTMLCanvasElement.toBlob PNG in the browser (procedural, project-authored)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/generated/tym_ground_map.png",
+   "output_sha256": "93466905b939dcda580357866f5b0eb372c89792dd5eaaf8da680f5f4acefa0b",
+   "verified": true,
+   "source": "canvas texture of material tym.ground (map)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "HTMLCanvasElement.toBlob PNG in the browser (procedural, project-authored)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/generated/wattle_map.png",
+   "output_sha256": "a0b2f8e00391edbf87785e4cfce4fe046c83b6f82181e608c860285e111ee4ea",
+   "verified": true,
+   "source": "canvas texture of material wattle (map)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "HTMLCanvasElement.toBlob PNG in the browser (procedural, project-authored)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/alabaster.tres",
+   "output_sha256": "2000e4f430fddedef8bc13e8ca9c12e299e165c2d7814627a7cbb5693598e64c",
+   "verified": true,
+   "source": "slice_export.js material record alabaster",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (abbey_pbr)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/bark.tres",
+   "output_sha256": "5322bb84a427dc0219a82863c2d981988bf6f94be9e7106c75ef032ea1f919b0",
+   "verified": true,
+   "source": "slice_export.js material record bark",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (StandardMaterial3D)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/bedSoil.tres",
+   "output_sha256": "51b9dd9b711383f675cc9f78e69324cc6b7257850ed3a0af5a190c4e8009b325",
+   "verified": true,
+   "source": "slice_export.js material record bedSoil",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (abbey_pbr)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/boards.tres",
+   "output_sha256": "a41068052077a25bd125d35e1677d77d4ffd46fd47f1627d9aaa2b0f44cfb4e9",
+   "verified": true,
+   "source": "slice_export.js material record boards",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (abbey_pbr)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/dung.tres",
+   "output_sha256": "56105c6bb6454758f730a23ebf9c886216913d4a2941aca21855aa81146a7c2b",
+   "verified": true,
+   "source": "slice_export.js material record dung",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (StandardMaterial3D)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/glass.tres",
+   "output_sha256": "d518d6ebf0b8c40e3807cfe0a07a0d95470b49bad2101c0068495e19ead56349",
+   "verified": true,
+   "source": "slice_export.js material record glass",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (abbey_pbr_alpha)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/hedge.tres",
+   "output_sha256": "6bb4054279c5b3501c1bafc218fd21f6bf11ae26bf3309b01e81e36e272cfc9f",
+   "verified": true,
+   "source": "slice_export.js material record hedge",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (abbey_pbr)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/kale.tres",
+   "output_sha256": "ce182e26b34fdc4f7de727d51751f8ed005bf5357e2c83ad0358666b5b69eba7",
+   "verified": true,
+   "source": "slice_export.js material record kale",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (StandardMaterial3D)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/p_blanket.tres",
+   "output_sha256": "c0f37666dde611039a15cfbd33d8a9db4629e0fda27c3c6870b41f0b8606dec5",
+   "verified": true,
+   "source": "slice_export.js material record p.blanket",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (abbey_pbr_double)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/p_blanketGrey.tres",
+   "output_sha256": "f613763db96821bc426baf83e2b7e6f84e16c4bc95e8a8e0504cadd49530fb90",
+   "verified": true,
+   "source": "slice_export.js material record p.blanketGrey",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (abbey_pbr_double)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/p_bread.tres",
+   "output_sha256": "3e4e610f96d82794c8b53f6f7bf87053a75dc1c766d5c7d3f13d591182c627a8",
+   "verified": true,
+   "source": "slice_export.js material record p.bread",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (StandardMaterial3D)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/p_earthenDark.tres",
+   "output_sha256": "71bb3ec7e6aef72ca0bec3f7c1146856751cdc564593d093688abda0b6e8f9ae",
+   "verified": true,
+   "source": "slice_export.js material record p.earthenDark",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (abbey_pbr)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/p_earthenware.tres",
+   "output_sha256": "af67b85fbae5e8e82f6eed4cd8c75dfaa9cf62869eb8d9ba4baa2346087def30",
+   "verified": true,
+   "source": "slice_export.js material record p.earthenware",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (abbey_pbr)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/p_glazeBrown.tres",
+   "output_sha256": "5f8ec3ee49a5bf34fcef528949849cd701b701006c63cedff1ef54c8528315db",
+   "verified": true,
+   "source": "slice_export.js material record p.glazeBrown",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (abbey_pbr)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/p_onion.tres",
+   "output_sha256": "8fc27e4ca09ca2da5f51ccef2cab000b3fdec893361f0952007ac3155499c419",
+   "verified": true,
+   "source": "slice_export.js material record p.onion",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (StandardMaterial3D)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/p_sacking.tres",
+   "output_sha256": "e388b79c952cae681d70fe015b5864426bd752f7239f97deab204aaa51f195fb",
+   "verified": true,
+   "source": "slice_export.js material record p.sacking",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (abbey_pbr)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/p_woolBlack.tres",
+   "output_sha256": "709d71e1b344b899d604c651ab57ea1b890506137735579ce3d18c24363b1ab8",
+   "verified": true,
+   "source": "slice_export.js material record p.woolBlack",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (abbey_pbr_double)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/pottery.tres",
+   "output_sha256": "5085dd26bff4d31b779ee183975cc515a309c05ea98180af2b2f02ef96ee2e0b",
+   "verified": true,
+   "source": "slice_export.js material record pottery",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (StandardMaterial3D)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/rubbleIn.tres",
+   "output_sha256": "73d5db0839289b7bef01c3de93caa9f6292e47049f3c721719de5834bb673d85",
+   "verified": true,
+   "source": "slice_export.js material record rubbleIn",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (abbey_pbr)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/soil.tres",
+   "output_sha256": "03cbd1a9969ea97106b9cb3de09debf4180c56a904a2b49f852f9c6f56c79c77",
+   "verified": true,
+   "source": "slice_export.js material record soil",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (abbey_pbr)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/straw.tres",
+   "output_sha256": "58ae741e690c78d4219c0d1ced29803510d94073fd12dc181324ad84b4772f6f",
+   "verified": true,
+   "source": "slice_export.js material record straw",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (abbey_pbr)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/strawExt.tres",
+   "output_sha256": "29e2dc42a588c95649f705c9dcbb87f7d58f53ddb3dabe7ba746ca3ff4566e3c",
+   "verified": true,
+   "source": "slice_export.js material record strawExt",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (abbey_pbr)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/tym_ground.tres",
+   "output_sha256": "5f7da13fce168f1efaa480f7999db2c136789dbcfdeac3878854c8ed2aec932f",
+   "verified": true,
+   "source": "slice_export.js material record tym.ground",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (abbey_pbr)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/wall.tres",
+   "output_sha256": "efb5b5866253fe8686c15d7d22b56ab63d7fce56420a05c4465020663479350f",
+   "verified": true,
+   "source": "slice_export.js material record wall",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (abbey_pbr)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/materials/wattle.tres",
+   "output_sha256": "ca1de87eca116aed691894a46a1c5fcea5d1144a6cae91dfa040e7cbd2e675d2",
+   "verified": true,
+   "source": "slice_export.js material record wattle",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "build_slice_assets.material_resource (abbey_pbr)"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/elm0_lod0.bin",
+   "output_sha256": "bc618d442c79a90f25799d5f0fde1ab64d69b8d4f95b576e0a535e4d56599f8e",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/elm1_lod0.bin",
+   "output_sha256": "6f58da401c9bddd57dfa6a306986a5d0d8414924852190a6cfaaf3345daaf7fb",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/elm2_lod0.bin",
+   "output_sha256": "2c542003f56a7d71b333dab6f30e076a63b8a3987358cfcf3b5efd91b977cd26",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/fir_lod0.bin",
+   "output_sha256": "8d9e2fc23e587d530c862c80bf829c1fbff1342beb03ca36a5bff0a11f1fa2ca",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/fir_lod1.bin",
+   "output_sha256": "0506972a3d5b0b43a341c94328c128736f0811211f1954e46bda44a2c1308624",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/fir_lod2.bin",
+   "output_sha256": "8f63dcbbfa0cc83eeddf709479cb51363c7e23f60a02cdc15b1182a431f3d2e8",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/fruit0_lod0.bin",
+   "output_sha256": "3dfc0035cf683dcdcbbade3926856a5fc257fd5af251c02d89b54fc8274d6a32",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/fruit1_lod0.bin",
+   "output_sha256": "6137363d12b62564d05de8412844235c854e959e1762f506f08265ac4d88dc3b",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/fruit2_lod0.bin",
+   "output_sha256": "51d6e218cb1ebdac03bab17c7a4a680d426efb02afc9ab49d8c208ab400b378d",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/oak_lod0.bin",
+   "output_sha256": "9d78e209e1a74ede2f06f860466bc88d3daf309b6613813a543b4e38339f2aa2",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/rose_lod0.bin",
+   "output_sha256": "24b3b9ebab0f4e5e3cafc3682c69445dc85249fa09d7a15598dd2b79f70345fa",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/spruce_lod0.bin",
+   "output_sha256": "d8a87e2862ce335028b65f5769d0b821d1c54e93c14322db4aae01188eb59fd2",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/spruce_lod1.bin",
+   "output_sha256": "fd2963aa1a1866c04129425a70436d0a1b4b7a2c86b16d006643b26f5c064b58",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/spruce_lod2.bin",
+   "output_sha256": "5cb10d6eb49927508e23821e67af8bc4f74ee8b2fe03829026ea000175cd1d12",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/stonePine_lod0.bin",
+   "output_sha256": "f4f2c80f45c2c172db19d948d7c4459beaaedf6df6e9a1bba696513338ff895c",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/wind_lod0.bin",
+   "output_sha256": "a6ea6ff7b891ec2a86e19dae7337c02786a8c00630048bd25e35550e270ff559",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/wind_lod1.bin",
+   "output_sha256": "1b9e179270efa70066b8cff6d95c6cf18b227aff9fb9f48c492112f518d9a83f",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/wind_lod2.bin",
+   "output_sha256": "1ae0c6895a50fb3dc34a3c4ef7cfcf0854975889190cf4f61fa67183834b5c14",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/young_lod0.bin",
+   "output_sha256": "8d2ea95450d4df48f5d6c02f5d75b54df7d299004ffe8119a3d6c5d2028e879d",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/young_lod1.bin",
+   "output_sha256": "519c77c3e9f9697cb85d831aed888386c87f7811b462721e6af302a3d1c8a603",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/young_lod2.bin",
+   "output_sha256": "ad81a469bf1e00d20b1be9695484a7eb69d12a24b3c56a0f28e95bc7977264d0",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "lossless unpack of one tree mesh (position, normal, uv, aRegion, aTree, indices) to raw float32/u32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/wood_map.png",
+   "output_sha256": "7216324d3783be763996f7b5940ff80faf7007c1d1d0904c092ad58b73be6235",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "embedded PNG of the procedural tree atlas (trees.js makeTreeAtlases), unchanged bytes"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/wood_normal.png",
+   "output_sha256": "12072cf48e195fd87d04fb4ba1894ecd2c496bccb39ae0dc040f2244a5ca9e32",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "embedded PNG of the procedural tree atlas (trees.js makeTreeAtlases), unchanged bytes"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/conifer_map.png",
+   "output_sha256": "c0dac7af333a86f5a1a3f8328e760a788d2fc6dc95703a114fd7e0da25beba25",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "embedded PNG of the procedural tree atlas (trees.js makeTreeAtlases), unchanged bytes"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/props/trees/conifer_normal.png",
+   "output_sha256": "f8cf13761b1b2637d72e94c3162ceee4d5b1b3ccbae013e274799470ccb00aa2",
+   "verified": true,
+   "source": "shared/data/export/day1a/props/day1_trees.glb",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "embedded PNG of the procedural tree atlas (trees.js makeTreeAtlases), unchanged bytes"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/fields/terrain_height.bin",
+   "output_sha256": "0b809ebc1c328ea834a141fde863a8d252efad7fcc668a4200ddd1d53735ccb3",
+   "verified": true,
+   "source": "slice_export.js fields (day1a_cells.json)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "unchanged copy"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/fields/terrain_base.bin",
+   "output_sha256": "fdd106bbe9932c80ba69d31bbae3cf3dc0ed661f0dc19195ccfa18946fe03711",
+   "verified": true,
+   "source": "slice_export.js fields (day1a_cells.json)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "unchanged copy"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/fields/walkable_u8.bin",
+   "output_sha256": "7ebe95b35a24d3ef3188856a0252b5fc5ce766486576017664e7e5e778a881f3",
+   "verified": true,
+   "source": "slice_export.js fields (day1a_cells.json)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "unchanged copy"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/fields/coarse_height.bin",
+   "output_sha256": "a6f947dfcb676a2308994350f6d5a88dc7721f58ca499f842e39addbc60cb39d",
+   "verified": true,
+   "source": "slice_export.js fields (day1a_cells.json)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "unchanged copy"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/fields/far_ring.bin",
+   "output_sha256": "353a728252ff83412861f5560892f41f4cb294e1df2f2d732aa6ae9541a77efc",
+   "verified": true,
+   "source": "slice_export.js fields (day1a_cells.json)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "unchanged copy"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/fields/ground_rf.bin",
+   "output_sha256": "b714685d73085ffd016e9623a469dc5bb9428debea4e0bc430e7fdbba9cecf94",
+   "verified": true,
+   "source": "slice_export.js fields (day1a_cells.json)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "cropped; half → float32"
+  },
+  {
+   "kind": "world",
+   "output": "native/assets/world/day1a/fields/trodden_l8.bin",
+   "output_sha256": "3338fc43d7983b385b9e038a45a24b2647d8274b037e488b1fde8d1b2ca6466f",
+   "verified": true,
+   "source": "slice_export.js fields (day1a_cells.json)",
+   "source_sha256": null,
+   "licence": "project-authored",
+   "recipe": "postern track erased (R channel), cropped"
+  },
+  {
+   "kind": "animal",
+   "output": "native/assets/animals/mule/mule.glb",
+   "output_sha256": "5eb70f9f406d666125915b6177875a7057fcf3df43c6b7e9f25fcb40bb25329a",
+   "verified": true,
+   "source": "shared/assets/models/animal_donkey.glb",
+   "source_sha256": "c4281cd2c947d800fd589b637d3a41d945e5cd496b7cf12f93471cc94e9cb5d7",
+   "licence": "CC0 1.0 (Quaternius farm animals; shared/provenance/model-sources.json)",
+   "recipe": [
+    "meshopt decode",
+    "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32"
+   ]
+  },
+  {
    "kind": "audio-stream",
    "output": "native/assets/audio/chant_deus.mp3",
    "output_sha256": "acda52dda2bf4f92b09643b834205214453dd2907aea2773439353fefcaa7d48",
@@ -855,6 +2002,26 @@
    "source": "shared/assets/audio/wind.mp3",
    "source_sha256": "80b40a9d12eaed4ef0f946e1536eaa5fdd50e38a0b0c4096fec26402d0a6df3c",
    "licence": "CC0 1.0 — winter wind 01a.aiff by klangfabrik (https://freesound.org/s/117504/)",
+   "recipe": "unchanged copy; streamed"
+  },
+  {
+   "kind": "audio-stream",
+   "output": "native/assets/audio/day1a/windTrees.mp3",
+   "output_sha256": "3afb69d990ff9ee541e55de49d3462718de45688f1175b26570c235fb309b94f",
+   "verified": true,
+   "source": "shared/assets/audio/windTrees.mp3",
+   "source_sha256": "3afb69d990ff9ee541e55de49d3462718de45688f1175b26570c235fb309b94f",
+   "licence": "CC0 1.0 — winter wind in trees.wav by lwdickens (https://freesound.org/s/261226/)",
+   "recipe": "unchanged copy; streamed"
+  },
+  {
+   "kind": "audio-stream",
+   "output": "native/assets/audio/day1a/chant_psalm.mp3",
+   "output_sha256": "68fd4866b0a3e5968cb390a1b0b6b217a79aad3d68d618843e647b8778095b79",
+   "verified": true,
+   "source": "shared/assets/audio/chant_psalm.mp3",
+   "source_sha256": "68fd4866b0a3e5968cb390a1b0b6b217a79aad3d68d618843e647b8778095b79",
+   "licence": "CC BY-SA 3.0 — San Antimo, monks singing Gregorian chant at a Sunday morning service by Zyance (recording); the monks of Sant’Antimo (https://commons.wikimedia.org/wiki/File:Sanantimo_gregorian.ogg)",
    "recipe": "unchanged copy; streamed"
   },
   {
@@ -1646,6 +2813,836 @@
    "source_sha256": "fb28884c17a69a53f37aee65ba929aac9264be4f6d2247dc6f55ace5fec71049",
    "licence": "CC0 1.0 — Big door creak.wav by jemburyturner (https://freesound.org/s/273466/)",
    "recipe": "ffmpeg crop, pcm_s16le; window [0.2, 4.05]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/bell_00.wav",
+   "output_sha256": "dc7b016e7ed0857239f155c746dd1cc3ec3ec799abdb1d8f8c4ce623445c3a9d",
+   "verified": true,
+   "source": "shared/assets/audio/bell.mp3",
+   "source_sha256": "0b7c13e4e20ef9059df865f6a4fdaaa2aed81a8f97507d9443c2418c6fc81e40",
+   "licence": "CC0 1.0 — Angelus chartres Cathedral by bruno.auzet (https://freesound.org/s/796547/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; 0.8 s fade-out; window [0.2, 8.4]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/hoof_00.wav",
+   "output_sha256": "ef056bc258125cbcbbcc22e753953c1b20809d3585aeb53c87bafd79b0f93885",
+   "verified": true,
+   "source": "shared/assets/audio/hoof.mp3",
+   "source_sha256": "3129df4e43b2b715ffb117a4ce89304887cc26462443bf480ba628f81ec93f41",
+   "licence": "CC0 1.0 — Stable_chickens_horses.wav by Lydmakeren (https://freesound.org/s/510915/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.2, 0.58925]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/hoof_01.wav",
+   "output_sha256": "a532de8a67ba192edb809aeff62b962ed7da4dace2f31c6df232d9a9e3728db1",
+   "verified": true,
+   "source": "shared/assets/audio/hoof.mp3",
+   "source_sha256": "3129df4e43b2b715ffb117a4ce89304887cc26462443bf480ba628f81ec93f41",
+   "licence": "CC0 1.0 — Stable_chickens_horses.wav by Lydmakeren (https://freesound.org/s/510915/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.90925, 0.70311]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/hoof_02.wav",
+   "output_sha256": "48894e1767c7b718264bdca831a3f5af5b949df93839305700371792530c16b1",
+   "verified": true,
+   "source": "shared/assets/audio/hoof.mp3",
+   "source_sha256": "3129df4e43b2b715ffb117a4ce89304887cc26462443bf480ba628f81ec93f41",
+   "licence": "CC0 1.0 — Stable_chickens_horses.wav by Lydmakeren (https://freesound.org/s/510915/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [1.73236, 0.80159]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/hoof_03.wav",
+   "output_sha256": "8b267b31fc1554c2ebdedbcdeeee1f6560004c1298a61f98e40312ce849a5851",
+   "verified": true,
+   "source": "shared/assets/audio/hoof.mp3",
+   "source_sha256": "3129df4e43b2b715ffb117a4ce89304887cc26462443bf480ba628f81ec93f41",
+   "licence": "CC0 1.0 — Stable_chickens_horses.wav by Lydmakeren (https://freesound.org/s/510915/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [2.65395, 0.39104]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/hoof_04.wav",
+   "output_sha256": "0acfdf2a2191d555a52142a696a30547bd052c592708ac7621fe2da3e6bffa05",
+   "verified": true,
+   "source": "shared/assets/audio/hoof.mp3",
+   "source_sha256": "3129df4e43b2b715ffb117a4ce89304887cc26462443bf480ba628f81ec93f41",
+   "licence": "CC0 1.0 — Stable_chickens_horses.wav by Lydmakeren (https://freesound.org/s/510915/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [3.16499, 0.43224]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/snort_00.wav",
+   "output_sha256": "e2388ac6c1768f5688a2c3567b24f6225f5b0ef4ca239306a8c80d93a4ccf09e",
+   "verified": true,
+   "source": "shared/assets/audio/snort.mp3",
+   "source_sha256": "4e79fe2e79dccb8ba0fe681b269b41b9ad4d785b1ecdcdc4b6a70b999cb2d5f7",
+   "licence": "CC0 1.0 — Horse(snort)_3.wav by o_ciz (https://freesound.org/s/475483/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.2, 0.55739]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/snort_01.wav",
+   "output_sha256": "6df1e319d2666eac7d969da68817eae86386f8200e1eea058329d73a39ede827",
+   "verified": true,
+   "source": "shared/assets/audio/snort.mp3",
+   "source_sha256": "4e79fe2e79dccb8ba0fe681b269b41b9ad4d785b1ecdcdc4b6a70b999cb2d5f7",
+   "licence": "CC0 1.0 — Horse(snort)_3.wav by o_ciz (https://freesound.org/s/475483/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.87739, 0.74376]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/snort_02.wav",
+   "output_sha256": "3b7a69ecf33dd6c2f0cbb19c4242da17e6b8509a31f1e7104a7774e0a330bfbb",
+   "verified": true,
+   "source": "shared/assets/audio/snort.mp3",
+   "source_sha256": "4e79fe2e79dccb8ba0fe681b269b41b9ad4d785b1ecdcdc4b6a70b999cb2d5f7",
+   "licence": "CC0 1.0 — Horse(snort)_3.wav by o_ciz (https://freesound.org/s/475483/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [1.74116, 0.7924]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/snort_03.wav",
+   "output_sha256": "2b816aa042980d79acd55d2ccf22e8d1a91d2d9e4c02011cb739b6153717f94b",
+   "verified": true,
+   "source": "shared/assets/audio/snort.mp3",
+   "source_sha256": "4e79fe2e79dccb8ba0fe681b269b41b9ad4d785b1ecdcdc4b6a70b999cb2d5f7",
+   "licence": "CC0 1.0 — Horse(snort)_3.wav by o_ciz (https://freesound.org/s/475483/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [2.65356, 1.09633]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/snort_04.wav",
+   "output_sha256": "2ff5fe19ae6b409fb62ed5012355be8a3e426fc3a8b147f415783dcf53542f01",
+   "verified": true,
+   "source": "shared/assets/audio/snort.mp3",
+   "source_sha256": "4e79fe2e79dccb8ba0fe681b269b41b9ad4d785b1ecdcdc4b6a70b999cb2d5f7",
+   "licence": "CC0 1.0 — Horse(snort)_3.wav by o_ciz (https://freesound.org/s/475483/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [3.86989, 0.78474]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/bray_00.wav",
+   "output_sha256": "cdc4ffe88dd1e605dd37f62b8bc65ab6ce0081318665677e04f0a04ed9749ede",
+   "verified": true,
+   "source": "shared/assets/audio/bray.mp3",
+   "source_sha256": "f5c2f5ccb39c98030d48d71617c8b50110b676a319ae63e923b2c97c4ce6b7a2",
+   "licence": "CC0 1.0 — Donkeys - Squeaky High-Pitched Bray by TheKingOfGeeks360 (https://freesound.org/s/859477/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.2, 8.94363]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/doorCreak_00.wav",
+   "output_sha256": "cbc25bb6ab253b082dc3a42997cfefb28a25ae43d2517cc3b4d012b6e5e47ee0",
+   "verified": true,
+   "source": "shared/assets/audio/doorCreak.mp3",
+   "source_sha256": "fb28884c17a69a53f37aee65ba929aac9264be4f6d2247dc6f55ace5fec71049",
+   "licence": "CC0 1.0 — Big door creak.wav by jemburyturner (https://freesound.org/s/273466/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.2, 4.04812]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/doorCreak_01.wav",
+   "output_sha256": "3fdc07cc505df84e9c9fb180f3c82adae891fcea7deec463203b8f9bd7f9e1ce",
+   "verified": true,
+   "source": "shared/assets/audio/doorCreak.mp3",
+   "source_sha256": "fb28884c17a69a53f37aee65ba929aac9264be4f6d2247dc6f55ace5fec71049",
+   "licence": "CC0 1.0 — Big door creak.wav by jemburyturner (https://freesound.org/s/273466/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [4.36812, 0.93379]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/doorCreak_02.wav",
+   "output_sha256": "7e2d63d655976c59fb4a5b924d06d9a22abaf4816928b6396efaaf8fde46542a",
+   "verified": true,
+   "source": "shared/assets/audio/doorCreak.mp3",
+   "source_sha256": "fb28884c17a69a53f37aee65ba929aac9264be4f6d2247dc6f55ace5fec71049",
+   "licence": "CC0 1.0 — Big door creak.wav by jemburyturner (https://freesound.org/s/273466/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [5.4219, 1.80229]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/doorThud_00.wav",
+   "output_sha256": "4737ff1e392550907805bca85140cd8dd2617a4f5a58eac261d57fddb7c94de0",
+   "verified": true,
+   "source": "shared/assets/audio/doorThud.mp3",
+   "source_sha256": "a290af13e6c493467f25c39039b2771a13fb9c33b9cbc559cc477625b4c126a5",
+   "licence": "CC0 1.0 — Opening and closing a big old door.wav by lazymonk (https://freesound.org/s/214307/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.2, 1.34875]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/doorThud_01.wav",
+   "output_sha256": "85ef65d548c9e9ac037b5b4e2be1b58505223b39e263dca2a38fd0f3243abeb9",
+   "verified": true,
+   "source": "shared/assets/audio/doorThud.mp3",
+   "source_sha256": "a290af13e6c493467f25c39039b2771a13fb9c33b9cbc559cc477625b4c126a5",
+   "licence": "CC0 1.0 — Opening and closing a big old door.wav by lazymonk (https://freesound.org/s/214307/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [1.66875, 1.00054]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/doorThud_02.wav",
+   "output_sha256": "22588fbcc3bf66edc179cfa892c08b33bfc0531f8797ce10b24537e41d773046",
+   "verified": true,
+   "source": "shared/assets/audio/doorThud.mp3",
+   "source_sha256": "a290af13e6c493467f25c39039b2771a13fb9c33b9cbc559cc477625b4c126a5",
+   "licence": "CC0 1.0 — Opening and closing a big old door.wav by lazymonk (https://freesound.org/s/214307/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [2.7893, 1.31202]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/latch_00.wav",
+   "output_sha256": "cce7416c7b6ecf92d835b8ad4f3caa51594b048eb1922fe5bbd825c0f59dac4e",
+   "verified": true,
+   "source": "shared/assets/audio/latch.mp3",
+   "source_sha256": "f1413b0345e10547f2a227c400702b6d7a0b9deb85dcf1fba1ef79569b87c486",
+   "licence": "CC0 1.0 — Iron_gate_courtyard_abbey_gardens_open_close_latch_mono.wav by nickmaysoundmusic (https://freesound.org/s/460556/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.2, 0.83948]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/latch_01.wav",
+   "output_sha256": "65eeafc2c2aa5ddd42710d599470aabf1c45281a0fea0c36fa0776e6b6e78b8f",
+   "verified": true,
+   "source": "shared/assets/audio/latch.mp3",
+   "source_sha256": "f1413b0345e10547f2a227c400702b6d7a0b9deb85dcf1fba1ef79569b87c486",
+   "licence": "CC0 1.0 — Iron_gate_courtyard_abbey_gardens_open_close_latch_mono.wav by nickmaysoundmusic (https://freesound.org/s/460556/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [1.15948, 0.79773]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/latch_02.wav",
+   "output_sha256": "ea3657e29a149654d07dc2b62d6dc396d5560735f6fb009b782b7efa2321e285",
+   "verified": true,
+   "source": "shared/assets/audio/latch.mp3",
+   "source_sha256": "f1413b0345e10547f2a227c400702b6d7a0b9deb85dcf1fba1ef79569b87c486",
+   "licence": "CC0 1.0 — Iron_gate_courtyard_abbey_gardens_open_close_latch_mono.wav by nickmaysoundmusic (https://freesound.org/s/460556/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [2.07721, 0.87494]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/latch_03.wav",
+   "output_sha256": "7577f59384da7283de000db0497b59355967d3487b763751f4f21f868c282921",
+   "verified": true,
+   "source": "shared/assets/audio/latch.mp3",
+   "source_sha256": "f1413b0345e10547f2a227c400702b6d7a0b9deb85dcf1fba1ef79569b87c486",
+   "licence": "CC0 1.0 — Iron_gate_courtyard_abbey_gardens_open_close_latch_mono.wav by nickmaysoundmusic (https://freesound.org/s/460556/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [3.07215, 1.03569]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/chew_00.wav",
+   "output_sha256": "c919b87f9027e27797d22a6f576534deff35422cf497728882c006a40be9ee01",
+   "verified": true,
+   "source": "shared/assets/audio/chew.mp3",
+   "source_sha256": "0f8e6bc47f3a861266bb4010975108e29693d98d5cc3724693fbeaf63f6700f5",
+   "licence": "CC0 1.0 — Horse chewing cud. 0.5m away by gsparrysound (https://freesound.org/s/752136/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.2, 2.19875]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/chew_01.wav",
+   "output_sha256": "d6979cfec4b71687262266260c5266fa6633e41ef0b9f398394826e32b453fbc",
+   "verified": true,
+   "source": "shared/assets/audio/chew.mp3",
+   "source_sha256": "0f8e6bc47f3a861266bb4010975108e29693d98d5cc3724693fbeaf63f6700f5",
+   "licence": "CC0 1.0 — Horse chewing cud. 0.5m away by gsparrysound (https://freesound.org/s/752136/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [2.51875, 2.09664]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/chew_02.wav",
+   "output_sha256": "7c6e2b385f78979e756788f3e529cd29bf8aef26eafaa611e5f4ba7e3cf69ae7",
+   "verified": true,
+   "source": "shared/assets/audio/chew.mp3",
+   "source_sha256": "0f8e6bc47f3a861266bb4010975108e29693d98d5cc3724693fbeaf63f6700f5",
+   "licence": "CC0 1.0 — Horse chewing cud. 0.5m away by gsparrysound (https://freesound.org/s/752136/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [4.7354, 1.98955]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/chew_03.wav",
+   "output_sha256": "533c3f0752b67d45d61b6518776ab49ebae429a5687d3ae1ad52cd8552377e97",
+   "verified": true,
+   "source": "shared/assets/audio/chew.mp3",
+   "source_sha256": "0f8e6bc47f3a861266bb4010975108e29693d98d5cc3724693fbeaf63f6700f5",
+   "licence": "CC0 1.0 — Horse chewing cud. 0.5m away by gsparrysound (https://freesound.org/s/752136/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [6.84494, 2.18286]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/chew_04.wav",
+   "output_sha256": "414c698065d0b37b9c76cf01600be0273e1e211028f902835ac29d6aad1a504a",
+   "verified": true,
+   "source": "shared/assets/audio/chew.mp3",
+   "source_sha256": "0f8e6bc47f3a861266bb4010975108e29693d98d5cc3724693fbeaf63f6700f5",
+   "licence": "CC0 1.0 — Horse chewing cud. 0.5m away by gsparrysound (https://freesound.org/s/752136/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [9.1478, 2.49868]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/chew_05.wav",
+   "output_sha256": "b77103b43eddea296d02ec37c19c571ba9bb8f6ec1871796b053669434f0c1ee",
+   "verified": true,
+   "source": "shared/assets/audio/chew.mp3",
+   "source_sha256": "0f8e6bc47f3a861266bb4010975108e29693d98d5cc3724693fbeaf63f6700f5",
+   "licence": "CC0 1.0 — Horse chewing cud. 0.5m away by gsparrysound (https://freesound.org/s/752136/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [11.76649, 2.50406]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/pour_00.wav",
+   "output_sha256": "d973eb9e9e260f32c96932de00efe95573b8d6f74b8ebdf3e82c3cf534189f5c",
+   "verified": true,
+   "source": "shared/assets/audio/pour.mp3",
+   "source_sha256": "747ad15825fdfa9fb8ee04248a8ea6f287204e5ae93eb7a778d974e7eae36097",
+   "licence": "CC0 1.0 — Pour Splash metal bucket water.mp3 by JohnsonBrandEditing (https://freesound.org/s/173938/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.2, 1.78274]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/pour_01.wav",
+   "output_sha256": "fd3028e324cc12d0160ee1dc8b4a622aaa667d1c23de28278ecd0982c3be4cab",
+   "verified": true,
+   "source": "shared/assets/audio/pour.mp3",
+   "source_sha256": "747ad15825fdfa9fb8ee04248a8ea6f287204e5ae93eb7a778d974e7eae36097",
+   "licence": "CC0 1.0 — Pour Splash metal bucket water.mp3 by JohnsonBrandEditing (https://freesound.org/s/173938/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [2.10274, 2.08728]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/pour_02.wav",
+   "output_sha256": "7677dc8220ec0a20cfcb020929a1bc02d67268263eeb796b17c38a2184b29eb3",
+   "verified": true,
+   "source": "shared/assets/audio/pour.mp3",
+   "source_sha256": "747ad15825fdfa9fb8ee04248a8ea6f287204e5ae93eb7a778d974e7eae36097",
+   "licence": "CC0 1.0 — Pour Splash metal bucket water.mp3 by JohnsonBrandEditing (https://freesound.org/s/173938/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [4.31002, 2.19542]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/pour_03.wav",
+   "output_sha256": "bd85cfa7d3e0ec6d631fc845105a1ccf359a787ccdca5378a83377ee3677f5a9",
+   "verified": true,
+   "source": "shared/assets/audio/pour.mp3",
+   "source_sha256": "747ad15825fdfa9fb8ee04248a8ea6f287204e5ae93eb7a778d974e7eae36097",
+   "licence": "CC0 1.0 — Pour Splash metal bucket water.mp3 by JohnsonBrandEditing (https://freesound.org/s/173938/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [6.62544, 2.98655]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/strawRustle_00.wav",
+   "output_sha256": "2dbcd11f864ff0e97a767be844f3b14d27f40471c7710d44cf3f2299ad00c433",
+   "verified": true,
+   "source": "shared/assets/audio/strawRustle.mp3",
+   "source_sha256": "4e8d37f271d4bfa65c10d2a13f5300016be1f2bae2220c8220379b9ba8a082c3",
+   "licence": "CC0 1.0 — Horse Eating by gibarroule (https://freesound.org/s/365138/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.2, 1.69342]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/strawRustle_01.wav",
+   "output_sha256": "536c0fb16a47614849b88f85e7d8d36867ee7f1afaac55080cdfba35632a2817",
+   "verified": true,
+   "source": "shared/assets/audio/strawRustle.mp3",
+   "source_sha256": "4e8d37f271d4bfa65c10d2a13f5300016be1f2bae2220c8220379b9ba8a082c3",
+   "licence": "CC0 1.0 — Horse Eating by gibarroule (https://freesound.org/s/365138/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [2.01342, 1.60082]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/strawRustle_02.wav",
+   "output_sha256": "d6499af98dc47d22ce1cd2578b9c9b07904b548dfd78a65b05fd398b4c47a42b",
+   "verified": true,
+   "source": "shared/assets/audio/strawRustle.mp3",
+   "source_sha256": "4e8d37f271d4bfa65c10d2a13f5300016be1f2bae2220c8220379b9ba8a082c3",
+   "licence": "CC0 1.0 — Horse Eating by gibarroule (https://freesound.org/s/365138/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [3.73424, 1.39447]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/strawRustle_03.wav",
+   "output_sha256": "218db5885c14fbb672f696ee421e3f5937b98396009c69ed9bf9d1914f272fbe",
+   "verified": true,
+   "source": "shared/assets/audio/strawRustle.mp3",
+   "source_sha256": "4e8d37f271d4bfa65c10d2a13f5300016be1f2bae2220c8220379b9ba8a082c3",
+   "licence": "CC0 1.0 — Horse Eating by gibarroule (https://freesound.org/s/365138/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [5.24871, 1.18755]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/timber_00.wav",
+   "output_sha256": "110dca3832aa5526901d1766ab7077fcdd96f1b920436e7a82bfd6dffdc38c0d",
+   "verified": true,
+   "source": "shared/assets/audio/timber.mp3",
+   "source_sha256": "46722f23e2423e626f9b722bcda8001f4406b79729a56964b5c554d115301653",
+   "licence": "CC0 1.0 — Opening Bench.mp3 by kingsrow (https://freesound.org/s/182689/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.2, 0.90077]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/timber_01.wav",
+   "output_sha256": "a8e14e49350f0f32a4729341b18334fc28bb8810b88208f234f456b82cb4625b",
+   "verified": true,
+   "source": "shared/assets/audio/timber.mp3",
+   "source_sha256": "46722f23e2423e626f9b722bcda8001f4406b79729a56964b5c554d115301653",
+   "licence": "CC0 1.0 — Opening Bench.mp3 by kingsrow (https://freesound.org/s/182689/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [1.22077, 0.99245]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/timber_02.wav",
+   "output_sha256": "1bd2123b4bd2dd99e7029914997e686e560b6f56d6b5a2d41fbda36114224fab",
+   "verified": true,
+   "source": "shared/assets/audio/timber.mp3",
+   "source_sha256": "46722f23e2423e626f9b722bcda8001f4406b79729a56964b5c554d115301653",
+   "licence": "CC0 1.0 — Opening Bench.mp3 by kingsrow (https://freesound.org/s/182689/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [2.33322, 1.18789]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/metal_00.wav",
+   "output_sha256": "d200138cda6b7e784d360af11e494ea9dddfe0454e484e777f70fc3857763dcf",
+   "verified": true,
+   "source": "shared/assets/audio/metal.mp3",
+   "source_sha256": "2d712cbcee48f48f6161e0ada05962f8d41cffc3bee45ffa3647fb176ad83528",
+   "licence": "CC0 1.0 — metal bowl - hit - with wooden spoon 01.wav by Anthousai (https://freesound.org/s/405665/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.2, 0.9866]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/metal_01.wav",
+   "output_sha256": "4cf2595550c822e39e203c425c497aab1748e95cb748218e70ecda498a816d64",
+   "verified": true,
+   "source": "shared/assets/audio/metal.mp3",
+   "source_sha256": "2d712cbcee48f48f6161e0ada05962f8d41cffc3bee45ffa3647fb176ad83528",
+   "licence": "CC0 1.0 — metal bowl - hit - with wooden spoon 01.wav by Anthousai (https://freesound.org/s/405665/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [1.3066, 0.79943]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/metal_02.wav",
+   "output_sha256": "dec0eb0d822bc6028a9af96126d0a8cdb54cc8dfd2d402c45a321ac2df558abf",
+   "verified": true,
+   "source": "shared/assets/audio/metal.mp3",
+   "source_sha256": "2d712cbcee48f48f6161e0ada05962f8d41cffc3bee45ffa3647fb176ad83528",
+   "licence": "CC0 1.0 — metal bowl - hit - with wooden spoon 01.wav by Anthousai (https://freesound.org/s/405665/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [2.22603, 0.78662]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/metal_03.wav",
+   "output_sha256": "c02708f975ce6df0ebe0e333e5efb157751e457549caa0eeb79972f72ac96f99",
+   "verified": true,
+   "source": "shared/assets/audio/metal.mp3",
+   "source_sha256": "2d712cbcee48f48f6161e0ada05962f8d41cffc3bee45ffa3647fb176ad83528",
+   "licence": "CC0 1.0 — metal bowl - hit - with wooden spoon 01.wav by Anthousai (https://freesound.org/s/405665/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [3.13265, 0.78392]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/anvil_00.wav",
+   "output_sha256": "33676cb918fbc120011ff2da4a6f095619aa0a1b04ae79d5b85d0e5cc191e055",
+   "verified": true,
+   "source": "shared/assets/audio/anvil.mp3",
+   "source_sha256": "325546a7d4d19a8652589ca4362e9527a1512cb345a07db5aeb8acdeac0b3f07",
+   "licence": "CC0 1.0 — Anvil - Lokomo A 100 kg - Forging very hot steel 1 time by ldezem (https://freesound.org/s/386119/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.2, 2.18773]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/anvil_01.wav",
+   "output_sha256": "d389d02a66230d13e65e9d5b68d6c679ef200a00c44579160a936a7fd5ed86e5",
+   "verified": true,
+   "source": "shared/assets/audio/anvil.mp3",
+   "source_sha256": "325546a7d4d19a8652589ca4362e9527a1512cb345a07db5aeb8acdeac0b3f07",
+   "licence": "CC0 1.0 — Anvil - Lokomo A 100 kg - Forging very hot steel 1 time by ldezem (https://freesound.org/s/386119/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [2.50773, 0.73381]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/caw_00.wav",
+   "output_sha256": "2a92322937d982746780532f5459c737e48894a14bb4d46dca95be6976e92c74",
+   "verified": true,
+   "source": "shared/assets/audio/caw.mp3",
+   "source_sha256": "33d28454720ac8af43bd3ab8a258fb60286f90ed30c2d4250d71a928eaee9da9",
+   "licence": "CC0 1.0 — Hooded crow.wav by straget (https://freesound.org/s/404687/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.2, 0.58113]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/caw_01.wav",
+   "output_sha256": "64720786794ff1f66e18ec22485860cadc0bf4baddc341596e57503126633827",
+   "verified": true,
+   "source": "shared/assets/audio/caw.mp3",
+   "source_sha256": "33d28454720ac8af43bd3ab8a258fb60286f90ed30c2d4250d71a928eaee9da9",
+   "licence": "CC0 1.0 — Hooded crow.wav by straget (https://freesound.org/s/404687/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.90113, 0.59796]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/caw_02.wav",
+   "output_sha256": "2f41ffec8ecaefda09bc695f89fad9fe507fad79ff692af94fe1a9bb6cfcb04d",
+   "verified": true,
+   "source": "shared/assets/audio/caw.mp3",
+   "source_sha256": "33d28454720ac8af43bd3ab8a258fb60286f90ed30c2d4250d71a928eaee9da9",
+   "licence": "CC0 1.0 — Hooded crow.wav by straget (https://freesound.org/s/404687/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [1.61909, 0.79673]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/caw_03.wav",
+   "output_sha256": "7e6a1fe8d6b9410d6f275dff4374d8ee58203f143e54804b2f04a15af9b072c9",
+   "verified": true,
+   "source": "shared/assets/audio/caw.mp3",
+   "source_sha256": "33d28454720ac8af43bd3ab8a258fb60286f90ed30c2d4250d71a928eaee9da9",
+   "licence": "CC0 1.0 — Hooded crow.wav by straget (https://freesound.org/s/404687/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [2.53583, 0.68435]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/caw_04.wav",
+   "output_sha256": "9a89068632a6831a1af819ae61c37f289ee9bfd33c53fde7d82ff8f1c18f21be",
+   "verified": true,
+   "source": "shared/assets/audio/caw.mp3",
+   "source_sha256": "33d28454720ac8af43bd3ab8a258fb60286f90ed30c2d4250d71a928eaee9da9",
+   "licence": "CC0 1.0 — Hooded crow.wav by straget (https://freesound.org/s/404687/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [3.34018, 0.78923]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/caw_05.wav",
+   "output_sha256": "4341900a682f182aeb12bd65f6fd587516666870c649b2e8928b4164a55ccec7",
+   "verified": true,
+   "source": "shared/assets/audio/caw.mp3",
+   "source_sha256": "33d28454720ac8af43bd3ab8a258fb60286f90ed30c2d4250d71a928eaee9da9",
+   "licence": "CC0 1.0 — Hooded crow.wav by straget (https://freesound.org/s/404687/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [4.24941, 0.37234]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/cough_00.wav",
+   "output_sha256": "c443e1839e0a31bb9ee7e1f354bf72db4924e551dc831794c31be2ef79b6ed35",
+   "verified": true,
+   "source": "shared/assets/audio/cough.mp3",
+   "source_sha256": "41abfc7069fd13d0508dbd8e39818a573618d57cd5bb63bcd843332f8444b6df",
+   "licence": "CC0 1.0 — Cough.wav by Harris85 (https://freesound.org/s/208761/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.2, 0.74478]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/cough_01.wav",
+   "output_sha256": "2dd73fa0c1ee5eeb629a9ce0d7648a988b0da438d141541c49931db9689685b3",
+   "verified": true,
+   "source": "shared/assets/audio/cough.mp3",
+   "source_sha256": "41abfc7069fd13d0508dbd8e39818a573618d57cd5bb63bcd843332f8444b6df",
+   "licence": "CC0 1.0 — Cough.wav by Harris85 (https://freesound.org/s/208761/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [1.06478, 0.90406]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/cough_02.wav",
+   "output_sha256": "29bcffbdb761e30626a31e3592c4e00ff5ecf622c6091ed91aa5a3d31983c740",
+   "verified": true,
+   "source": "shared/assets/audio/cough.mp3",
+   "source_sha256": "41abfc7069fd13d0508dbd8e39818a573618d57cd5bb63bcd843332f8444b6df",
+   "licence": "CC0 1.0 — Cough.wav by Harris85 (https://freesound.org/s/208761/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [2.08884, 0.94937]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/cough_03.wav",
+   "output_sha256": "51840259d0a327d7f9bb97781cf054b9ab6e6ce6ee736644bd8ed37d3d840062",
+   "verified": true,
+   "source": "shared/assets/audio/cough.mp3",
+   "source_sha256": "41abfc7069fd13d0508dbd8e39818a573618d57cd5bb63bcd843332f8444b6df",
+   "licence": "CC0 1.0 — Cough.wav by Harris85 (https://freesound.org/s/208761/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [3.15821, 0.78791]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/cough_04.wav",
+   "output_sha256": "56336c241cacf8cf30b17aa66f1da2355cd4553bdd4709ce42eb9c74aa528ca6",
+   "verified": true,
+   "source": "shared/assets/audio/cough.mp3",
+   "source_sha256": "41abfc7069fd13d0508dbd8e39818a573618d57cd5bb63bcd843332f8444b6df",
+   "licence": "CC0 1.0 — Cough.wav by Harris85 (https://freesound.org/s/208761/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [4.06612, 0.38014]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/pageTurn_00.wav",
+   "output_sha256": "e10745107481e7a5ddfef54dbd7c1a0bc26faffb15dccb1cbee122ff9e61c1a6",
+   "verified": true,
+   "source": "shared/assets/audio/pageTurn.mp3",
+   "source_sha256": "3607cbd6d935da6f037cbee534aa0cfe277511e2d9a89a91a3431a0d9153a46e",
+   "licence": "CC0 1.0 — Turning page (heavy paper) by xkeril (https://freesound.org/s/856497/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.2, 0.71866]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/pageTurn_01.wav",
+   "output_sha256": "d7333a2ae4f924f63c4369db4dcc6873141a8f6205d64f94ce85dd1cb7286589",
+   "verified": true,
+   "source": "shared/assets/audio/pageTurn.mp3",
+   "source_sha256": "3607cbd6d935da6f037cbee534aa0cfe277511e2d9a89a91a3431a0d9153a46e",
+   "licence": "CC0 1.0 — Turning page (heavy paper) by xkeril (https://freesound.org/s/856497/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [1.03866, 0.98444]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/pageTurn_02.wav",
+   "output_sha256": "cc439ee1d1ce79dd426d9790e65b8ab7f5fd76a4135a5e6871dd6484bd040c8f",
+   "verified": true,
+   "source": "shared/assets/audio/pageTurn.mp3",
+   "source_sha256": "3607cbd6d935da6f037cbee534aa0cfe277511e2d9a89a91a3431a0d9153a46e",
+   "licence": "CC0 1.0 — Turning page (heavy paper) by xkeril (https://freesound.org/s/856497/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [2.14311, 0.72048]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/benchCreak_00.wav",
+   "output_sha256": "34c5b17248a7660229d44e53b90b99dbb83834aaa6d2033083897a8175ef7f6b",
+   "verified": true,
+   "source": "shared/assets/audio/benchCreak.mp3",
+   "source_sha256": "83f1a266fb57b4fa0f3fdffebc9211c16b22ebd26d71cb30b3b42fdb65904685",
+   "licence": "CC0 1.0 — Wooden Creak by Mafon2 (https://freesound.org/s/377552/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.2, 0.27528]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/benchCreak_01.wav",
+   "output_sha256": "129500456a907e13c95ebce1126882e8efd232f2b94246cb74cf52a3e13dd71e",
+   "verified": true,
+   "source": "shared/assets/audio/benchCreak.mp3",
+   "source_sha256": "83f1a266fb57b4fa0f3fdffebc9211c16b22ebd26d71cb30b3b42fdb65904685",
+   "licence": "CC0 1.0 — Wooden Creak by Mafon2 (https://freesound.org/s/377552/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.59528, 0.30143]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/benchCreak_02.wav",
+   "output_sha256": "e99f4057a933347439560e28ca966cb2369d3f2c2a75b26a149f5fe8d4c84148",
+   "verified": true,
+   "source": "shared/assets/audio/benchCreak.mp3",
+   "source_sha256": "83f1a266fb57b4fa0f3fdffebc9211c16b22ebd26d71cb30b3b42fdb65904685",
+   "licence": "CC0 1.0 — Wooden Creak by Mafon2 (https://freesound.org/s/377552/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [1.01671, 0.25814]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/benchCreak_03.wav",
+   "output_sha256": "474d4b07376270dba1d55ba2e2c6dd283493ce4f03325e7032f3e21c0511c52c",
+   "verified": true,
+   "source": "shared/assets/audio/benchCreak.mp3",
+   "source_sha256": "83f1a266fb57b4fa0f3fdffebc9211c16b22ebd26d71cb30b3b42fdb65904685",
+   "licence": "CC0 1.0 — Wooden Creak by Mafon2 (https://freesound.org/s/377552/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [1.39485, 0.54973]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/sweep_00.wav",
+   "output_sha256": "6726ad358084ff4f48b11c36145b0657a6f5a755e3789c1c457ba72afe8e572f",
+   "verified": true,
+   "source": "shared/assets/audio/sweep.mp3",
+   "source_sha256": "c9d391734f8a3f446853e702c35923542dacc142f71678f9ddb46020058b3692",
+   "licence": "CC0 1.0 — Broom Sweeping by Sheyvan (https://freesound.org/s/831439/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.2, 0.62374]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/sweep_01.wav",
+   "output_sha256": "e0199c6c674627878f2ebb463bc8a9d20f86f64226dddf54a2f1be22758b797c",
+   "verified": true,
+   "source": "shared/assets/audio/sweep.mp3",
+   "source_sha256": "c9d391734f8a3f446853e702c35923542dacc142f71678f9ddb46020058b3692",
+   "licence": "CC0 1.0 — Broom Sweeping by Sheyvan (https://freesound.org/s/831439/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.94374, 0.63107]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/sweep_02.wav",
+   "output_sha256": "170aaf65d218764a8572968acdb9f0a5f81b25f582b7526fcc9feb639f812239",
+   "verified": true,
+   "source": "shared/assets/audio/sweep.mp3",
+   "source_sha256": "c9d391734f8a3f446853e702c35923542dacc142f71678f9ddb46020058b3692",
+   "licence": "CC0 1.0 — Broom Sweeping by Sheyvan (https://freesound.org/s/831439/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [1.69481, 0.62449]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/sweep_03.wav",
+   "output_sha256": "156aa2a9762a86002f71dd179109acbe7c40d043f42e2391598c10c9ec4a5b8d",
+   "verified": true,
+   "source": "shared/assets/audio/sweep.mp3",
+   "source_sha256": "c9d391734f8a3f446853e702c35923542dacc142f71678f9ddb46020058b3692",
+   "licence": "CC0 1.0 — Broom Sweeping by Sheyvan (https://freesound.org/s/831439/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [2.4393, 0.63259]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/sweep_04.wav",
+   "output_sha256": "79d05a59349a68ef799fc18ace8cebbb353d65bcd877cc2a822e7a0a7b0acdfb",
+   "verified": true,
+   "source": "shared/assets/audio/sweep.mp3",
+   "source_sha256": "c9d391734f8a3f446853e702c35923542dacc142f71678f9ddb46020058b3692",
+   "licence": "CC0 1.0 — Broom Sweeping by Sheyvan (https://freesound.org/s/831439/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [3.19188, 0.62327]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/sweep_05.wav",
+   "output_sha256": "4504c33342bb4d11432c76ecdbdfe11119b610882c9d2c266eb1c9f7b5004ef2",
+   "verified": true,
+   "source": "shared/assets/audio/sweep.mp3",
+   "source_sha256": "c9d391734f8a3f446853e702c35923542dacc142f71678f9ddb46020058b3692",
+   "licence": "CC0 1.0 — Broom Sweeping by Sheyvan (https://freesound.org/s/831439/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [3.93515, 0.63002]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/sweep_06.wav",
+   "output_sha256": "f2d293553809ebda2b641d4bade0a68431456aaac5c937724caac623bfe8637d",
+   "verified": true,
+   "source": "shared/assets/audio/sweep.mp3",
+   "source_sha256": "c9d391734f8a3f446853e702c35923542dacc142f71678f9ddb46020058b3692",
+   "licence": "CC0 1.0 — Broom Sweeping by Sheyvan (https://freesound.org/s/831439/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [4.68517, 0.49059]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/sweep_07.wav",
+   "output_sha256": "8d0e33df29760a213459b423e8fe95d237938daf4e44435a565286adabab9bbe",
+   "verified": true,
+   "source": "shared/assets/audio/sweep.mp3",
+   "source_sha256": "c9d391734f8a3f446853e702c35923542dacc142f71678f9ddb46020058b3692",
+   "licence": "CC0 1.0 — Broom Sweeping by Sheyvan (https://freesound.org/s/831439/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [5.29576, 0.62302]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/step_straw_00.wav",
+   "output_sha256": "71b80e9de51865e847f5880e35788ef0f32735ee3569b0df42153213b1669131",
+   "verified": true,
+   "source": "shared/assets/audio/step_straw.mp3",
+   "source_sha256": "c6b2250aba7460df898aa826481c2e267f03d275e5c3a938631e2e1f04caf278",
+   "licence": "CC0 1.0 — steps_dry_grass.wav by Mystikuum (https://freesound.org/s/377323/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.2, 0.60932]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/step_straw_01.wav",
+   "output_sha256": "a2e5d4bf3f2c58d253f0b240fdd16dc0d3cfab7e4b66598a9e67064dd8a68718",
+   "verified": true,
+   "source": "shared/assets/audio/step_straw.mp3",
+   "source_sha256": "c6b2250aba7460df898aa826481c2e267f03d275e5c3a938631e2e1f04caf278",
+   "licence": "CC0 1.0 — steps_dry_grass.wav by Mystikuum (https://freesound.org/s/377323/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [0.92932, 0.61408]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/step_straw_02.wav",
+   "output_sha256": "5458e7758f144ca80c24865afcb9c37f422a0fcf0c63d70a3944f033228e841d",
+   "verified": true,
+   "source": "shared/assets/audio/step_straw.mp3",
+   "source_sha256": "c6b2250aba7460df898aa826481c2e267f03d275e5c3a938631e2e1f04caf278",
+   "licence": "CC0 1.0 — steps_dry_grass.wav by Mystikuum (https://freesound.org/s/377323/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [1.6634, 0.59016]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/step_straw_03.wav",
+   "output_sha256": "8a93513cb13d7b0e88d018d490a7f3a74f42161b58414d0421d078be33268139",
+   "verified": true,
+   "source": "shared/assets/audio/step_straw.mp3",
+   "source_sha256": "c6b2250aba7460df898aa826481c2e267f03d275e5c3a938631e2e1f04caf278",
+   "licence": "CC0 1.0 — steps_dry_grass.wav by Mystikuum (https://freesound.org/s/377323/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [2.37356, 0.59576]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/step_straw_04.wav",
+   "output_sha256": "1f8cae27bfc9c71bc1bed24f51717aa1d1f1bb891be88dc4f034af91552b2267",
+   "verified": true,
+   "source": "shared/assets/audio/step_straw.mp3",
+   "source_sha256": "c6b2250aba7460df898aa826481c2e267f03d275e5c3a938631e2e1f04caf278",
+   "licence": "CC0 1.0 — steps_dry_grass.wav by Mystikuum (https://freesound.org/s/377323/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [3.08932, 0.6102]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/step_straw_05.wav",
+   "output_sha256": "c19972e7fcab5ca5f1dc649768ec6dabb88ce8ca87118f40dd20c951750d798b",
+   "verified": true,
+   "source": "shared/assets/audio/step_straw.mp3",
+   "source_sha256": "c6b2250aba7460df898aa826481c2e267f03d275e5c3a938631e2e1f04caf278",
+   "licence": "CC0 1.0 — steps_dry_grass.wav by Mystikuum (https://freesound.org/s/377323/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [3.81952, 0.60669]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/step_straw_06.wav",
+   "output_sha256": "9ea71202cf3681eaf4e318cec261d296e7951185ed2bd90e3a1f797cf8cfee14",
+   "verified": true,
+   "source": "shared/assets/audio/step_straw.mp3",
+   "source_sha256": "c6b2250aba7460df898aa826481c2e267f03d275e5c3a938631e2e1f04caf278",
+   "licence": "CC0 1.0 — steps_dry_grass.wav by Mystikuum (https://freesound.org/s/377323/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [4.54621, 0.60744]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/step_straw_07.wav",
+   "output_sha256": "21a00da8ec2a35f4c668582a85cbec835303934332644bf5560aab0b346781b9",
+   "verified": true,
+   "source": "shared/assets/audio/step_straw.mp3",
+   "source_sha256": "c6b2250aba7460df898aa826481c2e267f03d275e5c3a938631e2e1f04caf278",
+   "licence": "CC0 1.0 — steps_dry_grass.wav by Mystikuum (https://freesound.org/s/377323/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [5.27365, 0.61234]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/step_straw_08.wav",
+   "output_sha256": "709e01ae535e6a7ce736aeb2b37b740003168525b3691a81b59e7fabe32f6bfb",
+   "verified": true,
+   "source": "shared/assets/audio/step_straw.mp3",
+   "source_sha256": "c6b2250aba7460df898aa826481c2e267f03d275e5c3a938631e2e1f04caf278",
+   "licence": "CC0 1.0 — steps_dry_grass.wav by Mystikuum (https://freesound.org/s/377323/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [6.00599, 0.61238]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/step_straw_09.wav",
+   "output_sha256": "1514b91a9d6bdbd497cd630095f4352889d6bc3ff875214c221d1efc8f6b5f95",
+   "verified": true,
+   "source": "shared/assets/audio/step_straw.mp3",
+   "source_sha256": "c6b2250aba7460df898aa826481c2e267f03d275e5c3a938631e2e1f04caf278",
+   "licence": "CC0 1.0 — steps_dry_grass.wav by Mystikuum (https://freesound.org/s/377323/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [6.73837, 0.60236]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/step_straw_10.wav",
+   "output_sha256": "3a0863d82f4e7f3e769b316661b5dc4631593a480adce2fced3a3df7f15aeaa8",
+   "verified": true,
+   "source": "shared/assets/audio/step_straw.mp3",
+   "source_sha256": "c6b2250aba7460df898aa826481c2e267f03d275e5c3a938631e2e1f04caf278",
+   "licence": "CC0 1.0 — steps_dry_grass.wav by Mystikuum (https://freesound.org/s/377323/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [7.46073, 0.59585]"
+  },
+  {
+   "kind": "audio-clip",
+   "output": "native/assets/audio/day1a/step_straw_11.wav",
+   "output_sha256": "b745ba2ecfad2a9f78078a3bc4706341163a9dd3e25818ea290a4367873f96c8",
+   "verified": true,
+   "source": "shared/assets/audio/step_straw.mp3",
+   "source_sha256": "c6b2250aba7460df898aa826481c2e267f03d275e5c3a938631e2e1f04caf278",
+   "licence": "CC0 1.0 — steps_dry_grass.wav by Mystikuum (https://freesound.org/s/377323/)",
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; window [8.17658, 0.59707]"
   },
   {
    "kind": "font",

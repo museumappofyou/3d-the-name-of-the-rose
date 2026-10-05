@@ -34,8 +34,16 @@ var _step_i: int = 0
 var _last_clip: Dictionary = {}
 var rng := RandomNumberGenerator.new()
 var telemetry: Array = []          # sampled path/transport state (bench reports)
+## Day-1A: church openings Day 1 keeps shut (no direct path through them)
+var closed_doors: PackedStringArray = []
+var _stream_id: String = "chant:deus"
+var _lvl: float = 1.0
 var restarts: int = 0              # stream (re)starts, counted for the office test
 var muted: bool = false
+## optional: which office the choir is singing now (Day-1A: from the
+## director, so Nones starts when the brothers are in their stalls)
+var office_fn: Callable
+var _chant_nan_warned: bool = false
 
 func setup(s: GameSession, c: ContentData, p: PlayerController) -> void:
 	session = s
@@ -132,11 +140,18 @@ func _process(dt: float) -> void:
 		return
 	var now: float = session.session_time
 	# --- office transport (domain) ---
-	for c: Dictionary in session.office.tick(now, session.clock.office()):
+	for c: Dictionary in session.office.tick(now, String(office_fn.call()) if office_fn.is_valid() else session.clock.office()):
 		match c["op"]:
 			"play":
 				piece_started = now
 				piece_dur = float(c["duration"])
+				var sid: String = String(c.get("stream", "chant:deus"))
+				if sid != _stream_id:
+					var rec: Dictionary = content.doc("sounds")["streams"].get(sid, content.doc("sounds").get("day1a", {}).get("streams", {}).get(sid, {}))
+					if rec.has("native"):
+						chant.stream = load(String(rec["native"]))
+						_stream_id = sid
+						_lvl = float(rec.get("lvl", 1.0))
 				chant.play(float(c["from"]))
 				restarts += 1
 			"gain":
@@ -152,11 +167,16 @@ func _process(dt: float) -> void:
 	for d: Dictionary in content.doc("anchors").get("doors_in_slice", []):
 		if String(d["id"]) in ["church:westN", "church:westS", "church:north", "church:cloister"]:
 			var dd: Dictionary = d.duplicate()
-			dd["open"] = 1.0
+			dd["open"] = 0.0 if closed_doors.has(String(d["id"])) else 1.0
 			doors.append(dd)
 	var src: Array = content.doc("sounds")["office"]["source_emitter"]["pos"]
 	path = session.church_path.evaluate(ear, session.room_id, bool(room.get("indoor", false)), Vector3(src[0], src[1], src[2]), doors, session.portals.open_amount("church:altar"))
-	chant.global_position = path["pos"]
+	var cp: Vector3 = path["pos"]
+	if is_finite(cp.x) and is_finite(cp.y) and is_finite(cp.z):
+		chant.global_position = cp
+	elif not _chant_nan_warned:
+		_chant_nan_warned = true
+		push_warning("chant path position not finite in room '%s'" % session.room_id)
 	var env: float = 1.0
 	if piece_started >= 0.0:
 		var t: float = now - piece_started
@@ -165,9 +185,11 @@ func _process(dt: float) -> void:
 	# gain (ref / max(ref, d)); Godot's attenuation is disabled, so apply it
 	var ref: float = 4.0
 	var pan_gain: float = ref / maxf(ref, (path["pos"] as Vector3).distance_to(ear))
-	var lvl: float = float(path["level"]) * pan_gain * transport_gain * env * float(content.doc("sounds")["streams"]["chant:deus"].get("lvl", 1.0))
-	chant.volume_db = -80.0 if muted or lvl < 1e-5 else linear_to_db(lvl)
-	chant_lpf.cutoff_hz = clampf(float(path["lp"]), 200.0, 20000.0)
+	var lvl: float = float(path["level"]) * pan_gain * transport_gain * env * _lvl
+	chant.volume_db = -80.0 if muted or not is_finite(lvl) or lvl < 1e-5 else linear_to_db(lvl)
+	var lp: float = float(path["lp"])
+	if is_finite(lp):
+		chant_lpf.cutoff_hz = clampf(lp, 200.0, 20000.0)
 	# --- room acoustics / ambience ---
 	var space: String = String(room.get("acoustic", "exterior"))
 	if space != _space:

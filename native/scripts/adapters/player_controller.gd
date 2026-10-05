@@ -24,12 +24,24 @@ const PAD_LOOK := 2.4
 var session: GameSession
 var cells: WorldCells
 var camera: Camera3D
+## walking speeds (Day-1A sets them from what Adso carries; the proof keeps
+## the browser's 2.7 / 5.4 m/s)
+var walk_speed: float = WALK
+var run_speed: float = RUN
+## optional authored walk limits: f(from: Vector3, to: Vector3) -> Vector3
+## returns the allowed position (Day-1A: the footprint's polygons)
+var limit_fn: Callable
+## seated: the body is held at a seat, the view stays free
+var seat: Variant = null            # {"pos": Vector3 feet, "eye": float}
+var look_sens: float = LOOK_SENS
 var yaw: float = 0.0
 var pitch: float = 0.0
 var input_enabled: bool = true
 var autopilot: Vector2 = Vector2.ZERO      # scripted move (x strafe, y forward), benchmarks/tests
 var autopilot_active: bool = false
 var autopilot_run: bool = false
+## review captures: hold the body exactly where it was placed (no gravity)
+var frozen: bool = false
 var running: bool = false
 var _eye_y: float = 0.0
 var _bob: float = 0.0
@@ -84,8 +96,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		var m := event as InputEventMouseMotion
-		yaw -= m.relative.x * LOOK_SENS
-		pitch = clampf(pitch - m.relative.y * LOOK_SENS, -1.5, 1.5)
+		yaw -= m.relative.x * look_sens
+		pitch = clampf(pitch - m.relative.y * look_sens, -1.5, 1.5)
 	elif event is InputEventMouseButton and (event as InputEventMouseButton).pressed and Input.mouse_mode != Input.MOUSE_MODE_CAPTURED:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
@@ -98,6 +110,22 @@ func _notification(what: int) -> void:
 func _physics_process(dt: float) -> void:
 	if session == null:
 		return
+	if frozen:
+		velocity = Vector3.ZERO
+		_apply_view(dt)
+		return
+	if seat != null:
+		velocity = Vector3.ZERO
+		global_position = (seat as Dictionary)["pos"]
+		if input_enabled and not autopilot_active:
+			var look2 := Input.get_vector("look_left", "look_right", "look_down", "look_up")
+			yaw -= look2.x * PAD_LOOK * dt
+			pitch = clampf(pitch + look2.y * PAD_LOOK * dt, -1.5, 1.5)
+		session.yaw = yaw
+		session.pitch = pitch
+		session.step(dt, global_position, false)
+		_apply_view(dt)
+		return
 	var mv := Vector2.ZERO
 	if autopilot_active:
 		mv = autopilot
@@ -108,7 +136,7 @@ func _physics_process(dt: float) -> void:
 		var look := Input.get_vector("look_left", "look_right", "look_down", "look_up")
 		yaw -= look.x * PAD_LOOK * dt
 		pitch = clampf(pitch + look.y * PAD_LOOK * dt, -1.5, 1.5)
-	var sp: float = RUN if running else WALK
+	var sp: float = run_speed if running else walk_speed
 	var dir := Vector3(mv.x, 0, -mv.y)
 	if dir.length_squared() > 1.0:
 		dir = dir.normalized()
@@ -128,6 +156,12 @@ func _physics_process(dt: float) -> void:
 	var got := Vector3(global_position.x - before.x, 0, global_position.z - before.z)
 	if grounded and want.length() > 1e-4 and got.length() < want.length() * 0.6:
 		_step_up(want - got)
+	if limit_fn.is_valid():
+		var allowed: Vector3 = limit_fn.call(before, global_position)
+		if Vector2(allowed.x - global_position.x, allowed.z - global_position.z).length() > 1e-4:
+			global_position = Vector3(allowed.x, global_position.y, allowed.z)
+			velocity.x *= 0.5
+			velocity.z *= 0.5
 	var moved: float = Vector2(global_position.x - before.x, global_position.z - before.z).length()
 	distance_walked += moved
 	if is_on_floor():
@@ -182,6 +216,7 @@ func _apply_view(dt: float) -> void:
 	_eye_y = lerpf(_eye_y, y, 1.0 - exp(-16.0 * dt))
 	var hs: float = Vector2(velocity.x, velocity.z).length()
 	var bob_y: float = sin(_bob * PI) * 0.028 * minf(1.0, hs / 2.0)
-	camera.position = Vector3(0, _eye_y - y + EYE + bob_y, 0)
+	var eye_h: float = EYE if seat == null else float((seat as Dictionary).get("eye", 1.16))
+	camera.position = Vector3(0, _eye_y - y + eye_h + bob_y, 0)
 	camera.rotation = Vector3(pitch, yaw, sin(_bob * PI * 0.5) * 0.004)
 	camera.rotation_order = EULER_ORDER_YXZ

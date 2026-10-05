@@ -6,6 +6,8 @@ extends RefCounted
 ## node name.
 
 const FILES: PackedStringArray = ["horarium", "locations", "entities", "portals", "routines", "discoveries", "interactions", "sounds", "anchors", "provenance", "world", "cast", "crowd"]
+## Day-1A overlay documents: absent from phase-1-only content, never required
+const OPTIONAL: PackedStringArray = ["world_day1a", "day1a", "animals"]
 
 var docs: Dictionary = {}
 var errors: PackedStringArray = []
@@ -23,6 +25,14 @@ func load_dir(dir: String = "res://content") -> bool:
 			errors.append("invalid JSON " + path)
 			continue
 		docs[f] = parsed
+	for f: String in OPTIONAL:
+		var op: String = dir.path_join(f + ".json")
+		if FileAccess.file_exists(op):
+			var parsed2: Variant = JSON.parse_string(FileAccess.get_file_as_string(op))
+			if parsed2 is Dictionary:
+				docs[f] = parsed2
+			else:
+				errors.append("invalid JSON " + op)
 	var mp: String = dir.path_join("content_manifest.json")
 	if FileAccess.file_exists(mp):
 		revision = FileAccess.get_sha256(mp).substr(0, 16)

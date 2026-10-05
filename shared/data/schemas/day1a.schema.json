@@ -1,0 +1,17 @@
+{
+  "$comment": "Day-1A scenario overlay (shared/scenarios/day1a/day1a.json). Cross-references (nodes, edges, routes, look points, lines, observations, stalls) are checked in build_content.py.",
+  "type": "object",
+  "required": ["schema_version", "id", "version", "spoiler_level", "start", "speeds", "lead", "clock", "people", "anonymous", "nodes", "edges", "look_points", "routes", "walk_limits", "observations", "watch", "lines", "bells", "props", "gate"],
+  "properties": {
+    "schema_version": {"type": "integer", "minimum": 1, "maximum": 1},
+    "id": {"type": "string", "enum": ["day1a"]},
+    "version": {"type": "integer", "minimum": 1},
+    "spoiler_level": {"type": "string"},
+    "people": {"type": "object", "additionalProperties": {"type": "object", "required": ["name", "description", "template", "class"], "properties": {"template": {"type": "string", "pattern": "^(monk_[a-g]|scribe_a|novice_[ab]|lay_[a-z]+)$"}}}},
+    "anonymous": {"type": "array", "items": {"type": "object", "required": ["id", "template", "spot", "ry", "pose", "stall"], "properties": {"id": {"type": "string", "pattern": "^brother:[0-9]{2}$"}}}},
+    "nodes": {"type": "object", "additionalProperties": {"type": "array", "items": {"type": "number"}}},
+    "edges": {"type": "array", "items": {"type": "array", "items": {"type": "string"}}},
+    "lines": {"type": "object", "additionalProperties": {"type": "object", "required": ["s", "t"], "properties": {"s": {"type": "string"}, "t": {"type": "string"}}}},
+    "walk_limits": {"type": "array", "items": {"type": "object", "required": ["id", "poly"]}}
+  }
+}

@@ -13,13 +13,9 @@ extends Node3D
 ## can bound update cadence for crowds (browser: every frame within 30 m,
 ## alternate frames to 60 m, frozen beyond).
 
-const SCENES := {
-	"alinardo": "res://assets/characters/alinardo/alinardo.glb",
-	"monk_a": "res://assets/characters/monk_a/monk_a.glb",
-	"scribe_a": "res://assets/characters/scribe_a/scribe_a.glb",
-	"monk_b": "res://assets/characters/monk_b/monk_b.glb",
-	"novice_a": "res://assets/characters/novice_a/novice_a.glb",
-}
+## normalized templates live at res://assets/characters/<id>/<id>.glb
+static func scene_path(id: String) -> String:
+	return "res://assets/characters/%s/%s.glb" % [id, id]
 ## brother-pose → fitted clip (figure.js MOTION.brother, phase-1 subset)
 const MOTION := {"sit": "sitBench", "stand": "standSleeves", "bow": "standBow", "kneel": "kneelPray", "kneelBow": "kneelBow", "read": "read", "write": "write", "dine": "dine", "tend": "tend"}
 const SEATED := ["sitBench", "write", "dine"]
@@ -33,6 +29,10 @@ const DRAPE_FULL := deg_to_rad(66.0)
 @export var hood_up: bool = false
 ## content database for cast metadata (tints); set by the creator
 var content: ContentData
+## optional wool colour (linear multiplier of the authored habit map) for a
+## re-dressed person (William's undyed Franciscan grey-brown); null = the
+## browser's per-brother wear
+var habit_tint: Variant = null
 
 var model: Node3D
 var skeleton: Skeleton3D
@@ -59,7 +59,7 @@ func _ready() -> void:
 func build() -> void:
 	if model != null:
 		return
-	var ps: PackedScene = load(SCENES[person_id])
+	var ps: PackedScene = load(scene_path(person_id))
 	model = ps.instantiate()
 	add_child(model)
 	skeleton = model.find_children("*", "Skeleton3D", true, false)[0]
@@ -121,7 +121,7 @@ func _apply_materials() -> void:
 		if part in ["habit", "hood_up", "hood_down"]:
 			if habit_mat == null:
 				# dress(): the cloth colour is replaced by this brother's wear
-				m.albedo_color = habit_color
+				m.albedo_color = habit_color if habit_tint == null else (habit_tint as Color)
 				habit_mat = m
 			m = habit_mat
 		mi.set_surface_override_material(0, m)
@@ -147,6 +147,26 @@ func play_pose(pose: String, phase: float = 0.0) -> void:
 	player.seek(fposmod(phase, 1.0) * a.length, true)
 	clip = name
 	_after_pose(0.0)
+
+## Play a named clip directly (locomotion/idle); `rate` scales its speed and
+## `fade` is the crossfade time. Seated and kneeling clips ignore the rate.
+func play_clip(name: String, phase: float = 0.0, fade: float = 0.4) -> void:
+	if not player.has_animation(name):
+		name = "standSleeves" if player.has_animation("standSleeves") else clip
+	if name == clip:
+		return
+	var a: Animation = player.get_animation(name)
+	player.play(name, fade if clip != "" else 0.0, 1.0)
+	if clip == "" or phase > 0.0:
+		player.seek(fposmod(phase, 1.0) * a.length, true)
+	clip = name
+	_after_pose(0.0)
+
+func has_clip(name: String) -> bool:
+	return player.has_animation(name)
+
+func clip_length(name: String) -> float:
+	return player.get_animation(name).length if player.has_animation(name) else 1.0
 
 func advance_presentation(dt: float) -> void:
 	player.advance(dt)

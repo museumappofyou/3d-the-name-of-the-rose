@@ -228,6 +228,61 @@ def cross_check(d, errors):
             errors.append(f'horarium: office {o["id"]} has no matching phase')
 
 
+SCENARIOS = {'day1a': ROOT / 'shared/scenarios/day1a/day1a.json'}
+CAST_TEMPLATES = ROOT / 'shared/assets/models/people/cast.json'
+
+
+def check_scenario(sid, d, errors):
+    p = f'scenario {sid}'
+    nodes = set(d['nodes'])
+    for i, e in enumerate(d['edges']):
+        if len(e) != 2 or e[0] not in nodes or e[1] not in nodes:
+            errors.append(f'{p}: edge {i} {e} references unknown nodes')
+    for r, ids in d['routes'].items():
+        for x in ids:
+            if x not in nodes:
+                errors.append(f'{p}: route {r} unknown node {x}')
+        adj = {}
+        for a, b in d['edges']:
+            adj.setdefault(a, set()).add(b); adj.setdefault(b, set()).add(a)
+        for a, b in zip(ids, ids[1:]):
+            if b not in adj.get(a, set()):
+                errors.append(f'{p}: route {r} leg {a}-{b} is not an edge')
+    speakers = set(d['people']) | {'adso'}
+    for lid, L in d['lines'].items():
+        if L['s'] not in speakers:
+            errors.append(f'{p}: line {lid} unknown speaker {L["s"]}')
+    for oid, o in d['observations'].items():
+        if o['reply'] not in d['lines']:
+            errors.append(f'{p}: observation {oid} reply {o["reply"]} missing')
+    for oid in d['watch']:
+        if oid not in d['observations']:
+            errors.append(f'{p}: watch {oid} is not an observation')
+    cast = json.loads(CAST_TEMPLATES.read_text())['people']
+    used = {}
+    for pid, q in d['people'].items():
+        if q['template'] not in cast:
+            errors.append(f'{p}: person {pid} template {q["template"]} not in the cast')
+        used.setdefault(q['template'], []).append(pid)
+    for t, ids in used.items():
+        if len(ids) > 1:
+            errors.append(f'{p}: template {t} shared by {ids} (stable identities need distinct faces)')
+    for b in d['anonymous']:
+        if b['stall'] not in nodes:
+            errors.append(f'{p}: {b["id"]} stall {b["stall"]} unknown')
+        if b['template'] in used:
+            errors.append(f'{p}: {b["id"]} uses the named template {b["template"]}')
+    for lp in d['look_points']:
+        if lp.get('route') not in d['routes']:
+            errors.append(f'{p}: look point {lp["id"]} on unknown route')
+    # spoiler policy: no line may mention the library or protected matters
+    for lid, L in d['lines'].items():
+        low = L['t'].lower()
+        for w in ('library', 'labyrinth', 'murder', 'death', 'dead', 'poison', 'secret', 'finis africae'):
+            if w in low:
+                errors.append(f'{p}: line {lid} contains a protected word {w!r}')
+
+
 def strip_for_package(name, d):
     if name == 'provenance':
         d = json.loads(json.dumps(d))
@@ -251,6 +306,13 @@ def main():
             continue
         validate(data[n], json.loads(sp.read_text()), n, errors)
     cross_check(data, errors)
+    scen = {}
+    for sid, path in SCENARIOS.items():
+        if path.exists():
+            scen[sid] = json.loads(path.read_text())
+            sp = SCHEMAS / f'{sid}.schema.json'
+            validate(scen[sid], json.loads(sp.read_text()), sid, errors)
+            check_scenario(sid, scen[sid], errors)
     after = {p.name: sha(p) for p in EVIDENCE.iterdir() if p.is_file()}
     if before != after or len(after) != 9:
         errors.append('book_details/output changed or is incomplete during the build')
@@ -274,6 +336,25 @@ def main():
                      'cells': [{'id': c['id'], 'bounds': c['bounds'], 'triangles': c['census']['tris'], 'collision': [x['surface'] for x in c['collision']]} for c in w['cells']]}
             (OUT / 'world.json').write_text(json.dumps(world, separators=(',', ':')) + '\n')
             manifest['files']['world'] = {'source_sha256': sha(wd), 'package_sha256': sha(OUT / 'world.json')}
+        # Day-1A world (cells, fields, rings, trees, anchors); emitters inside
+        # the Aedificium are dropped: Day 1 never lights its upper floors
+        wd1 = DATA / 'manifests/world_day1a_derivatives.json'
+        if wd1.exists():
+            w1 = json.loads(wd1.read_text())
+            def outside_aed(e):
+                return ((e['x'] - 42.0) ** 2 + (e['z'] + 66.36) ** 2) ** 0.5 > 46.0
+            world1 = {'schema_version': 1, 'source_sha256': sha(wd1), 'fields': w1['fields'], 'trees': w1['trees'], 'tree_meshes': w1['tree_meshes'], 'tree_atlases': w1['tree_atlases'],
+                      'emitters': [e for e in w1['emitters'] if outside_aed(e)], 'sound_emitters': w1['sound_emitters'],
+                      'anchors': w1['anchors'], 'doors': w1['doors'], 'probes': w1['probes'],
+                      'cells': [{'id': c['id'], 'bounds': c['bounds'], 'triangles': c['triangles'], 'collision': c['collision']} for c in w1['cells']]}
+            (OUT / 'world_day1a.json').write_text(json.dumps(world1, separators=(',', ':')) + '\n')
+            manifest['files']['world_day1a'] = {'source_sha256': sha(wd1), 'package_sha256': sha(OUT / 'world_day1a.json')}
+        an = DATA / 'manifests/animal_derivatives.json'
+        if an.exists():
+            A = json.loads(an.read_text())['animals']
+            animals = {'schema_version': 1, 'source_sha256': sha(an), 'animals': {k: {f: v[f] for f in ('output', 'clips', 'scale', 'target_height_m', 'coat', 'licence')} for k, v in A.items()}}
+            (OUT / 'animals.json').write_text(json.dumps(animals, separators=(',', ':')) + '\n')
+            manifest['files']['animals'] = {'source_sha256': sha(an), 'package_sha256': sha(OUT / 'animals.json')}
         cast = json.loads((ROOT / 'shared/assets/models/people/cast.json').read_text())
         pd = DATA / 'manifests/people_derivatives.json'
         used = sorted(json.loads(pd.read_text())['people']) if pd.exists() else ['alinardo']
@@ -285,8 +366,11 @@ def main():
         if crowd.exists():
             (OUT / 'crowd.json').write_text(json.dumps(json.loads(crowd.read_text()), separators=(',', ':')) + '\n')
             manifest['files']['crowd'] = {'source_sha256': sha(crowd), 'package_sha256': sha(OUT / 'crowd.json')}
+        for sid, d in scen.items():
+            (OUT / f'{sid}.json').write_text(json.dumps(d, ensure_ascii=False, separators=(',', ':')) + '\n')
+            manifest['files'][sid] = {'source_sha256': sha(SCENARIOS[sid]), 'package_sha256': sha(OUT / f'{sid}.json')}
         (OUT / 'content_manifest.json').write_text(json.dumps(manifest, indent=1) + '\n')
-    print('content OK:', ', '.join(FILES), '' if check_only else f'-> {OUT.relative_to(ROOT)}')
+    print('content OK:', ', '.join(FILES + list(scen)), '' if check_only else f'-> {OUT.relative_to(ROOT)}')
 
 
 if __name__ == '__main__':

@@ -7,6 +7,8 @@
 #
 # Scenarios default to: route route_hires crowd crowd_hires cycles.
 # Extra: soak (20 min), sdfgi, ssil, route_vsync.
+# Day-1A (real time, never accelerated while measured): day1_walk (the whole
+# slice, ~21 min), day1_cycles (ten gate → cell → well → nave loops).
 # Results: builds/phase1/evidence/performance/<scenario>_<label>.{json,csv}
 #          and <scenario>_<label>.rss.csv (1 s RSS samples, KiB)
 set -euo pipefail
@@ -47,6 +49,8 @@ for s in "${SCEN[@]}"; do
     crowd_hires)  run crowd_hires 2304x1149 --scenario=crowd --vsync=off --duration=120 ;;
     cycles)       run cycles 1920x1080 --scenario=cycles --vsync=off ;;
     soak)         run soak 1920x1080 --scenario=soak --vsync=off --duration=1200 ;;
+    day1_walk)    run day1_walk 1920x1080 --scenario=day1-walk --style=normal --vsync=off ;;
+    day1_cycles)  run day1_cycles 1920x1080 --scenario=day1-cycles --vsync=off --cycles=10 ;;
     sdfgi)        run route_sdfgi 1920x1080 --scenario=route --vsync=off --duration=120 --gi=sdfgi ;;
     ssil)         run route_ssil 1920x1080 --scenario=route --vsync=off --duration=120 --gi=ssil ;;
     *) echo "unknown scenario $s" >&2 ;;
