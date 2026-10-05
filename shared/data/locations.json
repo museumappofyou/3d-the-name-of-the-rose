@@ -22,6 +22,15 @@
      "boxes": [[-6.9, -2.0, 6.62, 26.64, 20.0, 21.6]]},
     {"id": "cloister", "priority": 40, "latin": "Claustrum", "en": "The cloister", "tr": "Avlu", "indoor": false, "darkness": 0.0, "acoustic": "cloister", "floor": "stone", "place": "cloister",
      "boxes": [[-10.5, -2.0, 2.52, 30.24, 12.0, 25.2]]},
+    {"id": "hospice-cell", "priority": 86, "latin": "Cella hospitum", "en": "William’s cell", "tr": "William’in hücresi", "indoor": true, "darkness": 0.55, "acoustic": "room", "floor": "wood", "place": "hospice", "day1a": true,
+     "boxes": [[-19.0, 5.6, 13.9, -13.35, 9.6, 18.65]],
+     "note": "Day-1A: the third guest cell of the raised guest floor (claustrum.js hospice(): h1 + 0.3 boards, partitions at z0 + 2cd and z0 + 3cd)"},
+    {"id": "hospice-upper", "priority": 85, "latin": "Hospitium", "en": "The pilgrims’ hospice", "tr": "Hacılar konukevi", "indoor": true, "darkness": 0.7, "acoustic": "room", "floor": "wood", "place": "hospice", "day1a": true,
+     "boxes": [[-19.0, 5.6, 4.5, -13.35, 9.6, 23.2]],
+     "note": "Day-1A: the other guest cells (closed doors)"},
+    {"id": "gate-passage", "priority": 75, "latin": "Porta", "en": "The gate", "tr": "Kapı", "indoor": true, "darkness": 0.25, "acoustic": "cloister", "floor": "stone", "place": "gate", "day1a": true,
+     "boxes": [[-108.6, -2.0, -10.4, -101.6, 8.0, -6.8]],
+     "note": "Day-1A: the arched passage through the gate tower (outbuildings.js enclosure())"},
     {"id": "abbey", "priority": 0, "latin": "Abbatia", "en": "The abbey", "tr": "Manastır", "indoor": false, "darkness": 0.0, "acoustic": "exterior", "floor": "snow", "fallback": true, "boxes": []}
   ],
   "acoustic_spaces": {

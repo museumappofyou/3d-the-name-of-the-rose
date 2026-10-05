@@ -6,3 +6,7 @@
 !.gitignore
 !slice_cells.json
 !slice_export.report.json
+!day1a_cells.json
+!day1a/
+day1a/*
+!day1a/slice_export.report.json

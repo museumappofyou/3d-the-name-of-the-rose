@@ -581,15 +581,31 @@ function flowerGarden(ex, M, ctx, y0) {
   const cx = (G.x0 + G.x1) / 2, cz = (G.z0 + G.z1) / 2;
   // low hedges framing four beds around a round centre, as on the plan
   let hs = 0; const hedge = (a, b) => ex.add('hedge', S.hedgeRun(a, b, y0 - 0.12, 0.66, 0.5, { seed: 300 + hs++ }), { collide: false });
-  for (const [a, b] of [[[G.x0, G.z0], [G.x1, G.z0]], [[G.x1, G.z0], [G.x1, G.z1]], [[G.x1, G.z1], [G.x0, G.z1]], [[G.x0, G.z1], [G.x0, G.z0]]]) hedge(a, b);
+  // RECON (Day-1A): the border opens where the two cross alleys meet it, so
+  // the guests' way "across the flower garden" (claim_000115) has entrances
+  const GAP = 0.9;
+  hedge([G.x0, G.z0], [cx - GAP, G.z0]); hedge([cx + GAP, G.z0], [G.x1, G.z0]);
+  // (the east row stops at the alley: south of it the hospice's outside
+  // stair and landing stand on the garden's edge)
+  hedge([G.x1, G.z0], [G.x1, cz - GAP]);
+  hedge([G.x1 - 1.35, G.z1], [cx + GAP, G.z1]); hedge([cx - GAP, G.z1], [G.x0, G.z1]);   // (clear of the stair's foot)
+  hedge([G.x0, G.z1], [G.x0, cz + GAP]); hedge([G.x0, cz - GAP], [G.x0, G.z0]);
   for (const s of [-1, 1]) {
     hedge([G.x0 + 1.2, cz + s * 1.3], [cx - 3.2, cz + s * 1.3]);
     hedge([cx + 3.2, cz + s * 1.3], [G.x1 - 1.2, cz + s * 1.3]);
     hedge([cx + s * 1.3, G.z0 + 1.2], [cx + s * 1.3, cz - 3.2]);
     hedge([cx + s * 1.3, cz + 3.2], [cx + s * 1.3, G.z1 - 1.2]);
   }
-  const ring = []; for (let i = 0; i <= 16; i++) ring.push([cx + Math.cos(i / 16 * Math.PI * 2) * 2.6, cz + Math.sin(i / 16 * Math.PI * 2) * 2.6]);
-  for (let i = 0; i < 16; i++) if (i % 4 !== 1) hedge(ring[i], ring[i + 1]);
+  // the round centre: four arcs of hedge, its openings (about a metre clear)
+  // facing the alleys so the way across passes round the column
+  const R = 2.6, OPEN = 0.6;
+  for (let q = 0; q < 4; q++) {
+    const a0 = q * Math.PI / 2 + OPEN / 2, a1 = (q + 1) * Math.PI / 2 - OPEN / 2;
+    for (let k = 0; k < 4; k++) {
+      const t0 = a0 + (a1 - a0) * k / 4, t1 = a0 + (a1 - a0) * (k + 1) / 4;
+      hedge([cx + Math.cos(t0) * R, cz + Math.sin(t0) * R], [cx + Math.cos(t1) * R, cz + Math.sin(t1) * R]);
+    }
+  }
   ex.add('church', cyl(0.9, 1.0, 0.7, 16, { x: cx, y: y0 - 0.1, z: cz }));
   ex.add('church', cyl(0.25, 0.3, 1.3, 10, { x: cx, y: y0 + 0.6, z: cz }));
   for (const [dx, dz] of [[-6, -5], [6, -5], [-6, 5], [6, 5]]) {

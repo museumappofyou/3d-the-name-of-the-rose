@@ -1,0 +1,318 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://say82pxom6so"
+path="res://.godot/imported/hospice.glb-699a661b2f704312f71e470450e279e0.scn"
+
+[deps]
+
+source_file="res://assets/world/day1a/cells/hospice.glb"
+dest_files=["res://.godot/imported/hospice.glb-699a661b2f704312f71e470450e279e0.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=false
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"aed": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/aed.tres"
+},
+"alabaster": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/alabaster.tres"
+},
+"ashlar": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/ashlar.tres"
+},
+"bark": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/bark.tres",
+"use_external/path": "res://assets/world/materials/bark.tres"
+},
+"beam": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/beam.tres",
+"use_external/path": "res://assets/world/materials/beam.tres"
+},
+"beamExt": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/beamExt.tres"
+},
+"bedSoil": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/bedSoil.tres"
+},
+"boards": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/boards.tres",
+"use_external/path": "res://assets/world/materials/boards.tres"
+},
+"bronze": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/bronze.tres"
+},
+"church": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/church.tres"
+},
+"churchIn": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/churchIn.tres"
+},
+"door": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/door.tres",
+"use_external/path": "res://assets/world/materials/door.tres"
+},
+"dung": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/dung.tres"
+},
+"fire": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/fire.tres"
+},
+"flag": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/flag.tres"
+},
+"flagExt": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/flagExt.tres"
+},
+"flame": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/flame.tres",
+"use_external/path": "res://assets/world/materials/flame.tres"
+},
+"frieze": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/frieze.tres"
+},
+"glass": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/glass.tres"
+},
+"glassOpaque": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/glassOpaque.tres"
+},
+"gold": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/gold.tres"
+},
+"hedge": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/hedge.tres"
+},
+"iron": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/iron.tres",
+"use_external/path": "res://assets/world/materials/iron.tres"
+},
+"kale": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/kale.tres"
+},
+"linen": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/linen.tres"
+},
+"p.blanket": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/p_blanket.tres",
+"use_external/path": "res://assets/world/materials/p_blanket.tres"
+},
+"p.blanketGrey": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/p_blanketGrey.tres",
+"use_external/path": "res://assets/world/materials/p_blanketGrey.tres"
+},
+"p.bone": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/p_bone.tres"
+},
+"p.boneDark": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/p_boneDark.tres"
+},
+"p.bread": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/p_bread.tres",
+"use_external/path": "res://assets/world/materials/p_bread.tres"
+},
+"p.cryptStone": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/p_cryptStone.tres"
+},
+"p.earthenDark": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/p_earthenDark.tres",
+"use_external/path": "res://assets/world/materials/p_earthenDark.tres"
+},
+"p.earthenware": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/p_earthenware.tres",
+"use_external/path": "res://assets/world/materials/p_earthenware.tres"
+},
+"p.glazeBrown": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/p_glazeBrown.tres",
+"use_external/path": "res://assets/world/materials/p_glazeBrown.tres"
+},
+"p.leather": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/p_leather.tres"
+},
+"p.linenWhite": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/p_linenWhite.tres"
+},
+"p.onion": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/p_onion.tres",
+"use_external/path": "res://assets/world/materials/p_onion.tres"
+},
+"p.sacking": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/p_sacking.tres",
+"use_external/path": "res://assets/world/materials/p_sacking.tres"
+},
+"p.socket": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/p_socket.tres"
+},
+"p.vellum": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/p_vellum.tres"
+},
+"p.woolBlack": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/p_woolBlack.tres",
+"use_external/path": "res://assets/world/materials/p_woolBlack.tres"
+},
+"parchment": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/parchment.tres",
+"use_external/path": "res://assets/world/materials/parchment.tres"
+},
+"plaster": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/plaster.tres",
+"use_external/path": "res://assets/world/materials/plaster.tres"
+},
+"plasterExt": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/plasterExt.tres"
+},
+"pottery": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/pottery.tres",
+"use_external/path": "res://assets/world/materials/pottery.tres"
+},
+"roof": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/roof.tres"
+},
+"rubble": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/rubble.tres"
+},
+"rubbleIn": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/rubbleIn.tres",
+"use_external/path": "res://assets/world/materials/rubbleIn.tres"
+},
+"slate": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/slate.tres"
+},
+"soil": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/soil.tres"
+},
+"stained.1": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/stained_1.tres"
+},
+"stained.2": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/stained_2.tres"
+},
+"stainedWarm": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/stainedWarm.tres"
+},
+"straw": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/straw.tres",
+"use_external/path": "res://assets/world/materials/straw.tres"
+},
+"strawExt": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/strawExt.tres"
+},
+"tym.ground": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/tym_ground.tres"
+},
+"wall": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/wall.tres"
+},
+"water": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/water.tres"
+},
+"wattle": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/wattle.tres"
+},
+"wax": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/world/materials/wax.tres"
+},
+"wood": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/wood.tres",
+"use_external/path": "res://assets/world/materials/wood.tres"
+},
+"woodDark": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/world/materials/woodDark.tres",
+"use_external/path": "res://assets/world/materials/woodDark.tres"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1
+gltf/texture_map_mode=1

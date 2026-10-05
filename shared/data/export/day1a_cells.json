@@ -1,0 +1,415 @@
+{
+  "schema_version": 1,
+  "description": "Day-1A section rules (run with scripts/migration/browser_driver.mjs slice_export.js shared/data/export/day1a_cells.json --out shared/data/export/day1a). The six phase-1 cells come first, unchanged, so the first-match assignment of every phase-1 part is identical; Day-1A cells follow. Optional products: walkable mask, coarse ring, far ring, tree groups, Day-1 anchors; the altar is not re-exported.",
+  "region": {
+    "min": [
+      -160.0,
+      -60.0,
+      -130.0
+    ],
+    "max": [
+      100.0,
+      60.0,
+      70.0
+    ]
+  },
+  "cells": [
+    {
+      "id": "ossuary_stair",
+      "batches": [
+        "ossuary"
+      ],
+      "clip_large": true,
+      "center_box": {
+        "min": [
+          13.4,
+          -3.7,
+          -22.6
+        ],
+        "max": [
+          17.6,
+          1.3,
+          -13.0
+        ]
+      },
+      "keep_plane": {
+        "origin": [
+          15.372,
+          -19.44
+        ],
+        "dir": [
+          0.628334,
+          -0.777944
+        ],
+        "max": 2.6,
+        "below_y": -0.2
+      },
+      "note": "12 steps, stair walls/vault and the first metres of the passage to ossuary.chapelBottom; boundary 2.2 m along the passage from the stair foot"
+    },
+    {
+      "id": "skull_chapel",
+      "batches": [
+        "church-interior",
+        "church-exterior"
+      ],
+      "center_box": {
+        "min": [
+          13.0,
+          -0.7,
+          -16.2
+        ],
+        "max": [
+          17.8,
+          9.0,
+          -12.75
+        ]
+      },
+      "note": "third north-aisle chapel: apse walls, roof, split floor beside the altar opening"
+    },
+    {
+      "id": "church_interior",
+      "batches": [
+        "church-interior"
+      ],
+      "center_box": {
+        "min": [
+          -13.6,
+          -0.65,
+          -19.6
+        ],
+        "max": [
+          51.6,
+          40.0,
+          3.4
+        ]
+      },
+      "note": "nave, aisles, crossing, choir and apse interior; parts centred below -0.65 m (treasury crypt) are excluded"
+    },
+    {
+      "id": "church_exterior",
+      "batches": [
+        "church-exterior",
+        "thresholds"
+      ],
+      "exclude_keys": [
+        "tym.*"
+      ],
+      "center_box": {
+        "min": [
+          -16.0,
+          -1.0,
+          -21.0
+        ],
+        "max": [
+          52.0,
+          46.0,
+          4.0
+        ]
+      },
+      "note": "outer shell, roofs, tower and spire; the west-portal tympanum (tym.*) faces away from the slice route and is excluded"
+    },
+    {
+      "id": "cloister",
+      "batches": [
+        "claustrum-exterior",
+        "claustrum-interior",
+        "thresholds",
+        "nature"
+      ],
+      "center_box": {
+        "min": [
+          -11.7,
+          -1.0,
+          2.3
+        ],
+        "max": [
+          30.75,
+          13.0,
+          26.4
+        ]
+      },
+      "note": "the four walks, arcades, lean-to roofs, Alinardo's bench, outer west wall, garth well"
+    },
+    {
+      "id": "cloister_context",
+      "batches": [
+        "claustrum-exterior"
+      ],
+      "center_box": {
+        "min": [
+          -21.0,
+          -1.0,
+          2.3
+        ],
+        "max": [
+          52.0,
+          30.0,
+          42.0
+        ]
+      },
+      "note": "frozen reference shells seen across the garth (east range, dormitory, chapter house, Abbot's house, hospice): exterior only, no interiors; the chapter-house tympanum relief (90K tris) and garden hedges are excluded",
+      "exclude_keys": [
+        "chapterTympanum",
+        "hedge"
+      ]
+    },
+    {
+      "id": "gate",
+      "batches": [
+        "outbuildings-exterior",
+        "thresholds"
+      ],
+      "exclude_keys": [
+        "door"
+      ],
+      "center_box": {
+        "min": [
+          -113.0,
+          -12.0,
+          -16.0
+        ],
+        "max": [
+          -84.0,
+          40.0,
+          6.0
+        ]
+      },
+      "note": "Day-1A: the gate tower over the only gate, the porter's lodge (exterior) and the enclosure wall either side; the two static open gate leaves (key door) are replaced by the native gate portal overlay"
+    },
+    {
+      "id": "hospice",
+      "batches": [
+        "claustrum-interior"
+      ],
+      "center_box": {
+        "min": [
+          -19.6,
+          5.5,
+          3.9
+        ],
+        "max": [
+          -12.7,
+          12.0,
+          23.8
+        ]
+      },
+      "note": "Day-1A: the raised guest floor of the pilgrims' hospice (William's cell, its straw niche, table, chest, the three other cells); the pilgrims' hall below (y < 5.5) is not exported (closed on Day 1)"
+    },
+    {
+      "id": "flower_garden",
+      "batches": [
+        "claustrum-exterior",
+        "thresholds"
+      ],
+      "center_box": {
+        "min": [
+          -38.0,
+          -3.0,
+          2.0
+        ],
+        "max": [
+          -19.6,
+          6.0,
+          25.0
+        ]
+      },
+      "note": "Day-1A: hedged beds and round centre of the flower garden before the hospice, the west parapet of the hospice stair, door steps"
+    },
+    {
+      "id": "church_west",
+      "batches": [
+        "church-exterior"
+      ],
+      "include_keys": [
+        "tym.ground"
+      ],
+      "center_box": {
+        "min": [
+          -16.0,
+          -1.0,
+          -21.0
+        ],
+        "max": [
+          -10.0,
+          46.0,
+          4.0
+        ]
+      },
+      "note": "Day-1A: only the plain backing slab of the west-portal tympanum (tym.ground); the carved relief stays excluded (reserved for a later, canon-reviewed presentation)"
+    },
+    {
+      "id": "west_context",
+      "batches": [
+        "outbuildings-exterior",
+        "thresholds"
+      ],
+      "center_box": {
+        "min": [
+          -160.0,
+          -30.0,
+          -130.0
+        ],
+        "max": [
+          0.0,
+          60.0,
+          70.0
+        ]
+      },
+      "note": "Day-1A context shells west of the church: infirmary, baths, enclosure wall; exteriors only"
+    },
+    {
+      "id": "gardens_west",
+      "batches": [
+        "gardens"
+      ],
+      "center_box": {
+        "min": [
+          -160.0,
+          -30.0,
+          -130.0
+        ],
+        "max": [
+          0.0,
+          30.0,
+          70.0
+        ]
+      },
+      "note": "Day-1A context: herb and vegetable gardens, orchard beds north of the avenue"
+    },
+    {
+      "id": "nature_west",
+      "batches": [
+        "nature"
+      ],
+      "center_box": {
+        "min": [
+          -160.0,
+          -30.0,
+          -130.0
+        ],
+        "max": [
+          0.0,
+          40.0,
+          70.0
+        ]
+      },
+      "note": "Day-1A context: rocks and other nature parts west of the church"
+    },
+    {
+      "id": "aedificium",
+      "batches": [
+        "aed-exterior"
+      ],
+      "center_box": {
+        "min": [
+          -10.0,
+          -80.0,
+          -125.0
+        ],
+        "max": [
+          95.0,
+          70.0,
+          -5.0
+        ]
+      },
+      "note": "Day-1A: exterior shell of the Aedificium only (no floors, rooms or library); context seen from the road, gate court, avenue, cell window and garth"
+    }
+  ],
+  "altar": false,
+  "day1_anchors": true,
+  "fields": {
+    "x0": -152.0,
+    "x1": 80.0,
+    "z0": -112.0,
+    "z1": 64.0,
+    "step": 1.0
+  },
+  "walkable": true,
+  "coarse": {
+    "x0": -196.0,
+    "x1": 236.0,
+    "z0": -226.0,
+    "z1": 206.0,
+    "step": 4.0,
+    "disc": {
+      "cx": 20.0,
+      "cz": -10.0,
+      "r": 215.0
+    }
+  },
+  "far": {
+    "A": 360,
+    "r0": 209.0,
+    "r1": 9500.0,
+    "rings": 240,
+    "cx": 20.0,
+    "cz": -10.0
+  },
+  "trees": {
+    "groups": [
+      {
+        "file": "props/day1_trees.glb",
+        "names": "^(stonePine|elm\\d|fruit\\d|oak|rose|fir|young|spruce|wind)$",
+        "box": {
+          "min": [
+            -700.0,
+            -500.0,
+            -700.0
+          ],
+          "max": [
+            700.0,
+            500.0,
+            700.0
+          ]
+        }
+      }
+    ]
+  },
+  "probes": [
+    [
+      -9.88,
+      14.135,
+      1.07
+    ],
+    [
+      20.0,
+      4.9,
+      1.5
+    ],
+    [
+      15.372,
+      -12.24,
+      1.5
+    ],
+    [
+      15.372,
+      -20.64,
+      -1.0
+    ],
+    [
+      28.076,
+      1.2,
+      1.5
+    ],
+    [
+      -105.0,
+      -8.6,
+      2.0
+    ],
+    [
+      -25.0,
+      13.4,
+      2.0
+    ],
+    [
+      -17.32,
+      16.27,
+      7.0
+    ],
+    [
+      -118.0,
+      6.0,
+      2.0
+    ]
+  ]
+}

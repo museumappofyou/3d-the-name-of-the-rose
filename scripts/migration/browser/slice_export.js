@@ -12,6 +12,20 @@
 //   fields/*.bin                terrain height, ground and trodden-path fields
 //   slice_export.json           manifest: rules, part census, exclusions,
 //                               materials, anchors, emitters, hashes
+// Optional products, each enabled only by its config key (the phase-1
+// config uses none of them, so its output is unchanged):
+//   cfg.altar === false         skip the dynamic skull altar
+//   cfg.trees.groups            instanced tree groups by name, every LOD mesh
+//                               of a group (the LOD buckets are camera-relative,
+//                               so the union of a group's LOD meshes is the
+//                               whole set), clipped to a box
+//   cfg.walkable                uint8 per terrain-height vertex: 1 where the
+//                               browser's terrainCollider() would collide
+//                               (inside the enclosure + 8 m, the upper road,
+//                               the spur)
+//   cfg.coarse                  a second, coarser height grid (visual only)
+//   cfg.far                     the browser's polar far ring: radii, heights
+//                               and the smoothed normals buildTerrain() uses
 // Explicit selection means hidden rooms are never lost to `onlyVisible`;
 // the exporter is still called with onlyVisible:false.
 import * as THREE from 'three';
@@ -22,7 +36,8 @@ import { OSSUARY_PATH, SKULL_CHAPEL, CHAPELS } from '/src/world/church.js';
 import { ANCHORS } from '/src/world/people/schedule.js';
 import { CHURCH, CLOISTER, PX, ORIGIN, AED } from '/src/core/plan.js';
 import { W } from '/src/core/weathering.js';
-import { height, baseHeight } from '/src/world/terrain.js';
+import { height, baseHeight, signedDist, roadInfo, ROAD } from '/src/world/terrain.js';
+import { BELL_TOWER } from '/src/systems/audio.js';
 import { surfaceOf } from '/src/core/kit.js';
 import { shared } from '/src/core/materials.js';
 
@@ -52,7 +67,7 @@ export async function run(cfg) {
         const c = bb.getCenter(new V3());
         let placed = false;
         for (const cell of cells) {
-          if (!cell.batches.includes(b.name) || matchKey(key, cell.exclude_keys)) continue;
+          if (!cell.batches.includes(b.name) || matchKey(key, cell.exclude_keys) || (cell.include_keys && !matchKey(key, cell.include_keys))) continue;
           if (cell.box.containsPoint(c)) {
             const g = clipPart(g0, off, cell);
             if (!g) { placed = true; break; }
@@ -122,7 +137,7 @@ export async function run(cfg) {
       coll.push({ surface: surf, triangles: tri(g) });
     }
     if (coll.length) files['collision/' + cell.id + '.glb'] = await saveGLB(exporter, cs, 'collision/' + cell.id + '.glb');
-    cellRecords.push({ id: cell.id, rule: plain({ batches: cell.batches, center_box: cell.center_box, exclude_keys: cell.exclude_keys, clip_large: !!cell.clip_large, keep_plane: cell.keep_plane }), census: cell.census, bounds: { min: bounds.min.toArray().map(r6), max: bounds.max.toArray().map(r6) }, meshes, collision: coll });
+    cellRecords.push({ id: cell.id, rule: plain({ batches: cell.batches, center_box: cell.center_box, exclude_keys: cell.exclude_keys, include_keys: cell.include_keys, clip_large: !!cell.clip_large, keep_plane: cell.keep_plane }), census: cell.census, bounds: { min: bounds.min.toArray().map(r6), max: bounds.max.toArray().map(r6) }, meshes, collision: coll });
   }
 
   // --- dynamic skull altar ----------------------------------------------------
@@ -130,7 +145,7 @@ export async function run(cfg) {
   const pivot = altar.pivot, hinge = pivot.parent;
   hinge.updateWorldMatrix(true, true);
   const hingePos = hinge.getWorldPosition(new V3());
-  {
+  if (cfg.altar !== false) {
     const scene = new THREE.Scene();
     const root = new THREE.Group(); root.name = 'altar_pivot'; scene.add(root);
     const inv = hinge.matrixWorld.clone().invert();
@@ -150,9 +165,11 @@ export async function run(cfg) {
   const colGeo = altar.collider?.geometry || altar.collider?.mesh?.geometry;
   colGeo?.computeBoundingBox?.();
 
-  // --- trees in the garth (frozen reference instances) ------------------------
-  const garth = box3(cfg.trees.box), trees = [];
-  {
+  // --- trees (frozen reference instances) --------------------------------------
+  const trees = [];
+  if (!cfg.trees.groups) {
+    // phase 1: lod0 broadleaves in the garth
+    const garth = box3(cfg.trees.box);
     const scene = new THREE.Scene(), root = new THREE.Group(); root.name = 'trees'; scene.add(root);
     const m4 = new THREE.Matrix4(), p = new V3();
     app.scene.traverse(o => {
@@ -168,6 +185,36 @@ export async function run(cfg) {
       trees.push({ mesh: mesh.name, source: o.name, instances: inst, triangles: tri(o.geometry), material: plain(materialInfo(o.material)) });
     });
     if (trees.length) files['props/garth_trees.glb'] = await saveGLB(exporter, scene, 'props/garth_trees.glb', { embedTextures: true });
+  } else {
+    for (const grp of cfg.trees.groups) {
+      const bx = box3(grp.box), names = new RegExp(grp.names);
+      const scene = new THREE.Scene(), root = new THREE.Group(); root.name = 'trees'; scene.add(root);
+      const m4 = new THREE.Matrix4(), p = new V3();
+      const byGroup = new Map();
+      app.scene.traverse(o => {
+        const m = o.isInstancedMesh && /^(.+):lod(\d)$/.exec(o.name);
+        if (!m || !names.test(m[1])) return;
+        let g = byGroup.get(m[1]);
+        if (!g) byGroup.set(m[1], g = { lods: [], instances: [] });
+        g.lods[+m[2]] = o;
+        for (let i = 0; i < o.count; i++) {
+          o.getMatrixAt(i, m4); m4.premultiply(o.matrixWorld); p.setFromMatrixPosition(m4);
+          if (bx.containsPoint(p)) g.instances.push(m4.toArray().map(r6));
+        }
+      });
+      for (const [name, g] of [...byGroup].sort()) {
+        if (!g.instances.length) continue;
+        const lods = [];
+        g.lods.forEach((o, i) => {
+          if (!o) return;
+          const mesh = new THREE.Mesh(o.geometry.clone(), o.material);
+          mesh.name = name + '_lod' + i; root.add(mesh);
+          lods.push({ mesh: mesh.name, triangles: tri(o.geometry), cast_shadow: o.castShadow });
+        });
+        trees.push({ group: name, file: grp.file, mesh: lods[0].mesh, lods, lod_max_m: [55, 190], instances: g.instances, triangles: lods[0].triangles, material: plain(materialInfo(g.lods[0].material)) });
+      }
+      if (root.children.length) files[grp.file] = await saveGLB(exporter, scene, grp.file, { embedTextures: true });
+    }
   }
 
   // --- materials -------------------------------------------------------------
@@ -188,6 +235,39 @@ export async function run(cfg) {
   for (let j = 0; j < nz; j++) for (let i = 0; i < nx; i++) bf[j * nx + i] = baseHeight(F.x0 + i * F.step, F.z0 + j * F.step);
   files['fields/terrain_base.bin'] = await save('fields/terrain_base.bin', bf.buffer);
   const fields = { terrain_height: { file: 'fields/terrain_height.bin', base_file: 'fields/terrain_base.bin', sunk_below_base_m: 0.8, format: 'float32 row-major, z rows', x0: F.x0, z0: F.z0, step: F.step, nx, nz, source: 'web/src/world/terrain.js height(x,z) incl. building sinks; baseHeight(x,z) without; terrainCollider() skips cells with a corner sunk > 0.8 m (floors take over)' } };
+  if (cfg.walkable) {
+    // terrainCollider(): signedDist < 8 || (road d < 10 && s < 0.55) || spur < 8
+    const wm = new Uint8Array(nx * nz);
+    for (let j = 0; j < nz; j++) for (let i = 0; i < nx; i++) {
+      const x = F.x0 + i * F.step, z = F.z0 + j * F.step, ri = roadInfo(x, z);
+      wm[j * nx + i] = (signedDist(x, z) < 8 || (ri.d < 10 && ri.s < 0.55) || ri.spur < 8) ? 1 : 0;
+    }
+    files['fields/walkable_u8.bin'] = await save('fields/walkable_u8.bin', wm.buffer);
+    fields.walkable = { file: 'fields/walkable_u8.bin', format: 'uint8 per terrain_height vertex, row-major', rule: 'web/src/world/terrain.js terrainCollider(): signedDist < 8 || (roadInfo d < 10 && s < 0.55) || spur < 8 (vertex sampled; the browser samples cell corners at 1.5 m)' };
+  }
+  if (cfg.coarse) {
+    const C = cfg.coarse, cnx = Math.round((C.x1 - C.x0) / C.step) + 1, cnz = Math.round((C.z1 - C.z0) / C.step) + 1;
+    const ch = new Float32Array(cnx * cnz);
+    for (let j = 0; j < cnz; j++) for (let i = 0; i < cnx; i++) ch[j * cnx + i] = height(C.x0 + i * C.step, C.z0 + j * C.step);
+    files['fields/coarse_height.bin'] = await save('fields/coarse_height.bin', ch.buffer);
+    fields.coarse = { file: 'fields/coarse_height.bin', x0: C.x0, z0: C.z0, step: C.step, nx: cnx, nz: cnz, disc: C.disc || null, format: 'float32 row-major, z rows', source: 'terrain.js height(x,z); visual only (no collider), joined to the fine patch under a skirt' };
+  }
+  if (cfg.far) {
+    // buildTerrain() far ring: A angles, radii growing by max(1.4, r·2π/A)
+    const R0 = cfg.far, A = R0.A, radii = [];
+    for (let r = R0.r0, k = 0; k <= R0.rings && r < R0.r1; k++) { radii.push(r); r += Math.max(1.4, r * (2 * Math.PI / A)); }
+    const R = radii.length, hv = new Float32Array(R * A * 4);
+    for (let k = 0; k < R; k++) {
+      const e = k ? Math.max(2, (radii[k] - radii[k - 1]) * 0.8) : 2;
+      for (let i = 0; i < A; i++) {
+        const t = i / A * Math.PI * 2, x = R0.cx + Math.cos(t) * radii[k], z = R0.cz + Math.sin(t) * radii[k], q = (k * A + i) * 4;
+        const hx = (baseHeight(x + e, z) - baseHeight(x - e, z)) / (2 * e), hz = (baseHeight(x, z + e) - baseHeight(x, z - e)) / (2 * e), l = Math.hypot(hx, 1, hz);
+        hv[q] = height(x, z); hv[q + 1] = -hx / l; hv[q + 2] = 1 / l; hv[q + 3] = -hz / l;
+      }
+    }
+    files['fields/far_ring.bin'] = await save('fields/far_ring.bin', hv.buffer);
+    fields.far = { file: 'fields/far_ring.bin', cx: R0.cx, cz: R0.cz, A, radii: radii.map(r6), format: 'float32 [height, nx, ny, nz] per (ring k, angle i), row-major by ring; angle t = i/A·2π, x = cx + cos t·r, z = cz + sin t·r', source: 'terrain.js buildTerrain() far ring (normals from baseHeight central differences over ~0.8 of a ring step)' };
+  }
   for (const [name, tex, rect] of [['ground', W.tGround.value, W.uGround.value], ['trodden', W.tMask.value, W.uMask.value]]) {
     const rec = await dumpTexture(tex, 'fields/' + name);
     if (rec) { files[rec.file] = rec.saved; delete rec.saved; fields[name] = { ...rec, rect: [rect.x, rect.y, rect.z, rect.w ?? 0].map(r6), note: name === 'ground' ? 'weathering.js W.tGround: world rect x0,z0,size; R = ground height' : 'weathering.js W.tMask: world rect x0,z0,size; R = trodden path' }; }
@@ -212,6 +292,12 @@ export async function run(cfg) {
     'altar.collider': colGeo?.boundingBox ? { min: colGeo.boundingBox.min.toArray().map(r6), max: colGeo.boundingBox.max.toArray().map(r6), frame: 'hinge-local' } : null,
     'altar.interact': (() => { const it = app.interactables.find(i => i.id === 'skull-altar'); return it ? { pos: it.pos.toArray().map(r6), radius: it.radius, label: it.label } : null; })(),
   };
+  if (cfg.day1_anchors) {
+    const A = app.ctx.anchors;
+    anchors.gate = plain(A.gate); anchors.hospice = plain(A.hospice);
+    anchors.road = ROAD.map(q => q.map(r6));
+    anchors.bell_tower = [BELL_TOWER.x, BELL_TOWER.y, BELL_TOWER.z].map(r6);
+  }
   const doors = app.doors.filter(d => region.containsPoint(new V3(d.x, d.y ?? 0.35, d.z))).map(d => plain({ id: d.id, building: d.building, x: d.x, y: d.y, z: d.z, nx: d.nx, nz: d.nz, w: d.w, th: d.th, open: d.open, out: d.out }));
   const interactables = app.interactables.filter(i => i.pos && region.containsPoint(i.pos)).map(i => ({ id: i.id, pos: i.pos.toArray().map(r6), radius: i.radius, label: i.label, altar: !!i.altar }));
   const emitters = app.emitters.filter(e => region.containsPoint(new V3(e.x, e.y, e.z))).map(e => plain(e));

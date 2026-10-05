@@ -37,6 +37,41 @@
     "url": "https://freesound.org/s/117504/"
    },
    "recipe": "unchanged copy; streamed"
+  },
+  "day1a/windTrees": {
+   "source": "shared/assets/audio/windTrees.mp3",
+   "source_sha256": "3afb69d990ff9ee541e55de49d3462718de45688f1175b26570c235fb309b94f",
+   "output": "native/assets/audio/day1a/windTrees.mp3",
+   "output_sha256": "3afb69d990ff9ee541e55de49d3462718de45688f1175b26570c235fb309b94f",
+   "clip_window": [
+    0.2,
+    49.00007
+   ],
+   "credit": {
+    "title": "winter wind in trees.wav",
+    "author": "lwdickens",
+    "licence": "CC0 1.0",
+    "url": "https://freesound.org/s/261226/"
+   },
+   "recipe": "unchanged copy; streamed"
+  },
+  "day1a/chant:psalm": {
+   "source": "shared/assets/audio/chant_psalm.mp3",
+   "source_sha256": "68fd4866b0a3e5968cb390a1b0b6b217a79aad3d68d618843e647b8778095b79",
+   "output": "native/assets/audio/day1a/chant_psalm.mp3",
+   "output_sha256": "68fd4866b0a3e5968cb390a1b0b6b217a79aad3d68d618843e647b8778095b79",
+   "clip_window": [
+    0.2,
+    97.49011
+   ],
+   "credit": {
+    "title": "San Antimo, monks singing Gregorian chant at a Sunday morning service",
+    "author": "Zyance (recording); the monks of Sant’Antimo",
+    "url": "https://commons.wikimedia.org/wiki/File:Sanantimo_gregorian.ogg",
+    "licence": "CC BY-SA 3.0",
+    "note": "trimmed and levelled derivative shared under the same licence"
+   },
+   "recipe": "unchanged copy; streamed"
   }
  },
  "clips": {
@@ -762,6 +797,1159 @@
     }
    ],
    "recipe": "ffmpeg crop, pcm_s16le"
+  },
+  "day1a/bell": {
+   "source": "shared/assets/audio/bell.mp3",
+   "source_sha256": "0b7c13e4e20ef9059df865f6a4fdaaa2aed81a8f97507d9443c2418c6fc81e40",
+   "credit": {
+    "title": "Angelus chartres Cathedral",
+    "author": "bruno.auzet",
+    "licence": "CC0 1.0",
+    "url": "https://freesound.org/s/796547/"
+   },
+   "credits": [
+    {
+     "title": "Angelus chartres Cathedral",
+     "author": "bruno.auzet",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/796547/"
+    }
+   ],
+   "clips": [
+    {
+     "output": "native/assets/audio/day1a/bell_00.wav",
+     "sha256": "dc7b016e7ed0857239f155c746dd1cc3ec3ec799abdb1d8f8c4ce623445c3a9d",
+     "window": [
+      0.2,
+      8.4
+     ]
+    }
+   ],
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample; 0.8 s fade-out"
+  },
+  "day1a/hoof": {
+   "source": "shared/assets/audio/hoof.mp3",
+   "source_sha256": "3129df4e43b2b715ffb117a4ce89304887cc26462443bf480ba628f81ec93f41",
+   "credit": {
+    "title": "Stable_chickens_horses.wav",
+    "author": "Lydmakeren",
+    "licence": "CC0 1.0",
+    "url": "https://freesound.org/s/510915/"
+   },
+   "credits": [
+    {
+     "title": "Stable_chickens_horses.wav",
+     "author": "Lydmakeren",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/510915/"
+    },
+    {
+     "title": "sfx-horse-steps-1.wav",
+     "author": "davilca",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/159498/"
+    }
+   ],
+   "clips": [
+    {
+     "output": "native/assets/audio/day1a/hoof_00.wav",
+     "sha256": "ef056bc258125cbcbbcc22e753953c1b20809d3585aeb53c87bafd79b0f93885",
+     "window": [
+      0.2,
+      0.58925
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/hoof_01.wav",
+     "sha256": "a532de8a67ba192edb809aeff62b962ed7da4dace2f31c6df232d9a9e3728db1",
+     "window": [
+      0.90925,
+      0.70311
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/hoof_02.wav",
+     "sha256": "48894e1767c7b718264bdca831a3f5af5b949df93839305700371792530c16b1",
+     "window": [
+      1.73236,
+      0.80159
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/hoof_03.wav",
+     "sha256": "8b267b31fc1554c2ebdedbcdeeee1f6560004c1298a61f98e40312ce849a5851",
+     "window": [
+      2.65395,
+      0.39104
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/hoof_04.wav",
+     "sha256": "0acfdf2a2191d555a52142a696a30547bd052c592708ac7621fe2da3e6bffa05",
+     "window": [
+      3.16499,
+      0.43224
+     ]
+    }
+   ],
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample"
+  },
+  "day1a/snort": {
+   "source": "shared/assets/audio/snort.mp3",
+   "source_sha256": "4e79fe2e79dccb8ba0fe681b269b41b9ad4d785b1ecdcdc4b6a70b999cb2d5f7",
+   "credit": {
+    "title": "Horse(snort)_3.wav",
+    "author": "o_ciz",
+    "licence": "CC0 1.0",
+    "url": "https://freesound.org/s/475483/"
+   },
+   "credits": [
+    {
+     "title": "Horse(snort)_3.wav",
+     "author": "o_ciz",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/475483/"
+    },
+    {
+     "title": "G38-16-Four Horse Snorts.wav",
+     "author": "craigsmith",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/437111/"
+    }
+   ],
+   "clips": [
+    {
+     "output": "native/assets/audio/day1a/snort_00.wav",
+     "sha256": "e2388ac6c1768f5688a2c3567b24f6225f5b0ef4ca239306a8c80d93a4ccf09e",
+     "window": [
+      0.2,
+      0.55739
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/snort_01.wav",
+     "sha256": "6df1e319d2666eac7d969da68817eae86386f8200e1eea058329d73a39ede827",
+     "window": [
+      0.87739,
+      0.74376
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/snort_02.wav",
+     "sha256": "3b7a69ecf33dd6c2f0cbb19c4242da17e6b8509a31f1e7104a7774e0a330bfbb",
+     "window": [
+      1.74116,
+      0.7924
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/snort_03.wav",
+     "sha256": "2b816aa042980d79acd55d2ccf22e8d1a91d2d9e4c02011cb739b6153717f94b",
+     "window": [
+      2.65356,
+      1.09633
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/snort_04.wav",
+     "sha256": "2ff5fe19ae6b409fb62ed5012355be8a3e426fc3a8b147f415783dcf53542f01",
+     "window": [
+      3.86989,
+      0.78474
+     ]
+    }
+   ],
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample"
+  },
+  "day1a/bray": {
+   "source": "shared/assets/audio/bray.mp3",
+   "source_sha256": "f5c2f5ccb39c98030d48d71617c8b50110b676a319ae63e923b2c97c4ce6b7a2",
+   "credit": {
+    "title": "Donkeys - Squeaky High-Pitched Bray",
+    "author": "TheKingOfGeeks360",
+    "licence": "CC0 1.0",
+    "url": "https://freesound.org/s/859477/"
+   },
+   "credits": [
+    {
+     "title": "Donkeys - Squeaky High-Pitched Bray",
+     "author": "TheKingOfGeeks360",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/859477/"
+    }
+   ],
+   "clips": [
+    {
+     "output": "native/assets/audio/day1a/bray_00.wav",
+     "sha256": "cdc4ffe88dd1e605dd37f62b8bc65ab6ce0081318665677e04f0a04ed9749ede",
+     "window": [
+      0.2,
+      8.94363
+     ]
+    }
+   ],
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample"
+  },
+  "day1a/doorCreak": {
+   "source": "shared/assets/audio/doorCreak.mp3",
+   "source_sha256": "fb28884c17a69a53f37aee65ba929aac9264be4f6d2247dc6f55ace5fec71049",
+   "credit": {
+    "title": "Big door creak.wav",
+    "author": "jemburyturner",
+    "licence": "CC0 1.0",
+    "url": "https://freesound.org/s/273466/"
+   },
+   "credits": [
+    {
+     "title": "Big door creak.wav",
+     "author": "jemburyturner",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/273466/"
+    },
+    {
+     "title": "door creak 1.wav",
+     "author": "soundofsong",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/647646/"
+    },
+    {
+     "title": "Opening and closing a big old door.wav",
+     "author": "lazymonk",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/214307/"
+    }
+   ],
+   "clips": [
+    {
+     "output": "native/assets/audio/day1a/doorCreak_00.wav",
+     "sha256": "cbc25bb6ab253b082dc3a42997cfefb28a25ae43d2517cc3b4d012b6e5e47ee0",
+     "window": [
+      0.2,
+      4.04812
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/doorCreak_01.wav",
+     "sha256": "3fdc07cc505df84e9c9fb180f3c82adae891fcea7deec463203b8f9bd7f9e1ce",
+     "window": [
+      4.36812,
+      0.93379
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/doorCreak_02.wav",
+     "sha256": "7e2d63d655976c59fb4a5b924d06d9a22abaf4816928b6396efaaf8fde46542a",
+     "window": [
+      5.4219,
+      1.80229
+     ]
+    }
+   ],
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample"
+  },
+  "day1a/doorThud": {
+   "source": "shared/assets/audio/doorThud.mp3",
+   "source_sha256": "a290af13e6c493467f25c39039b2771a13fb9c33b9cbc559cc477625b4c126a5",
+   "credit": {
+    "title": "Opening and closing a big old door.wav",
+    "author": "lazymonk",
+    "licence": "CC0 1.0",
+    "url": "https://freesound.org/s/214307/"
+   },
+   "credits": [
+    {
+     "title": "Opening and closing a big old door.wav",
+     "author": "lazymonk",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/214307/"
+    },
+    {
+     "title": "Wood Door Close with Metal Latch 02",
+     "author": "MadMaxSFX",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/352329/"
+    }
+   ],
+   "clips": [
+    {
+     "output": "native/assets/audio/day1a/doorThud_00.wav",
+     "sha256": "4737ff1e392550907805bca85140cd8dd2617a4f5a58eac261d57fddb7c94de0",
+     "window": [
+      0.2,
+      1.34875
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/doorThud_01.wav",
+     "sha256": "85ef65d548c9e9ac037b5b4e2be1b58505223b39e263dca2a38fd0f3243abeb9",
+     "window": [
+      1.66875,
+      1.00054
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/doorThud_02.wav",
+     "sha256": "22588fbcc3bf66edc179cfa892c08b33bfc0531f8797ce10b24537e41d773046",
+     "window": [
+      2.7893,
+      1.31202
+     ]
+    }
+   ],
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample"
+  },
+  "day1a/latch": {
+   "source": "shared/assets/audio/latch.mp3",
+   "source_sha256": "f1413b0345e10547f2a227c400702b6d7a0b9deb85dcf1fba1ef79569b87c486",
+   "credit": {
+    "title": "Iron_gate_courtyard_abbey_gardens_open_close_latch_mono.wav",
+    "author": "nickmaysoundmusic",
+    "licence": "CC0 1.0",
+    "url": "https://freesound.org/s/460556/"
+   },
+   "credits": [
+    {
+     "title": "Iron_gate_courtyard_abbey_gardens_open_close_latch_mono.wav",
+     "author": "nickmaysoundmusic",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/460556/"
+    },
+    {
+     "title": "Gate Latch",
+     "author": "mhtaylor67",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/126041/"
+    }
+   ],
+   "clips": [
+    {
+     "output": "native/assets/audio/day1a/latch_00.wav",
+     "sha256": "cce7416c7b6ecf92d835b8ad4f3caa51594b048eb1922fe5bbd825c0f59dac4e",
+     "window": [
+      0.2,
+      0.83948
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/latch_01.wav",
+     "sha256": "65eeafc2c2aa5ddd42710d599470aabf1c45281a0fea0c36fa0776e6b6e78b8f",
+     "window": [
+      1.15948,
+      0.79773
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/latch_02.wav",
+     "sha256": "ea3657e29a149654d07dc2b62d6dc396d5560735f6fb009b782b7efa2321e285",
+     "window": [
+      2.07721,
+      0.87494
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/latch_03.wav",
+     "sha256": "7577f59384da7283de000db0497b59355967d3487b763751f4f21f868c282921",
+     "window": [
+      3.07215,
+      1.03569
+     ]
+    }
+   ],
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample"
+  },
+  "day1a/chew": {
+   "source": "shared/assets/audio/chew.mp3",
+   "source_sha256": "0f8e6bc47f3a861266bb4010975108e29693d98d5cc3724693fbeaf63f6700f5",
+   "credit": {
+    "title": "Horse chewing cud. 0.5m away",
+    "author": "gsparrysound",
+    "licence": "CC0 1.0",
+    "url": "https://freesound.org/s/752136/"
+   },
+   "credits": [
+    {
+     "title": "Horse chewing cud. 0.5m away",
+     "author": "gsparrysound",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/752136/"
+    },
+    {
+     "title": "Horse Eating",
+     "author": "gibarroule",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/365138/"
+    }
+   ],
+   "clips": [
+    {
+     "output": "native/assets/audio/day1a/chew_00.wav",
+     "sha256": "c919b87f9027e27797d22a6f576534deff35422cf497728882c006a40be9ee01",
+     "window": [
+      0.2,
+      2.19875
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/chew_01.wav",
+     "sha256": "d6979cfec4b71687262266260c5266fa6633e41ef0b9f398394826e32b453fbc",
+     "window": [
+      2.51875,
+      2.09664
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/chew_02.wav",
+     "sha256": "7c6e2b385f78979e756788f3e529cd29bf8aef26eafaa611e5f4ba7e3cf69ae7",
+     "window": [
+      4.7354,
+      1.98955
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/chew_03.wav",
+     "sha256": "533c3f0752b67d45d61b6518776ab49ebae429a5687d3ae1ad52cd8552377e97",
+     "window": [
+      6.84494,
+      2.18286
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/chew_04.wav",
+     "sha256": "414c698065d0b37b9c76cf01600be0273e1e211028f902835ac29d6aad1a504a",
+     "window": [
+      9.1478,
+      2.49868
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/chew_05.wav",
+     "sha256": "b77103b43eddea296d02ec37c19c571ba9bb8f6ec1871796b053669434f0c1ee",
+     "window": [
+      11.76649,
+      2.50406
+     ]
+    }
+   ],
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample"
+  },
+  "day1a/pour": {
+   "source": "shared/assets/audio/pour.mp3",
+   "source_sha256": "747ad15825fdfa9fb8ee04248a8ea6f287204e5ae93eb7a778d974e7eae36097",
+   "credit": {
+    "title": "Pour Splash metal bucket water.mp3",
+    "author": "JohnsonBrandEditing",
+    "licence": "CC0 1.0",
+    "url": "https://freesound.org/s/173938/"
+   },
+   "credits": [
+    {
+     "title": "Pour Splash metal bucket water.mp3",
+     "author": "JohnsonBrandEditing",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/173938/"
+    },
+    {
+     "title": "Pouring water in and out of different containers.wav",
+     "author": "kessir",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/264759/"
+    }
+   ],
+   "clips": [
+    {
+     "output": "native/assets/audio/day1a/pour_00.wav",
+     "sha256": "d973eb9e9e260f32c96932de00efe95573b8d6f74b8ebdf3e82c3cf534189f5c",
+     "window": [
+      0.2,
+      1.78274
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/pour_01.wav",
+     "sha256": "fd3028e324cc12d0160ee1dc8b4a622aaa667d1c23de28278ecd0982c3be4cab",
+     "window": [
+      2.10274,
+      2.08728
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/pour_02.wav",
+     "sha256": "7677dc8220ec0a20cfcb020929a1bc02d67268263eeb796b17c38a2184b29eb3",
+     "window": [
+      4.31002,
+      2.19542
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/pour_03.wav",
+     "sha256": "bd85cfa7d3e0ec6d631fc845105a1ccf359a787ccdca5378a83377ee3677f5a9",
+     "window": [
+      6.62544,
+      2.98655
+     ]
+    }
+   ],
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample"
+  },
+  "day1a/strawRustle": {
+   "source": "shared/assets/audio/strawRustle.mp3",
+   "source_sha256": "4e8d37f271d4bfa65c10d2a13f5300016be1f2bae2220c8220379b9ba8a082c3",
+   "credit": {
+    "title": "Horse Eating",
+    "author": "gibarroule",
+    "licence": "CC0 1.0",
+    "url": "https://freesound.org/s/365138/"
+   },
+   "credits": [
+    {
+     "title": "Horse Eating",
+     "author": "gibarroule",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/365138/"
+    },
+    {
+     "title": "Chickens in the coop, morning",
+     "author": "fthgurdy",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/536693/"
+    }
+   ],
+   "clips": [
+    {
+     "output": "native/assets/audio/day1a/strawRustle_00.wav",
+     "sha256": "2dbcd11f864ff0e97a767be844f3b14d27f40471c7710d44cf3f2299ad00c433",
+     "window": [
+      0.2,
+      1.69342
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/strawRustle_01.wav",
+     "sha256": "536c0fb16a47614849b88f85e7d8d36867ee7f1afaac55080cdfba35632a2817",
+     "window": [
+      2.01342,
+      1.60082
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/strawRustle_02.wav",
+     "sha256": "d6499af98dc47d22ce1cd2578b9c9b07904b548dfd78a65b05fd398b4c47a42b",
+     "window": [
+      3.73424,
+      1.39447
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/strawRustle_03.wav",
+     "sha256": "218db5885c14fbb672f696ee421e3f5937b98396009c69ed9bf9d1914f272fbe",
+     "window": [
+      5.24871,
+      1.18755
+     ]
+    }
+   ],
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample"
+  },
+  "day1a/timber": {
+   "source": "shared/assets/audio/timber.mp3",
+   "source_sha256": "46722f23e2423e626f9b722bcda8001f4406b79729a56964b5c554d115301653",
+   "credit": {
+    "title": "Opening Bench.mp3",
+    "author": "kingsrow",
+    "licence": "CC0 1.0",
+    "url": "https://freesound.org/s/182689/"
+   },
+   "credits": [
+    {
+     "title": "Opening Bench.mp3",
+     "author": "kingsrow",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/182689/"
+    }
+   ],
+   "clips": [
+    {
+     "output": "native/assets/audio/day1a/timber_00.wav",
+     "sha256": "110dca3832aa5526901d1766ab7077fcdd96f1b920436e7a82bfd6dffdc38c0d",
+     "window": [
+      0.2,
+      0.90077
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/timber_01.wav",
+     "sha256": "a8e14e49350f0f32a4729341b18334fc28bb8810b88208f234f456b82cb4625b",
+     "window": [
+      1.22077,
+      0.99245
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/timber_02.wav",
+     "sha256": "1bd2123b4bd2dd99e7029914997e686e560b6f56d6b5a2d41fbda36114224fab",
+     "window": [
+      2.33322,
+      1.18789
+     ]
+    }
+   ],
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample"
+  },
+  "day1a/metal": {
+   "source": "shared/assets/audio/metal.mp3",
+   "source_sha256": "2d712cbcee48f48f6161e0ada05962f8d41cffc3bee45ffa3647fb176ad83528",
+   "credit": {
+    "title": "metal bowl - hit - with wooden spoon 01.wav",
+    "author": "Anthousai",
+    "licence": "CC0 1.0",
+    "url": "https://freesound.org/s/405665/"
+   },
+   "credits": [
+    {
+     "title": "metal bowl - hit - with wooden spoon 01.wav",
+     "author": "Anthousai",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/405665/"
+    },
+    {
+     "title": "Ceramic clank and sliding over wooden table.wav",
+     "author": "kessir",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/264757/"
+    }
+   ],
+   "clips": [
+    {
+     "output": "native/assets/audio/day1a/metal_00.wav",
+     "sha256": "d200138cda6b7e784d360af11e494ea9dddfe0454e484e777f70fc3857763dcf",
+     "window": [
+      0.2,
+      0.9866
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/metal_01.wav",
+     "sha256": "4cf2595550c822e39e203c425c497aab1748e95cb748218e70ecda498a816d64",
+     "window": [
+      1.3066,
+      0.79943
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/metal_02.wav",
+     "sha256": "dec0eb0d822bc6028a9af96126d0a8cdb54cc8dfd2d402c45a321ac2df558abf",
+     "window": [
+      2.22603,
+      0.78662
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/metal_03.wav",
+     "sha256": "c02708f975ce6df0ebe0e333e5efb157751e457549caa0eeb79972f72ac96f99",
+     "window": [
+      3.13265,
+      0.78392
+     ]
+    }
+   ],
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample"
+  },
+  "day1a/anvil": {
+   "source": "shared/assets/audio/anvil.mp3",
+   "source_sha256": "325546a7d4d19a8652589ca4362e9527a1512cb345a07db5aeb8acdeac0b3f07",
+   "credit": {
+    "title": "Anvil - Lokomo A 100 kg - Forging very hot steel 1 time",
+    "author": "ldezem",
+    "licence": "CC0 1.0",
+    "url": "https://freesound.org/s/386119/"
+   },
+   "credits": [
+    {
+     "title": "Anvil - Lokomo A 100 kg - Forging very hot steel 1 time",
+     "author": "ldezem",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/386119/"
+    },
+    {
+     "title": "Anvil - Lokomo 125 kg - Hammer on 6mm steel 1 time short",
+     "author": "ldezem",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/386130/"
+    }
+   ],
+   "clips": [
+    {
+     "output": "native/assets/audio/day1a/anvil_00.wav",
+     "sha256": "33676cb918fbc120011ff2da4a6f095619aa0a1b04ae79d5b85d0e5cc191e055",
+     "window": [
+      0.2,
+      2.18773
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/anvil_01.wav",
+     "sha256": "d389d02a66230d13e65e9d5b68d6c679ef200a00c44579160a936a7fd5ed86e5",
+     "window": [
+      2.50773,
+      0.73381
+     ]
+    }
+   ],
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample"
+  },
+  "day1a/caw": {
+   "source": "shared/assets/audio/caw.mp3",
+   "source_sha256": "33d28454720ac8af43bd3ab8a258fb60286f90ed30c2d4250d71a928eaee9da9",
+   "credit": {
+    "title": "Hooded crow.wav",
+    "author": "straget",
+    "licence": "CC0 1.0",
+    "url": "https://freesound.org/s/404687/"
+   },
+   "credits": [
+    {
+     "title": "Hooded crow.wav",
+     "author": "straget",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/404687/"
+    },
+    {
+     "title": "Crow Caw",
+     "author": "Jofae",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/361470/"
+    }
+   ],
+   "clips": [
+    {
+     "output": "native/assets/audio/day1a/caw_00.wav",
+     "sha256": "2a92322937d982746780532f5459c737e48894a14bb4d46dca95be6976e92c74",
+     "window": [
+      0.2,
+      0.58113
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/caw_01.wav",
+     "sha256": "64720786794ff1f66e18ec22485860cadc0bf4baddc341596e57503126633827",
+     "window": [
+      0.90113,
+      0.59796
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/caw_02.wav",
+     "sha256": "2f41ffec8ecaefda09bc695f89fad9fe507fad79ff692af94fe1a9bb6cfcb04d",
+     "window": [
+      1.61909,
+      0.79673
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/caw_03.wav",
+     "sha256": "7e6a1fe8d6b9410d6f275dff4374d8ee58203f143e54804b2f04a15af9b072c9",
+     "window": [
+      2.53583,
+      0.68435
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/caw_04.wav",
+     "sha256": "9a89068632a6831a1af819ae61c37f289ee9bfd33c53fde7d82ff8f1c18f21be",
+     "window": [
+      3.34018,
+      0.78923
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/caw_05.wav",
+     "sha256": "4341900a682f182aeb12bd65f6fd587516666870c649b2e8928b4164a55ccec7",
+     "window": [
+      4.24941,
+      0.37234
+     ]
+    }
+   ],
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample"
+  },
+  "day1a/cough": {
+   "source": "shared/assets/audio/cough.mp3",
+   "source_sha256": "41abfc7069fd13d0508dbd8e39818a573618d57cd5bb63bcd843332f8444b6df",
+   "credit": {
+    "title": "Cough.wav",
+    "author": "Harris85",
+    "licence": "CC0 1.0",
+    "url": "https://freesound.org/s/208761/"
+   },
+   "credits": [
+    {
+     "title": "Cough.wav",
+     "author": "Harris85",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/208761/"
+    },
+    {
+     "title": "old man cough",
+     "author": "riippumattog",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/848383/"
+    },
+    {
+     "title": "Cough (3)",
+     "author": "OwlStorm",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/151217/"
+    }
+   ],
+   "clips": [
+    {
+     "output": "native/assets/audio/day1a/cough_00.wav",
+     "sha256": "c443e1839e0a31bb9ee7e1f354bf72db4924e551dc831794c31be2ef79b6ed35",
+     "window": [
+      0.2,
+      0.74478
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/cough_01.wav",
+     "sha256": "2dd73fa0c1ee5eeb629a9ce0d7648a988b0da438d141541c49931db9689685b3",
+     "window": [
+      1.06478,
+      0.90406
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/cough_02.wav",
+     "sha256": "29bcffbdb761e30626a31e3592c4e00ff5ecf622c6091ed91aa5a3d31983c740",
+     "window": [
+      2.08884,
+      0.94937
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/cough_03.wav",
+     "sha256": "51840259d0a327d7f9bb97781cf054b9ab6e6ce6ee736644bd8ed37d3d840062",
+     "window": [
+      3.15821,
+      0.78791
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/cough_04.wav",
+     "sha256": "56336c241cacf8cf30b17aa66f1da2355cd4553bdd4709ce42eb9c74aa528ca6",
+     "window": [
+      4.06612,
+      0.38014
+     ]
+    }
+   ],
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample"
+  },
+  "day1a/pageTurn": {
+   "source": "shared/assets/audio/pageTurn.mp3",
+   "source_sha256": "3607cbd6d935da6f037cbee534aa0cfe277511e2d9a89a91a3431a0d9153a46e",
+   "credit": {
+    "title": "Turning page (heavy paper)",
+    "author": "xkeril",
+    "licence": "CC0 1.0",
+    "url": "https://freesound.org/s/856497/"
+   },
+   "credits": [
+    {
+     "title": "Turning page (heavy paper)",
+     "author": "xkeril",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/856497/"
+    }
+   ],
+   "clips": [
+    {
+     "output": "native/assets/audio/day1a/pageTurn_00.wav",
+     "sha256": "e10745107481e7a5ddfef54dbd7c1a0bc26faffb15dccb1cbee122ff9e61c1a6",
+     "window": [
+      0.2,
+      0.71866
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/pageTurn_01.wav",
+     "sha256": "d7333a2ae4f924f63c4369db4dcc6873141a8f6205d64f94ce85dd1cb7286589",
+     "window": [
+      1.03866,
+      0.98444
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/pageTurn_02.wav",
+     "sha256": "cc439ee1d1ce79dd426d9790e65b8ab7f5fd76a4135a5e6871dd6484bd040c8f",
+     "window": [
+      2.14311,
+      0.72048
+     ]
+    }
+   ],
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample"
+  },
+  "day1a/benchCreak": {
+   "source": "shared/assets/audio/benchCreak.mp3",
+   "source_sha256": "83f1a266fb57b4fa0f3fdffebc9211c16b22ebd26d71cb30b3b42fdb65904685",
+   "credit": {
+    "title": "Wooden Creak",
+    "author": "Mafon2",
+    "licence": "CC0 1.0",
+    "url": "https://freesound.org/s/377552/"
+   },
+   "credits": [
+    {
+     "title": "Wooden Creak",
+     "author": "Mafon2",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/377552/"
+    },
+    {
+     "title": "creaking floor OWI.wav",
+     "author": "miekyj",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/326460/"
+    }
+   ],
+   "clips": [
+    {
+     "output": "native/assets/audio/day1a/benchCreak_00.wav",
+     "sha256": "34c5b17248a7660229d44e53b90b99dbb83834aaa6d2033083897a8175ef7f6b",
+     "window": [
+      0.2,
+      0.27528
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/benchCreak_01.wav",
+     "sha256": "129500456a907e13c95ebce1126882e8efd232f2b94246cb74cf52a3e13dd71e",
+     "window": [
+      0.59528,
+      0.30143
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/benchCreak_02.wav",
+     "sha256": "e99f4057a933347439560e28ca966cb2369d3f2c2a75b26a149f5fe8d4c84148",
+     "window": [
+      1.01671,
+      0.25814
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/benchCreak_03.wav",
+     "sha256": "474d4b07376270dba1d55ba2e2c6dd283493ce4f03325e7032f3e21c0511c52c",
+     "window": [
+      1.39485,
+      0.54973
+     ]
+    }
+   ],
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample"
+  },
+  "day1a/sweep": {
+   "source": "shared/assets/audio/sweep.mp3",
+   "source_sha256": "c9d391734f8a3f446853e702c35923542dacc142f71678f9ddb46020058b3692",
+   "credit": {
+    "title": "Broom Sweeping",
+    "author": "Sheyvan",
+    "licence": "CC0 1.0",
+    "url": "https://freesound.org/s/831439/"
+   },
+   "credits": [
+    {
+     "title": "Broom Sweeping",
+     "author": "Sheyvan",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/831439/"
+    }
+   ],
+   "clips": [
+    {
+     "output": "native/assets/audio/day1a/sweep_00.wav",
+     "sha256": "6726ad358084ff4f48b11c36145b0657a6f5a755e3789c1c457ba72afe8e572f",
+     "window": [
+      0.2,
+      0.62374
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/sweep_01.wav",
+     "sha256": "e0199c6c674627878f2ebb463bc8a9d20f86f64226dddf54a2f1be22758b797c",
+     "window": [
+      0.94374,
+      0.63107
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/sweep_02.wav",
+     "sha256": "170aaf65d218764a8572968acdb9f0a5f81b25f582b7526fcc9feb639f812239",
+     "window": [
+      1.69481,
+      0.62449
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/sweep_03.wav",
+     "sha256": "156aa2a9762a86002f71dd179109acbe7c40d043f42e2391598c10c9ec4a5b8d",
+     "window": [
+      2.4393,
+      0.63259
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/sweep_04.wav",
+     "sha256": "79d05a59349a68ef799fc18ace8cebbb353d65bcd877cc2a822e7a0a7b0acdfb",
+     "window": [
+      3.19188,
+      0.62327
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/sweep_05.wav",
+     "sha256": "4504c33342bb4d11432c76ecdbdfe11119b610882c9d2c266eb1c9f7b5004ef2",
+     "window": [
+      3.93515,
+      0.63002
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/sweep_06.wav",
+     "sha256": "f2d293553809ebda2b641d4bade0a68431456aaac5c937724caac623bfe8637d",
+     "window": [
+      4.68517,
+      0.49059
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/sweep_07.wav",
+     "sha256": "8d0e33df29760a213459b423e8fe95d237938daf4e44435a565286adabab9bbe",
+     "window": [
+      5.29576,
+      0.62302
+     ]
+    }
+   ],
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample"
+  },
+  "day1a/step:straw": {
+   "source": "shared/assets/audio/step_straw.mp3",
+   "source_sha256": "c6b2250aba7460df898aa826481c2e267f03d275e5c3a938631e2e1f04caf278",
+   "credit": {
+    "title": "steps_dry_grass.wav",
+    "author": "Mystikuum",
+    "licence": "CC0 1.0",
+    "url": "https://freesound.org/s/377323/"
+   },
+   "credits": [
+    {
+     "title": "steps_dry_grass.wav",
+     "author": "Mystikuum",
+     "licence": "CC0 1.0",
+     "url": "https://freesound.org/s/377323/"
+    }
+   ],
+   "clips": [
+    {
+     "output": "native/assets/audio/day1a/step_straw_00.wav",
+     "sha256": "71b80e9de51865e847f5880e35788ef0f32735ee3569b0df42153213b1669131",
+     "window": [
+      0.2,
+      0.60932
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/step_straw_01.wav",
+     "sha256": "a2e5d4bf3f2c58d253f0b240fdd16dc0d3cfab7e4b66598a9e67064dd8a68718",
+     "window": [
+      0.92932,
+      0.61408
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/step_straw_02.wav",
+     "sha256": "5458e7758f144ca80c24865afcb9c37f422a0fcf0c63d70a3944f033228e841d",
+     "window": [
+      1.6634,
+      0.59016
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/step_straw_03.wav",
+     "sha256": "8a93513cb13d7b0e88d018d490a7f3a74f42161b58414d0421d078be33268139",
+     "window": [
+      2.37356,
+      0.59576
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/step_straw_04.wav",
+     "sha256": "1f8cae27bfc9c71bc1bed24f51717aa1d1f1bb891be88dc4f034af91552b2267",
+     "window": [
+      3.08932,
+      0.6102
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/step_straw_05.wav",
+     "sha256": "c19972e7fcab5ca5f1dc649768ec6dabb88ce8ca87118f40dd20c951750d798b",
+     "window": [
+      3.81952,
+      0.60669
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/step_straw_06.wav",
+     "sha256": "9ea71202cf3681eaf4e318cec261d296e7951185ed2bd90e3a1f797cf8cfee14",
+     "window": [
+      4.54621,
+      0.60744
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/step_straw_07.wav",
+     "sha256": "21a00da8ec2a35f4c668582a85cbec835303934332644bf5560aab0b346781b9",
+     "window": [
+      5.27365,
+      0.61234
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/step_straw_08.wav",
+     "sha256": "709e01ae535e6a7ce736aeb2b37b740003168525b3691a81b59e7fabe32f6bfb",
+     "window": [
+      6.00599,
+      0.61238
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/step_straw_09.wav",
+     "sha256": "1514b91a9d6bdbd497cd630095f4352889d6bc3ff875214c221d1efc8f6b5f95",
+     "window": [
+      6.73837,
+      0.60236
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/step_straw_10.wav",
+     "sha256": "3a0863d82f4e7f3e769b316661b5dc4631593a480adce2fced3a3df7f15aeaa8",
+     "window": [
+      7.46073,
+      0.59585
+     ]
+    },
+    {
+     "output": "native/assets/audio/day1a/step_straw_11.wav",
+     "sha256": "b745ba2ecfad2a9f78078a3bc4706341163a9dd3e25818ea290a4367873f96c8",
+     "window": [
+      8.17658,
+      0.59707
+     ]
+    }
+   ],
+   "recipe": "ffmpeg crop to the browser manifest window, pcm_s16le, no resample"
   }
  }
 }

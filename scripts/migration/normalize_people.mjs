@@ -23,6 +23,13 @@
 //     drop the `<id>:` prefix because Godot forbids ':' in animation names;
 //     the mapping is recorded in the manifest.
 //   * EXT_texture_webp is kept unless --png is given (Godot imports WebP).
+//   * the shared motion library (motions.glb: recorded locomotion and idles)
+//     is bound to the same joints exactly as the browser binds it at run time
+//     (web/src/world/people/figure.js clipFor): a fitted task of the same name
+//     always wins; joint translations are dropped except the pelvis, whose
+//     track is scaled by this body's pelvis height / the library's (rounded
+//     to 1/200; seated clips unscaled); walkCarry keeps the body's relaxed
+//     head/neck rotation. Keyframes and timing are otherwise unchanged.
 import { NodeIO } from '@gltf-transform/core';
 import { ALL_EXTENSIONS } from '@gltf-transform/extensions';
 import { dequantize, prune } from '@gltf-transform/functions';
@@ -42,6 +49,9 @@ const MANIFEST = path.join(ROOT, 'shared/data/manifests/people_derivatives.json'
 const arg = (k, d) => { const i = process.argv.indexOf(k); return i >= 0 ? process.argv[i + 1] : d; };
 const PEOPLE = arg('--people', 'alinardo').split(',').filter(Boolean);
 const PNG = process.argv.includes('--png');
+// day-1A locomotion/idle/gesture clips (figure.js MOTION tables)
+const MOTIONS = arg('--motions', 'walk,walkFormal,walkCarry,walkHeavy,idle,idleSubtle,foldArms,listen,talk,nod,pickUp,interact,hunched,greet,sitRec,sitTalkRec,kneelWork,sitBench').split(',').filter(Boolean);
+const SEATED = new Set(['write', 'dine', 'sitBench', 'sitRec', 'sitTalkRec']);
 const MASTER = path.join(ROOT, '.local/mh/cast-round3.glb');   // retained round-three cast (ignored master)
 
 await MeshoptDecoder.ready;
@@ -50,6 +60,8 @@ const sha = f => crypto.createHash('sha256').update(fs.readFileSync(f)).digest('
 const meta = JSON.parse(fs.readFileSync(path.join(SRC, 'cast.json'), 'utf8'));
 const tasksDoc = await io.read(path.join(SRC, 'tasks.glb'));
 const taskAnims = tasksDoc.getRoot().listAnimations();
+const motionDoc = await io.read(path.join(SRC, 'motions.glb'));
+const motionAnims = motionDoc.getRoot().listAnimations();
 const master = fs.existsSync(MASTER) ? { doc: await io.read(MASTER), sha256: sha(MASTER) } : null;
 
 const manifest = fs.existsSync(MANIFEST) ? JSON.parse(fs.readFileSync(MANIFEST, 'utf8')) : { people: {} };
@@ -57,7 +69,7 @@ Object.assign(manifest, {
   schema_version: 1,
   generator: 'scripts/migration/normalize_people.mjs',
   tool_versions: { '@gltf-transform/core': '4.5.1', meshoptimizer: '1.3.0', sharp: '0.35.5', node: process.version },
-  sources: Object.fromEntries(['cast.glb', 'tasks.glb', 'cast.json'].map(f => [`shared/assets/models/people/${f}`, sha(path.join(SRC, f))])),
+  sources: Object.fromEntries(['cast.glb', 'tasks.glb', 'motions.glb', 'cast.json'].map(f => [`shared/assets/models/people/${f}`, sha(path.join(SRC, f))])),
   coordinate_convention: 'metres, +X east, +Y up, +Z south (glTF/Godot); character model front is +Z (Godot MODEL_FRONT), identical to the browser slot ry convention',
   licence_note: 'Body/garment components keep the credits in docs/ASSETS.md, shared/provenance/reconstruction-decisions.json and shared/assets/credits.json (CC0 MakeHuman/MPFB, CC BY boots/apron where used). Motion sources per those documents.',
 });
@@ -100,6 +112,44 @@ for (const id of PEOPLE) {
     if (missing.length) throw new Error(`${a.getName()}: unbound targets ${missing.join(',')}`);
     out.setExtras({ source_clip: a.getName(), source_file: 'shared/assets/models/people/tasks.glb' });
     clips.push({ id: a.getName(), godot_name: clip, duration_s: +dur.toFixed(6), channels: bound });
+  }
+  // shared motions (figure.js clipFor): rotations for every joint of this
+  // body; pelvis translation scaled by leg length; a fitted task wins
+  const kPelvis = Math.round((meta.people[id].pelvis / meta.motions.pelvis) * 200) / 200;
+  for (const name of MOTIONS) {
+    if (clips.some(c => c.godot_name === name)) continue;
+    const a = motionAnims.find(x => x.getName() === name);
+    if (!a) throw new Error('motions.glb has no clip ' + name);
+    const k = SEATED.has(name) ? 1 : kPelvis;
+    const out = doc.createAnimation(name);
+    let dur = 0, bound = 0;
+    const skipped = new Set();
+    for (const ch of a.listChannels()) {
+      const bone = ch.getTargetNode().getName();
+      const node = byName.get(bone);
+      const pathName = ch.getTargetPath();
+      if (!node) { skipped.add(bone); continue; }
+      if (pathName === 'translation' && bone !== 'pelvis') continue;
+      if (pathName === 'scale') continue;
+      const s = ch.getSampler();
+      const inA = new Float32Array(s.getInput().getArray());
+      let vals = s.getOutput().getArray().slice();
+      if (pathName === 'translation') vals = Float32Array.from(vals, v => v * k);
+      if (name === 'walkCarry' && pathName === 'rotation' && (bone === 'head' || bone === 'neck_01')) {
+        const r = node.getRotation();
+        vals = new Float32Array(vals.length);
+        for (let i = 0; i < vals.length; i += 4) vals.set(r, i);
+      }
+      const inp = doc.createAccessor().setType('SCALAR').setArray(inA).setBuffer(buffer);
+      const outA = doc.createAccessor().setType(s.getOutput().getType()).setArray(vals).setBuffer(buffer);
+      const ns = doc.createAnimationSampler().setInput(inp).setOutput(outA).setInterpolation(s.getInterpolation());
+      out.addSampler(ns);
+      out.addChannel(doc.createAnimationChannel().setTargetNode(node).setTargetPath(pathName).setSampler(ns));
+      dur = Math.max(dur, s.getInput().getMax([0])[0]);
+      bound++;
+    }
+    out.setExtras({ source_clip: name, source_file: 'shared/assets/models/people/motions.glb', pelvis_scale: k, rule: 'figure.js clipFor: rotations + scaled pelvis translation' });
+    clips.push({ id: 'motions:' + name, godot_name: name, duration_s: +dur.toFixed(6), channels: bound, pelvis_scale: k, unbound_targets: [...skipped].sort() });
   }
   // keep integer joints/weights/colours exactly; float the attributes that
   // core glTF (without KHR_mesh_quantization) requires as float
@@ -145,7 +195,7 @@ for (const id of PEOPLE) {
     textures: root.listTextures().map(t => ({ name: t.getName(), mime: t.getMimeType(), size: t.getSize() })),
     extensions_used: root.listExtensionsUsed().map(e => e.extensionName),
     transformations: ['meshopt decode', 'dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32', 'retain integer JOINTS/WEIGHTS/COLOR',
-      `restore authored NORMAL on ${restored.length} part(s) from the round-three master (see normal_restoration)`, `bind ${clips.length} fitted task clips by joint name`, PNG ? 'WebP -> PNG (lossless re-encode of decoded pixels)' : 'WebP kept (EXT_texture_webp)'],
+      `restore authored NORMAL on ${restored.length} part(s) from the round-three master (see normal_restoration)`, `bind ${clips.filter(c => !c.id.startsWith('motions:')).length} fitted task clips by joint name`, `bind ${clips.filter(c => c.id.startsWith('motions:')).length} shared motions (figure.js clipFor rule)`, PNG ? 'WebP -> PNG (lossless re-encode of decoded pixels)' : 'WebP kept (EXT_texture_webp)'],
     normal_restoration: restored,
     note: meta.people[id].note || null,
   };

@@ -275,5 +275,766 @@
   "excluded": [
     "shared/assets/audio/music/* (supplied review music: no gameplay/distribution assignment)",
     "music/ (private supplied originals)"
-  ]
+  ],
+  "day1a": {
+    "note": "Day-1A additions: recorded banks cut at the browser’s crop windows (scripts/migration/build_audio.py), two streamed recordings, and the office lists Day 1 uses for Sext and Nones (the opening versicle, then a psalm). Credits are taken from scripts/audio/cuts.json and sources.json.",
+    "banks": {
+      "bell": {
+        "source": "shared/assets/audio/bell.mp3",
+        "clips": [
+          [
+            0.2,
+            8.4
+          ]
+        ],
+        "credit": [
+          {
+            "title": "Angelus chartres Cathedral",
+            "author": "bruno.auzet",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/796547/"
+          }
+        ],
+        "window_source": "shared/assets/audio/manifest.json banks.bell",
+        "fade_out_s": 0.8,
+        "note": "single strike of the Chartres Angelus recording (field recording, not a designed bell); the office toll repeats it with slight pitch/level variation"
+      },
+      "hoof": {
+        "source": "shared/assets/audio/hoof.mp3",
+        "clips": [
+          [
+            0.2,
+            0.58925
+          ],
+          [
+            0.90925,
+            0.70311
+          ],
+          [
+            1.73236,
+            0.80159
+          ],
+          [
+            2.65395,
+            0.39104
+          ],
+          [
+            3.16499,
+            0.43224
+          ]
+        ],
+        "credit": [
+          {
+            "title": "Stable_chickens_horses.wav",
+            "author": "Lydmakeren",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/510915/"
+          },
+          {
+            "title": "sfx-horse-steps-1.wav",
+            "author": "davilca",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/159498/"
+          }
+        ],
+        "window_source": "shared/assets/audio/manifest.json banks.hoof"
+      },
+      "snort": {
+        "source": "shared/assets/audio/snort.mp3",
+        "clips": [
+          [
+            0.2,
+            0.55739
+          ],
+          [
+            0.87739,
+            0.74376
+          ],
+          [
+            1.74116,
+            0.7924
+          ],
+          [
+            2.65356,
+            1.09633
+          ],
+          [
+            3.86989,
+            0.78474
+          ]
+        ],
+        "credit": [
+          {
+            "title": "Horse(snort)_3.wav",
+            "author": "o_ciz",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/475483/"
+          },
+          {
+            "title": "G38-16-Four Horse Snorts.wav",
+            "author": "craigsmith",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/437111/"
+          }
+        ],
+        "window_source": "shared/assets/audio/manifest.json banks.snort"
+      },
+      "bray": {
+        "source": "shared/assets/audio/bray.mp3",
+        "clips": [
+          [
+            0.2,
+            8.94363
+          ]
+        ],
+        "credit": [
+          {
+            "title": "Donkeys - Squeaky High-Pitched Bray",
+            "author": "TheKingOfGeeks360",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/859477/"
+          }
+        ],
+        "window_source": "shared/assets/audio/manifest.json banks.bray"
+      },
+      "doorCreak": {
+        "source": "shared/assets/audio/doorCreak.mp3",
+        "clips": [
+          [
+            0.2,
+            4.04812
+          ],
+          [
+            4.36812,
+            0.93379
+          ],
+          [
+            5.4219,
+            1.80229
+          ]
+        ],
+        "credit": [
+          {
+            "title": "Big door creak.wav",
+            "author": "jemburyturner",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/273466/"
+          },
+          {
+            "title": "door creak 1.wav",
+            "author": "soundofsong",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/647646/"
+          },
+          {
+            "title": "Opening and closing a big old door.wav",
+            "author": "lazymonk",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/214307/"
+          }
+        ],
+        "window_source": "shared/assets/audio/manifest.json banks.doorCreak"
+      },
+      "doorThud": {
+        "source": "shared/assets/audio/doorThud.mp3",
+        "clips": [
+          [
+            0.2,
+            1.34875
+          ],
+          [
+            1.66875,
+            1.00054
+          ],
+          [
+            2.7893,
+            1.31202
+          ]
+        ],
+        "credit": [
+          {
+            "title": "Opening and closing a big old door.wav",
+            "author": "lazymonk",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/214307/"
+          },
+          {
+            "title": "Wood Door Close with Metal Latch 02",
+            "author": "MadMaxSFX",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/352329/"
+          }
+        ],
+        "window_source": "shared/assets/audio/manifest.json banks.doorThud"
+      },
+      "latch": {
+        "source": "shared/assets/audio/latch.mp3",
+        "clips": [
+          [
+            0.2,
+            0.83948
+          ],
+          [
+            1.15948,
+            0.79773
+          ],
+          [
+            2.07721,
+            0.87494
+          ],
+          [
+            3.07215,
+            1.03569
+          ]
+        ],
+        "credit": [
+          {
+            "title": "Iron_gate_courtyard_abbey_gardens_open_close_latch_mono.wav",
+            "author": "nickmaysoundmusic",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/460556/"
+          },
+          {
+            "title": "Gate Latch",
+            "author": "mhtaylor67",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/126041/"
+          }
+        ],
+        "window_source": "shared/assets/audio/manifest.json banks.latch"
+      },
+      "chew": {
+        "source": "shared/assets/audio/chew.mp3",
+        "clips": [
+          [
+            0.2,
+            2.19875
+          ],
+          [
+            2.51875,
+            2.09664
+          ],
+          [
+            4.7354,
+            1.98955
+          ],
+          [
+            6.84494,
+            2.18286
+          ],
+          [
+            9.1478,
+            2.49868
+          ],
+          [
+            11.76649,
+            2.50406
+          ]
+        ],
+        "credit": [
+          {
+            "title": "Horse chewing cud. 0.5m away",
+            "author": "gsparrysound",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/752136/"
+          },
+          {
+            "title": "Horse Eating",
+            "author": "gibarroule",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/365138/"
+          }
+        ],
+        "window_source": "shared/assets/audio/manifest.json banks.chew"
+      },
+      "pour": {
+        "source": "shared/assets/audio/pour.mp3",
+        "clips": [
+          [
+            0.2,
+            1.78274
+          ],
+          [
+            2.10274,
+            2.08728
+          ],
+          [
+            4.31002,
+            2.19542
+          ],
+          [
+            6.62544,
+            2.98655
+          ]
+        ],
+        "credit": [
+          {
+            "title": "Pour Splash metal bucket water.mp3",
+            "author": "JohnsonBrandEditing",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/173938/"
+          },
+          {
+            "title": "Pouring water in and out of different containers.wav",
+            "author": "kessir",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/264759/"
+          }
+        ],
+        "window_source": "shared/assets/audio/manifest.json banks.pour"
+      },
+      "strawRustle": {
+        "source": "shared/assets/audio/strawRustle.mp3",
+        "clips": [
+          [
+            0.2,
+            1.69342
+          ],
+          [
+            2.01342,
+            1.60082
+          ],
+          [
+            3.73424,
+            1.39447
+          ],
+          [
+            5.24871,
+            1.18755
+          ]
+        ],
+        "credit": [
+          {
+            "title": "Horse Eating",
+            "author": "gibarroule",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/365138/"
+          },
+          {
+            "title": "Chickens in the coop, morning",
+            "author": "fthgurdy",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/536693/"
+          }
+        ],
+        "window_source": "shared/assets/audio/manifest.json banks.strawRustle"
+      },
+      "timber": {
+        "source": "shared/assets/audio/timber.mp3",
+        "clips": [
+          [
+            0.2,
+            0.90077
+          ],
+          [
+            1.22077,
+            0.99245
+          ],
+          [
+            2.33322,
+            1.18789
+          ]
+        ],
+        "credit": [
+          {
+            "title": "Opening Bench.mp3",
+            "author": "kingsrow",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/182689/"
+          }
+        ],
+        "window_source": "shared/assets/audio/manifest.json banks.timber"
+      },
+      "metal": {
+        "source": "shared/assets/audio/metal.mp3",
+        "clips": [
+          [
+            0.2,
+            0.9866
+          ],
+          [
+            1.3066,
+            0.79943
+          ],
+          [
+            2.22603,
+            0.78662
+          ],
+          [
+            3.13265,
+            0.78392
+          ]
+        ],
+        "credit": [
+          {
+            "title": "metal bowl - hit - with wooden spoon 01.wav",
+            "author": "Anthousai",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/405665/"
+          },
+          {
+            "title": "Ceramic clank and sliding over wooden table.wav",
+            "author": "kessir",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/264757/"
+          }
+        ],
+        "window_source": "shared/assets/audio/manifest.json banks.metal"
+      },
+      "anvil": {
+        "source": "shared/assets/audio/anvil.mp3",
+        "clips": [
+          [
+            0.2,
+            2.18773
+          ],
+          [
+            2.50773,
+            0.73381
+          ]
+        ],
+        "credit": [
+          {
+            "title": "Anvil - Lokomo A 100 kg - Forging very hot steel 1 time",
+            "author": "ldezem",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/386119/"
+          },
+          {
+            "title": "Anvil - Lokomo 125 kg - Hammer on 6mm steel 1 time short",
+            "author": "ldezem",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/386130/"
+          }
+        ],
+        "window_source": "shared/assets/audio/manifest.json banks.anvil"
+      },
+      "caw": {
+        "source": "shared/assets/audio/caw.mp3",
+        "clips": [
+          [
+            0.2,
+            0.58113
+          ],
+          [
+            0.90113,
+            0.59796
+          ],
+          [
+            1.61909,
+            0.79673
+          ],
+          [
+            2.53583,
+            0.68435
+          ],
+          [
+            3.34018,
+            0.78923
+          ],
+          [
+            4.24941,
+            0.37234
+          ]
+        ],
+        "credit": [
+          {
+            "title": "Hooded crow.wav",
+            "author": "straget",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/404687/"
+          },
+          {
+            "title": "Crow Caw",
+            "author": "Jofae",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/361470/"
+          }
+        ],
+        "window_source": "shared/assets/audio/manifest.json banks.caw"
+      },
+      "cough": {
+        "source": "shared/assets/audio/cough.mp3",
+        "clips": [
+          [
+            0.2,
+            0.74478
+          ],
+          [
+            1.06478,
+            0.90406
+          ],
+          [
+            2.08884,
+            0.94937
+          ],
+          [
+            3.15821,
+            0.78791
+          ],
+          [
+            4.06612,
+            0.38014
+          ]
+        ],
+        "credit": [
+          {
+            "title": "Cough.wav",
+            "author": "Harris85",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/208761/"
+          },
+          {
+            "title": "old man cough",
+            "author": "riippumattog",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/848383/"
+          },
+          {
+            "title": "Cough (3)",
+            "author": "OwlStorm",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/151217/"
+          }
+        ],
+        "window_source": "shared/assets/audio/manifest.json banks.cough"
+      },
+      "pageTurn": {
+        "source": "shared/assets/audio/pageTurn.mp3",
+        "clips": [
+          [
+            0.2,
+            0.71866
+          ],
+          [
+            1.03866,
+            0.98444
+          ],
+          [
+            2.14311,
+            0.72048
+          ]
+        ],
+        "credit": [
+          {
+            "title": "Turning page (heavy paper)",
+            "author": "xkeril",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/856497/"
+          }
+        ],
+        "window_source": "shared/assets/audio/manifest.json banks.pageTurn"
+      },
+      "benchCreak": {
+        "source": "shared/assets/audio/benchCreak.mp3",
+        "clips": [
+          [
+            0.2,
+            0.27528
+          ],
+          [
+            0.59528,
+            0.30143
+          ],
+          [
+            1.01671,
+            0.25814
+          ],
+          [
+            1.39485,
+            0.54973
+          ]
+        ],
+        "credit": [
+          {
+            "title": "Wooden Creak",
+            "author": "Mafon2",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/377552/"
+          },
+          {
+            "title": "creaking floor OWI.wav",
+            "author": "miekyj",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/326460/"
+          }
+        ],
+        "window_source": "shared/assets/audio/manifest.json banks.benchCreak"
+      },
+      "sweep": {
+        "source": "shared/assets/audio/sweep.mp3",
+        "clips": [
+          [
+            0.2,
+            0.62374
+          ],
+          [
+            0.94374,
+            0.63107
+          ],
+          [
+            1.69481,
+            0.62449
+          ],
+          [
+            2.4393,
+            0.63259
+          ],
+          [
+            3.19188,
+            0.62327
+          ],
+          [
+            3.93515,
+            0.63002
+          ],
+          [
+            4.68517,
+            0.49059
+          ],
+          [
+            5.29576,
+            0.62302
+          ]
+        ],
+        "credit": [
+          {
+            "title": "Broom Sweeping",
+            "author": "Sheyvan",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/831439/"
+          }
+        ],
+        "window_source": "shared/assets/audio/manifest.json banks.sweep"
+      },
+      "step:straw": {
+        "source": "shared/assets/audio/step_straw.mp3",
+        "clips": [
+          [
+            0.2,
+            0.60932
+          ],
+          [
+            0.92932,
+            0.61408
+          ],
+          [
+            1.6634,
+            0.59016
+          ],
+          [
+            2.37356,
+            0.59576
+          ],
+          [
+            3.08932,
+            0.6102
+          ],
+          [
+            3.81952,
+            0.60669
+          ],
+          [
+            4.54621,
+            0.60744
+          ],
+          [
+            5.27365,
+            0.61234
+          ],
+          [
+            6.00599,
+            0.61238
+          ],
+          [
+            6.73837,
+            0.60236
+          ],
+          [
+            7.46073,
+            0.59585
+          ],
+          [
+            8.17658,
+            0.59707
+          ]
+        ],
+        "credit": [
+          {
+            "title": "steps_dry_grass.wav",
+            "author": "Mystikuum",
+            "licence": "CC0 1.0",
+            "url": "https://freesound.org/s/377323/"
+          }
+        ],
+        "window_source": "shared/assets/audio/manifest.json banks.step:straw"
+      }
+    },
+    "streams": {
+      "windTrees": {
+        "source": "shared/assets/audio/windTrees.mp3",
+        "native": "res://assets/audio/day1a/windTrees.mp3",
+        "clip": [
+          0.2,
+          49.00007
+        ],
+        "loop": true,
+        "credit": {
+          "title": "winter wind in trees.wav",
+          "author": "lwdickens",
+          "licence": "CC0 1.0",
+          "url": "https://freesound.org/s/261226/"
+        }
+      },
+      "chant:psalm": {
+        "source": "shared/assets/audio/chant_psalm.mp3",
+        "native": "res://assets/audio/day1a/chant_psalm.mp3",
+        "clip": [
+          0.2,
+          97.49011
+        ],
+        "lvl": 1.0,
+        "stream": true,
+        "credit": {
+          "title": "San Antimo, monks singing Gregorian chant at a Sunday morning service",
+          "author": "Zyance (recording); the monks of Sant’Antimo",
+          "url": "https://commons.wikimedia.org/wiki/File:Sanantimo_gregorian.ogg",
+          "licence": "CC BY-SA 3.0",
+          "note": "trimmed and levelled derivative shared under the same licence"
+        }
+      }
+    },
+    "chant_for": {
+      "sext": [
+        "chant:deus",
+        "chant:psalm"
+      ],
+      "nones": [
+        "chant:deus",
+        "chant:psalm"
+      ]
+    },
+    "bell_tower": [
+      34.4,
+      19.5,
+      -5.46
+    ],
+    "smithy": [
+      78.53,
+      1.4,
+      56.91
+    ],
+    "crows": [
+      [
+        -75.6,
+        8.0,
+        -31.5
+      ],
+      [
+        96.0,
+        2.0,
+        -68.0
+      ]
+    ]
+  }
 }

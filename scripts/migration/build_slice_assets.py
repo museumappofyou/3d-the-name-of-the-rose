@@ -26,8 +26,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 EXP = ROOT / 'shared/data/export'
 GD = ROOT / 'native'
-OUT = GD / 'shared/assets/world'
-TEX = GD / 'shared/assets/textures'
+OUT = GD / 'assets/world'
+TEX = GD / 'assets/textures'
 MANIFEST = ROOT / 'shared/data/manifests/world_derivatives.json'
 
 

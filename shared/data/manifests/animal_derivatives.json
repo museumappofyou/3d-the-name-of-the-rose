@@ -1,0 +1,35 @@
+{
+ "schema_version": 1,
+ "generator": "scripts/migration/normalize_animals.mjs",
+ "animals": {
+  "mule": {
+   "source": "shared/assets/models/animal_donkey.glb",
+   "source_sha256": "c4281cd2c947d800fd589b637d3a41d945e5cd496b7cf12f93471cc94e9cb5d7",
+   "output": "native/assets/animals/mule/mule.glb",
+   "output_sha256": "5eb70f9f406d666125915b6177875a7057fcf3df43c6b7e9f25fcb40bb25329a",
+   "licence": "CC0 1.0 (Quaternius farm animals; shared/provenance/model-sources.json)",
+   "clips": [
+    "Eating",
+    "Walk",
+    "Idle_Headlow",
+    "Idle_2",
+    "Idle"
+   ],
+   "bind_height_m": 3.95378,
+   "target_height_m": 1.62,
+   "scale": 0.409734,
+   "coat": {
+    "Main": "4f4034",
+    "Main_Light": "7a6a58",
+    "Hair": "2a221c",
+    "Muzzle": "6a5c4e",
+    "Hooves": "2a2521"
+   },
+   "browser_binding": "web/src/world/animals.js KIND.mule (donkey fitted to 1.62 m) and COATS.mule",
+   "transformations": [
+    "meshopt decode",
+    "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32"
+   ]
+  }
+ }
+}

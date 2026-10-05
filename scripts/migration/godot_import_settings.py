@@ -29,6 +29,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 MANIFEST = ROOT / 'shared/data/manifests/people_derivatives.json'
 WORLD = ROOT / 'shared/data/manifests/world_derivatives.json'
+WORLD_DAY1A = ROOT / 'shared/data/manifests/world_day1a_derivatives.json'
 
 
 def subresources(clips):
@@ -62,9 +63,14 @@ def main():
         text = re.sub(r'^_subresources=.*?(?=^\w|\Z)', '_subresources=' + godot_value(subresources(rec['clips'])) + '\n', text, flags=re.M | re.S)
         imp.write_text(text)
         print('pinned', imp.relative_to(ROOT), len(rec['clips']), 'clips')
-    if WORLD.exists():
-        w = json.loads(WORLD.read_text())
-        mats = {k: {'use_external/enabled': True, 'use_external/path': v['resource']} for k, v in w['materials'].items()}
+    # phase-1 GLBs keep exactly their own key map (unchanged .import files);
+    # Day-1A GLBs bind against the union (they reuse phase-1 materials)
+    worlds = [json.loads(f.read_text()) for f in (WORLD, WORLD_DAY1A) if f.exists()]
+    union = {}
+    for w in worlds:
+        union.update({k: {'use_external/enabled': True, 'use_external/path': v['resource']} for k, v in w['materials'].items()})
+    for wi, w in enumerate(worlds):
+        mats = {k: {'use_external/enabled': True, 'use_external/path': v['resource']} for k, v in w['materials'].items()} if wi == 0 else union
         for d in w['derivatives']:
             out = d['output']
             if not out.endswith('.glb'):

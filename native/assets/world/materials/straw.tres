@@ -1,0 +1,23 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3]
+
+[ext_resource type="Shader" path="res://shaders/abbey_pbr.gdshader" id="1"]
+[ext_resource type="Texture2D" path="res://assets/world/day1a/generated/straw_map.png" id="2"]
+
+[resource]
+resource_name = "straw"
+render_priority = 0
+shader = ExtResource("1")
+shader_parameter/albedo_color = Color(0.847059, 0.784314, 0.643137, 1.000000)
+shader_parameter/uv_repeat = Vector2(0.500000, 0.500000)
+shader_parameter/uv_offset = Vector2(0.000000, 0.000000)
+shader_parameter/uv_rotation = 0.000000
+shader_parameter/has_albedo_tex = true
+shader_parameter/albedo_tex = ExtResource("2")
+shader_parameter/has_normal_tex = false
+shader_parameter/has_arm_tex = false
+shader_parameter/roughness_value = 0.9700
+shader_parameter/rough_from_arm = false
+shader_parameter/metallic_value = 0.0000
+shader_parameter/opacity = 1.0000
+shader_parameter/env_intensity = 0.1800
+shader_parameter/weathering = false

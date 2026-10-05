@@ -345,8 +345,8 @@
     "monk_a": {
       "asset_id": "character:monk_a",
       "output": "native/assets/characters/monk_a/monk_a.glb",
-      "output_sha256": "9483561833bc312aac36369134ff8e1d2b99c84488d8d49fcff0af9db08283cb",
-      "output_bytes": 1463688,
+      "output_sha256": "e866fac8ae4eea4ac3c6c5053519e07ca9c0286638f5f2a0f10da5e7c49b0164",
+      "output_bytes": 2157240,
       "height_m": 1.7491,
       "pelvis_m": 0.944,
       "head_m": 1.5976,
@@ -537,6 +537,142 @@
           "godot_name": "dine",
           "duration_s": 9.041667,
           "channels": 159
+        },
+        {
+          "id": "motions:walk",
+          "godot_name": "walk",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 1.005,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkFormal",
+          "godot_name": "walkFormal",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 1.005,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkCarry",
+          "godot_name": "walkCarry",
+          "duration_s": 2.541667,
+          "channels": 54,
+          "pelvis_scale": 1.005,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkHeavy",
+          "godot_name": "walkHeavy",
+          "duration_s": 1.791667,
+          "channels": 54,
+          "pelvis_scale": 1.005,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idle",
+          "godot_name": "idle",
+          "duration_s": 3.958333,
+          "channels": 54,
+          "pelvis_scale": 1.005,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idleSubtle",
+          "godot_name": "idleSubtle",
+          "duration_s": 3.25,
+          "channels": 54,
+          "pelvis_scale": 1.005,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:foldArms",
+          "godot_name": "foldArms",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 1.005,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:listen",
+          "godot_name": "listen",
+          "duration_s": 2.166667,
+          "channels": 54,
+          "pelvis_scale": 1.005,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:talk",
+          "godot_name": "talk",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 1.005,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:nod",
+          "godot_name": "nod",
+          "duration_s": 1.125,
+          "channels": 54,
+          "pelvis_scale": 1.005,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:pickUp",
+          "godot_name": "pickUp",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 1.005,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:interact",
+          "godot_name": "interact",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 1.005,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:hunched",
+          "godot_name": "hunched",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 1.005,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:greet",
+          "godot_name": "greet",
+          "duration_s": 6.083333,
+          "channels": 54,
+          "pelvis_scale": 1.005,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitRec",
+          "godot_name": "sitRec",
+          "duration_s": 2.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitTalkRec",
+          "godot_name": "sitTalkRec",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:kneelWork",
+          "godot_name": "kneelWork",
+          "duration_s": 8.166667,
+          "channels": 54,
+          "pelvis_scale": 1.005,
+          "unbound_targets": []
         }
       ],
       "textures": [
@@ -615,6 +751,7 @@
         "retain integer JOINTS/WEIGHTS/COLOR",
         "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
         "bind 9 fitted task clips by joint name",
+        "bind 17 shared motions (figure.js clipFor rule)",
         "WebP kept (EXT_texture_webp)"
       ],
       "normal_restoration": [
@@ -687,8 +824,8 @@
     "scribe_a": {
       "asset_id": "character:scribe_a",
       "output": "native/assets/characters/scribe_a/scribe_a.glb",
-      "output_sha256": "eb2d54d690eedb50056175bace699cb2fecb54b4b2f67aa7efee40faa64927e5",
-      "output_bytes": 1465284,
+      "output_sha256": "64ed245c35ddb86d7145b454ed32d4fd9179fa64faf8404f1770f0f7e1267aaa",
+      "output_bytes": 2158784,
       "height_m": 1.7426,
       "pelvis_m": 0.9383,
       "head_m": 1.596,
@@ -879,6 +1016,142 @@
           "godot_name": "dine",
           "duration_s": 9.041667,
           "channels": 159
+        },
+        {
+          "id": "motions:walk",
+          "godot_name": "walk",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkFormal",
+          "godot_name": "walkFormal",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkCarry",
+          "godot_name": "walkCarry",
+          "duration_s": 2.541667,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkHeavy",
+          "godot_name": "walkHeavy",
+          "duration_s": 1.791667,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idle",
+          "godot_name": "idle",
+          "duration_s": 3.958333,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idleSubtle",
+          "godot_name": "idleSubtle",
+          "duration_s": 3.25,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:foldArms",
+          "godot_name": "foldArms",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:listen",
+          "godot_name": "listen",
+          "duration_s": 2.166667,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:talk",
+          "godot_name": "talk",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:nod",
+          "godot_name": "nod",
+          "duration_s": 1.125,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:pickUp",
+          "godot_name": "pickUp",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:interact",
+          "godot_name": "interact",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:hunched",
+          "godot_name": "hunched",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:greet",
+          "godot_name": "greet",
+          "duration_s": 6.083333,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitRec",
+          "godot_name": "sitRec",
+          "duration_s": 2.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitTalkRec",
+          "godot_name": "sitTalkRec",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:kneelWork",
+          "godot_name": "kneelWork",
+          "duration_s": 8.166667,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
         }
       ],
       "textures": [
@@ -957,6 +1230,7 @@
         "retain integer JOINTS/WEIGHTS/COLOR",
         "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
         "bind 9 fitted task clips by joint name",
+        "bind 17 shared motions (figure.js clipFor rule)",
         "WebP kept (EXT_texture_webp)"
       ],
       "normal_restoration": [
@@ -1029,8 +1303,8 @@
     "monk_b": {
       "asset_id": "character:monk_b",
       "output": "native/assets/characters/monk_b/monk_b.glb",
-      "output_sha256": "609cdd49affff06ccc5b32fd6e4498f0004542708be1ba76d9a836ee41787016",
-      "output_bytes": 1523444,
+      "output_sha256": "5586737a0f646a639e0f329539759e914171f1eba4dd59c7e1386a5e737191ea",
+      "output_bytes": 2216988,
       "height_m": 1.7148,
       "pelvis_m": 0.9283,
       "head_m": 1.5668,
@@ -1221,6 +1495,142 @@
           "godot_name": "dine",
           "duration_s": 9.041667,
           "channels": 159
+        },
+        {
+          "id": "motions:walk",
+          "godot_name": "walk",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 0.99,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkFormal",
+          "godot_name": "walkFormal",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 0.99,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkCarry",
+          "godot_name": "walkCarry",
+          "duration_s": 2.541667,
+          "channels": 54,
+          "pelvis_scale": 0.99,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkHeavy",
+          "godot_name": "walkHeavy",
+          "duration_s": 1.791667,
+          "channels": 54,
+          "pelvis_scale": 0.99,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idle",
+          "godot_name": "idle",
+          "duration_s": 3.958333,
+          "channels": 54,
+          "pelvis_scale": 0.99,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idleSubtle",
+          "godot_name": "idleSubtle",
+          "duration_s": 3.25,
+          "channels": 54,
+          "pelvis_scale": 0.99,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:foldArms",
+          "godot_name": "foldArms",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 0.99,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:listen",
+          "godot_name": "listen",
+          "duration_s": 2.166667,
+          "channels": 54,
+          "pelvis_scale": 0.99,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:talk",
+          "godot_name": "talk",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 0.99,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:nod",
+          "godot_name": "nod",
+          "duration_s": 1.125,
+          "channels": 54,
+          "pelvis_scale": 0.99,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:pickUp",
+          "godot_name": "pickUp",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 0.99,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:interact",
+          "godot_name": "interact",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 0.99,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:hunched",
+          "godot_name": "hunched",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 0.99,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:greet",
+          "godot_name": "greet",
+          "duration_s": 6.083333,
+          "channels": 54,
+          "pelvis_scale": 0.99,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitRec",
+          "godot_name": "sitRec",
+          "duration_s": 2.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitTalkRec",
+          "godot_name": "sitTalkRec",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:kneelWork",
+          "godot_name": "kneelWork",
+          "duration_s": 8.166667,
+          "channels": 54,
+          "pelvis_scale": 0.99,
+          "unbound_targets": []
         }
       ],
       "textures": [
@@ -1299,6 +1709,7 @@
         "retain integer JOINTS/WEIGHTS/COLOR",
         "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
         "bind 9 fitted task clips by joint name",
+        "bind 17 shared motions (figure.js clipFor rule)",
         "WebP kept (EXT_texture_webp)"
       ],
       "normal_restoration": [
@@ -1371,8 +1782,8 @@
     "novice_a": {
       "asset_id": "character:novice_a",
       "output": "native/assets/characters/novice_a/novice_a.glb",
-      "output_sha256": "ca5cc3631f9380d277cf4af396f3dd2e6fbf07ee59abe6e81f0bd4c3b5a8b2c8",
-      "output_bytes": 1472516,
+      "output_sha256": "309cb15f7a40cd8e40961faf142694d5d08d5b1d35c4612a5892fca6daa1d859",
+      "output_bytes": 2166076,
       "height_m": 1.4965,
       "pelvis_m": 0.7832,
       "head_m": 1.354,
@@ -1563,6 +1974,142 @@
           "godot_name": "dine",
           "duration_s": 9.041667,
           "channels": 159
+        },
+        {
+          "id": "motions:walk",
+          "godot_name": "walk",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 0.835,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkFormal",
+          "godot_name": "walkFormal",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 0.835,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkCarry",
+          "godot_name": "walkCarry",
+          "duration_s": 2.541667,
+          "channels": 54,
+          "pelvis_scale": 0.835,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkHeavy",
+          "godot_name": "walkHeavy",
+          "duration_s": 1.791667,
+          "channels": 54,
+          "pelvis_scale": 0.835,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idle",
+          "godot_name": "idle",
+          "duration_s": 3.958333,
+          "channels": 54,
+          "pelvis_scale": 0.835,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idleSubtle",
+          "godot_name": "idleSubtle",
+          "duration_s": 3.25,
+          "channels": 54,
+          "pelvis_scale": 0.835,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:foldArms",
+          "godot_name": "foldArms",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 0.835,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:listen",
+          "godot_name": "listen",
+          "duration_s": 2.166667,
+          "channels": 54,
+          "pelvis_scale": 0.835,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:talk",
+          "godot_name": "talk",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 0.835,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:nod",
+          "godot_name": "nod",
+          "duration_s": 1.125,
+          "channels": 54,
+          "pelvis_scale": 0.835,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:pickUp",
+          "godot_name": "pickUp",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 0.835,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:interact",
+          "godot_name": "interact",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 0.835,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:hunched",
+          "godot_name": "hunched",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 0.835,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:greet",
+          "godot_name": "greet",
+          "duration_s": 6.083333,
+          "channels": 54,
+          "pelvis_scale": 0.835,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitRec",
+          "godot_name": "sitRec",
+          "duration_s": 2.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitTalkRec",
+          "godot_name": "sitTalkRec",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:kneelWork",
+          "godot_name": "kneelWork",
+          "duration_s": 8.166667,
+          "channels": 54,
+          "pelvis_scale": 0.835,
+          "unbound_targets": []
         }
       ],
       "textures": [
@@ -1641,6 +2188,7 @@
         "retain integer JOINTS/WEIGHTS/COLOR",
         "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
         "bind 9 fitted task clips by joint name",
+        "bind 17 shared motions (figure.js clipFor rule)",
         "WebP kept (EXT_texture_webp)"
       ],
       "normal_restoration": [
@@ -1709,6 +2257,3866 @@
         }
       ],
       "note": "a novice, about seventeen, slight"
+    },
+    "monk_c": {
+      "asset_id": "character:monk_c",
+      "output": "native/assets/characters/monk_c/monk_c.glb",
+      "output_sha256": "2a7e05c4285496ce7e1c75f5ae384a50c4918d4c6b0bea699372d361ab755f24",
+      "output_bytes": 2164308,
+      "height_m": 1.8069,
+      "pelvis_m": 0.9774,
+      "head_m": 1.6521,
+      "joints": [
+        {
+          "skin": "monk_c",
+          "joints": 53
+        }
+      ],
+      "skins_count": 1,
+      "parts": [
+        {
+          "node": "monk_c.boots",
+          "part": "boots",
+          "material": "boots:toigo_ankle_boots_male",
+          "skin": "monk_c",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "NORMAL": "5126",
+            "TEXCOORD_0": "5126"
+          }
+        },
+        {
+          "node": "monk_c.brows",
+          "part": "brows",
+          "material": "brow:eyebrow006",
+          "skin": "monk_c",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_c.eyes",
+          "part": "eyes",
+          "material": "eye:eye_blue_bl_c.jpg",
+          "skin": "monk_c",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_c.habit",
+          "part": "habit",
+          "material": "habit:black",
+          "skin": "monk_c",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_c.hair",
+          "part": "hair",
+          "material": "hair:hair_short02_brown.png",
+          "skin": "monk_c",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "COLOR_0": "5121n",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_c.hood_down",
+          "part": "hood_down",
+          "material": "habit:black",
+          "skin": "monk_c",
+          "encodings": {
+            "TEXCOORD_0": "5126",
+            "JOINTS_0": "5123",
+            "WEIGHTS_0": "5126",
+            "POSITION": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_c.hood_up",
+          "part": "hood_up",
+          "material": "habit:black",
+          "skin": "monk_c",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_c.lashes",
+          "part": "lashes",
+          "material": "lash",
+          "skin": "monk_c",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_c.skin",
+          "part": "skin",
+          "material": "skin:toigo_light_skin_male_freckles",
+          "skin": "monk_c",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        }
+      ],
+      "morph_targets": {
+        "hood_down": [
+          "bendDrape"
+        ]
+      },
+      "triangles": 16426,
+      "clips": [
+        {
+          "id": "monk_c:write",
+          "godot_name": "write",
+          "duration_s": 15.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_c:sitBench",
+          "godot_name": "sitBench",
+          "duration_s": 8.833333,
+          "channels": 159
+        },
+        {
+          "id": "monk_c:kneelPray",
+          "godot_name": "kneelPray",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_c:kneelBow",
+          "godot_name": "kneelBow",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_c:read",
+          "godot_name": "read",
+          "duration_s": 12.041667,
+          "channels": 159
+        },
+        {
+          "id": "monk_c:tend",
+          "godot_name": "tend",
+          "duration_s": 10.041667,
+          "channels": 159
+        },
+        {
+          "id": "monk_c:standSleeves",
+          "godot_name": "standSleeves",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "monk_c:standBow",
+          "godot_name": "standBow",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "monk_c:dine",
+          "godot_name": "dine",
+          "duration_s": 9.041667,
+          "channels": 159
+        },
+        {
+          "id": "motions:walk",
+          "godot_name": "walk",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 1.04,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkFormal",
+          "godot_name": "walkFormal",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 1.04,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkCarry",
+          "godot_name": "walkCarry",
+          "duration_s": 2.541667,
+          "channels": 54,
+          "pelvis_scale": 1.04,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkHeavy",
+          "godot_name": "walkHeavy",
+          "duration_s": 1.791667,
+          "channels": 54,
+          "pelvis_scale": 1.04,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idle",
+          "godot_name": "idle",
+          "duration_s": 3.958333,
+          "channels": 54,
+          "pelvis_scale": 1.04,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idleSubtle",
+          "godot_name": "idleSubtle",
+          "duration_s": 3.25,
+          "channels": 54,
+          "pelvis_scale": 1.04,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:foldArms",
+          "godot_name": "foldArms",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 1.04,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:listen",
+          "godot_name": "listen",
+          "duration_s": 2.166667,
+          "channels": 54,
+          "pelvis_scale": 1.04,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:talk",
+          "godot_name": "talk",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 1.04,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:nod",
+          "godot_name": "nod",
+          "duration_s": 1.125,
+          "channels": 54,
+          "pelvis_scale": 1.04,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:pickUp",
+          "godot_name": "pickUp",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 1.04,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:interact",
+          "godot_name": "interact",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 1.04,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:hunched",
+          "godot_name": "hunched",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 1.04,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:greet",
+          "godot_name": "greet",
+          "duration_s": 6.083333,
+          "channels": 54,
+          "pelvis_scale": 1.04,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitRec",
+          "godot_name": "sitRec",
+          "duration_s": 2.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitTalkRec",
+          "godot_name": "sitTalkRec",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:kneelWork",
+          "godot_name": "kneelWork",
+          "duration_s": 8.166667,
+          "channels": 54,
+          "pelvis_scale": 1.04,
+          "unbound_targets": []
+        }
+      ],
+      "textures": [
+        {
+          "name": "boots_toigo_ankle_boots_male",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "robe_normal",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "robe_black",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "lash01",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "hair_short02_brown",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "brow_eyebrow006",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "eye_blue_bl_c",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "skin_toigo_light_skin_male_freckles_s0.7",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        }
+      ],
+      "extensions_used": [
+        "EXT_texture_webp",
+        "KHR_materials_specular"
+      ],
+      "transformations": [
+        "meshopt decode",
+        "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+        "retain integer JOINTS/WEIGHTS/COLOR",
+        "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
+        "bind 9 fitted task clips by joint name",
+        "bind 17 shared motions (figure.js clipFor rule)",
+        "WebP kept (EXT_texture_webp)"
+      ],
+      "normal_restoration": [
+        {
+          "node": "monk_c.brows",
+          "vertices": 124,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.594e-7,
+          "max_position_residual_m": 2.393e-7
+        },
+        {
+          "node": "monk_c.eyes",
+          "vertices": 96,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.041e-7,
+          "max_position_residual_m": 2.264e-7
+        },
+        {
+          "node": "monk_c.habit",
+          "vertices": 2998,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.121e-7,
+          "max_position_residual_m": 3.193e-7
+        },
+        {
+          "node": "monk_c.hair",
+          "vertices": 827,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 2.005e-7,
+          "max_position_residual_m": 2.451e-7
+        },
+        {
+          "node": "monk_c.hood_up",
+          "vertices": 971,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.37e-7,
+          "max_position_residual_m": 2.57e-7
+        },
+        {
+          "node": "monk_c.lashes",
+          "vertices": 250,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.124e-7,
+          "max_position_residual_m": 2.332e-7
+        },
+        {
+          "node": "monk_c.skin",
+          "vertices": 2801,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 8.596e-8,
+          "max_position_residual_m": 3.196e-7
+        }
+      ],
+      "note": "a brother, tall and narrow, fair and freckled"
+    },
+    "monk_e": {
+      "asset_id": "character:monk_e",
+      "output": "native/assets/characters/monk_e/monk_e.glb",
+      "output_sha256": "e8e243136c3ca7f916e2aa9c3d41b336ed67aefa124782a6f13fd6005726db55",
+      "output_bytes": 2147924,
+      "height_m": 1.7326,
+      "pelvis_m": 0.9395,
+      "head_m": 1.5871,
+      "joints": [
+        {
+          "skin": "monk_e",
+          "joints": 53
+        }
+      ],
+      "skins_count": 1,
+      "parts": [
+        {
+          "node": "monk_e.boots",
+          "part": "boots",
+          "material": "boots:toigo_ankle_boots_male",
+          "skin": "monk_e",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "NORMAL": "5126",
+            "TEXCOORD_0": "5126"
+          }
+        },
+        {
+          "node": "monk_e.brows",
+          "part": "brows",
+          "material": "brow:eyebrow003",
+          "skin": "monk_e",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_e.eyes",
+          "part": "eyes",
+          "material": "eye:eye_brown_brot.jpg",
+          "skin": "monk_e",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_e.habit",
+          "part": "habit",
+          "material": "habit:black",
+          "skin": "monk_e",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_e.hair",
+          "part": "hair",
+          "material": "hair:hair_short02_brown.png",
+          "skin": "monk_e",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "COLOR_0": "5121n",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_e.hood_down",
+          "part": "hood_down",
+          "material": "habit:black",
+          "skin": "monk_e",
+          "encodings": {
+            "TEXCOORD_0": "5126",
+            "JOINTS_0": "5123",
+            "WEIGHTS_0": "5126",
+            "POSITION": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_e.hood_up",
+          "part": "hood_up",
+          "material": "habit:black",
+          "skin": "monk_e",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_e.lashes",
+          "part": "lashes",
+          "material": "lash",
+          "skin": "monk_e",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_e.skin",
+          "part": "skin",
+          "material": "skin:toigo_light_skin_male_bronze",
+          "skin": "monk_e",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        }
+      ],
+      "morph_targets": {
+        "hood_down": [
+          "bendDrape"
+        ]
+      },
+      "triangles": 16427,
+      "clips": [
+        {
+          "id": "monk_e:write",
+          "godot_name": "write",
+          "duration_s": 15.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_e:sitBench",
+          "godot_name": "sitBench",
+          "duration_s": 8.833333,
+          "channels": 159
+        },
+        {
+          "id": "monk_e:kneelPray",
+          "godot_name": "kneelPray",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_e:kneelBow",
+          "godot_name": "kneelBow",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_e:read",
+          "godot_name": "read",
+          "duration_s": 12.041667,
+          "channels": 159
+        },
+        {
+          "id": "monk_e:tend",
+          "godot_name": "tend",
+          "duration_s": 10.041667,
+          "channels": 159
+        },
+        {
+          "id": "monk_e:standSleeves",
+          "godot_name": "standSleeves",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "monk_e:standBow",
+          "godot_name": "standBow",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "monk_e:dine",
+          "godot_name": "dine",
+          "duration_s": 9.041667,
+          "channels": 159
+        },
+        {
+          "id": "motions:walk",
+          "godot_name": "walk",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkFormal",
+          "godot_name": "walkFormal",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkCarry",
+          "godot_name": "walkCarry",
+          "duration_s": 2.541667,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkHeavy",
+          "godot_name": "walkHeavy",
+          "duration_s": 1.791667,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idle",
+          "godot_name": "idle",
+          "duration_s": 3.958333,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idleSubtle",
+          "godot_name": "idleSubtle",
+          "duration_s": 3.25,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:foldArms",
+          "godot_name": "foldArms",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:listen",
+          "godot_name": "listen",
+          "duration_s": 2.166667,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:talk",
+          "godot_name": "talk",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:nod",
+          "godot_name": "nod",
+          "duration_s": 1.125,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:pickUp",
+          "godot_name": "pickUp",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:interact",
+          "godot_name": "interact",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:hunched",
+          "godot_name": "hunched",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:greet",
+          "godot_name": "greet",
+          "duration_s": 6.083333,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitRec",
+          "godot_name": "sitRec",
+          "duration_s": 2.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitTalkRec",
+          "godot_name": "sitTalkRec",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:kneelWork",
+          "godot_name": "kneelWork",
+          "duration_s": 8.166667,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        }
+      ],
+      "textures": [
+        {
+          "name": "boots_toigo_ankle_boots_male",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "eye_brown_brot",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "robe_normal",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "robe_black",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "lash01",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "hair_short02_brown",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "brow_eyebrow003",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "skin_toigo_light_skin_male_bronze_s0.55",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        }
+      ],
+      "extensions_used": [
+        "EXT_texture_webp",
+        "KHR_materials_specular"
+      ],
+      "transformations": [
+        "meshopt decode",
+        "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+        "retain integer JOINTS/WEIGHTS/COLOR",
+        "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
+        "bind 9 fitted task clips by joint name",
+        "bind 17 shared motions (figure.js clipFor rule)",
+        "WebP kept (EXT_texture_webp)"
+      ],
+      "normal_restoration": [
+        {
+          "node": "monk_e.brows",
+          "vertices": 124,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.524e-7,
+          "max_position_residual_m": 2.368e-7
+        },
+        {
+          "node": "monk_e.eyes",
+          "vertices": 96,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.531e-7,
+          "max_position_residual_m": 2.365e-7
+        },
+        {
+          "node": "monk_e.habit",
+          "vertices": 2999,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 6.198e-8,
+          "max_position_residual_m": 3.239e-7
+        },
+        {
+          "node": "monk_e.hair",
+          "vertices": 830,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 9.542e-8,
+          "max_position_residual_m": 2.473e-7
+        },
+        {
+          "node": "monk_e.hood_up",
+          "vertices": 979,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.511e-7,
+          "max_position_residual_m": 2.52e-7
+        },
+        {
+          "node": "monk_e.lashes",
+          "vertices": 250,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.525e-7,
+          "max_position_residual_m": 2.384e-7
+        },
+        {
+          "node": "monk_e.skin",
+          "vertices": 2792,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 8.384e-8,
+          "max_position_residual_m": 3.174e-7
+        }
+      ],
+      "note": "a brother of middle years, stocky, weathered"
+    },
+    "monk_f": {
+      "asset_id": "character:monk_f",
+      "output": "native/assets/characters/monk_f/monk_f.glb",
+      "output_sha256": "118d1c548ea4e33fe982a34be3bffedd76ffd0c6a72e657c51747d771b5b7051",
+      "output_bytes": 2158088,
+      "height_m": 1.733,
+      "pelvis_m": 0.9318,
+      "head_m": 1.5876,
+      "joints": [
+        {
+          "skin": "monk_f",
+          "joints": 53
+        }
+      ],
+      "skins_count": 1,
+      "parts": [
+        {
+          "node": "monk_f.boots",
+          "part": "boots",
+          "material": "boots:toigo_ankle_boots_male",
+          "skin": "monk_f",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "NORMAL": "5126",
+            "TEXCOORD_0": "5126"
+          }
+        },
+        {
+          "node": "monk_f.brows",
+          "part": "brows",
+          "material": "brow:eyebrow002",
+          "skin": "monk_f",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_f.eyes",
+          "part": "eyes",
+          "material": "eye:eye_blue_bl_c.jpg",
+          "skin": "monk_f",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_f.habit",
+          "part": "habit",
+          "material": "habit:black",
+          "skin": "monk_f",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_f.hair",
+          "part": "hair",
+          "material": "hair:hair_short02_brown.png",
+          "skin": "monk_f",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "COLOR_0": "5121n",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_f.hood_down",
+          "part": "hood_down",
+          "material": "habit:black",
+          "skin": "monk_f",
+          "encodings": {
+            "TEXCOORD_0": "5126",
+            "JOINTS_0": "5123",
+            "WEIGHTS_0": "5126",
+            "POSITION": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_f.hood_up",
+          "part": "hood_up",
+          "material": "habit:black",
+          "skin": "monk_f",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_f.lashes",
+          "part": "lashes",
+          "material": "lash",
+          "skin": "monk_f",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_f.skin",
+          "part": "skin",
+          "material": "skin:young_caucasian_male",
+          "skin": "monk_f",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        }
+      ],
+      "morph_targets": {
+        "hood_down": [
+          "bendDrape"
+        ]
+      },
+      "triangles": 16429,
+      "clips": [
+        {
+          "id": "monk_f:write",
+          "godot_name": "write",
+          "duration_s": 15.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_f:sitBench",
+          "godot_name": "sitBench",
+          "duration_s": 8.833333,
+          "channels": 159
+        },
+        {
+          "id": "monk_f:kneelPray",
+          "godot_name": "kneelPray",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_f:kneelBow",
+          "godot_name": "kneelBow",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_f:read",
+          "godot_name": "read",
+          "duration_s": 12.041667,
+          "channels": 159
+        },
+        {
+          "id": "monk_f:tend",
+          "godot_name": "tend",
+          "duration_s": 10.041667,
+          "channels": 159
+        },
+        {
+          "id": "monk_f:standSleeves",
+          "godot_name": "standSleeves",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "monk_f:standBow",
+          "godot_name": "standBow",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "monk_f:dine",
+          "godot_name": "dine",
+          "duration_s": 9.041667,
+          "channels": 159
+        },
+        {
+          "id": "motions:walk",
+          "godot_name": "walk",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 0.995,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkFormal",
+          "godot_name": "walkFormal",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 0.995,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkCarry",
+          "godot_name": "walkCarry",
+          "duration_s": 2.541667,
+          "channels": 54,
+          "pelvis_scale": 0.995,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkHeavy",
+          "godot_name": "walkHeavy",
+          "duration_s": 1.791667,
+          "channels": 54,
+          "pelvis_scale": 0.995,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idle",
+          "godot_name": "idle",
+          "duration_s": 3.958333,
+          "channels": 54,
+          "pelvis_scale": 0.995,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idleSubtle",
+          "godot_name": "idleSubtle",
+          "duration_s": 3.25,
+          "channels": 54,
+          "pelvis_scale": 0.995,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:foldArms",
+          "godot_name": "foldArms",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 0.995,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:listen",
+          "godot_name": "listen",
+          "duration_s": 2.166667,
+          "channels": 54,
+          "pelvis_scale": 0.995,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:talk",
+          "godot_name": "talk",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 0.995,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:nod",
+          "godot_name": "nod",
+          "duration_s": 1.125,
+          "channels": 54,
+          "pelvis_scale": 0.995,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:pickUp",
+          "godot_name": "pickUp",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 0.995,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:interact",
+          "godot_name": "interact",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 0.995,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:hunched",
+          "godot_name": "hunched",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 0.995,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:greet",
+          "godot_name": "greet",
+          "duration_s": 6.083333,
+          "channels": 54,
+          "pelvis_scale": 0.995,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitRec",
+          "godot_name": "sitRec",
+          "duration_s": 2.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitTalkRec",
+          "godot_name": "sitTalkRec",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:kneelWork",
+          "godot_name": "kneelWork",
+          "duration_s": 8.166667,
+          "channels": 54,
+          "pelvis_scale": 0.995,
+          "unbound_targets": []
+        }
+      ],
+      "textures": [
+        {
+          "name": "boots_toigo_ankle_boots_male",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "robe_normal",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "robe_black",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "lash01",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "hair_short02_brown",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "brow_eyebrow002",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "skin_young_caucasian_male",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "eye_blue_bl_c",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        }
+      ],
+      "extensions_used": [
+        "EXT_texture_webp",
+        "KHR_materials_specular"
+      ],
+      "transformations": [
+        "meshopt decode",
+        "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+        "retain integer JOINTS/WEIGHTS/COLOR",
+        "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
+        "bind 9 fitted task clips by joint name",
+        "bind 17 shared motions (figure.js clipFor rule)",
+        "WebP kept (EXT_texture_webp)"
+      ],
+      "normal_restoration": [
+        {
+          "node": "monk_f.brows",
+          "vertices": 124,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.402e-7,
+          "max_position_residual_m": 2.384e-7
+        },
+        {
+          "node": "monk_f.eyes",
+          "vertices": 96,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.875e-7,
+          "max_position_residual_m": 2.373e-7
+        },
+        {
+          "node": "monk_f.habit",
+          "vertices": 2985,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.176e-7,
+          "max_position_residual_m": 3.146e-7
+        },
+        {
+          "node": "monk_f.hair",
+          "vertices": 828,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.405e-7,
+          "max_position_residual_m": 2.468e-7
+        },
+        {
+          "node": "monk_f.hood_up",
+          "vertices": 978,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.862e-7,
+          "max_position_residual_m": 2.559e-7
+        },
+        {
+          "node": "monk_f.lashes",
+          "vertices": 250,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.379e-7,
+          "max_position_residual_m": 2.381e-7
+        },
+        {
+          "node": "monk_f.skin",
+          "vertices": 2804,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 9.751e-8,
+          "max_position_residual_m": 3.096e-7
+        }
+      ],
+      "note": "a younger brother, round-faced and fair"
+    },
+    "monk_d": {
+      "asset_id": "character:monk_d",
+      "output": "native/assets/characters/monk_d/monk_d.glb",
+      "output_sha256": "725052e62aec2fe1c29b416a70d7b005397e7a08cc194801c81584249f65943a",
+      "output_bytes": 2209620,
+      "height_m": 1.6336,
+      "pelvis_m": 0.8812,
+      "head_m": 1.4882,
+      "joints": [
+        {
+          "skin": "monk_d",
+          "joints": 53
+        }
+      ],
+      "skins_count": 1,
+      "parts": [
+        {
+          "node": "monk_d.boots",
+          "part": "boots",
+          "material": "boots:toigo_ankle_boots_male",
+          "skin": "monk_d",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "NORMAL": "5126",
+            "TEXCOORD_0": "5126"
+          }
+        },
+        {
+          "node": "monk_d.brows",
+          "part": "brows",
+          "material": "brow:eyebrow008",
+          "skin": "monk_d",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_d.eyes",
+          "part": "eyes",
+          "material": "eye:eye_bluegreen_blno.jpg",
+          "skin": "monk_d",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_d.habit",
+          "part": "habit",
+          "material": "habit:black",
+          "skin": "monk_d",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_d.hair",
+          "part": "hair",
+          "material": "hair:hair_short02_grey.png",
+          "skin": "monk_d",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "COLOR_0": "5121n",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_d.hood_down",
+          "part": "hood_down",
+          "material": "habit:black",
+          "skin": "monk_d",
+          "encodings": {
+            "TEXCOORD_0": "5126",
+            "JOINTS_0": "5123",
+            "WEIGHTS_0": "5126",
+            "POSITION": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_d.hood_up",
+          "part": "hood_up",
+          "material": "habit:black",
+          "skin": "monk_d",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_d.lashes",
+          "part": "lashes",
+          "material": "lash",
+          "skin": "monk_d",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_d.skin",
+          "part": "skin",
+          "material": "skin:jartur69_old_slavic_male_with_genitals_and_beard",
+          "skin": "monk_d",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        }
+      ],
+      "morph_targets": {
+        "hood_down": [
+          "bendDrape"
+        ]
+      },
+      "triangles": 16427,
+      "clips": [
+        {
+          "id": "monk_d:write",
+          "godot_name": "write",
+          "duration_s": 15.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_d:sitBench",
+          "godot_name": "sitBench",
+          "duration_s": 8.833333,
+          "channels": 159
+        },
+        {
+          "id": "monk_d:kneelPray",
+          "godot_name": "kneelPray",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_d:kneelBow",
+          "godot_name": "kneelBow",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_d:read",
+          "godot_name": "read",
+          "duration_s": 12.041667,
+          "channels": 159
+        },
+        {
+          "id": "monk_d:tend",
+          "godot_name": "tend",
+          "duration_s": 10.041667,
+          "channels": 159
+        },
+        {
+          "id": "monk_d:standSleeves",
+          "godot_name": "standSleeves",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "monk_d:standBow",
+          "godot_name": "standBow",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "monk_d:dine",
+          "godot_name": "dine",
+          "duration_s": 9.041667,
+          "channels": 159
+        },
+        {
+          "id": "motions:walk",
+          "godot_name": "walk",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 0.94,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkFormal",
+          "godot_name": "walkFormal",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 0.94,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkCarry",
+          "godot_name": "walkCarry",
+          "duration_s": 2.541667,
+          "channels": 54,
+          "pelvis_scale": 0.94,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkHeavy",
+          "godot_name": "walkHeavy",
+          "duration_s": 1.791667,
+          "channels": 54,
+          "pelvis_scale": 0.94,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idle",
+          "godot_name": "idle",
+          "duration_s": 3.958333,
+          "channels": 54,
+          "pelvis_scale": 0.94,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idleSubtle",
+          "godot_name": "idleSubtle",
+          "duration_s": 3.25,
+          "channels": 54,
+          "pelvis_scale": 0.94,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:foldArms",
+          "godot_name": "foldArms",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 0.94,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:listen",
+          "godot_name": "listen",
+          "duration_s": 2.166667,
+          "channels": 54,
+          "pelvis_scale": 0.94,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:talk",
+          "godot_name": "talk",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 0.94,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:nod",
+          "godot_name": "nod",
+          "duration_s": 1.125,
+          "channels": 54,
+          "pelvis_scale": 0.94,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:pickUp",
+          "godot_name": "pickUp",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 0.94,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:interact",
+          "godot_name": "interact",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 0.94,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:hunched",
+          "godot_name": "hunched",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 0.94,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:greet",
+          "godot_name": "greet",
+          "duration_s": 6.083333,
+          "channels": 54,
+          "pelvis_scale": 0.94,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitRec",
+          "godot_name": "sitRec",
+          "duration_s": 2.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitTalkRec",
+          "godot_name": "sitTalkRec",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:kneelWork",
+          "godot_name": "kneelWork",
+          "duration_s": 8.166667,
+          "channels": 54,
+          "pelvis_scale": 0.94,
+          "unbound_targets": []
+        }
+      ],
+      "textures": [
+        {
+          "name": "boots_toigo_ankle_boots_male",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "robe_normal",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "robe_black",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "hair_short02_grey",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "lash01",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "eye_bluegreen_blno",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "brow_eyebrow008",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "skin_jartur69_old_slavic_male_with_genitals_and_beard",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        }
+      ],
+      "extensions_used": [
+        "EXT_texture_webp",
+        "KHR_materials_specular"
+      ],
+      "transformations": [
+        "meshopt decode",
+        "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+        "retain integer JOINTS/WEIGHTS/COLOR",
+        "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
+        "bind 9 fitted task clips by joint name",
+        "bind 17 shared motions (figure.js clipFor rule)",
+        "WebP kept (EXT_texture_webp)"
+      ],
+      "normal_restoration": [
+        {
+          "node": "monk_d.brows",
+          "vertices": 124,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 9.326e-8,
+          "max_position_residual_m": 2.382e-7
+        },
+        {
+          "node": "monk_d.eyes",
+          "vertices": 96,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.388e-7,
+          "max_position_residual_m": 2.32e-7
+        },
+        {
+          "node": "monk_d.habit",
+          "vertices": 3008,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 9.975e-8,
+          "max_position_residual_m": 3.245e-7
+        },
+        {
+          "node": "monk_d.hair",
+          "vertices": 829,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.531e-7,
+          "max_position_residual_m": 2.484e-7
+        },
+        {
+          "node": "monk_d.hood_up",
+          "vertices": 976,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 9.533e-8,
+          "max_position_residual_m": 2.566e-7
+        },
+        {
+          "node": "monk_d.lashes",
+          "vertices": 250,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 6.763e-8,
+          "max_position_residual_m": 2.367e-7
+        },
+        {
+          "node": "monk_d.skin",
+          "vertices": 2806,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 7.163e-8,
+          "max_position_residual_m": 3.248e-7
+        }
+      ],
+      "note": "an old brother, small, stooping"
+    },
+    "monk_g": {
+      "asset_id": "character:monk_g",
+      "output": "native/assets/characters/monk_g/monk_g.glb",
+      "output_sha256": "1e91e5700e0d2688743ec90c342934cbb9ad90d2c3b7ff81e00d0d430336561b",
+      "output_bytes": 2231080,
+      "height_m": 1.7696,
+      "pelvis_m": 0.9645,
+      "head_m": 1.6143,
+      "joints": [
+        {
+          "skin": "monk_g",
+          "joints": 53
+        }
+      ],
+      "skins_count": 1,
+      "parts": [
+        {
+          "node": "monk_g.boots",
+          "part": "boots",
+          "material": "boots:toigo_ankle_boots_male",
+          "skin": "monk_g",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "NORMAL": "5126",
+            "TEXCOORD_0": "5126"
+          }
+        },
+        {
+          "node": "monk_g.brows",
+          "part": "brows",
+          "material": "brow:eyebrow009",
+          "skin": "monk_g",
+          "encodings": {
+            "POSITION": "5126",
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_g.eyes",
+          "part": "eyes",
+          "material": "eye:eye_grey_old.jpg",
+          "skin": "monk_g",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_g.habit",
+          "part": "habit",
+          "material": "habit:black",
+          "skin": "monk_g",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_g.hair",
+          "part": "hair",
+          "material": "hair:hair_short02_grey.png",
+          "skin": "monk_g",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "COLOR_0": "5121n",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_g.hood_down",
+          "part": "hood_down",
+          "material": "habit:black",
+          "skin": "monk_g",
+          "encodings": {
+            "TEXCOORD_0": "5126",
+            "JOINTS_0": "5123",
+            "WEIGHTS_0": "5126",
+            "POSITION": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_g.hood_up",
+          "part": "hood_up",
+          "material": "habit:black",
+          "skin": "monk_g",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_g.lashes",
+          "part": "lashes",
+          "material": "lash",
+          "skin": "monk_g",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "monk_g.skin",
+          "part": "skin",
+          "material": "skin:old_caucasian_male",
+          "skin": "monk_g",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        }
+      ],
+      "morph_targets": {
+        "hood_down": [
+          "bendDrape"
+        ]
+      },
+      "triangles": 16428,
+      "clips": [
+        {
+          "id": "monk_g:write",
+          "godot_name": "write",
+          "duration_s": 15.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_g:sitBench",
+          "godot_name": "sitBench",
+          "duration_s": 8.833333,
+          "channels": 159
+        },
+        {
+          "id": "monk_g:kneelPray",
+          "godot_name": "kneelPray",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_g:kneelBow",
+          "godot_name": "kneelBow",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "monk_g:read",
+          "godot_name": "read",
+          "duration_s": 12.041667,
+          "channels": 159
+        },
+        {
+          "id": "monk_g:tend",
+          "godot_name": "tend",
+          "duration_s": 10.041667,
+          "channels": 159
+        },
+        {
+          "id": "monk_g:standSleeves",
+          "godot_name": "standSleeves",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "monk_g:standBow",
+          "godot_name": "standBow",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "monk_g:dine",
+          "godot_name": "dine",
+          "duration_s": 9.041667,
+          "channels": 159
+        },
+        {
+          "id": "motions:walk",
+          "godot_name": "walk",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 1.03,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkFormal",
+          "godot_name": "walkFormal",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 1.03,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkCarry",
+          "godot_name": "walkCarry",
+          "duration_s": 2.541667,
+          "channels": 54,
+          "pelvis_scale": 1.03,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkHeavy",
+          "godot_name": "walkHeavy",
+          "duration_s": 1.791667,
+          "channels": 54,
+          "pelvis_scale": 1.03,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idle",
+          "godot_name": "idle",
+          "duration_s": 3.958333,
+          "channels": 54,
+          "pelvis_scale": 1.03,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idleSubtle",
+          "godot_name": "idleSubtle",
+          "duration_s": 3.25,
+          "channels": 54,
+          "pelvis_scale": 1.03,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:foldArms",
+          "godot_name": "foldArms",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 1.03,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:listen",
+          "godot_name": "listen",
+          "duration_s": 2.166667,
+          "channels": 54,
+          "pelvis_scale": 1.03,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:talk",
+          "godot_name": "talk",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 1.03,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:nod",
+          "godot_name": "nod",
+          "duration_s": 1.125,
+          "channels": 54,
+          "pelvis_scale": 1.03,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:pickUp",
+          "godot_name": "pickUp",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 1.03,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:interact",
+          "godot_name": "interact",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 1.03,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:hunched",
+          "godot_name": "hunched",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 1.03,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:greet",
+          "godot_name": "greet",
+          "duration_s": 6.083333,
+          "channels": 54,
+          "pelvis_scale": 1.03,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitRec",
+          "godot_name": "sitRec",
+          "duration_s": 2.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitTalkRec",
+          "godot_name": "sitTalkRec",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:kneelWork",
+          "godot_name": "kneelWork",
+          "duration_s": 8.166667,
+          "channels": 54,
+          "pelvis_scale": 1.03,
+          "unbound_targets": []
+        }
+      ],
+      "textures": [
+        {
+          "name": "boots_toigo_ankle_boots_male",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "robe_normal",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "robe_black",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "hair_short02_grey",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "lash01",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "brow_eyebrow009",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "skin_old_caucasian_male",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "eye_grey_old",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        }
+      ],
+      "extensions_used": [
+        "EXT_texture_webp",
+        "KHR_materials_specular"
+      ],
+      "transformations": [
+        "meshopt decode",
+        "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+        "retain integer JOINTS/WEIGHTS/COLOR",
+        "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
+        "bind 9 fitted task clips by joint name",
+        "bind 17 shared motions (figure.js clipFor rule)",
+        "WebP kept (EXT_texture_webp)"
+      ],
+      "normal_restoration": [
+        {
+          "node": "monk_g.brows",
+          "vertices": 124,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.482e-7,
+          "max_position_residual_m": 2.353e-7
+        },
+        {
+          "node": "monk_g.eyes",
+          "vertices": 96,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.47e-7,
+          "max_position_residual_m": 2.223e-7
+        },
+        {
+          "node": "monk_g.habit",
+          "vertices": 3001,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.043e-7,
+          "max_position_residual_m": 3.15e-7
+        },
+        {
+          "node": "monk_g.hair",
+          "vertices": 829,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.077e-7,
+          "max_position_residual_m": 2.509e-7
+        },
+        {
+          "node": "monk_g.hood_up",
+          "vertices": 974,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.059e-7,
+          "max_position_residual_m": 2.527e-7
+        },
+        {
+          "node": "monk_g.lashes",
+          "vertices": 250,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.468e-7,
+          "max_position_residual_m": 2.351e-7
+        },
+        {
+          "node": "monk_g.skin",
+          "vertices": 2807,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 9.556e-8,
+          "max_position_residual_m": 3.242e-7
+        }
+      ],
+      "note": "an old brother, very lean and long-faced"
+    },
+    "novice_b": {
+      "asset_id": "character:novice_b",
+      "output": "native/assets/characters/novice_b/novice_b.glb",
+      "output_sha256": "22d45ca8e71d1bb7f3940407f216a548fb18773d6d71ddb2d23a3f3644f3d219",
+      "output_bytes": 2154124,
+      "height_m": 1.585,
+      "pelvis_m": 0.8391,
+      "head_m": 1.4396,
+      "joints": [
+        {
+          "skin": "novice_b",
+          "joints": 53
+        }
+      ],
+      "skins_count": 1,
+      "parts": [
+        {
+          "node": "novice_b.boots",
+          "part": "boots",
+          "material": "boots:toigo_ankle_boots_male",
+          "skin": "novice_b",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "NORMAL": "5126",
+            "TEXCOORD_0": "5126"
+          }
+        },
+        {
+          "node": "novice_b.brows",
+          "part": "brows",
+          "material": "brow:eyebrow001",
+          "skin": "novice_b",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "novice_b.eyes",
+          "part": "eyes",
+          "material": "eye:eye_brown_brot.jpg",
+          "skin": "novice_b",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "novice_b.habit",
+          "part": "habit",
+          "material": "habit:black",
+          "skin": "novice_b",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "novice_b.hair",
+          "part": "hair",
+          "material": "hair:hair_short02_brown.png",
+          "skin": "novice_b",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "COLOR_0": "5121n",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "novice_b.hood_down",
+          "part": "hood_down",
+          "material": "habit:black",
+          "skin": "novice_b",
+          "encodings": {
+            "TEXCOORD_0": "5126",
+            "JOINTS_0": "5123",
+            "WEIGHTS_0": "5126",
+            "POSITION": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "novice_b.hood_up",
+          "part": "hood_up",
+          "material": "habit:black",
+          "skin": "novice_b",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "novice_b.lashes",
+          "part": "lashes",
+          "material": "lash",
+          "skin": "novice_b",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "novice_b.skin",
+          "part": "skin",
+          "material": "skin:young_caucasian_male2",
+          "skin": "novice_b",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        }
+      ],
+      "morph_targets": {
+        "hood_down": [
+          "bendDrape"
+        ]
+      },
+      "triangles": 16430,
+      "clips": [
+        {
+          "id": "novice_b:write",
+          "godot_name": "write",
+          "duration_s": 15.625,
+          "channels": 159
+        },
+        {
+          "id": "novice_b:sitBench",
+          "godot_name": "sitBench",
+          "duration_s": 8.833333,
+          "channels": 159
+        },
+        {
+          "id": "novice_b:kneelPray",
+          "godot_name": "kneelPray",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "novice_b:kneelBow",
+          "godot_name": "kneelBow",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "novice_b:read",
+          "godot_name": "read",
+          "duration_s": 12.041667,
+          "channels": 159
+        },
+        {
+          "id": "novice_b:tend",
+          "godot_name": "tend",
+          "duration_s": 10.041667,
+          "channels": 159
+        },
+        {
+          "id": "novice_b:standSleeves",
+          "godot_name": "standSleeves",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "novice_b:standBow",
+          "godot_name": "standBow",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "novice_b:dine",
+          "godot_name": "dine",
+          "duration_s": 9.041667,
+          "channels": 159
+        },
+        {
+          "id": "motions:walk",
+          "godot_name": "walk",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 0.895,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkFormal",
+          "godot_name": "walkFormal",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 0.895,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkCarry",
+          "godot_name": "walkCarry",
+          "duration_s": 2.541667,
+          "channels": 54,
+          "pelvis_scale": 0.895,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkHeavy",
+          "godot_name": "walkHeavy",
+          "duration_s": 1.791667,
+          "channels": 54,
+          "pelvis_scale": 0.895,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idle",
+          "godot_name": "idle",
+          "duration_s": 3.958333,
+          "channels": 54,
+          "pelvis_scale": 0.895,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idleSubtle",
+          "godot_name": "idleSubtle",
+          "duration_s": 3.25,
+          "channels": 54,
+          "pelvis_scale": 0.895,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:foldArms",
+          "godot_name": "foldArms",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 0.895,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:listen",
+          "godot_name": "listen",
+          "duration_s": 2.166667,
+          "channels": 54,
+          "pelvis_scale": 0.895,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:talk",
+          "godot_name": "talk",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 0.895,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:nod",
+          "godot_name": "nod",
+          "duration_s": 1.125,
+          "channels": 54,
+          "pelvis_scale": 0.895,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:pickUp",
+          "godot_name": "pickUp",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 0.895,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:interact",
+          "godot_name": "interact",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 0.895,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:hunched",
+          "godot_name": "hunched",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 0.895,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:greet",
+          "godot_name": "greet",
+          "duration_s": 6.083333,
+          "channels": 54,
+          "pelvis_scale": 0.895,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitRec",
+          "godot_name": "sitRec",
+          "duration_s": 2.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitTalkRec",
+          "godot_name": "sitTalkRec",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:kneelWork",
+          "godot_name": "kneelWork",
+          "duration_s": 8.166667,
+          "channels": 54,
+          "pelvis_scale": 0.895,
+          "unbound_targets": []
+        }
+      ],
+      "textures": [
+        {
+          "name": "boots_toigo_ankle_boots_male",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "eye_brown_brot",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "robe_normal",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "robe_black",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "lash01",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "hair_short02_brown",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "skin_young_caucasian_male2",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "brow_eyebrow001",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        }
+      ],
+      "extensions_used": [
+        "EXT_texture_webp",
+        "KHR_materials_specular"
+      ],
+      "transformations": [
+        "meshopt decode",
+        "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+        "retain integer JOINTS/WEIGHTS/COLOR",
+        "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
+        "bind 9 fitted task clips by joint name",
+        "bind 17 shared motions (figure.js clipFor rule)",
+        "WebP kept (EXT_texture_webp)"
+      ],
+      "normal_restoration": [
+        {
+          "node": "novice_b.brows",
+          "vertices": 124,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.58e-7,
+          "max_position_residual_m": 2.376e-7
+        },
+        {
+          "node": "novice_b.eyes",
+          "vertices": 96,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 9.61e-8,
+          "max_position_residual_m": 2.249e-7
+        },
+        {
+          "node": "novice_b.habit",
+          "vertices": 2994,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 7.344e-8,
+          "max_position_residual_m": 3.193e-7
+        },
+        {
+          "node": "novice_b.hair",
+          "vertices": 822,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.287e-7,
+          "max_position_residual_m": 2.377e-7
+        },
+        {
+          "node": "novice_b.hood_up",
+          "vertices": 975,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.369e-7,
+          "max_position_residual_m": 2.458e-7
+        },
+        {
+          "node": "novice_b.lashes",
+          "vertices": 250,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.1e-7,
+          "max_position_residual_m": 2.378e-7
+        },
+        {
+          "node": "novice_b.skin",
+          "vertices": 2793,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 8.514e-8,
+          "max_position_residual_m": 3.12e-7
+        }
+      ],
+      "note": "a novice, about nineteen"
+    },
+    "lay_old": {
+      "asset_id": "character:lay_old",
+      "output": "native/assets/characters/lay_old/lay_old.glb",
+      "output_sha256": "7b04da7db02cc8f8ee3c65834d5aed46bb476e7a27cf0a57cdb6e6dbfb56d6d6",
+      "output_bytes": 2304616,
+      "height_m": 1.6832,
+      "pelvis_m": 0.9087,
+      "head_m": 1.5363,
+      "joints": [
+        {
+          "skin": "lay_old",
+          "joints": 53
+        }
+      ],
+      "skins_count": 1,
+      "parts": [
+        {
+          "node": "lay_old.apron",
+          "part": "apron",
+          "material": "apron:linen",
+          "skin": "lay_old",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "NORMAL": "5126",
+            "TEXCOORD_0": "5126"
+          }
+        },
+        {
+          "node": "lay_old.beard",
+          "part": "beard",
+          "material": "beard:beardn_wdg_scruffy_beard_grey.png",
+          "skin": "lay_old",
+          "encodings": {
+            "TEXCOORD_0": "5126",
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "lay_old.boots",
+          "part": "boots",
+          "material": "boots:punkduck_medieval_boots",
+          "skin": "lay_old",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "lay_old.brows",
+          "part": "brows",
+          "material": "brow:eyebrow009",
+          "skin": "lay_old",
+          "encodings": {
+            "POSITION": "5126",
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "lay_old.eyes",
+          "part": "eyes",
+          "material": "eye:eye_grey_old.jpg",
+          "skin": "lay_old",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "lay_old.hair",
+          "part": "hair",
+          "material": "hair:hairn_short01_grey.png",
+          "skin": "lay_old",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "lay_old.hose",
+          "part": "hose",
+          "material": "hose:grey",
+          "skin": "lay_old",
+          "encodings": {
+            "TEXCOORD_0": "5126",
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "lay_old.lashes",
+          "part": "lashes",
+          "material": "lash",
+          "skin": "lay_old",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "lay_old.skin",
+          "part": "skin",
+          "material": "skin:old_caucasian_male",
+          "skin": "lay_old",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "lay_old.tunic",
+          "part": "tunic",
+          "material": "tunic:undyed",
+          "skin": "lay_old",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        }
+      ],
+      "morph_targets": {},
+      "triangles": 14029,
+      "clips": [
+        {
+          "id": "lay_old:kneelPray",
+          "godot_name": "kneelPray",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "lay_old:stirPot",
+          "godot_name": "stirPot",
+          "duration_s": 3.25,
+          "channels": 159
+        },
+        {
+          "id": "lay_old:stirVat",
+          "godot_name": "stirVat",
+          "duration_s": 4.041667,
+          "channels": 159
+        },
+        {
+          "id": "lay_old:knead",
+          "godot_name": "knead",
+          "duration_s": 4.458333,
+          "channels": 159
+        },
+        {
+          "id": "lay_old:hammer",
+          "godot_name": "hammer",
+          "duration_s": 4.25,
+          "channels": 159
+        },
+        {
+          "id": "lay_old:fork",
+          "godot_name": "fork",
+          "duration_s": 7.25,
+          "channels": 159
+        },
+        {
+          "id": "lay_old:sweep",
+          "godot_name": "sweep",
+          "duration_s": 3.625,
+          "channels": 159
+        },
+        {
+          "id": "lay_old:standSleeves",
+          "godot_name": "standSleeves",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "motions:walk",
+          "godot_name": "walk",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 0.97,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkFormal",
+          "godot_name": "walkFormal",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 0.97,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkCarry",
+          "godot_name": "walkCarry",
+          "duration_s": 2.541667,
+          "channels": 54,
+          "pelvis_scale": 0.97,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkHeavy",
+          "godot_name": "walkHeavy",
+          "duration_s": 1.791667,
+          "channels": 54,
+          "pelvis_scale": 0.97,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idle",
+          "godot_name": "idle",
+          "duration_s": 3.958333,
+          "channels": 54,
+          "pelvis_scale": 0.97,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idleSubtle",
+          "godot_name": "idleSubtle",
+          "duration_s": 3.25,
+          "channels": 54,
+          "pelvis_scale": 0.97,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:foldArms",
+          "godot_name": "foldArms",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 0.97,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:listen",
+          "godot_name": "listen",
+          "duration_s": 2.166667,
+          "channels": 54,
+          "pelvis_scale": 0.97,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:talk",
+          "godot_name": "talk",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 0.97,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:nod",
+          "godot_name": "nod",
+          "duration_s": 1.125,
+          "channels": 54,
+          "pelvis_scale": 0.97,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:pickUp",
+          "godot_name": "pickUp",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 0.97,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:interact",
+          "godot_name": "interact",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 0.97,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:hunched",
+          "godot_name": "hunched",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 0.97,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:greet",
+          "godot_name": "greet",
+          "duration_s": 6.083333,
+          "channels": 54,
+          "pelvis_scale": 0.97,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitRec",
+          "godot_name": "sitRec",
+          "duration_s": 2.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitTalkRec",
+          "godot_name": "sitTalkRec",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:kneelWork",
+          "godot_name": "kneelWork",
+          "duration_s": 8.166667,
+          "channels": 54,
+          "pelvis_scale": 0.97,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitBench",
+          "godot_name": "sitBench",
+          "duration_s": 11.041667,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        }
+      ],
+      "textures": [
+        {
+          "name": "lash01",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "brow_eyebrow009",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "skin_old_caucasian_male",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "apron_linen",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "tunic_undyed",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "hose_grey",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "boots_punkduck_medieval_boots",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "beardn_wdg_scruffy_beard_grey",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "eye_grey_old",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "hairn_short01_grey",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        }
+      ],
+      "extensions_used": [
+        "EXT_texture_webp",
+        "KHR_materials_specular"
+      ],
+      "transformations": [
+        "meshopt decode",
+        "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+        "retain integer JOINTS/WEIGHTS/COLOR",
+        "restore authored NORMAL on 9 part(s) from the round-three master (see normal_restoration)",
+        "bind 8 fitted task clips by joint name",
+        "bind 18 shared motions (figure.js clipFor rule)",
+        "WebP kept (EXT_texture_webp)"
+      ],
+      "normal_restoration": [
+        {
+          "node": "lay_old.beard",
+          "vertices": 1086,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 6.589e-8,
+          "max_position_residual_m": 6.434e-8
+        },
+        {
+          "node": "lay_old.boots",
+          "vertices": 709,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 9.661e-8,
+          "max_position_residual_m": 1.236e-7
+        },
+        {
+          "node": "lay_old.brows",
+          "vertices": 124,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.132e-7,
+          "max_position_residual_m": 5.933e-8
+        },
+        {
+          "node": "lay_old.eyes",
+          "vertices": 96,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 8.505e-8,
+          "max_position_residual_m": 5.966e-8
+        },
+        {
+          "node": "lay_old.hair",
+          "vertices": 1613,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 5.093e-8,
+          "max_position_residual_m": 6.729e-8
+        },
+        {
+          "node": "lay_old.hose",
+          "vertices": 671,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 5.421e-8,
+          "max_position_residual_m": 1.486e-7
+        },
+        {
+          "node": "lay_old.lashes",
+          "vertices": 250,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 5.028e-8,
+          "max_position_residual_m": 6.123e-8
+        },
+        {
+          "node": "lay_old.skin",
+          "vertices": 2745,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 7.613e-8,
+          "max_position_residual_m": 1.068e-7
+        },
+        {
+          "node": "lay_old.tunic",
+          "vertices": 1839,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 5.002e-8,
+          "max_position_residual_m": 9.646e-8
+        }
+      ],
+      "note": "the oldest of the kitchen servants, bent, white-bearded"
+    },
+    "lay_herd": {
+      "asset_id": "character:lay_herd",
+      "output": "native/assets/characters/lay_herd/lay_herd.glb",
+      "output_sha256": "763ad9ee85fd4c11e018b41b2a00e935837dec6be6093af3fa40163133c16b00",
+      "output_bytes": 1975528,
+      "height_m": 1.7056,
+      "pelvis_m": 0.9204,
+      "head_m": 1.5583,
+      "joints": [
+        {
+          "skin": "lay_herd",
+          "joints": 53
+        }
+      ],
+      "skins_count": 1,
+      "parts": [
+        {
+          "node": "lay_herd.boots",
+          "part": "boots",
+          "material": "boots:rehmanpolanski_viking_boots",
+          "skin": "lay_herd",
+          "encodings": {
+            "TEXCOORD_0": "5126",
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "lay_herd.brows",
+          "part": "brows",
+          "material": "brow:eyebrow009",
+          "skin": "lay_herd",
+          "encodings": {
+            "POSITION": "5126",
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "lay_herd.eyes",
+          "part": "eyes",
+          "material": "eye:eye_bluegreen_blno.jpg",
+          "skin": "lay_herd",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "lay_herd.hair",
+          "part": "hair",
+          "material": "hair:hair_short02_grey.png",
+          "skin": "lay_herd",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "lay_herd.hose",
+          "part": "hose",
+          "material": "hose:grey",
+          "skin": "lay_herd",
+          "encodings": {
+            "TEXCOORD_0": "5126",
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "lay_herd.lashes",
+          "part": "lashes",
+          "material": "lash",
+          "skin": "lay_herd",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "lay_herd.skin",
+          "part": "skin",
+          "material": "skin:jartur69_old_slavic_male_with_genitals_and_beard",
+          "skin": "lay_herd",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        },
+        {
+          "node": "lay_herd.tunic",
+          "part": "tunic",
+          "material": "tunic:undyed",
+          "skin": "lay_herd",
+          "encodings": {
+            "JOINTS_0": "5121",
+            "WEIGHTS_0": "5121n",
+            "POSITION": "5126",
+            "TEXCOORD_0": "5126",
+            "NORMAL": "5126"
+          }
+        }
+      ],
+      "morph_targets": {},
+      "triangles": 12030,
+      "clips": [
+        {
+          "id": "lay_herd:kneelPray",
+          "godot_name": "kneelPray",
+          "duration_s": 9.625,
+          "channels": 159
+        },
+        {
+          "id": "lay_herd:stirPot",
+          "godot_name": "stirPot",
+          "duration_s": 3.25,
+          "channels": 159
+        },
+        {
+          "id": "lay_herd:stirVat",
+          "godot_name": "stirVat",
+          "duration_s": 4.041667,
+          "channels": 159
+        },
+        {
+          "id": "lay_herd:knead",
+          "godot_name": "knead",
+          "duration_s": 4.458333,
+          "channels": 159
+        },
+        {
+          "id": "lay_herd:hammer",
+          "godot_name": "hammer",
+          "duration_s": 4.25,
+          "channels": 159
+        },
+        {
+          "id": "lay_herd:fork",
+          "godot_name": "fork",
+          "duration_s": 7.25,
+          "channels": 159
+        },
+        {
+          "id": "lay_herd:sweep",
+          "godot_name": "sweep",
+          "duration_s": 3.625,
+          "channels": 159
+        },
+        {
+          "id": "lay_herd:standSleeves",
+          "godot_name": "standSleeves",
+          "duration_s": 10.458333,
+          "channels": 159
+        },
+        {
+          "id": "motions:walk",
+          "godot_name": "walk",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 0.98,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkFormal",
+          "godot_name": "walkFormal",
+          "duration_s": 2.125,
+          "channels": 54,
+          "pelvis_scale": 0.98,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkCarry",
+          "godot_name": "walkCarry",
+          "duration_s": 2.541667,
+          "channels": 54,
+          "pelvis_scale": 0.98,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:walkHeavy",
+          "godot_name": "walkHeavy",
+          "duration_s": 1.791667,
+          "channels": 54,
+          "pelvis_scale": 0.98,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idle",
+          "godot_name": "idle",
+          "duration_s": 3.958333,
+          "channels": 54,
+          "pelvis_scale": 0.98,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:idleSubtle",
+          "godot_name": "idleSubtle",
+          "duration_s": 3.25,
+          "channels": 54,
+          "pelvis_scale": 0.98,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:foldArms",
+          "godot_name": "foldArms",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 0.98,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:listen",
+          "godot_name": "listen",
+          "duration_s": 2.166667,
+          "channels": 54,
+          "pelvis_scale": 0.98,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:talk",
+          "godot_name": "talk",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 0.98,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:nod",
+          "godot_name": "nod",
+          "duration_s": 1.125,
+          "channels": 54,
+          "pelvis_scale": 0.98,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:pickUp",
+          "godot_name": "pickUp",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 0.98,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:interact",
+          "godot_name": "interact",
+          "duration_s": 3.166667,
+          "channels": 54,
+          "pelvis_scale": 0.98,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:hunched",
+          "godot_name": "hunched",
+          "duration_s": 1.333333,
+          "channels": 54,
+          "pelvis_scale": 0.98,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:greet",
+          "godot_name": "greet",
+          "duration_s": 6.083333,
+          "channels": 54,
+          "pelvis_scale": 0.98,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitRec",
+          "godot_name": "sitRec",
+          "duration_s": 2.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitTalkRec",
+          "godot_name": "sitTalkRec",
+          "duration_s": 4.625,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:kneelWork",
+          "godot_name": "kneelWork",
+          "duration_s": 8.166667,
+          "channels": 54,
+          "pelvis_scale": 0.98,
+          "unbound_targets": []
+        },
+        {
+          "id": "motions:sitBench",
+          "godot_name": "sitBench",
+          "duration_s": 11.041667,
+          "channels": 54,
+          "pelvis_scale": 1,
+          "unbound_targets": []
+        }
+      ],
+      "textures": [
+        {
+          "name": "hair_short02_grey",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "lash01",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "brow_eyebrow009",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "eye_bluegreen_blno",
+          "mime": "image/webp",
+          "size": [
+            256,
+            256
+          ]
+        },
+        {
+          "name": "skin_jartur69_old_slavic_male_with_genitals_and_beard",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "boots_rehmanpolanski_viking_boots",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "tunic_undyed",
+          "mime": "image/webp",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "hose_grey",
+          "mime": "image/webp",
+          "size": [
+            512,
+            512
+          ]
+        }
+      ],
+      "extensions_used": [
+        "EXT_texture_webp",
+        "KHR_materials_specular"
+      ],
+      "transformations": [
+        "meshopt decode",
+        "dequantize POSITION/NORMAL/TANGENT/TEXCOORD to float32",
+        "retain integer JOINTS/WEIGHTS/COLOR",
+        "restore authored NORMAL on 7 part(s) from the round-three master (see normal_restoration)",
+        "bind 8 fitted task clips by joint name",
+        "bind 18 shared motions (figure.js clipFor rule)",
+        "WebP kept (EXT_texture_webp)"
+      ],
+      "normal_restoration": [
+        {
+          "node": "lay_herd.brows",
+          "vertices": 124,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.451e-7,
+          "max_position_residual_m": 2.358e-7
+        },
+        {
+          "node": "lay_herd.eyes",
+          "vertices": 96,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.47e-7,
+          "max_position_residual_m": 2.353e-7
+        },
+        {
+          "node": "lay_herd.hair",
+          "vertices": 795,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.556e-7,
+          "max_position_residual_m": 2.434e-7
+        },
+        {
+          "node": "lay_herd.hose",
+          "vertices": 673,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 5.802e-8,
+          "max_position_residual_m": 1.638e-7
+        },
+        {
+          "node": "lay_herd.lashes",
+          "vertices": 250,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 2.083e-7,
+          "max_position_residual_m": 2.375e-7
+        },
+        {
+          "node": "lay_herd.skin",
+          "vertices": 2781,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 1.419e-7,
+          "max_position_residual_m": 3.333e-7
+        },
+        {
+          "node": "lay_herd.tunic",
+          "vertices": 1832,
+          "defective_plus_z_share": 1,
+          "master": ".local/mh/cast-round3.glb",
+          "master_sha256": "17bbb07c1c1f7899216f3145ecadc890b78c32147a84c452f9b2acdc573d5c64",
+          "bind_correction_residual": 8.335e-8,
+          "max_position_residual_m": 2.834e-7
+        }
+      ],
+      "note": "a herdsman: older, weathered, undyed wool"
     }
   },
   "schema_version": 1,
@@ -1722,6 +6130,7 @@
   "sources": {
     "shared/assets/models/people/cast.glb": "beffd6a188fe80c3f9f43e0e29a609feb4c3715c04768569faebe268e4845be4",
     "shared/assets/models/people/tasks.glb": "45368893acc694c5df87ad39ed98c68271fbedfb4bbc463dc4fbbb67e363d62e",
+    "shared/assets/models/people/motions.glb": "effe9af9464d75cb4b6751daffe4752397d39b1198dce66e3544bbf624f65621",
     "shared/assets/models/people/cast.json": "4a33056acc3e1645ba72b0921a88e982d927f6bd28715a3cf864ccc152f08839"
   },
   "coordinate_convention": "metres, +X east, +Y up, +Z south (glTF/Godot); character model front is +Z (Godot MODEL_FRONT), identical to the browser slot ry convention",

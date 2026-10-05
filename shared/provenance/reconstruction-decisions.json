@@ -2192,6 +2192,28 @@
     "note": "the walker is never trapped"
    },
    "review_status": "legacy authored record; verify against current source before treating a status or measurement as current"
+  },
+  {
+   "source_record": "docs/evidence/day1a/day1a_report.md",
+   "section": "Day-1A native slice — flower garden before the hospice (web/src/world/claustrum.js)",
+   "fields": {
+    "Object / decision": "Flower-garden border hedges open where the alleys meet them (0.9 m gaps); the east row stops short of the hospice stair, the south row's east piece starts 1.35 m clear of the stair foot; the centre ring is four arcs with 0.6 rad openings",
+    "ids": "D1 TANSÖKÜMÜ (\"güzel bir çiçek bahçesi\"); record \"Flower-garden and chapter-garden hedges as clipped box under snow\"",
+    "class": "BOOK (garden) / RECON (openings)",
+    "note": "the walker is never trapped; the route gate → garden → outside stair → William's cell is walkable on foot without passing through hedges"
+   },
+   "review_status": "Day-1A pass 2026-10-05: current in source; verify before reuse"
+  },
+  {
+   "source_record": "docs/evidence/day1a/day1a_report.md",
+   "section": "Day-1A native slice — arrival staging",
+   "fields": {
+    "Object / decision": "First full view of the Aedificium staged on entering the gate court, not on the road",
+    "ids": "D1 (arrival); scenario shared/scenarios/day1a/day1a.json look point at the gate court",
+    "class": "RECON (deviation)",
+    "note": "in this reconstruction the enclosure wall (≈6 m) and the road's approach hide the building from the last bend; William stops inside the gate and looks up at it instead"
+   },
+   "review_status": "Day-1A pass 2026-10-05: current in source; verify before reuse"
   }
  ]
 }
