@@ -412,5 +412,29 @@
     ]
   },
   "pm_assessment": "Repair canonical continuity; continue the already active bounded Day-1A implementation. No advancement or completion acceptance.",
-  "pm_review_at_utc": "2026-10-05T13:55:24.787216+00:00"
+  "pm_review_at_utc": "2026-10-05T13:55:24.787216+00:00",
+  "standing_pm_protocol": {
+    "recorded_at_utc": "2026-10-05T14:04:17.303164+00:00",
+    "authority": "Owner standing instruction, 2026-10-05",
+    "role": "Project Manager and Technical Reviewer continuously",
+    "completion_notice_triggers": "Full repository PM review before new development or phase advancement",
+    "canonical_protocol": "docs/PROJECT.md#standing-pm-review-protocol",
+    "decisions": [
+      "ACCEPT",
+      "FIX",
+      "ITERATE",
+      "REVERT",
+      "ADVANCE"
+    ],
+    "review_sections": [
+      "PM Assessment",
+      "Git / Repository State",
+      "Decision",
+      "Next Step",
+      "Developer Prompt"
+    ],
+    "prompt_rule": "Complete ready-to-paste prompt when development is needed; otherwise explicitly state the next owner action",
+    "git_policy": "Coherent reviewed checkpoints and safe normal pushes to intended branch; no history rewriting or destructive operations without explicit instruction",
+    "implementation_status": "Day-1A still in progress; this instruction is not a developer-completion notice"
+  }
 }

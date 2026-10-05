@@ -4,16 +4,26 @@
 
 **PM:** Codex. **Updated:** 2026-10-05. This section owns current state, the active mission, the near-term roadmap and compact agent history. Product decisions are in [Game design](GAME_DESIGN.md#decision-history); platform evidence and gates are in [Platforms](PLATFORMS.md). Supporting council reports retain their original recommendations, including superseded ones.
 
+### Standing PM review protocol
+
+Codex remains the Project Manager and Technical Reviewer. Whenever the owner says a developer has finished, treat that as a request for a full PM review before assigning more development or advancing a phase. Developer/model identity may change; continuity belongs to this ledger, repository evidence and Git, not a private chat.
+
+Inspect the actual branch, recent commits, staged/unstaged diff, modified and untracked files, affected systems, tests/builds and rendered behavior where relevant. Compare them with the original mission, exclusions and acceptance criteria. Identify incomplete work, regressions, architecture and UX/design problems, performance concerns, documentation drift and claims whose validation was not actually run. A completion report alone is never acceptance.
+
+Make an explicit **ACCEPT / FIX / ITERATE / REVERT / ADVANCE** decision, with remaining gates and evidence. Keep implementation, verification and experiential validation separate. Update canonical state/decisions and the agent log; make coherent reviewed implementation and PM checkpoints as appropriate. Check whether validated commits should be pushed to the intended branch and push when safe. Preserve unrelated/in-progress changes. Never force-push, rewrite history, reset unrelated work or make destructive Git changes without explicit instruction; a REVERT decision does not authorize those operations.
+
+Every completed PM review ends with these sections: **PM Assessment**, **Git / Repository State**, **Decision**, **Next Step**, and **Developer Prompt**. The next step must be concrete. If more development is required, supply a complete ready-to-paste mission with scope, exclusions, files, acceptance checks and stop condition. If no developer task is needed, explicitly state the owner's next action instead. Do not end at analysis or accept/advance because the developer says the task is done.
+
 ### Current state
 
 | Item | Verified repository state at PM intake |
 |---|---|
-| Branch / checkpoint | `migration/phase-1-godot`; HEAD `7c6f836afd17a87d407172c9727e8d4e26818598`. Live `origin` branch matched this SHA on 2026-10-05; no divergence at intake |
+| Branch / checkpoints | `migration/phase-1-godot`; last trusted gameplay checkpoint `7c6f836afd17a87d407172c9727e8d4e26818598`; PM/design checkpoint `373ee82`. The live remote matched the gameplay checkpoint at intake. Read fresh Git state for current HEAD and publication status |
 | Authoritative remote | `origin` → `git@github-moy:museumappofyou/3d-the-name-of-the-rose.git` |
 | Working tree | Active, uncommitted Day-1A implementation. Source files changed during inspection; treat it as concurrent work and inspect a fresh diff before any developer handoff |
 | Last trusted native scope | Phase-1 porch/cloister/church/altar/first stair landing. Existing Mac measurements are historical proof evidence, not measurements of Day-1A |
 | Day-1A | Partial world export/derivatives, optional content loading, terrain/tree residency, mode composition and new scene/capture scaffolding observed. Seven additional world cells are listed in the local manifest. Arrival-through-Nones gameplay has not been accepted |
-| Story/design | Round-3 Adso, Round-4 library and full Day-1 design files exist; all were untracked at intake. The full-Day-1 minimum in the design is superseded by the A/B split below |
+| Story/design | Round-1, Round-3 Adso, Round-4 library and full Day-1 sources are preserved in `373ee82`; they were untracked at intake. The full-Day-1 minimum in the design is superseded by the A/B split below |
 | Checks rerun at intake | Browser 29/29; extraction 21/21; render conservation; ten shared-data domains; all nine literary-output hashes unchanged. These checks do not validate the new Day-1A domain or presentation |
 | Playable/buildable status | The committed proof has recorded build/functional evidence. No clean Day-1A build, packaged route, independent playtest or human listening was established by this intake audit |
 | Important open gates | Actual Windows W1/W2; human audio/input/controller review; 60–85 ms stair unload hitch; browser cast normals; close-character quality; arrival-day canon review |
@@ -73,7 +83,8 @@ Day 2, delegation detail and the lightweight web viewer follow demonstrated need
 | Round 3 / Round 4, pre-intake untracked sources | Claude/GPT/Grok/DeepSeek/Gemini; GLM took the Round-4 contrarian role | Owner selected Adapted Adso and a secondary Remembered Labyrinth pillar; disagreement retained |
 | 2026-10-05 full Day-1 source | Claude Opus 5.5, lead campaign design (reported High) | Design exists; owner reduced implementation to A/B; no implementation acceptance implied |
 | 2026-10-05 Day-1A working tree | Active implementer unconfirmed; world pipeline and scene/capture scaffolding observed changing | Partial implementation, no commit or completion claimed; review after a stable handoff |
-| 2026-10-05 Codex PM intake | Git/remote, docs, diffs, literary hashes and read-only regression checks inspected; canonical mission/governance repaired | Supporting sources preserved; no native/human/Windows rerun claimed. PM checkpoint is separate from unfinished implementation |
+| 2026-10-05 Codex PM intake, `373ee82` | Git/remote, docs, diffs, literary hashes and read-only regression checks inspected; canonical mission/governance repaired | Supporting sources preserved; no native/human/Windows rerun claimed. PM checkpoint is separate from unfinished implementation |
+| 2026-10-05 owner standing instruction | Codex's continuous PM/reviewer role and completion-triggered review/report/prompt protocol made explicit | Governance only; Day-1A remains in progress. Reviewed PM checkpoints may be pushed safely without including the dirty implementation |
 
 ## Two products, one abbey
 
