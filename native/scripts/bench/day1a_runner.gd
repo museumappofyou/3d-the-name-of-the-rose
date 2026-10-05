@@ -9,7 +9,7 @@ extends Node
 ##                (--captures=on) and the director's telemetry
 ##   day1-cycles  plays to the free period (accelerated, unmeasured), holds
 ##                the hour, then times --cycles=10 real-time loops gate →
-##                guest cell → well → nave → gate (one extra warm-up loop),
+##                guest cell → well → nave → garth → gate (one extra warm-up loop),
 ##                with frame times per leg and memory after each loop
 ## Writes <out>/<scenario>_<label>.json (+ .csv frames) and quits.
 
@@ -551,12 +551,13 @@ func _finish_walk(ended: bool) -> void:
 	var by_beat: Dictionary = {}
 	for i: int in _frames.size():
 		var b: String = _beat_names[_frame_beats[i]]
+		# (a packed array read from a Dictionary is a copy: append to an Array)
 		if not by_beat.has(b):
-			by_beat[b] = PackedFloat32Array()
-		(by_beat[b] as PackedFloat32Array).append(_frames[i])
+			by_beat[b] = []
+		(by_beat[b] as Array).append(_frames[i])
 	var stats: Dictionary = {"all": _fstats(_frames)}
 	for b: String in by_beat.keys():
-		stats[b] = _fstats(by_beat[b])
+		stats[b] = _fstats(PackedFloat32Array(by_beat[b]))
 	var tel_path: String = main.day1.write_telemetry("walk_" + style)
 	var rep: Dictionary = {"scenario": scenario, "style": style, "label": label, "ended": ended, "real_s": snappedf(t, 0.1), "director_t": snappedf(d.t, 0.1), "beat": d.beat,
 		"interaction_misses": _misses, "events": events, "frames": stats, "telemetry_file": ProjectSettings.globalize_path(tel_path), "summary": d.tel.summary(),
@@ -783,15 +784,17 @@ func _cast_frame(dt: float) -> void:
 				get_tree().quit()
 
 # --- residency cycles ---------------------------------------------------------
-const CYCLE_STOPS: PackedStringArray = ["g_court", "c_mid", "gt_well", "nv_c"]
-const CYCLE_LEGS: PackedStringArray = ["to_gate", "gate_to_cell", "cell_to_well", "well_to_nave"]
+# (back out through the cloister: the church's west doors are shut to Adso)
+const CYCLE_STOPS: PackedStringArray = ["g_court", "c_mid", "gt_well", "nv_c", "gt_n"]
+const CYCLE_LEGS: PackedStringArray = ["to_gate", "gate_to_cell", "cell_to_well", "well_to_nave", "nave_to_garth"]
 var _cyc: Dictionary = {}
 
 func _cycles_frame(dt: float) -> void:
 	var d: Day1aDirector = _d()
 	var pl: PlayerController = main.player
 	if _cyc.is_empty():
-		_cyc = {"phase": "setup", "cycle": 0, "stop": 0, "legs": {}, "all": PackedFloat32Array(), "rows": [], "last_us": 0, "start_t": 0.0}
+		# (plain Arrays: a packed array read from a Dictionary is a copy)
+		_cyc = {"phase": "setup", "cycle": 0, "stop": 0, "legs": {}, "all": [], "rows": [], "last_us": 0, "start_t": 0.0}
 		style = "normal"
 		Engine.time_scale = float(args.get("setup_timescale", 4.0))
 		pl.autopilot_active = true
@@ -817,16 +820,46 @@ func _cycles_frame(dt: float) -> void:
 	var leg: String = CYCLE_LEGS[int(_cyc["stop"])]
 	var legs: Dictionary = _cyc["legs"]
 	if not legs.has(leg):
-		legs[leg] = PackedFloat32Array()
-	(legs[leg] as PackedFloat32Array).append(ms)
-	(_cyc["all"] as PackedFloat32Array).append(ms)
-	if _path.is_empty():
-		var stop: String = CYCLE_STOPS[int(_cyc["stop"])]
-		if _xz(pl.global_position, d.node(stop)) > 1.2:
+		legs[leg] = []
+	(legs[leg] as Array).append(ms)
+	(_cyc["all"] as Array).append(ms)
+	var stop: String = CYCLE_STOPS[int(_cyc["stop"])]
+	_cyc["leg_t"] = float(_cyc.get("leg_t", 0.0)) + dt
+	if Engine.get_process_frames() % 1800 == 0:
+		print("[cycles] t=%.0f loop=%d leg=%s pos=%s path=%d" % [t, int(_cyc["cycle"]), leg, pl.global_position, _path.size()])
+	# a leg that takes over three minutes is recorded and abandoned
+	var timed_out: bool = float(_cyc["leg_t"]) > 180.0
+	if timed_out:
+		_cyc["timeouts"] = (_cyc.get("timeouts", []) as Array) + [{"loop": int(_cyc["cycle"]), "leg": leg, "at": [pl.global_position.x, pl.global_position.y, pl.global_position.z]}]
+		print("[cycles] leg timeout ", leg, " at ", pl.global_position)
+	# step round anyone standing on the next waypoint (a reader in the walk)
+	if _path.size() > 1:
+		for aid: String in d.actors.keys():
+			var ac: Actor = d.actors[aid]
+			var fg: Node3D = main.day1.figures.get(aid, null)
+			if ac.present and fg != null and _xz(fg.global_position, _path[0]) < 0.75:
+				_path.pop_front()
+				break
+	# a stop someone is standing on (Nuto at the well) counts from further off
+	var reach: float = 1.2
+	for aid: String in d.actors.keys():
+		var ac2: Actor = d.actors[aid]
+		var fg2: Node3D = main.day1.figures.get(aid, null)
+		if ac2.present and fg2 != null and _xz(fg2.global_position, d.node(stop)) < 0.75:
+			reach = 1.8
+			break
+	if _xz(pl.global_position, d.node(stop)) <= reach:
+		_path.clear()
+	if _path.is_empty() or timed_out:
+		if _xz(pl.global_position, d.node(stop)) > reach and not timed_out:
 			_goto_node(stop)
 			if _path.is_empty():
 				_path.append(d.node(stop))
 		else:
+			if timed_out:
+				pl.teleport(d.node(stop) if not is_nan(d.node(stop).y) else Vector3(d.node(stop).x, main.cells.terrain_height_at(d.node(stop).x, d.node(stop).z) + 0.1, d.node(stop).z), pl.yaw, "cycles: leg timeout")
+			_path.clear()
+			_cyc["leg_t"] = 0.0
 			_cyc["stop"] = (int(_cyc["stop"]) + 1) % CYCLE_STOPS.size()
 			if int(_cyc["stop"]) == 1:
 				_end_cycle()
@@ -848,15 +881,15 @@ func _end_cycle() -> void:
 	var lstats: Dictionary = {}
 	var allc := PackedFloat32Array()
 	for k: String in legs.keys():
-		lstats[k] = _fstats(legs[k])
-		allc.append_array(legs[k])
+		lstats[k] = _fstats(PackedFloat32Array(legs[k]))
+		allc.append_array(PackedFloat32Array(legs[k]))
 	row["frames"] = _fstats(allc)
 	row["legs"] = lstats
 	row["warmup"] = c == 0
 	_cyc["rows"].append(row)
 	_cyc["legs"] = {}
 	if c == 0:
-		_cyc["all"] = PackedFloat32Array()
+		_cyc["all"] = []
 	print("[cycles] loop %d: %.1f fps avg, p95 %.1f ms, static %.1f MiB, vram %.1f MiB" % [c, row["frames"]["fps_avg"], row["frames"]["ms_p95"], row["static_mib"], row["vram_mib"]])
 	_cyc["cycle"] = c + 1
 	if c + 1 > int(args.get("cycles", 10)):
@@ -867,7 +900,7 @@ func _finish_cycles() -> void:
 	var warm: Dictionary = rows[1]
 	var last: Dictionary = rows[-1]
 	var rep: Dictionary = {"scenario": scenario, "label": label, "cycles": int(args.get("cycles", 10)), "warmup_cycles": 1, "stops": Array(CYCLE_STOPS), "clock_held_at": _cyc["hours"],
-		"rows": rows, "frames_all_measured": _fstats(_cyc["all"]),
+		"rows": rows, "frames_all_measured": _fstats(PackedFloat32Array(_cyc["all"])), "leg_timeouts": _cyc.get("timeouts", []),
 		"memory_growth": {"static_pct": snappedf(100.0 * (float(last["static_mib"]) / maxf(0.001, float(warm["static_mib"])) - 1.0), 0.01) if float(warm["static_mib"]) > 0.0 else null,
 			"vram_pct": snappedf(100.0 * (float(last["vram_mib"]) / maxf(0.001, float(warm["vram_mib"])) - 1.0), 0.01), "objects_delta": int(last["objects"]) - int(warm["objects"]),
 			"basis": "after warm-up loop (cycle 0) → after the last loop"},
