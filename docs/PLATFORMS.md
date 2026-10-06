@@ -1,6 +1,6 @@
 # Migration and platform state
 
-**Godot is the provisional native choice. Phase 1 establishes a working Mac slice; it does not validate Windows or authorize broad world migration.** This page replaces the phase report, engine comparisons, migration matrix, staged plans and acceptance prompt. Frozen machine evidence remains under `docs/evidence/phase1/`; build/test and Windows procedures are in `DEVELOPMENT.md`.
+**Godot remains the provisional native choice. The Mac proof and bounded Day-1A build work; actual Windows runtime and the campaign's product gates remain open.** Frozen proof evidence is under `docs/evidence/phase1/`; Day-1A implementation and independent PM review evidence are under `docs/evidence/day1a/`. Procedures live in `DEVELOPMENT.md`.
 
 ## Why Godot
 
@@ -62,6 +62,26 @@ The VSync-on run lost focus in 6870/14030 frames, so the old table’s 98.8 FPS 
 
 The current “knowledge” system records discoveries; it does not yet distinguish an NPC’s disputed assertion from established truth. That distinction is required for original investigations.
 
+## Day-1A completion review, 6 October 2026
+
+Reviewed source `e223bc2` contains the five developer commits `1859082`, `aa033e9`, `269401f`, `6851034`, `e223bc2`; live origin matched it and the tree was clean. The developer package was exported from `6851034`; the later commit records evidence/docs. The original Windows ZIP hash is `ad43a3b4ab7568dc31d236f5b656059a9006e5ad318c13d02f9a759b51ec527e`. Its PCK is `f15e72ded5756764fd4486b94be57dd8f0c3e519c62c59c2bab2d0f0b1dba07a`; the unmodified Windows template has the same executable hash as the proof. Package identity is not runtime approval.
+
+The PM independently rebuilt an exact Git archive without `.local`, generated content/import cache or migration npm dependencies. Fresh import, all 339 derivative hashes, native domain 22/22, Day-1A domain 14/14, thirteen pose/normal checks, ten anchors, proof functional/relaunch, both exports and the Windows package audit (1,075 files) pass. Browser 29/29, book 21/21, render/data/repository checks and nine literary hashes pass. Known harness cleanup/negative-test diagnostics remain. The build does not exercise Day-1A menu or interrupted-scene saves.
+
+Seven additional save probes against the actual Day-1A scene fail: pause Save overwrites the proof slot and pause Load uses it; meal reload drops pending lines or choices and stalls progression; end-card/stop flags do not follow restored state; at the Nones bell a brother jumps approximately 44 m into a stall. An eighth probe learns Fulco's name before his introduction is presented, retaining it even when the queued line is interrupted. The existing mid-route persistence test also contains an `or true` assertion. **Decision: FIX**, with reproductions and corrective scope in [PM evidence](evidence/day1a/pm_review.json) and [Project](PROJECT.md#corrective-mission--make-day-1a-safe-to-playtest). None of the player's real save files was used for PM checks.
+
+The developer's final Mac package measurements use the same M1 Pro/32 GB/macOS 26.5.2/Metal setup, built-in Retina display, physical 1920×1080, VSync off. The generic report header's older external-display description is inconsistent with the detailed runtime JSON; use the latter's recorded viewport/display fields.
+
+| Recorded Day-1A run | FPS average | p95 frame | Maximum | Frames >100 ms | PM verification |
+|---|---:|---:|---:|---:|---|
+| Final whole slice, 21.5 minutes | 129.9 | 10.75 ms | 59.6 ms | 0 | Recomputed from 167,167 raw frames |
+| Ten measured resident traversal loops | 133.9 | 10.44 ms | 124.69 ms | 1 | Aggregate/row audit; no retained raw cycle frames |
+| Earlier first-package walk | 120.6 | 11.17 ms | 591.5 ms | 2 | Recomputed from 155,202 raw frames; separate 541 ms stall |
+
+The final road/gate portions average 91.7/84.7 FPS, so the overall rate is not every area's rate. Ten loop rows exist, but code and row 0 show a warm-up **gate approach only**, not a complete extra loop. Recorded RSS falls from about 482 MiB to 379 MiB, then rises roughly 3 MiB/loop to 400 MiB; loop FPS shifts from about 109 to 145. These changes were not diagnosed. A warm-up baseline, raw frames, aligned external RSS and a longer measured soak are required to qualify the trend. Shader compilation and operating-system reclamation are hypotheses; no successful corrective intervention has established them.
+
+Day-1A keeps all cells resident. Its loops exercise traversal/visibility, not load/unload streaming, and do not fix or test the proof's stair hitch. PM's fresh rendered scripted package run is accelerated functional/capture review, not a new performance benchmark. An unfamiliar player has not tested route recall; listening, owner/external play, controller/focus/layout trials and Windows W1/W2 remain NOT RUN. Nones activity is implemented, but the approximately 65-second bell-to-chant delay and level remain unjudged by ear.
+
 ## Asset findings and rendering qualifications
 
 Original `cast.glb` and `tasks.glb` cannot directly import with their required meshopt/quantization extensions. Decoded derivatives retain integer joint/weight encodings, topology, clothing, fitted keyframe timing and `bendDrape`; they bind clips by stable bone name. Authored browser normals were already corrupt on seven of nine parts. The normalized native copies restore them from the retained `.local/mh/cast-round3.glb`, with topology, per-index position and constant-bind checks. The browser source remains defective. Recomputing arbitrary smooth normals would lose authored splits; do not overwrite its cast without a separate validated repair.
@@ -94,6 +114,6 @@ Agent B also tested a temporary copy containing only Git-eligible files: no `.lo
 | Test exit diagnostics | Domain/anchor/pose harnesses emit known ObjectDB/resource-at-exit warnings; invalid-condition negative test intentionally emits an error; investigate cleanup without calling this an error-free test run |
 | Full-world rendering/NPCs/audio/save | Outside proof; do not extrapolate slice performance or synthetic crowd to production |
 
-The next product gate is **Day-1A: arrival, William, learned routes, ordinary life and Nones**, already underway in the local working tree at PM intake on 2026-10-05. The owner's handoff supersedes The Leaf Before Vespers as the immediate milestone. [Project](PROJECT.md#active-mission--day-1a) holds the bounded mission; [Game design](GAME_DESIGN.md) records the adapted-Adso campaign decision.
+The active gate remains **Day-1A: William, learned routes, ordinary life and Nones**. Initial implementation is complete, but the PM decision is **FIX** before a safe playtest candidate and independent player/listening review. Day-1B is held. [Project](PROJECT.md#active-mission--day-1a) owns the corrective mission; [Game design](GAME_DESIGN.md) records the Adapted Adso campaign decision. The Leaf Before Vespers remains a later idea.
 
-The intake audit confirmed the installed engine version and reran browser, extraction, render-conservation, shared-data and literary-hash checks. It did not rerun the native build, GPU benchmarks, Windows W1/W2, human listening or external playtests while another implementation was changing. No Windows evidence directory was present. The gates above therefore remain open unless a subsequent hash-identified trial records otherwise. The bounded Mac Day-1A foundation may proceed under the owner's instruction; broad migration and final platform commitment remain conditional on actual Windows results.
+Actual Windows W1/W2 still gates broad migration/final engine commitment. Fresh export/PCK audit is W0 only. The Phase-1 stair hitch, browser normals, subjective audio and close-character/input questions remain open; no subsequent hash-identified human/Windows trial was provided at this review.

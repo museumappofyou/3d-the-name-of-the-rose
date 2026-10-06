@@ -2,7 +2,7 @@
 
 ## PM ledger
 
-**PM:** Codex. **Updated:** 2026-10-05. This section owns current state, the active mission, the near-term roadmap and compact agent history. Product decisions are in [Game design](GAME_DESIGN.md#decision-history); platform evidence and gates are in [Platforms](PLATFORMS.md). Supporting council reports retain their original recommendations, including superseded ones.
+**PM:** Codex. **Updated:** 2026-10-06. This section owns current state, the active mission, the near-term roadmap and compact agent history. Product decisions are in [Game design](GAME_DESIGN.md#decision-history); platform evidence and gates are in [Platforms](PLATFORMS.md). Supporting council reports retain their original recommendations, including superseded ones.
 
 ### Standing PM review protocol
 
@@ -16,23 +16,25 @@ Every completed PM review ends with these sections: **PM Assessment**, **Git / R
 
 ### Current state
 
-| Item | Verified repository state at PM intake |
+| Item | Verified repository state at the Day-1A completion review |
 |---|---|
-| Branch / checkpoints | `migration/phase-1-godot`; last trusted gameplay checkpoint `7c6f836afd17a87d407172c9727e8d4e26818598`; PM/design checkpoint `373ee82`. The live remote matched the gameplay checkpoint at intake. Read fresh Git state for current HEAD and publication status |
+| Branch / checkpoints | `migration/phase-1-godot`; reviewed implementation `e223bc2` (five developer commits after `5b2a85a`), already published to origin. Last accepted gameplay baseline remains the Phase-1 proof at `7c6f836`; Day-1A is an implementation checkpoint, not an accepted product milestone. Read fresh Git state for the subsequent PM checkpoint |
 | Authoritative remote | `origin` → `git@github-moy:museumappofyou/3d-the-name-of-the-rose.git` |
-| Working tree | Active, uncommitted Day-1A implementation. Source files changed during inspection; treat it as concurrent work and inspect a fresh diff before any developer handoff |
-| Last trusted native scope | Phase-1 porch/cloister/church/altar/first stair landing. Existing Mac measurements are historical proof evidence, not measurements of Day-1A |
-| Day-1A | Partial world export/derivatives, optional content loading, terrain/tree residency, mode composition and new scene/capture scaffolding observed. Seven additional world cells are listed in the local manifest. Arrival-through-Nones gameplay has not been accepted |
+| Working tree at handoff | Clean, no staged or untracked work; live origin matched `e223bc2`. Independent builds/probes use ignored `builds/pm-review/day1a-2026-10-06/`; original developer packages were preserved |
+| Native modes | Day-1A is the default. The proof remains behind `--mode=proof`; its functional route and second-process reload passed independently |
+| Day-1A implementation | Arrival → Sext/gate → guest cell → solo chest route → meal → free period → physical Nones → end exists. Seven new world cells stay resident; authored cast, two mules, first-person carry/sit actions, description/name memory and internal observation log exist. Day-1B exclusions were respected |
 | Story/design | Round-1, Round-3 Adso, Round-4 library and full Day-1 sources are preserved in `373ee82`; they were untracked at intake. The full-Day-1 minimum in the design is superseded by the A/B split below |
-| Checks rerun at intake | Browser 29/29; extraction 21/21; render conservation; ten shared-data domains; all nine literary-output hashes unchanged. These checks do not validate the new Day-1A domain or presentation |
-| Playable/buildable status | The committed proof has recorded build/functional evidence. No clean Day-1A build, packaged route, independent playtest or human listening was established by this intake audit |
-| Important open gates | Actual Windows W1/W2; human audio/input/controller review; 60–85 ms stair unload hitch; browser cast normals; close-character quality; arrival-day canon review |
+| Independent checks | Git-only fresh build: 339 derivative hashes, domain 22/22, Day-1A 14/14, thirteen pose/normal checks, ten anchors, proof functional/relaunch, both exports and Windows PCK audit pass. Browser 29/29, extraction 21/21, render/data/repository checks and nine literary hashes pass. Known harness exit diagnostics remain |
+| Failed scene gates | Seven save probes fail: pause Save/Load dispatch to proof storage; meal dialogue/choice reloads lose progression; end reloads leave stop/card state inconsistent; Nones reload relocates the community. An eighth probe learns Fulco's name from a queued introduction even when interrupted before presentation. Passing domain tests miss these failures |
+| Performance | Raw final 1080p walk confirms 129.9 FPS / p95 10.75 ms / maximum 59.6 ms. Cycle report: 133.9 FPS, one 124.69 ms frame; no retained raw cycle frames, and warm-up is only the initial gate leg. Cold 541–591 ms stalls and RSS drift remain unexplained; resident loops do not clear the proof's streaming hitch |
+| Product validation | PM inspected source and rendered captures; fresh packaged scripted walking is functional evidence. Owner/unfamiliar-player play, listening, controller/focus/layout trials and actual Windows W1/W2 remain NOT RUN. Route learnability, William's relationship and ordinary-life appeal are unproven |
+| Decision / focus | **FIX Day-1A**, then PM re-review and owner + unfamiliar-player/listening/canon review. Do not start Day-1B |
 
-Structured inspection details and preservation hashes live in [PM evidence](evidence/pm-state.json). `IMPLEMENTED` means changes exist; `VERIFIED` means the relevant inspection/checks succeeded; `EXPERIENTIALLY VALIDATED` means a person played, listened or used the relevant input. Record these separately. No Day-1A acceptance follows from existing Phase-1 results.
+Structured intake history remains in [PM state](evidence/pm-state.json); independent completion findings are in [Day-1A PM evidence](evidence/day1a/pm_review.json). `IMPLEMENTED` means changes exist; `VERIFIED` means relevant checks succeeded; `EXPERIENTIALLY VALIDATED` means a person played, listened or used the relevant input. An uninterrupted scripted route does not establish save/relaunch safety or player enjoyment.
 
 ### Active mission — Day-1A
 
-**Status:** implementation in progress; PM review pending. **Developer:** owner/model unconfirmed at intake; do not start a competing implementation. Opus 5.5 xHigh is the owner's preferred implementer if available, not a verified assignment. **Product question:** does living in this abbey as Adso already feel worth continuing before a mystery begins?
+**Status:** initial implementation finished; completion review decision **FIX** on 2026-10-06. **Previous developer:** Claude Opus 5.5 xHigh, reported by the owner. **Next developer:** corrective pass unassigned; its brief below is independent of model/private context. **Product question:** does living in this abbey as Adso already feel worth continuing before a mystery begins?
 
 **Scope:** a 20–30 minute foundation from the final road bend through arrival, Sext at the gate, reception, guest room, first repeated route, ordinary meal with William, a few recurring residents, a short free period and Nones. This is a target duration, not a measured playtime.
 
@@ -44,7 +46,7 @@ Structured inspection details and preservation hashes live in [PM evidence](evid
 - Nones must change visible activity, movement, church occupation and sound; access changes must permit safe egress. A bell alone does not satisfy the transition.
 - Save/relaunch must preserve the bounded sequence, physical actors, carried/placed objects and time without duplicating events. Isolate proof and campaign saves; never overwrite a player's proof save to run checks.
 
-**Relevant systems/files:** `native/scripts/main.gd`, `adapters/world_cells.gd`, `adapters/day1a/`, `domain/`, `ui/`, `bench/day1a_runner.gd`, `native/tests/`, `scripts/migration/build_day1a_assets.py`, `build_content.py`, `browser/slice_export.js`, `shared/data/export/day1a_cells.json`, `shared/data/manifests/world_day1a_derivatives.json` and the native Day-1A derivatives. The exact in-progress file list must be refreshed from Git. Treat the [full Day-1 design](../story-council/day-1/OPUS_DAY1_DESIGN.md) as scene intent; its 60–75 minute prototype and 280–330 line estimate are not this assignment.
+**Relevant systems/files:** `native/scripts/main.gd`, `adapters/world_cells.gd`, `adapters/day1a/`, `domain/day1a/`, `ui/`, `bench/day1a_runner.gd`, `native/tests/`, `scripts/migration/build_day1a_assets.py`, `build_content.py`, `browser/slice_export.js`, `shared/scenarios/day1a/day1a.json`, `shared/data/export/day1a_cells.json`, `shared/data/manifests/world_day1a_derivatives.json` and the native Day-1A derivatives. Refresh Git before editing. Treat the [full Day-1 design](../story-council/day-1/OPUS_DAY1_DESIGN.md) as scene intent; its 60–75 minute prototype and 280–330 line estimate are not this assignment.
 
 **Acceptance and validation:**
 
@@ -62,11 +64,28 @@ Structured inspection details and preservation hashes live in [PM evidence](evid
 
 **PM review:** inspect the actual diff and reproducible package/results; assess each criterion as implemented, verified and experientially validated. Choose FIX/ITERATE for failed relationship, route or ordinary-life gates. Advance to Day-1B only after the foundation passes its relevant product gates, with external/platform gaps explicitly recorded. A developer's completion report alone is not acceptance.
 
+### Corrective mission — make Day-1A safe to playtest
+
+Read the canonical docs and [independent PM review](evidence/day1a/pm_review.json), inspect fresh Git status/history, and reproduce before fixing. Reviewed source: `e223bc2`; keep this branch and preserve other work. This is a Day-1A correction, not a redesign.
+
+1. **Protect every save entry point.** Route pause-menu Save/Load and its displayed path to Day-1A in that mode; retain proof behavior. Seed a proof slot in scratch storage and verify main/backup bytes survive repeated Day-1A saves/loads. Test actual HUD requests, F5/F9 and separate-process relaunch.
+2. **Resume interrupted scenes.** Preserve or deterministically recover queued required dialogue, active choices/HUD, carried/placed objects, mule/hold state and actor paths. Reloading Tebaldo's meal lines or William's open question must permit progression. Learn names when the introduction is presented, not merely queued; interrupting an unheard introduction must not create identity memory. Restore an end autosave on a fresh launch and an earlier slot after the end card; synchronize `_ended`, HUD/prompts, body/audio and clock. Validate new saved fields and handle schema-1 data explicitly.
+3. **Keep Nones physical.** Save/load before/at the bell, during movement, in choir and afterward must retain community position/activity/routes without teleporting to stalls, duplicate bells, premature chant or lost exits. Bounded actor persistence is sufficient. Replace the `or true` persistence assertion; add meaningful scene/relaunch regressions, including repeated loads into already-used objects.
+4. **Make performance evidence reliable.** Warm up the complete benchmark loop; retain compressed per-frame cycle data and aligned RSS/object/resource samples. Investigate cold stalls before attributing them to shaders; use loading-time preparation only if measured to help. Run isolated cold/warm trials, the 1080p route, ten measured loops and at least twenty measured soak minutes after full warm-up. Report unexplained RSS/FPS shifts honestly; resident scenes do not validate streaming.
+5. **Improve William's existing walk.** Calibrate stride/playback against movement and reduce slide/deep knee bend; inspect walking/talking distance with before/after captures. Preserve lead/wait and restrained dialogue. Keep the body as an explicit stand-in for this proof; a bespoke-model project is outside this fix mission.
+
+Use isolated save/telemetry paths for all QA. Preserve literary outputs, private masters, supplied music, visual bible and frozen evidence. Rerun native domain/Day-1A/pose/anchor, proof functional/relaunch, clean build/package audit, browser/data/render/book/repository checks and nine literary hashes. Passing existing tests alone does not close the reproduced failures. Keep local raw artifacts ignored; retain concise structured evidence and update canonical docs, without new Markdown reports. Commit coherent fixes and push normally after checks; do not rewrite history or mark the PM gate accepted yourself.
+
+**Stop:** return a hash-identified Day-1A playtest candidate and results/limitations for PM review. No Snow in the Straw, notebook inference, Vespers/night/Day 2, library/full interiors, population expansion, broad frameworks/refactors, asset-pipeline replacement or web viewer. Human listening, owner/unfamiliar play, finished-book canon/spoiler review and Windows W1/W2 require the person/hardware; remain NOT RUN until actual trials. Scripted walkers and waveform analysis do not fill those gaps.
+
+**After corrective PM review:** the owner and at least one unfamiliar player play without coaching/markers, listen to bells/chant/doorway transitions, and record William's presence, route recall, resident recognition, Nones pacing and desire to continue. The roughly 65-second bell-to-chant delay remains provisional until experienced. A finished-book reviewer checks names/offices/lines without forward spoilers for the owner. Actual Windows trials gate broad migration; none is currently complete.
+
 ### Near-term roadmap
 
 | Order | Work | Dependency / gate |
 |---|---|---|
-| Now | Finish and review Day-1A | Recover current developer assignment; preserve concurrent work; prove ordinary life through Nones |
+| Now | Correct save/reload/name memory, benchmark evidence and William's walk; PM re-review | Eight independent scene failures; corrective mission above |
+| After fixes | Owner + one unfamiliar-player play/listening; finished-book canon/spoiler review | Safe identified package; no coaching; product-gate observations |
 | Parallel gate | Windows W1/W2, human listening/input, stair-hitch diagnosis and canon review | Real hardware/person/source review; preserve separate statuses |
 | Next | Day-1B: Snow in the Straw; minimal seen/told/inference notebook; Vespers/night/Day-2 hook | Day-1A accepted; not started by this mission |
 | Then | External full-Day-1 playtest, approximately eight unfamiliar players with reader/non-reader/investigation experience | A/B complete; decide fix/iterate/advance from observations |
@@ -85,6 +104,8 @@ Day 2, delegation detail and the lightweight web viewer follow demonstrated need
 | 2026-10-05 Day-1A working tree | Active implementer unconfirmed; world pipeline and scene/capture scaffolding observed changing | Partial implementation, no commit or completion claimed; review after a stable handoff |
 | 2026-10-05 Codex PM intake, `373ee82` | Git/remote, docs, diffs, literary hashes and read-only regression checks inspected; canonical mission/governance repaired | Supporting sources preserved; no native/human/Windows rerun claimed. PM checkpoint is separate from unfinished implementation |
 | 2026-10-05 owner standing instruction | Codex's continuous PM/reviewer role and completion-triggered review/report/prompt protocol made explicit | Governance only; Day-1A remains in progress. Reviewed PM checkpoints may be pushed safely without including the dirty implementation |
+| `1859082` → `e223bc2`, 2026-10-05/06 | Claude Opus 5.5 xHigh: derivatives, arrival-to-Nones, scripted-save isolation, benchmarks and evidence; five commits pushed | IMPLEMENTED. Automated checks pass independently; save safety, interrupted progression and Nones continuity fail PM probes. Human/Windows gates NOT RUN |
+| 2026-10-06 Codex review of `e223bc2` | Git-only rebuild/export, native/browser/book checks, raw-frame audit, isolated scene probes and rendered package/capture inspection | **FIX**; no Day-1B advancement. Eight failed scene probes and evidence limits recorded; no gameplay fixes or player-save changes by PM |
 
 ## Two products, one abbey
 
@@ -102,9 +123,9 @@ The current browser is a valuable construction/reference tool, not the finished 
 | Frozen architectural export | `shared/data/export/slice_cells.json`, census, native world GLBs | Manifest links the export to builder hashes; raw export cache is ignored |
 | Common source derivatives | `shared/assets/` | Both products derive from these; engine-specific packing is allowed |
 | Native presentation | `native/scripts/adapters/`, shaders, scenes | Bind semantic IDs; scene names/NodePaths are not literary or save IDs |
-| Scenario overlays | Planned, described in `GAME_DESIGN.md` | Add events and objects without redefining the abbey’s base layout |
+| Scenario overlays | Bounded `shared/scenarios/day1a/day1a.json` exists; general investigation contracts remain planned | Add events/objects without redefining the base layout; original lines/people remain marked internally |
 
-This is a transition, not a claim that both runtimes already read one complete shared world database. The browser still reads JS data and builder functions. Shared JSON covers the proof only. Its world manifests and imported native GLBs are generated products. Moving a folder does not complete system migration.
+This is a transition, not a claim that both runtimes already read one complete shared world database. The browser still reads JS data and builder functions. Shared JSON covers the proof and bounded Day-1A overlay. Its world manifests and imported native GLBs are generated products. Moving a folder does not complete system migration.
 
 When architecture changes, change the authoritative builder, export the affected section once, validate anchors/collision/IDs, then produce separate native and web derivatives. If a later native editor workflow becomes the authoring authority, transfer a section explicitly: supply a neutral GLB plus semantic sidecar and retire that section’s procedural ownership. Never edit the browser builder and native reconstruction independently. Native `.tscn` files must not become the only portable record of layout.
 

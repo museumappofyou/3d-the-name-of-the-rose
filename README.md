@@ -2,9 +2,9 @@
 
 A first-person historical investigation game in which the player is **Adapted Adso**, arriving beside William and learning the abbey through residence. Umberto Eco’s *The Name of the Rose* supplies the architectural and literary foundation. A continuous multi-day campaign contains bounded authored investigations; knowledge of places, hours and people is the player's progression.
 
-**Native is the primary product: Windows first, macOS second, developed on macOS in Godot. Web is an architectural explorer with a smaller scope.** The last committed native checkpoint is a bounded migration proof. Day-1A implementation is underway in the working tree and awaits review. The browser still runs the larger reference reconstruction; the future lightweight viewer and Day-1B investigation are plans.
+**Native is the primary product: Windows first, macOS second, developed on macOS in Godot. Web is an architectural explorer with a smaller scope.** Day-1A is implemented and published at `e223bc2`, but its PM review requires **FIX** before acceptance: menu save/load, interrupted meal/end reloads and Nones continuity fail independent probes. The browser remains the larger reference reconstruction; Day-1B and the lightweight viewer are plans.
 
-Current PM state, the active Day-1A brief, roadmap and agent log live in [Project](docs/PROJECT.md#pm-ledger). Product decisions live in [Game design](docs/GAME_DESIGN.md). Check Git before continuing: local implementation is not yet a verified checkpoint.
+Current state, the corrective Day-1A mission, roadmap and agent log live in [Project](docs/PROJECT.md#pm-ledger). Product decisions live in [Game design](docs/GAME_DESIGN.md); independent review evidence is [here](docs/evidence/day1a/pm_review.json). Check fresh Git before continuing.
 
 ## Run what exists
 
@@ -17,18 +17,19 @@ npm start
 
 Open `http://localhost:8000`. `?quality=low` reduces rendering work; it does not guarantee smooth performance in populated interiors. WASD/arrows move, mouse looks, E examines, J opens notes, F lights the lantern; P switches aerial/walking view and M opens the plan. The current reference exposes novel secrets. It is not the proposed spoiler-safe web edition.
 
-Native proof, with the pinned **Godot 4.7.2 standard editor and matching export templates**:
+Native prototype, with **Godot 4.7.2 standard editor and matching export templates**:
 
 ```sh
 export GODOT_BIN=/absolute/path/to/Godot
 bash scripts/migration/build_phase1.sh --fresh --functional
-"$GODOT_BIN" --path native                  # Day-1A: last road bend → gate → guest room → meal → free period → Nones
+"$GODOT_BIN" --path native -- --save-dir="$PWD/builds/day1a-review/saves" --telemetry-dir="$PWD/builds/day1a-review/telemetry"
+# Day-1A default: road → gate → guest room → meal → free period → Nones; scratch saves for review
 "$GODOT_BIN" --path native -- --mode=proof  # the frozen Phase-1 proof
 ```
 
-The build uses committed derivatives and needs neither private masters nor Chrome. It validates content, imports, tests and exports Windows/macOS development packages into ignored `builds/phase1/`. Native controls: WASD/arrows, mouse, E interact, J notebook, F lantern, Esc pause, F5 save, F9 load, F12 QA. Day-1A uses WASD/mouse, Shift to hurry, E, 1–4 for replies, Esc for the menu (text size, captions, look sensitivity) and F5/F9; it has no notebook or lantern. Saves use the existing `AbbeySlice` user directory; Day-1A writes its own `day1a_slot0.json` and never touches a proof save.
+The build uses committed derivatives and needs neither private masters nor Chrome. It validates content, imports, tests and exports development packages into ignored `builds/phase1/`. Proof controls: WASD/arrows, mouse, E interact, J notebook, F lantern, Esc pause, F5/F9 save/load, F12 QA. Day-1A uses movement/mouse, Shift, E, replies 1–4, Esc/options and F5/F9; the notebook is deferred. Its quick/autosave format uses `day1a_slot0.json`, but the pause-menu buttons incorrectly use the proof's `slot0.json` at the reviewed revision. Use scratch storage while reproducing; save isolation and reload safety await the corrective pass.
 
-**Validated scope:** Alinardo’s porch → cloister → church → skull altar → first ossuary landing. Mac proof metrics: 104.6 FPS route / 100.5 FPS crowd at physical 1080p. Windows GPU runs, human audio/input review and the recurring stair unload hitch remain open. These measurements establish the slice’s feasibility, not whole-game performance.
+**Verified technical scope:** the proof route/relaunch and a fresh Git-only Day-1A build/export pass existing checks. The recorded final Day-1A Mac walk recomputes to 129.9 FPS / p95 10.75 ms at physical 1080p. Additional save probes fail; first-use stalls, William's gait and memory qualification need work. Owner/unfamiliar play, human listening/input and Windows runtime remain unvalidated. Resident Day-1A cells do not fix the proof's stair unload hitch.
 
 ## Verify and build
 

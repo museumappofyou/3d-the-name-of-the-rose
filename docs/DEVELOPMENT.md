@@ -92,7 +92,9 @@ scripts/migration/run_package_evidence.sh "$APP" mac
 
 Set `EVIDENCE_OUT` to change benchmark/evidence destination. Full evidence runs include high-resolution variants, startup and a twenty-minute soak. Baseline gates at physical 1920×1080: normal ≥60 FPS/p95 ≤25 ms; crowd ≥45 FPS/p95 ≤33.3 ms; no repeatable >100 ms stalls; ten residency cycles within 10% of warmed memory; twenty-minute soak without crash, graphics/audio/save failures. Record physical viewport, VSync/focus, hardware, driver, power and cache state. A short screenshot smoke is not a performance run.
 
-Mac player saves: `~/Library/Application Support/AbbeySlice/saves/slot0.json`; Windows: `%APPDATA%\AbbeySlice\saves\slot0.json`. Day-1A writes `day1a_slot0.json` (format `abbey-day1a-save`) beside it, rejects a proof save offered to it and never overwrites one; its local telemetry goes to `user://day1a/telemetry/`. Automated scenarios use distinct save directories (scripted `day1-*` runs default to `user://day1a_runs/`). Current format validates version, body length/checksum, known IDs and values, writes `.tmp`, rotates `.bak`, then replaces. A corrupt save recovers with a report. Never overwrite a player save to run a test. Browser notebooks remain separate `abbey.notebook.v2` and QA `abbey.notebook.review.v2` storage.
+Proof player saves: macOS `~/Library/Application Support/AbbeySlice/saves/slot0.json`; Windows `%APPDATA%\AbbeySlice\saves\slot0.json`. Day-1A quick/autosaves use `day1a_slot0.json` (`abbey-day1a-save`); its local telemetry defaults to `user://day1a/telemetry/`. At reviewed `e223bc2`, **pause-menu Save/Load still dispatch to the proof slot**: independent probes overwrite its main file and load the wrong scenario. Meal/end/Nones reloads also fail continuity. See the [corrective mission](PROJECT.md#corrective-mission--make-day-1a-safe-to-playtest); do not claim universal save isolation from the save-file class tests.
+
+Use explicit ignored scratch `--save-dir` and `--telemetry-dir` for all reproduction/playtest runs until the correction is reviewed. Scripted `day1-*` runs otherwise default to `user://day1a_runs/`. Both file services use header/body checksums and `.tmp`/`.bak` replacement; Day-1A validates the scenario envelope, player bounds, clock and beat, not every persisted actor/scene invariant. Its file class rejects a proof-format file, but that does not protect a menu routed to another service. Never overwrite a player save to test. Browser notebook storage remains separate.
 
 To inspect package contents:
 
@@ -131,11 +133,13 @@ cd "C:\Test Ünïcode\Abbey Slice"
 Get-FileHash .\AbbeySlice.exe, .\AbbeySlice.pck -Algorithm SHA256
 foreach ($d in "vulkan","d3d12") {
   .\AbbeySlice.exe --rendering-driver $d -- --scenario=shots --out="$PWD\out_$d" --label=$d
-  .\AbbeySlice.exe --rendering-driver $d
+  .\AbbeySlice.exe --rendering-driver $d -- --mode=proof
 }
 ```
 
 For each driver, check the log/JSON’s actual adapter/API/physical viewport, all 17 views and a crowd shot. Compare composition, faces, ledge snow, night lamps and landing label to Mac evidence. Check mouse capture/release by click/Esc; Alt-Tab away/back twice without stuck input; WASD/arrows/Shift/E/J/F and save/load; Turkish Q or another non-US physical layout; an Xbox-compatible controller (left/right sticks, A interact, Y notes, X lantern, Start pause). Record pad/layout and any missing mapping.
+
+Those controls/views describe proof mode. After Day-1A corrections, also run the default campaign in a dedicated scratch directory: arrival through Nones, replies 1–4, menu and quick save/load/relaunch, bells/chant and independent route recall. A proof-only W1 trial does not validate Day-1A. Keep controller support and the proposed Nones delay/mix unjudged until actually used/heard.
 
 Listen: exterior wind, stone/snow footsteps, Prime chant from the church, doorway filtering without restart, office ending/reverb/creak and audio-device change/unplugging. Identify the click candidates in the recorded Mac route by ear. Objective playback position/gain is not approval of the mix.
 

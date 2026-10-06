@@ -19,7 +19,7 @@ This page explains ownership, licences, reconstruction limits and safe regenerat
 | `shared/data/manifests/toolchain.json` | Engine/download checksum pins and tool versions |
 | `docs/evidence/asset_inventory_2026-10-01.json` | Frozen pre-migration inventory, including local master availability and duplicate bytes; paths describe the old tree |
 
-To inspect current assets, run `python3 scripts/migration/inventory.py`; the result goes to ignored `shared/provenance/asset-inventory.local.json`. Do not repeatedly commit machine-local paths/tool installations as a current authoritative inventory. The Phase-1 manifest verifies 154 derivative/font outputs independently of private sources.
+To inspect current assets, run `python3 scripts/migration/inventory.py`; the result goes to ignored `shared/provenance/asset-inventory.local.json`. Do not repeatedly commit machine-local paths/tool installations as an authoritative inventory. The current build manifest verifies 339 outputs independently of private sources (the frozen proof had 154). Day-1A world/animal derivatives have separate manifests; thirteen native people now have fitted pose/normal checks. This verifies conversion, not final close-character art approval.
 
 Content classes and in-world claim reliability are defined in `GAME_DESIGN.md`. Original investigations may reference architectural evidence but never insert their invented events into literary extraction. Public runtime content drops evidence fragments. Developers use claim IDs and the corpus hash to trace an assertion, not a long copy of the novel in documentation.
 

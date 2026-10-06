@@ -1,0 +1,800 @@
+{
+  "schema_version": 1,
+  "review_id": "day1a-pm-2026-10-06",
+  "reviewed_at_utc": "2026-10-06T16:04:42.909613+00:00",
+  "reviewer": "Codex Project Manager and Technical Reviewer",
+  "source": {
+    "branch": "migration/phase-1-godot",
+    "reviewed_commit": "e223bc2eb588228dd9f00c0fdb7319d731a9ec32",
+    "previous_pm_checkpoint": "5b2a85afb0b7d329f373767c6b4c325a239de221",
+    "developer_commits": [
+      "1859082",
+      "aa033e9",
+      "269401f",
+      "6851034",
+      "e223bc2"
+    ],
+    "developer": "Claude Opus 5.5 xHigh (owner completion report)",
+    "authoritative_remote": "origin",
+    "remote_url": "git@github-moy:museumappofyou/3d-the-name-of-the-rose.git",
+    "live_remote_at_review": "e223bc2eb588228dd9f00c0fdb7319d731a9ec32",
+    "working_tree_clean_at_review_start": true
+  },
+  "assessment": {
+    "implemented": "Arrival-through-Nones foundation exists; Day-1B exclusions respected.",
+    "verified": "Clean build/export and existing suites pass; eight additional probes fail required scene/persistence/name-memory behavior.",
+    "experientially_validated": "NOT RUN for owner/unfamiliar play, listening, controller and Windows. PM inspected captures and ran a scripted package; not external player validation.",
+    "decision": "FIX",
+    "advance_to_day1b": false,
+    "accepted_gameplay_baseline": "7c6f836afd17a87d407172c9727e8d4e26818598",
+    "next_mission": "docs/PROJECT.md#corrective-mission--make-day-1a-safe-to-playtest"
+  },
+  "independent_checks": [
+    {
+      "command": "npm test",
+      "exit_code": 0,
+      "tests_passed": 29,
+      "log": "builds/pm-review/day1a-2026-10-06/logs/browser_tests.log",
+      "log_sha256": "542f0b4a9ee31d14c7185bdcfa40a63fae6756c1dde7b07e1ba5a2dc4d46253e"
+    },
+    {
+      "command": "npm run check:render",
+      "exit_code": 0,
+      "tests_passed": null,
+      "log": "builds/pm-review/day1a-2026-10-06/logs/render_checks.log",
+      "log_sha256": "9c9e985243033dd0fa66c2b860bb611644e5f0d84319c1a115c071d816f9d500"
+    },
+    {
+      "command": "python3 scripts/migration/build_content.py --check",
+      "exit_code": 0,
+      "tests_passed": null,
+      "log": "builds/pm-review/day1a-2026-10-06/logs/shared_content.log",
+      "log_sha256": "7918c916328d5a2812d1ad42495f96e7aed68d6660ca4aa35d6a612ad1fe31aa"
+    },
+    {
+      "command": "python3 -m unittest discover -s book_details/tests -v",
+      "exit_code": 0,
+      "tests_passed": 21,
+      "log": "builds/pm-review/day1a-2026-10-06/logs/book_tests.log",
+      "log_sha256": "b8b1d10c07b456d0464497e2d2b551e754c08566460b7a0698142e9a519e282f"
+    },
+    {
+      "command": "python3 scripts/check_repository.py",
+      "exit_code": 0,
+      "tests_passed": null,
+      "log": "builds/pm-review/day1a-2026-10-06/logs/repository_checks.log",
+      "log_sha256": "3e5b8a89688ea20762ebbe16f2b049be610ffb304d101bfeb253422d19083d6a"
+    },
+    {
+      "kind": "domain",
+      "engine": "4.7.2-stable (official)",
+      "passed": 22,
+      "total": 22,
+      "failures": 0,
+      "report": "builds/pm-review/day1a-2026-10-06/checks/domain.json",
+      "sha256": "da6e2712d1c1fffd932fd1f84474ba5f17b7c77bb4b5bc4fa1576759564427d6"
+    },
+    {
+      "kind": "day1a",
+      "engine": "4.7.2-stable (official)",
+      "passed": 14,
+      "total": 14,
+      "failures": 0,
+      "report": "builds/pm-review/day1a-2026-10-06/checks/day1a.json",
+      "sha256": "6f7fd5a5029e9ae8d97a10ed080bae740f81b5d435cf9874e83e9f84dd5f75d9"
+    },
+    {
+      "kind": "pck_audit",
+      "engine": "4.7.2",
+      "pass": true,
+      "file_count": 1075,
+      "report": "builds/pm-review/day1a-2026-10-06/checks/pck_audit.json",
+      "sha256": "4bb14d7653b97bef44f4842c9d9454f71b4e4838fe548e69fff8cc98642b8562"
+    },
+    {
+      "command": "GODOT_BIN=<pinned tool> EVIDENCE_OUT=<isolated review directory> bash scripts/migration/build_phase1.sh --fresh --functional",
+      "working_tree": "Exact git archive of e223bc2 in ignored source-only checkout",
+      "exit_code": 0,
+      "private_masters_present": false,
+      "generated_content_and_import_cache_present_before_build": false,
+      "derivative_outputs": 339,
+      "derivative_mismatches": 0,
+      "macos_export": "PASS",
+      "windows_export": "PASS (not executed on Windows)",
+      "pipeline_log_sha256": "7cb6f77b936fa79036f98518501104ef2f2def04a80fab13de2d8fb7c027b1e8"
+    },
+    {
+      "kind": "fitted_pose_and_normal_checks",
+      "passed": 13,
+      "total": 13,
+      "results": [
+        {
+          "person": "alinardo",
+          "pass": true,
+          "normals_pass": true,
+          "max_error_m": 7.94337029219605e-06,
+          "log_sha256": "0ffa6d465c27824aba529c873a062cd0c7117579f980adc16fb15f519a889e86",
+          "clip_count": 9
+        },
+        {
+          "person": "lay_herd",
+          "pass": true,
+          "normals_pass": true,
+          "max_error_m": 7.61209184929612e-06,
+          "log_sha256": "a5313ba1461c2d5491da9cc76086354d18569c676b4951894e2db2635c9d29ef",
+          "clip_count": 26
+        },
+        {
+          "person": "lay_old",
+          "pass": true,
+          "normals_pass": true,
+          "max_error_m": 8.36058825370856e-06,
+          "log_sha256": "1a5b60a4597174a2d80e4942f1f5454ab4395e97068969630492f2ce7c70bbd3",
+          "clip_count": 26
+        },
+        {
+          "person": "monk_a",
+          "pass": true,
+          "normals_pass": true,
+          "max_error_m": 8.25891765998676e-06,
+          "log_sha256": "b8afdca63446ef8993098cce333f461c366888413e33689fdf4d0b5efb35e903",
+          "clip_count": 26
+        },
+        {
+          "person": "monk_b",
+          "pass": true,
+          "normals_pass": true,
+          "max_error_m": 8.30473072710447e-06,
+          "log_sha256": "d6ab1c246217f63648f7fa59bc2de7dee924d8dbac11d3a84611c9a6f762eaaf",
+          "clip_count": 26
+        },
+        {
+          "person": "monk_c",
+          "pass": true,
+          "normals_pass": true,
+          "max_error_m": 7.80118716647848e-06,
+          "log_sha256": "957f440835383be56e5e1570389d7af0d828c4bcedcdb89d6483b20f56d053a6",
+          "clip_count": 26
+        },
+        {
+          "person": "monk_d",
+          "pass": true,
+          "normals_pass": true,
+          "max_error_m": 8.63427158037666e-06,
+          "log_sha256": "6d0acde4c6574d5f4d7d629f074033733aea6a708a423cf8388f4ee16d73a1a6",
+          "clip_count": 26
+        },
+        {
+          "person": "monk_e",
+          "pass": true,
+          "normals_pass": true,
+          "max_error_m": 8.0509207691648e-06,
+          "log_sha256": "7ee52c841f7144f079e3611ae36b625ee4301b4145b8301c9a0245d73f4e8289",
+          "clip_count": 26
+        },
+        {
+          "person": "monk_f",
+          "pass": true,
+          "normals_pass": true,
+          "max_error_m": 8.11943755252287e-06,
+          "log_sha256": "923f7e0bc4fc70b4f422461a74d700487f68fee895e4c414af5453af8d607128",
+          "clip_count": 26
+        },
+        {
+          "person": "monk_g",
+          "pass": true,
+          "normals_pass": true,
+          "max_error_m": 8.12952202977613e-06,
+          "log_sha256": "e097afdc10ecf58e154ee076ca8cd8a146ed4b4fc095b7daa0224a01bb0a06d0",
+          "clip_count": 26
+        },
+        {
+          "person": "novice_a",
+          "pass": true,
+          "normals_pass": true,
+          "max_error_m": 8.40852680994431e-06,
+          "log_sha256": "c36bdfd330d73c121e3ea5297dadb2799e7a32a324e883acee90d64c04b90abf",
+          "clip_count": 26
+        },
+        {
+          "person": "novice_b",
+          "pass": true,
+          "normals_pass": true,
+          "max_error_m": 7.73236752138473e-06,
+          "log_sha256": "5cf9e6968973549747b08197447ea62c2dca96605bdb70ba17642e622d02e55c",
+          "clip_count": 26
+        },
+        {
+          "person": "scribe_a",
+          "pass": true,
+          "normals_pass": true,
+          "max_error_m": 7.67372512200382e-06,
+          "log_sha256": "f0d2bd8ba8b122bfec69815d32cab09a2eb3a5e96d600dced9feb23d6471696c",
+          "clip_count": 26
+        }
+      ]
+    },
+    {
+      "kind": "anchors",
+      "pass": true,
+      "checks": 10,
+      "log_sha256": "b3c79a27d5f333733000d9e3397623addc2a3b8dcaa0b1b4ff78cfe72773a250"
+    },
+    {
+      "kind": "proof_functional",
+      "scenario": "functional-reload",
+      "pass": true,
+      "report_sha256": "e1943dd1a29afa72c332acc24a2194d19a2ec41ee1ccf1585ecd134e913e8a90"
+    },
+    {
+      "kind": "proof_functional",
+      "scenario": "functional",
+      "pass": true,
+      "report_sha256": "b4cf114f9c322486f285d1d05ff283e13ffdc30c8490e150c1f0a0d08b630e6b"
+    },
+    {
+      "kind": "literary_preservation",
+      "pass": true,
+      "file_count": 9,
+      "files": [
+        {
+          "path": "book_details/output/abbey_hierarchy.json",
+          "expected_sha256": "58afe7ff26572dc359f287f411761a4e97c5015a7da6d97cce97788c084e396f",
+          "actual_sha256": "58afe7ff26572dc359f287f411761a4e97c5015a7da6d97cce97788c084e396f"
+        },
+        {
+          "path": "book_details/output/access_graph.json",
+          "expected_sha256": "ff0cddbc44b4f5bccb78061d46bf94bcba290bdd891bc92886656d5b84cc0b32",
+          "actual_sha256": "ff0cddbc44b4f5bccb78061d46bf94bcba290bdd891bc92886656d5b84cc0b32"
+        },
+        {
+          "path": "book_details/output/claims.jsonl",
+          "expected_sha256": "f2ccb46a8418ce3bc6fd55ffc39349af2876105f28e9826c76dcc635b07cd89e",
+          "actual_sha256": "f2ccb46a8418ce3bc6fd55ffc39349af2876105f28e9826c76dcc635b07cd89e"
+        },
+        {
+          "path": "book_details/output/consolidation_summary.json",
+          "expected_sha256": "744904b6be2a126c1b12e9e38e5ccd264c7495f31edd8573d5c6cba9f5bec469",
+          "actual_sha256": "744904b6be2a126c1b12e9e38e5ccd264c7495f31edd8573d5c6cba9f5bec469"
+        },
+        {
+          "path": "book_details/output/facts.json",
+          "expected_sha256": "8249626d15542d6c2de8619435916e352404252e5fa3ac54ac640409ffafd292",
+          "actual_sha256": "8249626d15542d6c2de8619435916e352404252e5fa3ac54ac640409ffafd292"
+        },
+        {
+          "path": "book_details/output/movement_graph.json",
+          "expected_sha256": "61c860cc1411d8aeef58809952bfe975247107f3f7142036443edce68a95d772",
+          "actual_sha256": "61c860cc1411d8aeef58809952bfe975247107f3f7142036443edce68a95d772"
+        },
+        {
+          "path": "book_details/output/reconstruction_constraints.json",
+          "expected_sha256": "e8fc21619ad82b510f7cd74ddf14cbf203b6ddf1f1ed2b6cdb8d9c975ba2ca9a",
+          "actual_sha256": "e8fc21619ad82b510f7cd74ddf14cbf203b6ddf1f1ed2b6cdb8d9c975ba2ca9a"
+        },
+        {
+          "path": "book_details/output/spatial_graph.json",
+          "expected_sha256": "e90476edfa30de19bd726b1c125de1dab425a73643dd80cc5b381bfb0dd9d6c2",
+          "actual_sha256": "e90476edfa30de19bd726b1c125de1dab425a73643dd80cc5b381bfb0dd9d6c2"
+        },
+        {
+          "path": "book_details/output/visibility_graph.json",
+          "expected_sha256": "b350663c4b8686cd319b57e3c311da7333365304607ec9bb1c057bdac5f1b5c6",
+          "actual_sha256": "b350663c4b8686cd319b57e3c311da7333365304607ec9bb1c057bdac5f1b5c6"
+        }
+      ]
+    }
+  ],
+  "harness_diagnostics": "Known ObjectDB/resource-at-exit warnings remain; negative-condition test intentionally emits an error. Do not call these error-free harness runs.",
+  "scene_probe": {
+    "source": "docs/evidence/day1a/pm_review_probe.gd",
+    "sha256": "c7081ca9dbe5450a1c629e49e64f4c7c66abdc63631e954db6dacbade95fa363",
+    "expected_exit_on_reviewed_commit": 1,
+    "passed": 0,
+    "total": 8,
+    "method": "Actual main/HUD request/save adapters with controlled reachable director states; real novice conversation. These are supplemental probes, not interactive mouse or external-player trials.",
+    "isolation": "/Users/memre/Desktop/gulun_adı/builds/pm-review/day1a-2026-10-06/probe-saves",
+    "checks": [
+      {
+        "details": {
+          "day1a_created": false,
+          "proof_after_sha256": "62b679882a8a6281274f0ef2e5abd30e236e8cb1154da268e8a260bf8312b496",
+          "proof_before_sha256": "c5635ba1e81e5071bc8c32358e49739a2f80a79fbee1d68ed36c35735f027d0b",
+          "proof_path": "/Users/memre/Desktop/gulun_adı/builds/pm-review/day1a-2026-10-06/probe-saves/slot0.json",
+          "seed_error": "",
+          "status": "Saved.  /Users/memre/Desktop/gulun_adı/builds/pm-review/day1a-2026-10-06/probe-saves/slot0.json"
+        },
+        "id": "pause_save_uses_day1a_and_preserves_proof",
+        "pass": false
+      },
+      {
+        "details": {
+          "actual_director_t": 10.0,
+          "expected_director_t": 31.0,
+          "status": "Main save was invalid; recovered from the backup. main: invalid (player.position out of bounds)",
+          "write_error": ""
+        },
+        "id": "pause_load_restores_day1a",
+        "pass": false
+      },
+      {
+        "details": {
+          "beat_after_90_seconds": "meal",
+          "meal_phase": "tebaldo_talk",
+          "queued_after": 0,
+          "queued_before": 6,
+          "required_final_line_said": false,
+          "write_error": ""
+        },
+        "id": "meal_dialogue_survives_load_and_progresses",
+        "pass": false
+      },
+      {
+        "details": {
+          "answered": false,
+          "beat_after_30_seconds": "meal",
+          "choice_ui_visible_after_load": true,
+          "meal_phase": "answer",
+          "pending_choice_after_load": "",
+          "ui_pick_accepted": true,
+          "write_error": ""
+        },
+        "id": "meal_choice_survives_load_and_progresses",
+        "pass": false
+      },
+      {
+        "details": {
+          "adapter_ended": true,
+          "director_t_after_tick": 130.0,
+          "director_t_before_tick": 130.0,
+          "end_card_visible": true,
+          "loaded_beat": "road",
+          "write_error": ""
+        },
+        "id": "earlier_save_resumes_after_end",
+        "pass": false
+      },
+      {
+        "details": {
+          "adapter_ended": false,
+          "end_card_visible": false,
+          "loaded_beat": "end"
+        },
+        "id": "end_autosave_restores_end_card",
+        "pass": false
+      },
+      {
+        "details": {
+          "actor": "brother:01",
+          "after_activity": "choir",
+          "after_position": [
+            31.6299991607666,
+            0.550000011920929,
+            -7.51999998092651
+          ],
+          "before_activity": "close_book",
+          "before_position": [
+            -8.19999980926514,
+            null,
+            11.1999998092651
+          ],
+          "horizontal_shift_m": 44.0098533630371,
+          "write_error": ""
+        },
+        "id": "nones_community_keeps_physical_state",
+        "pass": false
+      },
+      {
+        "details": {
+          "introduction_line_played": false,
+          "name_known_after_interrupting_queued_introduction": true,
+          "name_known_immediately_after_choice": true,
+          "real_conversation_choice_reached": true
+        },
+        "id": "queued_unheard_name_does_not_teach_identity",
+        "pass": false
+      }
+    ],
+    "reproduce": [
+      "Create an ignored exact Git archive checkout; run the normal fresh build/content import with pinned Godot.",
+      "Copy docs/evidence/day1a/pm_review_probe.gd into the scratch native/tests/pm_day1a_review.gd (not into live gameplay sources).",
+      "Run godot --headless --path <scratch>/native --script res://tests/pm_day1a_review.gd -- --save-dir=<dedicated scratch directory> --telemetry-dir=<dedicated scratch directory> --out=<scratch evidence directory>. Never use a player save directory."
+    ]
+  },
+  "findings": [
+    {
+      "id": "PM-D1A-01",
+      "priority": "P0",
+      "title": "Pause menu writes and loads the proof save in Day-1A",
+      "status": "REPRODUCED",
+      "files": [
+        "native/scripts/main.gd:251",
+        "native/scripts/main.gd:269",
+        "native/scripts/ui/hud.gd:233"
+      ],
+      "probe_ids": [
+        "pause_save_uses_day1a_and_preserves_proof",
+        "pause_load_restores_day1a"
+      ],
+      "impact": "Menu Save changes slot0.json instead of creating day1a_slot0.json; Day-1A road positions can even create an invalid proof snapshot. Load reads proof/backup and never restores the Day-1A director. Real player saves were not used."
+    },
+    {
+      "id": "PM-D1A-02",
+      "priority": "P1",
+      "title": "Meal reload loses required dialogue and active choice, preventing progression",
+      "status": "REPRODUCED",
+      "files": [
+        "native/scripts/domain/day1a/day1a_director.gd:1465",
+        "native/scripts/domain/day1a/day1a_director.gd:1485",
+        "native/scripts/adapters/day1a/day1a.gd:301"
+      ],
+      "probe_ids": [
+        "meal_dialogue_survives_load_and_progresses",
+        "meal_choice_survives_load_and_progresses"
+      ],
+      "impact": "Restore clears line_queue and pending_choice; tebaldo_talk waits for an unsaid final line, or answer waits for a choice that the visible HUD can no longer deliver."
+    },
+    {
+      "id": "PM-D1A-03",
+      "priority": "P1",
+      "title": "End presentation and simulation stop do not follow a loaded save",
+      "status": "REPRODUCED",
+      "files": [
+        "native/scripts/adapters/day1a/day1a.gd:301",
+        "native/scripts/adapters/day1a/day1a.gd:317"
+      ],
+      "probe_ids": [
+        "earlier_save_resumes_after_end",
+        "end_autosave_restores_end_card"
+      ],
+      "impact": "An earlier save loaded after the end retains _ended/card and cannot tick. Loading an end autosave into fresh presentation restores beat=end without its end card/stop flag. The fresh-presentation probe resets those flags as a new boot would; separate-process end/UI regression is required in the correction."
+    },
+    {
+      "id": "PM-D1A-04",
+      "priority": "P1",
+      "title": "Nones reload relocates anonymous brothers to choir",
+      "status": "REPRODUCED",
+      "files": [
+        "native/scripts/domain/day1a/day1a_director.gd:1485"
+      ],
+      "probe_ids": [
+        "nones_community_keeps_physical_state"
+      ],
+      "impact": "The community is excluded from persistence and rebuilt in stalls, erasing movement timers. Probe brother:01 moves 44.01 m from close_book to choir. Named actors alone do not establish office continuity."
+    },
+    {
+      "id": "PM-D1A-05",
+      "priority": "P2",
+      "title": "Name memory is granted before queued introductions are presented",
+      "status": "REPRODUCED",
+      "files": [
+        "native/scripts/domain/day1a/day1a_director.gd:1131"
+      ],
+      "probe_ids": [
+        "queued_unheard_name_does_not_teach_identity"
+      ],
+      "impact": "After the real novice conversation choice, Fulco is known immediately although fu_name has not played; interrupting the queued introduction retains that unsupported identity."
+    },
+    {
+      "id": "PM-D1A-06",
+      "priority": "P2",
+      "title": "Persistence coverage contains a disabled assertion and misses scene boundaries",
+      "status": "SOURCE VERIFIED",
+      "files": [
+        "native/tests/day1a_tests.gd:485"
+      ],
+      "impact": "The placement comparison is followed by or true. Existing mid-route domain/save-class tests pass while menu, queued meal, end and community restore fail."
+    },
+    {
+      "id": "PM-D1A-07",
+      "priority": "P2",
+      "title": "Cycle warm-up and raw timing evidence are incomplete",
+      "status": "SOURCE AND EVIDENCE VERIFIED",
+      "files": [
+        "native/scripts/bench/day1a_runner.gd:792",
+        "native/scripts/bench/day1a_runner.gd:898"
+      ],
+      "impact": "Cycle 0 ends on the initial gate approach and has only the to_gate leg, although reported as a complete warm-up loop. Ten subsequent loops exist. Raw cycle frames are not retained; RSS/FPS shift and cold stalls have no established cause. Clock-scaled setup timestamps need explicit alignment with external real-time RSS."
+    },
+    {
+      "id": "PM-D1A-08",
+      "priority": "P1",
+      "title": "William motion and the product question need further validation",
+      "status": "DEVELOPER REPORTED / CAPTURE REVIEW ONLY",
+      "files": [
+        "native/scripts/adapters/day1a/actor_figure.gd"
+      ],
+      "impact": "Foot slide/deep knee bend are reported; close heads/caps remain crude in reviewed images. A stand-in model is allowed for this foundation, with a bounded gait correction. No owner/unfamiliar play, human listening, controller or Windows runtime establishes relationship/route/ordinary-life success."
+    }
+  ],
+  "performance_audit": {
+    "walks": [
+      {
+        "raw_csv": "docs/evidence/day1a/performance/day1-walk_normal_mac.csv.gz",
+        "sha256": "b54c67d86562c67871fd483606d30e34b3475af1c549d5b060dfdd3c9c93fcfd",
+        "recomputed": {
+          "frames": 167167,
+          "fps_avg": 129.9,
+          "ms_p95": 10.75,
+          "ms_max": 59.59,
+          "over_100ms": 0,
+          "duration_measured_s": 1286.646
+        },
+        "matches_report": true,
+        "stalls": []
+      },
+      {
+        "raw_csv": "docs/evidence/day1a/performance/day1-walk_normal_mac_firstrun.csv.gz",
+        "sha256": "d06cebc611f87455a0c8bfa0b18ae30cfb1261efb0b08666dc271f2e54444f51",
+        "recomputed": {
+          "frames": 155202,
+          "fps_avg": 120.6,
+          "ms_p95": 11.17,
+          "ms_max": 591.5,
+          "over_100ms": 2,
+          "duration_measured_s": 1286.419
+        },
+        "matches_report": true,
+        "stalls": [
+          {
+            "frame": 76317,
+            "ms": "591.496",
+            "beat": "free"
+          },
+          {
+            "frame": 83277,
+            "ms": "540.978",
+            "beat": "free"
+          }
+        ]
+      }
+    ],
+    "cycles": {
+      "raw_frame_csv_retained": false,
+      "reported_stats": {
+        "fps_avg": 133.9,
+        "frames": 179932,
+        "ms_max": 124.69,
+        "ms_p50": 7.48,
+        "ms_p95": 10.44,
+        "ms_p99": 11.3,
+        "over_100ms": 1,
+        "over_50ms": 3
+      },
+      "row_count": 12,
+      "memory_growth": {
+        "basis": "after warm-up loop (cycle 0) → after the last loop",
+        "objects_delta": 4,
+        "static_pct": null,
+        "vram_pct": 1.42
+      },
+      "residency": "Day-1A keeps every exported cell resident (world_cells resident_policy off); tree tiles and figures switch by visibility range only — no load/unload events occur in this slice",
+      "limits": "Cycle frame percentiles cannot be independently recomputed from the retained aggregates. The scene keeps all Day-1A cells resident; these are traversal/visibility loops, not streaming-load tests."
+    }
+  },
+  "performance_limits": [
+    "No independent real-time performance rerun in this PM review; final and first-run walk metrics recomputed from developer raw CSVs.",
+    "Cycle aggregates inspected, not independently recomputed; no raw cycle frames committed. Warm-up covers one approach leg only.",
+    "First-package stalls: 591.496 and 540.978 ms. Shader/pipeline compilation remains an unproven cause.",
+    "RSS falls sharply then creeps; reported CPU memory and FPS changes are not explained. No new dedicated soak.",
+    "Resident Day-1A traversal does not validate streaming or repair the proof stair hitch.",
+    "Developer source hardware header says external display; detailed final runtime JSON shows only built-in 3456x2234 Retina, 1920x1080 physical viewport."
+  ],
+  "fresh_rendered_package": {
+    "exit_code": 0,
+    "source_commit": "e223bc2eb588228dd9f00c0fdb7319d731a9ec32",
+    "scenario": "day1-walk",
+    "style": "normal",
+    "timescale": 3,
+    "max_fps_cap": 60,
+    "physical_viewport": [
+      1280,
+      720
+    ],
+    "vsync": 1,
+    "performance_evidence": false,
+    "ended": true,
+    "final_beat": "end",
+    "director_seconds": 1286.0,
+    "interaction_misses": [
+      {
+        "beat": "to_cell",
+        "id": "place_bedding",
+        "prompt": "",
+        "t": 276.4
+      },
+      {
+        "beat": "meal",
+        "id": "stand",
+        "prompt": "eat_olives",
+        "t": 543.3
+      }
+    ],
+    "capture_count": 21,
+    "capture_manifest": [
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/01_road_start.png",
+        "sha256": "74d3fa8e8ba976aa75107b2c9a359f954580e94a2766d4105060e6a404a2d80a"
+      },
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/03_sext_gate.png",
+        "sha256": "639c18e5a8fd5cf7832167ff310349b2329ef7f275c7c56d897900203997aae8"
+      },
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/04_gate_opens.png",
+        "sha256": "787fee3ed9528a8c9f41c5aba4cf891555a122cdd0f8c4c7e6ada09c60dbbf1a"
+      },
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/05_reveal.png",
+        "sha256": "da46920b7c860de3f8561d73bfdb14ca4d75bfe7e57bc5dc6496cbd3a9438d5c"
+      },
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/06_hoof.png",
+        "sha256": "4675a88f1bb380bdb62b63741ab98c07187540d37d35a799a6a50bebd55aa253"
+      },
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/07_cellarer.png",
+        "sha256": "7c8d7d5785ac339e93af32272dc1153f4b3bb117cd9e91b1270577e29238184e"
+      },
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/08_avenue.png",
+        "sha256": "307a5523d8fd7cb58c40a0209d4473300a0330c2096b128e49180f8350d7fb8e"
+      },
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/09_garden.png",
+        "sha256": "75a3fead6e2220b559b84c2e52977f4a0cb38b649882cb8fa80f68670a34c7fb"
+      },
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/10_stair.png",
+        "sha256": "2e7eeeeec3a43c580eca405d29f0ff8913fc1e3aa5cf600e47e7609447b24c0c"
+      },
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/11_cell.png",
+        "sha256": "65713542ecbba226e13c11843cd779ab5744259c2769f3cc1f8d5315b367bd20"
+      },
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/12_chest.png",
+        "sha256": "59c86e2687cbea0078d37dcb74fe6ec9db345c25dde18ddee717d798f0955e97"
+      },
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/13_tebaldo.png",
+        "sha256": "afd61384efe15c8e93835aecd16b1e60636563bb9bafdb353e21ab4418bcabee"
+      },
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/14_meal.png",
+        "sha256": "f8e3d1f352ba9adb98291cc171b748f66b7a7df3eef82addaa095f6088bbd41e"
+      },
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/15_question.png",
+        "sha256": "5526a8904714363fd2905bd950125cd073968d72c951f6ff7afa8d8754dd6da0"
+      },
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/16_free_cloister.png",
+        "sha256": "096225f66ff5e6ae9af44deb15b349c60501039a7292022b0c4724acbc9ed3f1"
+      },
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/17_fulco.png",
+        "sha256": "5d3f8c8d9d1c993c9ac49255458b222df1ae85745e041e5890cfaeb6ae364b6a"
+      },
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/18_nuto.png",
+        "sha256": "61e57f252a26f312958d4e4f7fc05e1b82ea2a2950cd0e24175d4851ad5187cf"
+      },
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/19_nones_bell.png",
+        "sha256": "6e9667c879e38c16aea3b5156bdb1780db31f0dbc4525ba0d83ff71dd1880428"
+      },
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/20_nones_file.png",
+        "sha256": "ca56921e4ee9a287ad207784d8746fc6b3a723b2d868cb1df5580e06f0c34c20"
+      },
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/21_choir.png",
+        "sha256": "7ac7b2e0e7fede0922b9ef5ca553b2a46f8abd8f82880a1055553fabcfb6ed3d"
+      },
+      {
+        "path": "builds/pm-review/day1a-2026-10-06/rendered/captures_normal/22_after.png",
+        "sha256": "811300aaf72dbba205fde71b0daa32dcb95c2666db85425ebb4b361e8c769e88"
+      }
+    ],
+    "inspected_fresh_captures": [
+      "01_road_start",
+      "08_avenue",
+      "10_stair",
+      "11_cell",
+      "14_meal",
+      "17_fulco",
+      "19_nones_bell",
+      "21_choir",
+      "22_after"
+    ],
+    "inspected_developer_captures": [
+      "day1a_cast_sheet",
+      "day1a_heads",
+      "day1a_14_meal",
+      "day1a_21_choir"
+    ],
+    "report_sha256": "01bb158bbe9b56ab71eaa0986b36b663fce72f8253a271f854c8709af085fac6",
+    "limitations": "Graph-informed scripted walk at 3x completes; this cannot establish unfamiliar route learning, human audio balance, input feel or enjoyment."
+  },
+  "preserved_original_packages": [
+    {
+      "path": "builds/phase1/AbbeySlice-windows-x86_64.zip",
+      "bytes": 132567230,
+      "sha256": "ad43a3b4ab7568dc31d236f5b656059a9006e5ad318c13d02f9a759b51ec527e",
+      "unchanged_during_pm_review": true
+    },
+    {
+      "path": "builds/phase1/windows/AbbeySlice.pck",
+      "bytes": 111215496,
+      "sha256": "f15e72ded5756764fd4486b94be57dd8f0c3e519c62c59c2bab2d0f0b1dba07a",
+      "unchanged_during_pm_review": true
+    },
+    {
+      "path": "builds/phase1/windows/AbbeySlice.exe",
+      "bytes": 109268480,
+      "sha256": "d34d36f3be1a6c49c56525ae86469b92e4f417ddf0b43cf00dd80c385c4b0562",
+      "unchanged_during_pm_review": true
+    },
+    {
+      "path": "builds/phase1/AbbeySlice-macos-universal.zip",
+      "bytes": 155133489,
+      "sha256": "76c67d12ac8b45cd0f4f68a37e392b56fded7990940b2fd3e795336b06479e5f",
+      "unchanged_during_pm_review": true
+    },
+    {
+      "path": "builds/phase1/macos/AbbeySlice.app/Contents/MacOS/Abbey Slice",
+      "bytes": 170963648,
+      "sha256": "ca5feeedb120501168aab9eb7c8fe3e020918b1ac4a85c99fd8dddb6f8a947a3",
+      "unchanged_during_pm_review": true
+    }
+  ],
+  "not_run": [
+    "Owner playtest",
+    "At least one unfamiliar player without coaching",
+    "Human listening and Nones pacing judgment",
+    "Finished-book canon/name/office/spoiler review",
+    "Windows W1/W2 runtime",
+    "Controller/focus/non-US-layout trials",
+    "Independent cold-cache intervention validation or dedicated soak",
+    "Browser cast normal repair or proof streaming-hitch fix"
+  ],
+  "pm_changes": "Canonical docs/state and durable review probes/evidence only; gameplay fixes are assigned to the corrective developer mission. Raw source snapshots, exports/logs/captures remain ignored.",
+  "acceptance_review": [
+    {
+      "criterion": "Arrival-through-Nones route and recoverable wandering/reload",
+      "status": "PARTIAL / FIX",
+      "evidence": "Fresh scripted packaged route completes; reload fails supplemental probes. Graph-informed bots do not prove unfamiliar wayfinding."
+    },
+    {
+      "criterion": "William and Adso embodiment/contact",
+      "status": "IMPLEMENTED / ITERATE",
+      "evidence": "Sleeves/carry/sit and lead/wait exist. Stand-in body, foot slide and deep knee bend remain; owner relationship judgment NOT RUN."
+    },
+    {
+      "criterion": "Route recall, resident recognition and ordinary-life appeal",
+      "status": "NOT RUN",
+      "evidence": "No owner or unfamiliar-person play. One scripted normal route names six residents; an unplayed introduction can incorrectly teach a name."
+    },
+    {
+      "criterion": "Physical canonical-hour transition",
+      "status": "IMPLEMENTED / FIX",
+      "evidence": "Normal route shows bell, activity/movement and choir. Nones reload relocates community; delay/level listening judgment NOT RUN."
+    },
+    {
+      "criterion": "Interrupted save/relaunch, custody and event idempotence",
+      "status": "FAIL",
+      "evidence": "Seven save/scene probes reproduce menu, meal, end and office continuity failures; proof functional/relaunch still passes."
+    },
+    {
+      "criterion": "Mac route performance and warmed memory",
+      "status": "PARTIAL",
+      "evidence": "Final raw route frame audit confirms gates. Loop raw frames absent, warm-up incomplete, cold stalls/RSS/FPS changes unresolved; no independent performance/soak rerun."
+    },
+    {
+      "criterion": "Rendered scene, human audio/input and Windows",
+      "status": "PARTIAL / NOT RUN",
+      "evidence": "PM inspected fresh 1280x720 captures and existing character sheets. Human listening, controller/focus/layout and Windows W1/W2 are not exercised."
+    }
+  ]
+}

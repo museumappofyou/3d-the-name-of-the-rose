@@ -4,7 +4,7 @@
 
 The place should feel cold, austere, inhabited, intellectually charged and often quiet. Ordinary work, prayer, meals, weather and recurring people establish normality before deviations become evidence. Architecture supplies tests: walk a disputed route, compare a view from a window, remember which stair joins which floor, or ask whether a sound could have reached a witness. Someone should care about the result through duty, trust, punishment, access, memory or work.
 
-The active mission and its acceptance gates live in [Project](PROJECT.md#active-mission--day-1a). Day-1A asks whether ordinary life is compelling before a mystery starts. The last committed native proof established engine feasibility, not that experience.
+The active mission and gates live in [Project](PROJECT.md#active-mission--day-1a). Day-1A asks whether ordinary life is compelling before a mystery starts. Its initial implementation exists at `e223bc2`; the 2026-10-06 PM review requires save/reload and presentation/evidence corrections, then independent play/listening. Engine/build success does not establish that experience.
 
 ## Adapted Adso and William
 
@@ -98,6 +98,7 @@ Keep arrival-road/reception/audience, weather, supper, west portal, original-nam
 | Round 4 | Hybrid sketch map and four/five meaningful visits | EXPERIMENTAL | Exact interface, accessibility and visit schedule remain unresolved |
 | Day-1 design | Snow in the Straw as first small investigation | ACTIVE DESIGN | Physical/timing evidence with modest human stakes; Day-1B, not implemented fact |
 | 2026-10-05 | Day-1A followed by gated Day-1B | ACTIVE | Full-day minimum required too many simultaneous systems |
+| 2026-10-06 PM review | Hold Day-1B; correct Day-1A and validate with people | ACTIVE | Existing checks pass but scene persistence fails; William/route/ordinary-life/Nones product gates remain open. William's current body stays an explicit stand-in during the bounded corrective pass |
 | 2026-10-05 | The Leaf Before Vespers as immediate milestone | SUPERSEDED | Retain as a later original case concept |
 | Later campaign | Delegation changes familiar social/access rules | ACTIVE DESIGN | Reuse learned spaces under pressure; detailed schedule not yet chosen |
 | Repository governance | Six canonical docs and explicit supporting design evidence | ACTIVE | PM state stays repository-resident without one report per agent run |
