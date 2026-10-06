@@ -1,0 +1,1004 @@
+{
+ "schema_version": 1,
+ "id": "day1a-implementation-report",
+ "date": "2026-10-05",
+ "implementer": "Agent A (Claude Opus 5.5, xHigh)",
+ "scope": "Day-1A: the last road bend through arrival, Sext at the gate, reception, guest room, first solo route, the meal with William, a short free period and the first Nones transition. Design intent from story-council/day-1/OPUS_DAY1_DESIGN.md S1–S5, a reduced S8 and Nones; nothing after the first Nones.",
+ "status": {
+  "implemented": "IMPLEMENTED",
+  "verified": "VERIFIED for automated checks and the instrumented walks listed here",
+  "experientially_validated": "NOT RUN — no person other than the implementer's own capture review has played, listened or used the input"
+ },
+ "implemented": [
+  "Day-1A is the default native mode (`--mode=day1a`); the Phase-1 proof stays intact behind `--mode=proof` and its scenarios.",
+  "World: seven new section exports from the browser builders (gate, guest house with the outside stair and upper cell, flower garden, church west front, western context, western gardens, Aedificium exterior) plus the six Phase-1 cells; a 232 × 176 m terrain patch at 1 m with a walkable mask, a 4 m coarse ring to r 215 m, a polar far ring to 9.5 km, 1 300 trees in 13 groups with the browser's atlas shader; all collision derived from the same export.",
+  "A deterministic scenario director (no scene dependencies) with stable actor identities, an authored way graph (139 nodes, 156 edges), walk limits, beats road → Sext at the gate → gate opens → reception → to the cell → second bundle (solo route) → meal → free period → Nones → after Nones → end.",
+  "William's lead/wait controller on the road: 5–8 m ahead at 1.72 m/s, eases to the boy's pace past 6.5 m, waits at authored look points when the gap passes 12 m and resumes at 5 m; an overtaking boy is followed (one gentle line, no reprimand). On the way to the cell the cellarer (and William with him) eases off and waits for a lagging guest.",
+  "Adso: first-person sleeves and hands, a shadow-casting body, carrying the bedding bundle, the chest, a bucket and wet hose, sitting on the stool and benches (getting up always available, onto clear floor), eating at the meal; no stats or inventory.",
+  "Cast: William, the porter, the cellarer, Tebaldo, Nuto, Fulco, Rainaldo and ten anonymous brothers; people are known by description until a name is heard (people memory); an internal observation log fed only by what was actually looked at.",
+  "The meal question “What have you seen so far?” offers the player's own observations (up to three plus “Nothing much yet”); nothing is scored.",
+  "Nones: the bell from the belfry, brothers close their books and walk to their stalls, Tebaldo/Fulco/the cellarer go too, Nuto pauses at the well, the cloister empties, the office begins once the brothers are in their stalls and is heard through the church's openings; no teleport, no freeze, no cutscene; stays playable if Adso ignores it.",
+  "Versioned Day-1A save (`abbey-day1a-save` v1, its own file) with autosaves at the cell, after the meal and at the end; a proof save offered to it is rejected and never overwritten.",
+  "Local-only telemetry (user://day1a/telemetry): William's lead on the road and to the cell, waits, overtakes, solo-route hesitation/wrong turns/time, free-period time and talks, people met, Nones attendance and time to notice the brothers moving.",
+  "Minimal UI: interaction prompt, subtitles with the speaker as known, numbered replies, pause menu with text size, captions and look sensitivity, an end card after the first Nones.",
+  "Benchmarks/validation scenarios: day1-walk (five walker styles), day1-cycles (ten real-time residency loops), day1-shots, day1-cast (with head close-ups), day1-graph-audit; run_benchmarks.sh day1_walk/day1_cycles."
+ ],
+ "not_implemented_day1b": [
+  "Snow in the Straw (S9) and the shutter scene, S10, the S11 investigation",
+  "notebook inference, seen/told marks and the “I think…” composer (J does nothing in Day-1A)",
+  "Vespers, night, refectory, Compline, the cemetery procession",
+  "library or Aedificium interiors, Day 2, a general scenario framework",
+  "the Abbot's audience (William leaves for it offstage)"
+ ],
+ "deviations": [
+  "The first full view of the Aedificium is staged inside the gate court: in this reconstruction the enclosure wall and the road's approach hide it from the last bend (recorded in shared/provenance/reconstruction-decisions.json).",
+  "Flower-garden hedges were given entrances where the alleys meet them (browser builder change, recorded as RECON).",
+  "The reconstructed postern is walled up natively and its track removed from the trodden-snow field; Aedificium interior sound emitters are not loaded; the Phase-1 skull altar, ossuary stair cell and the porch figure are absent in Day-1A mode but untouched in proof mode.",
+  "Clock compression: road to meal runs on authored beats; the free period passes 12.5 game minutes per real minute (×6 sitting on a bench), Nones 7 per real minute. No clock is shown."
+ ],
+ "known_issues": [
+  "First run of a fresh package: two 0.54–0.59 s stalls in the free period (not repeated on the next run); likely first-use shader/pipeline compilation — a shader warm-up during loading would remove them.",
+  "Process memory crept ≈ 3 MiB per loop over loops 3–10 of the residency cycles (within the 10 % gate); a longer soak is needed before calling it flat.",
+  "Experience is unvalidated: no other person has played, listened or used a controller; whether William feels like a person and whether ordinary life is compelling are open questions, not results.",
+  "William is a stand-in (designed monk_c body, Franciscan tint, satchel), not a bespoke model; Tebaldo has 11 lines (under the 20–30 allowance) and his fussiness rests mostly on routing and timing.",
+  "The recorded walks are slow (≈0.5 m/s at 1×); playback is quickened up to 2.35×, so William at 1.72 m/s slides his feet somewhat, and the formal walk's passing phase shows a deep knee bend in side view (the browser's clip).",
+  "Nuto's limp is a timing warp plus a small hip drop on the ordinary walk: legible as uneven, subtle at distance; needs a human eye.",
+  "Nones: the office begins about 65 s after the first stroke (brothers walk from the far walks at 1.05 m/s); may feel long.",
+  "The chant at the guests' place measures −36 to −53 dBFS RMS (0.5 s windows, mean −42.5) against −31.4 for the bell and the walk in and −36.4 on the garth before the bell; plausible for 8 m from the choir but unconfirmed by ear.",
+  "Two early Nones recordings had exact digital silence on the master bus; after guarding all Day-1A sound positions and the chant level/cut-off it no longer occurs (whole-day probe and final recording clean), but the original trigger was not conclusively identified.",
+  "Scripted walkers still stall briefly (3 s each, then re-plan) beside the cell table and at a cloister pier; a person can step round, and the graph's capsule-sweep audit passes, but the cell is cramped.",
+  "Small things on the tray sit close together; the prompt follows the crosshair, and “Get up” shows only when nothing else is aimed at (any movement key also stands Adso up).",
+  "People have a soft personal space, not hard colliders: a person walking into Adso nudges him aside rather than stopping.",
+  "Lines are original game fiction pending canon and forward-spoiler review by a finished-book reader; the reception staging deviates (the Aedificium is first seen fully inside the gate court).",
+  "Day-1A keeps every cell resident, so the Phase-1 stair-head unload hitch does not occur in Day-1A; it is not fixed in the proof.",
+  "Windows runtime, W1/W2, controller and human listening: NOT RUN.",
+  "Evidence JSON contains absolute local paths (user data and build locations), as the Phase-1 evidence does."
+ ],
+ "playable_path": [
+  "Road (last bend, mule on a lead, William a few metres ahead; look points: the valley, a pine trunk, the wall, the tower) → the gate during Sext: closed; the porter opens as the bell finishes (about 22 s in)",
+  "Gate court: the porter steadies the mule (hold the halter), the first full view of the Aedificium, the cellarer comes from the church, names are heard",
+  "Take the bedding and follow the cellarer and William down the avenue, round the church front, across the flower garden, up the outside stair to the third guest cell; put the bedding on the straw",
+  "Second bundle, first solo route: back down to the gate for the chest and up again to the cell (William waits in the cell; no arrows)",
+  "Meal in the cell: Tebaldo brings the tray and fusses, sit at the table, eat, wring out William's hose; William asks “What have you seen so far?”; Nuto comes for the tray; William leaves for the Abbot (offstage)",
+  "Free period (about 5–8 minutes): Fulco on the cloister walk, Nuto at the well (carry a bucket), Rainaldo at a lectern, Tebaldo passing, benches to sit on",
+  "Nones: the bell, the cloister empties into the church, the office; then a brief free beat and the end card"
+ ],
+ "william": {
+  "presentation": "Stand-in built from the designed monk_c body with a Franciscan habit tint, cord and a leather satchel at the hip; not a bespoke William model (documented stand-in).",
+  "behaviour": "Physical lead/wait on the road (authored look points, waits only when the gap exceeds 12 m, resumes at 5 m, follows an overtaking boy with one gentle line); walks a little behind the cellarer to the cell; sits on the bed during the meal, stands and leaves for the Abbot; attends nothing after that in Day-1A.",
+  "lines": 43,
+  "close_review": "Implementer inspected rendered walk (front/side/back), stand, seated-at-meal and head close-ups; feet on the ground, robe and satchel coherent. No independent person has judged whether he feels like a person."
+ },
+ "adso": {
+  "presentation": "First person: sleeves and hands in view, a shadow-casting body, held props low in view (bundle, chest, bucket, wet hose), a lead rein to the mule on the road.",
+  "actions": "carry/place bedding and chest, hold the mule's halter, sit at the table and on benches (always able to get up; stands onto clear floor), eat bread/cheese/olives, pour for William, slip raisins into a sleeve, carry a bucket for Nuto, choose replies (1–4).",
+  "not_included": "no stats, inventory, journal UI or progression"
+ },
+ "characters": {
+  "named": {
+   "william": "monk_c (Franciscan tint, satchel)",
+   "porter (Fazio)": "lay_herd, brown leather cap",
+   "cellarer": "monk_e, brisk walk",
+   "Tebaldo": "monk_b, round, keys at the belt, quick fussy routing",
+   "Nuto": "lay_old, grey felt cap, beard, an uneven (limping) gait at 0.95 m/s",
+   "Fulco": "novice_a, youngest face",
+   "Rainaldo": "scribe_a, at a lectern with a book"
+  },
+  "anonymous_brothers": "10 (templates monk_a, monk_d, monk_g, novice_b): reading in the walks, then to their stalls at Nones; 6 more leave the church after Sext",
+  "animals": "two mules from the existing donkey model (CC0), fitted to 1.62 m, following on breadcrumb trails",
+  "names": "people are labelled by description until their name is heard (people memory)",
+  "lines_by_speaker": {
+   "william": 43,
+   "tebaldo": 11,
+   "fulco": 11,
+   "nuto": 10,
+   "cellarer": 7,
+   "porter": 5,
+   "rainaldo": 3,
+   "adso": 6
+  },
+  "classification": "all lines are original game fiction, subject to canon and forward-spoiler review"
+ },
+ "time_and_offices": {
+  "sext": "7 strokes from the belfry while the guests wait at the closed gate; Sext is under way in the church (far off; not staged as audible at the gate)",
+  "nones": "6 strokes; brothers close their books (staggered 0.8–4.4 s), walk to stalls at 1.05 m/s; the office begins when all are in their stalls (65 s after the bell in the walks) and is heard spatially through the church openings; after Nones the church empties and the walks are quiet",
+  "clock": "no clock in the UI; light follows the hour; free period 12.5 game min per real min (×6 sitting on a bench), Nones 7",
+  "after_nones": "a short free beat (80 s) then an end card stating that the first half of the first day ends here"
+ },
+ "audio": {
+  "sources": "existing project recordings only (credits in shared/assets/credits.json and the audio derivative manifest); new derivatives: Day-1A banks (bell, hooves, snort, bray, doors, latch, chew, pour, straw, timber, metal, anvil, crows, cough, page, bench creak, sweep, straw steps) and two streams (wind in pines CC0, a psalm CC BY-SA 3.0)",
+  "physicality": "the bell plays from the belfry on its own bus with a low-pass that closes indoors and with distance; NPC footsteps and hooves at their feet; the chant is a single transport heard through the church's openings (no restart across doors)",
+  "fixed_during_validation": "Two earlier Nones recordings contained stretches of exact digital silence on the master bus. Every Day-1A 3D sound position, the snort source and the chant emitter/level/cut-off are now guarded against non-finite values (actor positions use y = NaN for “on the ground”). Afterwards a whole-day bus probe (2 403 samples) and the final recording show no silent window; none of the logged guards fired, so the original trigger was not conclusively identified.",
+  "human_listening": "NOT RUN",
+  "recording_levels_dbfs": {
+   "garth_before_bell_mean": -36.4,
+   "bell_and_walk_in_mean": -31.4,
+   "in_church_before_office_mean": -39.6,
+   "office_mean": -42.5,
+   "peak": -3.9,
+   "silent_half_second_windows": 0,
+   "transport": "continuous, no restart (analyze_audio.py pass)",
+   "file": "audio/day1-walk_normal_nones_analysis.json"
+  }
+ },
+ "spatial_footprint": {
+  "detailed_terrain_m": "x −152..80, z −112..64 (232 × 176 m at 1 m, walkable mask)",
+  "coarse_ring": "4 m grid to r 215 m around (20, −10), visual only",
+  "far_ring": "polar ring r 209 m – 9.5 km, 24 sectors, visual only",
+  "cells": "Phase-1 cells reused: church exterior and interior, the south side chapel as plain architecture (its altar is a plain block with the mechanism and interaction disabled), cloister and cloister context; the ossuary stair cell is not loaded. Day-1A cells: gate, hospice (guest floor and stair), flower garden, church west front, western context, western gardens, Aedificium exterior (no interior)",
+  "residency": "every exported cell is resident for the whole slice; trees and figures change only by visibility range — no load/unload events",
+  "trees": "1 300 instances in 13 groups, 48 m tiles, visibility ranges 55/190 m",
+  "repository_assets_added_mb": {
+   "world_day1a": 17,
+   "characters_new_8": 33,
+   "audio_day1a": 10,
+   "animals": 0.7,
+   "regenerated_phase1_characters": "4 × ~2.2 MB (more motions)"
+  }
+ },
+ "source": {
+  "commits": {
+   "derivatives": "1859082",
+   "native_slice": "aa033e9",
+   "scripted_runs_save_isolation": "269401f",
+   "benchmark_statistics_and_loop": "6851034"
+  },
+  "engine": "Godot 4.7.2.stable.official.ed1daf0bf",
+  "hardware": "Apple M1 Pro, 32 GB, macOS 26.5.2; external 3840×2160 display at scale 1.0",
+  "package_built_from": "6851034 (build_phase1.sh --functional PASS)",
+  "walk_evidence_runtime": "the walks ran on the working tree that became aa033e9; 269401f/6851034 change only scripted-run save locations and benchmark bookkeeping"
+ },
+ "automated_tests": {
+  "native_domain": "22/22 (tests/run_tests.gd)",
+  "day1a_domain": "14/14 (tests/day1a_tests.gd): scenario consistency and spoiler-word check; lead/wait at look points and resume; overtaking followed without reprimand; normal, slow (escort keeps the guest in sight), rush, confused (wrong turn recovered) and ignore-Nones whole-day playthroughs; Nones sung only once the brothers reach their stalls; a seated Adso can always get up; names only when heard; observations only from perception; mid-route save/restore continuity; Day-1A save file vs proof save",
+  "pose_normal": "13/13 people (tests/pose_check.gd against the browser-computed references, including the new motions)",
+  "anchors": "pass (tests/anchor_check.gd)",
+  "proof_regression": "functional route + second-process reload PASS (proof mode)",
+  "browser": "npm test 29/29; check:render conservation pass; check:data pass",
+  "book": "21/21 extraction tests; nine literary-output hashes unchanged (checked by build_phase1.sh)",
+  "derivatives": "build_manifest.py: 339 entries, 0 mismatches",
+  "repository": "check_repository.py pass",
+  "package": "build_phase1.sh --functional PASS; Windows PCK audit pass (1 075 files, no forbidden paths/strings, all Day-1A data present)"
+ },
+ "human_validation": {
+  "what_the_implementer_inspected": "Rendered captures of all 21 walk moments, the cast at walk/stand/head distance, gait strips (Rainaldo, Nuto), head-prop close-ups and the Nones choir; findings fixed during this pass: Nuto's crouched heavy walk (now an uneven ordinary walk), floating cap/coif props, the camera able to pass through people (now a soft personal-space push), standing up into a stool or onto the bed.",
+  "playtests_by_other_people": "NONE — no external or owner playtest was run",
+  "listening": "NOT RUN — only objective analysis of a master-bus recording",
+  "controller": "NOT RUN"
+ },
+ "windows": {
+  "package": {
+   "zip": "builds/phase1/AbbeySlice-windows-x86_64.zip",
+   "zip_sha256": "ad43a3b4ab7568dc31d236f5b656059a9006e5ad318c13d02f9a759b51ec527e",
+   "exe_sha256": "d34d36f3be1a6c49c56525ae86469b92e4f417ddf0b43cf00dd80c385c4b0562",
+   "pck_sha256": "f15e72ded5756764fd4486b94be57dd8f0c3e519c62c59c2bab2d0f0b1dba07a",
+   "status": "BUILT (W0) by build_phase1.sh from 6851034"
+  },
+  "runtime": "NOT RUN — no Windows hardware was available"
+ },
+ "macos_package": {
+  "zip": "builds/phase1/AbbeySlice-macos-universal.zip",
+  "zip_sha256": "76c67d12ac8b45cd0f4f68a37e392b56fded7990940b2fd3e795336b06479e5f",
+  "binary_sha256": "ca5feeedb120501168aab9eb7c8fe3e020918b1ac4a85c99fd8dddb6f8a947a3",
+  "runtime": "automated packaged scenarios only (see performance)"
+ },
+ "performance": {
+  "identity": {
+   "package": "macOS release export from 6851034 (binary sha256 ca5feeed…)",
+   "hardware": "Apple M1 Pro, 32 GB, macOS 26.5.2, Metal, Forward+",
+   "viewport": "1920×1080 physical px, VSync off; window on the built-in Retina display (scale 2.0) — the external display used for Phase-1 was not connected",
+   "gpu_before_launch_pct": [
+    5,
+    5
+   ],
+   "contention": "none recorded during either run (contention_mac.log)",
+   "date": "2026-10-06"
+  },
+  "gates": {
+   "fps_ge_60": "PASS",
+   "p95_le_25ms": "PASS",
+   "no_repeatable_over_100ms": "PASS (one 124.7 ms frame in 10 loops; two 0.5 s stalls on the very first run of a fresh package did not recur)",
+   "memory_growth_le_10pct_over_10_cycles": "PASS with caveat (see cycles.memory)"
+  },
+  "whole_slice_walk": {
+   "real_s": 1289.6,
+   "all": {
+    "fps_avg": 129.9,
+    "frames": 167167,
+    "ms_max": 59.6,
+    "ms_p50": 7.38,
+    "ms_p95": 10.75,
+    "ms_p99": 11.94,
+    "over_100ms": 0,
+    "over_50ms": 2
+   },
+   "by_area": {
+    "arrival_exterior_road": {
+     "fps_avg": 91.7,
+     "frames": 2759,
+     "ms_max": 13.42,
+     "ms_p50": 10.91,
+     "ms_p95": 12.16,
+     "ms_p99": 12.65,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "gate_cluster_sext": {
+     "fps_avg": 84.7,
+     "frames": 2317,
+     "ms_max": 14.83,
+     "ms_p50": 11.83,
+     "ms_p95": 12.71,
+     "ms_p99": 13.09,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "gate_open_and_reveal": {
+     "fps_avg": 109.2,
+     "frames": 4478,
+     "ms_max": 13.85,
+     "ms_p50": 9.01,
+     "ms_p95": 11.79,
+     "ms_p99": 12.61,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "reception_avenue": {
+     "fps_avg": 99.6,
+     "frames": 7934,
+     "ms_max": 13.82,
+     "ms_p50": 10.06,
+     "ms_p95": 11.38,
+     "ms_p99": 11.87,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "to_the_guest_room": {
+     "fps_avg": 120.6,
+     "frames": 11923,
+     "ms_max": 12.13,
+     "ms_p50": 8.14,
+     "ms_p95": 10.31,
+     "ms_p99": 11.24,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "solo_route": {
+     "fps_avg": 144.9,
+     "frames": 26185,
+     "ms_max": 27.87,
+     "ms_p50": 6.95,
+     "ms_p95": 7.7,
+     "ms_p99": 8.08,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "guest_room_meal": {
+     "fps_avg": 144.9,
+     "frames": 23579,
+     "ms_max": 27.86,
+     "ms_p50": 6.96,
+     "ms_p95": 8.13,
+     "ms_p99": 8.86,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "free_period_cloister": {
+     "fps_avg": 125.1,
+     "frames": 50430,
+     "ms_max": 59.6,
+     "ms_p50": 7.59,
+     "ms_p95": 10.62,
+     "ms_p99": 11.1,
+     "over_100ms": 0,
+     "over_50ms": 1
+    },
+    "nones_crowd_and_church_audio": {
+     "fps_avg": 142.9,
+     "frames": 25725,
+     "ms_max": 50.42,
+     "ms_p50": 6.99,
+     "ms_p95": 8.38,
+     "ms_p99": 10.71,
+     "over_100ms": 0,
+     "over_50ms": 1
+    },
+    "after_nones": {
+     "fps_avg": 142.5,
+     "frames": 11401,
+     "ms_max": 33.57,
+     "ms_p50": 7.05,
+     "ms_p95": 9.09,
+     "ms_p99": 10.74,
+     "over_100ms": 0,
+     "over_50ms": 0
+    }
+   },
+   "rss_mib": {
+    "min": 468.2,
+    "max": 499.1,
+    "final": 499.1
+   },
+   "vram_mib_at_end": 565.7,
+   "files": [
+    "performance/day1-walk_normal_mac.json",
+    "performance/day1-walk_normal_mac.csv.gz",
+    "performance/day1_walk_mac.rss.csv"
+   ]
+  },
+  "cycles": {
+   "loops": 10,
+   "warmup_loops": 1,
+   "route": "gate court → guest cell → well → nave → garth → gate court (≈ 398 m, Adso hurrying), clock held at 13:00 with the free-period population",
+   "frames_all_measured": {
+    "fps_avg": 133.9,
+    "frames": 179932,
+    "ms_max": 124.69,
+    "ms_p50": 7.48,
+    "ms_p95": 10.44,
+    "ms_p99": 11.3,
+    "over_100ms": 1,
+    "over_50ms": 3
+   },
+   "per_loop": [
+    {
+     "loop": 0,
+     "fps_avg": 113.9,
+     "ms_p95": 10.65,
+     "over_100ms": 0,
+     "vram_mib": 557.8,
+     "objects": 8549.0
+    },
+    {
+     "loop": 1,
+     "fps_avg": 108.6,
+     "ms_p95": 11.11,
+     "over_100ms": 0,
+     "vram_mib": 557.8,
+     "objects": 8552.0
+    },
+    {
+     "loop": 2,
+     "fps_avg": 108.6,
+     "ms_p95": 11.1,
+     "over_100ms": 0,
+     "vram_mib": 557.8,
+     "objects": 8552.0
+    },
+    {
+     "loop": 3,
+     "fps_avg": 108.7,
+     "ms_p95": 11.11,
+     "over_100ms": 1,
+     "vram_mib": 565.7,
+     "objects": 8553.0
+    },
+    {
+     "loop": 4,
+     "fps_avg": 144.0,
+     "ms_p95": 8.69,
+     "over_100ms": 0,
+     "vram_mib": 565.7,
+     "objects": 8553.0
+    },
+    {
+     "loop": 5,
+     "fps_avg": 144.9,
+     "ms_p95": 8.4,
+     "over_100ms": 0,
+     "vram_mib": 565.7,
+     "objects": 8553.0
+    },
+    {
+     "loop": 6,
+     "fps_avg": 144.8,
+     "ms_p95": 8.64,
+     "over_100ms": 0,
+     "vram_mib": 565.7,
+     "objects": 8553.0
+    },
+    {
+     "loop": 7,
+     "fps_avg": 144.8,
+     "ms_p95": 8.69,
+     "over_100ms": 0,
+     "vram_mib": 565.7,
+     "objects": 8553.0
+    },
+    {
+     "loop": 8,
+     "fps_avg": 144.9,
+     "ms_p95": 8.63,
+     "over_100ms": 0,
+     "vram_mib": 565.7,
+     "objects": 8553.0
+    },
+    {
+     "loop": 9,
+     "fps_avg": 144.8,
+     "ms_p95": 9.12,
+     "over_100ms": 0,
+     "vram_mib": 565.7,
+     "objects": 8553.0
+    },
+    {
+     "loop": 10,
+     "fps_avg": 144.8,
+     "ms_p95": 9.17,
+     "over_100ms": 0,
+     "vram_mib": 565.7,
+     "objects": 8553.0
+    }
+   ],
+   "leg_timeouts": [],
+   "memory": {
+    "rss_after_warmup_mib": 482.0,
+    "rss_after_loop_10_mib": 399.7,
+    "rss_min_mib": 378.8,
+    "note": "RSS is not monotonic: 482 MiB after the warm-up loop, a drop to 379 MiB around loop 3 (operating-system reclaim), then a steady ≈ 3 MiB per loop to 400 MiB (+5.5 % over loops 3–10). Within 10 % of the warmed value either way, but the creep should be watched in a longer soak. VRAM +1.4 % (one step at loop 3, then flat); object count +4.",
+    "vram_growth_pct": 1.42,
+    "objects_delta": 4
+   },
+   "note": "loops 1–3 ran at ≈ 109 FPS, loops 4–10 at ≈ 145 FPS on the same route; the change coincides with the RSS drop and was not investigated",
+   "files": [
+    "performance/day1-cycles_mac.json",
+    "performance/day1_cycles_mac.rss.csv"
+   ]
+  },
+  "residency": "every Day-1A cell stays resident; trees/figures change only by visibility range — no load/unload events exist in this slice",
+  "first_run_of_a_fresh_package": {
+   "package": "aa033e9 export",
+   "all": {
+    "frames": 155202,
+    "fps_avg": 120.6,
+    "ms_p50": 8.01,
+    "ms_p95": 11.17,
+    "ms_p99": 12.66,
+    "ms_max": 591.5,
+    "over_50ms": 2,
+    "over_100ms": 2
+   },
+   "excluding_a_40_s_window_when_another_process_used_the_GPU": {
+    "frames": 152161,
+    "fps_avg": 122.1,
+    "ms_p50": 7.96,
+    "ms_p95": 11.03,
+    "ms_p99": 12.08,
+    "ms_max": 591.5,
+    "over_50ms": 2,
+    "over_100ms": 2
+   },
+   "long_frames": [
+    {
+     "t_s": 742.5,
+     "ms": 591.5,
+     "beat": "free"
+    },
+    {
+     "t_s": 791.0,
+     "ms": 541.0,
+     "beat": "free"
+    }
+   ],
+   "interpretation": "two 0.54–0.59 s stalls in the free period on the first run did not recur on the next run (likely first-use shader/pipeline compilation); a player's first session could meet them",
+   "files": [
+    "performance/day1-walk_normal_mac_firstrun.json",
+    "performance/day1-walk_normal_mac_firstrun_stats.json",
+    "performance/firstrun_contention_mac.log"
+   ]
+  },
+  "not_measured": "Windows; high-resolution variants; a twenty-minute soak; startup time"
+ },
+ "final_decision_answers": {
+  "1_william_walk_carries_character": {
+   "answer": "PARTLY",
+   "why": "He leads by route progress 6.5–8 m ahead, turns his head to authored sights, waits only when the boy falls ~12 m behind (once, at the pine trunk, for the slow walker) and follows an overtaking boy with one easy line; with the cellarer he eases off for a lagging guest. But the body is a stand-in and the recorded walk is quickened to his pace with some foot slide; no person has yet judged whether he reads as a person."
+  },
+  "2_abbey_inhabited_before_investigation": {
+   "answer": "PARTLY",
+   "why": "The porter and two mules, a cellarer who escorts, Tebaldo fussing with the tray, Nuto at the well (with a bucket to carry), Fulco reading, Rainaldo at a lectern, ten brothers reading in the walks and six leaving the church after Sext, a far hammer, crows. It is a small cast with simple routines; the avenue and gardens are empty for long stretches and nobody has played it."
+  },
+  "3_guest_house_route_learnable_without_ui": {
+   "answer": "PARTLY",
+   "why": "Every walker style repeated the route without hints (68–87 s out, the confused walker took a wrong turn at the church front and recovered) along strong landmarks (avenue, church front, hedged garden, outside stair). Those are scripted walkers with a map; no unfamiliar person has tried it."
+  },
+  "4_nones_changes_the_abbey": {
+   "answer": "PARTLY",
+   "why": "Bell from the belfry, books closed, the walks empty into the stalls, the office begins only when the brothers are in place and is heard through the openings; nothing freezes and staying out works. The 65 s wait before singing, uniform walking and a quiet chant level are unjudged by ear or eye."
+  },
+  "5_characters_good_enough_for_narrative": {
+   "answer": "PARTLY",
+   "why": "Designed bodies with habits, faces, tonsures and props hold up at walking and speaking distance and are distinguishable (Nuto's cap and beard, Fazio's leather cap, Tebaldo's keys, Fulco's youth). Close-ups show jagged tonsure edges, primitive caps, a deep-knee formal walk and William as a stand-in."
+  },
+  "6_implement_day1b_now": {
+   "answer": "ONLY AFTER SPECIFIC FIXES",
+   "fixes": [
+    "a real playtest of Day-1A by the owner and at least one unfamiliar player, answering questions 1–4",
+    "a listening pass on the bell and chant levels and the Nones start delay",
+    "a shader warm-up at load (first-run 0.5 s stalls) and a 20-minute soak to settle the memory creep",
+    "William: a walk cycle recorded nearer his pace (less foot slide) and a decision on a bespoke model",
+    "canon and forward-spoiler review of the 96 lines by a finished-book reader",
+    "a Windows W1 run of the package"
+   ]
+  }
+ },
+ "validation_walks": {
+  "normal": {
+   "ended": true,
+   "game_seconds": 1283.7,
+   "time_scale": 3,
+   "people_named": [
+    "william",
+    "fazio",
+    "cellarer",
+    "tebaldo",
+    "nuto",
+    "fulco"
+   ],
+   "observations": [
+    "pines",
+    "aed_windows",
+    "porter_scar",
+    "mule_shoe",
+    "garden"
+   ],
+   "william_lead_on_road_m": {
+    "max": 8.13,
+    "mean": 7.64,
+    "min": 6.5,
+    "p10": 6.91,
+    "p50": 7.82,
+    "p90": 8.05,
+    "samples": 33
+   },
+   "william_lead_to_cell_m": {
+    "mean": 1.98,
+    "p10": -0.13,
+    "p50": 1.92,
+    "p90": 5.13,
+    "samples": 176,
+    "share_adso_ahead": 0.06,
+    "share_william_ahead": 0.49
+   },
+   "william_waits": 0,
+   "william_wait_points": [],
+   "overtakes": 0,
+   "solo_route": {
+    "back_in_cell": 457.6,
+    "back_s": 103.4,
+    "help_from_nuto": false,
+    "hesitation_s": 0.0,
+    "left_cell": 286.1,
+    "max_off_route_m": 4.7,
+    "out_s": 68.1,
+    "reached_chest": 354.2,
+    "started": 286.1,
+    "wrong_turns": []
+   },
+   "free_period": {
+    "sat_s": 0.0,
+    "start": 620.5,
+    "talked": [
+     "fulco",
+     "nuto"
+    ]
+   },
+   "nones": {
+    "bell_t": 1023.7,
+    "entered_church_t": 49.6,
+    "guests_place_t": 54.8,
+    "in_church_s": 156.52,
+    "office_begun_t": 65.1,
+    "outside_s": 59.5,
+    "player_room_at_bell": "garth",
+    "watched_brothers_t": 9.9
+   },
+   "beat_durations_s": {
+    "after_nones": 80.0,
+    "free": 403.2,
+    "gate_open": 40.9,
+    "meal": 162.9,
+    "nones": 180.0,
+    "reception": 79.7,
+    "road": 33.3,
+    "second_bundle": 179.0,
+    "sext_gate": 27.4,
+    "to_cell": 97.3
+   },
+   "interaction_misses": [
+    {
+     "beat": "meal",
+     "id": "stand",
+     "prompt": "eat_olives",
+     "t": 541.1
+    }
+   ],
+   "stuck_events": 10,
+   "file": "walks/day1-walk_normal_functional.json"
+  },
+  "slow": {
+   "ended": true,
+   "game_seconds": 1375.4,
+   "time_scale": 3,
+   "people_named": [
+    "william",
+    "fazio",
+    "cellarer",
+    "tebaldo",
+    "nuto",
+    "fulco"
+   ],
+   "observations": [
+    "valley",
+    "pines",
+    "aed_windows",
+    "porter_scar",
+    "mule_shoe",
+    "garden"
+   ],
+   "william_lead_on_road_m": {
+    "max": 12.62,
+    "mean": 9.46,
+    "min": 4.17,
+    "p10": 6.31,
+    "p50": 8.39,
+    "p90": 12.62,
+    "samples": 67
+   },
+   "william_lead_to_cell_m": {
+    "mean": 3.58,
+    "p10": 1.23,
+    "p50": 2.34,
+    "p90": 7.89,
+    "samples": 196,
+    "share_adso_ahead": 0.01,
+    "share_william_ahead": 0.64
+   },
+   "william_waits": 1,
+   "william_wait_points": [
+    "lp_trunk"
+   ],
+   "overtakes": 0,
+   "solo_route": {
+    "back_in_cell": 549.2,
+    "back_s": 125.1,
+    "help_from_nuto": false,
+    "hesitation_s": 0.0,
+    "left_cell": 341.1,
+    "max_off_route_m": 4.7,
+    "out_s": 83.0,
+    "reached_chest": 424.1,
+    "started": 341.1,
+    "wrong_turns": []
+   },
+   "free_period": {
+    "sat_s": 0.0,
+    "start": 712.1,
+    "talked": [
+     "fulco",
+     "nuto"
+    ]
+   },
+   "nones": {
+    "bell_t": 1115.3,
+    "entered_church_t": 53.2,
+    "guests_place_t": 59.5,
+    "in_church_s": 126.95,
+    "office_begun_t": 65.2,
+    "outside_s": 53.1,
+    "player_room_at_bell": "garth",
+    "watched_brothers_t": 9.2
+   },
+   "beat_durations_s": {
+    "after_nones": 80.0,
+    "free": 403.2,
+    "gate_open": 41.1,
+    "meal": 162.9,
+    "nones": 180.1,
+    "reception": 79.8,
+    "road": 68.3,
+    "second_bundle": 216.5,
+    "sext_gate": 27.4,
+    "to_cell": 116.2
+   },
+   "interaction_misses": [
+    {
+     "beat": "to_cell",
+     "id": "place_bedding",
+     "prompt": "",
+     "t": 331.2
+    },
+    {
+     "beat": "meal",
+     "id": "stand",
+     "prompt": "eat_olives",
+     "t": 632.7
+    }
+   ],
+   "stuck_events": 9,
+   "file": "walks/day1-walk_slow_functional.json"
+  },
+  "rush": {
+   "ended": true,
+   "game_seconds": 1073.2,
+   "time_scale": 3,
+   "people_named": [
+    "william",
+    "fazio",
+    "cellarer",
+    "tebaldo",
+    "nuto",
+    "fulco"
+   ],
+   "observations": [
+    "aed_windows",
+    "porter_scar",
+    "mule_shoe",
+    "garden"
+   ],
+   "william_lead_on_road_m": {
+    "max": 6.5,
+    "mean": -4.85,
+    "min": -14.19,
+    "p10": -12.62,
+    "p50": -6.5,
+    "p90": 3.83,
+    "samples": 33
+   },
+   "william_lead_to_cell_m": {
+    "mean": -65.24,
+    "p10": -114.99,
+    "p50": -66.9,
+    "p90": -9.04,
+    "samples": 167,
+    "share_adso_ahead": 0.94,
+    "share_william_ahead": 0.03
+   },
+   "william_waits": 0,
+   "william_wait_points": [],
+   "overtakes": 1,
+   "solo_route": {
+    "back_in_cell": 379.3,
+    "back_s": 69.2,
+    "help_from_nuto": false,
+    "hesitation_s": 0.0,
+    "left_cell": 273.5,
+    "max_off_route_m": 4.6,
+    "out_s": 36.6,
+    "reached_chest": 310.1,
+    "started": 273.5,
+    "wrong_turns": []
+   },
+   "free_period": {
+    "sat_s": 34.4,
+    "start": 581.8,
+    "talked": [
+     "fulco",
+     "nuto"
+    ]
+   },
+   "nones": {
+    "bell_t": 813.1,
+    "entered_church_t": 27.0,
+    "guests_place_t": 32.3,
+    "in_church_s": 153.05,
+    "office_begun_t": 65.1,
+    "outside_s": 27.0,
+    "player_room_at_bell": "garth",
+    "watched_brothers_t": 4.9
+   },
+   "beat_durations_s": {
+    "after_nones": 80.1,
+    "free": 231.3,
+    "gate_open": 41.3,
+    "meal": 202.5,
+    "nones": 180.0,
+    "reception": 79.7,
+    "road": 32.4,
+    "second_bundle": 110.3,
+    "sext_gate": 27.4,
+    "to_cell": 88.3
+   },
+   "interaction_misses": [
+    {
+     "beat": "reception",
+     "id": "place_bedding",
+     "prompt": "",
+     "t": 160.7
+    }
+   ],
+   "stuck_events": 10,
+   "file": "walks/day1-walk_rush_functional.json"
+  },
+  "confused": {
+   "ended": true,
+   "game_seconds": 1293.6,
+   "time_scale": 3,
+   "people_named": [
+    "william",
+    "fazio",
+    "cellarer",
+    "tebaldo",
+    "nuto",
+    "fulco"
+   ],
+   "observations": [
+    "pines",
+    "aed_windows",
+    "porter_scar",
+    "mule_shoe",
+    "garden"
+   ],
+   "william_lead_on_road_m": {
+    "max": 8.05,
+    "mean": 7.62,
+    "min": 6.5,
+    "p10": 6.92,
+    "p50": 7.81,
+    "p90": 7.99,
+    "samples": 33
+   },
+   "william_lead_to_cell_m": {
+    "mean": -53.34,
+    "p10": -98.92,
+    "p50": -54.83,
+    "p90": -8.21,
+    "samples": 167,
+    "share_adso_ahead": 0.95,
+    "share_william_ahead": 0.0
+   },
+   "william_waits": 0,
+   "william_wait_points": [],
+   "overtakes": 0,
+   "solo_route": {
+    "back_in_cell": 467.4,
+    "back_s": 103.0,
+    "help_from_nuto": false,
+    "hesitation_s": 2.0,
+    "left_cell": 277.4,
+    "max_off_route_m": 8.0,
+    "out_s": 87.0,
+    "reached_chest": 364.4,
+    "started": 277.4,
+    "wrong_turns": [
+     {
+      "carrying": "",
+      "t": 314.3,
+      "zone": "church_front"
+     }
+    ]
+   },
+   "free_period": {
+    "sat_s": 0.0,
+    "start": 630.3,
+    "talked": [
+     "fulco",
+     "nuto"
+    ]
+   },
+   "nones": {
+    "bell_t": 1033.5,
+    "entered_church_t": 27.1,
+    "guests_place_t": 32.3,
+    "in_church_s": 153.05,
+    "office_begun_t": 65.2,
+    "outside_s": 27.0,
+    "player_room_at_bell": "garth",
+    "watched_brothers_t": 5.0
+   },
+   "beat_durations_s": {
+    "after_nones": 80.1,
+    "free": 403.3,
+    "gate_open": 41.4,
+    "meal": 162.9,
+    "nones": 180.0,
+    "reception": 79.8,
+    "road": 33.3,
+    "second_bundle": 197.3,
+    "sext_gate": 27.4,
+    "to_cell": 88.3
+   },
+   "interaction_misses": [
+    {
+     "beat": "meal",
+     "id": "stand",
+     "prompt": "eat_olives",
+     "t": 550.9
+    }
+   ],
+   "stuck_events": 10,
+   "file": "walks/day1-walk_confused_functional.json"
+  },
+  "ignore_nones": {
+   "ended": true,
+   "game_seconds": 1274.2,
+   "time_scale": 3,
+   "people_named": [
+    "william",
+    "fazio",
+    "cellarer",
+    "tebaldo",
+    "nuto"
+   ],
+   "observations": [
+    "pines",
+    "aed_windows",
+    "porter_scar",
+    "mule_shoe",
+    "garden",
+    "crown"
+   ],
+   "william_lead_on_road_m": {
+    "max": 8.14,
+    "mean": 7.64,
+    "min": 6.5,
+    "p10": 6.92,
+    "p50": 7.82,
+    "p90": 8.05,
+    "samples": 33
+   },
+   "william_lead_to_cell_m": {
+    "mean": -53.42,
+    "p10": -99.18,
+    "p50": -54.88,
+    "p90": -8.27,
+    "samples": 167,
+    "share_adso_ahead": 0.95,
+    "share_william_ahead": 0.0
+   },
+   "william_waits": 0,
+   "william_wait_points": [],
+   "overtakes": 0,
+   "solo_route": {
+    "back_in_cell": 448.0,
+    "back_s": 103.0,
+    "help_from_nuto": false,
+    "hesitation_s": 0.0,
+    "left_cell": 276.7,
+    "max_off_route_m": 4.7,
+    "out_s": 68.3,
+    "reached_chest": 345.0,
+    "started": 276.7,
+    "wrong_turns": []
+   },
+   "free_period": {
+    "sat_s": 0.0,
+    "start": 610.8,
+    "talked": []
+   },
+   "nones": {
+    "bell_t": 1014.1,
+    "entered_church_t": -1.0,
+    "guests_place_t": -1.0,
+    "in_church_s": 0.0,
+    "office_begun_t": 65.1,
+    "outside_s": 180.05,
+    "player_room_at_bell": "hospice-cell",
+    "watched_brothers_t": 4.1
+   },
+   "beat_durations_s": {
+    "after_nones": 80.0,
+    "free": 403.3,
+    "gate_open": 40.9,
+    "meal": 162.9,
+    "nones": 180.1,
+    "reception": 79.8,
+    "road": 33.2,
+    "second_bundle": 178.4,
+    "sext_gate": 27.3,
+    "to_cell": 88.4
+   },
+   "interaction_misses": [
+    {
+     "beat": "meal",
+     "id": "stand",
+     "prompt": "eat_olives",
+     "t": 531.5
+    }
+   ],
+   "stuck_events": 4,
+   "file": "walks/day1-walk_ignore_nones_functional.json"
+  }
+ },
+ "generated_from": "docs/evidence/day1a/{walks,performance,audio,tests}; see each file for system identity"
+}

@@ -41,11 +41,12 @@ bash scripts/migration/build_phase1.sh --fresh --functional
 bash scripts/migration/build_phase1.sh --no-export
 # Individual gates:
 "$GODOT_BIN" --headless --path native --script res://tests/run_tests.gd
+"$GODOT_BIN" --headless --path native --script res://tests/day1a_tests.gd
 "$GODOT_BIN" --headless --path native --script res://tests/anchor_check.gd
 "$GODOT_BIN" --headless --path native --script res://tests/pose_check.gd -- alinardo "$PWD/shared/data/manifests/pose_reference_alinardo.json"
 ```
 
-Normal build order: literary hashes → browser-computed rule references → content publication → derivative verification → fresh import if requested → pinned import settings/re-import → 22 domain tests → five fitted pose/normal checks → ten anchors → optional main-scene functional route/reload → Windows/macOS exports → package audit → literary hash comparison. Import errors are fatal. Domain negative-condition and known test-exit diagnostics are documented in `PLATFORMS.md`; an assertion pass is not a claim that the harness has no cleanup warnings.
+Normal build order: literary hashes → browser-computed rule references → content publication → derivative verification → fresh import if requested → pinned import settings/re-import → 22 domain tests → 14 Day-1A domain tests (scenario consistency, William's lead/wait, five whole-day walker styles, getting up, naming, perception, save/restore) → thirteen fitted pose/normal checks → ten anchors → optional main-scene functional route/reload → Windows/macOS exports → package audit → literary hash comparison. Import errors are fatal. Domain negative-condition and known test-exit diagnostics are documented in `PLATFORMS.md`; an assertion pass is not a claim that the harness has no cleanup warnings.
 
 Results/logs and packages go to ignored `builds/phase1/`; `EVIDENCE_OUT` can select an alternate check-output directory. Do not overwrite frozen `docs/evidence/phase1/` during routine checks. Original packages remain locally under `builds/phase1-original/`; new builds have their own hashes. Imported scene IDs can vary on fresh import, so compare resource content/behavior rather than requiring byte-identical PCKs.
 
@@ -59,7 +60,7 @@ bash scripts/migration/build_phase1.sh --regenerate-assets --no-export
 bash scripts/migration/build_phase1.sh --browser-export --no-export
 ```
 
-These need `.local/mh/cast-round3.glb`, pinned dependencies, ffmpeg and (for export) Chrome. Regeneration updates authored derivative manifests; inspect the diff and rerun pose/normal/anchor/functional gates. Normal native builds need none of those private regeneration inputs. `CHROME_BIN` selects Chrome; `BROWSER_VIEWPORT=1280x720` sets capture size. The driver intercepts only its served copy of `kit.js` to retain pre-merge parts; it does not modify the builder file or normal save.
+The Day-1A world comes from a second section export (`shared/data/export/day1a_cells.json`: gate, guest house, flower garden, church west front, Aedificium exterior, terrain/walkable mask, tree tiles); `build_day1a_assets.py` derives it, `day1a_scenario.py` regenerates `shared/scenarios/day1a/day1a.json` and `normalize_animals.mjs` the mule. These need `.local/mh/cast-round3.glb`, pinned dependencies, ffmpeg and (for export) Chrome. Regeneration updates authored derivative manifests; inspect the diff and rerun pose/normal/anchor/functional gates. Normal native builds need none of those private regeneration inputs. `CHROME_BIN` selects Chrome; `BROWSER_VIEWPORT=1280x720` sets capture size. The driver intercepts only its served copy of `kit.js` to retain pre-merge parts; it does not modify the builder file or normal save.
 
 ```sh
 # Optional browser captures/probe/export; config describes explicit shots/region:
@@ -80,13 +81,18 @@ APP="$PWD/builds/phase1/macos/AbbeySlice.app/Contents/MacOS/Abbey Slice"
 "$APP" -- --scenario=fixture --out="$PWD/builds/phase1/evidence/fixture" --label=mac
 "$APP" -- --scenario=audio --out="$PWD/builds/phase1/evidence/audio" --label=mac
 scripts/migration/run_benchmarks.sh "$APP" mac route crowd cycles
+# Day-1A (the default mode): the whole slice walked in real time, then ten residency loops
+scripts/migration/run_benchmarks.sh "$APP" mac day1_walk day1_cycles
+# Day-1A functional walks (may be accelerated; never used for performance):
+"$GODOT_BIN" --path native -- --scenario=day1-walk --style=normal --timescale=3 --captures=on --record=nones --out="$PWD/builds/day1a" --label=functional
+#   styles: normal | slow | rush | confused | ignore_nones; also day1-shots, day1-cast (close character review), day1-graph-audit (capsule sweep of every authored leg)
 # Explicit longer qualification, when justified:
 scripts/migration/run_package_evidence.sh "$APP" mac
 ```
 
 Set `EVIDENCE_OUT` to change benchmark/evidence destination. Full evidence runs include high-resolution variants, startup and a twenty-minute soak. Baseline gates at physical 1920×1080: normal ≥60 FPS/p95 ≤25 ms; crowd ≥45 FPS/p95 ≤33.3 ms; no repeatable >100 ms stalls; ten residency cycles within 10% of warmed memory; twenty-minute soak without crash, graphics/audio/save failures. Record physical viewport, VSync/focus, hardware, driver, power and cache state. A short screenshot smoke is not a performance run.
 
-Mac player saves: `~/Library/Application Support/AbbeySlice/saves/slot0.json`; Windows: `%APPDATA%\AbbeySlice\saves\slot0.json`. Automated scenarios use distinct save directories. Current format validates version, body length/checksum, known IDs and values, writes `.tmp`, rotates `.bak`, then replaces. A corrupt save recovers with a report. Never overwrite a player save to run a test. Browser notebooks remain separate `abbey.notebook.v2` and QA `abbey.notebook.review.v2` storage.
+Mac player saves: `~/Library/Application Support/AbbeySlice/saves/slot0.json`; Windows: `%APPDATA%\AbbeySlice\saves\slot0.json`. Day-1A writes `day1a_slot0.json` (format `abbey-day1a-save`) beside it, rejects a proof save offered to it and never overwrites one; its local telemetry goes to `user://day1a/telemetry/`. Automated scenarios use distinct save directories (scripted `day1-*` runs default to `user://day1a_runs/`). Current format validates version, body length/checksum, known IDs and values, writes `.tmp`, rotates `.bak`, then replaces. A corrupt save recovers with a report. Never overwrite a player save to run a test. Browser notebooks remain separate `abbey.notebook.v2` and QA `abbey.notebook.review.v2` storage.
 
 To inspect package contents:
 

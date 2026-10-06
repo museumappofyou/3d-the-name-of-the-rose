@@ -22,10 +22,11 @@ Native proof, with the pinned **Godot 4.7.2 standard editor and matching export 
 ```sh
 export GODOT_BIN=/absolute/path/to/Godot
 bash scripts/migration/build_phase1.sh --fresh --functional
-"$GODOT_BIN" --path native -- --mode=proof
+"$GODOT_BIN" --path native                  # Day-1A: last road bend → gate → guest room → meal → free period → Nones
+"$GODOT_BIN" --path native -- --mode=proof  # the frozen Phase-1 proof
 ```
 
-The build uses committed derivatives and needs neither private masters nor Chrome. It validates content, imports, tests and exports Windows/macOS development packages into ignored `builds/phase1/`. Native controls: WASD/arrows, mouse, E interact, J notebook, F lantern, Esc pause, F5 save, F9 load, F12 QA. Saves use the existing `AbbeySlice` user directory.
+The build uses committed derivatives and needs neither private masters nor Chrome. It validates content, imports, tests and exports Windows/macOS development packages into ignored `builds/phase1/`. Native controls: WASD/arrows, mouse, E interact, J notebook, F lantern, Esc pause, F5 save, F9 load, F12 QA. Day-1A uses WASD/mouse, Shift to hurry, E, 1–4 for replies, Esc for the menu (text size, captions, look sensitivity) and F5/F9; it has no notebook or lantern. Saves use the existing `AbbeySlice` user directory; Day-1A writes its own `day1a_slot0.json` and never touches a proof save.
 
 **Validated scope:** Alinardo’s porch → cloister → church → skull altar → first ossuary landing. Mac proof metrics: 104.6 FPS route / 100.5 FPS crowd at physical 1080p. Windows GPU runs, human audio/input review and the recurring stair unload hitch remain open. These measurements establish the slice’s feasibility, not whole-game performance.
 

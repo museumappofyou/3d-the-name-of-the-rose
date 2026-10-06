@@ -1,0 +1,1 @@
+== day1_cycles (1920x1080) --scenario=day1-cycles --vsync=off --cycles=10 --save-dir=user://day1a_runs/saves --telemetry-dir=user://day1a_runs/telemetry  [GPU utilization before launch: 2% after 0s settle]

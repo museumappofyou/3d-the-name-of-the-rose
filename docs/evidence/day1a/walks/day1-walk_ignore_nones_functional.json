@@ -1,0 +1,254 @@
+{
+ "beat": "end",
+ "director_t": 1274.2,
+ "ended": true,
+ "events": [
+  {
+   "at": [
+    -14.8101835250854,
+    6.21000003814697,
+    17.1395473480225
+   ],
+   "beat": "meal",
+   "event": "stuck",
+   "t": 509.0,
+   "target": [
+    -14.1999998092651,
+    17.3999996185303
+   ]
+  },
+  {
+   "at": [
+    -16.6836585998535,
+    6.21000003814697,
+    16.5255336761475
+   ],
+   "beat": "meal",
+   "event": "stuck",
+   "t": 534.8,
+   "target": [
+    -16.3199996948242,
+    16.2000007629395
+   ]
+  },
+  {
+   "at": [
+    -16.6836585998535,
+    6.21000003814697,
+    16.5255336761475
+   ],
+   "beat": "meal",
+   "event": "stuck",
+   "t": 540.0,
+   "target": [
+    -16.3199996948242,
+    16.2000007629395
+   ]
+  },
+  {
+   "at": [
+    -15.2008085250854,
+    6.21000003814697,
+    16.453067779541
+   ],
+   "beat": "meal",
+   "event": "stuck",
+   "t": 544.4,
+   "target": [
+    -14.6000003814697,
+    16.2999992370605
+   ]
+  }
+ ],
+ "frames": {
+  "after_nones": {},
+  "all": {
+   "fps_avg": 143.4,
+   "frames": 60911,
+   "ms_max": 31.2,
+   "ms_p50": 7.01,
+   "ms_p95": 9.23,
+   "ms_p99": 12.29,
+   "over_100ms": 0,
+   "over_50ms": 0
+  },
+  "end": {},
+  "free": {},
+  "gate_open": {},
+  "meal": {},
+  "nones": {},
+  "reception": {},
+  "road": {},
+  "second_bundle": {},
+  "sext_gate": {},
+  "to_cell": {}
+ },
+ "interaction_misses": [
+  {
+   "beat": "meal",
+   "id": "stand",
+   "prompt": "eat_olives",
+   "t": 531.5
+  }
+ ],
+ "label": "functional",
+ "memory": {
+  "objects": 8656.0,
+  "static": 233426112.0,
+  "vram": 493813760.0
+ },
+ "observations": [
+  "pines",
+  "aed_windows",
+  "porter_scar",
+  "mule_shoe",
+  "garden",
+  "crown"
+ ],
+ "people_named": [
+  "william",
+  "fazio",
+  "cellarer",
+  "tebaldo",
+  "nuto"
+ ],
+ "real_s": 1277.2,
+ "scenario": "day1-walk",
+ "style": "ignore_nones",
+ "summary": {
+  "beat_durations_s": {
+   "after_nones": 80.0,
+   "free": 403.3,
+   "gate_open": 40.9,
+   "meal": 162.9,
+   "nones": 180.1,
+   "reception": 79.8,
+   "road": 33.2,
+   "second_bundle": 178.4,
+   "sext_gate": 27.3,
+   "to_cell": 88.4
+  },
+  "free_period": {
+   "sat_s": 0.0,
+   "start": 610.8,
+   "talked": []
+  },
+  "nones": {
+   "bell_t": 1014.1,
+   "entered_church_t": -1.0,
+   "guests_place_t": -1.0,
+   "in_church_s": 0.0,
+   "office_begun_t": 65.1,
+   "outside_s": 180.05,
+   "player_room_at_bell": "hospice-cell",
+   "watched_brothers_t": 4.1
+  },
+  "overtakes": 0,
+  "people_met": {
+   "cellarer": 132.3,
+   "fazio": 63.3,
+   "nuto": 300.7,
+   "tebaldo": 465.7
+  },
+  "solo_route": {
+   "back_in_cell": 448.0,
+   "back_s": 103.0,
+   "help_from_nuto": false,
+   "hesitation_s": 0.0,
+   "left_cell": 276.7,
+   "max_off_route_m": 4.7,
+   "out_s": 68.3,
+   "reached_chest": 345.0,
+   "started": 276.7,
+   "wrong_turns": []
+  },
+  "william_distance_reception_m": {
+   "mean": 39.34,
+   "p50": 37.93,
+   "p90": 73.25,
+   "samples": 167
+  },
+  "william_lead_on_road_m": {
+   "max": 8.14,
+   "mean": 7.64,
+   "min": 6.5,
+   "p10": 6.92,
+   "p50": 7.82,
+   "p90": 8.05,
+   "samples": 33
+  },
+  "william_lead_to_cell_m": {
+   "mean": -53.42,
+   "p10": -99.18,
+   "p50": -54.88,
+   "p90": -8.27,
+   "samples": 167,
+   "share_adso_ahead": 0.95,
+   "share_william_ahead": 0.0
+  },
+  "william_wait_points": [],
+  "william_waits": 0
+ },
+ "system": {
+  "adapter": "Apple M1 Pro (Apple7)",
+  "adapter_type": 1,
+  "api": "4.0",
+  "cpu": "Apple M1 Pro",
+  "cpu_count": 10,
+  "driver": "metal",
+  "engine": "4.7.2-stable (official)",
+  "executable": "/Users/memre/Desktop/gulun_adı/.local/tools/godot-4.7.2/Godot.app/Contents/MacOS/Godot",
+  "gi": "none",
+  "memory_info": {
+   "available": 11227430912,
+   "free": 10089463808,
+   "physical": 34359738368,
+   "stack": 8372224
+  },
+  "msaa_3d": 1,
+  "os": "macOS",
+  "os_version": "26.5.2",
+  "physics": "Jolt Physics",
+  "renderer": "forward_plus",
+  "scaling_3d_scale": 1.0,
+  "screen": 0,
+  "screen_count": 2,
+  "screen_scale": 2.0,
+  "screens": [
+   {
+    "refresh_hz": 120.0,
+    "scale": 2.0,
+    "size": [
+     3456,
+     2234
+    ]
+   },
+   {
+    "refresh_hz": 75.0,
+    "scale": 1.0,
+    "size": [
+     3840,
+     2160
+    ]
+   }
+  ],
+  "shadow_atlas": 4096,
+  "ssao": true,
+  "user_dir": "/Users/memre/Library/Application Support/AbbeySlice",
+  "vendor": "Apple",
+  "viewport_texture_px": [
+   1280,
+   720
+  ],
+  "vsync": 1,
+  "window_position": [
+   4928,
+   790
+  ],
+  "window_px": [
+   1280,
+   720
+  ]
+ },
+ "telemetry_file": "/Users/memre/Library/Application Support/AbbeySlice/day1a/telemetry/day1a_2026-10-05_20-56-34_end.json"
+}

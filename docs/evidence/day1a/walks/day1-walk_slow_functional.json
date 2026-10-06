@@ -1,0 +1,337 @@
+{
+ "beat": "end",
+ "director_t": 1375.4,
+ "ended": true,
+ "events": [
+  {
+   "at": [
+    -16.6929092407227,
+    6.21000003814697,
+    16.5138492584229
+   ],
+   "beat": "meal",
+   "event": "stuck",
+   "t": 636.1,
+   "target": [
+    -16.3199996948242,
+    16.2000007629395
+   ]
+  },
+  {
+   "at": [
+    -16.6929092407227,
+    6.21000003814697,
+    16.5138492584229
+   ],
+   "beat": "meal",
+   "event": "stuck",
+   "t": 641.3,
+   "target": [
+    -16.3199996948242,
+    16.2000007629395
+   ]
+  },
+  {
+   "at": [
+    -15.2026643753052,
+    6.21000003814697,
+    16.4455890655518
+   ],
+   "beat": "meal",
+   "event": "stuck",
+   "t": 645.9,
+   "target": [
+    -14.6000003814697,
+    16.2999992370605
+   ]
+  },
+  {
+   "at": [
+    -9.21658802032471,
+    0.309999376535416,
+    19.3349552154541
+   ],
+   "beat": "free",
+   "event": "stuck",
+   "t": 745.9,
+   "target": [
+    -8.60000038146973,
+    19.2700004577637
+   ]
+  },
+  {
+   "at": [
+    -7.73504447937012,
+    0.309999376535416,
+    17.7861747741699
+   ],
+   "beat": "free",
+   "event": "stuck",
+   "t": 750.8,
+   "target": [
+    -7.25,
+    17.3999996185303
+   ]
+  },
+  {
+   "at": [
+    -8.49159049987793,
+    0.309999346733093,
+    18.6595516204834
+   ],
+   "beat": "free",
+   "event": "stuck",
+   "t": 809.4,
+   "target": [
+    -8.60000038146973,
+    19.2700004577637
+   ]
+  },
+  {
+   "at": [
+    -19.7010669708252,
+    -0.196117639541626,
+    24.9636287689209
+   ],
+   "beat": "free",
+   "event": "stuck",
+   "t": 827.9,
+   "target": [
+    -20.3199996948242,
+    25.0
+   ]
+  },
+  {
+   "at": [
+    -9.21999931335449,
+    0.309999406337738,
+    19.2712955474854
+   ],
+   "beat": "free",
+   "event": "stuck",
+   "t": 843.2,
+   "target": [
+    -8.60000038146973,
+    19.2700004577637
+   ]
+  },
+  {
+   "at": [
+    -19.7013607025146,
+    -0.196126744151115,
+    24.9589385986328
+   ],
+   "beat": "after_nones",
+   "event": "stuck",
+   "t": 1370.5,
+   "target": [
+    -20.3199996948242,
+    25.0
+   ]
+  }
+ ],
+ "frames": {
+  "after_nones": {},
+  "all": {
+   "fps_avg": 136.2,
+   "frames": 62437,
+   "ms_max": 27.22,
+   "ms_p50": 7.05,
+   "ms_p95": 11.17,
+   "ms_p99": 14.6,
+   "over_100ms": 0,
+   "over_50ms": 0
+  },
+  "end": {},
+  "free": {},
+  "gate_open": {},
+  "meal": {},
+  "nones": {},
+  "reception": {},
+  "road": {},
+  "second_bundle": {},
+  "sext_gate": {},
+  "to_cell": {}
+ },
+ "interaction_misses": [
+  {
+   "beat": "to_cell",
+   "id": "place_bedding",
+   "prompt": "",
+   "t": 331.2
+  },
+  {
+   "beat": "meal",
+   "id": "stand",
+   "prompt": "eat_olives",
+   "t": 632.7
+  }
+ ],
+ "label": "functional",
+ "memory": {
+  "objects": 8658.0,
+  "static": 234520112.0,
+  "vram": 493961216.0
+ },
+ "observations": [
+  "valley",
+  "pines",
+  "aed_windows",
+  "porter_scar",
+  "mule_shoe",
+  "garden"
+ ],
+ "people_named": [
+  "william",
+  "fazio",
+  "cellarer",
+  "tebaldo",
+  "nuto",
+  "fulco"
+ ],
+ "real_s": 1378.4,
+ "scenario": "day1-walk",
+ "style": "slow",
+ "summary": {
+  "beat_durations_s": {
+   "after_nones": 80.0,
+   "free": 403.2,
+   "gate_open": 41.1,
+   "meal": 162.9,
+   "nones": 180.1,
+   "reception": 79.8,
+   "road": 68.3,
+   "second_bundle": 216.5,
+   "sext_gate": 27.4,
+   "to_cell": 116.2
+  },
+  "free_period": {
+   "sat_s": 0.0,
+   "start": 712.1,
+   "talked": [
+    "fulco",
+    "nuto"
+   ]
+  },
+  "nones": {
+   "bell_t": 1115.3,
+   "entered_church_t": 53.2,
+   "guests_place_t": 59.5,
+   "in_church_s": 126.95,
+   "office_begun_t": 65.2,
+   "outside_s": 53.1,
+   "player_room_at_bell": "garth",
+   "watched_brothers_t": 9.2
+  },
+  "overtakes": 0,
+  "people_met": {
+   "cellarer": 193.3,
+   "fazio": 98.8,
+   "fulco": 742.6,
+   "nuto": 370.2,
+   "tebaldo": 567.0
+  },
+  "solo_route": {
+   "back_in_cell": 549.2,
+   "back_s": 125.1,
+   "help_from_nuto": false,
+   "hesitation_s": 0.0,
+   "left_cell": 341.1,
+   "max_off_route_m": 4.7,
+   "out_s": 83.0,
+   "reached_chest": 424.1,
+   "started": 341.1,
+   "wrong_turns": []
+  },
+  "william_distance_reception_m": {
+   "mean": 4.4,
+   "p50": 3.43,
+   "p90": 7.73,
+   "samples": 196
+  },
+  "william_lead_on_road_m": {
+   "max": 12.62,
+   "mean": 9.46,
+   "min": 4.17,
+   "p10": 6.31,
+   "p50": 8.39,
+   "p90": 12.62,
+   "samples": 67
+  },
+  "william_lead_to_cell_m": {
+   "mean": 3.58,
+   "p10": 1.23,
+   "p50": 2.34,
+   "p90": 7.89,
+   "samples": 196,
+   "share_adso_ahead": 0.01,
+   "share_william_ahead": 0.64
+  },
+  "william_wait_points": [
+   "lp_trunk"
+  ],
+  "william_waits": 1
+ },
+ "system": {
+  "adapter": "Apple M1 Pro (Apple7)",
+  "adapter_type": 1,
+  "api": "4.0",
+  "cpu": "Apple M1 Pro",
+  "cpu_count": 10,
+  "driver": "metal",
+  "engine": "4.7.2-stable (official)",
+  "executable": "/Users/memre/Desktop/gulun_adı/.local/tools/godot-4.7.2/Godot.app/Contents/MacOS/Godot",
+  "gi": "none",
+  "memory_info": {
+   "available": 10429431808,
+   "free": 9274687488,
+   "physical": 34359738368,
+   "stack": 8372224
+  },
+  "msaa_3d": 1,
+  "os": "macOS",
+  "os_version": "26.5.2",
+  "physics": "Jolt Physics",
+  "renderer": "forward_plus",
+  "scaling_3d_scale": 1.0,
+  "screen": 0,
+  "screen_count": 2,
+  "screen_scale": 2.0,
+  "screens": [
+   {
+    "refresh_hz": 120.0,
+    "scale": 2.0,
+    "size": [
+     3456,
+     2234
+    ]
+   },
+   {
+    "refresh_hz": 75.0,
+    "scale": 1.0,
+    "size": [
+     3840,
+     2160
+    ]
+   }
+  ],
+  "shadow_atlas": 4096,
+  "ssao": true,
+  "user_dir": "/Users/memre/Library/Application Support/AbbeySlice",
+  "vendor": "Apple",
+  "viewport_texture_px": [
+   1280,
+   720
+  ],
+  "vsync": 1,
+  "window_position": [
+   4928,
+   790
+  ],
+  "window_px": [
+   1280,
+   720
+  ]
+ },
+ "telemetry_file": "/Users/memre/Library/Application Support/AbbeySlice/day1a/telemetry/day1a_2026-10-05_21-36-57_end.json"
+}

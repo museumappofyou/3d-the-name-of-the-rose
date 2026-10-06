@@ -1,0 +1,6648 @@
+{
+ "pck": "builds/phase1/windows/AbbeySlice.pck",
+ "bytes": 111215496,
+ "format": 4,
+ "engine": "4.7.2",
+ "file_count": 1075,
+ "by_dir": {
+  ".godot/exported": {
+   "files": 64,
+   "bytes": 138553
+  },
+  ".godot/global_script_class_cache.cfg": {
+   "files": 1,
+   "bytes": 8374
+  },
+  ".godot/imported": {
+   "files": 391,
+   "bytes": 104068271
+  },
+  ".godot/uid_cache.bin": {
+   "files": 1,
+   "bytes": 25609
+  },
+  "assets/animals": {
+   "files": 1,
+   "bytes": 166
+  },
+  "assets/audio": {
+   "files": 166,
+   "bytes": 25995
+  },
+  "assets/characters": {
+   "files": 119,
+   "bytes": 32034
+  },
+  "assets/fonts": {
+   "files": 9,
+   "bytes": 14446
+  },
+  "assets/textures": {
+   "files": 42,
+   "bytes": 10683
+  },
+  "assets/world": {
+   "files": 151,
+   "bytes": 6170866
+  },
+  "content/anchors.json": {
+   "files": 1,
+   "bytes": 6658
+  },
+  "content/animals.json": {
+   "files": 1,
+   "bytes": 452
+  },
+  "content/cast.json": {
+   "files": 1,
+   "bytes": 2318
+  },
+  "content/content_manifest.json": {
+   "files": 1,
+   "bytes": 4052
+  },
+  "content/crowd.json": {
+   "files": 1,
+   "bytes": 6582
+  },
+  "content/day1a.json": {
+   "files": 1,
+   "bytes": 25505
+  },
+  "content/discoveries.json": {
+   "files": 1,
+   "bytes": 3264
+  },
+  "content/entities.json": {
+   "files": 1,
+   "bytes": 1111
+  },
+  "content/horarium.json": {
+   "files": 1,
+   "bytes": 3089
+  },
+  "content/interactions.json": {
+   "files": 1,
+   "bytes": 2595
+  },
+  "content/locations.json": {
+   "files": 1,
+   "bytes": 4439
+  },
+  "content/portals.json": {
+   "files": 1,
+   "bytes": 1127
+  },
+  "content/provenance.json": {
+   "files": 1,
+   "bytes": 6468
+  },
+  "content/routines.json": {
+   "files": 1,
+   "bytes": 1003
+  },
+  "content/sounds.json": {
+   "files": 1,
+   "bytes": 14202
+  },
+  "content/world.json": {
+   "files": 1,
+   "bytes": 5143
+  },
+  "content/world_day1a.json": {
+   "files": 1,
+   "bytes": 156818
+  },
+  "icon.svg": {
+   "files": 1,
+   "bytes": 314
+  },
+  "icon.svg.import": {
+   "files": 1,
+   "bytes": 193
+  },
+  "project.binary": {
+   "files": 1,
+   "bytes": 12731
+  },
+  "scenes/main.tscn.remap": {
+   "files": 1,
+   "bytes": 97
+  },
+  "scripts/adapters": {
+   "files": 32,
+   "bytes": 120200
+  },
+  "scripts/bench": {
+   "files": 6,
+   "bytes": 68828
+  },
+  "scripts/domain": {
+   "files": 56,
+   "bytes": 109078
+  },
+  "scripts/foundation_boot.gd.remap": {
+   "files": 1,
+   "bytes": 50
+  },
+  "scripts/foundation_boot.gdc": {
+   "files": 1,
+   "bytes": 960
+  },
+  "scripts/main.gd.remap": {
+   "files": 1,
+   "bytes": 39
+  },
+  "scripts/main.gdc": {
+   "files": 1,
+   "bytes": 11371
+  },
+  "scripts/ui": {
+   "files": 4,
+   "bytes": 18092
+  },
+  "shaders/abbey_pbr.gdshader": {
+   "files": 1,
+   "bytes": 224
+  },
+  "shaders/abbey_pbr.gdshaderinc": {
+   "files": 1,
+   "bytes": 10714
+  },
+  "shaders/abbey_pbr_alpha.gdshader": {
+   "files": 1,
+   "bytes": 242
+  },
+  "shaders/abbey_pbr_alpha_depth.gdshader": {
+   "files": 1,
+   "bytes": 243
+  },
+  "shaders/abbey_pbr_double.gdshader": {
+   "files": 1,
+   "bytes": 228
+  },
+  "shaders/abbey_tree.gdshader": {
+   "files": 1,
+   "bytes": 4058
+  },
+  "shaders/browser_sky.gdshader": {
+   "files": 1,
+   "bytes": 4753
+  }
+ },
+ "forbidden_paths": [],
+ "forbidden_strings": [],
+ "pass": true,
+ "files": [
+  {
+   "path": ".godot/exported/133200997/export-028ec73bee72ce7e68a7d1e72b13191a-p_earthenware.res",
+   "size": 1866,
+   "flags": 0,
+   "md5": "2ed5e6cfb6d3e39379898708b6ae30d0"
+  },
+  {
+   "path": ".godot/exported/133200997/export-0454c11278b80fbf6677fa7fceb931cb-aed.res",
+   "size": 2067,
+   "flags": 0,
+   "md5": "0022b208089b2c59ef91320d0b5aa9ae"
+  },
+  {
+   "path": ".godot/exported/133200997/export-09c8308ea3f07377712f04579bf36292-p_boneDark.res",
+   "size": 1851,
+   "flags": 0,
+   "md5": "2f5f57cf7f0fb95e87933d7b103a8a12"
+  },
+  {
+   "path": ".godot/exported/133200997/export-0b2597b7a3c5109ceed3e212d8db1551-wood.res",
+   "size": 2054,
+   "flags": 0,
+   "md5": "7f16dc1ff80b460fc24849e84c7a0181"
+  },
+  {
+   "path": ".godot/exported/133200997/export-17375d75cc59d999379a9c9fed5c283b-flagExt.res",
+   "size": 2056,
+   "flags": 0,
+   "md5": "d8e5d369ee93829c02e026290e5140b2"
+  },
+  {
+   "path": ".godot/exported/133200997/export-1a272ce4f83383a1e3d62f8e5c3dc22b-p_socket.res",
+   "size": 2962,
+   "flags": 0,
+   "md5": "7ae04cdf074dbc31c343260cbce4e28a"
+  },
+  {
+   "path": ".godot/exported/133200997/export-1c2d28f305c5233539e8fff553eca1d7-stained_2.res",
+   "size": 1882,
+   "flags": 0,
+   "md5": "3a656a58323c3aa9bcbaca07cb8114e0"
+  },
+  {
+   "path": ".godot/exported/133200997/export-1c32204746db936291fc2cbd0c412d41-fire.res",
+   "size": 1924,
+   "flags": 0,
+   "md5": "e6d40d1b6ef547afe150b9eec53dfeb3"
+  },
+  {
+   "path": ".godot/exported/133200997/export-22056a7640b9b52f404d06bf13f41a56-p_glazeBrown.res",
+   "size": 1863,
+   "flags": 0,
+   "md5": "ee9698bbddfb060e92f7050fca295cfa"
+  },
+  {
+   "path": ".godot/exported/133200997/export-29f271181c5e93d7d98f9cc8150c49e0-tym_ground.res",
+   "size": 1953,
+   "flags": 0,
+   "md5": "ddfe2fed8d5385af52def186499418b1"
+  },
+  {
+   "path": ".godot/exported/133200997/export-30fd7f6b314ac6d4085251ee3a0c9d81-flag.res",
+   "size": 2054,
+   "flags": 0,
+   "md5": "22e4366276a8ece6a3c38e2418bfe549"
+  },
+  {
+   "path": ".godot/exported/133200997/export-325b9d6b2c16ef413c322ca635074352-straw.res",
+   "size": 1842,
+   "flags": 0,
+   "md5": "8fd37db2ceafca76442bfe5230811677"
+  },
+  {
+   "path": ".godot/exported/133200997/export-35239b87bb4b1178dc7de63ae782072f-strawExt.res",
+   "size": 1848,
+   "flags": 0,
+   "md5": "d00b15420eef32921f9c38ea3419c09d"
+  },
+  {
+   "path": ".godot/exported/133200997/export-359173efa6943cdf043f4f22a11b44c0-pottery.res",
+   "size": 2972,
+   "flags": 0,
+   "md5": "75a2716045a10781347e120998be62eb"
+  },
+  {
+   "path": ".godot/exported/133200997/export-36cc712d8b7faef082703220020f2770-church.res",
+   "size": 2086,
+   "flags": 0,
+   "md5": "430713b0863efa0891af2e4c4c829978"
+  },
+  {
+   "path": ".godot/exported/133200997/export-375ec134b0cd52fbd1cdabd230dd8574-stainedWarm.res",
+   "size": 1888,
+   "flags": 0,
+   "md5": "5c1549ba6c0e1223ac36f0fc61ad8d5e"
+  },
+  {
+   "path": ".godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn",
+   "size": 710,
+   "flags": 0,
+   "md5": "692c49701442ef7668eb11cd614e6a80"
+  },
+  {
+   "path": ".godot/exported/133200997/export-486f86dbb615e2ded278f260ea859ea4-beam.res",
+   "size": 2054,
+   "flags": 0,
+   "md5": "e0b8eecfc2747b0c63b819ceca09107b"
+  },
+  {
+   "path": ".godot/exported/133200997/export-4ed6068c23eaac22e6dc84de4797b2a7-linen.res",
+   "size": 2968,
+   "flags": 0,
+   "md5": "b96b0f2236a8424aa64f6c14daeafea4"
+  },
+  {
+   "path": ".godot/exported/133200997/export-5269a6e2550fd2bb9720a9da691de36e-p_sacking.res",
+   "size": 1846,
+   "flags": 0,
+   "md5": "27aac35705a38304a069fc595a10112a"
+  },
+  {
+   "path": ".godot/exported/133200997/export-5491fd3b85112a4c9aa6a4a452d3d620-beamExt.res",
+   "size": 2056,
+   "flags": 0,
+   "md5": "a27706c9292e7ce8f93c8801946bb4e6"
+  },
+  {
+   "path": ".godot/exported/133200997/export-5ea47158dd66efdc9d443188d0c3b9ee-wall.res",
+   "size": 2076,
+   "flags": 0,
+   "md5": "3d69abcaeac8cceb9cb0e4a842000914"
+  },
+  {
+   "path": ".godot/exported/133200997/export-6a06f89d69158bfd733f8eac2fea5697-dung.res",
+   "size": 2966,
+   "flags": 0,
+   "md5": "8ec60e944d46b5d28935f9d611a01c27"
+  },
+  {
+   "path": ".godot/exported/133200997/export-6e680250463064f17d2c128dde9be6b1-p_cryptStone.res",
+   "size": 2076,
+   "flags": 0,
+   "md5": "f26025337b1c2a8688020200b88594d0"
+  },
+  {
+   "path": ".godot/exported/133200997/export-6f55776a270413ac53fa8e25eaf5ccab-door.res",
+   "size": 2071,
+   "flags": 0,
+   "md5": "d625027dbd538ae55bee2ad0fde3fa0b"
+  },
+  {
+   "path": ".godot/exported/133200997/export-7460b31a17a0980bb5422c83f91d5778-rubble.res",
+   "size": 2138,
+   "flags": 0,
+   "md5": "2ab1df83630730e0ad1080be0ec02cff"
+  },
+  {
+   "path": ".godot/exported/133200997/export-75694c33b429dc3dce86604190adb17a-terrain_snow.res",
+   "size": 1957,
+   "flags": 0,
+   "md5": "5ea6596c445088539599ab6f98bed520"
+  },
+  {
+   "path": ".godot/exported/133200997/export-761c1890996bac27bdb3ec973bb31a10-p_vellum.res",
+   "size": 1845,
+   "flags": 0,
+   "md5": "88050913f6464ec946fde3a59e95eefe"
+  },
+  {
+   "path": ".godot/exported/133200997/export-7c50ad1368aa3cd0ec94062fa5fd57d9-p_woolBlack.res",
+   "size": 1865,
+   "flags": 0,
+   "md5": "9f4490d36d3928f31c3038b3fa68af95"
+  },
+  {
+   "path": ".godot/exported/133200997/export-810d3ee2b953c844c06c7d57c4cd0b72-boards.res",
+   "size": 2079,
+   "flags": 0,
+   "md5": "91f11016841f20afc9b3ef7399d711d3"
+  },
+  {
+   "path": ".godot/exported/133200997/export-817e7fc1c92632420088e451425769a7-plaster.res",
+   "size": 2073,
+   "flags": 0,
+   "md5": "68e8e6f37ffe7665df79da65f467a3bd"
+  },
+  {
+   "path": ".godot/exported/133200997/export-81a9dc003fb82830fd1a19778618135a-frieze.res",
+   "size": 1924,
+   "flags": 0,
+   "md5": "a7f0f280f9cd58b4fccd697290e78752"
+  },
+  {
+   "path": ".godot/exported/133200997/export-88cabd0743fb93dd6da82d55dc9de504-churchIn.res",
+   "size": 2090,
+   "flags": 0,
+   "md5": "17beae2f91ea3f20d2e37f5e1a8989a3"
+  },
+  {
+   "path": ".godot/exported/133200997/export-90ab05a5ce070d5523173c5200920df0-plasterExt.res",
+   "size": 2071,
+   "flags": 0,
+   "md5": "5cca03251308a7302fa62103e064fea6"
+  },
+  {
+   "path": ".godot/exported/133200997/export-944aecef2e6c21a1404674cef38d6b13-p_linenWhite.res",
+   "size": 1860,
+   "flags": 0,
+   "md5": "9153ede4b9a26ad671a71f0f7827a327"
+  },
+  {
+   "path": ".godot/exported/133200997/export-95c39ed6488b370d809c5afeca174e42-ashlar.res",
+   "size": 2064,
+   "flags": 0,
+   "md5": "a52036ad255aa5b933d80a2c675a0c9f"
+  },
+  {
+   "path": ".godot/exported/133200997/export-9619fd23eef0dddf5eeb17dce9e97a82-bedSoil.res",
+   "size": 2064,
+   "flags": 0,
+   "md5": "53eca7ae886647ef442e58a101a0ea7b"
+  },
+  {
+   "path": ".godot/exported/133200997/export-a0dc4f71e393b002c17b08e5d3c39bad-alabaster.res",
+   "size": 1882,
+   "flags": 0,
+   "md5": "bd316a8da4dfb38946a27623334abc76"
+  },
+  {
+   "path": ".godot/exported/133200997/export-a52070b53543d585629111049f5005ae-woodDark.res",
+   "size": 2062,
+   "flags": 0,
+   "md5": "497a31e8379ab31f8875272ca9b97232"
+  },
+  {
+   "path": ".godot/exported/133200997/export-a5ce4e81eef96cea66f03879e0a4852e-p_earthenDark.res",
+   "size": 1866,
+   "flags": 0,
+   "md5": "90ae11f83add11478bbf24a54e2fd59e"
+  },
+  {
+   "path": ".godot/exported/133200997/export-a7019a0056881b453cde0099073ea2c3-p_onion.res",
+   "size": 2972,
+   "flags": 0,
+   "md5": "68e772e90592bbbe6f23e22d834499a4"
+  },
+  {
+   "path": ".godot/exported/133200997/export-a7d235110c87d5a93b0cb4bec779533f-p_leather.res",
+   "size": 1848,
+   "flags": 0,
+   "md5": "a475740a02888a5b7d300b5f123e9a96"
+  },
+  {
+   "path": ".godot/exported/133200997/export-aa4e9281fb07903a0d2bd6c1fd4adef4-wattle.res",
+   "size": 1841,
+   "flags": 0,
+   "md5": "0e4ad996b9a88bd47aa2b57ab7c14373"
+  },
+  {
+   "path": ".godot/exported/133200997/export-aeae520e0912c06f26b417f07190305d-iron.res",
+   "size": 2978,
+   "flags": 0,
+   "md5": "6d23bf942729cc383eec8a278a101412"
+  },
+  {
+   "path": ".godot/exported/133200997/export-b1a5fe9282a01aba559b38678402a773-flame.res",
+   "size": 1926,
+   "flags": 0,
+   "md5": "86d6888eedb97f95952677fc72eb5702"
+  },
+  {
+   "path": ".godot/exported/133200997/export-b893ab3d8efe294c0da2d47f06495bf2-wax.res",
+   "size": 2964,
+   "flags": 0,
+   "md5": "e2c1359441d0ce0f5fde6ddd8aa83542"
+  },
+  {
+   "path": ".godot/exported/133200997/export-bbd42ccc1bfcd5dbbf08e64f5a91f629-glassOpaque.res",
+   "size": 1894,
+   "flags": 0,
+   "md5": "5602ec0d4e950d81f38ab8483e873cd6"
+  },
+  {
+   "path": ".godot/exported/133200997/export-c3c1ca9e69d8a481e927630cec56e28a-rubbleIn.res",
+   "size": 2076,
+   "flags": 0,
+   "md5": "53893e2a3f45c36fc64d11e40eb5f8f9"
+  },
+  {
+   "path": ".godot/exported/133200997/export-c677515674b4138b4aca6a4ec107459b-water.res",
+   "size": 2980,
+   "flags": 0,
+   "md5": "8c4ac1fb492d81de22c63520a3ab5760"
+  },
+  {
+   "path": ".godot/exported/133200997/export-c906b408f3004a77d51a557bc531f8a4-stained_1.res",
+   "size": 1882,
+   "flags": 0,
+   "md5": "33510297580ece534c30eb4676532e63"
+  },
+  {
+   "path": ".godot/exported/133200997/export-c9374f5d8c9f725ea9cd2d832307d547-bark.res",
+   "size": 2954,
+   "flags": 0,
+   "md5": "addf5bd8e48eb4e8b26008d26625738a"
+  },
+  {
+   "path": ".godot/exported/133200997/export-d12c20d683edc59768736c0854070b58-slate.res",
+   "size": 2060,
+   "flags": 0,
+   "md5": "7ec3cc2102e7866e5a84fd83df538691"
+  },
+  {
+   "path": ".godot/exported/133200997/export-d5169ed265103843f5df6b30c77a3d59-soil.res",
+   "size": 2050,
+   "flags": 0,
+   "md5": "764b08e3baf52858fb2b6eb33ce1a8c3"
+  },
+  {
+   "path": ".godot/exported/133200997/export-d5f2d168b5384845b2f552c587f01a43-hedge.res",
+   "size": 1936,
+   "flags": 0,
+   "md5": "9f13c9672211a4648c91fb78bc457211"
+  },
+  {
+   "path": ".godot/exported/133200997/export-e0e3138406296f463f1fb8528a12058c-p_bread.res",
+   "size": 2972,
+   "flags": 0,
+   "md5": "649adea5397d983f45ae827e97324b7f"
+  },
+  {
+   "path": ".godot/exported/133200997/export-ef7e1eadf77227bae1ad48dda9c62e09-p_blanketGrey.res",
+   "size": 1865,
+   "flags": 0,
+   "md5": "c89ed638ccc981abc65be89a55e77e81"
+  },
+  {
+   "path": ".godot/exported/133200997/export-f24d6ed1c040d7559e86c0954182e9dc-parchment.res",
+   "size": 2976,
+   "flags": 0,
+   "md5": "a037ab95164fb102dc408a6efb37a715"
+  },
+  {
+   "path": ".godot/exported/133200997/export-f2dec57f9596e4c3d9e1368f56508a02-roof.res",
+   "size": 2066,
+   "flags": 0,
+   "md5": "6187bf2be03a782abd2428a244049679"
+  },
+  {
+   "path": ".godot/exported/133200997/export-f3017781727ad02ad6a2fc9db2628468-kale.res",
+   "size": 2978,
+   "flags": 0,
+   "md5": "35ceabea76c9f34290fb8a291617c6b2"
+  },
+  {
+   "path": ".godot/exported/133200997/export-f3fd90b35d6d8b08893061a717afebfb-gold.res",
+   "size": 2978,
+   "flags": 0,
+   "md5": "13e95ac8ad9b9e92cac018d2d4181c4c"
+  },
+  {
+   "path": ".godot/exported/133200997/export-f46b5ff22756a9a6189ceb599db47340-glass.res",
+   "size": 1852,
+   "flags": 0,
+   "md5": "68f8d872c563a094d4a8db50ffec1674"
+  },
+  {
+   "path": ".godot/exported/133200997/export-f525324a5edda4e00f46b14d331cbe90-bronze.res",
+   "size": 2982,
+   "flags": 0,
+   "md5": "8595aafa5a585b5ede584580b7494b65"
+  },
+  {
+   "path": ".godot/exported/133200997/export-f807064341cab66ad608a5c816f831c6-p_bone.res",
+   "size": 1839,
+   "flags": 0,
+   "md5": "d2233fefc200ad775ccfcc8c35b73337"
+  },
+  {
+   "path": ".godot/exported/133200997/export-f9ff5a8034d7020893c1e57cc33780e9-p_blanket.res",
+   "size": 1853,
+   "flags": 0,
+   "md5": "6fa69ce0d773755d101e99a2ba624450"
+  },
+  {
+   "path": ".godot/global_script_class_cache.cfg",
+   "size": 8374,
+   "flags": 0,
+   "md5": "0b49703256f35f7ee58e9ba8e12f87b2"
+  },
+  {
+   "path": ".godot/imported/aed_stone_a.jpg-b66050cb4c4f112b0c8c9c8f25a2bd3d.s3tc.ctex",
+   "size": 174828,
+   "flags": 0,
+   "md5": "aac912d930b3e2bbc70c8b7bdaf160c5"
+  },
+  {
+   "path": ".godot/imported/aed_stone_d.jpg-e9014c7d88b8596c7b70a84c211eb878.s3tc.ctex",
+   "size": 699116,
+   "flags": 0,
+   "md5": "c14f9b83f93f1e62d9328ec33e5bcea4"
+  },
+  {
+   "path": ".godot/imported/aed_stone_n.jpg-e001509913b39045a0a7ed8a9cfd5759.s3tc.ctex",
+   "size": 349604,
+   "flags": 0,
+   "md5": "29b9350fc116ee35c53aebc9ab54e87d"
+  },
+  {
+   "path": ".godot/imported/aedificium.glb-b0c45fe180d99c556ea81f047d38221c.scn",
+   "size": 436573,
+   "flags": 0,
+   "md5": "2c7b7826ef46922ec9784c2fb7a1a4f5"
+  },
+  {
+   "path": ".godot/imported/alabaster_map.png-92bd9bebb69ff1026f305089d0498409.s3tc.ctex",
+   "size": 43756,
+   "flags": 0,
+   "md5": "c48183710311d674c28687fb6b7bd50e"
+  },
+  {
+   "path": ".godot/imported/alinardo.glb-44479520169c0e5e0b950b3afbdc0d07.scn",
+   "size": 1168451,
+   "flags": 0,
+   "md5": "656560186d9134cd4f255cd9bf7241cf"
+  },
+  {
+   "path": ".godot/imported/alinardo_boots_toigo_ankle_boots_male.webp-9599c1a08889918cb78ae1d28fac545c.ctex",
+   "size": 61442,
+   "flags": 0,
+   "md5": "035a0ebc9d0fc024b2ebe4dc458c28d5"
+  },
+  {
+   "path": ".godot/imported/alinardo_brow_eyebrow010.webp-cd09088c6122312818c3c6051ff07584.ctex",
+   "size": 23480,
+   "flags": 0,
+   "md5": "e3a045379f836a1421ea0023cb41e137"
+  },
+  {
+   "path": ".godot/imported/alinardo_eye_bluegreen_blno.webp-269bac1441e7bcf0df9e400662be3240.ctex",
+   "size": 40640,
+   "flags": 0,
+   "md5": "90a7fbae81e7c7a49ceed1c15cd260a4"
+  },
+  {
+   "path": ".godot/imported/alinardo_hair_short02_grey.webp-08675d411b698bbbc421ead3fcc846ba.ctex",
+   "size": 197376,
+   "flags": 0,
+   "md5": "93d123001bc5130599ef112793472b57"
+  },
+  {
+   "path": ".godot/imported/alinardo_lash01.webp-de5c055dcfdc40ed7d91dad932d35b47.ctex",
+   "size": 44876,
+   "flags": 0,
+   "md5": "3844cb46381a0395cbcb2af865f71eb4"
+  },
+  {
+   "path": ".godot/imported/alinardo_robe_black.webp-d7cee0c9515090277818145cfdee898d.ctex",
+   "size": 678496,
+   "flags": 0,
+   "md5": "d5dae960e6b04c55ded0f19f96ae7c9c"
+  },
+  {
+   "path": ".godot/imported/alinardo_robe_normal.webp-fe49e08b66e340733058b63ba2bfe85c.ctex",
+   "size": 729240,
+   "flags": 0,
+   "md5": "e5e8f89c82977949789ac989c47c64ba"
+  },
+  {
+   "path": ".godot/imported/alinardo_skin_onlytheghosts_old_eurasian_male.webp-321b74217bdf9dd295250fb66f7c4445.ctex",
+   "size": 866484,
+   "flags": 0,
+   "md5": "e1af6735f72f4c36631fdc6b816a4c16"
+  },
+  {
+   "path": ".godot/imported/altar_pivot.glb-c60ee415ba2065aec0f337cb01598232.scn",
+   "size": 175423,
+   "flags": 0,
+   "md5": "93e1c00d2d2bbbe6077b83ab54b84c49"
+  },
+  {
+   "path": ".godot/imported/anvil_00.wav-e27bb4b170a6fda0f5fa529871703e72.sample",
+   "size": 39476,
+   "flags": 0,
+   "md5": "c05fb08e22a0678ff1d8648ab62bea7f"
+  },
+  {
+   "path": ".godot/imported/anvil_01.wav-ee8fa293ccbdc352b63fee8d1cc4a32e.sample",
+   "size": 13548,
+   "flags": 0,
+   "md5": "4cff7763ab27881de71c69e33eb32a6a"
+  },
+  {
+   "path": ".godot/imported/ashlar_a.jpg-81be3784fcc2f24081457c6036ad10bd.s3tc.ctex",
+   "size": 174828,
+   "flags": 0,
+   "md5": "60d504d4c6b68f71cb5d5fcef6feffd1"
+  },
+  {
+   "path": ".godot/imported/ashlar_d.jpg-bf40520b965fdf49a4e8efc7fe4ce94b.s3tc.ctex",
+   "size": 699116,
+   "flags": 0,
+   "md5": "5f0403e664d19c1ec7bc36889631ab54"
+  },
+  {
+   "path": ".godot/imported/ashlar_n.jpg-4cf4a590670fb3fb971cbae0b5b06829.s3tc.ctex",
+   "size": 349604,
+   "flags": 0,
+   "md5": "deb514b2165a238dd87b60b50effd172"
+  },
+  {
+   "path": ".godot/imported/beam_a.jpg-b4bd18dddd966567f403ca3b610ffd34.s3tc.ctex",
+   "size": 174828,
+   "flags": 0,
+   "md5": "7195e52f2cfb782e5e9cf0ca551b7672"
+  },
+  {
+   "path": ".godot/imported/beam_d.jpg-49a6d4913be7a239179804d1ad5f3aff.s3tc.ctex",
+   "size": 699116,
+   "flags": 0,
+   "md5": "9d6053e8177a47ba90fb5f955056d9e1"
+  },
+  {
+   "path": ".godot/imported/beam_n.jpg-53427d4193ccda9f3d4ae44dee4f903c.s3tc.ctex",
+   "size": 349604,
+   "flags": 0,
+   "md5": "bd5e20c0bc3e52ec69a89a276092d598"
+  },
+  {
+   "path": ".godot/imported/bell_00.wav-287a9ddac82c3681821fe7bdeda30e3b.sample",
+   "size": 150356,
+   "flags": 0,
+   "md5": "5d8e33c68be1abaf5587466d32c0d781"
+  },
+  {
+   "path": ".godot/imported/benchCreak_00.wav-a01cf53d19bcaad10eeb9f8bff12b2f3.sample",
+   "size": 5356,
+   "flags": 0,
+   "md5": "2e7fcc1ac447175b06a77bf652e9e1ce"
+  },
+  {
+   "path": ".godot/imported/benchCreak_01.wav-3dd59099224a69995ae8143ee5e2691e.sample",
+   "size": 5820,
+   "flags": 0,
+   "md5": "99f748eecc76fdfc712da91b29bd5a6b"
+  },
+  {
+   "path": ".godot/imported/benchCreak_02.wav-ba4ac365dc58c2185d418305a9baf864.sample",
+   "size": 5060,
+   "flags": 0,
+   "md5": "4e62119341e36dc63c297f689b363ca5"
+  },
+  {
+   "path": ".godot/imported/benchCreak_03.wav-e3389ccb320d5393c306a488626b4e5a.sample",
+   "size": 10252,
+   "flags": 0,
+   "md5": "03e8f5e5930d53eaba16770f9d679740"
+  },
+  {
+   "path": ".godot/imported/bray_00.wav-c15a0b0bc82197968e0b1ad3834eb814.sample",
+   "size": 160068,
+   "flags": 0,
+   "md5": "f1f6cc2d8a334f7135ff85ad1432f859"
+  },
+  {
+   "path": ".godot/imported/caw_00.wav-2e8bd77641da915f78daa0079ee0d2be.sample",
+   "size": 10828,
+   "flags": 0,
+   "md5": "a8b2e1fd6b9ce13cf2531770db5674ce"
+  },
+  {
+   "path": ".godot/imported/caw_01.wav-7b3f2200c696638d6a370dfbea879424.sample",
+   "size": 11124,
+   "flags": 0,
+   "md5": "d05eea7821592c176bd76f51922ce089"
+  },
+  {
+   "path": ".godot/imported/caw_02.wav-ad049bbf4065516e9ac54249ad6fcb7d.sample",
+   "size": 14652,
+   "flags": 0,
+   "md5": "e845225fe005bb283551e02ae013d7ee"
+  },
+  {
+   "path": ".godot/imported/caw_03.wav-df3344144d037d55a3557f4f49442d75.sample",
+   "size": 12644,
+   "flags": 0,
+   "md5": "3a7bc67bc858fcfcf7c9aec8968bece3"
+  },
+  {
+   "path": ".godot/imported/caw_04.wav-4822ddc3873dc128c51e39b933a81c66.sample",
+   "size": 14524,
+   "flags": 0,
+   "md5": "3c6677b9002ab5bc4411c45de6888c69"
+  },
+  {
+   "path": ".godot/imported/caw_05.wav-dbc2fb2a573a570bae3e9a9fda0e92eb.sample",
+   "size": 7092,
+   "flags": 0,
+   "md5": "58f5b2155541be79e9929e908029fcdf"
+  },
+  {
+   "path": ".godot/imported/chant_deus.mp3-07fd5f60f9016478113d22540da4bca6.mp3str",
+   "size": 378787,
+   "flags": 0,
+   "md5": "0c577aff31d65f122599d28dec9ca02d"
+  },
+  {
+   "path": ".godot/imported/chant_psalm.mp3-54778507efa870a3c415db6e25fd023f.mp3str",
+   "size": 435467,
+   "flags": 0,
+   "md5": "e7b4787b1e863b5f2f9d1ad0c4b34fae"
+  },
+  {
+   "path": ".godot/imported/chew_00.wav-cdfa326db2abd0c9e49a385f509779b0.sample",
+   "size": 39676,
+   "flags": 0,
+   "md5": "357c0dbf0828c3a08c5a09ae89dd5b10"
+  },
+  {
+   "path": ".godot/imported/chew_01.wav-68c764e74943bbbf56d734456de7fb8f.sample",
+   "size": 37876,
+   "flags": 0,
+   "md5": "6ba5f423aa71b45759a5f006300a3847"
+  },
+  {
+   "path": ".godot/imported/chew_02.wav-f0d46722d01aa2ce6ed9bd08265e6481.sample",
+   "size": 35956,
+   "flags": 0,
+   "md5": "4e1f9d7bd9af3fe61e1db4cad8e642a3"
+  },
+  {
+   "path": ".godot/imported/chew_03.wav-1b838eba752c8d3802fcb82bce1011a0.sample",
+   "size": 39396,
+   "flags": 0,
+   "md5": "c979579566f386e88ccfae7cafeea900"
+  },
+  {
+   "path": ".godot/imported/chew_04.wav-aba8a0a13842beeb3b1f9c5927645f3b.sample",
+   "size": 45036,
+   "flags": 0,
+   "md5": "320101f73b462de3836ca86518f2dfd1"
+  },
+  {
+   "path": ".godot/imported/chew_05.wav-06035aeb4c0c8a0e97bd5ad3574bd9c2.sample",
+   "size": 45132,
+   "flags": 0,
+   "md5": "e80fb348c3906656991a716a36380cac"
+  },
+  {
+   "path": ".godot/imported/churchStone_00.wav-880cb963f1c5114326b9aee86373d6cf.sample",
+   "size": 17612,
+   "flags": 0,
+   "md5": "9aa986699164438260fa141da56435ff"
+  },
+  {
+   "path": ".godot/imported/churchStone_01.wav-f65ebf1939cd0bd964a3598157782be6.sample",
+   "size": 17612,
+   "flags": 0,
+   "md5": "42e2bf51d8c5f046ab5dbb4c85d5202b"
+  },
+  {
+   "path": ".godot/imported/churchStone_02.wav-13a4fda4d2879e9249ab6b3c397727e2.sample",
+   "size": 17540,
+   "flags": 0,
+   "md5": "4840758b65bc8ee5af6214667ea74956"
+  },
+  {
+   "path": ".godot/imported/churchStone_03.wav-727d8e9e8d9d2492a59767c630387ef0.sample",
+   "size": 17372,
+   "flags": 0,
+   "md5": "e8ded321b3caeff8f97cd5895d359603"
+  },
+  {
+   "path": ".godot/imported/churchStone_04.wav-82ef5003993e43fe11dd7352a814a044.sample",
+   "size": 17604,
+   "flags": 0,
+   "md5": "dbc777d1c13c84da6a4560ae009d41ea"
+  },
+  {
+   "path": ".godot/imported/churchStone_05.wav-edc1f695ec5b465dc529998c8a69d618.sample",
+   "size": 17604,
+   "flags": 0,
+   "md5": "7f26bc17bc10d590f3cf3ba4fdbeb304"
+  },
+  {
+   "path": ".godot/imported/churchStone_06.wav-a933cf50b3a9aba8dd77a9e40b2c0850.sample",
+   "size": 17516,
+   "flags": 0,
+   "md5": "3845ebd75f860d7b75c30e0ee85a025f"
+  },
+  {
+   "path": ".godot/imported/churchStone_07.wav-9589a054d3e18ebc1c89ab7cadb541f5.sample",
+   "size": 17476,
+   "flags": 0,
+   "md5": "9f137054f9bfba833afcfd186a0f8c0f"
+  },
+  {
+   "path": ".godot/imported/churchStone_08.wav-432c38352732c7ce1bb03edf8e5753da.sample",
+   "size": 17340,
+   "flags": 0,
+   "md5": "bba8d1785a04c5d44c771a9443ed6c78"
+  },
+  {
+   "path": ".godot/imported/churchStone_09.wav-d6609883feb826482de9c1da0d3894df.sample",
+   "size": 17428,
+   "flags": 0,
+   "md5": "f5aafafc26ae7fb47d608a4767490133"
+  },
+  {
+   "path": ".godot/imported/churchStone_10.wav-73fbb5918fe9e70927d3f937adb76f2f.sample",
+   "size": 17556,
+   "flags": 0,
+   "md5": "6761d99bb2fe878757cfb5a933552b1a"
+  },
+  {
+   "path": ".godot/imported/churchStone_11.wav-f643b48c22c6b2c51f4773323941f467.sample",
+   "size": 17436,
+   "flags": 0,
+   "md5": "64390cc60fd1ecf410052d94a6b34f6d"
+  },
+  {
+   "path": ".godot/imported/church_exterior.glb-123164f7b59a663a13223efa9815a00e.scn",
+   "size": 277432,
+   "flags": 0,
+   "md5": "ece5b7285b2f1e5223e9c7e0eaa71c91"
+  },
+  {
+   "path": ".godot/imported/church_exterior.glb-ded74e554f8cdfc4662f8cbf62c6f460.scn",
+   "size": 57170,
+   "flags": 0,
+   "md5": "91531b6057b3fdd37ca751a7b59f0f68"
+  },
+  {
+   "path": ".godot/imported/church_interior.glb-3dde870a2c3ff432e37ed83dab19c1f4.scn",
+   "size": 108807,
+   "flags": 0,
+   "md5": "77372503ad63cb5a5499963805fe2009"
+  },
+  {
+   "path": ".godot/imported/church_interior.glb-9bfaa607b60184c78e093aacb333a42d.scn",
+   "size": 2808677,
+   "flags": 0,
+   "md5": "31e82272324978f976e7c8d5623f9eed"
+  },
+  {
+   "path": ".godot/imported/church_stone_a.jpg-d52bbdd21dc9b23860c70048e6c36fa7.s3tc.ctex",
+   "size": 174828,
+   "flags": 0,
+   "md5": "da7e2329ef08d896e5de2f4f12f53778"
+  },
+  {
+   "path": ".godot/imported/church_stone_d.jpg-06be73b50bfd0bd1fe36e0be8a835198.s3tc.ctex",
+   "size": 699116,
+   "flags": 0,
+   "md5": "d380b9264275112919c1bdd0734e70df"
+  },
+  {
+   "path": ".godot/imported/church_stone_n.jpg-d8f1bcacf590ae55bce19f249d3a86af.s3tc.ctex",
+   "size": 349604,
+   "flags": 0,
+   "md5": "7f0101af6939dd86216dfc210d636a7e"
+  },
+  {
+   "path": ".godot/imported/church_west.glb-54aa0cb15e4aec9ba4b0fbca06abd2ef.scn",
+   "size": 1796,
+   "flags": 0,
+   "md5": "8e60ae0eb2c488737c3cc35477f1ea08"
+  },
+  {
+   "path": ".godot/imported/cloister.glb-43fef7af63e0935b6da5be05f0ee29ec.scn",
+   "size": 683627,
+   "flags": 0,
+   "md5": "0be39b47f75880d13264381ee3975879"
+  },
+  {
+   "path": ".godot/imported/cloister.glb-c71e2eacabd5ab0d2d9bff429d776457.scn",
+   "size": 235561,
+   "flags": 0,
+   "md5": "e776d284617550a9b5ccc3e6224b2c3d"
+  },
+  {
+   "path": ".godot/imported/cloister_context.glb-2a6c83cf9a56b12050df720b7dfeedf1.scn",
+   "size": 205011,
+   "flags": 0,
+   "md5": "fbe57f2ccf38ece54d897a698aac3f73"
+  },
+  {
+   "path": ".godot/imported/cloister_context.glb-d3c20fc65e67de164277a34430190754.scn",
+   "size": 38764,
+   "flags": 0,
+   "md5": "e861ac84ab33df25c54cf9c5192115be"
+  },
+  {
+   "path": ".godot/imported/conifer_map.png-3020f63e0ab67f82b1c6f857e7d074aa.bptc.ctex",
+   "size": 2796292,
+   "flags": 0,
+   "md5": "8beb897aa38b5972c66e333e41a0831c"
+  },
+  {
+   "path": ".godot/imported/conifer_normal.png-bcd2e55181936addd44fddf661d7842a.bptc.ctex",
+   "size": 2796292,
+   "flags": 0,
+   "md5": "bbd2a69d19d538ce7895a50f5425708e"
+  },
+  {
+   "path": ".godot/imported/cough_00.wav-11968cfa7502a49096ddda35e1f5fe08.sample",
+   "size": 13740,
+   "flags": 0,
+   "md5": "ffe1e18a004e4cdb241518ac40488649"
+  },
+  {
+   "path": ".godot/imported/cough_01.wav-d2bb052d766fcd448f3a33bfba5fed48.sample",
+   "size": 16572,
+   "flags": 0,
+   "md5": "93fc9ec74c9253860dcca0e2464d775f"
+  },
+  {
+   "path": ".godot/imported/cough_02.wav-b8833bcd41796dcee62a5e6cfe7e98b6.sample",
+   "size": 17396,
+   "flags": 0,
+   "md5": "4e6e8a044b28d6e393226256adfcdee1"
+  },
+  {
+   "path": ".godot/imported/cough_03.wav-78d500745d806be9b78c48b88fc56e49.sample",
+   "size": 14500,
+   "flags": 0,
+   "md5": "9c988a718a8c4cb9028ddeef44770311"
+  },
+  {
+   "path": ".godot/imported/cough_04.wav-8aac19e364d6b661603bbfa59fb6f77f.sample",
+   "size": 7236,
+   "flags": 0,
+   "md5": "d8a3c4a103bbd95a10624a5527d6567e"
+  },
+  {
+   "path": ".godot/imported/creak.wav-e93fe0cc1d6153bd4c5ded77439c32f9.sample",
+   "size": 72716,
+   "flags": 0,
+   "md5": "ac7bd24318134b2e0d312b939df2979e"
+  },
+  {
+   "path": ".godot/imported/doorCreak_00.wav-113970f7c403bd43a87986fce22cd2d7.sample",
+   "size": 72684,
+   "flags": 0,
+   "md5": "847da91652371ccffa80c3b8c799dd58"
+  },
+  {
+   "path": ".godot/imported/doorCreak_01.wav-4dfbb949835f851f85ae9b948018649a.sample",
+   "size": 17116,
+   "flags": 0,
+   "md5": "c84b22fba6c4679a2dcba338e85ff239"
+  },
+  {
+   "path": ".godot/imported/doorCreak_02.wav-771f12827bae3e09793ab13c80bad21c.sample",
+   "size": 32612,
+   "flags": 0,
+   "md5": "a0decdc19053354a899e9bcaab064d68"
+  },
+  {
+   "path": ".godot/imported/doorThud_00.wav-fb7b52ed06d127484aab5cecbca91c89.sample",
+   "size": 24508,
+   "flags": 0,
+   "md5": "9d787d3dafe57d7337e50b4925b7e21e"
+  },
+  {
+   "path": ".godot/imported/doorThud_01.wav-3eb710931d376c1542f08aab8949acb2.sample",
+   "size": 18300,
+   "flags": 0,
+   "md5": "38f7c52d39be2e593037334e3434c84d"
+  },
+  {
+   "path": ".godot/imported/doorThud_02.wav-e558022c20b2ebef5586a555fe5a7670.sample",
+   "size": 23860,
+   "flags": 0,
+   "md5": "fca2b29a64c61580e48630d268f0f425"
+  },
+  {
+   "path": ".godot/imported/door_planks_a.jpg-25b4dc36d724eeda34191dad9f7d81fe.s3tc.ctex",
+   "size": 174828,
+   "flags": 0,
+   "md5": "c8a9e236ea30cfc0854139a4234045e8"
+  },
+  {
+   "path": ".godot/imported/door_planks_d.jpg-984f6a01f1792db18deed0d33f3c59b3.s3tc.ctex",
+   "size": 699116,
+   "flags": 0,
+   "md5": "6f2749387da9e691606fda0f3765698b"
+  },
+  {
+   "path": ".godot/imported/door_planks_n.jpg-c881a3f6da3dcb02a9efe62d6e57fe0d.s3tc.ctex",
+   "size": 349604,
+   "flags": 0,
+   "md5": "1282aea384b344ea17ab4db3f151b96b"
+  },
+  {
+   "path": ".godot/imported/eb-garamond-latin-400-italic.woff2-31224a6204f7da389bb34ba6b660d26d.fontdata",
+   "size": 26331,
+   "flags": 0,
+   "md5": "1c836a8b7f03063df255910019d5a555"
+  },
+  {
+   "path": ".godot/imported/eb-garamond-latin-400-normal.woff2-ce27fea98d493dcc252102aafa29a7ea.fontdata",
+   "size": 24751,
+   "flags": 0,
+   "md5": "c496974a76b01803dc19d265ad56dd2c"
+  },
+  {
+   "path": ".godot/imported/eb-garamond-latin-ext-400-normal.woff2-21a83842079e997c18b0b3bde8adcd12.fontdata",
+   "size": 57994,
+   "flags": 0,
+   "md5": "186775326273459e00d2b260dee2ef1a"
+  },
+  {
+   "path": ".godot/imported/flag_a.jpg-2a01bd1d8ebc17246bc28cdd039835e2.s3tc.ctex",
+   "size": 174828,
+   "flags": 0,
+   "md5": "a004aeb6c6196a5c070cf1e08681f0c1"
+  },
+  {
+   "path": ".godot/imported/flag_d.jpg-d65eeaf19e6c02b28a293e15bc0966c2.s3tc.ctex",
+   "size": 699116,
+   "flags": 0,
+   "md5": "7a7869c29d10ad9c470b40aba8ed33a4"
+  },
+  {
+   "path": ".godot/imported/flag_n.jpg-1c54142de4b4a89861da447ddad49c57.s3tc.ctex",
+   "size": 349604,
+   "flags": 0,
+   "md5": "1817feabf674d35c4d26b4881a535e0b"
+  },
+  {
+   "path": ".godot/imported/floorboards_a.jpg-162921c4733d6d79add7a79748cf6e92.s3tc.ctex",
+   "size": 174828,
+   "flags": 0,
+   "md5": "348e51965448b66c0b1ab5bb6970b954"
+  },
+  {
+   "path": ".godot/imported/floorboards_d.jpg-46c5d89678db290fe3dc615adb1233e2.s3tc.ctex",
+   "size": 699116,
+   "flags": 0,
+   "md5": "3c3fa3828ee68b1ae75917a89676b823"
+  },
+  {
+   "path": ".godot/imported/floorboards_n.jpg-141c73d26921b29270e26d93f47ba16d.s3tc.ctex",
+   "size": 349604,
+   "flags": 0,
+   "md5": "47ca5466a6d89efb2c308328fc87568d"
+  },
+  {
+   "path": ".godot/imported/flower_garden.glb-2bc4bb98ae3af832f7e97571a3b48299.scn",
+   "size": 4002,
+   "flags": 0,
+   "md5": "c94cc59eb0047eb9909983eaa411ca32"
+  },
+  {
+   "path": ".godot/imported/flower_garden.glb-8096cdf2eb85a2be36bee9eb7486c964.scn",
+   "size": 467210,
+   "flags": 0,
+   "md5": "5de6891bc807e2f8c637fc35b3ecdf3a"
+  },
+  {
+   "path": ".godot/imported/frieze_map.png-8bbabe6e895bc73fbd92b2ba9d3d4c22.s3tc.ctex",
+   "size": 174844,
+   "flags": 0,
+   "md5": "617af41b69915fb9a86b46e02fe6b359"
+  },
+  {
+   "path": ".godot/imported/frieze_normal_map.png-545a3ac7f949c1526e762512de2676e2.s3tc.ctex",
+   "size": 349636,
+   "flags": 0,
+   "md5": "f7485f6acfc4d1fe7c4fac6106f26a48"
+  },
+  {
+   "path": ".godot/imported/gardens_west.glb-a411bc172216a311f6bb0e7175ab6fba.scn",
+   "size": 1020118,
+   "flags": 0,
+   "md5": "9b45fb95da9438d6b74c522e7993d2ac"
+  },
+  {
+   "path": ".godot/imported/garth_trees.glb-9cc6bc1811f2e128172d4c8b76212c80.scn",
+   "size": 218292,
+   "flags": 0,
+   "md5": "bc174f85a3e2b3fa6d2e751a49ed8fe1"
+  },
+  {
+   "path": ".godot/imported/garth_trees_0.png-e91984e5f0fc42cf89ba47e192465f65.ctex",
+   "size": 2050612,
+   "flags": 0,
+   "md5": "ed258b01818cb9347e021ce28d769dfd"
+  },
+  {
+   "path": ".godot/imported/garth_trees_1.png-201d09ca0abd221bb76ff3dd967d961a.ctex",
+   "size": 1298238,
+   "flags": 0,
+   "md5": "cde8288a0468b6fd0862378f52aa2327"
+  },
+  {
+   "path": ".godot/imported/gate.glb-91a5f4386c44584b4bdf177720b28cc6.scn",
+   "size": 19649,
+   "flags": 0,
+   "md5": "ed1b226dbbae6377cfc9ac3b9be1e17e"
+  },
+  {
+   "path": ".godot/imported/gate.glb-deb95c961354a7b86879025876499dd0.scn",
+   "size": 5563,
+   "flags": 0,
+   "md5": "7e0b21904e5ff593f382592f14414eac"
+  },
+  {
+   "path": ".godot/imported/glassOpaque_map.png-7440c35c83c963d317c8f7185acca038.s3tc.ctex",
+   "size": 43756,
+   "flags": 0,
+   "md5": "6f69106d03083cfcfb8dbbf4a4ff8441"
+  },
+  {
+   "path": ".godot/imported/glassOpaque_map.png-f76b9ed3292e010c432e610aa2f2194d.s3tc.ctex",
+   "size": 43756,
+   "flags": 0,
+   "md5": "21ab0a271037c06c70c18246be958de7"
+  },
+  {
+   "path": ".godot/imported/glass_map.png-1ac56cda8853e513ba8ed23ba8787bc5.s3tc.ctex",
+   "size": 43756,
+   "flags": 0,
+   "md5": "091b0466ce537bfc17c3c7cc694a34fc"
+  },
+  {
+   "path": ".godot/imported/grenze-gotisch-latin-500-normal.woff2-41acba0077019ba39c0ef773d3c98484.fontdata",
+   "size": 18057,
+   "flags": 0,
+   "md5": "dabb60c76a62daf50d9089ca6f444aaf"
+  },
+  {
+   "path": ".godot/imported/grenze-gotisch-latin-600-normal.woff2-94534f6d97dc380ad8b3b1238a3d4543.fontdata",
+   "size": 18045,
+   "flags": 0,
+   "md5": "71b98fbf5852765f4159acc310597595"
+  },
+  {
+   "path": ".godot/imported/hedge_map.png-1351442d63c2550a9ef2898bd17b63e0.s3tc.ctex",
+   "size": 43756,
+   "flags": 0,
+   "md5": "85ddf7afea6feccb861d7744d4244650"
+  },
+  {
+   "path": ".godot/imported/hedge_normal_map.png-051baecb27c92ed8c4373aae79cb5c77.s3tc.ctex",
+   "size": 87460,
+   "flags": 0,
+   "md5": "b4f3c3ccc75287af3088aa4af102138b"
+  },
+  {
+   "path": ".godot/imported/hoof_00.wav-7e72ee4d602216c950243f1c3d3b2fe7.sample",
+   "size": 10972,
+   "flags": 0,
+   "md5": "6fcf8ee34f4ee289ffae719594619537"
+  },
+  {
+   "path": ".godot/imported/hoof_01.wav-eea42f97ca34acab06ac3a263ab68ed8.sample",
+   "size": 13004,
+   "flags": 0,
+   "md5": "10cf6667b81e9649fba257494b3074fa"
+  },
+  {
+   "path": ".godot/imported/hoof_02.wav-fed8b7e09285eaedc7f32d9decd5a319.sample",
+   "size": 14740,
+   "flags": 0,
+   "md5": "e2994509964ccd485ec29372848bd186"
+  },
+  {
+   "path": ".godot/imported/hoof_03.wav-8fa57fb8b6df1f9f9939072b7bdfa0e7.sample",
+   "size": 7428,
+   "flags": 0,
+   "md5": "3b14c0ede48ba5a3e53514cd3036141d"
+  },
+  {
+   "path": ".godot/imported/hoof_04.wav-31c7a12d1596fa1c7a4da4b75ee6fff4.sample",
+   "size": 8156,
+   "flags": 0,
+   "md5": "66e1c498f5a75070fbfb471cc2ae4e80"
+  },
+  {
+   "path": ".godot/imported/hospice.glb-699a661b2f704312f71e470450e279e0.scn",
+   "size": 273020,
+   "flags": 0,
+   "md5": "eea2d3e734b11b8854ab007708f2e693"
+  },
+  {
+   "path": ".godot/imported/hospice.glb-9b0f8ec1690b1de18d90938741c80cbc.scn",
+   "size": 11962,
+   "flags": 0,
+   "md5": "770e9c9de270d6459aafc6a5ccf3dca8"
+  },
+  {
+   "path": ".godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex",
+   "size": 958,
+   "flags": 0,
+   "md5": "d7e80480e738275c78d4dab15a0945f3"
+  },
+  {
+   "path": ".godot/imported/latch_00.wav-170b265eaaacf0f1817b4b780d5ccd85.sample",
+   "size": 15436,
+   "flags": 0,
+   "md5": "aae72b87817c5e9a4b5525d85de4dfb3"
+  },
+  {
+   "path": ".godot/imported/latch_01.wav-c8fbc541c06b501975bcf23fda590a80.sample",
+   "size": 14668,
+   "flags": 0,
+   "md5": "06ed9be3ea5390692742746ced24eda0"
+  },
+  {
+   "path": ".godot/imported/latch_02.wav-f979ea932e64e154fb3ad8fd3c3fa0ac.sample",
+   "size": 16060,
+   "flags": 0,
+   "md5": "dba745ef596f54af2d93cf5fd43dd9b9"
+  },
+  {
+   "path": ".godot/imported/latch_03.wav-10c2f3d51f820333acdb3ed87ca6da90.sample",
+   "size": 18916,
+   "flags": 0,
+   "md5": "2ccd048c262e41ee4b122fb049a55332"
+  },
+  {
+   "path": ".godot/imported/lay_herd.glb-fdf84c73e9b87c41c54ea443ec588004.scn",
+   "size": 1538558,
+   "flags": 0,
+   "md5": "b6e4fcd7b71820667556fe311c63f51e"
+  },
+  {
+   "path": ".godot/imported/lay_herd_boots_rehmanpolanski_viking_boots.webp-15d6b5aca6889542eb406cb3bc8da6b4.ctex",
+   "size": 231530,
+   "flags": 0,
+   "md5": "95e16b12f4c4c5d6c8f810fdd2cb34a4"
+  },
+  {
+   "path": ".godot/imported/lay_herd_brow_eyebrow009.webp-56f09303b00e9050c1345bea4a9e60b8.ctex",
+   "size": 66014,
+   "flags": 0,
+   "md5": "a9a4c077db56a7321c6b4ce4c3a48594"
+  },
+  {
+   "path": ".godot/imported/lay_herd_eye_bluegreen_blno.webp-22a7bfa4d0e19237da91ae4c61ea8ca4.ctex",
+   "size": 40640,
+   "flags": 0,
+   "md5": "90a7fbae81e7c7a49ceed1c15cd260a4"
+  },
+  {
+   "path": ".godot/imported/lay_herd_hair_short02_grey.webp-d983e0e4a9dcf506471a1247918cb533.ctex",
+   "size": 197376,
+   "flags": 0,
+   "md5": "93d123001bc5130599ef112793472b57"
+  },
+  {
+   "path": ".godot/imported/lay_herd_hose_grey.webp-b6433fce4b05096422e6dad5512171b1.ctex",
+   "size": 44690,
+   "flags": 0,
+   "md5": "b10b2418b5ca96feeecb43d9f7b52368"
+  },
+  {
+   "path": ".godot/imported/lay_herd_lash01.webp-be2965a592a3cfb6b47470cdcee65f76.ctex",
+   "size": 44876,
+   "flags": 0,
+   "md5": "3844cb46381a0395cbcb2af865f71eb4"
+  },
+  {
+   "path": ".godot/imported/lay_herd_skin_jartur69_old_slavic_male_with_genitals_and_beard.webp-6df0f4160f57b24c2b61fdfe1c84c347.ctex",
+   "size": 822012,
+   "flags": 0,
+   "md5": "7f8ea4405eb5cc3bee6752aedd4ca9c5"
+  },
+  {
+   "path": ".godot/imported/lay_herd_tunic_undyed.webp-1b43272f035bc751a45ffe955b2526de.ctex",
+   "size": 764692,
+   "flags": 0,
+   "md5": "6a826f4615542fcb1c7bfc3e841eb1bd"
+  },
+  {
+   "path": ".godot/imported/lay_old.glb-02389e31ab71ab01381312a86d454d1b.scn",
+   "size": 1623159,
+   "flags": 0,
+   "md5": "5e134fa5be382bfe21688286031d9fc3"
+  },
+  {
+   "path": ".godot/imported/lay_old_apron_linen.webp-78a32987e18507c5b1ddc8850331ca48.ctex",
+   "size": 34486,
+   "flags": 0,
+   "md5": "50752db8ca3c2edf23f3aec0962b247d"
+  },
+  {
+   "path": ".godot/imported/lay_old_beardn_wdg_scruffy_beard_grey.webp-0a3a18d9a3ce509fa05818883522c0b2.ctex",
+   "size": 230036,
+   "flags": 0,
+   "md5": "e30573e87b9a5b0e00d87e3cf87920f2"
+  },
+  {
+   "path": ".godot/imported/lay_old_boots_punkduck_medieval_boots.webp-cc9ca060cb22b0e0275374e468507956.ctex",
+   "size": 229358,
+   "flags": 0,
+   "md5": "5eaf6e148389ffe52b96af355b1d4645"
+  },
+  {
+   "path": ".godot/imported/lay_old_brow_eyebrow009.webp-8b6ff007fb972f61fab0d02b67d02d51.ctex",
+   "size": 66014,
+   "flags": 0,
+   "md5": "a9a4c077db56a7321c6b4ce4c3a48594"
+  },
+  {
+   "path": ".godot/imported/lay_old_eye_grey_old.webp-3c543aae7bc4e07bbe757750e5eb39a5.ctex",
+   "size": 35132,
+   "flags": 0,
+   "md5": "5c1a5c50034b4035ea11a7bc5f8c6706"
+  },
+  {
+   "path": ".godot/imported/lay_old_hairn_short01_grey.webp-8f0cca425727eedfbde3fa1b9787c79d.ctex",
+   "size": 434458,
+   "flags": 0,
+   "md5": "a62cd141ed5267a640a9a3c454463131"
+  },
+  {
+   "path": ".godot/imported/lay_old_hose_grey.webp-e33af228b0d0d7a93814a07f4410b1b5.ctex",
+   "size": 44690,
+   "flags": 0,
+   "md5": "b10b2418b5ca96feeecb43d9f7b52368"
+  },
+  {
+   "path": ".godot/imported/lay_old_lash01.webp-2159fc10a0542539a2c27f24e48eba41.ctex",
+   "size": 44876,
+   "flags": 0,
+   "md5": "3844cb46381a0395cbcb2af865f71eb4"
+  },
+  {
+   "path": ".godot/imported/lay_old_skin_old_caucasian_male.webp-d41d1d1565ac7c5c6b88ae549121346e.ctex",
+   "size": 909982,
+   "flags": 0,
+   "md5": "cecdfd9d69374a812109068b1e506c96"
+  },
+  {
+   "path": ".godot/imported/lay_old_tunic_undyed.webp-04c13cb6248412d74fb51fb1343d2ec6.ctex",
+   "size": 764692,
+   "flags": 0,
+   "md5": "6a826f4615542fcb1c7bfc3e841eb1bd"
+  },
+  {
+   "path": ".godot/imported/metal_00.wav-acd7d1ba1de7b8e44cc1784183018386.sample",
+   "size": 18052,
+   "flags": 0,
+   "md5": "a0230a31054472f6113958e7edb8c754"
+  },
+  {
+   "path": ".godot/imported/metal_01.wav-c546082b150bd34fa0d0364f452f4ae9.sample",
+   "size": 14700,
+   "flags": 0,
+   "md5": "eeb35195da0244a9c9116b5948bfce75"
+  },
+  {
+   "path": ".godot/imported/metal_02.wav-511497b8de0ff110005c86bb2030643f.sample",
+   "size": 14476,
+   "flags": 0,
+   "md5": "cbbe573440a376a7dce7d8cb9ee0f920"
+  },
+  {
+   "path": ".godot/imported/metal_03.wav-e47c5c6300f4c923a50e8f4faff5e53c.sample",
+   "size": 14428,
+   "flags": 0,
+   "md5": "636729fa0475b5932ee1eb2832e0ee75"
+  },
+  {
+   "path": ".godot/imported/monk_a.glb-2edccda0440875a8e1b0feb912db59f5.scn",
+   "size": 1877802,
+   "flags": 0,
+   "md5": "54e299524d8daf5df77109bd2ba0b784"
+  },
+  {
+   "path": ".godot/imported/monk_a_boots_toigo_ankle_boots_male.webp-fbc7c93e3a66315a8baf93fe68f8771f.ctex",
+   "size": 61442,
+   "flags": 0,
+   "md5": "035a0ebc9d0fc024b2ebe4dc458c28d5"
+  },
+  {
+   "path": ".godot/imported/monk_a_brow_eyebrow001.webp-287e61dabaac32f54bc5b28b4a4fe3d7.ctex",
+   "size": 30324,
+   "flags": 0,
+   "md5": "b4de25d064202ba5a3d4e33dde607700"
+  },
+  {
+   "path": ".godot/imported/monk_a_eye_brown_brot.webp-0bcc67aa04147abbfa47547ecf44898b.ctex",
+   "size": 31806,
+   "flags": 0,
+   "md5": "58474697b2f44fa97c06ab95ca51998c"
+  },
+  {
+   "path": ".godot/imported/monk_a_hair_short02_brown.webp-67bdd2fc03aacd6cf9b678b49d210153.ctex",
+   "size": 198396,
+   "flags": 0,
+   "md5": "6c3e1ed62469db7818e33d944910dcfa"
+  },
+  {
+   "path": ".godot/imported/monk_a_lash01.webp-2b202622bbb895acf475a8ad4e46594f.ctex",
+   "size": 44876,
+   "flags": 0,
+   "md5": "3844cb46381a0395cbcb2af865f71eb4"
+  },
+  {
+   "path": ".godot/imported/monk_a_robe_black.webp-265fab9b3474067712132852da3e0131.ctex",
+   "size": 678496,
+   "flags": 0,
+   "md5": "d5dae960e6b04c55ded0f19f96ae7c9c"
+  },
+  {
+   "path": ".godot/imported/monk_a_robe_normal.webp-4704a56336cfb9fd454637ab336f41d2.ctex",
+   "size": 729240,
+   "flags": 0,
+   "md5": "e5e8f89c82977949789ac989c47c64ba"
+  },
+  {
+   "path": ".godot/imported/monk_a_skin_middleage_caucasian_male.webp-d93ee13be7e92dd112aad18537dad01f.ctex",
+   "size": 692944,
+   "flags": 0,
+   "md5": "2fe965709e1c80af16f72e92e65050a7"
+  },
+  {
+   "path": ".godot/imported/monk_b.glb-4243b8864e0151e35561060bc1136735.scn",
+   "size": 1888961,
+   "flags": 0,
+   "md5": "14907ba428dd73462809c1c8d123cefe"
+  },
+  {
+   "path": ".godot/imported/monk_b_boots_toigo_ankle_boots_male.webp-e3c1e0f8f97d5f7341f4569038d20347.ctex",
+   "size": 61442,
+   "flags": 0,
+   "md5": "035a0ebc9d0fc024b2ebe4dc458c28d5"
+  },
+  {
+   "path": ".godot/imported/monk_b_brow_eyebrow005.webp-0f81e89b929ba266c6ea4234d6396cd7.ctex",
+   "size": 28106,
+   "flags": 0,
+   "md5": "7f40ec75590823ec6e228b4ada283928"
+  },
+  {
+   "path": ".godot/imported/monk_b_eye_brown_brot.webp-c36328dbd9480f244d424d6e6997ac64.ctex",
+   "size": 31806,
+   "flags": 0,
+   "md5": "58474697b2f44fa97c06ab95ca51998c"
+  },
+  {
+   "path": ".godot/imported/monk_b_hair_short02_grey.webp-dd84e1827bfdb4af9dc484cc3720f217.ctex",
+   "size": 197376,
+   "flags": 0,
+   "md5": "93d123001bc5130599ef112793472b57"
+  },
+  {
+   "path": ".godot/imported/monk_b_lash01.webp-02386eebf26cf14b2c04ecc2685210e7.ctex",
+   "size": 44876,
+   "flags": 0,
+   "md5": "3844cb46381a0395cbcb2af865f71eb4"
+  },
+  {
+   "path": ".godot/imported/monk_b_robe_black.webp-83955fc224747f7c084325d8be20cd4a.ctex",
+   "size": 678496,
+   "flags": 0,
+   "md5": "d5dae960e6b04c55ded0f19f96ae7c9c"
+  },
+  {
+   "path": ".godot/imported/monk_b_robe_normal.webp-1246fee3527e8e01bd7088d14642c2a0.ctex",
+   "size": 729240,
+   "flags": 0,
+   "md5": "e5e8f89c82977949789ac989c47c64ba"
+  },
+  {
+   "path": ".godot/imported/monk_b_skin_old_caucasian_male.webp-3a6caa7428908a8a2d2f7d8992ae017b.ctex",
+   "size": 909982,
+   "flags": 0,
+   "md5": "cecdfd9d69374a812109068b1e506c96"
+  },
+  {
+   "path": ".godot/imported/monk_c.glb-902c940ae3bca7e04fd35749cad6b32b.scn",
+   "size": 1874669,
+   "flags": 0,
+   "md5": "4918e19db709c4ed7342fd56548ffdf9"
+  },
+  {
+   "path": ".godot/imported/monk_c_boots_toigo_ankle_boots_male.webp-eb12e397088c2a533bbe20bce037f596.ctex",
+   "size": 61442,
+   "flags": 0,
+   "md5": "035a0ebc9d0fc024b2ebe4dc458c28d5"
+  },
+  {
+   "path": ".godot/imported/monk_c_brow_eyebrow006.webp-0dbfa801d2a56aefcaeb3b8378ee2362.ctex",
+   "size": 5718,
+   "flags": 0,
+   "md5": "f3744aa99cfb869a2b2dcdf4f3575ded"
+  },
+  {
+   "path": ".godot/imported/monk_c_eye_blue_bl_c.webp-37c34aecef5def45fcfe262ec49d3eef.ctex",
+   "size": 36872,
+   "flags": 0,
+   "md5": "e9b02a6b9d77906246d158a59fd4b59d"
+  },
+  {
+   "path": ".godot/imported/monk_c_hair_short02_brown.webp-d76af2a10fdea3982a47ab9fe9ce533a.ctex",
+   "size": 198396,
+   "flags": 0,
+   "md5": "6c3e1ed62469db7818e33d944910dcfa"
+  },
+  {
+   "path": ".godot/imported/monk_c_lash01.webp-6a6a5bdda0f7613375b22a54229bb01f.ctex",
+   "size": 44876,
+   "flags": 0,
+   "md5": "3844cb46381a0395cbcb2af865f71eb4"
+  },
+  {
+   "path": ".godot/imported/monk_c_robe_black.webp-09c1d30177ecf7cea60063acc6448dc3.ctex",
+   "size": 678496,
+   "flags": 0,
+   "md5": "d5dae960e6b04c55ded0f19f96ae7c9c"
+  },
+  {
+   "path": ".godot/imported/monk_c_robe_normal.webp-69d1a9eab0a11a56c17c6e859b6ad78b.ctex",
+   "size": 729240,
+   "flags": 0,
+   "md5": "e5e8f89c82977949789ac989c47c64ba"
+  },
+  {
+   "path": ".godot/imported/monk_c_skin_toigo_light_skin_male_freckles_s0.webp-ce3acdac86beebac1b884f0a05f84562.ctex",
+   "size": 850060,
+   "flags": 0,
+   "md5": "77928cf0bcd453aaf84bc2f09b6c192c"
+  },
+  {
+   "path": ".godot/imported/monk_d.glb-978ac4454222e9a81ea8e35f5c23b81d.scn",
+   "size": 1887046,
+   "flags": 0,
+   "md5": "35a9ddd5a1af82ba4eb391d85d5355ab"
+  },
+  {
+   "path": ".godot/imported/monk_d_boots_toigo_ankle_boots_male.webp-434378d0b89fdc5e02a15fdfc2726311.ctex",
+   "size": 61442,
+   "flags": 0,
+   "md5": "035a0ebc9d0fc024b2ebe4dc458c28d5"
+  },
+  {
+   "path": ".godot/imported/monk_d_brow_eyebrow008.webp-311fa7e8c045a26829f6f64ff2f367a9.ctex",
+   "size": 31834,
+   "flags": 0,
+   "md5": "943f067b2a9e5847ae377f906a3c5ec8"
+  },
+  {
+   "path": ".godot/imported/monk_d_eye_bluegreen_blno.webp-030ddd737bed8639275c578018247b01.ctex",
+   "size": 40640,
+   "flags": 0,
+   "md5": "90a7fbae81e7c7a49ceed1c15cd260a4"
+  },
+  {
+   "path": ".godot/imported/monk_d_hair_short02_grey.webp-10ccd15fc3fb7f5122f2e7bff7b539c7.ctex",
+   "size": 197376,
+   "flags": 0,
+   "md5": "93d123001bc5130599ef112793472b57"
+  },
+  {
+   "path": ".godot/imported/monk_d_lash01.webp-2944da18ae96174a94101ebef61ed28f.ctex",
+   "size": 44876,
+   "flags": 0,
+   "md5": "3844cb46381a0395cbcb2af865f71eb4"
+  },
+  {
+   "path": ".godot/imported/monk_d_robe_black.webp-e408c44b5123be6c9b52dd293c215d0f.ctex",
+   "size": 678496,
+   "flags": 0,
+   "md5": "d5dae960e6b04c55ded0f19f96ae7c9c"
+  },
+  {
+   "path": ".godot/imported/monk_d_robe_normal.webp-8c0ecfd518cd075e35dcd1e1666a3c2d.ctex",
+   "size": 729240,
+   "flags": 0,
+   "md5": "e5e8f89c82977949789ac989c47c64ba"
+  },
+  {
+   "path": ".godot/imported/monk_d_skin_jartur69_old_slavic_male_with_genitals_and_beard.webp-c38b8e9ef682dcbdb3e088c66a42bcf7.ctex",
+   "size": 822012,
+   "flags": 0,
+   "md5": "7f8ea4405eb5cc3bee6752aedd4ca9c5"
+  },
+  {
+   "path": ".godot/imported/monk_e.glb-40132070dd1c03f89b94d842c2ae7212.scn",
+   "size": 1886677,
+   "flags": 0,
+   "md5": "fb3234624794b53c3f16301340d133ec"
+  },
+  {
+   "path": ".godot/imported/monk_e_boots_toigo_ankle_boots_male.webp-b1c07fb99d1c380032a1c2c7d97b41f4.ctex",
+   "size": 61442,
+   "flags": 0,
+   "md5": "035a0ebc9d0fc024b2ebe4dc458c28d5"
+  },
+  {
+   "path": ".godot/imported/monk_e_brow_eyebrow003.webp-6d653fb38017efa0390e686489f8464d.ctex",
+   "size": 33580,
+   "flags": 0,
+   "md5": "b48ee8b63f0a6f382a98775b3a0c1810"
+  },
+  {
+   "path": ".godot/imported/monk_e_eye_brown_brot.webp-348bd0234e8eb04eb8ce16c18ca5a51b.ctex",
+   "size": 31806,
+   "flags": 0,
+   "md5": "58474697b2f44fa97c06ab95ca51998c"
+  },
+  {
+   "path": ".godot/imported/monk_e_hair_short02_brown.webp-b2b59fd089a3e0486cdecd75a63d66c3.ctex",
+   "size": 198396,
+   "flags": 0,
+   "md5": "6c3e1ed62469db7818e33d944910dcfa"
+  },
+  {
+   "path": ".godot/imported/monk_e_lash01.webp-5476ba543792de70c188048aadbf5853.ctex",
+   "size": 44876,
+   "flags": 0,
+   "md5": "3844cb46381a0395cbcb2af865f71eb4"
+  },
+  {
+   "path": ".godot/imported/monk_e_robe_black.webp-ae709252ba34c8ae996fe6e99b4c7ce0.ctex",
+   "size": 678496,
+   "flags": 0,
+   "md5": "d5dae960e6b04c55ded0f19f96ae7c9c"
+  },
+  {
+   "path": ".godot/imported/monk_e_robe_normal.webp-cf34849e020aa6c8b6f73d538774d961.ctex",
+   "size": 729240,
+   "flags": 0,
+   "md5": "e5e8f89c82977949789ac989c47c64ba"
+  },
+  {
+   "path": ".godot/imported/monk_e_skin_toigo_light_skin_male_bronze_s0.webp-7be3cffa6435d7da8b62b07a9ac3dc19.ctex",
+   "size": 637668,
+   "flags": 0,
+   "md5": "8ea9d8c290b4822095dd9eb911129fb5"
+  },
+  {
+   "path": ".godot/imported/monk_f.glb-93385086ebf7f3423f8055511054276c.scn",
+   "size": 1877765,
+   "flags": 0,
+   "md5": "f52ee5ae269bd9d1ec27f7cf1eecead4"
+  },
+  {
+   "path": ".godot/imported/monk_f_boots_toigo_ankle_boots_male.webp-e1f47d000599ad51d90ff5787187540d.ctex",
+   "size": 61442,
+   "flags": 0,
+   "md5": "035a0ebc9d0fc024b2ebe4dc458c28d5"
+  },
+  {
+   "path": ".godot/imported/monk_f_brow_eyebrow002.webp-e92471b9b9163158324553f377693b3c.ctex",
+   "size": 33918,
+   "flags": 0,
+   "md5": "92b7a3fd5b2f50a5a1e69a37c0365ac4"
+  },
+  {
+   "path": ".godot/imported/monk_f_eye_blue_bl_c.webp-5dfdaa26f42841582659b7a3da5cf588.ctex",
+   "size": 36872,
+   "flags": 0,
+   "md5": "e9b02a6b9d77906246d158a59fd4b59d"
+  },
+  {
+   "path": ".godot/imported/monk_f_hair_short02_brown.webp-1e05b59f02efd7baeffee8dc7bbe8843.ctex",
+   "size": 198396,
+   "flags": 0,
+   "md5": "6c3e1ed62469db7818e33d944910dcfa"
+  },
+  {
+   "path": ".godot/imported/monk_f_lash01.webp-4d7ef0235beb78f482140d7b1c2f526d.ctex",
+   "size": 44876,
+   "flags": 0,
+   "md5": "3844cb46381a0395cbcb2af865f71eb4"
+  },
+  {
+   "path": ".godot/imported/monk_f_robe_black.webp-5658802a6a06a015d9d3ccaf8ffc9a59.ctex",
+   "size": 678496,
+   "flags": 0,
+   "md5": "d5dae960e6b04c55ded0f19f96ae7c9c"
+  },
+  {
+   "path": ".godot/imported/monk_f_robe_normal.webp-f5c4c6cb9fb8e3c11a78e07c4a0faa64.ctex",
+   "size": 729240,
+   "flags": 0,
+   "md5": "e5e8f89c82977949789ac989c47c64ba"
+  },
+  {
+   "path": ".godot/imported/monk_f_skin_young_caucasian_male.webp-78c727500587190ce103f8341d21b8f5.ctex",
+   "size": 729652,
+   "flags": 0,
+   "md5": "5030cf3c5823543e0b422b3e468df652"
+  },
+  {
+   "path": ".godot/imported/monk_g.glb-86a14bc3b2d00929730bcf02b3cddb8f.scn",
+   "size": 1880640,
+   "flags": 0,
+   "md5": "02ee45d4014231d8e126a298f1815709"
+  },
+  {
+   "path": ".godot/imported/monk_g_boots_toigo_ankle_boots_male.webp-aa771389e29e726468ce2e0a5d0ff086.ctex",
+   "size": 61442,
+   "flags": 0,
+   "md5": "035a0ebc9d0fc024b2ebe4dc458c28d5"
+  },
+  {
+   "path": ".godot/imported/monk_g_brow_eyebrow009.webp-b4db7563a86dbbb0ef0743e28af6737f.ctex",
+   "size": 66014,
+   "flags": 0,
+   "md5": "a9a4c077db56a7321c6b4ce4c3a48594"
+  },
+  {
+   "path": ".godot/imported/monk_g_eye_grey_old.webp-b1fcad26ef3d5fe750aede501fcb21c1.ctex",
+   "size": 35132,
+   "flags": 0,
+   "md5": "5c1a5c50034b4035ea11a7bc5f8c6706"
+  },
+  {
+   "path": ".godot/imported/monk_g_hair_short02_grey.webp-08f68e07e2240412b619d18408b031ca.ctex",
+   "size": 197376,
+   "flags": 0,
+   "md5": "93d123001bc5130599ef112793472b57"
+  },
+  {
+   "path": ".godot/imported/monk_g_lash01.webp-23f09aea2e3ec09d059139dbef582ae5.ctex",
+   "size": 44876,
+   "flags": 0,
+   "md5": "3844cb46381a0395cbcb2af865f71eb4"
+  },
+  {
+   "path": ".godot/imported/monk_g_robe_black.webp-582e271955867c024934043ff725b140.ctex",
+   "size": 678496,
+   "flags": 0,
+   "md5": "d5dae960e6b04c55ded0f19f96ae7c9c"
+  },
+  {
+   "path": ".godot/imported/monk_g_robe_normal.webp-6191f9e49b4c57785869474c1299a467.ctex",
+   "size": 729240,
+   "flags": 0,
+   "md5": "e5e8f89c82977949789ac989c47c64ba"
+  },
+  {
+   "path": ".godot/imported/monk_g_skin_old_caucasian_male.webp-91ebb79e9d97b8a85f969124c94eea2f.ctex",
+   "size": 909982,
+   "flags": 0,
+   "md5": "cecdfd9d69374a812109068b1e506c96"
+  },
+  {
+   "path": ".godot/imported/mule.glb-ace0817c5ae0b5e72a5ba079b41c9bc8.scn",
+   "size": 214382,
+   "flags": 0,
+   "md5": "ab37f6406202484a65026f302f03ab9a"
+  },
+  {
+   "path": ".godot/imported/novice_a.glb-0f1429a7f296ef900d90779fe746437d.scn",
+   "size": 1883522,
+   "flags": 0,
+   "md5": "17348cebf1e6ebab28cd8fc213fc38f4"
+  },
+  {
+   "path": ".godot/imported/novice_a_boots_toigo_ankle_boots_male.webp-4c697886c7e3109b432cebbaf255bb46.ctex",
+   "size": 61442,
+   "flags": 0,
+   "md5": "035a0ebc9d0fc024b2ebe4dc458c28d5"
+  },
+  {
+   "path": ".godot/imported/novice_a_brow_eyebrow002.webp-49c67426f432ee5eeb7e1f2de405a9f4.ctex",
+   "size": 33918,
+   "flags": 0,
+   "md5": "92b7a3fd5b2f50a5a1e69a37c0365ac4"
+  },
+  {
+   "path": ".godot/imported/novice_a_eye_brownlight_brus.webp-35b327e265334f92cc8abc9a9d80c6c7.ctex",
+   "size": 37802,
+   "flags": 0,
+   "md5": "bdd1129df62e28ef2be07ff7013fd0d7"
+  },
+  {
+   "path": ".godot/imported/novice_a_hair_short02_brown.webp-c051740cc0c3eefe6421f6b8dfec5e37.ctex",
+   "size": 198396,
+   "flags": 0,
+   "md5": "6c3e1ed62469db7818e33d944910dcfa"
+  },
+  {
+   "path": ".godot/imported/novice_a_lash01.webp-0e4a2b989842277c9324908992106aaa.ctex",
+   "size": 44876,
+   "flags": 0,
+   "md5": "3844cb46381a0395cbcb2af865f71eb4"
+  },
+  {
+   "path": ".godot/imported/novice_a_robe_black.webp-a1bdaeb8b9a52344377c333eef101d6b.ctex",
+   "size": 678496,
+   "flags": 0,
+   "md5": "d5dae960e6b04c55ded0f19f96ae7c9c"
+  },
+  {
+   "path": ".godot/imported/novice_a_robe_normal.webp-c94c2d4c33724490d25ccf1cd8ff58bb.ctex",
+   "size": 729240,
+   "flags": 0,
+   "md5": "e5e8f89c82977949789ac989c47c64ba"
+  },
+  {
+   "path": ".godot/imported/novice_a_skin_young_caucasian_male.webp-9c9282fc36921705e6b521f559ed90a7.ctex",
+   "size": 729652,
+   "flags": 0,
+   "md5": "5030cf3c5823543e0b422b3e468df652"
+  },
+  {
+   "path": ".godot/imported/novice_b.glb-c067c02138c6c96ba7e0c7f55bfc02ca.scn",
+   "size": 1881509,
+   "flags": 0,
+   "md5": "888268b08fd0bd30fc420eb8cb8b5e79"
+  },
+  {
+   "path": ".godot/imported/novice_b_boots_toigo_ankle_boots_male.webp-127383c47abf2fee8a16e8f397847a7b.ctex",
+   "size": 61442,
+   "flags": 0,
+   "md5": "035a0ebc9d0fc024b2ebe4dc458c28d5"
+  },
+  {
+   "path": ".godot/imported/novice_b_brow_eyebrow001.webp-fefee2fe5fc478d857db6cb02307a509.ctex",
+   "size": 30324,
+   "flags": 0,
+   "md5": "b4de25d064202ba5a3d4e33dde607700"
+  },
+  {
+   "path": ".godot/imported/novice_b_eye_brown_brot.webp-91759ab9404e0b2a4d751294b63939eb.ctex",
+   "size": 31806,
+   "flags": 0,
+   "md5": "58474697b2f44fa97c06ab95ca51998c"
+  },
+  {
+   "path": ".godot/imported/novice_b_hair_short02_brown.webp-3fca6911ba1978b9bcc9fde0738e3b75.ctex",
+   "size": 198396,
+   "flags": 0,
+   "md5": "6c3e1ed62469db7818e33d944910dcfa"
+  },
+  {
+   "path": ".godot/imported/novice_b_lash01.webp-4ba2ff0d1fcb68a194c4d3c7b6ce5a88.ctex",
+   "size": 44876,
+   "flags": 0,
+   "md5": "3844cb46381a0395cbcb2af865f71eb4"
+  },
+  {
+   "path": ".godot/imported/novice_b_robe_black.webp-f98d8a4472d6a83e30e3a20ccbfce5a1.ctex",
+   "size": 678496,
+   "flags": 0,
+   "md5": "d5dae960e6b04c55ded0f19f96ae7c9c"
+  },
+  {
+   "path": ".godot/imported/novice_b_robe_normal.webp-fa5b139190788955c4b4b44861ff1ed9.ctex",
+   "size": 729240,
+   "flags": 0,
+   "md5": "e5e8f89c82977949789ac989c47c64ba"
+  },
+  {
+   "path": ".godot/imported/novice_b_skin_young_caucasian_male2.webp-46feb56274d322dc019ce60242e0eaea.ctex",
+   "size": 697360,
+   "flags": 0,
+   "md5": "2c90bcf1de4eea09360cd0ab7351e8c0"
+  },
+  {
+   "path": ".godot/imported/ossuary_stair.glb-4c493608e52715b7a2893087617d656f.scn",
+   "size": 3782,
+   "flags": 0,
+   "md5": "65d30808c655901becd11add9a28e52f"
+  },
+  {
+   "path": ".godot/imported/ossuary_stair.glb-908c794a0c19a584b59092f0f597fc78.scn",
+   "size": 1173229,
+   "flags": 0,
+   "md5": "84420348c50ecab8dc7c910cc32e07e6"
+  },
+  {
+   "path": ".godot/imported/p_blanketGrey_map.png-e08d73c08400a712b33a4506f2022458.s3tc.ctex",
+   "size": 43756,
+   "flags": 0,
+   "md5": "18bf01b2dce61df357c576a42224dae1"
+  },
+  {
+   "path": ".godot/imported/p_blanket_map.png-aefeab852b6a0c6f6dfa77e781ba8080.s3tc.ctex",
+   "size": 43756,
+   "flags": 0,
+   "md5": "ef40bb7a101ae10f13fd718fc5e81a01"
+  },
+  {
+   "path": ".godot/imported/p_boneDark_map.png-871aefc2f5e4d88891840fa537552766.s3tc.ctex",
+   "size": 43756,
+   "flags": 0,
+   "md5": "72af38fbe9f88401642693b3385d1690"
+  },
+  {
+   "path": ".godot/imported/p_bone_map.png-297e166ff9faad2ffd624e0e2a6a8993.s3tc.ctex",
+   "size": 43756,
+   "flags": 0,
+   "md5": "17df1917764f1bc34c8ea26ebca6034a"
+  },
+  {
+   "path": ".godot/imported/p_earthenDark_map.png-754e4f035742c89f17c1fee9d3c039e4.s3tc.ctex",
+   "size": 43756,
+   "flags": 0,
+   "md5": "6322b7c03bbfe48e240be6cc99403169"
+  },
+  {
+   "path": ".godot/imported/p_earthenware_map.png-523b3a70f14b10c46373eb9b4c1673cd.s3tc.ctex",
+   "size": 43756,
+   "flags": 0,
+   "md5": "49345a7daf3618a0c591dacfaa7b9134"
+  },
+  {
+   "path": ".godot/imported/p_glazeBrown_map.png-fabb3ad430c2b4424fc12b3c772762a6.s3tc.ctex",
+   "size": 43756,
+   "flags": 0,
+   "md5": "800a9b590ef22af9dbd216765aefb206"
+  },
+  {
+   "path": ".godot/imported/p_leather_map.png-a069c0cb7428a6f9bbe36db6136ed870.s3tc.ctex",
+   "size": 43756,
+   "flags": 0,
+   "md5": "ed4bf77a5256115a5fb2f1e807501d4b"
+  },
+  {
+   "path": ".godot/imported/p_linenWhite_map.png-840217956acf9b652edae8ac5b1a6792.s3tc.ctex",
+   "size": 43756,
+   "flags": 0,
+   "md5": "e68ec084b3a70f82e29dae0aeef17961"
+  },
+  {
+   "path": ".godot/imported/p_sacking_map.png-7e36756a1cc2fb4c9807b73fc0e0be51.s3tc.ctex",
+   "size": 43756,
+   "flags": 0,
+   "md5": "7e9d7ec86bff341799d44f4dcd50df9e"
+  },
+  {
+   "path": ".godot/imported/p_vellum_map.png-14302fea49df9b6c5376b66c17f62774.s3tc.ctex",
+   "size": 43756,
+   "flags": 0,
+   "md5": "18bde0df978dca45f080299c7aa06e3f"
+  },
+  {
+   "path": ".godot/imported/pageTurn_00.wav-e81b734bc18ef7cd9f0342a4577c8c67.sample",
+   "size": 13276,
+   "flags": 0,
+   "md5": "245e7e1136e27a21644e372770e3646d"
+  },
+  {
+   "path": ".godot/imported/pageTurn_01.wav-9ccb567d58dfa57897a58cdc24881824.sample",
+   "size": 18012,
+   "flags": 0,
+   "md5": "57608c8ca4999231f29b1b847ac52c68"
+  },
+  {
+   "path": ".godot/imported/pageTurn_02.wav-e96e42a5b65c2a6189a7340f4f10a43d.sample",
+   "size": 13308,
+   "flags": 0,
+   "md5": "7cb82231e7435c5dad70c961e4c69def"
+  },
+  {
+   "path": ".godot/imported/plaster_a.jpg-c68e3584d9aef84f3b8872a6e95a2212.s3tc.ctex",
+   "size": 174828,
+   "flags": 0,
+   "md5": "551bc67088ee2c4baba3361150351a50"
+  },
+  {
+   "path": ".godot/imported/plaster_d.jpg-11891e14c3edaa26684a84d7f98622e4.s3tc.ctex",
+   "size": 699116,
+   "flags": 0,
+   "md5": "4e53a1aa25c4552eb3b7bc2e9300470e"
+  },
+  {
+   "path": ".godot/imported/plaster_n.jpg-e057023cac9e4c8e1e1b6902f3f51f5b.s3tc.ctex",
+   "size": 349604,
+   "flags": 0,
+   "md5": "629b4f8d91b14cf80fc79a74348d77d1"
+  },
+  {
+   "path": ".godot/imported/pour_00.wav-1518a498460355ac0fdab25836556c5a.sample",
+   "size": 32260,
+   "flags": 0,
+   "md5": "8aff5f149cb87e78bcea314722186c57"
+  },
+  {
+   "path": ".godot/imported/pour_01.wav-5fcf0b59ee99217ba97d89006681cc78.sample",
+   "size": 37684,
+   "flags": 0,
+   "md5": "40c508b9b57c48818abfd06ae72a7fc3"
+  },
+  {
+   "path": ".godot/imported/pour_02.wav-406cdd0b66d678d194d7947fbeb9e6d8.sample",
+   "size": 39612,
+   "flags": 0,
+   "md5": "6a42a2ead8a513dbc33a5f01183f865f"
+  },
+  {
+   "path": ".godot/imported/pour_03.wav-36e88e3a76f2521d08924f34c28e85dc.sample",
+   "size": 53740,
+   "flags": 0,
+   "md5": "1ed7fe366183d42560350ed116b8839c"
+  },
+  {
+   "path": ".godot/imported/roof_a.jpg-f050bb761cccbe3f16deb3f683673186.s3tc.ctex",
+   "size": 174828,
+   "flags": 0,
+   "md5": "23c48784318330dae29d1301ae72a087"
+  },
+  {
+   "path": ".godot/imported/roof_d.jpg-fe834db153bcd70031ae6693cc53220a.s3tc.ctex",
+   "size": 699116,
+   "flags": 0,
+   "md5": "5bf9ed82f9d30c3b24dc2b0924f06ee1"
+  },
+  {
+   "path": ".godot/imported/roof_n.jpg-d304bc00150c60504e93c92a37917b1e.s3tc.ctex",
+   "size": 349604,
+   "flags": 0,
+   "md5": "6d5396d578eff566a373a847ba5c8fc4"
+  },
+  {
+   "path": ".godot/imported/rubble_a.jpg-faebef82ec0802e569bee3f5ffb85f53.s3tc.ctex",
+   "size": 174828,
+   "flags": 0,
+   "md5": "fe72976d3bbb33bb1aed2474c92bf983"
+  },
+  {
+   "path": ".godot/imported/rubble_d.jpg-3266a226e9dad84fee7b03cfa2ba04e2.s3tc.ctex",
+   "size": 699116,
+   "flags": 0,
+   "md5": "cf967254ee78f8bdf04523dd8940397c"
+  },
+  {
+   "path": ".godot/imported/rubble_n.jpg-807d832a5a9f82f9edaa61c1fa4dcd77.s3tc.ctex",
+   "size": 349604,
+   "flags": 0,
+   "md5": "d593dfb5a30f4845fc878efb4da0f46e"
+  },
+  {
+   "path": ".godot/imported/scribe_a.glb-96d8b9d625461f67054555c07de685f9.scn",
+   "size": 1883804,
+   "flags": 0,
+   "md5": "dfaf65be6a2414642fe6594bbcd2e28f"
+  },
+  {
+   "path": ".godot/imported/scribe_a_boots_toigo_ankle_boots_male.webp-57f6d43bbeff05cb24b0fa7457538ceb.ctex",
+   "size": 61442,
+   "flags": 0,
+   "md5": "035a0ebc9d0fc024b2ebe4dc458c28d5"
+  },
+  {
+   "path": ".godot/imported/scribe_a_brow_eyebrow002.webp-ad0aa54b0ef9db9373148febd6f0d8c4.ctex",
+   "size": 33918,
+   "flags": 0,
+   "md5": "92b7a3fd5b2f50a5a1e69a37c0365ac4"
+  },
+  {
+   "path": ".godot/imported/scribe_a_eye_brownlight_brus.webp-f0b2865e29f7039c23e896c5a014d874.ctex",
+   "size": 37802,
+   "flags": 0,
+   "md5": "bdd1129df62e28ef2be07ff7013fd0d7"
+  },
+  {
+   "path": ".godot/imported/scribe_a_hair_short02_brown.webp-7d5a8cf1b5347dfbdf9e7336148880e7.ctex",
+   "size": 198396,
+   "flags": 0,
+   "md5": "6c3e1ed62469db7818e33d944910dcfa"
+  },
+  {
+   "path": ".godot/imported/scribe_a_lash01.webp-5abf6c1b3b9d6d6231b2c9e7c4cef676.ctex",
+   "size": 44876,
+   "flags": 0,
+   "md5": "3844cb46381a0395cbcb2af865f71eb4"
+  },
+  {
+   "path": ".godot/imported/scribe_a_robe_black.webp-2a1aa24de2ed6c43c316c2f22b1a34ba.ctex",
+   "size": 678496,
+   "flags": 0,
+   "md5": "d5dae960e6b04c55ded0f19f96ae7c9c"
+  },
+  {
+   "path": ".godot/imported/scribe_a_robe_normal.webp-5bc994f849268f1e4a46af4aab985f5b.ctex",
+   "size": 729240,
+   "flags": 0,
+   "md5": "e5e8f89c82977949789ac989c47c64ba"
+  },
+  {
+   "path": ".godot/imported/scribe_a_skin_young_caucasian_male.webp-c81e8ee97a49d264ccaaf03ad56f2b56.ctex",
+   "size": 729652,
+   "flags": 0,
+   "md5": "5030cf3c5823543e0b422b3e468df652"
+  },
+  {
+   "path": ".godot/imported/skull_chapel.glb-cb6d86c37e4dfdd8747b39fe5f361bc0.scn",
+   "size": 36568,
+   "flags": 0,
+   "md5": "147fdb8a7f13e7255a08a92c98c7b7e7"
+  },
+  {
+   "path": ".godot/imported/skull_chapel.glb-dbcac2bc0790a5161449feddee9251a1.scn",
+   "size": 2928,
+   "flags": 0,
+   "md5": "d2b8416cc33a254a650392ac6be1394a"
+  },
+  {
+   "path": ".godot/imported/snort_00.wav-3a22508e2c0220871b00e916c620a6e1.sample",
+   "size": 10388,
+   "flags": 0,
+   "md5": "7e381d775463680d1ae6f766fe11b144"
+  },
+  {
+   "path": ".godot/imported/snort_01.wav-8c65d475dcd513047aa74cac3220531d.sample",
+   "size": 13716,
+   "flags": 0,
+   "md5": "d991964692afba06219474ad322e7ee0"
+  },
+  {
+   "path": ".godot/imported/snort_02.wav-4f935ade2e36172958e173691f72501d.sample",
+   "size": 14580,
+   "flags": 0,
+   "md5": "2a2e6258ee3474fb603223b79645392d"
+  },
+  {
+   "path": ".godot/imported/snort_03.wav-bc53d26aaeee8f4ea17cc266b34e4b4f.sample",
+   "size": 20012,
+   "flags": 0,
+   "md5": "412da58512682d2367469cd8e197c62a"
+  },
+  {
+   "path": ".godot/imported/snort_04.wav-329bc426691d310160dfaac3953e8f64.sample",
+   "size": 14444,
+   "flags": 0,
+   "md5": "c499ba82de1e9fbe465a52b48f25e35c"
+  },
+  {
+   "path": ".godot/imported/snowFresh_00.wav-7a0c103f04eb245b8c6d7fa074d6b2fc.sample",
+   "size": 9308,
+   "flags": 0,
+   "md5": "ec7549314786125a1a7ec39e3b0c16d3"
+  },
+  {
+   "path": ".godot/imported/snowFresh_01.wav-a989e4fb522bf2ce34f186535b603a9c.sample",
+   "size": 10388,
+   "flags": 0,
+   "md5": "3fb649173b4fb766fc9dac517c031a4f"
+  },
+  {
+   "path": ".godot/imported/snowFresh_02.wav-afa3f63530bc2fb50944df2260b3aa49.sample",
+   "size": 10268,
+   "flags": 0,
+   "md5": "1deae3e2b93c8f70cf90dd1791bcf702"
+  },
+  {
+   "path": ".godot/imported/snowFresh_03.wav-cf77614dffd2ef2cf0a00ba85276e099.sample",
+   "size": 9164,
+   "flags": 0,
+   "md5": "afd8550192daab82fe28c61b9fe49b97"
+  },
+  {
+   "path": ".godot/imported/snowFresh_04.wav-24539db40c0e4df7fc1ab4c1340658ed.sample",
+   "size": 10476,
+   "flags": 0,
+   "md5": "7b7559266bb71147d6d54d378418c88c"
+  },
+  {
+   "path": ".godot/imported/snowFresh_05.wav-9ecfdeb9c69363977730d4aef3bbde4b.sample",
+   "size": 9356,
+   "flags": 0,
+   "md5": "f6f4810a1074370c150c34861a745d0e"
+  },
+  {
+   "path": ".godot/imported/snowFresh_06.wav-13a4f20172e6c18098064afce29b161e.sample",
+   "size": 8988,
+   "flags": 0,
+   "md5": "a6a5d6c4d8b9032c3166548d94d805d0"
+  },
+  {
+   "path": ".godot/imported/snowFresh_07.wav-991495029b1b80bc01017fb39107188a.sample",
+   "size": 9004,
+   "flags": 0,
+   "md5": "0b3e0d40a63a03aa628d36db2b1c9271"
+  },
+  {
+   "path": ".godot/imported/snowFresh_08.wav-80d5e52fc4d85ff36b4c3d0adfded049.sample",
+   "size": 9708,
+   "flags": 0,
+   "md5": "b8392468899cf6333e8b34a2bbdb04e4"
+  },
+  {
+   "path": ".godot/imported/snowFresh_09.wav-64b21780ef1180a9d13e0a3a75edcf6f.sample",
+   "size": 10428,
+   "flags": 0,
+   "md5": "815b024db61da3552dc348e0507e91db"
+  },
+  {
+   "path": ".godot/imported/snowFresh_10.wav-c35b33ea73ad45b91d0a38a164d70c11.sample",
+   "size": 10236,
+   "flags": 0,
+   "md5": "fabf3066b9d995c54f157f8dba453290"
+  },
+  {
+   "path": ".godot/imported/snowFresh_11.wav-b09a4d5a71ea7ce8c1353cb115471cb7.sample",
+   "size": 10436,
+   "flags": 0,
+   "md5": "788809a7f01a078a7a6703230ebfbcb9"
+  },
+  {
+   "path": ".godot/imported/snowPacked_00.wav-02c283ba9de3a324f745aaa7c53475c6.sample",
+   "size": 8028,
+   "flags": 0,
+   "md5": "e03774c3263e9c5143a41fa4692ea55f"
+  },
+  {
+   "path": ".godot/imported/snowPacked_01.wav-81f02ea747a501f81cfd924653791c29.sample",
+   "size": 8004,
+   "flags": 0,
+   "md5": "fbd269032d54ab2cbce2c3656f8c6263"
+  },
+  {
+   "path": ".godot/imported/snowPacked_02.wav-7ffa289853b6e44bfb9743d60a6ae16f.sample",
+   "size": 7892,
+   "flags": 0,
+   "md5": "547e261cb9c13c547b800c9535ed6e16"
+  },
+  {
+   "path": ".godot/imported/snowPacked_03.wav-39d31f66ec1915d454def3ba5aaba1ee.sample",
+   "size": 7780,
+   "flags": 0,
+   "md5": "be0dd67d26155d10655784990eabe95b"
+  },
+  {
+   "path": ".godot/imported/snowPacked_04.wav-02f11c8a19712b370f4e0b96a90e092d.sample",
+   "size": 7284,
+   "flags": 0,
+   "md5": "d5d1a0618ace8904c70717cd1f098827"
+  },
+  {
+   "path": ".godot/imported/snowPacked_05.wav-e940d1c75d73954840fec5b359f11c38.sample",
+   "size": 8036,
+   "flags": 0,
+   "md5": "179b89f48eb219d50ada762be348a424"
+  },
+  {
+   "path": ".godot/imported/snowPacked_06.wav-9472ebbe30d840528e8c97b18228ab7c.sample",
+   "size": 8060,
+   "flags": 0,
+   "md5": "ddd49f69b9e82c34a4c550ed259cf1f1"
+  },
+  {
+   "path": ".godot/imported/snowPacked_07.wav-4275ab722404b6b8e160649b22abe009.sample",
+   "size": 8180,
+   "flags": 0,
+   "md5": "14d3f3e49c0b5467ce1b11cf1bb2778a"
+  },
+  {
+   "path": ".godot/imported/snowPacked_08.wav-a98c1eab986ea4101b87b3618f642509.sample",
+   "size": 8476,
+   "flags": 0,
+   "md5": "f6c0469f8286fa6a09907f05d477f8d4"
+  },
+  {
+   "path": ".godot/imported/snowPacked_09.wav-a1119c89ba866e87042cfec96f599b7f.sample",
+   "size": 8692,
+   "flags": 0,
+   "md5": "dabc3118534062c33fbfe47717d29adb"
+  },
+  {
+   "path": ".godot/imported/snowPacked_10.wav-bcaf41dd821e50887326beee09d3258a.sample",
+   "size": 8212,
+   "flags": 0,
+   "md5": "ce21bc4a1449258f4fda29e9a64fcc53"
+  },
+  {
+   "path": ".godot/imported/snowPacked_11.wav-e13bd6c18914468be72efd7a295034bc.sample",
+   "size": 8332,
+   "flags": 0,
+   "md5": "8a954e6963883a898f9685d6f9856b2a"
+  },
+  {
+   "path": ".godot/imported/snowPacked_12.wav-5357b35a2e67131aa0b98384a765e9ec.sample",
+   "size": 8660,
+   "flags": 0,
+   "md5": "48237239082b8ab3fce7a13b668b703e"
+  },
+  {
+   "path": ".godot/imported/snowPacked_13.wav-27363187806a416946cb85d8563440e7.sample",
+   "size": 8036,
+   "flags": 0,
+   "md5": "66ccb8dcee35bdcadb44adee4b554139"
+  },
+  {
+   "path": ".godot/imported/snow_a.jpg-a192b2d3c398db682ea48f30b8d4c373.s3tc.ctex",
+   "size": 174828,
+   "flags": 0,
+   "md5": "03ea50b782a8b7b913a1c89aab364775"
+  },
+  {
+   "path": ".godot/imported/snow_d.jpg-1fae0b662a90190b4b7a8ced58fba9f2.s3tc.ctex",
+   "size": 699116,
+   "flags": 0,
+   "md5": "cfdee230450b18b218ffee77cd508c17"
+  },
+  {
+   "path": ".godot/imported/snow_n.jpg-f192b2a8c019a4f828810ba51afc3354.s3tc.ctex",
+   "size": 349604,
+   "flags": 0,
+   "md5": "667f13279243f9bbc2ceaab439c7d6ee"
+  },
+  {
+   "path": ".godot/imported/soil_a.jpg-ae6a421bae8c4e78fd494f2306cf8201.s3tc.ctex",
+   "size": 174828,
+   "flags": 0,
+   "md5": "ac6435f9c3c870955913fb58a4c3641e"
+  },
+  {
+   "path": ".godot/imported/soil_d.jpg-8dd7789a90cbc0c59be616ea7b77f919.s3tc.ctex",
+   "size": 699116,
+   "flags": 0,
+   "md5": "ea1ed3ae77d7a36c5016980d8621ef0d"
+  },
+  {
+   "path": ".godot/imported/soil_n.jpg-d77742deba3dd55ab878c21991bb89bf.s3tc.ctex",
+   "size": 349604,
+   "flags": 0,
+   "md5": "bce91cc3913577296dee60f027ed957b"
+  },
+  {
+   "path": ".godot/imported/stainedWarm_map.png-e453888d596329377795f5b05473489d.s3tc.ctex",
+   "size": 174852,
+   "flags": 0,
+   "md5": "f88e6e4d7d6335dc6da23402e25f420b"
+  },
+  {
+   "path": ".godot/imported/stained_1_map.png-4acb600090e5150bfb7a8255605997e3.s3tc.ctex",
+   "size": 174852,
+   "flags": 0,
+   "md5": "50387bb843c1694497c1e852bd60a196"
+  },
+  {
+   "path": ".godot/imported/stained_2_map.png-eabd54c5b19bceb17a0d030dc4af1d61.s3tc.ctex",
+   "size": 174852,
+   "flags": 0,
+   "md5": "762f2ddbe8513da993412d40e927d95c"
+  },
+  {
+   "path": ".godot/imported/step_straw_00.wav-90d4a0f38fa3a1978dbe396ccd63f05e.sample",
+   "size": 11324,
+   "flags": 0,
+   "md5": "73dc00d318849b1d4a9bcf0e737bc680"
+  },
+  {
+   "path": ".godot/imported/step_straw_01.wav-a1d1ada189a44540f6fc8e300dc1d9a1.sample",
+   "size": 11412,
+   "flags": 0,
+   "md5": "191fb68fcb104bc1816216192c07aed5"
+  },
+  {
+   "path": ".godot/imported/step_straw_02.wav-f9c71b5a656069157737770dca4e46d2.sample",
+   "size": 10988,
+   "flags": 0,
+   "md5": "d8ed01b3e3059283073fb9e8ea5e371b"
+  },
+  {
+   "path": ".godot/imported/step_straw_03.wav-8f1d21986993b8b85d1f3ed84e674ab1.sample",
+   "size": 11084,
+   "flags": 0,
+   "md5": "a76b5bf9a53ec4c50487c6499fe6a25a"
+  },
+  {
+   "path": ".godot/imported/step_straw_04.wav-2fc6d1cb4c1d1c11435ec74a61ed6202.sample",
+   "size": 11340,
+   "flags": 0,
+   "md5": "4a7bb805e89ab46c632abb7b41efa9ad"
+  },
+  {
+   "path": ".godot/imported/step_straw_05.wav-ad26dadbf0fd9a959adc680e13fb9ea0.sample",
+   "size": 11276,
+   "flags": 0,
+   "md5": "243fa03e6b2d30314fd90096e58ffcc8"
+  },
+  {
+   "path": ".godot/imported/step_straw_06.wav-68280478e664350a98fcc4e7c8fa3548.sample",
+   "size": 11292,
+   "flags": 0,
+   "md5": "cd2c241baede810ac122f952345b15b5"
+  },
+  {
+   "path": ".godot/imported/step_straw_07.wav-ae1a67050ce0c16cb4a7b2701d24623d.sample",
+   "size": 11380,
+   "flags": 0,
+   "md5": "59fac3ffc784ab3edbb3638bfd3a62f7"
+  },
+  {
+   "path": ".godot/imported/step_straw_08.wav-265d8c62f24ddbbb969c8824f043060e.sample",
+   "size": 11380,
+   "flags": 0,
+   "md5": "c372cbf53ac5b339149c4ce8c7a12f14"
+  },
+  {
+   "path": ".godot/imported/step_straw_09.wav-dbff3d059311abbb8baf325cf1f13b6a.sample",
+   "size": 11204,
+   "flags": 0,
+   "md5": "dd56ab03d571e5fe02d43703b90ea265"
+  },
+  {
+   "path": ".godot/imported/step_straw_10.wav-5ed468c1c2a0505973d7f92cf2d5f262.sample",
+   "size": 11084,
+   "flags": 0,
+   "md5": "b1f51dc0d22da94240d89712ad3a2a9a"
+  },
+  {
+   "path": ".godot/imported/step_straw_11.wav-96ba102609bed35ec69d08e532689f53.sample",
+   "size": 11108,
+   "flags": 0,
+   "md5": "57df56c35f144b871adbd3883b4ef63f"
+  },
+  {
+   "path": ".godot/imported/stoneWet_00.wav-e7ab9f776e2347eb27971f6491baa86c.sample",
+   "size": 9460,
+   "flags": 0,
+   "md5": "3a8102482bb818f90b02277d053a8cd5"
+  },
+  {
+   "path": ".godot/imported/stoneWet_01.wav-8602cc6162380bfc0f2b87b95df45eb2.sample",
+   "size": 9620,
+   "flags": 0,
+   "md5": "81b181c4461385c5feed54ba8ba16108"
+  },
+  {
+   "path": ".godot/imported/stoneWet_02.wav-603e2bf79d200022c5cc6f8306c7732e.sample",
+   "size": 9428,
+   "flags": 0,
+   "md5": "97770796cfe4f567c59cf2ad2aab730e"
+  },
+  {
+   "path": ".godot/imported/stoneWet_03.wav-5d0f4f742a3a162dd76ac35888443a40.sample",
+   "size": 9612,
+   "flags": 0,
+   "md5": "bd66e87001d2f509031d4e7f6296f65e"
+  },
+  {
+   "path": ".godot/imported/stoneWet_04.wav-02a4879346530cd27e81a98b6b1fe961.sample",
+   "size": 9340,
+   "flags": 0,
+   "md5": "66660a9e1425c7f0a553fa103858c0fa"
+  },
+  {
+   "path": ".godot/imported/stoneWet_05.wav-1214f32b17ae649d468e4cdccc44b4df.sample",
+   "size": 9244,
+   "flags": 0,
+   "md5": "91fc5f5357faccb8199092d911fcb17e"
+  },
+  {
+   "path": ".godot/imported/stoneWet_06.wav-eba1ca7defb3ce3a1f5ebe480c36c086.sample",
+   "size": 9164,
+   "flags": 0,
+   "md5": "fdc36c3742dc490409dd5a7e290db918"
+  },
+  {
+   "path": ".godot/imported/stoneWet_07.wav-f711c0cac944cacdb2b53dfbcbc168e5.sample",
+   "size": 9068,
+   "flags": 0,
+   "md5": "0d0758656962b9d60c7661dea662fbdc"
+  },
+  {
+   "path": ".godot/imported/stoneWet_08.wav-d36ca34f260345c088ac4129dcffeae5.sample",
+   "size": 8860,
+   "flags": 0,
+   "md5": "b11a037828413a66746991d64d9a643e"
+  },
+  {
+   "path": ".godot/imported/stoneWet_09.wav-3afbe263fa4a57b34b541fa322fe23ea.sample",
+   "size": 7852,
+   "flags": 0,
+   "md5": "6aa83b5d7a267738fa9c668246428354"
+  },
+  {
+   "path": ".godot/imported/stoneWet_10.wav-37004e2e71a4892f8cce30e22d8660ca.sample",
+   "size": 9516,
+   "flags": 0,
+   "md5": "93bf1eba11cba79e9890b4b5e631c7c5"
+  },
+  {
+   "path": ".godot/imported/stoneWet_11.wav-447a4ad471e24e972f11829c93d1fd55.sample",
+   "size": 9316,
+   "flags": 0,
+   "md5": "2bc05ee470bd2d17eb9584ba4217ccf3"
+  },
+  {
+   "path": ".godot/imported/stone_00.wav-ee910057456f11c1b42a3461864152a0.sample",
+   "size": 8284,
+   "flags": 0,
+   "md5": "5105d139ae6dacd1cc70c9e5343e3502"
+  },
+  {
+   "path": ".godot/imported/stone_01.wav-688ea6d0d8bc040b2b819673363d0aff.sample",
+   "size": 8252,
+   "flags": 0,
+   "md5": "68d2cbdab40bacfb924598a0e569ebb3"
+  },
+  {
+   "path": ".godot/imported/stone_02.wav-b2977792f610288ea68542cad30d8928.sample",
+   "size": 8396,
+   "flags": 0,
+   "md5": "b39393a579bcddea0547b62e6da334ca"
+  },
+  {
+   "path": ".godot/imported/stone_03.wav-fef624f37dc533103458bf6b59e0533e.sample",
+   "size": 8340,
+   "flags": 0,
+   "md5": "c19789f883af98f8283f5c6cc3becfbf"
+  },
+  {
+   "path": ".godot/imported/stone_04.wav-6ca5337e35021e45cf2f6290699025f1.sample",
+   "size": 8268,
+   "flags": 0,
+   "md5": "dbbcc72884d71fd12e770f92f6696f4d"
+  },
+  {
+   "path": ".godot/imported/stone_05.wav-291ce65ae31278e2fcd500e7837df993.sample",
+   "size": 7500,
+   "flags": 0,
+   "md5": "2e7cd70a655ea77a15db6250b919eaa7"
+  },
+  {
+   "path": ".godot/imported/stone_06.wav-f2edb9a45e5fd87a09635b4d8bceeecf.sample",
+   "size": 8292,
+   "flags": 0,
+   "md5": "698d8732bbeace8bf11ce1280a323eec"
+  },
+  {
+   "path": ".godot/imported/stone_07.wav-281a3c82de588f0ec6042012bd2c9587.sample",
+   "size": 7428,
+   "flags": 0,
+   "md5": "e3a8ef1d30533ce9bb1a8dcbdb1d84aa"
+  },
+  {
+   "path": ".godot/imported/stone_08.wav-ee3111c4efc81af2a31a11a54773ba94.sample",
+   "size": 7268,
+   "flags": 0,
+   "md5": "4ea0d4ba1947fa4b27144c9473ea63a3"
+  },
+  {
+   "path": ".godot/imported/stone_09.wav-08110800392b492c1d9b2ceb5debcf72.sample",
+   "size": 7428,
+   "flags": 0,
+   "md5": "c80ae934414579293c03e792920e1af3"
+  },
+  {
+   "path": ".godot/imported/stone_10.wav-69715396446f452171d3b61c0f22076a.sample",
+   "size": 7532,
+   "flags": 0,
+   "md5": "b3ab027e94b945b3a53e0af5c69580ba"
+  },
+  {
+   "path": ".godot/imported/stone_11.wav-c5076b6eb3ee898ec6bdfa66b73d69fd.sample",
+   "size": 7148,
+   "flags": 0,
+   "md5": "15f4e332b49b084e0faa69bfc4e5015c"
+  },
+  {
+   "path": ".godot/imported/stone_12.wav-614e9913510fd10eae76c4ddbc8e0007.sample",
+   "size": 7428,
+   "flags": 0,
+   "md5": "8fb1c37234d003ab0eff4e4084aefac9"
+  },
+  {
+   "path": ".godot/imported/stone_13.wav-8214b77bdc725600f43d3536302b7f14.sample",
+   "size": 7380,
+   "flags": 0,
+   "md5": "53a1f16afa159c69d44da262c1059b80"
+  },
+  {
+   "path": ".godot/imported/strawRustle_00.wav-d0256b4d98ffcaa2d99178f4d85f8d91.sample",
+   "size": 30660,
+   "flags": 0,
+   "md5": "fca2fd0cefa1b2a2aa98300665a8a6af"
+  },
+  {
+   "path": ".godot/imported/strawRustle_01.wav-2f0675c1c8e5957c6f947f3dbde3ec6c.sample",
+   "size": 29004,
+   "flags": 0,
+   "md5": "819280813604ddabd9b9d7730ee7598b"
+  },
+  {
+   "path": ".godot/imported/strawRustle_02.wav-19c3c177e8f66a0d4883428d6a1bdf97.sample",
+   "size": 25340,
+   "flags": 0,
+   "md5": "c753330567d1b73e4a8d9de2bb53a87e"
+  },
+  {
+   "path": ".godot/imported/strawRustle_03.wav-d4ce0646a9da99223dd3b5a488f32bc7.sample",
+   "size": 21644,
+   "flags": 0,
+   "md5": "e8d4e205621a50d87db8884a2841ae77"
+  },
+  {
+   "path": ".godot/imported/straw_map.png-ec494aabe16f953c9f161b6d34758648.s3tc.ctex",
+   "size": 174828,
+   "flags": 0,
+   "md5": "4fe02461a22f1491ecfeca6d1000c5b2"
+  },
+  {
+   "path": ".godot/imported/sweep_00.wav-06f05597d5781382d90919566826fb75.sample",
+   "size": 11580,
+   "flags": 0,
+   "md5": "fabc8ebbe3532e67307cc5ea565e6751"
+  },
+  {
+   "path": ".godot/imported/sweep_01.wav-d1a0ae407f06ade3d5f985967c900204.sample",
+   "size": 11708,
+   "flags": 0,
+   "md5": "a0bdc355c7137dadcf28323f28db3dab"
+  },
+  {
+   "path": ".godot/imported/sweep_02.wav-dd73aaf5c7e1743d640df070ab4674ae.sample",
+   "size": 11588,
+   "flags": 0,
+   "md5": "faf5b17e03078e1e7ab24270b3ae0a9a"
+  },
+  {
+   "path": ".godot/imported/sweep_03.wav-4d5239b8029a2991f83af8695bf7272e.sample",
+   "size": 11732,
+   "flags": 0,
+   "md5": "f622753cfbe2ad34375312fbf34b3143"
+  },
+  {
+   "path": ".godot/imported/sweep_04.wav-0ee5bc440a898e814740d5bc1531c8fb.sample",
+   "size": 11572,
+   "flags": 0,
+   "md5": "7d879e39a73d285ff811c30e67724eca"
+  },
+  {
+   "path": ".godot/imported/sweep_05.wav-552904385a3fb9d9e7d54924b7491f8c.sample",
+   "size": 11692,
+   "flags": 0,
+   "md5": "430af1b9cb5c5c1add9c3c8879a05e3e"
+  },
+  {
+   "path": ".godot/imported/sweep_06.wav-006c5deb5026d918f09b620664a7786a.sample",
+   "size": 9204,
+   "flags": 0,
+   "md5": "afd5ddb93e83bf404a5d201ccbc5911e"
+  },
+  {
+   "path": ".godot/imported/sweep_07.wav-226161f0f62cacc34c27a1e74e410d8d.sample",
+   "size": 11564,
+   "flags": 0,
+   "md5": "88f0f238e458d409a7668d2efedc4749"
+  },
+  {
+   "path": ".godot/imported/timber_00.wav-67d2fc4094227768d7214276fd418e3a.sample",
+   "size": 16516,
+   "flags": 0,
+   "md5": "acf275b3883d32d91a71b4b37484fdf0"
+  },
+  {
+   "path": ".godot/imported/timber_01.wav-79d06c6750d7e9c8f91112d31e1e11a8.sample",
+   "size": 18156,
+   "flags": 0,
+   "md5": "4ca5d7a21c8979a46da8e600c836e536"
+  },
+  {
+   "path": ".godot/imported/timber_02.wav-6a950d6985eabcc57916c6fa4096d684.sample",
+   "size": 21652,
+   "flags": 0,
+   "md5": "2beaa80e6d4e9d17976cbaaafd9ec2a1"
+  },
+  {
+   "path": ".godot/imported/tym_ground_map.png-929271086fd879784e7abb7ec5275c8e.s3tc.ctex",
+   "size": 43756,
+   "flags": 0,
+   "md5": "64840552e59442cbd5a1c2ecab7c13e2"
+  },
+  {
+   "path": ".godot/imported/unifrakturmaguntia-latin-400-normal.woff2-32de8be67bb7d3c7839b17e0ad3a334c.fontdata",
+   "size": 27563,
+   "flags": 0,
+   "md5": "78c1ee2fad07fa021a02a920434a56d5"
+  },
+  {
+   "path": ".godot/imported/wall_stone_a.jpg-88cebc7d08db7db0a0228bee8c7bbd63.s3tc.ctex",
+   "size": 174828,
+   "flags": 0,
+   "md5": "94da4393dfade1229f5b60a0a1b24837"
+  },
+  {
+   "path": ".godot/imported/wall_stone_d.jpg-b99e43ce50cb98edaab9df1d739e528a.s3tc.ctex",
+   "size": 699116,
+   "flags": 0,
+   "md5": "a5e86c350fca88d2e4a2c79ce60228c1"
+  },
+  {
+   "path": ".godot/imported/wall_stone_n.jpg-596c7466fda71498dc6838b5313e630c.s3tc.ctex",
+   "size": 349604,
+   "flags": 0,
+   "md5": "3d5a97e4bf19e3e76519fbb348b95c46"
+  },
+  {
+   "path": ".godot/imported/wattle_map.png-65227d904f9f7bd7cc27be36a15db21f.s3tc.ctex",
+   "size": 21916,
+   "flags": 0,
+   "md5": "ea0510fc1331c8835a1efc4e36015e92"
+  },
+  {
+   "path": ".godot/imported/west_context.glb-44bff053efda9f895eb2532f1fc89440.scn",
+   "size": 30241,
+   "flags": 0,
+   "md5": "7f63a5f025d091c1e90232d0c2d768fa"
+  },
+  {
+   "path": ".godot/imported/west_context.glb-677318c3b1c66e28da613ee63d4505f2.scn",
+   "size": 141642,
+   "flags": 0,
+   "md5": "2ee9a4f6d7be463b2c8abb5ba9e31162"
+  },
+  {
+   "path": ".godot/imported/wind.mp3-22f510abcdb30a2b26bf2132f76eedac.mp3str",
+   "size": 906151,
+   "flags": 0,
+   "md5": "655ee519b16e19389a8c91f83775f642"
+  },
+  {
+   "path": ".godot/imported/windTrees.mp3-50c4446ac31d1ca62ed74d613b939c17.mp3str",
+   "size": 777179,
+   "flags": 0,
+   "md5": "2fe4d583c6205e618ec471de2b01d350"
+  },
+  {
+   "path": ".godot/imported/wood_00.wav-8bcaabe0c65ec9481719f987094cfcdb.sample",
+   "size": 10228,
+   "flags": 0,
+   "md5": "71839d6e4c4e311e586136d98541d17d"
+  },
+  {
+   "path": ".godot/imported/wood_01.wav-26a6d95668702823c0e4082f0df081fc.sample",
+   "size": 10364,
+   "flags": 0,
+   "md5": "6df25b5dedde7c438efa2d027a3fc699"
+  },
+  {
+   "path": ".godot/imported/wood_02.wav-9a772f254b5ab8b28b628180d0ba519b.sample",
+   "size": 10228,
+   "flags": 0,
+   "md5": "72a46600269cca202cb06634409af676"
+  },
+  {
+   "path": ".godot/imported/wood_03.wav-6f14f5285e26de04a33eb1badf432b3a.sample",
+   "size": 10324,
+   "flags": 0,
+   "md5": "e2bc30f07c43894fdaa800f333774228"
+  },
+  {
+   "path": ".godot/imported/wood_04.wav-e13d829550faa04720748ce875198bd6.sample",
+   "size": 10324,
+   "flags": 0,
+   "md5": "c6a80b79074a6f766d0832c9bc7f2e43"
+  },
+  {
+   "path": ".godot/imported/wood_05.wav-77af4d38a61c32b37f0f37e0a468086e.sample",
+   "size": 10460,
+   "flags": 0,
+   "md5": "d74cf7033955cd7efe6c1d980de9c842"
+  },
+  {
+   "path": ".godot/imported/wood_06.wav-4601cf5f7ddedf08658984b8243882e9.sample",
+   "size": 10268,
+   "flags": 0,
+   "md5": "8a360f5fe89e945b8794243fc957ef97"
+  },
+  {
+   "path": ".godot/imported/wood_07.wav-a89e36742ee66714e81d24bf1c090f39.sample",
+   "size": 10300,
+   "flags": 0,
+   "md5": "21c3504329a4d42bb8fa6b4d59995874"
+  },
+  {
+   "path": ".godot/imported/wood_08.wav-a7533d292f4c2ab9c12ba3b358b7c648.sample",
+   "size": 10316,
+   "flags": 0,
+   "md5": "acbc54aa72a6e82c9c6e4a27bc8ecf22"
+  },
+  {
+   "path": ".godot/imported/wood_09.wav-58da9a79df5ac5776f9cb41e1bce6357.sample",
+   "size": 10172,
+   "flags": 0,
+   "md5": "c6d3e0139ebfd7c52c962e18b69e1e44"
+  },
+  {
+   "path": ".godot/imported/wood_10.wav-ec7510a17b952bdc6331b9110446edfe.sample",
+   "size": 11036,
+   "flags": 0,
+   "md5": "1632ee43bd1035d29a46e3b4b4a3c5d8"
+  },
+  {
+   "path": ".godot/imported/wood_11.wav-e7334ebbade028a2a4d302ded5552845.sample",
+   "size": 11100,
+   "flags": 0,
+   "md5": "c159849f1106bf801f3d91fc8ac84940"
+  },
+  {
+   "path": ".godot/imported/wood_12.wav-32932b1d10638bd02b4e60dc845a6671.sample",
+   "size": 11316,
+   "flags": 0,
+   "md5": "c66b2c229721ff52dbcf3678e30a338f"
+  },
+  {
+   "path": ".godot/imported/wood_13.wav-6b21511e76d8d9c82e1123cf93b181ec.sample",
+   "size": 11172,
+   "flags": 0,
+   "md5": "b1199e4871cf55463408ac3a331d1ded"
+  },
+  {
+   "path": ".godot/imported/wood_a.jpg-6dcb71dec139c3414d0c9765ebb6cd39.s3tc.ctex",
+   "size": 174828,
+   "flags": 0,
+   "md5": "c7e4ba670728cd9b3971c130fe6eba63"
+  },
+  {
+   "path": ".godot/imported/wood_d.jpg-ec003ed0e0ec7cfb6c7de9f8f1265a72.s3tc.ctex",
+   "size": 699116,
+   "flags": 0,
+   "md5": "50be3ac0e27bbc6548a256b20e2e10eb"
+  },
+  {
+   "path": ".godot/imported/wood_map.png-1efc40174e52baf5ce49d356e8397f7a.bptc.ctex",
+   "size": 2796292,
+   "flags": 0,
+   "md5": "c72f0edaceebf5f339a593ac56468963"
+  },
+  {
+   "path": ".godot/imported/wood_n.jpg-6ebbae8150ab2fbe1db76fd05c0b0f01.s3tc.ctex",
+   "size": 349604,
+   "flags": 0,
+   "md5": "46ebafb90c41d05d35e901a1370956b0"
+  },
+  {
+   "path": ".godot/imported/wood_normal.png-03c15b47497ef992c0647a09e6c6dc44.bptc.ctex",
+   "size": 2796292,
+   "flags": 0,
+   "md5": "adf91b3a894d56c26fa17683ce6091fa"
+  },
+  {
+   "path": ".godot/uid_cache.bin",
+   "size": 25609,
+   "flags": 0,
+   "md5": "d1497b916fe1f78332b222368774cf11"
+  },
+  {
+   "path": "assets/animals/mule/mule.glb.import",
+   "size": 166,
+   "flags": 0,
+   "md5": "69506d0c098bb5dd3054777cad84373d"
+  },
+  {
+   "path": "assets/audio/chant_deus.mp3.import",
+   "size": 157,
+   "flags": 0,
+   "md5": "7d993572723bf6ffc0ae159d2a6ae110"
+  },
+  {
+   "path": "assets/audio/creak.wav.import",
+   "size": 152,
+   "flags": 0,
+   "md5": "4a6d2f1bb00da1bfd3aacceaae6359f4"
+  },
+  {
+   "path": "assets/audio/day1a/anvil_00.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "528be825ac96bc38103089e89d66b8dd"
+  },
+  {
+   "path": "assets/audio/day1a/anvil_01.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "18827baaa85d5bff6b150988c59e1b4c"
+  },
+  {
+   "path": "assets/audio/day1a/bell_00.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "0fa007f6b027f61bc2ee05c7e3938d9d"
+  },
+  {
+   "path": "assets/audio/day1a/benchCreak_00.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "074aed13d441dd9159430b92231fa15b"
+  },
+  {
+   "path": "assets/audio/day1a/benchCreak_01.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "930184dffc0c16135d4f279d03c4c8e9"
+  },
+  {
+   "path": "assets/audio/day1a/benchCreak_02.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "2c9262934c9a6c6c36b5e9f60e31c44a"
+  },
+  {
+   "path": "assets/audio/day1a/benchCreak_03.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "816560b02daa981080297025133f2a71"
+  },
+  {
+   "path": "assets/audio/day1a/bray_00.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "25355ad7c8191b8e728dd082d9bdf9ab"
+  },
+  {
+   "path": "assets/audio/day1a/caw_00.wav.import",
+   "size": 153,
+   "flags": 0,
+   "md5": "b8a8bc9e3547ce85001c338753a19295"
+  },
+  {
+   "path": "assets/audio/day1a/caw_01.wav.import",
+   "size": 153,
+   "flags": 0,
+   "md5": "a35e061e84cfc7852dc5bd72c50b28d0"
+  },
+  {
+   "path": "assets/audio/day1a/caw_02.wav.import",
+   "size": 152,
+   "flags": 0,
+   "md5": "9269ea892f413136b9be988e6cabf66f"
+  },
+  {
+   "path": "assets/audio/day1a/caw_03.wav.import",
+   "size": 153,
+   "flags": 0,
+   "md5": "49d6191924c8b994a5b8fbdd79eb7c68"
+  },
+  {
+   "path": "assets/audio/day1a/caw_04.wav.import",
+   "size": 152,
+   "flags": 0,
+   "md5": "821e1319803ed843f19a75daf5094db8"
+  },
+  {
+   "path": "assets/audio/day1a/caw_05.wav.import",
+   "size": 153,
+   "flags": 0,
+   "md5": "9bdb14e50be5714d27130783d348ea0f"
+  },
+  {
+   "path": "assets/audio/day1a/chant_psalm.mp3.import",
+   "size": 158,
+   "flags": 0,
+   "md5": "b9dc4815d1cffdec0dc7aae1ff9b1c1d"
+  },
+  {
+   "path": "assets/audio/day1a/chew_00.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "a01611faeb9142d3c9e9df652f045057"
+  },
+  {
+   "path": "assets/audio/day1a/chew_01.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "aff4b9a6508be8e5c2dd233cd9021a35"
+  },
+  {
+   "path": "assets/audio/day1a/chew_02.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "bbaa18287663e63d3d97a77dd16b2424"
+  },
+  {
+   "path": "assets/audio/day1a/chew_03.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "8149b7bd8cbceec416d8d7fd72daad9f"
+  },
+  {
+   "path": "assets/audio/day1a/chew_04.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "66f8e701d4cad6521d44a7e010e231cf"
+  },
+  {
+   "path": "assets/audio/day1a/chew_05.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "8d1a0bd50a135edf2dc78bba512db000"
+  },
+  {
+   "path": "assets/audio/day1a/cough_00.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "5d9d7470cb6823340fd4ea146e143856"
+  },
+  {
+   "path": "assets/audio/day1a/cough_01.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "c9c31cafa71ac774df26485d768ee269"
+  },
+  {
+   "path": "assets/audio/day1a/cough_02.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "762a8f4c8d3f2f44ced6a8eb2c5a633a"
+  },
+  {
+   "path": "assets/audio/day1a/cough_03.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "0414685ece5ffd3d85b58a5d2f64f8c9"
+  },
+  {
+   "path": "assets/audio/day1a/cough_04.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "fe076cd402f2c50120732bd22ba10246"
+  },
+  {
+   "path": "assets/audio/day1a/doorCreak_00.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "2048ee0d4e9192725210b97d049ec1e4"
+  },
+  {
+   "path": "assets/audio/day1a/doorCreak_01.wav.import",
+   "size": 157,
+   "flags": 0,
+   "md5": "9d9e5b8c30488cf0edfe85ed1f53ec16"
+  },
+  {
+   "path": "assets/audio/day1a/doorCreak_02.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "c53bd7df9d3598268b6427471a517fca"
+  },
+  {
+   "path": "assets/audio/day1a/doorThud_00.wav.import",
+   "size": 158,
+   "flags": 0,
+   "md5": "5ad141fdbd02d7c482c652a11a335599"
+  },
+  {
+   "path": "assets/audio/day1a/doorThud_01.wav.import",
+   "size": 158,
+   "flags": 0,
+   "md5": "67e04fd59a2e3b0cbd8bbdb97d2fe277"
+  },
+  {
+   "path": "assets/audio/day1a/doorThud_02.wav.import",
+   "size": 157,
+   "flags": 0,
+   "md5": "c09d227486f556f956fc271d00449691"
+  },
+  {
+   "path": "assets/audio/day1a/hoof_00.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "59e57e1588b9647cad8dfb13bc7ac32c"
+  },
+  {
+   "path": "assets/audio/day1a/hoof_01.wav.import",
+   "size": 153,
+   "flags": 0,
+   "md5": "53e649d5588c2421836d1dfc190f95bf"
+  },
+  {
+   "path": "assets/audio/day1a/hoof_02.wav.import",
+   "size": 153,
+   "flags": 0,
+   "md5": "e0b9b743aa1550fa3c62fa86ac5d1d45"
+  },
+  {
+   "path": "assets/audio/day1a/hoof_03.wav.import",
+   "size": 153,
+   "flags": 0,
+   "md5": "de5857f6343952ac6c6c9087575099f6"
+  },
+  {
+   "path": "assets/audio/day1a/hoof_04.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "1c5de926a633128b734c0708a4e6513b"
+  },
+  {
+   "path": "assets/audio/day1a/latch_00.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "f4fa30742f45c0bdcecdd8606c7985e5"
+  },
+  {
+   "path": "assets/audio/day1a/latch_01.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "7ac59986a4dff7473d429a3572eea735"
+  },
+  {
+   "path": "assets/audio/day1a/latch_02.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "6e7b9e94abab7ed13fae66ab047296ea"
+  },
+  {
+   "path": "assets/audio/day1a/latch_03.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "b3e7a08bfac1de8fa2e87077a24e74a5"
+  },
+  {
+   "path": "assets/audio/day1a/metal_00.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "581aca10bb1cb15624e707bb087b681c"
+  },
+  {
+   "path": "assets/audio/day1a/metal_01.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "b1dad209614dbd1c44e0d2f107875147"
+  },
+  {
+   "path": "assets/audio/day1a/metal_02.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "546520104e5645a3f844ba58b2b25965"
+  },
+  {
+   "path": "assets/audio/day1a/metal_03.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "e602bbc312d67bef00cd013560d2658b"
+  },
+  {
+   "path": "assets/audio/day1a/pageTurn_00.wav.import",
+   "size": 158,
+   "flags": 0,
+   "md5": "72ebf6391868b0f50d5baa86e44d7007"
+  },
+  {
+   "path": "assets/audio/day1a/pageTurn_01.wav.import",
+   "size": 158,
+   "flags": 0,
+   "md5": "bfdef978663f4d2807d6d52bc4336afd"
+  },
+  {
+   "path": "assets/audio/day1a/pageTurn_02.wav.import",
+   "size": 158,
+   "flags": 0,
+   "md5": "e0f36f29d4e9877a7dd25c281421aeee"
+  },
+  {
+   "path": "assets/audio/day1a/pour_00.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "cd5df8833cf89ac655b2e0a53604dc22"
+  },
+  {
+   "path": "assets/audio/day1a/pour_01.wav.import",
+   "size": 153,
+   "flags": 0,
+   "md5": "4eccf11ef33aaf3aff274e8d0970e85c"
+  },
+  {
+   "path": "assets/audio/day1a/pour_02.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "290e28923b20306432fae8c654155870"
+  },
+  {
+   "path": "assets/audio/day1a/pour_03.wav.import",
+   "size": 153,
+   "flags": 0,
+   "md5": "030628c17fae46802b0ff8e4398f59cb"
+  },
+  {
+   "path": "assets/audio/day1a/snort_00.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "9e816b6b7011918c7b435af1673aa7d1"
+  },
+  {
+   "path": "assets/audio/day1a/snort_01.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "3301d4b7d9d7ad9fff18455f57441768"
+  },
+  {
+   "path": "assets/audio/day1a/snort_02.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "5e659e80d75337a7bb04acbc6d0297a9"
+  },
+  {
+   "path": "assets/audio/day1a/snort_03.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "a4f537fe91bbba8abaa71065816d85db"
+  },
+  {
+   "path": "assets/audio/day1a/snort_04.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "a0f8924eabb469b2a6a96c8a216e69f9"
+  },
+  {
+   "path": "assets/audio/day1a/step_straw_00.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "5cc2ee883f80971f1f1d7d574d0941a3"
+  },
+  {
+   "path": "assets/audio/day1a/step_straw_01.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "57bf4f49246e1d8f59d6c1b5f94fb6dd"
+  },
+  {
+   "path": "assets/audio/day1a/step_straw_02.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "5f7b7cc3ee47253ddfa8771dd3b619bb"
+  },
+  {
+   "path": "assets/audio/day1a/step_straw_03.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "146002b8b1808ba0172d86d68418a266"
+  },
+  {
+   "path": "assets/audio/day1a/step_straw_04.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "367b49191a740725d8f47898f1b5ae1b"
+  },
+  {
+   "path": "assets/audio/day1a/step_straw_05.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "0eb5915e420b1c360de67de5221c0cfd"
+  },
+  {
+   "path": "assets/audio/day1a/step_straw_06.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "e18efc715cefff0b0b126d89f5344d37"
+  },
+  {
+   "path": "assets/audio/day1a/step_straw_07.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "c898fa100d0b659055453c5d89506834"
+  },
+  {
+   "path": "assets/audio/day1a/step_straw_08.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "e0e9775fb5ed330f30a24ebd8b0ea68c"
+  },
+  {
+   "path": "assets/audio/day1a/step_straw_09.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "ada2e0ae56bdba03229bf28514c6155c"
+  },
+  {
+   "path": "assets/audio/day1a/step_straw_10.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "8416a4fb7f394796609203dcb2dcaf0c"
+  },
+  {
+   "path": "assets/audio/day1a/step_straw_11.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "6542fb121d697da44b9b99e31f5f7867"
+  },
+  {
+   "path": "assets/audio/day1a/strawRustle_00.wav.import",
+   "size": 161,
+   "flags": 0,
+   "md5": "1cf470cd4bc2195b77b5649e9fe544e0"
+  },
+  {
+   "path": "assets/audio/day1a/strawRustle_01.wav.import",
+   "size": 161,
+   "flags": 0,
+   "md5": "1d08350e2942b2bbbf2ea05b66949d78"
+  },
+  {
+   "path": "assets/audio/day1a/strawRustle_02.wav.import",
+   "size": 161,
+   "flags": 0,
+   "md5": "c519c64197f1e1cd40c476f9d169370b"
+  },
+  {
+   "path": "assets/audio/day1a/strawRustle_03.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "457f1fe98b9dd4fd05d6248cae969e37"
+  },
+  {
+   "path": "assets/audio/day1a/sweep_00.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "68bb349526752cb52e3880cbe0797e12"
+  },
+  {
+   "path": "assets/audio/day1a/sweep_01.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "767d5d05c5cb18231c9aa2a0dcce5e42"
+  },
+  {
+   "path": "assets/audio/day1a/sweep_02.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "3b94fa3139932e588f96b426c20c345e"
+  },
+  {
+   "path": "assets/audio/day1a/sweep_03.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "78242123db037c6c527c0984f52576cf"
+  },
+  {
+   "path": "assets/audio/day1a/sweep_04.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "74d32599f4087d732318f11035bc9551"
+  },
+  {
+   "path": "assets/audio/day1a/sweep_05.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "270bedda47fce19b09f4ef6ace7dc428"
+  },
+  {
+   "path": "assets/audio/day1a/sweep_06.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "b10db6e2d0be9e8a11c9dbce2cce5e48"
+  },
+  {
+   "path": "assets/audio/day1a/sweep_07.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "6fe53468f9efe2706a09cfae648c769b"
+  },
+  {
+   "path": "assets/audio/day1a/timber_00.wav.import",
+   "size": 156,
+   "flags": 0,
+   "md5": "deb9549f8f0bb76ea700f76801378f99"
+  },
+  {
+   "path": "assets/audio/day1a/timber_01.wav.import",
+   "size": 156,
+   "flags": 0,
+   "md5": "3b4cbd68bfcce8e24cf44cee5538c801"
+  },
+  {
+   "path": "assets/audio/day1a/timber_02.wav.import",
+   "size": 156,
+   "flags": 0,
+   "md5": "21d4945150a5cbe2fe86607f561c9c15"
+  },
+  {
+   "path": "assets/audio/day1a/windTrees.mp3.import",
+   "size": 156,
+   "flags": 0,
+   "md5": "0b141d33e2696e10c80f1a8f24bfff59"
+  },
+  {
+   "path": "assets/audio/steps/churchStone_00.wav.import",
+   "size": 161,
+   "flags": 0,
+   "md5": "09cd589570542b15ff65633649b10cf3"
+  },
+  {
+   "path": "assets/audio/steps/churchStone_01.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "07fd265dde0a0c6f27e6e5e43a4e0ca5"
+  },
+  {
+   "path": "assets/audio/steps/churchStone_02.wav.import",
+   "size": 161,
+   "flags": 0,
+   "md5": "8defbd8e8e5907f576a8f04d9a2d7254"
+  },
+  {
+   "path": "assets/audio/steps/churchStone_03.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "6ebeecd71745f8d943728f0029601714"
+  },
+  {
+   "path": "assets/audio/steps/churchStone_04.wav.import",
+   "size": 161,
+   "flags": 0,
+   "md5": "cbe1c27f61d6db2fe04b46df242238d9"
+  },
+  {
+   "path": "assets/audio/steps/churchStone_05.wav.import",
+   "size": 161,
+   "flags": 0,
+   "md5": "1e2d799265377e009a7021cb74b9d4c0"
+  },
+  {
+   "path": "assets/audio/steps/churchStone_06.wav.import",
+   "size": 161,
+   "flags": 0,
+   "md5": "03965cf555e53028e37d88908874e229"
+  },
+  {
+   "path": "assets/audio/steps/churchStone_07.wav.import",
+   "size": 161,
+   "flags": 0,
+   "md5": "c223f2b1666f9f93ac3e64a8326ee4df"
+  },
+  {
+   "path": "assets/audio/steps/churchStone_08.wav.import",
+   "size": 161,
+   "flags": 0,
+   "md5": "06a10900ba7ab16fc2e3a553ab03f5a9"
+  },
+  {
+   "path": "assets/audio/steps/churchStone_09.wav.import",
+   "size": 161,
+   "flags": 0,
+   "md5": "27799941e18c12750935724447e63b5c"
+  },
+  {
+   "path": "assets/audio/steps/churchStone_10.wav.import",
+   "size": 161,
+   "flags": 0,
+   "md5": "6de48e7f38431d2b84eb008894ff2cdc"
+  },
+  {
+   "path": "assets/audio/steps/churchStone_11.wav.import",
+   "size": 161,
+   "flags": 0,
+   "md5": "7ae1541f802d2f605be937e579e1be80"
+  },
+  {
+   "path": "assets/audio/steps/snowFresh_00.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "16695a05c4d41c85a9703ff4867951fc"
+  },
+  {
+   "path": "assets/audio/steps/snowFresh_01.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "d516a2df5b9d1953c9af763931ec9542"
+  },
+  {
+   "path": "assets/audio/steps/snowFresh_02.wav.import",
+   "size": 158,
+   "flags": 0,
+   "md5": "8f286ec7b9884c5f65e870b36434598a"
+  },
+  {
+   "path": "assets/audio/steps/snowFresh_03.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "0c671b8d6ac1067c10e8ab5c27f522a0"
+  },
+  {
+   "path": "assets/audio/steps/snowFresh_04.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "a2d2b4cf6d76f8d6650f9786b1b3b3b8"
+  },
+  {
+   "path": "assets/audio/steps/snowFresh_05.wav.import",
+   "size": 158,
+   "flags": 0,
+   "md5": "afb93f5f4b9338d6b422e701b8b68120"
+  },
+  {
+   "path": "assets/audio/steps/snowFresh_06.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "76d34433322151d38d112e54bd64faba"
+  },
+  {
+   "path": "assets/audio/steps/snowFresh_07.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "373c3469f61737a0e2145ab40232be4b"
+  },
+  {
+   "path": "assets/audio/steps/snowFresh_08.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "08951dcee589624b578947da5e634e21"
+  },
+  {
+   "path": "assets/audio/steps/snowFresh_09.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "59889ac7aae35da22aafc4af8569665d"
+  },
+  {
+   "path": "assets/audio/steps/snowFresh_10.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "4517e0949059646edeb294db3b569323"
+  },
+  {
+   "path": "assets/audio/steps/snowFresh_11.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "7fc13ba68ef82a730de07bc69d1c2445"
+  },
+  {
+   "path": "assets/audio/steps/snowPacked_00.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "243ce8d85ae9959fd531a42dcf112d25"
+  },
+  {
+   "path": "assets/audio/steps/snowPacked_01.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "725a9e024cf6676f811c10d05711f7f4"
+  },
+  {
+   "path": "assets/audio/steps/snowPacked_02.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "46f81a629aec5148715bbfe27b0667f3"
+  },
+  {
+   "path": "assets/audio/steps/snowPacked_03.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "af36ec64da887f1ec152de1ccf414e45"
+  },
+  {
+   "path": "assets/audio/steps/snowPacked_04.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "7eead88fbc6e4c4201a5c1aba70311d7"
+  },
+  {
+   "path": "assets/audio/steps/snowPacked_05.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "dad515bc8897d24d3b1698acc7a0bd54"
+  },
+  {
+   "path": "assets/audio/steps/snowPacked_06.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "728afaa814760bb0f2e163aab8823f26"
+  },
+  {
+   "path": "assets/audio/steps/snowPacked_07.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "462699be7161d8909bc3f0897304447d"
+  },
+  {
+   "path": "assets/audio/steps/snowPacked_08.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "27648b91ea8282dc2652a4d9bd4b7656"
+  },
+  {
+   "path": "assets/audio/steps/snowPacked_09.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "8c38ff0d29dd93e2d0b1cd0407c270b1"
+  },
+  {
+   "path": "assets/audio/steps/snowPacked_10.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "64d22dd2b0ce694d34991c13bf3d4227"
+  },
+  {
+   "path": "assets/audio/steps/snowPacked_11.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "6f98f3dc62825b3537c94532ddb04cf8"
+  },
+  {
+   "path": "assets/audio/steps/snowPacked_12.wav.import",
+   "size": 160,
+   "flags": 0,
+   "md5": "5cb52d6ab8026652894754272ae92d04"
+  },
+  {
+   "path": "assets/audio/steps/snowPacked_13.wav.import",
+   "size": 159,
+   "flags": 0,
+   "md5": "c53aea971ed1495c3ad508e54b48f00a"
+  },
+  {
+   "path": "assets/audio/steps/stoneWet_00.wav.import",
+   "size": 157,
+   "flags": 0,
+   "md5": "62edca202904ba9508ca2e9d20a5fdd3"
+  },
+  {
+   "path": "assets/audio/steps/stoneWet_01.wav.import",
+   "size": 157,
+   "flags": 0,
+   "md5": "8e526118ec6250441554090161a35210"
+  },
+  {
+   "path": "assets/audio/steps/stoneWet_02.wav.import",
+   "size": 157,
+   "flags": 0,
+   "md5": "2b4406f2cebb4b8e7cca1802baecd87f"
+  },
+  {
+   "path": "assets/audio/steps/stoneWet_03.wav.import",
+   "size": 158,
+   "flags": 0,
+   "md5": "105961d92490462dc0e71e59a9cad800"
+  },
+  {
+   "path": "assets/audio/steps/stoneWet_04.wav.import",
+   "size": 157,
+   "flags": 0,
+   "md5": "a22e5edf63c0efb4e33d59b8b4283e02"
+  },
+  {
+   "path": "assets/audio/steps/stoneWet_05.wav.import",
+   "size": 157,
+   "flags": 0,
+   "md5": "b11501cb3fa61a65154cbc3d9b9a4d32"
+  },
+  {
+   "path": "assets/audio/steps/stoneWet_06.wav.import",
+   "size": 157,
+   "flags": 0,
+   "md5": "88992bfab3c7681464380af08cc605c3"
+  },
+  {
+   "path": "assets/audio/steps/stoneWet_07.wav.import",
+   "size": 158,
+   "flags": 0,
+   "md5": "f4fbbe04c2cffc1032263ada83c10d4f"
+  },
+  {
+   "path": "assets/audio/steps/stoneWet_08.wav.import",
+   "size": 158,
+   "flags": 0,
+   "md5": "bf494d4db06e4f040c833995ca10dc01"
+  },
+  {
+   "path": "assets/audio/steps/stoneWet_09.wav.import",
+   "size": 158,
+   "flags": 0,
+   "md5": "c49ebf658f2e4597117d55bbead163c5"
+  },
+  {
+   "path": "assets/audio/steps/stoneWet_10.wav.import",
+   "size": 157,
+   "flags": 0,
+   "md5": "3dc695d01ed5ce972536a6843899953f"
+  },
+  {
+   "path": "assets/audio/steps/stoneWet_11.wav.import",
+   "size": 158,
+   "flags": 0,
+   "md5": "6bceb24fcc3561c51e0d871b972427e3"
+  },
+  {
+   "path": "assets/audio/steps/stone_00.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "b2ccd38a899e323235af7fa05a577d63"
+  },
+  {
+   "path": "assets/audio/steps/stone_01.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "8cf0343cfe555ee61e80617a240d1381"
+  },
+  {
+   "path": "assets/audio/steps/stone_02.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "c48782bee507ca4d1b1cdffe71ba6cf4"
+  },
+  {
+   "path": "assets/audio/steps/stone_03.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "f160ce50734a06c21e7c1646a681b86c"
+  },
+  {
+   "path": "assets/audio/steps/stone_04.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "bd8dd9103dd4de57e58a05dc19643064"
+  },
+  {
+   "path": "assets/audio/steps/stone_05.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "28b7da263f1484ac5647f5a94af0be97"
+  },
+  {
+   "path": "assets/audio/steps/stone_06.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "8490449db2e867d7f02fbc2e86058914"
+  },
+  {
+   "path": "assets/audio/steps/stone_07.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "2fa1207e4624461f1e215d9746651df8"
+  },
+  {
+   "path": "assets/audio/steps/stone_08.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "010e450235f3c30610d6e05b54a893ed"
+  },
+  {
+   "path": "assets/audio/steps/stone_09.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "0770e3bffd819e004c771efa6f909b8b"
+  },
+  {
+   "path": "assets/audio/steps/stone_10.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "a49104f676757d959b710d16adb71632"
+  },
+  {
+   "path": "assets/audio/steps/stone_11.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "ae25015da26a025aac98dd8c4c975c19"
+  },
+  {
+   "path": "assets/audio/steps/stone_12.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "5bd94c392a91ef9c0ea52faad979d539"
+  },
+  {
+   "path": "assets/audio/steps/stone_13.wav.import",
+   "size": 155,
+   "flags": 0,
+   "md5": "8a6189b20bf7d7b593c90a5029a3565a"
+  },
+  {
+   "path": "assets/audio/steps/wood_00.wav.import",
+   "size": 153,
+   "flags": 0,
+   "md5": "7971cc57a6e3d6cb61b72b97ead1338c"
+  },
+  {
+   "path": "assets/audio/steps/wood_01.wav.import",
+   "size": 153,
+   "flags": 0,
+   "md5": "0f1ad6b9f2cb519af0b1eb303875fef6"
+  },
+  {
+   "path": "assets/audio/steps/wood_02.wav.import",
+   "size": 153,
+   "flags": 0,
+   "md5": "0237e5cfda8a33e2ebfa242ccca9e07b"
+  },
+  {
+   "path": "assets/audio/steps/wood_03.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "f0483d77c7a4daee72e6c03e92040701"
+  },
+  {
+   "path": "assets/audio/steps/wood_04.wav.import",
+   "size": 153,
+   "flags": 0,
+   "md5": "8da2df49ca88d272f2a0f728116649f9"
+  },
+  {
+   "path": "assets/audio/steps/wood_05.wav.import",
+   "size": 153,
+   "flags": 0,
+   "md5": "2fd9f06d99081d79a4fb9be569c52189"
+  },
+  {
+   "path": "assets/audio/steps/wood_06.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "70ea618e75407c6dfdc054456c59150e"
+  },
+  {
+   "path": "assets/audio/steps/wood_07.wav.import",
+   "size": 153,
+   "flags": 0,
+   "md5": "5e73a988312bc8148361656c0adbfe98"
+  },
+  {
+   "path": "assets/audio/steps/wood_08.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "1e35021470d5874115577120b0a0aa02"
+  },
+  {
+   "path": "assets/audio/steps/wood_09.wav.import",
+   "size": 153,
+   "flags": 0,
+   "md5": "de61fbd465ac572c5e75df1f9db0217f"
+  },
+  {
+   "path": "assets/audio/steps/wood_10.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "9f149a7691ca6d3d05dc0d1349ba6926"
+  },
+  {
+   "path": "assets/audio/steps/wood_11.wav.import",
+   "size": 153,
+   "flags": 0,
+   "md5": "a843db76e4407ac9d42f488aa0eaae73"
+  },
+  {
+   "path": "assets/audio/steps/wood_12.wav.import",
+   "size": 153,
+   "flags": 0,
+   "md5": "848cc261b578ab93128d9d3170cf4f46"
+  },
+  {
+   "path": "assets/audio/steps/wood_13.wav.import",
+   "size": 154,
+   "flags": 0,
+   "md5": "a464d99d74ce7dc3ea9d0a6326bd5a8b"
+  },
+  {
+   "path": "assets/audio/wind.mp3.import",
+   "size": 151,
+   "flags": 0,
+   "md5": "7eedf63b51269a57e93210b0e2959033"
+  },
+  {
+   "path": "assets/characters/alinardo/alinardo.glb.import",
+   "size": 169,
+   "flags": 0,
+   "md5": "c66cab2112ab0857f575132a8856dab6"
+  },
+  {
+   "path": "assets/characters/alinardo/alinardo_boots_toigo_ankle_boots_male.webp.import",
+   "size": 294,
+   "flags": 0,
+   "md5": "6fa3958ccdb2787a312687817b60857c"
+  },
+  {
+   "path": "assets/characters/alinardo/alinardo_brow_eyebrow010.webp.import",
+   "size": 281,
+   "flags": 0,
+   "md5": "e76d9a6b3ca7c648a79c87b878a8ed11"
+  },
+  {
+   "path": "assets/characters/alinardo/alinardo_eye_bluegreen_blno.webp.import",
+   "size": 283,
+   "flags": 0,
+   "md5": "75123a23625e9636661dc41ba909ffd1"
+  },
+  {
+   "path": "assets/characters/alinardo/alinardo_hair_short02_grey.webp.import",
+   "size": 283,
+   "flags": 0,
+   "md5": "6d0a0c5509b4ee8fa5486e5c9f16f01a"
+  },
+  {
+   "path": "assets/characters/alinardo/alinardo_lash01.webp.import",
+   "size": 271,
+   "flags": 0,
+   "md5": "97c64184d461331a571e8b26847a57ca"
+  },
+  {
+   "path": "assets/characters/alinardo/alinardo_robe_black.webp.import",
+   "size": 276,
+   "flags": 0,
+   "md5": "cf9a219952ea0bb2fe1f6c1aad99d1d6"
+  },
+  {
+   "path": "assets/characters/alinardo/alinardo_robe_normal.webp.import",
+   "size": 277,
+   "flags": 0,
+   "md5": "f7b40dfa3b82663e462df52b415fda4c"
+  },
+  {
+   "path": "assets/characters/alinardo/alinardo_skin_onlytheghosts_old_eurasian_male.webp.import",
+   "size": 302,
+   "flags": 0,
+   "md5": "0dfceea59a4376a2fb0feee36092cb01"
+  },
+  {
+   "path": "assets/characters/lay_herd/lay_herd.glb.import",
+   "size": 169,
+   "flags": 0,
+   "md5": "b77037f2b87d45fc4ecb1166720d4223"
+  },
+  {
+   "path": "assets/characters/lay_herd/lay_herd_boots_rehmanpolanski_viking_boots.webp.import",
+   "size": 298,
+   "flags": 0,
+   "md5": "2dc21f64d493668bdc215f18e1a085de"
+  },
+  {
+   "path": "assets/characters/lay_herd/lay_herd_brow_eyebrow009.webp.import",
+   "size": 281,
+   "flags": 0,
+   "md5": "b9d3f0c6239e277c9ca5ad191125cb78"
+  },
+  {
+   "path": "assets/characters/lay_herd/lay_herd_eye_bluegreen_blno.webp.import",
+   "size": 284,
+   "flags": 0,
+   "md5": "cabe36c434354c1eb2621853c3b9a3a1"
+  },
+  {
+   "path": "assets/characters/lay_herd/lay_herd_hair_short02_grey.webp.import",
+   "size": 282,
+   "flags": 0,
+   "md5": "7726054c0d62418c50f715dd3743723d"
+  },
+  {
+   "path": "assets/characters/lay_herd/lay_herd_hose_grey.webp.import",
+   "size": 275,
+   "flags": 0,
+   "md5": "e3fb61eb80fcadd94877b45708f00ae0"
+  },
+  {
+   "path": "assets/characters/lay_herd/lay_herd_lash01.webp.import",
+   "size": 272,
+   "flags": 0,
+   "md5": "0bb1b06ae848448d7021ec916c74fece"
+  },
+  {
+   "path": "assets/characters/lay_herd/lay_herd_skin_jartur69_old_slavic_male_with_genitals_and_beard.webp.import",
+   "size": 319,
+   "flags": 0,
+   "md5": "5e7c4c9bdf69ffa24705f0eca4468bdb"
+  },
+  {
+   "path": "assets/characters/lay_herd/lay_herd_tunic_undyed.webp.import",
+   "size": 278,
+   "flags": 0,
+   "md5": "0024bf726bb9c22a66687b0c6e180cdd"
+  },
+  {
+   "path": "assets/characters/lay_old/lay_old.glb.import",
+   "size": 169,
+   "flags": 0,
+   "md5": "1f884a79ec97ce503520d5e59707e45a"
+  },
+  {
+   "path": "assets/characters/lay_old/lay_old_apron_linen.webp.import",
+   "size": 276,
+   "flags": 0,
+   "md5": "4456f94895f7de199246cc3fa2c6918e"
+  },
+  {
+   "path": "assets/characters/lay_old/lay_old_beardn_wdg_scruffy_beard_grey.webp.import",
+   "size": 294,
+   "flags": 0,
+   "md5": "5d295cad2936eba32858196beae94cc0"
+  },
+  {
+   "path": "assets/characters/lay_old/lay_old_boots_punkduck_medieval_boots.webp.import",
+   "size": 294,
+   "flags": 0,
+   "md5": "bd4aa2b7279a019dcec361a5e8ab0184"
+  },
+  {
+   "path": "assets/characters/lay_old/lay_old_brow_eyebrow009.webp.import",
+   "size": 280,
+   "flags": 0,
+   "md5": "d8d8a071c30ce3a94cab7211c72d96d2"
+  },
+  {
+   "path": "assets/characters/lay_old/lay_old_eye_grey_old.webp.import",
+   "size": 277,
+   "flags": 0,
+   "md5": "0af645f843b257cee6674c30ef2c90f7"
+  },
+  {
+   "path": "assets/characters/lay_old/lay_old_hairn_short01_grey.webp.import",
+   "size": 283,
+   "flags": 0,
+   "md5": "b4268edd48b8674f6738f1f4f72c3a0e"
+  },
+  {
+   "path": "assets/characters/lay_old/lay_old_hose_grey.webp.import",
+   "size": 273,
+   "flags": 0,
+   "md5": "a2358cafa3e67fb086d28f4ce8b21fa5"
+  },
+  {
+   "path": "assets/characters/lay_old/lay_old_lash01.webp.import",
+   "size": 271,
+   "flags": 0,
+   "md5": "b12ff80e29fe0c79b01bc9e76826bd2d"
+  },
+  {
+   "path": "assets/characters/lay_old/lay_old_skin_old_caucasian_male.webp.import",
+   "size": 287,
+   "flags": 0,
+   "md5": "f8cd315a5f8776c8491dce20e3b6467d"
+  },
+  {
+   "path": "assets/characters/lay_old/lay_old_tunic_undyed.webp.import",
+   "size": 277,
+   "flags": 0,
+   "md5": "58b972fee9a0c80d2609c7b6a181a0e6"
+  },
+  {
+   "path": "assets/characters/monk_a/monk_a.glb.import",
+   "size": 167,
+   "flags": 0,
+   "md5": "21e06dffc61025474d1d29111b98cf6b"
+  },
+  {
+   "path": "assets/characters/monk_a/monk_a_boots_toigo_ankle_boots_male.webp.import",
+   "size": 291,
+   "flags": 0,
+   "md5": "705b6de4cc1cbd4b213cbd84bde4bccc"
+  },
+  {
+   "path": "assets/characters/monk_a/monk_a_brow_eyebrow001.webp.import",
+   "size": 279,
+   "flags": 0,
+   "md5": "c0b23dc7e668acfffeb3a97513afc603"
+  },
+  {
+   "path": "assets/characters/monk_a/monk_a_eye_brown_brot.webp.import",
+   "size": 277,
+   "flags": 0,
+   "md5": "3483658321776350522e296382fb0257"
+  },
+  {
+   "path": "assets/characters/monk_a/monk_a_hair_short02_brown.webp.import",
+   "size": 282,
+   "flags": 0,
+   "md5": "036d58039d5a93d2ae3433766b5558ab"
+  },
+  {
+   "path": "assets/characters/monk_a/monk_a_lash01.webp.import",
+   "size": 270,
+   "flags": 0,
+   "md5": "2bb31408613d25d6d0aa54ebed920115"
+  },
+  {
+   "path": "assets/characters/monk_a/monk_a_robe_black.webp.import",
+   "size": 273,
+   "flags": 0,
+   "md5": "6da2725a9fdf0447a8351228fd06071d"
+  },
+  {
+   "path": "assets/characters/monk_a/monk_a_robe_normal.webp.import",
+   "size": 275,
+   "flags": 0,
+   "md5": "9614231c255c8cc0650cbc81e965c797"
+  },
+  {
+   "path": "assets/characters/monk_a/monk_a_skin_middleage_caucasian_male.webp.import",
+   "size": 292,
+   "flags": 0,
+   "md5": "47b073c40cd9e81413924df0cc491833"
+  },
+  {
+   "path": "assets/characters/monk_b/monk_b.glb.import",
+   "size": 168,
+   "flags": 0,
+   "md5": "6d3ec6f392bedaf4a817d2c708a1c9fb"
+  },
+  {
+   "path": "assets/characters/monk_b/monk_b_boots_toigo_ankle_boots_male.webp.import",
+   "size": 292,
+   "flags": 0,
+   "md5": "ae717c8febde4082f9d05b7de546a1bc"
+  },
+  {
+   "path": "assets/characters/monk_b/monk_b_brow_eyebrow005.webp.import",
+   "size": 278,
+   "flags": 0,
+   "md5": "ff6ffbbd9a8f1ddf6214c766498dd312"
+  },
+  {
+   "path": "assets/characters/monk_b/monk_b_eye_brown_brot.webp.import",
+   "size": 278,
+   "flags": 0,
+   "md5": "7837f75153fe7637bcbc62f87979bbde"
+  },
+  {
+   "path": "assets/characters/monk_b/monk_b_hair_short02_grey.webp.import",
+   "size": 281,
+   "flags": 0,
+   "md5": "8b3a2773e5c9417f558c61158451e0aa"
+  },
+  {
+   "path": "assets/characters/monk_b/monk_b_lash01.webp.import",
+   "size": 270,
+   "flags": 0,
+   "md5": "ee1b3b62e4a39015c54e84a3eb54f2f3"
+  },
+  {
+   "path": "assets/characters/monk_b/monk_b_robe_black.webp.import",
+   "size": 274,
+   "flags": 0,
+   "md5": "e2cdfdf02cfdab289f14f1a81cf53fa0"
+  },
+  {
+   "path": "assets/characters/monk_b/monk_b_robe_normal.webp.import",
+   "size": 275,
+   "flags": 0,
+   "md5": "c9aa936eaf5c161784220f4b5348a1a2"
+  },
+  {
+   "path": "assets/characters/monk_b/monk_b_skin_old_caucasian_male.webp.import",
+   "size": 286,
+   "flags": 0,
+   "md5": "1c8aba0877c4fdac9691e267a3dbe7b4"
+  },
+  {
+   "path": "assets/characters/monk_c/monk_c.glb.import",
+   "size": 168,
+   "flags": 0,
+   "md5": "6c7cd291d860fd4ef5de4e6dcef95560"
+  },
+  {
+   "path": "assets/characters/monk_c/monk_c_boots_toigo_ankle_boots_male.webp.import",
+   "size": 291,
+   "flags": 0,
+   "md5": "a200b8ada480f68487d1b76ffe6eef3b"
+  },
+  {
+   "path": "assets/characters/monk_c/monk_c_brow_eyebrow006.webp.import",
+   "size": 279,
+   "flags": 0,
+   "md5": "95b9b2fa7bfad972cfdfa69f7dfaa025"
+  },
+  {
+   "path": "assets/characters/monk_c/monk_c_eye_blue_bl_c.webp.import",
+   "size": 277,
+   "flags": 0,
+   "md5": "00abbd1a5180e07446a6930d0f197719"
+  },
+  {
+   "path": "assets/characters/monk_c/monk_c_hair_short02_brown.webp.import",
+   "size": 282,
+   "flags": 0,
+   "md5": "ba9b84743ba72c206d48ff9b6d94da1b"
+  },
+  {
+   "path": "assets/characters/monk_c/monk_c_lash01.webp.import",
+   "size": 270,
+   "flags": 0,
+   "md5": "0e7b4811dc913b9cdfc0acdb7ccc28cc"
+  },
+  {
+   "path": "assets/characters/monk_c/monk_c_robe_black.webp.import",
+   "size": 273,
+   "flags": 0,
+   "md5": "390758b1acfa6b959c79f7f053cdc372"
+  },
+  {
+   "path": "assets/characters/monk_c/monk_c_robe_normal.webp.import",
+   "size": 274,
+   "flags": 0,
+   "md5": "28c699ed6f9be35d059a8737840b396f"
+  },
+  {
+   "path": "assets/characters/monk_c/monk_c_skin_toigo_light_skin_male_freckles_s0.webp.import",
+   "size": 301,
+   "flags": 0,
+   "md5": "4f511152ee14ef2cc298f38b483d6ecb"
+  },
+  {
+   "path": "assets/characters/monk_d/monk_d.glb.import",
+   "size": 167,
+   "flags": 0,
+   "md5": "6cc1e320033a9fd2a3cf02dc0bfcad94"
+  },
+  {
+   "path": "assets/characters/monk_d/monk_d_boots_toigo_ankle_boots_male.webp.import",
+   "size": 291,
+   "flags": 0,
+   "md5": "1a2816b23a644873fa1fc21bf0a1f569"
+  },
+  {
+   "path": "assets/characters/monk_d/monk_d_brow_eyebrow008.webp.import",
+   "size": 277,
+   "flags": 0,
+   "md5": "aaa033e785a677cdfcf29add4f6d820e"
+  },
+  {
+   "path": "assets/characters/monk_d/monk_d_eye_bluegreen_blno.webp.import",
+   "size": 282,
+   "flags": 0,
+   "md5": "fc2549f1527d95f57daf97fdfe350b0f"
+  },
+  {
+   "path": "assets/characters/monk_d/monk_d_hair_short02_grey.webp.import",
+   "size": 281,
+   "flags": 0,
+   "md5": "d38ce4c58f05deaf16d2daed2b54d054"
+  },
+  {
+   "path": "assets/characters/monk_d/monk_d_lash01.webp.import",
+   "size": 270,
+   "flags": 0,
+   "md5": "abdab86a8a2a556750bb91aaf6df8c72"
+  },
+  {
+   "path": "assets/characters/monk_d/monk_d_robe_black.webp.import",
+   "size": 274,
+   "flags": 0,
+   "md5": "35cbca8832110c8704f1cd93e2988c21"
+  },
+  {
+   "path": "assets/characters/monk_d/monk_d_robe_normal.webp.import",
+   "size": 275,
+   "flags": 0,
+   "md5": "f448b6e203b2a00b8a41a60ccbf17a33"
+  },
+  {
+   "path": "assets/characters/monk_d/monk_d_skin_jartur69_old_slavic_male_with_genitals_and_beard.webp.import",
+   "size": 317,
+   "flags": 0,
+   "md5": "f4561971f166867ec6e2deced03cc909"
+  },
+  {
+   "path": "assets/characters/monk_e/monk_e.glb.import",
+   "size": 167,
+   "flags": 0,
+   "md5": "451cee0d1db5ef862eae49812e0c2dce"
+  },
+  {
+   "path": "assets/characters/monk_e/monk_e_boots_toigo_ankle_boots_male.webp.import",
+   "size": 292,
+   "flags": 0,
+   "md5": "3bb6c1e0842b7e5f003816c0591ab136"
+  },
+  {
+   "path": "assets/characters/monk_e/monk_e_brow_eyebrow003.webp.import",
+   "size": 279,
+   "flags": 0,
+   "md5": "96dfabacb83de47d858513cb8c9a88e5"
+  },
+  {
+   "path": "assets/characters/monk_e/monk_e_eye_brown_brot.webp.import",
+   "size": 278,
+   "flags": 0,
+   "md5": "0786bfd108b64798f84c20cf3d96b124"
+  },
+  {
+   "path": "assets/characters/monk_e/monk_e_hair_short02_brown.webp.import",
+   "size": 282,
+   "flags": 0,
+   "md5": "65a920fdfb6fcec7b33d891fb7c96e40"
+  },
+  {
+   "path": "assets/characters/monk_e/monk_e_lash01.webp.import",
+   "size": 270,
+   "flags": 0,
+   "md5": "0100327a9aaefc10974c031e0e3ddfff"
+  },
+  {
+   "path": "assets/characters/monk_e/monk_e_robe_black.webp.import",
+   "size": 274,
+   "flags": 0,
+   "md5": "9bff6ec11623d13cce14da113c00a145"
+  },
+  {
+   "path": "assets/characters/monk_e/monk_e_robe_normal.webp.import",
+   "size": 275,
+   "flags": 0,
+   "md5": "0997729fe61d25edc9dda5656e73af3a"
+  },
+  {
+   "path": "assets/characters/monk_e/monk_e_skin_toigo_light_skin_male_bronze_s0.webp.import",
+   "size": 299,
+   "flags": 0,
+   "md5": "7a4e4e365a1ced43cadba757fec5053a"
+  },
+  {
+   "path": "assets/characters/monk_f/monk_f.glb.import",
+   "size": 168,
+   "flags": 0,
+   "md5": "469f58dd6b2ece7235748469a6970bdd"
+  },
+  {
+   "path": "assets/characters/monk_f/monk_f_boots_toigo_ankle_boots_male.webp.import",
+   "size": 291,
+   "flags": 0,
+   "md5": "a0c3683bd72da0564d21c188829479ab"
+  },
+  {
+   "path": "assets/characters/monk_f/monk_f_brow_eyebrow002.webp.import",
+   "size": 278,
+   "flags": 0,
+   "md5": "2bf142ec4c9392ce4d4b42d89ef4160d"
+  },
+  {
+   "path": "assets/characters/monk_f/monk_f_eye_blue_bl_c.webp.import",
+   "size": 277,
+   "flags": 0,
+   "md5": "0b27f2e3fef6261c10ab75908e80bbc4"
+  },
+  {
+   "path": "assets/characters/monk_f/monk_f_hair_short02_brown.webp.import",
+   "size": 282,
+   "flags": 0,
+   "md5": "bb6ef544eca256f762cc4230da2ede75"
+  },
+  {
+   "path": "assets/characters/monk_f/monk_f_lash01.webp.import",
+   "size": 270,
+   "flags": 0,
+   "md5": "47d2de9c00b39f9b90ece1ce596062cc"
+  },
+  {
+   "path": "assets/characters/monk_f/monk_f_robe_black.webp.import",
+   "size": 274,
+   "flags": 0,
+   "md5": "a2fa7e0d01c3bc5896e54891e6218539"
+  },
+  {
+   "path": "assets/characters/monk_f/monk_f_robe_normal.webp.import",
+   "size": 275,
+   "flags": 0,
+   "md5": "1457f1f9bfa885d951e4c56740ebd942"
+  },
+  {
+   "path": "assets/characters/monk_f/monk_f_skin_young_caucasian_male.webp.import",
+   "size": 289,
+   "flags": 0,
+   "md5": "7d6e52f8610fbdf95308aee3d2fee398"
+  },
+  {
+   "path": "assets/characters/monk_g/monk_g.glb.import",
+   "size": 168,
+   "flags": 0,
+   "md5": "001d9df9561afa9cb50994367766a274"
+  },
+  {
+   "path": "assets/characters/monk_g/monk_g_boots_toigo_ankle_boots_male.webp.import",
+   "size": 292,
+   "flags": 0,
+   "md5": "f28e60a6f60d92648e4129ee46859a4d"
+  },
+  {
+   "path": "assets/characters/monk_g/monk_g_brow_eyebrow009.webp.import",
+   "size": 278,
+   "flags": 0,
+   "md5": "e92e4f2e525653d171e93fe315a869c0"
+  },
+  {
+   "path": "assets/characters/monk_g/monk_g_eye_grey_old.webp.import",
+   "size": 275,
+   "flags": 0,
+   "md5": "116e5e1e9ae1b9602ccb6a0c43467919"
+  },
+  {
+   "path": "assets/characters/monk_g/monk_g_hair_short02_grey.webp.import",
+   "size": 281,
+   "flags": 0,
+   "md5": "562e0c7107ba5ddb4f9e2a04dcbee502"
+  },
+  {
+   "path": "assets/characters/monk_g/monk_g_lash01.webp.import",
+   "size": 270,
+   "flags": 0,
+   "md5": "f762f828411cb6dec4ae18c56537a0cf"
+  },
+  {
+   "path": "assets/characters/monk_g/monk_g_robe_black.webp.import",
+   "size": 274,
+   "flags": 0,
+   "md5": "0e1b65093ad276e849632a51bf1f00fc"
+  },
+  {
+   "path": "assets/characters/monk_g/monk_g_robe_normal.webp.import",
+   "size": 275,
+   "flags": 0,
+   "md5": "ed57324c4f1cc00b68268e0bdd3d4b29"
+  },
+  {
+   "path": "assets/characters/monk_g/monk_g_skin_old_caucasian_male.webp.import",
+   "size": 287,
+   "flags": 0,
+   "md5": "cd2cd5630c7dc7edf6e8a4cc8584ad45"
+  },
+  {
+   "path": "assets/characters/novice_a/novice_a.glb.import",
+   "size": 170,
+   "flags": 0,
+   "md5": "5fb391d843669b0ba654b6d006332e1b"
+  },
+  {
+   "path": "assets/characters/novice_a/novice_a_boots_toigo_ankle_boots_male.webp.import",
+   "size": 294,
+   "flags": 0,
+   "md5": "0477615038fd250404a0bcb83fb036fb"
+  },
+  {
+   "path": "assets/characters/novice_a/novice_a_brow_eyebrow002.webp.import",
+   "size": 281,
+   "flags": 0,
+   "md5": "41d24780690ba4b6ad9c5f45d51009d1"
+  },
+  {
+   "path": "assets/characters/novice_a/novice_a_eye_brownlight_brus.webp.import",
+   "size": 285,
+   "flags": 0,
+   "md5": "0ef4a1a3c205ab7a1e1bfe9efc9921e9"
+  },
+  {
+   "path": "assets/characters/novice_a/novice_a_hair_short02_brown.webp.import",
+   "size": 284,
+   "flags": 0,
+   "md5": "333ebae113cc49f7e78d80ec783f659a"
+  },
+  {
+   "path": "assets/characters/novice_a/novice_a_lash01.webp.import",
+   "size": 272,
+   "flags": 0,
+   "md5": "63bf22e0fd2e579096965b3c5b357285"
+  },
+  {
+   "path": "assets/characters/novice_a/novice_a_robe_black.webp.import",
+   "size": 276,
+   "flags": 0,
+   "md5": "f85e4f798ee15f08390cf4178f9d992b"
+  },
+  {
+   "path": "assets/characters/novice_a/novice_a_robe_normal.webp.import",
+   "size": 277,
+   "flags": 0,
+   "md5": "43091db761d72eec0762a7e4878d32ef"
+  },
+  {
+   "path": "assets/characters/novice_a/novice_a_skin_young_caucasian_male.webp.import",
+   "size": 291,
+   "flags": 0,
+   "md5": "f960ab7a0373dbfa02490b44cd00ce36"
+  },
+  {
+   "path": "assets/characters/novice_b/novice_b.glb.import",
+   "size": 170,
+   "flags": 0,
+   "md5": "62191be623fe9d4360ca2b21f3933740"
+  },
+  {
+   "path": "assets/characters/novice_b/novice_b_boots_toigo_ankle_boots_male.webp.import",
+   "size": 294,
+   "flags": 0,
+   "md5": "4807282b875f2732b0e9f9ef2e40a444"
+  },
+  {
+   "path": "assets/characters/novice_b/novice_b_brow_eyebrow001.webp.import",
+   "size": 281,
+   "flags": 0,
+   "md5": "ef89b48a492feb5ce5a5a4fe4f027400"
+  },
+  {
+   "path": "assets/characters/novice_b/novice_b_eye_brown_brot.webp.import",
+   "size": 280,
+   "flags": 0,
+   "md5": "6448db91ec497b6efc5aca48feb9d681"
+  },
+  {
+   "path": "assets/characters/novice_b/novice_b_hair_short02_brown.webp.import",
+   "size": 284,
+   "flags": 0,
+   "md5": "d1fd1558581978635dda846372a7f0f2"
+  },
+  {
+   "path": "assets/characters/novice_b/novice_b_lash01.webp.import",
+   "size": 271,
+   "flags": 0,
+   "md5": "a8f201f24b1b3fc0e1feb16c9febdb36"
+  },
+  {
+   "path": "assets/characters/novice_b/novice_b_robe_black.webp.import",
+   "size": 276,
+   "flags": 0,
+   "md5": "5427d2c94bb006906b771bbb648af317"
+  },
+  {
+   "path": "assets/characters/novice_b/novice_b_robe_normal.webp.import",
+   "size": 277,
+   "flags": 0,
+   "md5": "e2f7c63f9746e8f6eaa84ddcd81f5206"
+  },
+  {
+   "path": "assets/characters/novice_b/novice_b_skin_young_caucasian_male2.webp.import",
+   "size": 292,
+   "flags": 0,
+   "md5": "19bdc174dca3126fbd5e1baffda45721"
+  },
+  {
+   "path": "assets/characters/scribe_a/scribe_a.glb.import",
+   "size": 170,
+   "flags": 0,
+   "md5": "259c3ed155ee44f883807398b79aad96"
+  },
+  {
+   "path": "assets/characters/scribe_a/scribe_a_boots_toigo_ankle_boots_male.webp.import",
+   "size": 294,
+   "flags": 0,
+   "md5": "d0a576c91e963a4d9bbba8ce130a0cbb"
+  },
+  {
+   "path": "assets/characters/scribe_a/scribe_a_brow_eyebrow002.webp.import",
+   "size": 281,
+   "flags": 0,
+   "md5": "d3c9d84d1d5f4f328dc119a931faf5fc"
+  },
+  {
+   "path": "assets/characters/scribe_a/scribe_a_eye_brownlight_brus.webp.import",
+   "size": 285,
+   "flags": 0,
+   "md5": "b1efa14f2b0a92a6bb3e8dcab04829db"
+  },
+  {
+   "path": "assets/characters/scribe_a/scribe_a_hair_short02_brown.webp.import",
+   "size": 283,
+   "flags": 0,
+   "md5": "06c94afd5916d3cbfcc5c752b73d6f81"
+  },
+  {
+   "path": "assets/characters/scribe_a/scribe_a_lash01.webp.import",
+   "size": 272,
+   "flags": 0,
+   "md5": "46b01b15c768da41f83fe16ace96f8fc"
+  },
+  {
+   "path": "assets/characters/scribe_a/scribe_a_robe_black.webp.import",
+   "size": 276,
+   "flags": 0,
+   "md5": "45ae58f7cd2cf2711e01d00bc642a5ea"
+  },
+  {
+   "path": "assets/characters/scribe_a/scribe_a_robe_normal.webp.import",
+   "size": 276,
+   "flags": 0,
+   "md5": "12c2435c52b668cd8552206b8ff9e4f2"
+  },
+  {
+   "path": "assets/characters/scribe_a/scribe_a_skin_young_caucasian_male.webp.import",
+   "size": 290,
+   "flags": 0,
+   "md5": "8910f3f53e1f1500ddd8a455e7ac870e"
+  },
+  {
+   "path": "assets/fonts/eb-garamond-latin-400-italic.woff2.import",
+   "size": 187,
+   "flags": 0,
+   "md5": "29929fcb1295d099a2b8aa5486994067"
+  },
+  {
+   "path": "assets/fonts/eb-garamond-latin-400-normal.woff2.import",
+   "size": 186,
+   "flags": 0,
+   "md5": "102bcb1f438f57a37d20c2d5dd93921d"
+  },
+  {
+   "path": "assets/fonts/eb-garamond-latin-ext-400-normal.woff2.import",
+   "size": 190,
+   "flags": 0,
+   "md5": "965557df3409c558297f4b7f7a2006c2"
+  },
+  {
+   "path": "assets/fonts/ebgaramond-OFL.txt",
+   "size": 4398,
+   "flags": 0,
+   "md5": "9166a25d533447579c7c3af6dc8e0bdb"
+  },
+  {
+   "path": "assets/fonts/grenze-gotisch-latin-500-normal.woff2.import",
+   "size": 189,
+   "flags": 0,
+   "md5": "3d8c48ebf24ee27c7f41556dfe68b59d"
+  },
+  {
+   "path": "assets/fonts/grenze-gotisch-latin-600-normal.woff2.import",
+   "size": 190,
+   "flags": 0,
+   "md5": "301f0de45c2bdaba684fcc2546a3b9ee"
+  },
+  {
+   "path": "assets/fonts/grenzegotisch-OFL.txt",
+   "size": 4402,
+   "flags": 0,
+   "md5": "5e8bd60001fef0f8500cbb32efe37bfc"
+  },
+  {
+   "path": "assets/fonts/unifrakturmaguntia-OFL.txt",
+   "size": 4511,
+   "flags": 0,
+   "md5": "38fe86a23f0a8ee817b5b238f6de0584"
+  },
+  {
+   "path": "assets/fonts/unifrakturmaguntia-latin-400-normal.woff2.import",
+   "size": 193,
+   "flags": 0,
+   "md5": "3b6bf3bf3a02c99d9b24b603cc4e919d"
+  },
+  {
+   "path": "assets/textures/aed_stone_a.jpg.import",
+   "size": 257,
+   "flags": 0,
+   "md5": "51bd02f447ef2fcaa3294d5bb857fd72"
+  },
+  {
+   "path": "assets/textures/aed_stone_d.jpg.import",
+   "size": 256,
+   "flags": 0,
+   "md5": "3cd16625d8609c6e3a3517ed9fc2f560"
+  },
+  {
+   "path": "assets/textures/aed_stone_n.jpg.import",
+   "size": 256,
+   "flags": 0,
+   "md5": "f31cbefc8594a960938b160e3430c500"
+  },
+  {
+   "path": "assets/textures/ashlar_a.jpg.import",
+   "size": 254,
+   "flags": 0,
+   "md5": "9abb40768827c3e948a8080d9e187e75"
+  },
+  {
+   "path": "assets/textures/ashlar_d.jpg.import",
+   "size": 254,
+   "flags": 0,
+   "md5": "f049f21291784229efcd83c001555371"
+  },
+  {
+   "path": "assets/textures/ashlar_n.jpg.import",
+   "size": 254,
+   "flags": 0,
+   "md5": "9043e8287ab2df655ea8b6a5d948af8f"
+  },
+  {
+   "path": "assets/textures/beam_a.jpg.import",
+   "size": 251,
+   "flags": 0,
+   "md5": "41bced30128d8d546438f045b87f5576"
+  },
+  {
+   "path": "assets/textures/beam_d.jpg.import",
+   "size": 251,
+   "flags": 0,
+   "md5": "3b14f55dd164937a772ade4c2f6637f2"
+  },
+  {
+   "path": "assets/textures/beam_n.jpg.import",
+   "size": 251,
+   "flags": 0,
+   "md5": "a82fb68740dc7166e241bb44ce7db437"
+  },
+  {
+   "path": "assets/textures/church_stone_a.jpg.import",
+   "size": 260,
+   "flags": 0,
+   "md5": "cac5c1d62f7e63b0948ac060552d835c"
+  },
+  {
+   "path": "assets/textures/church_stone_d.jpg.import",
+   "size": 259,
+   "flags": 0,
+   "md5": "5e0a7764494faa7a232860b6426cb078"
+  },
+  {
+   "path": "assets/textures/church_stone_n.jpg.import",
+   "size": 260,
+   "flags": 0,
+   "md5": "89ba35bc89d08218891d4f3f057eb790"
+  },
+  {
+   "path": "assets/textures/door_planks_a.jpg.import",
+   "size": 258,
+   "flags": 0,
+   "md5": "e5846a62834f993ba4b935045475fd2f"
+  },
+  {
+   "path": "assets/textures/door_planks_d.jpg.import",
+   "size": 259,
+   "flags": 0,
+   "md5": "1a13f5b8e3987d909d0a48babd21911d"
+  },
+  {
+   "path": "assets/textures/door_planks_n.jpg.import",
+   "size": 259,
+   "flags": 0,
+   "md5": "2bdceeda4156386096b629f0e88163d8"
+  },
+  {
+   "path": "assets/textures/flag_a.jpg.import",
+   "size": 251,
+   "flags": 0,
+   "md5": "877b6ac23e51b3740631237840a8dca8"
+  },
+  {
+   "path": "assets/textures/flag_d.jpg.import",
+   "size": 251,
+   "flags": 0,
+   "md5": "7625f1244fec82a608b73a058059f0d9"
+  },
+  {
+   "path": "assets/textures/flag_n.jpg.import",
+   "size": 252,
+   "flags": 0,
+   "md5": "2c0444b7f3369dce737887684aaad8f8"
+  },
+  {
+   "path": "assets/textures/floorboards_a.jpg.import",
+   "size": 259,
+   "flags": 0,
+   "md5": "3c24e8cf60c40aa6ac537bc47eafffcb"
+  },
+  {
+   "path": "assets/textures/floorboards_d.jpg.import",
+   "size": 259,
+   "flags": 0,
+   "md5": "40f241725394bb2c78d2c10b650084b4"
+  },
+  {
+   "path": "assets/textures/floorboards_n.jpg.import",
+   "size": 258,
+   "flags": 0,
+   "md5": "8ec752de5a397591b11d943d03412108"
+  },
+  {
+   "path": "assets/textures/plaster_a.jpg.import",
+   "size": 255,
+   "flags": 0,
+   "md5": "ce86cfa49a5ca2d647647035d244cf7f"
+  },
+  {
+   "path": "assets/textures/plaster_d.jpg.import",
+   "size": 254,
+   "flags": 0,
+   "md5": "7da04e0ff16aeebf14be059dea064f7c"
+  },
+  {
+   "path": "assets/textures/plaster_n.jpg.import",
+   "size": 255,
+   "flags": 0,
+   "md5": "10392527d2a00ea5a6ed2794da620ee1"
+  },
+  {
+   "path": "assets/textures/roof_a.jpg.import",
+   "size": 252,
+   "flags": 0,
+   "md5": "1e93564171a72c44137b4efe7993faca"
+  },
+  {
+   "path": "assets/textures/roof_d.jpg.import",
+   "size": 252,
+   "flags": 0,
+   "md5": "bec06ea3169a48f1a184bee0e61a6cda"
+  },
+  {
+   "path": "assets/textures/roof_n.jpg.import",
+   "size": 251,
+   "flags": 0,
+   "md5": "455950f183c779874917211e4eb2253a"
+  },
+  {
+   "path": "assets/textures/rubble_a.jpg.import",
+   "size": 253,
+   "flags": 0,
+   "md5": "255383433473181703381c1c675e3123"
+  },
+  {
+   "path": "assets/textures/rubble_d.jpg.import",
+   "size": 254,
+   "flags": 0,
+   "md5": "ec6db7c3ea645b5ab8d7bb8887bd7407"
+  },
+  {
+   "path": "assets/textures/rubble_n.jpg.import",
+   "size": 253,
+   "flags": 0,
+   "md5": "7c7d59ff5268c5857a0f8cd1b95d6401"
+  },
+  {
+   "path": "assets/textures/snow_a.jpg.import",
+   "size": 252,
+   "flags": 0,
+   "md5": "1853161650ae3def04643512576cd7e5"
+  },
+  {
+   "path": "assets/textures/snow_d.jpg.import",
+   "size": 251,
+   "flags": 0,
+   "md5": "a91d749fd9ff22ff71941e90b46d08d2"
+  },
+  {
+   "path": "assets/textures/snow_n.jpg.import",
+   "size": 251,
+   "flags": 0,
+   "md5": "55b497bab2bf5c7a85f4eb4161eaa12a"
+  },
+  {
+   "path": "assets/textures/soil_a.jpg.import",
+   "size": 252,
+   "flags": 0,
+   "md5": "6ed85f2066ade9d6bf6b61c9ca7f61cd"
+  },
+  {
+   "path": "assets/textures/soil_d.jpg.import",
+   "size": 252,
+   "flags": 0,
+   "md5": "c5448c4de9a630543426d6a36ebd1e2c"
+  },
+  {
+   "path": "assets/textures/soil_n.jpg.import",
+   "size": 251,
+   "flags": 0,
+   "md5": "097cdaf3e23d703f10ca720779f5bfce"
+  },
+  {
+   "path": "assets/textures/wall_stone_a.jpg.import",
+   "size": 258,
+   "flags": 0,
+   "md5": "0a5ea8da99c5173ea6b87ace67d158d5"
+  },
+  {
+   "path": "assets/textures/wall_stone_d.jpg.import",
+   "size": 257,
+   "flags": 0,
+   "md5": "1f5cb0010da35dfce2c8a67014523f3b"
+  },
+  {
+   "path": "assets/textures/wall_stone_n.jpg.import",
+   "size": 256,
+   "flags": 0,
+   "md5": "ab42eac917bc8f72d1ad4e197bc66ac1"
+  },
+  {
+   "path": "assets/textures/wood_a.jpg.import",
+   "size": 252,
+   "flags": 0,
+   "md5": "c51fa2204579c4c678d1fb616efc2023"
+  },
+  {
+   "path": "assets/textures/wood_d.jpg.import",
+   "size": 251,
+   "flags": 0,
+   "md5": "67b7bc05ae2e0a7f2dda737256ff86a6"
+  },
+  {
+   "path": "assets/textures/wood_n.jpg.import",
+   "size": 252,
+   "flags": 0,
+   "md5": "7d4598384f63d71cc5a63f507aeb4fa4"
+  },
+  {
+   "path": "assets/world/cells/church_exterior.glb.import",
+   "size": 177,
+   "flags": 0,
+   "md5": "d294209c9087a37a4663bbce1ea14507"
+  },
+  {
+   "path": "assets/world/cells/church_interior.glb.import",
+   "size": 176,
+   "flags": 0,
+   "md5": "ad2e01780a120e7b017d6c4e7556978b"
+  },
+  {
+   "path": "assets/world/cells/cloister.glb.import",
+   "size": 170,
+   "flags": 0,
+   "md5": "51acb0e292ea33ec78fe539f600ee2d8"
+  },
+  {
+   "path": "assets/world/cells/cloister_context.glb.import",
+   "size": 178,
+   "flags": 0,
+   "md5": "c6ec8cb4eb89d8974fa91d50876de712"
+  },
+  {
+   "path": "assets/world/cells/ossuary_stair.glb.import",
+   "size": 175,
+   "flags": 0,
+   "md5": "84e28d720a53ef0a7637af3a72b3e0b7"
+  },
+  {
+   "path": "assets/world/cells/skull_chapel.glb.import",
+   "size": 173,
+   "flags": 0,
+   "md5": "3dbf6f4846d8930ab6017b111bdbec27"
+  },
+  {
+   "path": "assets/world/collision/church_exterior.glb.import",
+   "size": 177,
+   "flags": 0,
+   "md5": "401e8e06e8af2211bf5b91de0b391114"
+  },
+  {
+   "path": "assets/world/collision/church_interior.glb.import",
+   "size": 176,
+   "flags": 0,
+   "md5": "7273f172051dfb118ba737a458d77f90"
+  },
+  {
+   "path": "assets/world/collision/cloister.glb.import",
+   "size": 170,
+   "flags": 0,
+   "md5": "9c41df4d0ce3368f54bd537f371200a5"
+  },
+  {
+   "path": "assets/world/collision/cloister_context.glb.import",
+   "size": 177,
+   "flags": 0,
+   "md5": "f5c4f692765941508a1e4029f02e4208"
+  },
+  {
+   "path": "assets/world/collision/ossuary_stair.glb.import",
+   "size": 175,
+   "flags": 0,
+   "md5": "3387f372a86582ab784f1069b8b1d369"
+  },
+  {
+   "path": "assets/world/collision/skull_chapel.glb.import",
+   "size": 173,
+   "flags": 0,
+   "md5": "10da036ae9bd5ddd25cdccd9d67dd9d8"
+  },
+  {
+   "path": "assets/world/day1a/cells/aedificium.glb.import",
+   "size": 171,
+   "flags": 0,
+   "md5": "97302692b6e62acd8da3b62fe07f3a48"
+  },
+  {
+   "path": "assets/world/day1a/cells/church_west.glb.import",
+   "size": 173,
+   "flags": 0,
+   "md5": "2c4ec9c9d85a522db47acdda57499869"
+  },
+  {
+   "path": "assets/world/day1a/cells/flower_garden.glb.import",
+   "size": 175,
+   "flags": 0,
+   "md5": "3337d253ecd94ea894db50ae5dfb56a2"
+  },
+  {
+   "path": "assets/world/day1a/cells/gardens_west.glb.import",
+   "size": 174,
+   "flags": 0,
+   "md5": "df044897de8ee467e71d32a09462551e"
+  },
+  {
+   "path": "assets/world/day1a/cells/gate.glb.import",
+   "size": 166,
+   "flags": 0,
+   "md5": "8106ebd67048eff18c3b33576b00cde7"
+  },
+  {
+   "path": "assets/world/day1a/cells/hospice.glb.import",
+   "size": 168,
+   "flags": 0,
+   "md5": "8774c00a9eafac2c1600a6de5f343576"
+  },
+  {
+   "path": "assets/world/day1a/cells/west_context.glb.import",
+   "size": 173,
+   "flags": 0,
+   "md5": "ef8de08bf050c82863c182f8d166439c"
+  },
+  {
+   "path": "assets/world/day1a/collision/flower_garden.glb.import",
+   "size": 174,
+   "flags": 0,
+   "md5": "31a358e19336cbca9fc62c7a0834ec9a"
+  },
+  {
+   "path": "assets/world/day1a/collision/gate.glb.import",
+   "size": 166,
+   "flags": 0,
+   "md5": "61e8e10c02f4aca8e551546a365824a2"
+  },
+  {
+   "path": "assets/world/day1a/collision/hospice.glb.import",
+   "size": 168,
+   "flags": 0,
+   "md5": "4939df2f89e62ddda2aa9f7463f35b19"
+  },
+  {
+   "path": "assets/world/day1a/collision/west_context.glb.import",
+   "size": 174,
+   "flags": 0,
+   "md5": "b7ef7a40533da7c361cbf90ca10b4ece"
+  },
+  {
+   "path": "assets/world/day1a/fields/coarse_height.bin",
+   "size": 47524,
+   "flags": 0,
+   "md5": "bdb7add55029debf15c5fef0f8f12a1c"
+  },
+  {
+   "path": "assets/world/day1a/fields/far_ring.bin",
+   "size": 1272960,
+   "flags": 0,
+   "md5": "2e6f20c58dd4e6ddaf6343c231e1560a"
+  },
+  {
+   "path": "assets/world/day1a/fields/ground_rf.bin",
+   "size": 121176,
+   "flags": 0,
+   "md5": "6cdc42ffaa52b6bb3a501ce7ab004b0c"
+  },
+  {
+   "path": "assets/world/day1a/fields/terrain_base.bin",
+   "size": 164964,
+   "flags": 0,
+   "md5": "d7a9efe12e922132e4b3f86c6c029bb9"
+  },
+  {
+   "path": "assets/world/day1a/fields/terrain_height.bin",
+   "size": 164964,
+   "flags": 0,
+   "md5": "8d7488f11a2d92acfe317ebbc3b5dafb"
+  },
+  {
+   "path": "assets/world/day1a/fields/trodden_l8.bin",
+   "size": 474561,
+   "flags": 0,
+   "md5": "168ab41150f7a659d364c5f6e17f15dd"
+  },
+  {
+   "path": "assets/world/day1a/fields/walkable_u8.bin",
+   "size": 41241,
+   "flags": 0,
+   "md5": "acfd08c6708919bb3ad60a81fcddda73"
+  },
+  {
+   "path": "assets/world/day1a/generated/alabaster_map.png.import",
+   "size": 259,
+   "flags": 0,
+   "md5": "a32feca660a44b5cb40b9c8885a6894c"
+  },
+  {
+   "path": "assets/world/day1a/generated/glassOpaque_map.png.import",
+   "size": 260,
+   "flags": 0,
+   "md5": "499e72ccff8f00664e68631831014f01"
+  },
+  {
+   "path": "assets/world/day1a/generated/glass_map.png.import",
+   "size": 255,
+   "flags": 0,
+   "md5": "3e20bcb2df350d37e3bd2ccde67cea3e"
+  },
+  {
+   "path": "assets/world/day1a/generated/hedge_map.png.import",
+   "size": 255,
+   "flags": 0,
+   "md5": "98a042920d76857593380564b571c9bc"
+  },
+  {
+   "path": "assets/world/day1a/generated/hedge_normal_map.png.import",
+   "size": 261,
+   "flags": 0,
+   "md5": "a6ce0b3354b478373daa31c7018f4486"
+  },
+  {
+   "path": "assets/world/day1a/generated/p_blanketGrey_map.png.import",
+   "size": 263,
+   "flags": 0,
+   "md5": "bd4acecac5bb4e705a2ccf8665f4d964"
+  },
+  {
+   "path": "assets/world/day1a/generated/p_blanket_map.png.import",
+   "size": 259,
+   "flags": 0,
+   "md5": "5383cb504e21c22ca715fb51fa1c053c"
+  },
+  {
+   "path": "assets/world/day1a/generated/p_earthenDark_map.png.import",
+   "size": 263,
+   "flags": 0,
+   "md5": "b77daa62d097b90df4f240a87b2fc7d4"
+  },
+  {
+   "path": "assets/world/day1a/generated/p_earthenware_map.png.import",
+   "size": 263,
+   "flags": 0,
+   "md5": "6696e682d1b03b1898b0f3ee44f34271"
+  },
+  {
+   "path": "assets/world/day1a/generated/p_glazeBrown_map.png.import",
+   "size": 262,
+   "flags": 0,
+   "md5": "1a7559f07ceba34753f4049afc35e644"
+  },
+  {
+   "path": "assets/world/day1a/generated/p_sacking_map.png.import",
+   "size": 259,
+   "flags": 0,
+   "md5": "76fc54bc0234cfa448f2ad5aa2752d33"
+  },
+  {
+   "path": "assets/world/day1a/generated/straw_map.png.import",
+   "size": 255,
+   "flags": 0,
+   "md5": "6dd9dd41e76c82d67002832ecfcb40c9"
+  },
+  {
+   "path": "assets/world/day1a/generated/tym_ground_map.png.import",
+   "size": 260,
+   "flags": 0,
+   "md5": "d8e604f6b9e1664157b86f59038fc226"
+  },
+  {
+   "path": "assets/world/day1a/generated/wattle_map.png.import",
+   "size": 256,
+   "flags": 0,
+   "md5": "da8c962894646dfb487dc7a4772cb606"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/conifer_map.png.import",
+   "size": 256,
+   "flags": 0,
+   "md5": "2879617693cdfbb0569c1ca6332036d5"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/conifer_normal.png.import",
+   "size": 260,
+   "flags": 0,
+   "md5": "3a84b21339d913912d2144992161e136"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/elm0_lod0.bin",
+   "size": 312800,
+   "flags": 0,
+   "md5": "5a131d2687e16ff29ddb3549b1dcd9e4"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/elm1_lod0.bin",
+   "size": 295904,
+   "flags": 0,
+   "md5": "6d309ece4df6555c8eb3a6d12ad4ba79"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/elm2_lod0.bin",
+   "size": 367208,
+   "flags": 0,
+   "md5": "6e9d9db0620618cab43f8ea40a1122cd"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/fir_lod0.bin",
+   "size": 312308,
+   "flags": 0,
+   "md5": "4989adf491589c2f350c9615f797b4a8"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/fir_lod1.bin",
+   "size": 27920,
+   "flags": 0,
+   "md5": "1f59a30a9e3700b52729654d5d210cb2"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/fir_lod2.bin",
+   "size": 8504,
+   "flags": 0,
+   "md5": "e2cefa69ada042a482dc2bf2fbf15da7"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/fruit0_lod0.bin",
+   "size": 149504,
+   "flags": 0,
+   "md5": "46aceeeada7e8bd742f3f5e61c38f91b"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/fruit1_lod0.bin",
+   "size": 194612,
+   "flags": 0,
+   "md5": "ce530ad8cae2026a81ce12e37473de1d"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/fruit2_lod0.bin",
+   "size": 150992,
+   "flags": 0,
+   "md5": "8183c82d9b8c1f39ecc8044acf07082f"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/oak_lod0.bin",
+   "size": 918380,
+   "flags": 0,
+   "md5": "12df0a985a35b6645e99c026a8b5f11c"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/rose_lod0.bin",
+   "size": 69536,
+   "flags": 0,
+   "md5": "1187a975d0af60bf3067645bc38bc408"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/spruce_lod0.bin",
+   "size": 388916,
+   "flags": 0,
+   "md5": "8a40f991f5c159ed1ceb71ae243901c3"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/spruce_lod1.bin",
+   "size": 42776,
+   "flags": 0,
+   "md5": "5804cfbf331b49171714bcd0ddc52b7d"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/spruce_lod2.bin",
+   "size": 8504,
+   "flags": 0,
+   "md5": "f648647dacab5f271fb3161fa41df6c4"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/stonePine_lod0.bin",
+   "size": 130256,
+   "flags": 0,
+   "md5": "8054d8816756ae892d11cd8ee4a94dcd"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/wind_lod0.bin",
+   "size": 40136,
+   "flags": 0,
+   "md5": "960c3cec15f5ddeed3122c94e110c45e"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/wind_lod1.bin",
+   "size": 13568,
+   "flags": 0,
+   "md5": "c8e46869c45e6d4bb289dfb6f4e710b3"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/wind_lod2.bin",
+   "size": 6008,
+   "flags": 0,
+   "md5": "ef7c7d0c29da7a2d7561aedbbc89f6f2"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/wood_map.png.import",
+   "size": 254,
+   "flags": 0,
+   "md5": "b14f0b94b4eb6029152ac20d49449774"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/wood_normal.png.import",
+   "size": 257,
+   "flags": 0,
+   "md5": "ef6537a368a507276c25918dae24b65c"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/young_lod0.bin",
+   "size": 253892,
+   "flags": 0,
+   "md5": "8e5926c5b0e60748128e38038410490a"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/young_lod1.bin",
+   "size": 27920,
+   "flags": 0,
+   "md5": "43bff43e484f306e7913308dbe9174d1"
+  },
+  {
+   "path": "assets/world/day1a/props/trees/young_lod2.bin",
+   "size": 8504,
+   "flags": 0,
+   "md5": "7ecac2eba3e7f8d1e385578151ec8bad"
+  },
+  {
+   "path": "assets/world/dynamic/altar_pivot.glb.import",
+   "size": 173,
+   "flags": 0,
+   "md5": "8ad1c9c9db2aebe11028ceb0f48d1256"
+  },
+  {
+   "path": "assets/world/fields/ground_rf.bin",
+   "size": 18200,
+   "flags": 0,
+   "md5": "7fef6714db2bbe74bb2ce855ddb5b9d5"
+  },
+  {
+   "path": "assets/world/fields/terrain_base.bin",
+   "size": 24300,
+   "flags": 0,
+   "md5": "4298599349006b0b5528f2d8d159b53c"
+  },
+  {
+   "path": "assets/world/fields/terrain_height.bin",
+   "size": 24300,
+   "flags": 0,
+   "md5": "dde9c0a85155b4d4c167e0874b07ea29"
+  },
+  {
+   "path": "assets/world/fields/trodden_l8.bin",
+   "size": 69850,
+   "flags": 0,
+   "md5": "f4db5f3cd41cb3b3002d621c9730802a"
+  },
+  {
+   "path": "assets/world/generated/frieze_map.png.import",
+   "size": 255,
+   "flags": 0,
+   "md5": "42ffe944d6ba79ce12d8e70168601d0d"
+  },
+  {
+   "path": "assets/world/generated/frieze_normal_map.png.import",
+   "size": 263,
+   "flags": 0,
+   "md5": "1365fd315eee80065eff0f642ec70f37"
+  },
+  {
+   "path": "assets/world/generated/glassOpaque_map.png.import",
+   "size": 261,
+   "flags": 0,
+   "md5": "099515ee0e43d0d896d53440ff476ffb"
+  },
+  {
+   "path": "assets/world/generated/p_boneDark_map.png.import",
+   "size": 260,
+   "flags": 0,
+   "md5": "73d5c6bdce2400b4ea11a16d1ca9da99"
+  },
+  {
+   "path": "assets/world/generated/p_bone_map.png.import",
+   "size": 255,
+   "flags": 0,
+   "md5": "918c030b7c0b7b7c94358a9a9d55e4eb"
+  },
+  {
+   "path": "assets/world/generated/p_leather_map.png.import",
+   "size": 258,
+   "flags": 0,
+   "md5": "dc0f7a32959931aac68b0681668bc076"
+  },
+  {
+   "path": "assets/world/generated/p_linenWhite_map.png.import",
+   "size": 262,
+   "flags": 0,
+   "md5": "8ea5b47a07871c76eac7ee6eeaf3ff33"
+  },
+  {
+   "path": "assets/world/generated/p_vellum_map.png.import",
+   "size": 257,
+   "flags": 0,
+   "md5": "bfecb9fd3fd11bd35ddb0bf8a0225988"
+  },
+  {
+   "path": "assets/world/generated/stainedWarm_map.png.import",
+   "size": 261,
+   "flags": 0,
+   "md5": "348eab6955cd2f81ec3e9c8af71d39a6"
+  },
+  {
+   "path": "assets/world/generated/stained_1_map.png.import",
+   "size": 258,
+   "flags": 0,
+   "md5": "6f827d1491cafee878ef1dff8521adcb"
+  },
+  {
+   "path": "assets/world/generated/stained_2_map.png.import",
+   "size": 258,
+   "flags": 0,
+   "md5": "0857b55a7ac9cbced5bcd83323e040b9"
+  },
+  {
+   "path": "assets/world/materials/aed.tres.remap",
+   "size": 96,
+   "flags": 0,
+   "md5": "1856e5f2ef9b129a14d7b82f4ceeb192"
+  },
+  {
+   "path": "assets/world/materials/alabaster.tres.remap",
+   "size": 102,
+   "flags": 0,
+   "md5": "32103f06e9d1f6a266f62a05b8546726"
+  },
+  {
+   "path": "assets/world/materials/ashlar.tres.remap",
+   "size": 99,
+   "flags": 0,
+   "md5": "2479d59f0a45f8156ee7b93c9f37bc82"
+  },
+  {
+   "path": "assets/world/materials/bark.tres.remap",
+   "size": 97,
+   "flags": 0,
+   "md5": "ecab58b4d1937d6d17d254feb9b30a2a"
+  },
+  {
+   "path": "assets/world/materials/beam.tres.remap",
+   "size": 97,
+   "flags": 0,
+   "md5": "01ef32c827f181b3cc876fda2c5fb745"
+  },
+  {
+   "path": "assets/world/materials/beamExt.tres.remap",
+   "size": 100,
+   "flags": 0,
+   "md5": "1e645ec99d5788498c275b4413744ade"
+  },
+  {
+   "path": "assets/world/materials/bedSoil.tres.remap",
+   "size": 100,
+   "flags": 0,
+   "md5": "824cda9189d54ae4c7ca3d360116f89f"
+  },
+  {
+   "path": "assets/world/materials/boards.tres.remap",
+   "size": 99,
+   "flags": 0,
+   "md5": "42fd688bb342ac155be2f515b45f525b"
+  },
+  {
+   "path": "assets/world/materials/bronze.tres.remap",
+   "size": 99,
+   "flags": 0,
+   "md5": "abbe60103e9ac177a92983ab6a2656f2"
+  },
+  {
+   "path": "assets/world/materials/church.tres.remap",
+   "size": 99,
+   "flags": 0,
+   "md5": "658daa97df672b01ab5c60c9c6496e97"
+  },
+  {
+   "path": "assets/world/materials/churchIn.tres.remap",
+   "size": 101,
+   "flags": 0,
+   "md5": "2288df311094a646ee757b2787bd1512"
+  },
+  {
+   "path": "assets/world/materials/door.tres.remap",
+   "size": 97,
+   "flags": 0,
+   "md5": "16de3e0ee7d8c96dbb2f305c22744be9"
+  },
+  {
+   "path": "assets/world/materials/dung.tres.remap",
+   "size": 97,
+   "flags": 0,
+   "md5": "b7e8b44737b99f6f5848f936829903e2"
+  },
+  {
+   "path": "assets/world/materials/fire.tres.remap",
+   "size": 97,
+   "flags": 0,
+   "md5": "249072342f6a62ecc0fb9b130d56ab2f"
+  },
+  {
+   "path": "assets/world/materials/flag.tres.remap",
+   "size": 97,
+   "flags": 0,
+   "md5": "acf42db47c6afb8be5fa89cf6cc1054b"
+  },
+  {
+   "path": "assets/world/materials/flagExt.tres.remap",
+   "size": 100,
+   "flags": 0,
+   "md5": "d82ada3796d789c8f2be3edd2f796c62"
+  },
+  {
+   "path": "assets/world/materials/flame.tres.remap",
+   "size": 98,
+   "flags": 0,
+   "md5": "93ef0f7a179789233dccb6bd5f903178"
+  },
+  {
+   "path": "assets/world/materials/frieze.tres.remap",
+   "size": 99,
+   "flags": 0,
+   "md5": "4459149d22f8f73dd45fe014de4125f9"
+  },
+  {
+   "path": "assets/world/materials/glass.tres.remap",
+   "size": 98,
+   "flags": 0,
+   "md5": "1321d965fc5e7ce2828f98bc97ad9b08"
+  },
+  {
+   "path": "assets/world/materials/glassOpaque.tres.remap",
+   "size": 104,
+   "flags": 0,
+   "md5": "d06739012e239f290498d66b74f06f83"
+  },
+  {
+   "path": "assets/world/materials/gold.tres.remap",
+   "size": 97,
+   "flags": 0,
+   "md5": "fbb704e69256338cedcf39bfa860457c"
+  },
+  {
+   "path": "assets/world/materials/hedge.tres.remap",
+   "size": 98,
+   "flags": 0,
+   "md5": "143fc796f0a3b946503a2e3ce0136132"
+  },
+  {
+   "path": "assets/world/materials/iron.tres.remap",
+   "size": 97,
+   "flags": 0,
+   "md5": "d6e61fda26fa3ad9aaeed2f1df76c3a4"
+  },
+  {
+   "path": "assets/world/materials/kale.tres.remap",
+   "size": 97,
+   "flags": 0,
+   "md5": "63be9d96179e2aa165e7a4e6896de065"
+  },
+  {
+   "path": "assets/world/materials/linen.tres.remap",
+   "size": 98,
+   "flags": 0,
+   "md5": "3ed2e1b0f2b8007f5123378319c224c8"
+  },
+  {
+   "path": "assets/world/materials/p_blanket.tres.remap",
+   "size": 102,
+   "flags": 0,
+   "md5": "87ab9fd69c66e1dad4d241c6dae230a7"
+  },
+  {
+   "path": "assets/world/materials/p_blanketGrey.tres.remap",
+   "size": 106,
+   "flags": 0,
+   "md5": "8922e1620ece253c54dd83e15d0e8a1a"
+  },
+  {
+   "path": "assets/world/materials/p_bone.tres.remap",
+   "size": 99,
+   "flags": 0,
+   "md5": "184c1804d5bc7928811dcb916188103d"
+  },
+  {
+   "path": "assets/world/materials/p_boneDark.tres.remap",
+   "size": 103,
+   "flags": 0,
+   "md5": "6448c8d78699034ad710be2ce016aeb2"
+  },
+  {
+   "path": "assets/world/materials/p_bread.tres.remap",
+   "size": 100,
+   "flags": 0,
+   "md5": "46a13657b08e93996dab9a4152b32f56"
+  },
+  {
+   "path": "assets/world/materials/p_cryptStone.tres.remap",
+   "size": 105,
+   "flags": 0,
+   "md5": "cf5cb296cf7df36b8b2110e68ea8b417"
+  },
+  {
+   "path": "assets/world/materials/p_earthenDark.tres.remap",
+   "size": 106,
+   "flags": 0,
+   "md5": "03681be9c789b6802a67495c3b458663"
+  },
+  {
+   "path": "assets/world/materials/p_earthenware.tres.remap",
+   "size": 106,
+   "flags": 0,
+   "md5": "775159e10d456a062053a0fcbb41d3df"
+  },
+  {
+   "path": "assets/world/materials/p_glazeBrown.tres.remap",
+   "size": 105,
+   "flags": 0,
+   "md5": "e548361bb571569c4f2c96f048f8e2f0"
+  },
+  {
+   "path": "assets/world/materials/p_leather.tres.remap",
+   "size": 102,
+   "flags": 0,
+   "md5": "17de3050707cf9bf57474d73f7167d53"
+  },
+  {
+   "path": "assets/world/materials/p_linenWhite.tres.remap",
+   "size": 105,
+   "flags": 0,
+   "md5": "a2554c774bf9c0e87c8c2c57c793954e"
+  },
+  {
+   "path": "assets/world/materials/p_onion.tres.remap",
+   "size": 100,
+   "flags": 0,
+   "md5": "6f1c3b6b8b5033138f4bf0e291c260bc"
+  },
+  {
+   "path": "assets/world/materials/p_sacking.tres.remap",
+   "size": 102,
+   "flags": 0,
+   "md5": "1373b91f5bbcf7a53f3310e529f1ab24"
+  },
+  {
+   "path": "assets/world/materials/p_socket.tres.remap",
+   "size": 101,
+   "flags": 0,
+   "md5": "a2d19961468466fda8ce4ccb0e391b0c"
+  },
+  {
+   "path": "assets/world/materials/p_vellum.tres.remap",
+   "size": 101,
+   "flags": 0,
+   "md5": "d6b9d8cc6f39077aced58df8c80bc38d"
+  },
+  {
+   "path": "assets/world/materials/p_woolBlack.tres.remap",
+   "size": 104,
+   "flags": 0,
+   "md5": "12c95d8da0a700cf211e94714b69c14f"
+  },
+  {
+   "path": "assets/world/materials/parchment.tres.remap",
+   "size": 102,
+   "flags": 0,
+   "md5": "9c0c3a8d61484dbdeb2788cf1438bcfc"
+  },
+  {
+   "path": "assets/world/materials/plaster.tres.remap",
+   "size": 100,
+   "flags": 0,
+   "md5": "360c104895ddc53bc950e8aec6f388b2"
+  },
+  {
+   "path": "assets/world/materials/plasterExt.tres.remap",
+   "size": 103,
+   "flags": 0,
+   "md5": "d0f25a237a6de2adc1911dd32246b6b5"
+  },
+  {
+   "path": "assets/world/materials/pottery.tres.remap",
+   "size": 100,
+   "flags": 0,
+   "md5": "e78c7aaa62cc182ec49224304cc6a26f"
+  },
+  {
+   "path": "assets/world/materials/roof.tres.remap",
+   "size": 97,
+   "flags": 0,
+   "md5": "b5de8e7703ce2e234f33a9dc59bbe621"
+  },
+  {
+   "path": "assets/world/materials/rubble.tres.remap",
+   "size": 99,
+   "flags": 0,
+   "md5": "0aa7f66cd3166d86cf9ec99abd1a3e19"
+  },
+  {
+   "path": "assets/world/materials/rubbleIn.tres.remap",
+   "size": 101,
+   "flags": 0,
+   "md5": "a289a63c4f93fe946f9292a983371130"
+  },
+  {
+   "path": "assets/world/materials/slate.tres.remap",
+   "size": 98,
+   "flags": 0,
+   "md5": "871fd6cd4a8e1ee59f20be952e7abbd4"
+  },
+  {
+   "path": "assets/world/materials/soil.tres.remap",
+   "size": 97,
+   "flags": 0,
+   "md5": "c9a79889d3d345b49ed1adb637f52087"
+  },
+  {
+   "path": "assets/world/materials/stainedWarm.tres.remap",
+   "size": 104,
+   "flags": 0,
+   "md5": "636c53798b9f2cc04d601c5adf9c99e6"
+  },
+  {
+   "path": "assets/world/materials/stained_1.tres.remap",
+   "size": 102,
+   "flags": 0,
+   "md5": "8c79fc5b2977567f9e68c5d154a31fc8"
+  },
+  {
+   "path": "assets/world/materials/stained_2.tres.remap",
+   "size": 102,
+   "flags": 0,
+   "md5": "bb386aa4b7ef6de1387d27b15965b632"
+  },
+  {
+   "path": "assets/world/materials/straw.tres.remap",
+   "size": 98,
+   "flags": 0,
+   "md5": "f4ff03c774eeaa7484c6cc05e0d57d54"
+  },
+  {
+   "path": "assets/world/materials/strawExt.tres.remap",
+   "size": 101,
+   "flags": 0,
+   "md5": "893a6efef2c83f86be6b1c43dff4c714"
+  },
+  {
+   "path": "assets/world/materials/tym_ground.tres.remap",
+   "size": 103,
+   "flags": 0,
+   "md5": "a03365f5edea356eaf1bde52f9755c43"
+  },
+  {
+   "path": "assets/world/materials/wall.tres.remap",
+   "size": 97,
+   "flags": 0,
+   "md5": "c760b0e5de375786e10e712a3d445239"
+  },
+  {
+   "path": "assets/world/materials/water.tres.remap",
+   "size": 98,
+   "flags": 0,
+   "md5": "9df7f1fb1f02e3173d817ee46aef71b0"
+  },
+  {
+   "path": "assets/world/materials/wattle.tres.remap",
+   "size": 99,
+   "flags": 0,
+   "md5": "c2b609119d0597ef2a036d8b13a8afb8"
+  },
+  {
+   "path": "assets/world/materials/wax.tres.remap",
+   "size": 96,
+   "flags": 0,
+   "md5": "86e157f62d80dcf53fe2b60c9941636a"
+  },
+  {
+   "path": "assets/world/materials/wood.tres.remap",
+   "size": 97,
+   "flags": 0,
+   "md5": "ce4936f27ce78ad0097db1868da10468"
+  },
+  {
+   "path": "assets/world/materials/woodDark.tres.remap",
+   "size": 101,
+   "flags": 0,
+   "md5": "0956d1e4069ef734ee5e2889659843d1"
+  },
+  {
+   "path": "assets/world/materials_native/terrain_snow.tres.remap",
+   "size": 105,
+   "flags": 0,
+   "md5": "6901a6ff254a13b3cc7768093be7f52a"
+  },
+  {
+   "path": "assets/world/props/garth_trees.glb.import",
+   "size": 173,
+   "flags": 0,
+   "md5": "0d96d3f445a70e1e75bfea4df3146636"
+  },
+  {
+   "path": "assets/world/props/garth_trees_0.png.import",
+   "size": 269,
+   "flags": 0,
+   "md5": "08a088446327371ae0eed84cd9b26e23"
+  },
+  {
+   "path": "assets/world/props/garth_trees_1.png.import",
+   "size": 269,
+   "flags": 0,
+   "md5": "df1bd663dcaeb7243f994396af3cb2cc"
+  },
+  {
+   "path": "content/anchors.json",
+   "size": 6658,
+   "flags": 0,
+   "md5": "3deb3f14e894a5adc9f934cb36d67eb4"
+  },
+  {
+   "path": "content/animals.json",
+   "size": 452,
+   "flags": 0,
+   "md5": "91932912c10d646171a466dbcd1ffa8b"
+  },
+  {
+   "path": "content/cast.json",
+   "size": 2318,
+   "flags": 0,
+   "md5": "54af771159513140efbabf2800112731"
+  },
+  {
+   "path": "content/content_manifest.json",
+   "size": 4052,
+   "flags": 0,
+   "md5": "74b83a60a6bf0ee6326c9a9d186961be"
+  },
+  {
+   "path": "content/crowd.json",
+   "size": 6582,
+   "flags": 0,
+   "md5": "b3cfbafec11fc8246615f825e8808bcf"
+  },
+  {
+   "path": "content/day1a.json",
+   "size": 25505,
+   "flags": 0,
+   "md5": "fc1e8e6ffcad6d7223bf8f5838b28c06"
+  },
+  {
+   "path": "content/discoveries.json",
+   "size": 3264,
+   "flags": 0,
+   "md5": "d688614d04ed698e9e07259f11734b01"
+  },
+  {
+   "path": "content/entities.json",
+   "size": 1111,
+   "flags": 0,
+   "md5": "227faad9df015ee2a7d68d7bd09e75af"
+  },
+  {
+   "path": "content/horarium.json",
+   "size": 3089,
+   "flags": 0,
+   "md5": "e66275134e891e3b72999d7b04535b60"
+  },
+  {
+   "path": "content/interactions.json",
+   "size": 2595,
+   "flags": 0,
+   "md5": "55379f95a6eaa09ee8292732393a6ae8"
+  },
+  {
+   "path": "content/locations.json",
+   "size": 4439,
+   "flags": 0,
+   "md5": "c4ea846c257513abf97166bdd6a31839"
+  },
+  {
+   "path": "content/portals.json",
+   "size": 1127,
+   "flags": 0,
+   "md5": "7c8507ecb63a1f042f0a2006aae7e151"
+  },
+  {
+   "path": "content/provenance.json",
+   "size": 6468,
+   "flags": 0,
+   "md5": "17b2fcde03417b1e3dfe35698191c68c"
+  },
+  {
+   "path": "content/routines.json",
+   "size": 1003,
+   "flags": 0,
+   "md5": "ac8cf8d2fcef851ffb383e1b3f732a8b"
+  },
+  {
+   "path": "content/sounds.json",
+   "size": 14202,
+   "flags": 0,
+   "md5": "09114c9a51439baefa49dc3a7d745472"
+  },
+  {
+   "path": "content/world.json",
+   "size": 5143,
+   "flags": 0,
+   "md5": "7789d390d662033c57b4d35ce42c7b85"
+  },
+  {
+   "path": "content/world_day1a.json",
+   "size": 156818,
+   "flags": 0,
+   "md5": "9ff46c11dc4e37fbb7aa326bfe688f41"
+  },
+  {
+   "path": "icon.svg",
+   "size": 314,
+   "flags": 0,
+   "md5": "5ead77432f3376e7c4e36d4a86c1a0cc"
+  },
+  {
+   "path": "icon.svg.import",
+   "size": 193,
+   "flags": 0,
+   "md5": "0cd30bd102fe68b3ab772386838e05e6"
+  },
+  {
+   "path": "project.binary",
+   "size": 12731,
+   "flags": 0,
+   "md5": "9bd7cc8e123641f2a980fab457977b30"
+  },
+  {
+   "path": "scenes/main.tscn.remap",
+   "size": 97,
+   "flags": 0,
+   "md5": "0ab3b58be7f208f78c8c53387aea9d73"
+  },
+  {
+   "path": "scripts/adapters/alinardo_presence.gd.remap",
+   "size": 61,
+   "flags": 0,
+   "md5": "7542a09fd415cb6aaeb8b4c01a93e08f"
+  },
+  {
+   "path": "scripts/adapters/alinardo_presence.gdc",
+   "size": 1634,
+   "flags": 0,
+   "md5": "b3924f5dfe12c5408e7afd5c4c735118"
+  },
+  {
+   "path": "scripts/adapters/altar_portal.gd.remap",
+   "size": 56,
+   "flags": 0,
+   "md5": "9b8e8d560803541bce38af98c475d8c0"
+  },
+  {
+   "path": "scripts/adapters/altar_portal.gdc",
+   "size": 1954,
+   "flags": 0,
+   "md5": "6366558b4e91bbd73227181cad11dd0d"
+  },
+  {
+   "path": "scripts/adapters/audio_director.gd.remap",
+   "size": 58,
+   "flags": 0,
+   "md5": "124699c68aa239285b202b85a8e39086"
+  },
+  {
+   "path": "scripts/adapters/audio_director.gdc",
+   "size": 7655,
+   "flags": 0,
+   "md5": "618bd3ddd40cce54919cb2f7e1f6c6c4"
+  },
+  {
+   "path": "scripts/adapters/character_presentation.gd.remap",
+   "size": 66,
+   "flags": 0,
+   "md5": "5842bdac01426c484f2dbefbb7e2d1d6"
+  },
+  {
+   "path": "scripts/adapters/character_presentation.gdc",
+   "size": 7621,
+   "flags": 0,
+   "md5": "9e26acfb7db4523c7ea7df8a7421a817"
+  },
+  {
+   "path": "scripts/adapters/day1a/actor_figure.gd.remap",
+   "size": 62,
+   "flags": 0,
+   "md5": "9ffec7003a1cd1a7207fdaca15ca179f"
+  },
+  {
+   "path": "scripts/adapters/day1a/actor_figure.gdc",
+   "size": 8676,
+   "flags": 0,
+   "md5": "688c98e920d4397faf22353926cdc19b"
+  },
+  {
+   "path": "scripts/adapters/day1a/day1a.gd.remap",
+   "size": 55,
+   "flags": 0,
+   "md5": "edb04538d3a00318c653a1f891e04e86"
+  },
+  {
+   "path": "scripts/adapters/day1a/day1a.gdc",
+   "size": 12700,
+   "flags": 0,
+   "md5": "1caaf69602614c378f24e348d80b3e7a"
+  },
+  {
+   "path": "scripts/adapters/day1a/day1a_audio.gd.remap",
+   "size": 61,
+   "flags": 0,
+   "md5": "dea26a83587fc0b25ac4917ee0e973e5"
+  },
+  {
+   "path": "scripts/adapters/day1a/day1a_audio.gdc",
+   "size": 8414,
+   "flags": 0,
+   "md5": "e3cbec6244d73c83cc84e55e45433b35"
+  },
+  {
+   "path": "scripts/adapters/day1a/day1a_props.gd.remap",
+   "size": 61,
+   "flags": 0,
+   "md5": "1545209143017573cac7b8bbf3cee702"
+  },
+  {
+   "path": "scripts/adapters/day1a/day1a_props.gdc",
+   "size": 3528,
+   "flags": 0,
+   "md5": "7aaf3a29ab6314b68d074babbe5ce9bc"
+  },
+  {
+   "path": "scripts/adapters/day1a/day1a_world.gd.remap",
+   "size": 61,
+   "flags": 0,
+   "md5": "1d348fa30c97f1a6469de90f42dba0bb"
+  },
+  {
+   "path": "scripts/adapters/day1a/day1a_world.gdc",
+   "size": 11967,
+   "flags": 0,
+   "md5": "bc3897aafdacfb21611c3de48e3a3017"
+  },
+  {
+   "path": "scripts/adapters/day1a/fp_body.gd.remap",
+   "size": 57,
+   "flags": 0,
+   "md5": "64b20f4bc36dc547109a73a46911c861"
+  },
+  {
+   "path": "scripts/adapters/day1a/fp_body.gdc",
+   "size": 4820,
+   "flags": 0,
+   "md5": "8bfe0adeb58d1bff065c820502f0dd5c"
+  },
+  {
+   "path": "scripts/adapters/day1a/mule_figure.gd.remap",
+   "size": 61,
+   "flags": 0,
+   "md5": "be4e8c46c925cfe25df5bbe4eae4bd3e"
+  },
+  {
+   "path": "scripts/adapters/day1a/mule_figure.gdc",
+   "size": 4959,
+   "flags": 0,
+   "md5": "dd240b7137768ebb43ce996ec90f1f55"
+  },
+  {
+   "path": "scripts/adapters/door_fixture.gd.remap",
+   "size": 56,
+   "flags": 0,
+   "md5": "cda7da92f8c62fb730908ce1cfcf5efd"
+  },
+  {
+   "path": "scripts/adapters/door_fixture.gdc",
+   "size": 6954,
+   "flags": 0,
+   "md5": "2225d9f9dc771a5075a206124260676a"
+  },
+  {
+   "path": "scripts/adapters/interaction_probe.gd.remap",
+   "size": 61,
+   "flags": 0,
+   "md5": "7dbc25dbadd38706bffaffea7a977820"
+  },
+  {
+   "path": "scripts/adapters/interaction_probe.gdc",
+   "size": 2520,
+   "flags": 0,
+   "md5": "0bb113ff26480326c19f1217c7354e9b"
+  },
+  {
+   "path": "scripts/adapters/lighting_rig.gd.remap",
+   "size": 56,
+   "flags": 0,
+   "md5": "9a82b266a7d84f2ff6927cd14733182c"
+  },
+  {
+   "path": "scripts/adapters/lighting_rig.gdc",
+   "size": 10118,
+   "flags": 0,
+   "md5": "ec1a2eff06dfb8ec9a3301ee77967183"
+  },
+  {
+   "path": "scripts/adapters/player_controller.gd.remap",
+   "size": 61,
+   "flags": 0,
+   "md5": "853231bbdd20229f7c6cbd6d7588b0f0"
+  },
+  {
+   "path": "scripts/adapters/player_controller.gdc",
+   "size": 6803,
+   "flags": 0,
+   "md5": "cc25ab9ce22978111f1ade88940b6629"
+  },
+  {
+   "path": "scripts/adapters/world_cells.gd.remap",
+   "size": 55,
+   "flags": 0,
+   "md5": "69c53200ade47f51ebeb4d71edfcc005"
+  },
+  {
+   "path": "scripts/adapters/world_cells.gdc",
+   "size": 18929,
+   "flags": 0,
+   "md5": "ade0eed139aea84f0a0d21ef8ff6899c"
+  },
+  {
+   "path": "scripts/bench/benchmark.gd.remap",
+   "size": 50,
+   "flags": 0,
+   "md5": "357f05364c7b33fce7551066d5881c12"
+  },
+  {
+   "path": "scripts/bench/benchmark.gdc",
+   "size": 29492,
+   "flags": 0,
+   "md5": "25096260fd93257917a1151c3a18e85d"
+  },
+  {
+   "path": "scripts/bench/crowd_fixture.gd.remap",
+   "size": 54,
+   "flags": 0,
+   "md5": "14bb17a82891f65df75f730e9908113f"
+  },
+  {
+   "path": "scripts/bench/crowd_fixture.gdc",
+   "size": 3048,
+   "flags": 0,
+   "md5": "7158ea171345311d8864428e50f7ea9a"
+  },
+  {
+   "path": "scripts/bench/day1a_runner.gd.remap",
+   "size": 53,
+   "flags": 0,
+   "md5": "be7abd1e82225dd128075d13e80ec840"
+  },
+  {
+   "path": "scripts/bench/day1a_runner.gdc",
+   "size": 36131,
+   "flags": 0,
+   "md5": "2853e39226f3e93a13ccf93724937e11"
+  },
+  {
+   "path": "scripts/domain/access_rules.gd.remap",
+   "size": 54,
+   "flags": 0,
+   "md5": "1d78d4baa49029690bd4b92a605b94e2"
+  },
+  {
+   "path": "scripts/domain/access_rules.gdc",
+   "size": 1003,
+   "flags": 0,
+   "md5": "8ca031f4a98018717440c1aad0023e0b"
+  },
+  {
+   "path": "scripts/domain/church_path.gd.remap",
+   "size": 53,
+   "flags": 0,
+   "md5": "4407b2ae362d18d7463db031a111283a"
+  },
+  {
+   "path": "scripts/domain/church_path.gdc",
+   "size": 4016,
+   "flags": 0,
+   "md5": "97a4905e78065e4db3252978952e11d5"
+  },
+  {
+   "path": "scripts/domain/conditions.gd.remap",
+   "size": 52,
+   "flags": 0,
+   "md5": "3490b33046c455fa4694336a9af84ed3"
+  },
+  {
+   "path": "scripts/domain/conditions.gdc",
+   "size": 1948,
+   "flags": 0,
+   "md5": "a32c1bc2d08d661573cab1e08c037c3e"
+  },
+  {
+   "path": "scripts/domain/content_data.gd.remap",
+   "size": 54,
+   "flags": 0,
+   "md5": "e3a16cc6c2988be27add43ad0b22f816"
+  },
+  {
+   "path": "scripts/domain/content_data.gdc",
+   "size": 2819,
+   "flags": 0,
+   "md5": "32c46f4c612ef988cd26c65e72f23201"
+  },
+  {
+   "path": "scripts/domain/content_db.gd.remap",
+   "size": 52,
+   "flags": 0,
+   "md5": "89ea907304573cf287e54871e75211c3"
+  },
+  {
+   "path": "scripts/domain/content_db.gdc",
+   "size": 398,
+   "flags": 0,
+   "md5": "211023bd9303c49a9b04400ca93d2cf9"
+  },
+  {
+   "path": "scripts/domain/day1a/actor.gd.remap",
+   "size": 53,
+   "flags": 0,
+   "md5": "78136556e473d398efc869866845935b"
+  },
+  {
+   "path": "scripts/domain/day1a/actor.gdc",
+   "size": 3239,
+   "flags": 0,
+   "md5": "d01d4d6db127352d25d02f1a172fb256"
+  },
+  {
+   "path": "scripts/domain/day1a/day1a_director.gd.remap",
+   "size": 62,
+   "flags": 0,
+   "md5": "44fcc303b4f1e33cacc50f9782468f83"
+  },
+  {
+   "path": "scripts/domain/day1a/day1a_director.gdc",
+   "size": 46121,
+   "flags": 0,
+   "md5": "dd7c4466a04c9623fb7ce8f22c436bae"
+  },
+  {
+   "path": "scripts/domain/day1a/day1a_save.gd.remap",
+   "size": 58,
+   "flags": 0,
+   "md5": "37d0c55225344028a600ea2207d59ac8"
+  },
+  {
+   "path": "scripts/domain/day1a/day1a_save.gdc",
+   "size": 4982,
+   "flags": 0,
+   "md5": "7a42de520943fe13afaff1aac22691ee"
+  },
+  {
+   "path": "scripts/domain/day1a/day1a_telemetry.gd.remap",
+   "size": 63,
+   "flags": 0,
+   "md5": "8fa892b360a2981529c775d00a1315e7"
+  },
+  {
+   "path": "scripts/domain/day1a/day1a_telemetry.gdc",
+   "size": 3628,
+   "flags": 0,
+   "md5": "b79f2d8064c180c0b20ea0c88637880f"
+  },
+  {
+   "path": "scripts/domain/day1a/lead_wait.gd.remap",
+   "size": 57,
+   "flags": 0,
+   "md5": "ee9e6a52c519df72813c9b85ba2a349a"
+  },
+  {
+   "path": "scripts/domain/day1a/lead_wait.gdc",
+   "size": 6593,
+   "flags": 0,
+   "md5": "83484653f50e64090a258c6f2aab596e"
+  },
+  {
+   "path": "scripts/domain/day1a/observation_log.gd.remap",
+   "size": 63,
+   "flags": 0,
+   "md5": "abe2150f651aab3df46696b00b42ed1d"
+  },
+  {
+   "path": "scripts/domain/day1a/observation_log.gdc",
+   "size": 1298,
+   "flags": 0,
+   "md5": "8d281ef7492ef08b7f6a7ae3631b4006"
+  },
+  {
+   "path": "scripts/domain/day1a/people_memory.gd.remap",
+   "size": 61,
+   "flags": 0,
+   "md5": "c2aafe375bf1fc702754f10711886f2b"
+  },
+  {
+   "path": "scripts/domain/day1a/people_memory.gdc",
+   "size": 1940,
+   "flags": 0,
+   "md5": "508113ed6ae6ee587424add1a9f40f83"
+  },
+  {
+   "path": "scripts/domain/day1a/walk_limits.gd.remap",
+   "size": 59,
+   "flags": 0,
+   "md5": "c0bd4a460bc03b23537d73d942881b4a"
+  },
+  {
+   "path": "scripts/domain/day1a/walk_limits.gdc",
+   "size": 1537,
+   "flags": 0,
+   "md5": "db5d04d573ef7954e3c163f67fc22a8d"
+  },
+  {
+   "path": "scripts/domain/day1a/way_graph.gd.remap",
+   "size": 57,
+   "flags": 0,
+   "md5": "526d1650aadb5fe83876dae9e87379c9"
+  },
+  {
+   "path": "scripts/domain/day1a/way_graph.gdc",
+   "size": 2665,
+   "flags": 0,
+   "md5": "279b888b96a1b94fc28b565afdbe6fb5"
+  },
+  {
+   "path": "scripts/domain/game_clock.gd.remap",
+   "size": 52,
+   "flags": 0,
+   "md5": "bf0f861f2a04b99c8513044afb0573f2"
+  },
+  {
+   "path": "scripts/domain/game_clock.gdc",
+   "size": 1458,
+   "flags": 0,
+   "md5": "c403a9be6d3da97b3ac3d7515fd7cdf6"
+  },
+  {
+   "path": "scripts/domain/game_session.gd.remap",
+   "size": 54,
+   "flags": 0,
+   "md5": "c5d16f20844371f950cea9dce4797a63"
+  },
+  {
+   "path": "scripts/domain/game_session.gdc",
+   "size": 4509,
+   "flags": 0,
+   "md5": "d1d344366be67d3d158bc8210806dc22"
+  },
+  {
+   "path": "scripts/domain/game_state.gd.remap",
+   "size": 52,
+   "flags": 0,
+   "md5": "2877ffa24a8a2bd6402fefee9b01645b"
+  },
+  {
+   "path": "scripts/domain/game_state.gdc",
+   "size": 678,
+   "flags": 0,
+   "md5": "6924d6466e9a8ebd04911224f661632a"
+  },
+  {
+   "path": "scripts/domain/horarium.gd.remap",
+   "size": 50,
+   "flags": 0,
+   "md5": "980e05e0c3eb5623e2a4d7119b056e82"
+  },
+  {
+   "path": "scripts/domain/horarium.gdc",
+   "size": 1525,
+   "flags": 0,
+   "md5": "d6e7ec43a26d996e25c2ab20f92a2127"
+  },
+  {
+   "path": "scripts/domain/interaction_rules.gd.remap",
+   "size": 59,
+   "flags": 0,
+   "md5": "5e8dbeb07268902299bc94f2ec2c2812"
+  },
+  {
+   "path": "scripts/domain/interaction_rules.gdc",
+   "size": 1172,
+   "flags": 0,
+   "md5": "e2c466286f13ffa7c197d9809b48ced2"
+  },
+  {
+   "path": "scripts/domain/knowledge_state.gd.remap",
+   "size": 57,
+   "flags": 0,
+   "md5": "dedb62a134f2a699b58fdec551886ec6"
+  },
+  {
+   "path": "scripts/domain/knowledge_state.gdc",
+   "size": 2540,
+   "flags": 0,
+   "md5": "8041280f9a546846c2b710fe27da4259"
+  },
+  {
+   "path": "scripts/domain/office_transport.gd.remap",
+   "size": 58,
+   "flags": 0,
+   "md5": "8b636b80647c69dd15d0e68978e55eeb"
+  },
+  {
+   "path": "scripts/domain/office_transport.gdc",
+   "size": 2268,
+   "flags": 0,
+   "md5": "a781ab184366bdedef353d47d520167d"
+  },
+  {
+   "path": "scripts/domain/passage_tracker.gd.remap",
+   "size": 57,
+   "flags": 0,
+   "md5": "22d4d98760033ae09ae7f68288fcaeb0"
+  },
+  {
+   "path": "scripts/domain/passage_tracker.gdc",
+   "size": 1892,
+   "flags": 0,
+   "md5": "749dc91ef134125582a3c5545823b4a1"
+  },
+  {
+   "path": "scripts/domain/portal_states.gd.remap",
+   "size": 55,
+   "flags": 0,
+   "md5": "9da76b805a6a85f7f53a5e7345c548e4"
+  },
+  {
+   "path": "scripts/domain/portal_states.gdc",
+   "size": 2150,
+   "flags": 0,
+   "md5": "79c0782cd563235b48199d257c749f58"
+  },
+  {
+   "path": "scripts/domain/room_classifier.gd.remap",
+   "size": 57,
+   "flags": 0,
+   "md5": "07913cfabfd6a47714173f7c983b84b2"
+  },
+  {
+   "path": "scripts/domain/room_classifier.gdc",
+   "size": 964,
+   "flags": 0,
+   "md5": "c8b09e2d73645cb773ec66aba2ad67e2"
+  },
+  {
+   "path": "scripts/domain/routines.gd.remap",
+   "size": 50,
+   "flags": 0,
+   "md5": "7d64869da1664ec8337cc918e48b0348"
+  },
+  {
+   "path": "scripts/domain/routines.gdc",
+   "size": 619,
+   "flags": 0,
+   "md5": "86d70fdbb294fc67192b879016cc086c"
+  },
+  {
+   "path": "scripts/domain/rule_context.gd.remap",
+   "size": 54,
+   "flags": 0,
+   "md5": "a18ecb6c96626c1d04ad1939d0404b68"
+  },
+  {
+   "path": "scripts/domain/rule_context.gdc",
+   "size": 421,
+   "flags": 0,
+   "md5": "cf6a8f51d82a3e0802737ea5f826428a"
+  },
+  {
+   "path": "scripts/domain/save_service.gd.remap",
+   "size": 54,
+   "flags": 0,
+   "md5": "7edb2faea6bbc1c7f1ef1a1158238831"
+  },
+  {
+   "path": "scripts/domain/save_service.gdc",
+   "size": 4456,
+   "flags": 0,
+   "md5": "b9f743e6ec7ee63f7ecd8a7f4c4cec90"
+  },
+  {
+   "path": "scripts/domain/seeded_random.gd.remap",
+   "size": 55,
+   "flags": 0,
+   "md5": "cbd3d05d6c3c971d7549704ef3f2c10c"
+  },
+  {
+   "path": "scripts/domain/seeded_random.gdc",
+   "size": 677,
+   "flags": 0,
+   "md5": "b550e8719a5c1bf9b15ed922a85a7f2b"
+  },
+  {
+   "path": "scripts/foundation_boot.gd.remap",
+   "size": 50,
+   "flags": 0,
+   "md5": "478e9c02e7eb36bcb6ebb15e4a2942f7"
+  },
+  {
+   "path": "scripts/foundation_boot.gdc",
+   "size": 960,
+   "flags": 0,
+   "md5": "77532c3d951caa8ace13f074573ef434"
+  },
+  {
+   "path": "scripts/main.gd.remap",
+   "size": 39,
+   "flags": 0,
+   "md5": "2b5c3955728b84207f9ad8272930fb6a"
+  },
+  {
+   "path": "scripts/main.gdc",
+   "size": 11371,
+   "flags": 0,
+   "md5": "9b7ff2bfdef53af036ddae14f9cbe4aa"
+  },
+  {
+   "path": "scripts/ui/day1a_hud.gd.remap",
+   "size": 47,
+   "flags": 0,
+   "md5": "461163fad2a34a3a16f5a9734952e975"
+  },
+  {
+   "path": "scripts/ui/day1a_hud.gdc",
+   "size": 7250,
+   "flags": 0,
+   "md5": "ec2599784bfe1b0ef79335c2612bc92c"
+  },
+  {
+   "path": "scripts/ui/hud.gd.remap",
+   "size": 41,
+   "flags": 0,
+   "md5": "6f6b6c322ae010bd7ef9c916d34a4a83"
+  },
+  {
+   "path": "scripts/ui/hud.gdc",
+   "size": 10754,
+   "flags": 0,
+   "md5": "953270d5b98c061b3dc2c766d03a0d2d"
+  },
+  {
+   "path": "shaders/abbey_pbr.gdshader",
+   "size": 224,
+   "flags": 0,
+   "md5": "72656986285d8204fbd01959330e9f6e"
+  },
+  {
+   "path": "shaders/abbey_pbr.gdshaderinc",
+   "size": 10714,
+   "flags": 0,
+   "md5": "0f3ad6f00c98ec38b2598172edd5c1a4"
+  },
+  {
+   "path": "shaders/abbey_pbr_alpha.gdshader",
+   "size": 242,
+   "flags": 0,
+   "md5": "f866f76138ea63c54a3c4e10cfab26f8"
+  },
+  {
+   "path": "shaders/abbey_pbr_alpha_depth.gdshader",
+   "size": 243,
+   "flags": 0,
+   "md5": "c6e7c2363914ee18004b5dd195f64563"
+  },
+  {
+   "path": "shaders/abbey_pbr_double.gdshader",
+   "size": 228,
+   "flags": 0,
+   "md5": "35671fa8be6e4c5cf450f890c3e902fb"
+  },
+  {
+   "path": "shaders/abbey_tree.gdshader",
+   "size": 4058,
+   "flags": 0,
+   "md5": "401a737e3aaa78e2314a40e871fa107a"
+  },
+  {
+   "path": "shaders/browser_sky.gdshader",
+   "size": 4753,
+   "flags": 0,
+   "md5": "018e01dcb06347d6e1965281f8234c8e"
+  }
+ ]
+}

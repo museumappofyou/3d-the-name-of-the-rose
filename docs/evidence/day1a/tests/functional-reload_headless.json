@@ -1,0 +1,741 @@
+{
+ "args": {
+  "label": "headless",
+  "out": "/private/tmp/claude-501/-Users-memre-Desktop-gulun-ad-/c4e5d3b5-6f56-45f1-b441-691e3af1a813/scratchpad/final_checks/functional",
+  "save-dir": "user://functional_headless",
+  "scenario": "functional-reload"
+ },
+ "audio_restarts": 0,
+ "audio_telemetry_tail": [
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0894653433423008,
+   "lp": 1432.25918912915,
+   "office": "",
+   "playing": false,
+   "pos": [
+    28.0655612945557,
+    1.79999995231628,
+    2.51785254478455
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "cloister",
+   "t": 0.133333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249992787015075,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 0.233333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249993853499696,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 0.333333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249994762297942,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 0.433333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249995536724723,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 0.533333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.024999629673006,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 0.65
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249996844281522,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 0.750000000000001
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249997310874099,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 0.850000000000001
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249997708478066,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 0.950000000000001
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249998098677817,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 1.06666666666667
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249924347433356,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 1.16666666666667
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249998619356727,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 1.26666666666667
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.024999882349341,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 1.36666666666667
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999023828642,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 1.48333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999168161641,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 1.58333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999291154109,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 1.68333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999395961376,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 1.78333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999485272238,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 1.88333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999572919946,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 2.0
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999636066385,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 2.1
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.024999968987623,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 2.2
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999735729956,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 2.3
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999774803923,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 2.4
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999813150252,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 2.51666666666666
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999840777148,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 2.61666666666666
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999864319235,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 2.71666666666666
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999884380479,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 2.81666666666666
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999904068141,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 2.93333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999918252262,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 3.03333333333333
+  },
+  {
+   "gain": 0.0,
+   "inside": 0.0,
+   "level": 0.0249999930339173,
+   "lp": 650.0,
+   "office": "",
+   "playing": false,
+   "pos": [
+    15.3719997406006,
+    0.349999994039536,
+    -15.4399995803833
+   ],
+   "position": -1.0,
+   "restarts": 0,
+   "room": "ossuary",
+   "t": 3.13333333333333
+  }
+ ],
+ "duration_s": 3.15494388888891,
+ "events": [],
+ "fixture_log_tail": [
+  {
+   "actor": [
+    201.5,
+    196.0
+   ],
+   "actor_inside": false,
+   "bar_solid": false,
+   "curfew": false,
+   "exit_permit": false,
+   "hours": 15.0,
+   "nav_link": true,
+   "player_inside": false,
+   "t": 0.5,
+   "transmission": 1.0
+  },
+  {
+   "actor": [
+    201.5,
+    196.0
+   ],
+   "actor_inside": false,
+   "bar_solid": false,
+   "curfew": false,
+   "exit_permit": false,
+   "hours": 15.0,
+   "nav_link": true,
+   "player_inside": false,
+   "t": 1.0,
+   "transmission": 1.0
+  },
+  {
+   "actor": [
+    201.5,
+    196.0
+   ],
+   "actor_inside": false,
+   "bar_solid": false,
+   "curfew": false,
+   "exit_permit": false,
+   "hours": 15.0,
+   "nav_link": true,
+   "player_inside": false,
+   "t": 1.5,
+   "transmission": 1.0
+  },
+  {
+   "actor": [
+    201.5,
+    196.0
+   ],
+   "actor_inside": false,
+   "bar_solid": false,
+   "curfew": false,
+   "exit_permit": false,
+   "hours": 15.0,
+   "nav_link": true,
+   "player_inside": false,
+   "t": 2.0,
+   "transmission": 1.0
+  },
+  {
+   "actor": [
+    201.5,
+    196.0
+   ],
+   "actor_inside": false,
+   "bar_solid": false,
+   "curfew": false,
+   "exit_permit": false,
+   "hours": 15.0,
+   "nav_link": true,
+   "player_inside": false,
+   "t": 2.5,
+   "transmission": 1.0
+  },
+  {
+   "actor": [
+    201.5,
+    196.0
+   ],
+   "actor_inside": false,
+   "bar_solid": false,
+   "curfew": false,
+   "exit_permit": false,
+   "hours": 15.0,
+   "nav_link": true,
+   "player_inside": false,
+   "t": 2.99999999999999,
+   "transmission": 1.0
+  }
+ ],
+ "label": "headless",
+ "pass": true,
+ "route_loops": 0,
+ "scenario": "functional-reload",
+ "startup_ms": {
+  "first_frame_ms": 771,
+  "scene_ready_ms": 761
+ },
+ "steps": [
+  {
+   "detail": [],
+   "pass": true,
+   "step": "relaunch: save loaded",
+   "t": 0.13
+  },
+  {
+   "detail": [
+    "alinardo-hint",
+    "altar-feature",
+    "altar-passage"
+   ],
+   "pass": true,
+   "step": "knowledge survives exactly (no duplicates)",
+   "t": 0.13
+  },
+  {
+   "detail": {
+    "church:altar": {
+     "open": 0.999966141935114,
+     "target": 1
+    }
+   },
+   "pass": true,
+   "step": "altar state survives",
+   "t": 0.13
+  },
+  {
+   "detail": 15.0,
+   "pass": true,
+   "step": "time survives",
+   "t": 0.13
+  },
+  {
+   "detail": [
+    15.372013092041,
+    -2.79000020027161,
+    -20.0649719238281
+   ],
+   "pass": true,
+   "step": "player location survives",
+   "t": 0.13
+  },
+  {
+   "detail": {
+    "church:altar": {
+     "open": 0.999993164174593,
+     "target": 1
+    }
+   },
+   "pass": true,
+   "step": "close/reopen coherent after load",
+   "t": 1.14
+  },
+  {
+   "detail": [
+    "alinardo-hint"
+   ],
+   "pass": true,
+   "step": "debug jump below the altar grants nothing",
+   "t": 3.15
+  },
+  {
+   "detail": [
+    "main: invalid (truncated)",
+    "backup: absent"
+   ],
+   "pass": true,
+   "step": "truncated save recovered safely and reported",
+   "t": 3.15
+  }
+ ],
+ "system": {
+  "adapter": "",
+  "adapter_type": 0,
+  "api": "",
+  "cpu": "Apple M1 Pro",
+  "cpu_count": 10,
+  "driver": "metal",
+  "engine": "4.7.2-stable (official)",
+  "executable": "/Users/memre/Desktop/gulun_adı/.local/tools/godot-4.7.2/Godot.app/Contents/MacOS/Godot",
+  "gi": "none",
+  "memory_info": {
+   "available": 19696910336,
+   "free": 18180145152,
+   "physical": 34359738368,
+   "stack": 8372224
+  },
+  "msaa_3d": 1,
+  "os": "macOS",
+  "os_version": "26.5.2",
+  "physics": "Jolt Physics",
+  "renderer": "forward_plus",
+  "scaling_3d_scale": 1.0,
+  "screen": -1,
+  "screen_count": 0,
+  "screen_scale": 1.0,
+  "screens": [],
+  "shadow_atlas": 4096,
+  "ssao": true,
+  "user_dir": "/Users/memre/Library/Application Support/AbbeySlice",
+  "vendor": "",
+  "viewport_texture_px": [
+   64,
+   64
+  ],
+  "vsync": 1,
+  "window_position": [
+   0,
+   0
+  ],
+  "window_px": [
+   0,
+   0
+  ]
+ },
+ "warmup_s": 5.0
+}

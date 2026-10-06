@@ -1,0 +1,348 @@
+{
+ "beat": "end",
+ "director_t": 1293.6,
+ "ended": true,
+ "events": [
+  {
+   "at": [
+    -14.8110942840576,
+    6.21000003814697,
+    17.1371784210205
+   ],
+   "beat": "meal",
+   "event": "stuck",
+   "t": 528.4,
+   "target": [
+    -14.1999998092651,
+    17.3999996185303
+   ]
+  },
+  {
+   "at": [
+    -16.6807403564453,
+    6.20999908447266,
+    16.5292167663574
+   ],
+   "beat": "meal",
+   "event": "stuck",
+   "t": 554.2,
+   "target": [
+    -16.3199996948242,
+    16.2000007629395
+   ]
+  },
+  {
+   "at": [
+    -16.6807403564453,
+    6.20999908447266,
+    16.5292167663574
+   ],
+   "beat": "meal",
+   "event": "stuck",
+   "t": 559.5,
+   "target": [
+    -16.3199996948242,
+    16.2000007629395
+   ]
+  },
+  {
+   "at": [
+    -15.2009649276733,
+    6.21000003814697,
+    16.452449798584
+   ],
+   "beat": "meal",
+   "event": "stuck",
+   "t": 563.8,
+   "target": [
+    -14.6000003814697,
+    16.2999992370605
+   ]
+  },
+  {
+   "at": [
+    -9.21940422058105,
+    0.309999346733093,
+    19.2971897125244
+   ],
+   "beat": "free",
+   "event": "stuck",
+   "t": 653.8,
+   "target": [
+    -8.60000038146973,
+    19.2700004577637
+   ]
+  },
+  {
+   "at": [
+    -7.73518323898315,
+    0.309999346733093,
+    17.7860012054443
+   ],
+   "beat": "free",
+   "event": "stuck",
+   "t": 658.4,
+   "target": [
+    -7.25,
+    17.3999996185303
+   ]
+  },
+  {
+   "at": [
+    -7.98106002807617,
+    0.309999346733093,
+    19.3062362670898
+   ],
+   "beat": "free",
+   "event": "stuck",
+   "t": 725.1,
+   "target": [
+    -8.60000038146973,
+    19.2700004577637
+   ]
+  },
+  {
+   "at": [
+    -19.7005615234375,
+    -0.196118474006653,
+    24.9736328125
+   ],
+   "beat": "free",
+   "event": "stuck",
+   "t": 743.7,
+   "target": [
+    -20.3199996948242,
+    25.0
+   ]
+  },
+  {
+   "at": [
+    -9.21999645233154,
+    0.309999346733093,
+    19.2678260803223
+   ],
+   "beat": "free",
+   "event": "stuck",
+   "t": 756.9,
+   "target": [
+    -8.60000038146973,
+    19.2700004577637
+   ]
+  },
+  {
+   "at": [
+    -19.7132549285889,
+    -0.196316733956337,
+    24.8724784851074
+   ],
+   "beat": "after_nones",
+   "event": "stuck",
+   "t": 1283.7,
+   "target": [
+    -20.3199996948242,
+    25.0
+   ]
+  }
+ ],
+ "frames": {
+  "after_nones": {},
+  "all": {
+   "fps_avg": 143.3,
+   "frames": 61779,
+   "ms_max": 32.71,
+   "ms_p50": 7.0,
+   "ms_p95": 8.15,
+   "ms_p99": 9.43,
+   "over_100ms": 0,
+   "over_50ms": 0
+  },
+  "end": {},
+  "free": {},
+  "gate_open": {},
+  "meal": {},
+  "nones": {},
+  "reception": {},
+  "road": {},
+  "second_bundle": {},
+  "sext_gate": {},
+  "to_cell": {}
+ },
+ "interaction_misses": [
+  {
+   "beat": "meal",
+   "id": "stand",
+   "prompt": "eat_olives",
+   "t": 550.9
+  }
+ ],
+ "label": "functional",
+ "memory": {
+  "objects": 8657.0,
+  "static": 234321720.0,
+  "vram": 493961216.0
+ },
+ "observations": [
+  "pines",
+  "aed_windows",
+  "porter_scar",
+  "mule_shoe",
+  "garden"
+ ],
+ "people_named": [
+  "william",
+  "fazio",
+  "cellarer",
+  "tebaldo",
+  "nuto",
+  "fulco"
+ ],
+ "real_s": 1296.7,
+ "scenario": "day1-walk",
+ "style": "confused",
+ "summary": {
+  "beat_durations_s": {
+   "after_nones": 80.1,
+   "free": 403.3,
+   "gate_open": 41.4,
+   "meal": 162.9,
+   "nones": 180.0,
+   "reception": 79.8,
+   "road": 33.3,
+   "second_bundle": 197.3,
+   "sext_gate": 27.4,
+   "to_cell": 88.3
+  },
+  "free_period": {
+   "sat_s": 0.0,
+   "start": 630.3,
+   "talked": [
+    "fulco",
+    "nuto"
+   ]
+  },
+  "nones": {
+   "bell_t": 1033.5,
+   "entered_church_t": 27.1,
+   "guests_place_t": 32.3,
+   "in_church_s": 153.05,
+   "office_begun_t": 65.2,
+   "outside_s": 27.0,
+   "player_room_at_bell": "garth",
+   "watched_brothers_t": 5.0
+  },
+  "overtakes": 0,
+  "people_met": {
+   "cellarer": 132.9,
+   "fazio": 63.3,
+   "fulco": 651.3,
+   "nuto": 301.3,
+   "tebaldo": 485.1
+  },
+  "solo_route": {
+   "back_in_cell": 467.4,
+   "back_s": 103.0,
+   "help_from_nuto": false,
+   "hesitation_s": 2.0,
+   "left_cell": 277.4,
+   "max_off_route_m": 8.0,
+   "out_s": 87.0,
+   "reached_chest": 364.4,
+   "started": 277.4,
+   "wrong_turns": [
+    {
+     "carrying": "",
+     "t": 314.3,
+     "zone": "church_front"
+    }
+   ]
+  },
+  "william_distance_reception_m": {
+   "mean": 39.3,
+   "p50": 37.72,
+   "p90": 73.24,
+   "samples": 167
+  },
+  "william_lead_on_road_m": {
+   "max": 8.05,
+   "mean": 7.62,
+   "min": 6.5,
+   "p10": 6.92,
+   "p50": 7.81,
+   "p90": 7.99,
+   "samples": 33
+  },
+  "william_lead_to_cell_m": {
+   "mean": -53.34,
+   "p10": -98.92,
+   "p50": -54.83,
+   "p90": -8.21,
+   "samples": 167,
+   "share_adso_ahead": 0.95,
+   "share_william_ahead": 0.0
+  },
+  "william_wait_points": [],
+  "william_waits": 0
+ },
+ "system": {
+  "adapter": "Apple M1 Pro (Apple7)",
+  "adapter_type": 1,
+  "api": "4.0",
+  "cpu": "Apple M1 Pro",
+  "cpu_count": 10,
+  "driver": "metal",
+  "engine": "4.7.2-stable (official)",
+  "executable": "/Users/memre/Desktop/gulun_adı/.local/tools/godot-4.7.2/Godot.app/Contents/MacOS/Godot",
+  "gi": "none",
+  "memory_info": {
+   "available": 8562114560,
+   "free": 7407370240,
+   "physical": 34359738368,
+   "stack": 8372224
+  },
+  "msaa_3d": 1,
+  "os": "macOS",
+  "os_version": "26.5.2",
+  "physics": "Jolt Physics",
+  "renderer": "forward_plus",
+  "scaling_3d_scale": 1.0,
+  "screen": 0,
+  "screen_count": 2,
+  "screen_scale": 2.0,
+  "screens": [
+   {
+    "refresh_hz": 120.0,
+    "scale": 2.0,
+    "size": [
+     3456,
+     2234
+    ]
+   },
+   {
+    "refresh_hz": 75.0,
+    "scale": 1.0,
+    "size": [
+     3840,
+     2160
+    ]
+   }
+  ],
+  "shadow_atlas": 4096,
+  "ssao": true,
+  "user_dir": "/Users/memre/Library/Application Support/AbbeySlice",
+  "vendor": "Apple",
+  "viewport_texture_px": [
+   1280,
+   720
+  ],
+  "vsync": 1,
+  "window_position": [
+   4928,
+   790
+  ],
+  "window_px": [
+   1280,
+   720
+  ]
+ },
+ "telemetry_file": "/Users/memre/Library/Application Support/AbbeySlice/day1a/telemetry/day1a_2026-10-05_21-52-35_end.json"
+}

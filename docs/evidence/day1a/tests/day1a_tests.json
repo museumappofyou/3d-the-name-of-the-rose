@@ -1,0 +1,620 @@
+{
+  "engine": "4.7.2-stable (official)",
+  "failures": 0,
+  "passed": 14,
+  "playthroughs": {
+    "confused": {
+      "beats": [
+        "road",
+        "sext_gate",
+        "gate_open",
+        "reception",
+        "to_cell",
+        "second_bundle",
+        "meal",
+        "free",
+        "nones",
+        "after_nones",
+        "end"
+      ],
+      "ended": true,
+      "named": [
+        "william",
+        "fazio",
+        "cellarer",
+        "tebaldo",
+        "nuto",
+        "fulco"
+      ],
+      "observations": [
+        "pines",
+        "aed_windows",
+        "garden"
+      ],
+      "summary": {
+        "beat_durations_s": {
+          "after_nones": 80.0,
+          "free": 403.2,
+          "gate_open": 55.7,
+          "meal": 156.8,
+          "nones": 180.0,
+          "reception": 79.7,
+          "road": 32.8,
+          "second_bundle": 196.4,
+          "sext_gate": 27.3,
+          "to_cell": 88.3
+        },
+        "free_period": {
+          "sat_s": 0.0,
+          "start": 637.0,
+          "talked": [
+            "fulco",
+            "nuto"
+          ]
+        },
+        "nones": {
+          "bell_t": 1040.2,
+          "entered_church_t": 0.0,
+          "guests_place_t": 0.0,
+          "in_church_s": 162.0,
+          "office_begun_t": 65.1,
+          "outside_s": 0.0,
+          "player_room_at_bell": "church",
+          "watched_brothers_t": 17.7
+        },
+        "overtakes": 0,
+        "people_met": {
+          "cellarer": 137.7,
+          "fazio": 61.9,
+          "fulco": 655.8,
+          "nuto": 311.5,
+          "tebaldo": 481.3
+        },
+        "solo_route": {
+          "back_in_cell": 480.2,
+          "back_s": 102.9,
+          "help_from_nuto": false,
+          "hesitation_s": 0.03,
+          "left_cell": 287.9,
+          "max_off_route_m": 12.0,
+          "out_s": 89.4,
+          "reached_chest": 377.3,
+          "started": 287.9,
+          "wrong_turns": [
+            {
+              "carrying": "",
+              "t": 324.0,
+              "zone": "church_front"
+            }
+          ]
+        },
+        "william_distance_reception_m": {
+          "mean": 48.8,
+          "p50": 51.43,
+          "p90": 83.08,
+          "samples": 164
+        },
+        "william_lead_on_road_m": {
+          "max": 8.09,
+          "mean": 7.61,
+          "min": 6.5,
+          "p10": 6.87,
+          "p50": 7.8,
+          "p90": 8.03,
+          "samples": 33
+        },
+        "william_lead_to_cell_m": {
+          "mean": -70.95,
+          "p10": -119.31,
+          "p50": -74.26,
+          "p90": -11.24,
+          "samples": 164,
+          "share_adso_ahead": 0.95,
+          "share_william_ahead": 0.01
+        },
+        "william_wait_points": [],
+        "william_waits": 0
+      },
+      "t": 1300.2
+    },
+    "ignore_nones": {
+      "beats": [
+        "road",
+        "sext_gate",
+        "gate_open",
+        "reception",
+        "to_cell",
+        "second_bundle",
+        "meal",
+        "free",
+        "nones",
+        "after_nones",
+        "end"
+      ],
+      "ended": true,
+      "named": [
+        "william",
+        "fazio",
+        "cellarer",
+        "tebaldo",
+        "nuto"
+      ],
+      "observations": [
+        "pines",
+        "aed_windows",
+        "garden"
+      ],
+      "summary": {
+        "beat_durations_s": {
+          "after_nones": 80.0,
+          "free": 403.2,
+          "gate_open": 55.7,
+          "meal": 156.8,
+          "nones": 180.0,
+          "reception": 79.7,
+          "road": 32.8,
+          "second_bundle": 174.7,
+          "sext_gate": 27.3,
+          "to_cell": 88.3
+        },
+        "free_period": {
+          "sat_s": 0.0,
+          "start": 615.2,
+          "talked": []
+        },
+        "nones": {
+          "bell_t": 1018.4,
+          "entered_church_t": -1.0,
+          "guests_place_t": -1.0,
+          "in_church_s": 0.0,
+          "office_begun_t": 65.2,
+          "outside_s": 162.0,
+          "player_room_at_bell": "hospice-cell",
+          "watched_brothers_t": -1.0
+        },
+        "overtakes": 0,
+        "people_met": {
+          "cellarer": 137.7,
+          "fazio": 61.9,
+          "nuto": 311.5,
+          "tebaldo": 459.5
+        },
+        "solo_route": {
+          "back_in_cell": 458.5,
+          "back_s": 102.9,
+          "help_from_nuto": false,
+          "hesitation_s": 0.0,
+          "left_cell": 287.9,
+          "max_off_route_m": 4.6,
+          "out_s": 67.7,
+          "reached_chest": 355.6,
+          "started": 287.9,
+          "wrong_turns": []
+        },
+        "william_distance_reception_m": {
+          "mean": 48.8,
+          "p50": 51.43,
+          "p90": 83.08,
+          "samples": 164
+        },
+        "william_lead_on_road_m": {
+          "max": 8.09,
+          "mean": 7.61,
+          "min": 6.5,
+          "p10": 6.87,
+          "p50": 7.8,
+          "p90": 8.03,
+          "samples": 33
+        },
+        "william_lead_to_cell_m": {
+          "mean": -70.95,
+          "p10": -119.31,
+          "p50": -74.26,
+          "p90": -11.24,
+          "samples": 164,
+          "share_adso_ahead": 0.95,
+          "share_william_ahead": 0.01
+        },
+        "william_wait_points": [],
+        "william_waits": 0
+      },
+      "t": 1278.5
+    },
+    "normal": {
+      "beats": [
+        "road",
+        "sext_gate",
+        "gate_open",
+        "reception",
+        "to_cell",
+        "second_bundle",
+        "meal",
+        "free",
+        "nones",
+        "after_nones",
+        "end"
+      ],
+      "ended": true,
+      "named": [
+        "william",
+        "fazio",
+        "cellarer",
+        "tebaldo",
+        "nuto",
+        "fulco"
+      ],
+      "observations": [
+        "pines",
+        "aed_windows",
+        "garden"
+      ],
+      "summary": {
+        "beat_durations_s": {
+          "after_nones": 80.0,
+          "free": 403.2,
+          "gate_open": 55.7,
+          "meal": 156.8,
+          "nones": 180.0,
+          "reception": 79.7,
+          "road": 32.8,
+          "second_bundle": 174.7,
+          "sext_gate": 27.3,
+          "to_cell": 88.3
+        },
+        "free_period": {
+          "sat_s": 0.0,
+          "start": 615.2,
+          "talked": [
+            "fulco",
+            "nuto"
+          ]
+        },
+        "nones": {
+          "bell_t": 1018.4,
+          "entered_church_t": 0.1,
+          "guests_place_t": 0.1,
+          "in_church_s": 162.0,
+          "office_begun_t": 65.2,
+          "outside_s": 0.0,
+          "player_room_at_bell": "church",
+          "watched_brothers_t": 17.8
+        },
+        "overtakes": 0,
+        "people_met": {
+          "cellarer": 137.7,
+          "fazio": 61.9,
+          "fulco": 634.0,
+          "nuto": 311.5,
+          "tebaldo": 459.5
+        },
+        "solo_route": {
+          "back_in_cell": 458.5,
+          "back_s": 102.9,
+          "help_from_nuto": false,
+          "hesitation_s": 0.0,
+          "left_cell": 287.9,
+          "max_off_route_m": 4.6,
+          "out_s": 67.7,
+          "reached_chest": 355.6,
+          "started": 287.9,
+          "wrong_turns": []
+        },
+        "william_distance_reception_m": {
+          "mean": 48.8,
+          "p50": 51.43,
+          "p90": 83.08,
+          "samples": 164
+        },
+        "william_lead_on_road_m": {
+          "max": 8.09,
+          "mean": 7.61,
+          "min": 6.5,
+          "p10": 6.87,
+          "p50": 7.8,
+          "p90": 8.03,
+          "samples": 33
+        },
+        "william_lead_to_cell_m": {
+          "mean": -70.95,
+          "p10": -119.31,
+          "p50": -74.26,
+          "p90": -11.24,
+          "samples": 164,
+          "share_adso_ahead": 0.95,
+          "share_william_ahead": 0.01
+        },
+        "william_wait_points": [],
+        "william_waits": 0
+      },
+      "t": 1278.5
+    },
+    "rush": {
+      "beats": [
+        "road",
+        "sext_gate",
+        "gate_open",
+        "reception",
+        "to_cell",
+        "second_bundle",
+        "meal",
+        "free",
+        "nones",
+        "after_nones",
+        "end"
+      ],
+      "ended": true,
+      "named": [
+        "william",
+        "fazio",
+        "cellarer",
+        "tebaldo",
+        "nuto"
+      ],
+      "observations": [
+        "aed_windows",
+        "garden"
+      ],
+      "summary": {
+        "beat_durations_s": {
+          "after_nones": 80.0,
+          "free": 403.2,
+          "gate_open": 55.7,
+          "meal": 201.6,
+          "nones": 180.0,
+          "reception": 79.7,
+          "road": 33.1,
+          "second_bundle": 107.1,
+          "sext_gate": 27.3,
+          "to_cell": 88.3
+        },
+        "free_period": {
+          "sat_s": 0.0,
+          "start": 592.8,
+          "talked": []
+        },
+        "nones": {
+          "bell_t": 996.0,
+          "entered_church_t": 53.3,
+          "guests_place_t": 58.6,
+          "in_church_s": 114.06,
+          "office_begun_t": 65.2,
+          "outside_s": 47.94,
+          "player_room_at_bell": "hospice-cell",
+          "watched_brothers_t": 20.7
+        },
+        "overtakes": 1,
+        "people_met": {
+          "cellarer": 134.5,
+          "fazio": 62.1,
+          "fulco": 1186.9,
+          "nuto": 299.0,
+          "tebaldo": 392.3
+        },
+        "solo_route": {
+          "back_in_cell": 391.2,
+          "back_s": 68.6,
+          "help_from_nuto": false,
+          "hesitation_s": 0.0,
+          "left_cell": 287.1,
+          "max_off_route_m": 4.6,
+          "out_s": 35.5,
+          "reached_chest": 322.6,
+          "started": 287.1,
+          "wrong_turns": []
+        },
+        "william_distance_reception_m": {
+          "mean": 51.04,
+          "p50": 57.52,
+          "p90": 83.19,
+          "samples": 164
+        },
+        "william_lead_on_road_m": {
+          "max": 6.5,
+          "mean": -8.45,
+          "min": -17.55,
+          "p10": -15.9,
+          "p50": -9.67,
+          "p90": 1.26,
+          "samples": 33
+        },
+        "william_lead_to_cell_m": {
+          "mean": -75.06,
+          "p10": -119.31,
+          "p50": -82.43,
+          "p90": -12.89,
+          "samples": 164,
+          "share_adso_ahead": 0.95,
+          "share_william_ahead": 0.01
+        },
+        "william_wait_points": [],
+        "william_waits": 0
+      },
+      "t": 1256.1
+    },
+    "slow": {
+      "beats": [
+        "road",
+        "sext_gate",
+        "gate_open",
+        "reception",
+        "to_cell",
+        "second_bundle",
+        "meal",
+        "free",
+        "nones",
+        "after_nones",
+        "end"
+      ],
+      "ended": true,
+      "named": [
+        "william",
+        "fazio",
+        "cellarer",
+        "tebaldo",
+        "nuto",
+        "fulco"
+      ],
+      "observations": [
+        "pines",
+        "valley",
+        "aed_windows",
+        "garden"
+      ],
+      "summary": {
+        "beat_durations_s": {
+          "after_nones": 80.0,
+          "free": 403.2,
+          "gate_open": 55.7,
+          "meal": 156.8,
+          "nones": 180.0,
+          "reception": 79.7,
+          "road": 71.2,
+          "second_bundle": 276.1,
+          "sext_gate": 27.3,
+          "to_cell": 88.3
+        },
+        "free_period": {
+          "sat_s": 0.0,
+          "start": 755.1,
+          "talked": [
+            "fulco",
+            "nuto"
+          ]
+        },
+        "nones": {
+          "bell_t": 1158.3,
+          "entered_church_t": 0.0,
+          "guests_place_t": 0.0,
+          "in_church_s": 162.0,
+          "office_begun_t": 65.1,
+          "outside_s": 0.0,
+          "player_room_at_bell": "church",
+          "watched_brothers_t": 17.7
+        },
+        "overtakes": 0,
+        "people_met": {
+          "cellarer": 212.2,
+          "fazio": 100.4,
+          "fulco": 787.0,
+          "nuto": 364.9,
+          "tebaldo": 599.5
+        },
+        "solo_route": {
+          "back_in_cell": 598.3,
+          "back_s": 161.6,
+          "help_from_nuto": false,
+          "hesitation_s": 48.78,
+          "left_cell": 327.1,
+          "max_off_route_m": 4.6,
+          "out_s": 109.6,
+          "reached_chest": 436.7,
+          "started": 327.1,
+          "wrong_turns": []
+        },
+        "william_distance_reception_m": {
+          "mean": 7.1,
+          "p50": 4.4,
+          "p90": 15.25,
+          "samples": 165
+        },
+        "william_lead_on_road_m": {
+          "max": 19.87,
+          "mean": 12.3,
+          "min": 5.09,
+          "p10": 6.73,
+          "p50": 12.17,
+          "p90": 17.91,
+          "samples": 70
+        },
+        "william_lead_to_cell_m": {
+          "mean": -4.47,
+          "p10": -18.27,
+          "p50": -0.42,
+          "p90": 3.86,
+          "samples": 165,
+          "share_adso_ahead": 0.48,
+          "share_william_ahead": 0.46
+        },
+        "william_wait_points": [
+          "lp_wall"
+        ],
+        "william_waits": 1
+      },
+      "t": 1418.3
+    }
+  },
+  "results": [
+    {
+      "ms": 3,
+      "pass": true,
+      "test": "test_scenario_data_is_consistent"
+    },
+    {
+      "ms": 45,
+      "pass": true,
+      "test": "test_lead_wait_waits_at_look_points_and_resumes"
+    },
+    {
+      "ms": 47,
+      "pass": true,
+      "test": "test_overtaking_william_makes_him_follow_without_reprimand"
+    },
+    {
+      "ms": 2198,
+      "pass": true,
+      "test": "test_normal_playthrough"
+    },
+    {
+      "ms": 2002,
+      "pass": true,
+      "test": "test_slow_playthrough_is_coherent"
+    },
+    {
+      "ms": 1952,
+      "pass": true,
+      "test": "test_rushed_playthrough_is_coherent"
+    },
+    {
+      "ms": 2289,
+      "pass": true,
+      "test": "test_confused_route_recovers_without_ui"
+    },
+    {
+      "ms": 2153,
+      "pass": true,
+      "test": "test_nones_proceeds_without_adso"
+    },
+    {
+      "ms": 0,
+      "pass": true,
+      "test": "test_people_are_named_only_when_heard"
+    },
+    {
+      "ms": 3,
+      "pass": true,
+      "test": "test_observations_only_from_perception"
+    },
+    {
+      "ms": 75,
+      "pass": true,
+      "test": "test_save_restore_mid_route_keeps_actors_continuous"
+    },
+    {
+      "ms": 1,
+      "pass": true,
+      "test": "test_a_seated_adso_can_always_get_up"
+    },
+    {
+      "ms": 3,
+      "pass": true,
+      "test": "test_save_service_day1a_file_and_rejection_of_proof_saves"
+    },
+    {
+      "ms": 104,
+      "pass": true,
+      "test": "test_clock_is_honest_through_the_free_period"
+    }
+  ],
+  "suite": "day1a",
+  "total": 14
+}

@@ -1,0 +1,1 @@
+== day1_walk (1920x1080) --scenario=day1-walk --style=normal --vsync=off --save-dir=user://day1a_runs/saves --telemetry-dir=user://day1a_runs/telemetry  [GPU utilization before launch: 6% after 0s settle]
