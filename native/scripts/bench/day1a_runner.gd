@@ -139,6 +139,8 @@ var _want_t: float = 0.0
 var _misses: Array = []
 var _frames := PackedFloat32Array()
 var _frame_beats := PackedInt32Array()
+var _frame_epoch := PackedFloat64Array()
+var _frame_pc := PackedFloat32Array()
 var _beat_names: PackedStringArray = []
 var _last_us: int = 0
 var _captured: Dictionary = {}
@@ -176,6 +178,9 @@ func _walk_frame(dt: float) -> void:
 	if t > 3.0:
 		_frames.append(ms)
 		_frame_beats.append(bi)
+		_frame_epoch.append(Time.get_unix_time_from_system())
+		_frame_pc.append(_pc_total())
+		_evidence(ms, d.beat)
 	_bot(dt)
 	_capture_moments()
 	if String(args.get("record", "")) == "nones":
@@ -568,7 +573,8 @@ func _finish_walk(ended: bool) -> void:
 	var rep: Dictionary = {"scenario": scenario, "style": style, "label": label, "ended": ended, "real_s": snappedf(t, 0.1), "director_t": snappedf(d.t, 0.1), "beat": d.beat,
 		"interaction_misses": _misses, "events": events, "frames": stats, "telemetry_file": ProjectSettings.globalize_path(tel_path), "summary": d.tel.summary(),
 		"people_named": d.people.people.keys().filter(func(k: String) -> bool: return d.people.knows_name(k)), "observations": Array(d.obs.order), "system": Benchmark.system_info(),
-		"memory": {"static": Performance.get_monitor(Performance.MEMORY_STATIC), "vram": Performance.get_monitor(Performance.RENDER_VIDEO_MEM_USED), "objects": Performance.get_monitor(Performance.OBJECT_COUNT)}}
+		"memory": {"static": Performance.get_monitor(Performance.MEMORY_STATIC), "vram": Performance.get_monitor(Performance.RENDER_VIDEO_MEM_USED), "objects": Performance.get_monitor(Performance.OBJECT_COUNT)},
+		"spikes_over_50ms": _spikes, "monitor_csv": "day1-walk_%s_%s_mon.csv" % [style, label], "pipeline_compilations_total": _pc_total()}
 	if _rec_state != "":
 		rep["recording"] = {"state": _rec_state, "starts_at_runner_t": snappedf(_rec_t0, 0.01), "wav": "day1-walk_%s_%s.wav" % [style, label], "note": "master bus (AudioEffectRecord), real time (time scale 1) from the start of the recording; marks t are seconds into the recording"}
 		rep["audio_telemetry_tail"] = main.audio.telemetry.slice(maxi(0, main.audio.telemetry.size() - 400))
@@ -576,10 +582,11 @@ func _finish_walk(ended: bool) -> void:
 	f.store_string(JSON.stringify(rep, " "))
 	f.close()
 	var csv := FileAccess.open(out_dir.path_join("day1-walk_%s_%s.csv" % [style, label]), FileAccess.WRITE)
-	csv.store_line("i,ms,beat")
+	csv.store_line("i,ms,beat,epoch_ms,pipeline_compilations")
 	for i: int in _frames.size():
-		csv.store_line("%d,%.3f,%s" % [i, _frames[i], _beat_names[_frame_beats[i]]])
+		csv.store_line("%d,%.3f,%s,%.1f,%d" % [i, _frames[i], _beat_names[_frame_beats[i]], _frame_epoch[i] * 1000.0, int(_frame_pc[i])])
 	csv.close()
+	_write_monitor(out_dir.path_join("day1-walk_%s_%s_mon.csv" % [style, label]))
 	print("[day1a] walk ", style, " ended=", ended, " t=", snappedf(t, 0.1))
 	get_tree().quit()
 
@@ -795,12 +802,22 @@ const CYCLE_STOPS: PackedStringArray = ["g_court", "c_mid", "gt_well", "nv_c", "
 const CYCLE_LEGS: PackedStringArray = ["to_gate", "gate_to_cell", "cell_to_well", "well_to_nave", "nave_to_garth"]
 var _cyc: Dictionary = {}
 
+## Approach (unmeasured) to the gate court, one complete warm-up loop, then
+## measured loops until both --cycles loops and --soak-min minutes of
+## measured time have passed. Every frame is kept (wall clock, cycle, leg,
+## pipeline compilations); per-second engine counters beside them.
+var _cf_epoch := PackedFloat64Array()
+var _cf_ms := PackedFloat32Array()
+var _cf_cycle := PackedInt32Array()
+var _cf_leg := PackedInt32Array()
+var _cf_pc := PackedFloat32Array()
+
 func _cycles_frame(dt: float) -> void:
 	var d: Day1aDirector = _d()
 	var pl: PlayerController = main.player
 	if _cyc.is_empty():
 		# (plain Arrays: a packed array read from a Dictionary is a copy)
-		_cyc = {"phase": "setup", "cycle": 0, "stop": 0, "legs": {}, "all": [], "rows": [], "last_us": 0, "start_t": 0.0}
+		_cyc = {"phase": "setup", "cycle": -1, "stop": 0, "legs": {}, "all": [], "rows": [], "last_us": 0, "measured_s": 0.0}
 		style = "normal"
 		Engine.time_scale = float(args.get("setup_timescale", 4.0))
 		pl.autopilot_active = true
@@ -814,29 +831,38 @@ func _cycles_frame(dt: float) -> void:
 		_path.clear()
 		_cyc["phase"] = "loop"
 		_cyc["hours"] = main.session.clock.hours
-		_cyc["start_t"] = t
 		_cyc["last_us"] = Time.get_ticks_usec()
 		_cyc["legs"] = {}
-		_cyc["rows"].append(_mem_row(-1))
-		print("[cycles] free period reached at t=%.0f h=%.2f; measuring" % [t, main.session.clock.hours])
+		_cyc["rows"].append(_mem_row(-2, "free period reached"))
+		_pc_last = _pc_total()
+		print("[cycles] free period reached at t=%.0f h=%.2f; approaching the gate court" % [t, main.session.clock.hours])
 		return
 	var now: int = Time.get_ticks_usec()
 	var ms: float = (now - int(_cyc["last_us"])) / 1000.0
 	_cyc["last_us"] = now
-	var leg: String = CYCLE_LEGS[int(_cyc["stop"])]
+	var c: int = int(_cyc["cycle"])
+	var leg: String = CYCLE_LEGS[int(_cyc["stop"])] if c >= 0 else "approach"
 	var legs: Dictionary = _cyc["legs"]
 	if not legs.has(leg):
 		legs[leg] = []
 	(legs[leg] as Array).append(ms)
 	(_cyc["all"] as Array).append(ms)
+	if c >= 1:
+		_cyc["measured_s"] = float(_cyc["measured_s"]) + ms / 1000.0
+	_cf_epoch.append(Time.get_unix_time_from_system())
+	_cf_ms.append(ms)
+	_cf_cycle.append(c)
+	_cf_leg.append(CYCLE_LEGS.find(leg))
+	_cf_pc.append(_pc_total())
+	_evidence(ms, "loop %d %s" % [c, leg])
 	var stop: String = CYCLE_STOPS[int(_cyc["stop"])]
 	_cyc["leg_t"] = float(_cyc.get("leg_t", 0.0)) + dt
 	if Engine.get_process_frames() % 1800 == 0:
-		print("[cycles] t=%.0f loop=%d leg=%s pos=%s path=%d" % [t, int(_cyc["cycle"]), leg, pl.global_position, _path.size()])
+		print("[cycles] t=%.0f loop=%d leg=%s pos=%s path=%d" % [t, c, leg, pl.global_position, _path.size()])
 	# a leg that takes over three minutes is recorded and abandoned
 	var timed_out: bool = float(_cyc["leg_t"]) > 180.0
 	if timed_out:
-		_cyc["timeouts"] = (_cyc.get("timeouts", []) as Array) + [{"loop": int(_cyc["cycle"]), "leg": leg, "at": [pl.global_position.x, pl.global_position.y, pl.global_position.z]}]
+		_cyc["timeouts"] = (_cyc.get("timeouts", []) as Array) + [{"loop": c, "leg": leg, "at": [pl.global_position.x, pl.global_position.y, pl.global_position.z]}]
 		print("[cycles] leg timeout ", leg, " at ", pl.global_position)
 	# step round anyone standing on the next waypoint (a reader in the walk)
 	if _path.size() > 1:
@@ -872,17 +898,19 @@ func _cycles_frame(dt: float) -> void:
 				return
 	_steer(dt, true)
 
-func _mem_row(cycle: int) -> Dictionary:
-	return {"cycle": cycle, "t": snappedf(t, 0.1), "static_mib": snappedf(Performance.get_monitor(Performance.MEMORY_STATIC) / 1048576.0, 0.1),
+func _mem_row(cycle: int, kind: String = "") -> Dictionary:
+	return {"cycle": cycle, "kind": kind, "t": snappedf(t, 0.1), "epoch_s": int(Time.get_unix_time_from_system()), "static_mib": snappedf(Performance.get_monitor(Performance.MEMORY_STATIC) / 1048576.0, 0.1),
 		"vram_mib": snappedf(Performance.get_monitor(Performance.RENDER_VIDEO_MEM_USED) / 1048576.0, 0.1), "texture_mib": snappedf(Performance.get_monitor(Performance.RENDER_TEXTURE_MEM_USED) / 1048576.0, 0.1),
 		"buffer_mib": snappedf(Performance.get_monitor(Performance.RENDER_BUFFER_MEM_USED) / 1048576.0, 0.1),
 		"objects": Performance.get_monitor(Performance.OBJECT_COUNT), "resources": Performance.get_monitor(Performance.OBJECT_RESOURCE_COUNT), "nodes": Performance.get_monitor(Performance.OBJECT_NODE_COUNT),
-		"orphans": Performance.get_monitor(Performance.OBJECT_ORPHAN_NODE_COUNT), "hours": snappedf(main.session.clock.hours, 0.001)}
+		"orphans": Performance.get_monitor(Performance.OBJECT_ORPHAN_NODE_COUNT), "pipeline_compilations": _pc_total(), "hours": snappedf(main.session.clock.hours, 0.001)}
 
-## a loop ends on reaching the gate court again
+## A loop ends on reaching the gate court again (the first arrival ends the
+## unmeasured approach; the next ends the warm-up loop).
 func _end_cycle() -> void:
 	var c: int = int(_cyc["cycle"])
-	var row: Dictionary = _mem_row(c)
+	var kind: String = "approach" if c < 0 else ("warmup" if c == 0 else "measured")
+	var row: Dictionary = _mem_row(c, kind)
 	var legs: Dictionary = _cyc["legs"]
 	var lstats: Dictionary = {}
 	var allc := PackedFloat32Array()
@@ -891,32 +919,97 @@ func _end_cycle() -> void:
 		allc.append_array(PackedFloat32Array(legs[k]))
 	row["frames"] = _fstats(allc)
 	row["legs"] = lstats
-	row["warmup"] = c == 0
 	_cyc["rows"].append(row)
 	_cyc["legs"] = {}
-	if c == 0:
+	if c <= 0:
 		_cyc["all"] = []
-	print("[cycles] loop %d: %.1f fps avg, p95 %.1f ms, static %.1f MiB, vram %.1f MiB" % [c, row["frames"]["fps_avg"], row["frames"]["ms_p95"], row["static_mib"], row["vram_mib"]])
+	print("[cycles] %s %d: %.1f fps avg, p95 %.1f ms, vram %.1f MiB, objects %d, measured %.1f min" % [kind, c, row["frames"].get("fps_avg", 0.0), row["frames"].get("ms_p95", 0.0), row["vram_mib"], int(row["objects"]), float(_cyc["measured_s"]) / 60.0])
 	_cyc["cycle"] = c + 1
-	if c + 1 > int(args.get("cycles", 10)):
+	if c >= int(args.get("cycles", 10)) and float(_cyc["measured_s"]) >= 60.0 * float(args.get("soak-min", 0.0)):
 		_finish_cycles()
 
 func _finish_cycles() -> void:
 	var rows: Array = _cyc["rows"]
-	var warm: Dictionary = rows[1]
+	var warm: Dictionary = rows.filter(func(r: Dictionary) -> bool: return r["kind"] == "warmup")[0]
 	var last: Dictionary = rows[-1]
-	var rep: Dictionary = {"scenario": scenario, "label": label, "cycles": int(args.get("cycles", 10)), "warmup_cycles": 1, "stops": Array(CYCLE_STOPS), "clock_held_at": _cyc["hours"],
-		"rows": rows, "frames_all_measured": _fstats(PackedFloat32Array(_cyc["all"])), "leg_timeouts": _cyc.get("timeouts", []),
-		"memory_growth": {"static_pct": snappedf(100.0 * (float(last["static_mib"]) / maxf(0.001, float(warm["static_mib"])) - 1.0), 0.01) if float(warm["static_mib"]) > 0.0 else null,
-			"vram_pct": snappedf(100.0 * (float(last["vram_mib"]) / maxf(0.001, float(warm["vram_mib"])) - 1.0), 0.01), "objects_delta": int(last["objects"]) - int(warm["objects"]),
-			"basis": "after warm-up loop (cycle 0) → after the last loop"},
+	var measured: Array = rows.filter(func(r: Dictionary) -> bool: return r["kind"] == "measured")
+	var growth: Dictionary = {"basis": "after the complete warm-up loop → after the last measured loop", "loops_measured": measured.size(),
+		"vram_pct": snappedf(100.0 * (float(last["vram_mib"]) / maxf(0.001, float(warm["vram_mib"])) - 1.0), 0.01),
+		"objects_delta": int(last["objects"]) - int(warm["objects"]), "resources_delta": int(last["resources"]) - int(warm["resources"]),
+		"nodes_delta": int(last["nodes"]) - int(warm["nodes"]), "orphans_last": int(last["orphans"])}
+	if float(warm["static_mib"]) > 0.0:
+		growth["static_pct"] = snappedf(100.0 * (float(last["static_mib"]) / float(warm["static_mib"]) - 1.0), 0.01)
+	var name_: String = String(args.get("name", "day1-cycles"))
+	var rep: Dictionary = {"scenario": scenario, "name": name_, "label": label, "cycles": int(args.get("cycles", 10)), "soak_min": float(args.get("soak-min", 0.0)),
+		"measured_minutes": snappedf(float(_cyc["measured_s"]) / 60.0, 0.01), "stops": Array(CYCLE_STOPS), "clock_held_at": _cyc["hours"],
+		"rows": rows, "frames_all_measured": _fstats(PackedFloat32Array(_cyc["all"])), "leg_timeouts": _cyc.get("timeouts", []), "memory_growth": growth,
+		"spikes_over_50ms": _spikes, "frames_csv": "%s_%s.csv" % [name_, label], "monitor_csv": "%s_%s_mon.csv" % [name_, label],
 		"residency": "Day-1A keeps every exported cell resident (world_cells resident_policy off); tree tiles and figures switch by visibility range only — no load/unload events occur in this slice",
-		"system": Benchmark.system_info(), "warning": "external process RSS is sampled by scripts/migration/run_benchmarks.sh when run from a package"}
-	var f := FileAccess.open(out_dir.path_join("day1-cycles_%s.json" % label), FileAccess.WRITE)
+		"system": Benchmark.system_info(), "rss": "sampled outside the process by scripts/migration/run_benchmarks.sh (epoch seconds), aligned with frames and counters by wall clock"}
+	var f := FileAccess.open(out_dir.path_join("%s_%s.json" % [name_, label]), FileAccess.WRITE)
 	f.store_string(JSON.stringify(rep, " "))
 	f.close()
+	var cf := FileAccess.open(out_dir.path_join("%s_%s.csv" % [name_, label]), FileAccess.WRITE)
+	cf.store_line("i,epoch_ms,ms,cycle,leg,pipeline_compilations")
+	for i: int in _cf_ms.size():
+		cf.store_line("%d,%.1f,%.3f,%d,%s,%d" % [i, _cf_epoch[i] * 1000.0, _cf_ms[i], _cf_cycle[i], "approach" if _cf_leg[i] < 0 else CYCLE_LEGS[_cf_leg[i]], int(_cf_pc[i])])
+	cf.close()
+	_write_monitor(out_dir.path_join("%s_%s_mon.csv" % [name_, label]))
 	print("[cycles] done")
 	get_tree().quit()
+
+# --- shared evidence: per-second engine counters and spike context ---------------
+const MON_COLUMNS := "epoch_s,context,objects,resources,nodes,orphans,static_mib,vram_mib,texture_mib,buffer_mib,objects_in_frame,primitives,draw_calls,pipelines_canvas,pipelines_mesh,pipelines_surface,pipelines_draw,pipelines_specialization,figures_visible,fps"
+var _mon: Array = []
+var _mon_s: int = -1
+var _spikes: Array = []
+var _pc_last: float = 0.0
+
+static func _pc_total() -> float:
+	return Performance.get_monitor(Performance.PIPELINE_COMPILATIONS_CANVAS) + Performance.get_monitor(Performance.PIPELINE_COMPILATIONS_MESH) \
+		+ Performance.get_monitor(Performance.PIPELINE_COMPILATIONS_SURFACE) + Performance.get_monitor(Performance.PIPELINE_COMPILATIONS_DRAW) \
+		+ Performance.get_monitor(Performance.PIPELINE_COMPILATIONS_SPECIALIZATION)
+
+func _figures_visible() -> int:
+	var n := 0
+	for f: Node3D in main.day1.figures.values():
+		if f.visible:
+			n += 1
+	return n
+
+func _counters() -> Array:
+	return [Performance.get_monitor(Performance.OBJECT_COUNT), Performance.get_monitor(Performance.OBJECT_RESOURCE_COUNT), Performance.get_monitor(Performance.OBJECT_NODE_COUNT),
+		Performance.get_monitor(Performance.OBJECT_ORPHAN_NODE_COUNT), snappedf(Performance.get_monitor(Performance.MEMORY_STATIC) / 1048576.0, 0.01),
+		snappedf(Performance.get_monitor(Performance.RENDER_VIDEO_MEM_USED) / 1048576.0, 0.01), snappedf(Performance.get_monitor(Performance.RENDER_TEXTURE_MEM_USED) / 1048576.0, 0.01),
+		snappedf(Performance.get_monitor(Performance.RENDER_BUFFER_MEM_USED) / 1048576.0, 0.01), Performance.get_monitor(Performance.RENDER_TOTAL_OBJECTS_IN_FRAME),
+		Performance.get_monitor(Performance.RENDER_TOTAL_PRIMITIVES_IN_FRAME), Performance.get_monitor(Performance.RENDER_TOTAL_DRAW_CALLS_IN_FRAME),
+		Performance.get_monitor(Performance.PIPELINE_COMPILATIONS_CANVAS), Performance.get_monitor(Performance.PIPELINE_COMPILATIONS_MESH), Performance.get_monitor(Performance.PIPELINE_COMPILATIONS_SURFACE),
+		Performance.get_monitor(Performance.PIPELINE_COMPILATIONS_DRAW), Performance.get_monitor(Performance.PIPELINE_COMPILATIONS_SPECIALIZATION), _figures_visible(),
+		Performance.get_monitor(Performance.TIME_FPS)]
+
+## Each frame: a per-second counters row, and the context of any frame over
+## 50 ms (what the engine compiled that frame, what the scene was doing).
+func _evidence(ms: float, context: String) -> void:
+	var epoch: float = Time.get_unix_time_from_system()
+	var pc: float = _pc_total()
+	if ms > 50.0:
+		var d: Day1aDirector = _d()
+		var recent: Array = d.tel.events.filter(func(e: Dictionary) -> bool: return absf(float(e.get("t", -99.0)) - d.t) < 1.5).map(func(e: Dictionary) -> String: return "%s:%s" % [e.get("kind", ""), e.get("id", e.get("office", e.get("person", "")))])
+		_spikes.append({"epoch_ms": int(epoch * 1000.0), "ms": snappedf(ms, 0.01), "context": context, "pipeline_compilations_since_last_frame": int(pc - _pc_last),
+			"counters": _counters(), "director_t": snappedf(d.t, 0.01), "beat": d.beat, "director_events_within_1_5s": recent,
+			"player": [snappedf(main.player.global_position.x, 0.1), snappedf(main.player.global_position.y, 0.1), snappedf(main.player.global_position.z, 0.1)]})
+	_pc_last = pc
+	var sec: int = int(epoch)
+	if sec != _mon_s:
+		_mon_s = sec
+		_mon.append([sec, context] + _counters())
+
+func _write_monitor(path: String) -> void:
+	var f := FileAccess.open(path, FileAccess.WRITE)
+	f.store_line(MON_COLUMNS)
+	for r: Array in _mon:
+		f.store_line(",".join(r.map(func(x: Variant) -> String: return str(x).replace(",", ";"))))
+	f.close()
 
 # --- William's gait, measured from the rendered skeleton ------------------------
 var _gait: Dictionary = {}
