@@ -149,8 +149,17 @@ func pick(i: int) -> bool:
 	chose.emit(id)
 	return true
 
-func show_end() -> void:
-	end_card.visible = true
+func set_end(on: bool) -> void:
+	end_card.visible = on
+
+## Subtitles, caption and replies belonging to the state being replaced.
+func clear_transient() -> void:
+	for L: Dictionary in lines:
+		(L["node"] as Node).queue_free()
+	lines.clear()
+	caption_label.text = ""
+	_caption_t = 0.0
+	hide_choice()
 
 ## options shown in the pause menu (Day-1A)
 func add_options(pause_box: Container, player: PlayerController) -> void:

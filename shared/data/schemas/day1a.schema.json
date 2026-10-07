@@ -11,7 +11,7 @@
     "anonymous": {"type": "array", "items": {"type": "object", "required": ["id", "template", "spot", "ry", "pose", "stall"], "properties": {"id": {"type": "string", "pattern": "^brother:[0-9]{2}$"}}}},
     "nodes": {"type": "object", "additionalProperties": {"type": "array", "items": {"type": "number"}}},
     "edges": {"type": "array", "items": {"type": "array", "items": {"type": "string"}}},
-    "lines": {"type": "object", "additionalProperties": {"type": "object", "required": ["s", "t"], "properties": {"s": {"type": "string"}, "t": {"type": "string"}}}},
+    "lines": {"type": "object", "additionalProperties": {"type": "object", "required": ["s", "t"], "properties": {"s": {"type": "string"}, "t": {"type": "string"}, "teaches": {"type": "array", "items": {"type": "string"}}}}},
     "walk_limits": {"type": "array", "items": {"type": "object", "required": ["id", "poly"]}}
   }
 }

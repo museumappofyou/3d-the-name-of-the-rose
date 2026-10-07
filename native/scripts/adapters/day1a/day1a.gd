@@ -196,7 +196,7 @@ func handle_input(event: InputEvent) -> bool:
 		if k >= KEY_1 and k <= KEY_4:
 			return hud.pick(int(k - KEY_1))
 	if event.is_action_pressed("save_game"):
-		var err: String = saves.write(Day1aSave.snapshot(director, main.player.global_position, main.player.yaw, main.player.pitch))
+		var err: String = save_now()
 		main.hud.show_toast("Saved." if err == "" else "Save failed: " + err, 2200)
 		return true
 	if event.is_action_pressed("load_game"):
@@ -295,28 +295,74 @@ func _floor_at(p: Vector3) -> float:
 	return float((hit["position"] as Vector3).y) if not hit.is_empty() else p.y
 
 func _autosave(reason: String) -> void:
-	var err: String = saves.write(Day1aSave.snapshot(director, main.player.global_position, main.player.yaw, main.player.pitch))
+	var err: String = save_now()
 	print("[day1a] autosave ", reason, " ", "ok" if err == "" else err)
 
-func load_save() -> void:
+## The one way Day-1A writes its slot: pause menu, F5 and autosaves. Never
+## the proof's slot (Day1aSave also refuses to overwrite one).
+func save_now() -> String:
+	return saves.write(Day1aSave.snapshot(director, main.player.global_position, main.player.yaw, main.player.pitch, main.player.seat))
+
+func save_path() -> String:
+	return ProjectSettings.globalize_path(saves.path())
+
+## The one way Day-1A loads its slot: pause menu, F9 and a fresh launch.
+## Returns the read report plus "warnings" and a player-facing "message".
+func load_save() -> Dictionary:
 	var r: Dictionary = saves.read()
 	if r["snapshot"] == null:
-		main.hud.show_toast("Nothing to load: %s" % ", ".join(r["report"]), 3500)
-		return
-	var s: Dictionary = r["snapshot"]
-	var warn: PackedStringArray = director.restore(s["director"])
+		r["message"] = "Nothing to load: %s" % ", ".join(r["report"])
+		main.hud.show_toast(r["message"], 3500)
+		return r
+	var warn: PackedStringArray = apply_snapshot(r["snapshot"])
+	r["warnings"] = warn
+	r["message"] = "Loaded%s.%s" % [" (from the backup)" if r["source"] == "backup" else "", "" if warn.is_empty() else " " + "; ".join(warn)]
+	main.hud.show_toast(r["message"], 2800 if warn.is_empty() else 5000)
+	return r
+
+## Replace the running scene with a saved one, then bring every
+## presentation layer to it: body and seat, figures, mules, sound, HUD,
+## prompt and the end card. Safe to repeat on already-used scene objects.
+func apply_snapshot(s: Dictionary) -> PackedStringArray:
+	hud.clear_transient()
+	_speaking.clear()
+	_prompt_id = ""
+	main.hud.set_prompt("")
+	# the clock first: a state-1 save rebuilds its schedule from the hour
 	var c: Dictionary = s["clock"]
 	main.session.clock.set_time(float(c["hours"]), true)
 	main.session.clock.rate = float(c.get("rate", 0.0))
-	var pp: Array = s["player"]["position"]
+	var warn: PackedStringArray = director.restore(s["director"])
+	var P: Dictionary = s["player"]
+	var pp: Array = P["position"]
 	main.player.seat = null
-	main.player.teleport(Vector3(float(pp[0]), float(pp[1]), float(pp[2])), float(s["player"]["yaw"]), "load", float(s["player"].get("pitch", 0.0)))
+	main.player.velocity = Vector3.ZERO
+	main.player.teleport(Vector3(float(pp[0]), float(pp[1]), float(pp[2])), float(P["yaw"]), "load", float(P.get("pitch", 0.0)))
+	var st: Variant = P.get("seat")
+	if director.seated != "":
+		if st is Dictionary:
+			var sp: Array = st["pos"]
+			main.player.seat = {"pos": Vector3(float(sp[0]), float(sp[1]), float(sp[2])), "eye": float(st.get("eye", 1.18)), "floor": float(st.get("floor", sp[1]))}
+		else:
+			director.seated = ""
+			warn.append("seat not recorded: standing")
 	main.lighting.apply_time(main.session.clock.hours)
-	main.hud.show_toast("Loaded (%s)%s" % [r["source"], "" if warn.is_empty() else ": " + ", ".join(warn)], 2800)
+	for f: ActorFigure in figures.values():
+		f.reset_after_load()
+	for m: MuleFigure in mule_nodes.values():
+		m.reset_after_load()
+	fp.reset_after_load()
+	audio.reset_after_load()
+	main.audio.reset_transport()
+	if director.pending_choice != "":
+		hud.show_choice(director.pending_options)
+	_ended = director.beat == "end"
+	hud.set_end(_ended)
+	return warn
 
 func _on_end() -> void:
 	_ended = true
-	hud.show_end()
+	hud.set_end(true)
 	write_telemetry("end")
 
 func write_telemetry(reason: String) -> String:

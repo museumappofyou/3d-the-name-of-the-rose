@@ -33,6 +33,17 @@ func _init(sounds_doc: Dictionary, seed_value: int = 1) -> void:
 	rng.seed = seed_value
 	next_at = rng.randf_range(start_delay.x, start_delay.y)
 
+## A load replaced the scene: nothing is sounding; an office in progress
+## starts again from its first piece after the usual short silence.
+func reset(now: float) -> void:
+	hour = ""
+	k = 0
+	playing = ""
+	end_at = 0.0
+	dying = true
+	gain_target = 0.0
+	next_at = now + rng.randf_range(start_delay.x, start_delay.y)
+
 ## Returns commands: {"op": "play", "stream", "from", "duration"} |
 ## {"op": "gain", "target", "tc"}.
 func tick(now: float, office: String) -> Array:

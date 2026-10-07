@@ -59,7 +59,14 @@ if grep -E '^(ERROR|SCRIPT ERROR)' "$LOG/import.log" | grep -v 'resources still 
 fi
 step "domain, fitted-pose/normal and anchor tests"
 ABBEY_TEST_REPORT="$CHECKS/domain.json" "$GODOT_BIN" --headless --path "$GD" --script res://tests/run_tests.gd > "$LOG/tests.log" 2>&1
-ABBEY_TEST_REPORT="$CHECKS/day1a.json" "$GODOT_BIN" --headless --path "$GD" --script res://tests/day1a_tests.gd > "$LOG/day1a_tests.log" 2>&1
+ABBEY_TEST_SAVES="$CHECKS/day1a_test_saves" ABBEY_TEST_REPORT="$CHECKS/day1a.json" "$GODOT_BIN" --headless --path "$GD" --script res://tests/day1a_tests.gd > "$LOG/day1a_tests.log" 2>&1
+# the real scene: menu/key saves, interrupted scenes, repeated loads, Nones,
+# a fresh process per case; and the PM's review probes (scratch saves only)
+SCENE="$CHECKS/day1a_scene"
+rm -rf "$SCENE"
+mkdir -p "$SCENE"
+"$GODOT_BIN" --headless --path "$GD" --script res://tests/day1a_scene_tests.gd -- --save-dir="$SCENE/saves" --telemetry-dir="$SCENE/telemetry" --out="$SCENE" > "$LOG/day1a_scene.log" 2>&1
+"$GODOT_BIN" --headless --path "$GD" --script "$ROOT/docs/evidence/day1a/pm_review_probe.gd" -- --save-dir="$SCENE/pm_probe" --telemetry-dir="$SCENE/pm_probe_telemetry" --out="$SCENE" > "$LOG/day1a_pm_probe.log" 2>&1
 for p in $PEOPLE; do
   "$GODOT_BIN" --headless --path "$GD" --script res://tests/pose_check.gd -- "$p" "$ROOT/shared/data/manifests/pose_reference_$p.json" > "$LOG/pose_$p.log" 2>&1
 done

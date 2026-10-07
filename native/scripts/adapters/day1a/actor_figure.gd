@@ -72,6 +72,14 @@ func setup(a: Actor, d: Dictionary, content: ContentData, w: Node3D, is_named: b
 		"tebaldo":
 			_attach("pelvis", "keys", Vector3(-0.19, -0.06, 0.07), Vector3(0.0, 0.3, 1.45))
 
+## A load moved the actor: forget the smoothing that assumed continuity.
+func reset_after_load() -> void:
+	_last_pos = Vector3.INF
+	_ground_speed = 0.0
+	_y = NAN
+	_seat_y = NAN
+	_yaw = actor.yaw
+
 ## the clip's own ground speed: the planted foot's backward travel per second
 static func natural_speed(f: CharacterPresentation, clip: String) -> float:
 	var key: String = f.person_id + ":" + clip

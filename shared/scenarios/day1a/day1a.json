@@ -2450,11 +2450,17 @@
   },
   "ce_office": {
    "s": "cellarer",
-   "t": "I am the cellarer of this house. Your cells are ready in the pilgrims' house. Come."
+   "t": "I am the cellarer of this house. Your cells are ready in the pilgrims' house. Come.",
+   "teaches": [
+    "cellarer"
+   ]
   },
   "ce_fazio": {
    "s": "cellarer",
-   "t": "Fazio will see to your animals."
+   "t": "Fazio will see to your animals.",
+   "teaches": [
+    "fazio"
+   ]
   },
   "ce_refuse_1": {
    "s": "cellarer",
@@ -2466,7 +2472,10 @@
   },
   "ce_cell": {
    "s": "cellarer",
-   "t": "Brother Tebaldo keeps the guest house. He will see to you."
+   "t": "Brother Tebaldo keeps the guest house. He will see to you.",
+   "teaches": [
+    "tebaldo"
+   ]
   },
   "ce_leave": {
    "s": "cellarer",
@@ -2478,7 +2487,10 @@
   },
   "te_name": {
    "s": "tebaldo",
-   "t": "Tebaldo. Brother Tebaldo. The guest house is mine, God help me."
+   "t": "Tebaldo. Brother Tebaldo. The guest house is mine, God help me.",
+   "teaches": [
+    "tebaldo"
+   ]
   },
   "te_arrive_2": {
    "s": "tebaldo",
@@ -2498,7 +2510,10 @@
   },
   "te_call_nuto": {
    "s": "tebaldo",
-   "t": "Nuto! The guests’ water, as I said!"
+   "t": "Nuto! The guests’ water, as I said!",
+   "teaches": [
+    "nuto"
+   ]
   },
   "te_busy_1": {
    "s": "tebaldo",
@@ -2538,7 +2553,10 @@
   },
   "nu_name": {
    "s": "nuto",
-   "t": "Nuto. Guests’ house. Water, wood, straw — whatever goes up that stair."
+   "t": "Nuto. Guests’ house. Water, wood, straw — whatever goes up that stair.",
+   "teaches": [
+    "nuto"
+   ]
   },
   "nu_done": {
    "s": "nuto",
@@ -2590,11 +2608,17 @@
   },
   "fu_name": {
    "s": "fulco",
-   "t": "Fulco. Novice. Very novice."
+   "t": "Fulco. Novice. Very novice.",
+   "teaches": [
+    "fulco"
+   ]
   },
   "fu_rainaldo": {
    "s": "fulco",
-   "t": "That's Brother Rainaldo. He does the choir books. Don't touch them."
+   "t": "That's Brother Rainaldo. He does the choir books. Don't touch them.",
+   "teaches": [
+    "rainaldo"
+   ]
   },
   "fu_bell": {
    "s": "fulco",
@@ -2602,7 +2626,10 @@
   },
   "ra_name": {
    "s": "rainaldo",
-   "t": "Rainaldo. I keep the choir books — the ones that come down for the offices."
+   "t": "Rainaldo. I keep the choir books — the ones that come down for the offices.",
+   "teaches": [
+    "rainaldo"
+   ]
   },
   "ra_book": {
    "s": "rainaldo",

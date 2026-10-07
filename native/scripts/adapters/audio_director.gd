@@ -113,6 +113,14 @@ func _buses() -> void:
 	amb_lpf.cutoff_hz = 12000.0
 	AudioServer.add_bus_effect(AudioServer.get_bus_index("Ambience"), amb_lpf)
 
+## Day-1A load: stop the chant and restart the office transport cleanly.
+func reset_transport() -> void:
+	chant.stop()
+	piece_started = -1.0
+	transport_gain = 0.0
+	transport_target = 0.0
+	session.office.reset(session.session_time)
+
 func play_sound(id: String) -> void:
 	if id == "creak":
 		creak.play()

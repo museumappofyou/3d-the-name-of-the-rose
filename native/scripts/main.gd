@@ -253,7 +253,7 @@ func set_paused(on: bool) -> void:
 	get_tree().paused = false
 	session.clock.paused = on
 	player.input_enabled = not on
-	hud.show_pause(on, "Saves: %s" % ProjectSettings.globalize_path(session.saves.path()))
+	hud.show_pause(on, "Saves: %s" % (day1.save_path() if mode == "day1a" and day1 != null else ProjectSettings.globalize_path(session.saves.path())))
 	_capture(not on)
 
 func do_load() -> Dictionary:
@@ -267,6 +267,23 @@ func do_load() -> Dictionary:
 	return r
 
 func _on_request(action: String, arg: Variant) -> void:
+	# Day-1A owns its own slot: the menu's Save/Load never touch the proof's
+	# slot0.json, and the proof's QA reset and study jumps do not apply
+	if mode == "day1a" and day1 != null:
+		match action:
+			"save":
+				var derr: String = day1.save_now()
+				var dmsg: String = "Saved." if derr == "" else "Save failed: " + derr
+				hud.show_toast(dmsg, 2500)
+				hud.pause_status.text = dmsg + "  " + day1.save_path()
+				return
+			"load":
+				var dr: Dictionary = day1.load_save()
+				hud.pause_status.text = String(dr.get("message", ""))
+				return
+			"reset", "jump":
+				hud.show_toast("Not available in Day-1A.", 2500)
+				return
 	match action:
 		"resume":
 			set_paused(false)

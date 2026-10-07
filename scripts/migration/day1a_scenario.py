@@ -272,6 +272,12 @@ walk_limits = [
     {'id': 'cell', 'poly': [[-21.0, 13.9], [-19.4, 13.9], [-19.4, 13.95], [-13.4, 13.95], [-13.4, 18.6], [-19.4, 18.6], [-19.4, 15.2], [-21.0, 15.2]], 'y_min': 5.0},
     {'id': 'stair', 'poly': [[-21.0, 13.9], [-19.65, 13.9], [-19.65, 25.4], [-21.0, 25.4]]},
 ]
+# the lines that speak a name teach it to Adso when they are presented
+# (never when merely queued)
+TEACHES = {'ce_office': 'cellarer', 'ce_fazio': 'fazio', 'ce_cell': 'tebaldo', 'te_name': 'tebaldo', 'te_call_nuto': 'nuto', 'nu_name': 'nuto', 'fu_name': 'fulco', 'fu_rainaldo': 'rainaldo', 'ra_name': 'rainaldo'}
+for _lid, _who in TEACHES.items():
+    lines[_lid]['teaches'] = [_who]
+
 doc = {
     'schema_version': 1,
     'id': 'day1a', 'version': 1,

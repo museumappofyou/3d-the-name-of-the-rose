@@ -1,15 +1,21 @@
 class_name Day1aSave
 extends RefCounted
-## Versioned Day-1A scenario save (format "abbey-day1a-save", schema 1),
+## Versioned Day-1A scenario save (format "abbey-day1a-save", schema 2),
 ## a separate file from the phase-1 proof save so neither can overwrite the
 ## other. Same atomic write / checksum / backup policy as SaveService. A
 ## proof save (or anything else) offered here is rejected with a clear
 ## report and left untouched. Stores ids and data only: beat, clock, the
-## player's transform and carry, named actors' positions and routes,
-## portals, props, people memory, observations, telemetry so far.
+## player's transform, seat and carry, every actor's position, route,
+## activity and arrival, props, queued lines and the open choice, people
+## memory, observations, telemetry so far.
+##
+## Schema 1 (e223bc2) is still read: its director state lacks the queue,
+## the choice, arrival tags and the community, which the director rebuilds
+## from the beat (Day1aDirector.restore, state 1) and the load reports.
 
 const FORMAT := "abbey-day1a-save"
-const SCHEMA_VERSION := 1
+const SCHEMA_VERSION := 2
+const READABLE_SCHEMAS: Array[int] = [1, 2]
 const SCENARIO := "day1a"
 const SCENARIO_VERSION := 1
 const BOUNDS := AABB(Vector3(-200, -20, -200), Vector3(450, 120, 450))
@@ -24,11 +30,16 @@ func _init(save_dir: String = "user://saves", name: String = "day1a_slot0.json")
 func path() -> String:
 	return dir.path_join(file_name)
 
-static func snapshot(d: Day1aDirector, feet: Vector3, yaw: float, pitch: float) -> Dictionary:
+## seat: the player controller's seat ({"pos", "eye", "floor"}) or null.
+static func snapshot(d: Day1aDirector, feet: Vector3, yaw: float, pitch: float, seat: Variant = null) -> Dictionary:
+	var st: Variant = null
+	if seat is Dictionary:
+		var sp: Vector3 = seat["pos"]
+		st = {"pos": [sp.x, sp.y, sp.z], "eye": float(seat.get("eye", 1.18)), "floor": float(seat.get("floor", sp.y))}
 	return {
 		"format": FORMAT, "schema_version": SCHEMA_VERSION, "scenario": SCENARIO, "scenario_version": SCENARIO_VERSION,
 		"saved_at_unix": int(Time.get_unix_time_from_system()), "content_revision": d.session.content.revision,
-		"player": {"position": [feet.x, feet.y, feet.z], "yaw": yaw, "pitch": pitch},
+		"player": {"position": [feet.x, feet.y, feet.z], "yaw": yaw, "pitch": pitch, "seat": st},
 		"clock": {"day": d.session.clock.day, "hours": d.session.clock.hours, "rate": d.session.clock.rate},
 		"director": d.to_dict(),
 	}
@@ -42,8 +53,9 @@ static func validate(s: Variant) -> PackedStringArray:
 		return PackedStringArray(["a phase-1 proof save, not a Day-1A save (left untouched)"])
 	if d.get("format") != FORMAT:
 		e.append("format")
-	if int(d.get("schema_version", 0)) != SCHEMA_VERSION:
-		e.append("schema_version")
+	var schema: int = int(d.get("schema_version", 0))
+	if not READABLE_SCHEMAS.has(schema):
+		e.append("schema_version %d" % schema)
 	if d.get("scenario") != SCENARIO or int(d.get("scenario_version", 0)) != SCENARIO_VERSION:
 		e.append("scenario/version")
 	var p: Variant = d.get("player")
@@ -59,6 +71,31 @@ static func validate(s: Variant) -> PackedStringArray:
 	var dd: Variant = d.get("director")
 	if not (dd is Dictionary) or not Day1aDirector.BEATS.has(String((dd as Dictionary).get("beat", ""))):
 		e.append("director.beat")
+		return e
+	var D: Dictionary = dd
+	if not (D.get("actors", {}) is Dictionary) or not (D.get("props", {}) is Dictionary) or not (D.get("lines_said", {}) is Dictionary):
+		e.append("director.actors/props/lines_said")
+	if schema >= 2:
+		# the in-flight scene: a queue of known shape, a known choice with
+		# options, a known seat, finite actor positions
+		if int(D.get("state_version", 0)) != Day1aDirector.STATE_VERSION:
+			e.append("director.state_version")
+		var q: Variant = D.get("line_queue")
+		if not (q is Array) or (q as Array).any(func(x: Variant) -> bool: return not (x is Dictionary) or not (x.get("id") is String) or not (x.get("in") is float or x.get("in") is int)):
+			e.append("director.line_queue")
+		var pc: String = String(D.get("pending_choice", ""))
+		if pc != "" and (not Day1aDirector.CHOICES.has(pc) or not (D.get("pending_options") is Array) or (D["pending_options"] as Array).is_empty()):
+			e.append("director.pending_choice")
+		if not String(D.get("seated", "")) in ["", "stool", "bench"] or not String(D.get("holding", "")) in ["", "lead", "steady"]:
+			e.append("director.seated/holding")
+		for id: Variant in (D.get("actors", {}) as Dictionary).keys():
+			var ap: Variant = (D["actors"][id] as Dictionary).get("pos") if D["actors"][id] is Dictionary else null
+			if not (ap is Array) or (ap as Array).size() != 3 or not is_finite(float(ap[0])) or not is_finite(float(ap[2])):
+				e.append("director.actors.%s.pos" % str(id))
+				break
+		var st: Variant = (p as Dictionary).get("seat") if p is Dictionary else null
+		if st != null and (not (st is Dictionary) or not ((st as Dictionary).get("pos") is Array)):
+			e.append("player.seat")
 	return e
 
 func write(snap: Dictionary) -> String:

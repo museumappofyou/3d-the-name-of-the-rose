@@ -156,6 +156,17 @@ func _on_sfx(id: String, pos: Vector3) -> void:
 		"bucket":
 			play("pour", pos + Vector3(0, 0.3, 0), -12.0, 0.8, 2.0)
 
+## A load: footstep strides restart, and the hour's bell rings only the
+## strokes still due in the restored scene (never again from the first).
+func reset_after_load() -> void:
+	_stride.clear()
+	_mule_stride.clear()
+	_hammer = 0
+	_bell_queue.clear()
+	var B: Dictionary = director.bell_remaining()
+	for off: float in B.get("offsets", []):
+		_bell_queue.append(_bell_t + off)
+
 func _process(dt: float) -> void:
 	_bell_t += dt
 	var ear: Vector3 = main.player.eye_position()

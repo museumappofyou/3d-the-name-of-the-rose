@@ -252,6 +252,11 @@ def check_scenario(sid, d, errors):
     for lid, L in d['lines'].items():
         if L['s'] not in speakers:
             errors.append(f'{p}: line {lid} unknown speaker {L["s"]}')
+        for who in L.get('teaches', []):
+            if who not in d['people']:
+                errors.append(f'{p}: line {lid} teaches unknown person {who}')
+            elif d['people'][who].get('name', '').split()[-1] not in L['t']:
+                errors.append(f'{p}: line {lid} teaches {who} but does not say the name')
     for oid, o in d['observations'].items():
         if o['reply'] not in d['lines']:
             errors.append(f'{p}: observation {oid} reply {o["reply"]} missing')

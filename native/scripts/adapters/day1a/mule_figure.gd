@@ -66,6 +66,14 @@ func halter() -> Vector3:
 		return _sk.global_transform * _sk.get_bone_global_pose(_head_bone).origin + Vector3(0, -0.12, 0)
 	return global_position + global_transform.basis * Vector3(0, 1.25, 0.8)
 
+## A load moved the mule: forget the smoothing that assumed continuity.
+func reset_after_load() -> void:
+	_last = Vector3.INF
+	_speed = 0.0
+	_y = NAN
+	_yaw = actor.yaw
+	_idle_t = 0.0
+
 func _process(dt: float) -> void:
 	visible = actor.present
 	if not visible:

@@ -97,7 +97,19 @@ func to_dict() -> Dictionary:
 	for i: int in range(path_i, path.size()):
 		pts.append([path[i].x, path[i].y if not is_nan(path[i].y) else null, path[i].z])
 	return {"pos": [pos.x, pos.y if not is_nan(pos.y) else null, pos.z], "yaw": yaw, "speed": speed, "path": pts, "moving": moving,
-		"activity": activity, "carrying": carrying, "present": present, "tag": _tag, "travelled_m": travelled_m}
+		"activity": activity, "carrying": carrying, "present": present, "tag": _tag, "travelled_m": travelled_m,
+		"arrived": arrived_tag, "face": _v(face_target), "look": _v(look_target)}
+
+static func _v(v: Variant) -> Variant:
+	if v is Vector3:
+		var q: Vector3 = v
+		return [q.x, null if is_nan(q.y) else q.y, q.z]
+	return null
+
+static func _unv(v: Variant) -> Variant:
+	if v is Array and (v as Array).size() == 3:
+		return Vector3(float(v[0]), NAN if v[1] == null else float(v[1]), float(v[2]))
+	return null
 
 func restore(d: Dictionary) -> void:
 	var p: Array = d.get("pos", [pos.x, null, pos.z])
@@ -109,6 +121,9 @@ func restore(d: Dictionary) -> void:
 	present = bool(d.get("present", true))
 	_tag = String(d.get("tag", ""))
 	travelled_m = float(d.get("travelled_m", 0.0))
+	arrived_tag = String(d.get("arrived", ""))
+	face_target = _unv(d.get("face"))
+	look_target = _unv(d.get("look"))
 	path.clear()
 	path.append(Vector3(pos))
 	for q: Array in d.get("path", []):

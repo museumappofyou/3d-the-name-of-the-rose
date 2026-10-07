@@ -378,10 +378,6 @@ func _tick_reception(_dt: float) -> void:
 				_sub["w_turn"] = true
 				w.go(_typed([w.pos, Vector3(-97.2, NAN, -7.4)]), 1.0, "meet")
 		"greeting":
-			if lines_said.has("ce_office") and not people.knows_name("cellarer"):
-				people.hear_name("cellarer", "cellarer", t)
-			if lines_said.has("ce_fazio") and not people.knows_name("fazio"):
-				people.hear_name("fazio", "cellarer", t)
 			if not _talking() and lines_said.has("ce_fazio"):
 				_sub["phase"] = "away"
 				# the porter takes both mules round the church to the stables
@@ -515,7 +511,6 @@ func _tick_to_cell(_dt: float) -> void:
 		ce.face_target = player_pos if _dist2(player_pos, ce.pos) < 6.0 else w.pos
 		_line("ce_cell")
 		_line("ce_leave", 0.4)
-		people.hear_name("tebaldo", "cellarer", t)
 	if lines_said.has("ce_leave") and not _talking() and ce.arrived_tag == "cell":
 		ce.arrived_tag = ""
 		ce.go(graph.path_to(ce.pos, "cw_16"), 1.5, "leave")
@@ -615,7 +610,6 @@ func _tick_meal(_dt: float) -> void:
 				te.face_target = w.pos
 				_line("te_arrive_1")
 				_line("te_name", 0.2)
-				people.hear_name("tebaldo", "tebaldo", t)
 				_line("te_arrive_2", 0.2)
 				_line("te_rule_1", 0.1)
 				_line("te_rule_2", 0.0)
@@ -671,7 +665,6 @@ func _tick_meal(_dt: float) -> void:
 	if te.arrived_tag == "down":
 		te.arrived_tag = ""
 		_line("te_call_nuto")
-		people.hear_name("nuto", "tebaldo", t)
 		te.go(graph.path_to(te.pos, "cd_16"), 1.7, "gone")
 	if te.arrived_tag == "gone":
 		te.arrived_tag = ""
@@ -783,7 +776,6 @@ func _free_life() -> void:
 			props["bucket_nuto"] = {"where": "ground", "pos": Vector3(node("st_foot").x + 0.6, float(ground_fn.call(node("st_foot").x + 0.6, node("st_foot").z + 0.4)), node("st_foot").z + 0.4)}
 	if String(_sub.get("water", "")) == "arrived" and carrying != "bucket" and not lines_said.has("nu_name"):
 		_line("nu_name")
-		people.hear_name("nuto", "nuto", t)
 		_line("nu_done", 0.4)
 		(tel.free["talked"] as Array).append("nuto")
 		_sub["water"] = "done"
@@ -1053,9 +1045,13 @@ func _lines() -> void:
 			continue
 		var spk: String = L["s"]
 		lines_said[id] = snappedf(t, 0.1)
-		var label: String = "Adso" if spk == "adso" else people.label(spk)
 		if spk != "adso" and spk != "william" and actors.has(spk):
 			people.seen(spk, t)
+		# a name is learned when the line that speaks it is presented, never
+		# when it is merely queued (an interrupted introduction teaches nothing)
+		for who: String in L.get("teaches", []):
+			people.hear_name(who, spk, t)
+		var label: String = "Adso" if spk == "adso" else people.label(spk)
 		say.emit(spk, id, String(L["t"]), label)
 		tel.event(t, "line", {"id": id})
 
@@ -1128,7 +1124,6 @@ func choose(option_id: String) -> void:
 					flags["verse_prompted"] = true
 			_line("fu_name", 0.6)
 			_line("ad_name", 0.2)
-			people.hear_name("fulco", "fulco", t)
 			(tel.free["talked"] as Array).append("fulco")
 
 # --- interactions -------------------------------------------------------------
@@ -1278,12 +1273,7 @@ func interact(id: String) -> Dictionary:
 			fu.activity = "talk"
 			_line("fu_notice")
 			_line("fu_city", 0.3)
-			var opts: Array = [{"id": "loud", "text": "They're loud. Bells, carts, everybody shouting."}, {"id": "dogs", "text": "Some are. Ours had more dogs than people."}]
-			if bool(flags.get("raisins", false)):
-				opts.append({"id": "raisins", "text": "[Give him the raisins.]"})
-			if lines_said.has("fu_psalm"):
-				opts.append({"id": "verse", "text": "“… in protectione Dei caeli commorabitur.”"})
-			_sub["fulco_opts"] = opts
+			_sub["fulco_opts"] = _fulco_options()
 			_sub["fulco_ask_at"] = talking_until
 			return {"talk": "fulco"}
 		"talk_fulco2":
@@ -1291,7 +1281,6 @@ func interact(id: String) -> Dictionary:
 			_line("fu_joke")
 			if a("rainaldo").present:
 				_line("fu_rainaldo", 0.4)
-				people.hear_name("rainaldo", "fulco", t)
 			return {"talk": "fulco"}
 		"help_nuto":
 			_sub["water"] = "walking"
@@ -1315,7 +1304,6 @@ func interact(id: String) -> Dictionary:
 			var ra: Actor = a("rainaldo")
 			ra.face_target = player_pos
 			_line("ra_name")
-			people.hear_name("rainaldo", "rainaldo", t)
 			_line("ra_book", 0.4)
 			_line("ra_lamps", 0.4)
 			(tel.free["talked"] as Array).append("rainaldo")
@@ -1332,6 +1320,15 @@ func interact(id: String) -> Dictionary:
 			return {"sit": at, "yaw": PI / 2.0 if id == "sit_bench_porch" else -PI / 2.0}
 	return {}
 
+## What Adso can answer the novice (the raisins only while he has them).
+func _fulco_options() -> Array:
+	var opts: Array = [{"id": "loud", "text": "They're loud. Bells, carts, everybody shouting."}, {"id": "dogs", "text": "Some are. Ours had more dogs than people."}]
+	if bool(flags.get("raisins", false)):
+		opts.append({"id": "raisins", "text": "[Give him the raisins.]"})
+	if lines_said.has("fu_psalm"):
+		opts.append({"id": "verse", "text": "“… in protectione Dei caeli commorabitur.”"})
+	return opts
+
 ## Adso walked away from a held halter.
 func release_hold() -> void:
 	if holding == "steady":
@@ -1341,7 +1338,7 @@ func release_hold() -> void:
 func _tick_choices() -> void:
 	if _sub.has("fulco_ask_at") and t >= float(_sub["fulco_ask_at"]) and pending_choice == "":
 		_sub.erase("fulco_ask_at")
-		_ask("fulco", _sub["fulco_opts"])
+		_ask("fulco", _sub.get("fulco_opts", _fulco_options()))
 
 # --- perception -------------------------------------------------------------
 
@@ -1462,9 +1459,65 @@ func _on_lead_state(old: String, new: String, info: Dictionary) -> void:
 
 # --- persistence -------------------------------------------------------------
 
+## Version of the director state inside a save body (the file envelope has
+## its own). 1 = e223bc2: named people, props, flags and lines said only; the
+## queued lines, an open choice, arrival tags, the community and the mules'
+## trails were lost. 2 = the whole in-flight scene.
+const STATE_VERSION := 2
+
+## Line sequences a beat waits on: [beats, lines, the beat phase that means
+## the sequence has begun even before its first line is heard]. A state-1
+## save (its queue lost) resumes an interrupted sequence of its own beat from
+## the first unsaid line. State 2 keeps the queue; a sequence the bell cut
+## short stays cut short.
+const CHAINS: Array = [
+	[["sext_gate"], ["w_sext_1", "w_sext_2"], ""], [["gate_open"], ["w_bar_1", "w_bar_2"], ""], [["gate_open"], ["w_reveal_1", "w_reveal_2"], ""],
+	[["reception"], ["ce_greet", "w_greet", "ce_office", "ce_fazio"], "greeting"], [["to_cell"], ["w_ask_house", "ce_refuse_1", "ce_refuse_2", "w_fallen"], ""],
+	[["to_cell"], ["ce_cell", "ce_leave"], ""], [["meal"], ["te_arrive_1", "te_name", "te_arrive_2", "te_rule_1", "te_rule_2", "te_sorry"], "tebaldo_talk"],
+	[["meal"], ["nu_abbot", "w_leave_1", "w_leave_2"], ""], [["free"], ["nu_well", "ad_help_nuto", "nu_help"], ""], [["free"], ["nu_name", "nu_done"], ""],
+	[["free"], ["fu_notice", "fu_city"], ""], [["free"], ["ra_name", "ra_book", "ra_lamps"], ""],
+]
+const CHOICES: PackedStringArray = ["meal_question", "fulco"]
+
+## JSON-safe copy of beat state (Vector3 as {"v3": [x, y or null, z]}).
+static func enc(v: Variant) -> Variant:
+	if v is Vector3:
+		var q: Vector3 = v
+		return {"v3": [q.x, null if is_nan(q.y) else q.y, q.z]}
+	if v is Array:
+		var out: Array = []
+		for x: Variant in v:
+			out.append(enc(x))
+		return out
+	if v is Dictionary:
+		var o: Dictionary = {}
+		for k: Variant in (v as Dictionary).keys():
+			o[str(k)] = enc(v[k])
+		return o
+	if v is float and not is_finite(float(v)):
+		return null
+	return v
+
+static func dec(v: Variant) -> Variant:
+	if v is Dictionary:
+		var dd: Dictionary = v
+		if dd.size() == 1 and dd.get("v3") is Array and (dd["v3"] as Array).size() == 3:
+			var q: Array = dd["v3"]
+			return Vector3(float(q[0]), NAN if q[1] == null else float(q[1]), float(q[2]))
+		var o: Dictionary = {}
+		for k: Variant in dd.keys():
+			o[k] = dec(dd[k])
+		return o
+	if v is Array:
+		var out: Array = []
+		for x: Variant in v:
+			out.append(dec(x))
+		return out
+	return v
+
 func to_dict() -> Dictionary:
 	var ad: Dictionary = {}
-	for id: String in NAMED:
+	for id: String in actors.keys():
 		ad[id] = a(id).to_dict()
 	var pr: Dictionary = {}
 	for k: String in props.keys():
@@ -1473,38 +1526,54 @@ func to_dict() -> Dictionary:
 			var v: Vector3 = p["pos"]
 			p["pos"] = [v.x, v.y if not is_nan(v.y) else null, v.z]
 		pr[k] = p
-	var sub: Dictionary = {}
-	for k: String in _sub.keys():
-		var v2: Variant = _sub[k]
-		if v2 is float or v2 is int or v2 is bool or v2 is String:
-			sub[k] = v2
-	return {"beat": beat, "beat_t": beat_t, "t": t, "flags": flags.duplicate(true), "props": pr, "gate": gate.duplicate(), "carrying": carrying, "seated": seated,
-		"lines_said": lines_said.duplicate(), "lead": lead.to_dict(), "actors": ad, "people": people.to_dict(), "observations": obs.to_dict(), "telemetry": tel.to_dict(), "sub": sub,
-		"trails": trails.keys().map(func(k: String) -> Array: return [k, trails[k]["leader"], trails[k]["gap"]])}
+	var queue: Array = []
+	for q: Dictionary in line_queue:
+		queue.append({"id": String(q["id"]), "in": float(q["at"]) - t})
+	var tr: Array = []
+	for k: String in trails.keys():
+		tr.append({"id": k, "leader": String(trails[k]["leader"]), "gap": float(trails[k]["gap"]), "pts": enc(trails[k]["pts"])})
+	return {"state_version": STATE_VERSION, "beat": beat, "beat_t": beat_t, "t": t, "flags": enc(flags), "props": pr, "gate": gate.duplicate(),
+		"carrying": carrying, "seated": seated, "holding": holding, "lines_said": lines_said.duplicate(),
+		"line_queue": queue, "talking_in": maxf(0.0, talking_until - t),
+		"pending_choice": pending_choice, "pending_options": enc(pending_options), "dwell": dwell.duplicate(),
+		"lead": lead.to_dict(), "actors": ad, "people": people.to_dict(), "observations": obs.to_dict(), "telemetry": tel.to_dict(),
+		"sub": enc(_sub), "trails": tr}
 
+## Replace the scene state with a saved one. Everything is overwritten (no
+## leftovers from the state being replaced); nobody is placed (`Actor.place`)
+## except, for a state-1 save, the anonymous brothers it never kept. Set the
+## session clock before calling: a state-1 schedule is rebuilt from it.
 func restore(d: Dictionary) -> PackedStringArray:
 	var warnings: PackedStringArray = []
 	var b: String = String(d.get("beat", "road"))
 	if not BEATS.has(b):
 		warnings.append("unknown beat " + b)
 		return warnings
+	var version: int = int(d.get("state_version", 1))
 	beat = b
 	beat_t = float(d.get("beat_t", 0.0))
 	t = float(d.get("t", 0.0))
-	flags = (d.get("flags", {}) as Dictionary).duplicate(true)
+	flags = dec(d.get("flags", {})) as Dictionary
 	gate = (d.get("gate", gate) as Dictionary).duplicate()
 	carrying = String(d.get("carrying", ""))
-	seated = ""
+	seated = String(d.get("seated", ""))
+	if not seated in ["", "stool", "bench"]:
+		warnings.append("dropped seat " + seated)
+		seated = ""
 	lines_said = (d.get("lines_said", {}) as Dictionary).duplicate()
+	props.clear()
 	for k: String in (d.get("props", {}) as Dictionary).keys():
 		var p: Dictionary = (d["props"][k] as Dictionary).duplicate()
 		if p.get("pos") is Array:
 			var q: Array = p["pos"]
 			p["pos"] = Vector3(float(q[0]), NAN if q[1] == null else float(q[1]), float(q[2]))
 		props[k] = p
-	for id: String in NAMED:
-		if (d.get("actors", {}) as Dictionary).has(id):
-			a(id).restore(d["actors"][id])
+	var saved_actors: Dictionary = d.get("actors", {})
+	for id: String in actors.keys():
+		if saved_actors.has(id):
+			a(id).restore(saved_actors[id])
+		elif version >= 2:
+			warnings.append("actor %s missing from the save" % id)
 	warnings.append_array(people.restore(d.get("people", {})))
 	warnings.append_array(obs.restore(d.get("observations", {})))
 	tel.restore(d.get("telemetry", {}))
@@ -1512,28 +1581,138 @@ func restore(d: Dictionary) -> PackedStringArray:
 	if beat == "road":
 		lead.setup(_route("road"), _look_points("road"), data.get("lead", {}))
 	lead.restore(d.get("lead", {}))
-	_sub = (d.get("sub", {}) as Dictionary).duplicate()
+	_sub = dec(d.get("sub", {})) as Dictionary
 	trails.clear()
-	for tr: Array in d.get("trails", []):
-		trails[String(tr[0])] = {"leader": String(tr[1]), "pts": [], "gap": float(tr[2])}
+	for tr: Variant in d.get("trails", []):
+		if tr is Array:
+			trails[String(tr[0])] = {"leader": String(tr[1]), "pts": [], "gap": float(tr[2])}
+		elif tr is Dictionary:
+			var pts: Array = []
+			for v: Variant in dec((tr as Dictionary).get("pts", [])):
+				if v is Vector3:
+					pts.append(v)
+			trails[String(tr["id"])] = {"leader": String(tr["leader"]), "pts": pts, "gap": float(tr["gap"])}
+	# a trail follower has no path of its own: its walking flag is kept as saved
+	for id: String in trails.keys():
+		if saved_actors.has(id) and actors.has(id):
+			a(id).moving = bool((saved_actors[id] as Dictionary).get("moving", false))
+	dwell = (d.get("dwell", {}) as Dictionary).duplicate()
 	line_queue.clear()
-	talking_until = t
-	pending_choice = ""
-	# the community is never saved: rebuild it from the beat
-	if beat in ["free", "nones", "after_nones", "end"]:
-		for bdef: Dictionary in data.get("anonymous", []):
-			var ab: Actor = a(String(bdef["id"]))
-			var sp: Array = bdef["spot"]
-			if beat == "nones":
-				var st: Vector3 = node(String(bdef["stall"]))
-				ab.place(st, 0.0 if st.z < -5.46 else PI, t, "restored in choir (office in progress)")
-				ab.activity = "choir"
-			else:
-				ab.place(Vector3(float(sp[0]), NAN, float(sp[1])), float(bdef["ry"]), t, "restored at reading place")
-				ab.activity = String(bdef["pose"])
-			ab.present = true
-	if beat == "nones":
-		for k: String in _sub.keys():
-			if k.begins_with("go_"):
-				_sub.erase(k)
+	for q: Variant in d.get("line_queue", []):
+		if q is Dictionary and data["lines"].has(String(q.get("id", ""))):
+			line_queue.append({"id": String(q["id"]), "at": t + maxf(0.0, float(q.get("in", 0.0)))})
+		else:
+			warnings.append("dropped queued line %s" % str(q))
+	talking_until = t + maxf(0.0, float(d.get("talking_in", 0.0)))
+	pending_choice = String(d.get("pending_choice", ""))
+	pending_options = dec(d.get("pending_options", [])) as Array
+	if pending_choice != "" and (not CHOICES.has(pending_choice) or pending_options.is_empty()):
+		warnings.append("dropped choice " + pending_choice)
+		pending_choice = ""
+		pending_options = []
+	if version >= 2:
+		holding = String(d.get("holding", ""))
+	else:
+		warnings.append("state-1 save: queued lines, the open choice, arrival tags and the community were not kept; rebuilt")
+		holding = "lead" if String(trails.get("mule_a", {}).get("leader", "")) == "adso" else ""
+		_migrate_state1()
+		_recover_progress()
 	return warnings
+
+## State 1 never kept the anonymous brothers, arrival tags or the free
+## period's schedule: rebuild what the beat implies, deterministically.
+func _migrate_state1() -> void:
+	var k := 0
+	for bdef: Dictionary in data.get("anonymous", []):
+		var ab: Actor = a(String(bdef["id"]))
+		var sp: Array = bdef["spot"]
+		var spot := Vector3(float(sp[0]), NAN, float(sp[1]))
+		if beat in ["free", "after_nones", "end"]:
+			ab.place(spot, float(bdef["ry"]), t, "state-1 save: at his reading place")
+			ab.activity = String(bdef["pose"])
+			ab.present = true
+		elif beat == "nones":
+			# where the office walk had brought him beat_t seconds after the bell
+			var go: float = 0.8 + fmod(float(k) * 1.37, 3.6)
+			ab.present = true
+			if beat_t < go:
+				ab.place(spot, float(bdef["ry"]), t, "state-1 save: closing his book")
+				ab.activity = "close_book"
+				_sub["go_%s" % ab.id] = go
+			else:
+				_sub.erase("go_%s" % ab.id)
+				var route: Array[Vector3] = graph.path_to(spot, String(bdef["stall"]))
+				route.push_front(spot)
+				var along: float = (beat_t - go) * 1.05
+				var at: Vector3 = route[-1]
+				var rest: Array[Vector3] = []
+				for i: int in range(1, route.size()):
+					var seg: float = Vector2(route[i].x - route[i - 1].x, route[i].z - route[i - 1].z).length()
+					if along < seg:
+						at = route[i - 1].lerp(route[i], along / maxf(seg, 1e-4))
+						rest = route.slice(i)
+						break
+					along -= seg
+				ab.place(at, float(bdef["ry"]), t, "state-1 save: on his way to the choir")
+				if rest.is_empty():
+					ab.activity = "choir"
+					ab.face_target = Vector3(at.x, 0, -5.46)
+				else:
+					ab.activity = "walk"
+					rest.push_front(at)
+					ab.go(rest, 1.05, "stall")
+		k += 1
+	# the arrivals a beat waits on (state 1 lost them): only those still awaited
+	var waits: Array = [
+		["to_cell", "cellarer", "cell", not lines_said.has("ce_leave")],
+		["meal", "nuto", "door", not lines_said.has("nu_abbot") and String(_sub.get("phase", "")) == "abbot"],
+		["meal", "tebaldo", "tray", String(_sub.get("phase", "")) == "tebaldo"],
+		["second_bundle", "william", "sit", a("william").activity != "sit"],
+		["free", "rainaldo", "lectern", String(props.get("choir_book", {}).get("where", "")) != "lectern" and a("rainaldo").present],
+		["free", "nuto", "water", String(_sub.get("water", "")) == "walking"],
+	]
+	for w: Array in waits:
+		var ac: Actor = a(String(w[1]))
+		if beat == w[0] and bool(w[3]) and not ac.moving and ac._tag == w[2]:
+			ac.arrived_tag = String(w[2])
+	if beat == "free" and not _sub.has("tebaldo_pass"):
+		_sub["tebaldo_pass"] = [13.25, 13.9].filter(func(h: float) -> bool: return h > session.clock.hours)
+
+## After a state-1 load: a beat must never wait for a line nobody will say
+## or a choice nobody can see.
+func _recover_progress() -> void:
+	var queued: Dictionary = {}
+	for q: Dictionary in line_queue:
+		queued[q["id"]] = true
+	for entry: Array in CHAINS:
+		if not (entry[0] as Array).has(beat):
+			continue
+		var chain: Array = entry[1]
+		var said: Array = chain.filter(func(id: String) -> bool: return lines_said.has(id))
+		var begun: bool = not said.is_empty() or (String(entry[2]) != "" and String(_sub.get("phase", "")) == String(entry[2]))
+		if not begun or lines_said.has(chain[-1]) or chain.any(func(id: String) -> bool: return queued.has(id)):
+			continue
+		for id: String in chain:
+			if not lines_said.has(id):
+				_line(id, 0.4)
+	if pending_choice == "":
+		if beat == "meal" and String(_sub.get("phase", "")) == "answer" and not bool(_sub.get("answered", false)) and not _talking():
+			_ask("meal_question", _meal_options())
+		elif beat in ["free", "after_nones"] and bool(flags.get("fulco_talked", false)) and not lines_said.has("fu_name") \
+				and not _sub.has("fulco_ask_at") and lines_said.has("fu_city") and not queued.has("fu_name"):
+			_sub["fulco_ask_at"] = t + 0.5
+			_sub["fulco_opts"] = _fulco_options()
+
+## Strokes of the hour's bell still to ring after a load (seconds from now),
+## so a restored bell neither repeats nor goes silent.
+func bell_remaining() -> Dictionary:
+	var office: String = {"sext_gate": "sext", "nones": "nones"}.get(beat, "")
+	if office == "":
+		return {}
+	var B: Dictionary = data["bells"][office]
+	var out: Array = []
+	for k: int in int(B["strokes"]):
+		var at: float = 0.4 + float(k) * float(B["interval_s"]) - beat_t
+		if at > 0.0:
+			out.append(at)
+	return {"office": office, "offsets": out}

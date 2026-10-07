@@ -92,6 +92,14 @@ func eat(kind: String) -> void:
 	m.roughness = 0.8
 	morsel.material_override = m
 
+## A load: no half-eaten morsel, the body turns with the restored view.
+func reset_after_load() -> void:
+	_morsel_t = -1.0
+	if morsel:
+		morsel.visible = false
+	if player:
+		_yaw = player.yaw + PI
+
 func _process(dt: float) -> void:
 	if player == null:
 		return
