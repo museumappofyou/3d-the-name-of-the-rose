@@ -995,7 +995,11 @@ func _evidence(ms: float, context: String) -> void:
 	if ms > 50.0:
 		var d: Day1aDirector = _d()
 		var recent: Array = d.tel.events.filter(func(e: Dictionary) -> bool: return absf(float(e.get("t", -99.0)) - d.t) < 1.5).map(func(e: Dictionary) -> String: return "%s:%s" % [e.get("kind", ""), e.get("id", e.get("office", e.get("person", "")))])
+		# how much of the long frame the engine itself spent working (process
+		# and physics time of that frame) and whether the window could present
 		_spikes.append({"epoch_ms": int(epoch * 1000.0), "ms": snappedf(ms, 0.01), "context": context, "pipeline_compilations_since_last_frame": int(pc - _pc_last),
+			"engine_process_ms": snappedf(Performance.get_monitor(Performance.TIME_PROCESS) * 1000.0, 0.01), "engine_physics_ms": snappedf(Performance.get_monitor(Performance.TIME_PHYSICS_PROCESS) * 1000.0, 0.01),
+			"window_focused": DisplayServer.window_is_focused(), "window_minimized": DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_MINIMIZED,
 			"counters": _counters(), "director_t": snappedf(d.t, 0.01), "beat": d.beat, "director_events_within_1_5s": recent,
 			"player": [snappedf(main.player.global_position.x, 0.1), snappedf(main.player.global_position.y, 0.1), snappedf(main.player.global_position.z, 0.1)]})
 	_pc_last = pc
