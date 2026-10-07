@@ -32,6 +32,9 @@ var _prop: Node3D = null
 var _prop_kind: String = ""
 var _phase_t: float = 0.0
 var _seat_y: float = NAN
+var stride_k: float = 1.0           # >1: a longer stride than the clip's (William)
+var _stride_now: float = 1.0
+var knee_ease: bool = false         # ease the clip's deepest knee bend
 static var NATURAL: Dictionary = {}
 
 const STILL := {"stand": "standSleeves", "idle": "idleSubtle", "look": "idleSubtle", "look_long": "standSleeves", "fold": "foldArms",
@@ -45,6 +48,8 @@ func setup(a: Actor, d: Dictionary, content: ContentData, w: Node3D, is_named: b
 	named = is_named
 	motion = String(d.get("motion", "lay" if String(d.get("template", "")).begins_with("lay_") else "brother"))
 	gait = String(d.get("gait", ""))
+	stride_k = float(d.get("stride", 1.0))
+	knee_ease = bool(d.get("knee_ease", false))
 	shadow_m = 30.0 if named else 18.0
 	fig = CharacterPresentation.new()
 	fig.content = content
@@ -80,44 +85,39 @@ func reset_after_load() -> void:
 	_seat_y = NAN
 	_yaw = actor.yaw
 
-## the clip's own ground speed: the planted foot's backward travel per second
+## The clip's own ground speed: the median backward speed of the planted
+## foot (low, moving back relative to the body) in clip time. Playing the
+## clip at ground speed / this keeps a planted foot planted.
 static func natural_speed(f: CharacterPresentation, clip: String) -> float:
 	var key: String = f.person_id + ":" + clip
 	if NATURAL.has(key):
 		return NATURAL[key]
 	var ap: AnimationPlayer = f.player
 	var sk: Skeleton3D = f.skeleton
-	var bi: int = sk.find_bone("foot_l")
 	var L: float = f.clip_length(clip)
 	var prev_clip: String = f.clip
 	ap.play(clip, 0.0, 1.0)
-	var ys := PackedFloat32Array()
-	var zs := PackedFloat32Array()
-	var N := 72
-	for i: int in N:
-		ap.seek(L * float(i) / N, true)
-		var o: Vector3 = sk.get_bone_global_pose(bi).origin
-		ys.append(o.y)
-		zs.append(o.z)
-	var ymin: float = ys[0]
-	for y: float in ys:
-		ymin = minf(ymin, y)
-	# the longest run (cyclic) with the foot within 1.8 cm of its lowest
-	var best_n := 0
-	var best_start := 0
-	for st: int in N:
-		var n := 0
-		while n < N and ys[(st + n) % N] < ymin + 0.018:
-			n += 1
-		if n > best_n:
-			best_n = n
-			best_start = st
-	var speed := 1.0
-	if best_n >= 3:
-		var z0: float = zs[best_start]
-		var z1: float = zs[(best_start + best_n - 1) % N]
-		var dt: float = L * float(best_n - 1) / N
-		speed = clampf(absf(z0 - z1) / maxf(dt, 0.05), 0.4, 3.0)
+	var N := 120
+	var speeds: Array = []
+	for foot: String in ["foot_l", "foot_r"]:
+		var bi: int = sk.find_bone(foot)
+		if bi < 0:
+			continue
+		var ys := PackedFloat32Array()
+		var zs := PackedFloat32Array()
+		for i: int in N:
+			ap.seek(L * float(i) / N, true)
+			var o: Vector3 = sk.get_bone_global_pose(bi).origin
+			ys.append(o.y)
+			zs.append(o.z)
+		var ymin: float = Array(ys).min()
+		for i: int in N:
+			var j: int = (i + 1) % N
+			var dz: float = zs[j] - zs[i]
+			if ys[i] < ymin + 0.02 and ys[j] < ymin + 0.02 and dz < 0.0:
+				speeds.append(-dz / (L / N))
+	speeds.sort()
+	var speed: float = clampf(speeds[speeds.size() / 2], 0.3, 3.0) if not speeds.is_empty() else 1.0
 	NATURAL[key] = speed
 	if prev_clip != "":
 		ap.play(prev_clip, 0.0, 1.0)
@@ -173,9 +173,12 @@ func _process(dt: float) -> void:
 	var rate: float = 1.0
 	if moving:
 		clip = _walk_clip()
-		# the recorded walks are slow (≈0.5 m/s at 1×): quicken the cadence up
-		# to ~135 steps a minute, past that the stride slides a little
-		rate = clampf(_ground_speed / natural_speed(fig, clip), 0.55, 2.35)
+		# the recorded walks are slow (≈0.6 m/s at 1×): quicken the cadence (and
+		# for a long-striding walker lengthen the step) so the planted foot
+		# stays planted; past ~140 steps a minute the stride slides a little
+		# a longer step only as he quickens (none at a stroll, full at his pace)
+		_stride_now = 1.0 + (stride_k - 1.0) * clampf((_ground_speed - 1.0) / 0.7, 0.0, 1.0)
+		rate = clampf(_ground_speed / (natural_speed(fig, clip) * _stride_now), 0.55, 2.4)
 	else:
 		clip = "talk" if speaking and actor.activity in ["stand", "look", "idle", "talk"] else String(STILL.get(actor.activity, "standSleeves"))
 		if not fig.has_clip(clip):
@@ -204,7 +207,43 @@ func _process(dt: float) -> void:
 		fig.advance_presentation(adv if d < 30.0 else adv * 2.0)
 		if gait == "limp" and moving:
 			_limp_pose()
+		if moving and (stride_k != 1.0 or knee_ease):
+			_stride_pose()
 	_carry_prop()
+
+## A walk fitted to a faster walker: the thigh's swing about the vertical
+## scaled by stride_k (a longer step at the same cadence), the clip's deepest
+## knee bend eased above 50°, and the pelvis lowered by however much that
+## lifted the lower foot, so the planted foot keeps the ground.
+func _stride_pose() -> void:
+	var sk: Skeleton3D = fig.skeleton
+	var pel: int = sk.find_bone("pelvis")
+	var low_before := INF
+	var low_after := INF
+	for side: String in ["l", "r"]:
+		var th: int = sk.find_bone("thigh_" + side)
+		var ca: int = sk.find_bone("calf_" + side)
+		var fo: int = sk.find_bone("foot_" + side)
+		if th < 0 or ca < 0 or fo < 0:
+			return
+		low_before = minf(low_before, sk.get_bone_global_pose(fo).origin.y)
+		if knee_ease:
+			var rest: Quaternion = sk.get_bone_rest(ca).basis.get_rotation_quaternion()
+			var delta: Quaternion = rest.inverse() * sk.get_bone_pose_rotation(ca)
+			var ang: float = delta.get_angle()
+			var from: float = deg_to_rad(50.0)
+			if ang > from and ang < PI:
+				sk.set_bone_pose_rotation(ca, rest * Quaternion.IDENTITY.slerp(delta, (from + (ang - from) * 0.45) / ang))
+		if _stride_now != 1.0:
+			var g: Transform3D = sk.get_bone_global_pose(th)
+			var dir: Vector3 = sk.get_bone_global_pose(ca).origin - g.origin
+			var turn: float = atan2(dir.z, -dir.y) * (_stride_now - 1.0)
+			var ng := Transform3D(Basis(Vector3.RIGHT, -turn) * g.basis, g.origin)
+			var local: Transform3D = sk.get_bone_global_pose(sk.get_bone_parent(th)).affine_inverse() * ng
+			sk.set_bone_pose_rotation(th, local.basis.get_rotation_quaternion())
+		low_after = minf(low_after, sk.get_bone_global_pose(fo).origin.y)
+	if pel >= 0 and is_finite(low_before) and low_after > low_before:
+		sk.set_bone_pose_position(pel, sk.get_bone_pose_position(pel) - Vector3(0, low_after - low_before, 0))
 
 ## a quick, short stance on the bad (left) leg
 func _limp_warp(_adv: float) -> float:

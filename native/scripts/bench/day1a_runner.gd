@@ -7,6 +7,10 @@ extends Node
 ##                confused | ignore_nones): interactions only through what
 ##                the probe offers, frame times per beat, review captures
 ##                (--captures=on) and the director's telemetry
+##   day1-gait    William walks a straight line at --speeds (default
+##                1.0,1.35,1.72 m/s): planted-foot slide, knee flexion,
+##                cadence and stride from the rendered skeleton, side and
+##                talking-distance captures (--label names the variant)
 ##   day1-cycles  plays to the free period (accelerated, unmeasured), holds
 ##                the hour, then times --cycles=10 real-time loops gate →
 ##                guest cell → well → nave → garth → gate (one extra warm-up loop),
@@ -52,6 +56,8 @@ func _process(dt: float) -> void:
 			_cast_frame(dt)
 		"day1-cycles":
 			_cycles_frame(dt)
+		"day1-gait":
+			_gait_frame(dt)
 
 func _shots_step(dt: float) -> void:
 	if _shots.is_empty():
@@ -911,3 +917,138 @@ func _finish_cycles() -> void:
 	f.close()
 	print("[cycles] done")
 	get_tree().quit()
+
+# --- William's gait, measured from the rendered skeleton ------------------------
+var _gait: Dictionary = {}
+
+func _gait_frame(dt: float) -> void:
+	var d: Day1aDirector = _d()
+	var w: Actor = d.a("william")
+	if _gait.is_empty():
+		DirAccess.make_dir_recursive_absolute(out_dir.path_join("gait"))
+		main.session.clock.set_time(12.1, true)
+		main.session.clock.rate = 0.0
+		main.player.frozen = true
+		for id: String in d.actors.keys():
+			d.a(id).present = false
+		d.beat = "end"
+		var speeds: Array = Array(String(args.get("speeds", "1.0,1.35,1.72")).split(",")).map(func(x: String) -> float: return float(x))
+		_gait = {"speeds": speeds, "i": 0, "phase": "start", "t": 0.0, "rows": [], "runs": []}
+	var A := Vector3(-82.0, NAN, -9.6)
+	var B := Vector3(-73.0, NAN, -9.6)
+	var fig: ActorFigure = main.day1.figures["william"]
+	var sk: Skeleton3D = fig.fig.skeleton
+	var sp: float = float(_gait["speeds"][int(_gait["i"])])
+	_gait["t"] = float(_gait["t"]) + dt
+	match String(_gait["phase"]):
+		"start":
+			w.present = true
+			w.activity = "walk"
+			w.place(A, PI / 2.0, d.t, "gait")
+			var line: Array[Vector3] = [A, B]
+			w.go(line, sp, "gait")
+			fig.reset_after_load()
+			_gait["phase"] = "walk"
+			_gait["t"] = 0.0
+			_gait["rows"] = []
+		"walk":
+			# side camera, 4 m off the line; the talking-distance view comes after
+			var cam := Vector3(-77.5, 0.0, -5.6)
+			var h: float = main.cells.terrain_height_at(cam.x, cam.z)
+			var eye := Vector3(cam.x, (0.0 if is_nan(h) else h), cam.z)
+			var v: Vector3 = Vector3(w.pos.x, eye.y + 1.0, w.pos.z) - (eye + Vector3(0, 1.62, 0))
+			main.player.teleport(eye, atan2(-v.x, -v.z), "gait camera", atan2(v.y, Vector2(v.x, v.z).length()))
+			var X: Transform3D = sk.global_transform
+			var row: Array = [float(_gait["t"]), w.pos.x]
+			for side: String in ["l", "r"]:
+				var th: Vector3 = X * sk.get_bone_global_pose(sk.find_bone("thigh_" + side)).origin
+				var ca: Vector3 = X * sk.get_bone_global_pose(sk.find_bone("calf_" + side)).origin
+				var fo: Vector3 = X * sk.get_bone_global_pose(sk.find_bone("foot_" + side)).origin
+				var knee: float = rad_to_deg((ca - th).angle_to(fo - ca))
+				row.append_array([fo.x, fo.y, fo.z, knee])
+			row.append((X * sk.get_bone_global_pose(sk.find_bone("pelvis")).origin).y - fig.global_position.y)
+			(_gait["rows"] as Array).append(row)
+			var mid: float = (A.x + B.x) / 2.0
+			if String(args.get("strip", "")) == "on" and absf(w.pos.x - mid) < 1.6 and int(float(_gait["t"]) / 0.1) != int((float(_gait["t"]) - dt) / 0.1):
+				RenderingServer.force_draw(false)
+				main.get_viewport().get_texture().get_image().save_png(out_dir.path_join("gait/strip_%s_%.2f_%03d.png" % [label, sp, int(float(_gait["t"]) * 100.0)]))
+			if absf(w.pos.x - mid) < 0.05 and not _gait.has("side_shot"):
+				_gait["side_shot"] = true
+				RenderingServer.force_draw(false)
+				main.get_viewport().get_texture().get_image().save_png(out_dir.path_join("gait/side_%s_%.2f.png" % [label, sp]))
+			if not w.moving:
+				(_gait["runs"] as Array).append(_gait_metrics(sp, _gait["rows"]))
+				var cf := FileAccess.open(out_dir.path_join("gait/rows_%s_%.2f.csv" % [label, sp]), FileAccess.WRITE)
+				cf.store_line("t,body_x,foot_l_x,foot_l_y,foot_l_z,knee_l,foot_r_x,foot_r_y,foot_r_z,knee_r,pelvis_h")
+				for r: Array in _gait["rows"]:
+					cf.store_line(",".join(r.map(func(x: float) -> String: return "%.5f" % x)))
+				cf.close()
+				_gait.erase("side_shot")
+				_gait["phase"] = "talk"
+				_gait["t"] = 0.0
+				# toward the camera for the talking-distance view
+				w.place(Vector3(-82.0, NAN, -9.6), PI / 2.0, d.t, "gait")
+				var line2: Array[Vector3] = [Vector3(-82.0, NAN, -9.6), Vector3(-75.5, NAN, -9.6)]
+				w.go(line2, sp, "gait")
+				fig.reset_after_load()
+		"talk":
+			var cam2 := Vector3(-72.0, 0.0, -9.6)
+			var h2: float = main.cells.terrain_height_at(cam2.x, cam2.z)
+			var eye2 := Vector3(cam2.x, (0.0 if is_nan(h2) else h2), cam2.z)
+			var v2: Vector3 = Vector3(w.pos.x, eye2.y + 1.2, w.pos.z) - (eye2 + Vector3(0, 1.62, 0))
+			main.player.teleport(eye2, atan2(-v2.x, -v2.z), "gait camera", atan2(v2.y, Vector2(v2.x, v2.z).length()))
+			if absf(w.pos.x - (-75.9)) < 0.05 and not _gait.has("talk_shot"):
+				_gait["talk_shot"] = true
+				RenderingServer.force_draw(false)
+				main.get_viewport().get_texture().get_image().save_png(out_dir.path_join("gait/talk_%s_%.2f.png" % [label, sp]))
+			if not w.moving:
+				_gait.erase("talk_shot")
+				_gait["i"] = int(_gait["i"]) + 1
+				_gait["phase"] = "start"
+				if int(_gait["i"]) >= (_gait["speeds"] as Array).size():
+					var f := FileAccess.open(out_dir.path_join("day1-gait_%s.json" % label), FileAccess.WRITE)
+					f.store_string(JSON.stringify({"scenario": scenario, "label": label, "runs": _gait["runs"], "method": "foot_l/foot_r world positions of the rendered skeleton each frame, steady middle of a 9 m straight walk; stance = foot within 4 cm of its lowest height and moving backward relative to the body; slide = mean horizontal world speed of the foot in stance (0 = planted, the walking speed = gliding); knee flexion = angle between thigh and shin (0 = straight)", "system": Benchmark.system_info()}, " "))
+					f.close()
+					get_tree().quit()
+
+## Steady-state part of a run (the middle 6 m), per foot.
+func _gait_metrics(sp: float, rows: Array) -> Dictionary:
+	var xs: Array = rows.map(func(r: Array) -> float: return float(r[1]))
+	var x0: float = xs.min() + 1.5
+	var x1: float = xs.max() - 1.5
+	var mid: Array = rows.filter(func(r: Array) -> bool: return float(r[1]) > x0 and float(r[1]) < x1)
+	var out: Dictionary = {"speed_mps": sp, "frames": mid.size()}
+	var knees: Array = []
+	var slides: Array = []
+	var steps := 0
+	for side: int in 2:
+		var o: int = 2 + side * 4
+		var ymin: float = mid.map(func(r: Array) -> float: return float(r[o + 1])).min()
+		var stance_prev := false
+		for i: int in range(1, mid.size()):
+			var a: Array = mid[i - 1]
+			var b: Array = mid[i]
+			knees.append(float(b[o + 3]))
+			var dtt: float = float(b[0]) - float(a[0])
+			# planted: low, and moving backward relative to the body (which
+			# walks +x); a low swinging foot moves forward relative to it
+			var rel_v: float = ((float(b[o]) - float(b[1])) - (float(a[o]) - float(a[1]))) / maxf(dtt, 1e-4)
+			var stance: bool = float(b[o + 1]) < ymin + 0.04 and rel_v < 0.0
+			if stance and dtt > 0.0:
+				slides.append(Vector2(float(b[o]) - float(a[o]), float(b[o + 2]) - float(a[o + 2])).length() / dtt)
+			if stance and not stance_prev:
+				steps += 1
+			stance_prev = stance
+	slides.sort()
+	knees.sort()
+	var dur: float = float(mid[-1][0]) - float(mid[0][0]) if mid.size() > 1 else 1.0
+	out["stance_slide_mps_mean"] = snappedf(slides.reduce(func(acc: float, x: float) -> float: return acc + x, 0.0) / maxf(1.0, slides.size()), 0.001)
+	out["stance_slide_mps_p90"] = snappedf(slides[int(0.9 * (slides.size() - 1))] if not slides.is_empty() else 0.0, 0.001)
+	out["slide_fraction_of_speed"] = snappedf(float(out["stance_slide_mps_mean"]) / sp, 0.001)
+	out["knee_flexion_max_deg"] = snappedf(knees[-1] if not knees.is_empty() else 0.0, 0.1)
+	out["knee_flexion_p50_deg"] = snappedf(knees[int(0.5 * (knees.size() - 1))] if not knees.is_empty() else 0.0, 0.1)
+	out["cadence_steps_per_min"] = snappedf(60.0 * steps / maxf(dur, 0.1), 0.1)
+	out["step_length_m"] = snappedf(sp * dur / maxf(1.0, steps), 0.01)
+	var pel: Array = mid.map(func(r: Array) -> float: return float(r[10]))
+	out["pelvis_height_range_m"] = snappedf(pel.max() - pel.min(), 0.001)
+	return out

@@ -108,7 +108,9 @@ look_points = [
 ]
 
 people = {
-    'william': {'name': 'William', 'description': 'William', 'known_at_start': True, 'template': 'monk_c', 'seed': 7101, 'hood': 'down', 'habit': 'franciscan', 'height_note': 'tall and narrow (cast monk_c), re-dressed in undyed Franciscan grey-brown',
+    'william': {'name': 'William', 'description': 'William', 'known_at_start': True, 'template': 'monk_c', 'seed': 7101, 'hood': 'down', 'habit': 'franciscan',
+                # his recorded walk fitted to his pace: a longer step, the clip's deepest knee bend eased
+                'stride': 1.25, 'knee_ease': True, 'height_note': 'tall and narrow (cast monk_c), re-dressed in undyed Franciscan grey-brown',
                 'class': 'SOURCE character; Day-1 behaviour ORIGINAL GAME FICTION (CANON CHECK)', 'speed': 1.72, 'motion': 'brother'},
     'fazio': {'name': 'Fazio', 'description': 'The porter', 'template': 'lay_herd', 'seed': 7201, 'class': 'ORIGINAL GAME FICTION (CANON CHECK against the reception party)', 'speed': 1.15, 'motion': 'lay', 'cap': 'hood'},
     'cellarer': {'name': 'The cellarer', 'description': 'A brisk monk', 'template': 'monk_e', 'seed': 7301, 'hood': 'down', 'class': 'SOURCE in public function only (claim_000142); no invented traits', 'speed': 1.55, 'motion': 'brother'},

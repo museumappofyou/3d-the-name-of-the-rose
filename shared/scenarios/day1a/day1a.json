@@ -95,6 +95,8 @@
    "seed": 7101,
    "hood": "down",
    "habit": "franciscan",
+   "stride": 1.25,
+   "knee_ease": true,
    "height_note": "tall and narrow (cast monk_c), re-dressed in undyed Franciscan grey-brown",
    "class": "SOURCE character; Day-1 behaviour ORIGINAL GAME FICTION (CANON CHECK)",
    "speed": 1.72,
