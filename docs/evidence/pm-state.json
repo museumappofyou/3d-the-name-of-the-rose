@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "observed_at_utc": "2026-10-06T16:04:42.909613+00:00",
-  "purpose": "Current PM continuity pointer; original 2026-10-05 intake retained explicitly as history.",
+  "observed_at_utc": "2026-10-07T19:52:19.152711+00:00",
+  "purpose": "Current PM continuity pointer; intake and initial Day-1A review retained explicitly as history.",
   "owner": "Codex PM",
   "canonical_locations": {
     "state_mission_roadmap_agent_log": "docs/PROJECT.md#pm-ledger",
@@ -10,31 +10,41 @@
   },
   "git": {
     "branch": "migration/phase-1-godot",
-    "reviewed_implementation": "e223bc2eb588228dd9f00c0fdb7319d731a9ec32",
-    "live_remote_tip_at_completion_review": "e223bc2eb588228dd9f00c0fdb7319d731a9ec32",
+    "reviewed_implementation": "58950e3fad90c23952e5121100aa7bfa872f184c",
+    "live_remote_tip_at_completion_review": "58950e3fad90c23952e5121100aa7bfa872f184c",
     "remote": "origin",
     "remote_url": "git@github-moy:museumappofyou/3d-the-name-of-the-rose.git",
     "clean_at_review_start": true,
     "accepted_gameplay_baseline": "7c6f836afd17a87d407172c9727e8d4e26818598",
-    "pm_checkpoint": "Canonical docs/state plus independent review evidence; read current Git HEAD for the commit containing this record."
+    "pm_checkpoint": "Read Git for the commit containing this corrected PM review; package identity remains 60ec496.",
+    "accepted_day1a_corrective_candidate": "58950e3fad90c23952e5121100aa7bfa872f184c",
+    "package_source": "60ec496"
   },
   "active_mission": {
-    "id": "day1a-correction",
-    "status": "FIX; corrective implementation not started",
-    "developer": "Unassigned; previous implementer Claude Opus 5.5 xHigh per owner report",
+    "id": "day1a-human-validation",
+    "status": "Corrective mission ACCEPTED for playtesting; Day-1A product gate OPEN",
+    "assigned_to": "Owner and at least one unfamiliar player",
+    "developer": "No new developer assignment; preceding corrective pass Claude Opus 5.5",
     "product_question": "Does living in the abbey as Adso feel compelling before mystery systems arrive?",
-    "brief": "docs/PROJECT.md#corrective-mission--make-day-1a-safe-to-playtest",
-    "stop": "Safe identified Day-1A playtest candidate for PM re-review; no Day-1B, Vespers/night, Day 2 or library migration"
+    "brief": "docs/PROJECT.md#human-validation--day-1a",
+    "stop": "Return play/listening findings for PM review; no Day-1B, Vespers/night, Day 2, library or broad migration"
   },
   "latest_review": {
-    "id": "day1a-pm-2026-10-06",
-    "evidence": "docs/evidence/day1a/pm_review.json",
-    "decision": "FIX",
+    "id": "day1a-correction-pm-2026-10-07",
+    "evidence": "docs/evidence/day1a/correction/pm_review.json",
+    "decision": "ACCEPT",
+    "decision_scope": "Corrective mission and human-playtest candidate only",
     "implemented": true,
-    "existing_checks": "PASS independently",
-    "supplemental_scene_probes": "0/8 pass on reviewed commit",
+    "independent_checks": "PASS: clean rebuild/export, baseline suites, scene/relaunch and eight unchanged probes",
+    "supplemental_scene_probes": "8/8 pass on reviewed commit",
     "experiential_validation": "NOT RUN",
-    "day1b_authorized": false
+    "day1a_product_gate": "OPEN",
+    "day1b_authorized": false,
+    "open_performance_items": [
+      "1081 ms warm-run stall",
+      "Renderer work/FPS variation",
+      "Steady warmed RSS trend"
+    ]
   },
   "standing_pm_protocol": {
     "recorded_at_utc": "2026-10-05T14:04:17.303164+00:00",
@@ -58,7 +68,7 @@
     ],
     "prompt_rule": "Complete ready-to-paste prompt when development is needed; otherwise explicitly state the next owner action",
     "git_policy": "Coherent reviewed checkpoints and safe normal pushes to intended branch; no history rewriting or destructive operations without explicit instruction",
-    "implementation_status": "Initial Day-1A implemented and pushed; full completion review requires FIX and holds advancement."
+    "implementation_status": "Day-1A corrective implementation reviewed and accepted for human playtesting; product acceptance and Day-1B advancement remain held."
   },
   "history": {
     "intake_2026_10_05": {
@@ -476,6 +486,37 @@
       },
       "pm_assessment": "Repair canonical continuity; continue the already active bounded Day-1A implementation. No advancement or completion acceptance.",
       "pm_review_at_utc": "2026-10-05T13:55:24.787216+00:00"
+    },
+    "review_2026_10_06": {
+      "git": {
+        "branch": "migration/phase-1-godot",
+        "reviewed_implementation": "e223bc2eb588228dd9f00c0fdb7319d731a9ec32",
+        "live_remote_tip_at_completion_review": "e223bc2eb588228dd9f00c0fdb7319d731a9ec32",
+        "remote": "origin",
+        "remote_url": "git@github-moy:museumappofyou/3d-the-name-of-the-rose.git",
+        "clean_at_review_start": true,
+        "accepted_gameplay_baseline": "7c6f836afd17a87d407172c9727e8d4e26818598",
+        "pm_checkpoint": "Canonical docs/state plus independent review evidence; read current Git HEAD for the commit containing this record."
+      },
+      "active_mission": {
+        "id": "day1a-correction",
+        "status": "FIX; corrective implementation not started",
+        "developer": "Unassigned; previous implementer Claude Opus 5.5 xHigh per owner report",
+        "product_question": "Does living in the abbey as Adso feel compelling before mystery systems arrive?",
+        "brief": "docs/PROJECT.md#corrective-mission--make-day-1a-safe-to-playtest",
+        "stop": "Safe identified Day-1A playtest candidate for PM re-review; no Day-1B, Vespers/night, Day 2 or library migration"
+      },
+      "latest_review": {
+        "id": "day1a-pm-2026-10-06",
+        "evidence": "docs/evidence/day1a/pm_review.json",
+        "decision": "FIX",
+        "implemented": true,
+        "existing_checks": "PASS independently",
+        "supplemental_scene_probes": "0/8 pass on reviewed commit",
+        "experiential_validation": "NOT RUN",
+        "day1b_authorized": false
+      },
+      "pm_checkpoint": "e8174fb44c61bd57bafb4f21bea9b3e5a9e505a6"
     }
   }
 }

@@ -2,7 +2,7 @@
 
 ## PM ledger
 
-**PM:** Codex. **Updated:** 2026-10-06. This section owns current state, the active mission, the near-term roadmap and compact agent history. Product decisions are in [Game design](GAME_DESIGN.md#decision-history); platform evidence and gates are in [Platforms](PLATFORMS.md). Supporting council reports retain their original recommendations, including superseded ones.
+**PM:** Codex. **Updated:** 2026-10-07. This section owns current state, the active mission, the near-term roadmap and compact agent history. Product decisions are in [Game design](GAME_DESIGN.md#decision-history); platform evidence and gates are in [Platforms](PLATFORMS.md). Supporting council reports retain their original recommendations, including superseded ones.
 
 ### Standing PM review protocol
 
@@ -16,25 +16,25 @@ Every completed PM review ends with these sections: **PM Assessment**, **Git / R
 
 ### Current state
 
-| Item | Verified repository state at the Day-1A completion review |
+| Item | Verified repository state at the Day-1A corrective review |
 |---|---|
-| Branch / checkpoints | `migration/phase-1-godot`; reviewed implementation `e223bc2` (five developer commits after `5b2a85a`), already published to origin. Last accepted gameplay baseline remains the Phase-1 proof at `7c6f836`; Day-1A is an implementation checkpoint, not an accepted product milestone. Read fresh Git state for the subsequent PM checkpoint |
+| Branch / checkpoints | `migration/phase-1-godot`; corrected candidate `58950e3` (six developer commits after PM checkpoint `e8174fb`), published to origin. Its runtime/package source is `60ec496`. Corrections are accepted for human playtesting; the last accepted product baseline remains the Phase-1 proof at `7c6f836`. Read fresh Git state for the PM checkpoint |
 | Authoritative remote | `origin` → `git@github-moy:museumappofyou/3d-the-name-of-the-rose.git` |
-| Working tree at handoff | Clean, no staged or untracked work; live origin matched `e223bc2`. Independent builds/probes use ignored `builds/pm-review/day1a-2026-10-06/`; original developer packages were preserved |
+| Working tree at review start | Clean, no staged or untracked work; live origin matched `58950e3`. Independent rebuild/probes/captures use ignored `builds/pm-review/day1a-correction-2026-10-07/`; all five original candidate package hashes match the handoff and those packages remain untouched |
 | Native modes | Day-1A is the default. The proof remains behind `--mode=proof`; its functional route and second-process reload passed independently |
 | Day-1A implementation | Arrival → Sext/gate → guest cell → solo chest route → meal → free period → physical Nones → end exists. Seven new world cells stay resident; authored cast, two mules, first-person carry/sit actions, description/name memory and internal observation log exist. Day-1B exclusions were respected |
 | Story/design | Round-1, Round-3 Adso, Round-4 library and full Day-1 sources are preserved in `373ee82`; they were untracked at intake. The full-Day-1 minimum in the design is superseded by the A/B split below |
-| Independent checks | Git-only fresh build: 339 derivative hashes, domain 22/22, Day-1A 14/14, thirteen pose/normal checks, ten anchors, proof functional/relaunch, both exports and Windows PCK audit pass. Browser 29/29, extraction 21/21, render/data/repository checks and nine literary hashes pass. Known harness exit diagnostics remain |
-| Failed scene gates | Seven save probes fail: pause Save/Load dispatch to proof storage; meal dialogue/choice reloads lose progression; end reloads leave stop/card state inconsistent; Nones reload relocates the community. An eighth probe learns Fulco's name from a queued introduction even when interrupted before presentation. Passing domain tests miss these failures |
-| Performance | Raw final 1080p walk confirms 129.9 FPS / p95 10.75 ms / maximum 59.6 ms. Cycle report: 133.9 FPS, one 124.69 ms frame; no retained raw cycle frames, and warm-up is only the initial gate leg. Cold 541–591 ms stalls and RSS drift remain unexplained; resident loops do not clear the proof's streaming hitch |
+| Independent checks | Git-only fresh build: 339 derivative hashes, domain 22/22, Day-1A 19/19, scene/relaunch 21/21, unchanged PM probes 8/8, thirteen pose/normal checks, ten anchors, proof functional/relaunch, both exports and Windows PCK audit pass. Browser 29/29, extraction 21/21, render/data/repository checks and nine literary hashes pass. Known harness exit/negative-test/NaN diagnostics remain |
+| Corrected scene gates | Menu, keys and autosaves use the campaign slot and preserve seeded proof main/backup bytes. Schema 2 preserves pending lines/choices, seat/carry/halter, actors/community/routes and end presentation across repeated loads and six relaunched processes. Names are learned on presentation; Nones restores physical state and remaining bell strokes. Schema-1 migration is explicit and reported |
+| Performance | Raw evidence independently confirms candidate 103.5 FPS / p95 11.19 ms / maximum 21.16 ms; ten fully warmed loops 109.7 FPS and a 22.4-minute measured soak 144.7 FPS, no frames >50 ms in either, RSS growth 4.68%/5.93%. A separate warm route has an unexplained 1,081 ms frame. Renderer-work/FPS variation and RSS trend remain open; shader attribution is withdrawn, no measured case for pre-warming. Resident loops do not clear the proof's streaming hitch |
 | Product validation | PM inspected source and rendered captures; fresh packaged scripted walking is functional evidence. Owner/unfamiliar-player play, listening, controller/focus/layout trials and actual Windows W1/W2 remain NOT RUN. Route learnability, William's relationship and ordinary-life appeal are unproven |
-| Decision / focus | **FIX Day-1A**, then PM re-review and owner + unfamiliar-player/listening/canon review. Do not start Day-1B |
+| Decision / focus | **ACCEPT the corrective mission as a human-playtest candidate.** The Day-1A product gate remains open and Day-1B is held. Next: owner + unfamiliar-player play/listening and finished-book canon review; actual Windows trials remain required before broad migration |
 
-Structured intake history remains in [PM state](evidence/pm-state.json); independent completion findings are in [Day-1A PM evidence](evidence/day1a/pm_review.json). `IMPLEMENTED` means changes exist; `VERIFIED` means relevant checks succeeded; `EXPERIENTIALLY VALIDATED` means a person played, listened or used the relevant input. An uninterrupted scripted route does not establish save/relaunch safety or player enjoyment.
+Structured intake history remains in [PM state](evidence/pm-state.json). The [initial review](evidence/day1a/pm_review.json) preserves the failed candidate; the [corrective PM review](evidence/day1a/correction/pm_review.json) records the new result. `IMPLEMENTED` means changes exist; `VERIFIED` means relevant checks succeeded; `EXPERIENTIALLY VALIDATED` means a person played, listened or used the relevant input. An uninterrupted scripted route does not establish player enjoyment.
 
 ### Active mission — Day-1A
 
-**Status:** initial implementation finished; completion review decision **FIX** on 2026-10-06. **Previous developer:** Claude Opus 5.5 xHigh, reported by the owner. **Next developer:** corrective pass unassigned; its brief below is independent of model/private context. **Product question:** does living in this abbey as Adso already feel worth continuing before a mystery begins?
+**Status:** implementation and corrective pass finished; 2026-10-07 PM decision **ACCEPT corrections for human playtesting**, with the product gate still open. **Previous developer:** Claude Opus 5.5, corrective pass following the reported xHigh implementation run. **Current assignment:** owner and at least one unfamiliar player; no new developer assignment. **Product question:** does living in this abbey as Adso already feel worth continuing before a mystery begins?
 
 **Scope:** a 20–30 minute foundation from the final road bend through arrival, Sext at the gate, reception, guest room, first repeated route, ordinary meal with William, a few recurring residents, a short free period and Nones. This is a target duration, not a measured playtime.
 
@@ -66,6 +66,8 @@ Structured intake history remains in [PM state](evidence/pm-state.json); indepen
 
 ### Corrective mission — make Day-1A safe to playtest
 
+**Completed:** `7cd678c` → `58950e3`, independently reviewed on 2026-10-07. The original brief below is retained for traceability; it is no longer an outstanding developer task. Eight unchanged PM probes and the added scene/relaunch suite pass. Performance causes remain open as recorded above; acceptance is for playtesting, not release or Day-1B.
+
 Read the canonical docs and [independent PM review](evidence/day1a/pm_review.json), inspect fresh Git status/history, and reproduce before fixing. Reviewed source: `e223bc2`; keep this branch and preserve other work. This is a Day-1A correction, not a redesign.
 
 1. **Protect every save entry point.** Route pause-menu Save/Load and its displayed path to Day-1A in that mode; retain proof behavior. Seed a proof slot in scratch storage and verify main/backup bytes survive repeated Day-1A saves/loads. Test actual HUD requests, F5/F9 and separate-process relaunch.
@@ -80,12 +82,20 @@ Use isolated save/telemetry paths for all QA. Preserve literary outputs, private
 
 **After corrective PM review:** the owner and at least one unfamiliar player play without coaching/markers, listen to bells/chant/doorway transitions, and record William's presence, route recall, resident recognition, Nones pacing and desire to continue. The roughly 65-second bell-to-chant delay remains provisional until experienced. A finished-book reviewer checks names/offices/lines without forward spoilers for the owner. Actual Windows trials gate broad migration; none is currently complete.
 
+### Human validation — Day-1A
+
+**Status:** NOT RUN. Use the hash-identified `60ec496` Mac candidate at `builds/phase1/macos/AbbeySlice.app`; launch with separate ignored save/telemetry directories per tester as described in [Development](DEVELOPMENT.md#day-1a-human-playtest). Do not use a scripted scenario, accelerated clock or route coaching. The expected session is 20–30 minutes; allow wandering and record actual duration.
+
+The owner plays/listens first, then at least one person unfamiliar with the code repeats the route independently. Record where each hesitates, whether they can return to the guest house, which residents they recognize, whether William feels like a companion, what changes they notice at Nones, and whether they want to continue before any mystery is offered. Listen to bell distance/indoor muffling, footsteps, chant through openings and the bell-to-office delay. Record stalls and save/quit/relaunch behavior with the build hash, rather than silently replacing the package. A finished-book reviewer separately checks names, offices and original lines without forward spoilers for the owner; Windows W1/W2 and actual input trials retain separate statuses.
+
+Return concise observations for PM **FIX / ITERATE / ADVANCE** review. Weak ordinary life, route recall or William/Nones experience requires a bounded response before Day-1B. Do not commission another broad implementation or bespoke William model before this feedback; capture inspection and gait measurements cannot answer the product question.
+
 ### Near-term roadmap
 
 | Order | Work | Dependency / gate |
 |---|---|---|
-| Now | Correct save/reload/name memory, benchmark evidence and William's walk; PM re-review | Eight independent scene failures; corrective mission above |
-| After fixes | Owner + one unfamiliar-player play/listening; finished-book canon/spoiler review | Safe identified package; no coaching; product-gate observations |
+| Now | Owner + one unfamiliar-player play/listening; finished-book canon/spoiler review | Corrective candidate accepted; safe identified package, no coaching, product-gate observations |
+| After feedback | PM assesses Day-1A and assigns only the bounded fixes/iteration the observations justify | Human findings, build identity and separate validation statuses; no automatic Day-1B authorization |
 | Parallel gate | Windows W1/W2, human listening/input, stair-hitch diagnosis and canon review | Real hardware/person/source review; preserve separate statuses |
 | Next | Day-1B: Snow in the Straw; minimal seen/told/inference notebook; Vespers/night/Day-2 hook | Day-1A accepted; not started by this mission |
 | Then | External full-Day-1 playtest, approximately eight unfamiliar players with reader/non-reader/investigation experience | A/B complete; decide fix/iterate/advance from observations |
@@ -106,6 +116,8 @@ Day 2, delegation detail and the lightweight web viewer follow demonstrated need
 | 2026-10-05 owner standing instruction | Codex's continuous PM/reviewer role and completion-triggered review/report/prompt protocol made explicit | Governance only; Day-1A remains in progress. Reviewed PM checkpoints may be pushed safely without including the dirty implementation |
 | `1859082` → `e223bc2`, 2026-10-05/06 | Claude Opus 5.5 xHigh: derivatives, arrival-to-Nones, scripted-save isolation, benchmarks and evidence; five commits pushed | IMPLEMENTED. Automated checks pass independently; save safety, interrupted progression and Nones continuity fail PM probes. Human/Windows gates NOT RUN |
 | 2026-10-06 Codex review of `e223bc2` | Git-only rebuild/export, native/browser/book checks, raw-frame audit, isolated scene probes and rendered package/capture inspection | **FIX**; no Day-1B advancement. Eight failed scene probes and evidence limits recorded; no gameplay fixes or player-save changes by PM |
+| `7cd678c` → `58950e3`, 2026-10-07 | Claude Opus 5.5: campaign save/scene/name corrections, gait calibration, full warm-up/aligned raw benchmark evidence and six coherent published commits | IMPLEMENTED; candidate runtime exported from `60ec496`. Human/Windows gates explicitly NOT RUN |
+| 2026-10-07 Codex review of `58950e3` | Exact Git-only rebuild/export, 8/8 unchanged probes, 21/21 scene/relaunch checks, baseline checks/hashes, raw performance recomputation and fresh rendered gait/route review | **ACCEPT corrections for human playtesting**; Day-1A product acceptance and Day-1B advancement held. Unexplained 1.08-second warm stall, renderer variation and RSS trend retained; no gameplay fixes by PM |
 
 ## Two products, one abbey
 

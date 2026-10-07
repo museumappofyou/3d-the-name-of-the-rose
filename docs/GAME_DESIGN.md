@@ -4,7 +4,7 @@
 
 The place should feel cold, austere, inhabited, intellectually charged and often quiet. Ordinary work, prayer, meals, weather and recurring people establish normality before deviations become evidence. Architecture supplies tests: walk a disputed route, compare a view from a window, remember which stair joins which floor, or ask whether a sound could have reached a witness. Someone should care about the result through duty, trust, punishment, access, memory or work.
 
-The active mission and gates live in [Project](PROJECT.md#active-mission--day-1a). Day-1A asks whether ordinary life is compelling before a mystery starts. Its initial implementation exists at `e223bc2`; the 2026-10-06 PM review requires save/reload and presentation/evidence corrections, then independent play/listening. Engine/build success does not establish that experience.
+The active mission and gates live in [Project](PROJECT.md#active-mission--day-1a). Day-1A asks whether ordinary life is compelling before a mystery starts. Its corrections at `58950e3` are PM accepted for human playtesting on 2026-10-07; independent play/listening now comes next. Day-1B is held. Engine/build success does not establish that experience.
 
 ## Adapted Adso and William
 
@@ -98,7 +98,8 @@ Keep arrival-road/reception/audience, weather, supper, west portal, original-nam
 | Round 4 | Hybrid sketch map and four/five meaningful visits | EXPERIMENTAL | Exact interface, accessibility and visit schedule remain unresolved |
 | Day-1 design | Snow in the Straw as first small investigation | ACTIVE DESIGN | Physical/timing evidence with modest human stakes; Day-1B, not implemented fact |
 | 2026-10-05 | Day-1A followed by gated Day-1B | ACTIVE | Full-day minimum required too many simultaneous systems |
-| 2026-10-06 PM review | Hold Day-1B; correct Day-1A and validate with people | ACTIVE | Existing checks pass but scene persistence fails; William/route/ordinary-life/Nones product gates remain open. William's current body stays an explicit stand-in during the bounded corrective pass |
+| 2026-10-06 PM review | Correct Day-1A's failed scene persistence before playtesting | SUPERSEDED by corrective acceptance | Existing checks missed eight scene/name failures. Their reproductions remain in evidence; subsequent corrections close them |
+| 2026-10-07 PM corrective review | Accept corrections for human playtesting; hold Day-1B until the foundation's product gates pass | ACTIVE | Independent clean rebuild, 8/8 unchanged probes and 21/21 scene/relaunch checks pass. William/route/ordinary-life/Nones appeal is unproven; the stand-in body is sufficient to gather feedback. Unexplained performance events remain open, without speculative shader or bespoke-model work |
 | 2026-10-05 | The Leaf Before Vespers as immediate milestone | SUPERSEDED | Retain as a later original case concept |
 | Later campaign | Delegation changes familiar social/access rules | ACTIVE DESIGN | Reuse learned spaces under pressure; detailed schedule not yet chosen |
 | Repository governance | Six canonical docs and explicit supporting design evidence | ACTIVE | PM state stays repository-resident without one report per agent run |

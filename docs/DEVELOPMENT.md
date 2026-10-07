@@ -106,6 +106,25 @@ Proof player saves: macOS `~/Library/Application Support/AbbeySlice/saves/slot0.
 
 Use explicit ignored scratch `--save-dir` and `--telemetry-dir` for reproduction and playtest runs. Scripted `day1-*` runs otherwise default to `user://day1a_runs/`. Both file services use header/body checksums and `.tmp`/`.bak` replacement; the Day-1A file class validates the envelope, player bounds and seat, clock, beat, queue shape, known choice, seat/halter values and finite actor positions, and rejects or refuses to overwrite a proof-format file. Never overwrite a player save to test. Browser notebook storage remains separate.
 
+## Day-1A human playtest
+
+The 2026-10-07 PM review accepts the corrections at `58950e3` for human playtesting; it does not accept the Day-1A product gate or authorize Day-1B. Use the original package exported from `60ec496`, preserved at `builds/phase1/macos/AbbeySlice.app`. Its executable SHA-256 is `979586582b200d620ecf4c5ff0516ee6a80e5e843e6e971a000dd23eabaddbb5`; the Mac ZIP hash is `1b5ab959545f232acf5148ea73842c2076c951a9d0724a58bcb33e0d8555095d`. A later build needs its own identity. PM's separate Git-only rebuild remains under ignored `builds/pm-review/day1a-correction-2026-10-07/source/` and does not replace this package.
+
+From the repository root, launch an ordinary owner session with isolated saves:
+
+```sh
+APP="$PWD/builds/phase1/macos/AbbeySlice.app/Contents/MacOS/Abbey Slice"
+"$APP" -- --save-dir="$PWD/builds/day1a-playtest/owner/saves" --telemetry-dir="$PWD/builds/day1a-playtest/owner/telemetry"
+```
+
+Then use `unfamiliar-01` instead of `owner` in both paths for a person unfamiliar with the code. Leave out scripted scenarios and time acceleration; allow wandering, waiting and mistakes without route coaching. Target 20–30 minutes, recording actual duration. Use movement/mouse, E, replies 1–4, Esc/options and F5/F9; save during the meal, quit, relaunch with the same paths and load with F9. The notebook is outside this slice.
+
+Record where the player hesitates or needs help, whether they can return to the guest house, which residents they recognize, whether William feels like a companion, what visibly/audibly changes at Nones, and whether they want to continue before any mystery. Listen to bell distance and indoor muffling, footsteps, chant through openings and the approximately 65-second bell-to-office delay. Note stalls with the scene/action/build identity. Record owner play, unfamiliar play, listening and input trials separately; a capture review fills none of them.
+
+Give findings back to the PM for FIX / ITERATE / ADVANCE. A finished-book reviewer separately checks provisional names/offices/original lines without forward spoilers for the owner. Actual Windows W1/W2 remains a hardware gate before broad migration. No new developer implementation is assigned until the next PM decision.
+
+## Package inspection and portability
+
 To inspect package contents:
 
 ```sh

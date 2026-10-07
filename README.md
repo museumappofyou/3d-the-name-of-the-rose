@@ -2,9 +2,9 @@
 
 A first-person historical investigation game in which the player is **Adapted Adso**, arriving beside William and learning the abbey through residence. Umberto Eco’s *The Name of the Rose* supplies the architectural and literary foundation. A continuous multi-day campaign contains bounded authored investigations; knowledge of places, hours and people is the player's progression.
 
-**Native is the primary product: Windows first, macOS second, developed on macOS in Godot. Web is an architectural explorer with a smaller scope.** Day-1A was implemented at `e223bc2`; its PM review required **FIX** (menu save/load, interrupted meal/end reloads, Nones continuity, name timing). A corrected candidate (`7cd678c`…`60ec496`) passes those probes and new scene/relaunch regressions and **awaits PM review**; nobody has yet played it. The browser remains the larger reference reconstruction; Day-1B and the lightweight viewer are plans.
+**Native is the primary product: Windows first, macOS second, developed on macOS in Godot. Web is an architectural explorer with a smaller scope.** The corrected Day-1A candidate at `58950e3` (runtime/package source `60ec496`) is **PM accepted for human playtesting** after an independent clean rebuild and save/scene regressions. Whether ordinary life with William is compelling remains unproven; Day-1B is held. The browser remains the larger reference reconstruction; the lightweight viewer is a plan.
 
-Current state, the corrective Day-1A mission, roadmap and agent log live in [Project](docs/PROJECT.md#pm-ledger). Product decisions live in [Game design](docs/GAME_DESIGN.md); independent review evidence is [here](docs/evidence/day1a/pm_review.json). Check fresh Git before continuing.
+Current state, the Day-1A human-validation mission, roadmap and agent log live in [Project](docs/PROJECT.md#pm-ledger). Product decisions live in [Game design](docs/GAME_DESIGN.md); the [initial review](docs/evidence/day1a/pm_review.json) and [corrective review](docs/evidence/day1a/correction/pm_review.json) preserve both results. Check fresh Git before continuing.
 
 ## Run what exists
 
@@ -29,7 +29,9 @@ bash scripts/migration/build_phase1.sh --fresh --functional
 
 The build uses committed derivatives and needs neither private masters nor Chrome. It validates content, imports, tests and exports development packages into ignored `builds/phase1/`. Proof controls: WASD/arrows, mouse, E interact, J notebook, F lantern, Esc pause, F5/F9 save/load, F12 QA. Day-1A uses movement/mouse, Shift, E, replies 1–4, Esc/options and F5/F9; the notebook is deferred. The pause menu, F5/F9, autosaves and a fresh launch all use `day1a_slot0.json` (schema 2, the in-flight scene included); the proof's `slot0.json` is untouched in Day-1A mode. Use scratch storage while reviewing.
 
-**Verified technical scope:** the proof route/relaunch, a fresh Day-1A build/export, the PM's eight save/name probes, 19 Day-1A domain and 21 scene/relaunch checks pass. Packaged Mac runs at physical 1080p: whole slice 104–128 FPS, p95 11.2–11.5 ms (four runs); ten measured loops and a 22-minute soak after a full warm-up loop with no frame over 50 ms and RSS within 6% of the warmed baseline. One warm whole-slice run had an unexplained 1.08 s frame with no shader/pipeline compilation at it; cold runs had none over 36 ms. Owner/unfamiliar play, human listening/input and Windows runtime remain unvalidated. Resident Day-1A cells do not fix the proof's stair unload hitch.
+**Verified technical scope:** the proof route/relaunch, a fresh Day-1A build/export, the PM's eight unchanged save/name probes, 19 Day-1A domain and 21 scene/relaunch checks pass independently. PM recomputed the recorded physical-1080p Mac runs: whole slice 104–128 FPS, p95 11.2–11.5 ms (four runs); ten measured loops and a 22-minute soak after a full warm-up loop with no frame over 50 ms and RSS within 6% of the warmed baseline. One warm whole-slice run had an unexplained 1.08 s frame with no pipeline compilation at it; cold runs had none over 36 ms. These are audits of retained measurements, not new PM performance runs. Owner/unfamiliar play, human listening/input and Windows runtime remain unvalidated. Resident Day-1A cells do not fix the proof's stair unload hitch.
+
+The next action is [an ordinary, uncoached play/listening session](docs/DEVELOPMENT.md#day-1a-human-playtest), then an unfamiliar player and PM evaluation of their findings.
 
 ## Verify and build
 

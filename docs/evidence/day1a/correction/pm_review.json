@@ -1,0 +1,713 @@
+{
+  "schema_version": 1,
+  "review_id": "day1a-correction-pm-2026-10-07",
+  "reviewed_at_utc": "2026-10-07T19:52:19.152711+00:00",
+  "reviewer": "Codex, Project Manager and Technical Reviewer",
+  "source": {
+    "branch": "migration/phase-1-godot",
+    "reviewed_commit": "58950e3fad90c23952e5121100aa7bfa872f184c",
+    "review_range": "e8174fb..58950e3",
+    "developer_commits": 6,
+    "package_source_commit": "60ec496",
+    "live_origin_tip_at_review_start": "58950e3fad90c23952e5121100aa7bfa872f184c",
+    "clean_at_review_start": true,
+    "review_workspace": "builds/pm-review/day1a-correction-2026-10-07",
+    "runtime_identity_note": "Native/shared runtime files have no differences from package source 60ec496; the final commit adds evidence/docs and Python metric readers."
+  },
+  "assessment": {
+    "decision": "ACCEPT",
+    "scope": "Corrective mission completed; corrected Day-1A candidate accepted for human playtesting",
+    "implementation_status": "IMPLEMENTED",
+    "technical_verification": "VERIFIED within the bounded checks below",
+    "experiential_validation": "NOT RUN",
+    "day1a_product_gate": "OPEN",
+    "day1b_authorized": false,
+    "rationale": "Eight reproduced scene/name failures now pass unchanged probes and meaningful scene/relaunch tests, with a reproducible clean export. Raw evidence and gait improvement are verifiable. No demonstrated remaining progression or save-isolation failure warrants another broad developer pass before people play. Performance variability and subjective/platform gates remain open."
+  },
+  "mission_review": [
+    {
+      "criterion": "Protect every save entry point and proof bytes",
+      "status": "VERIFIED",
+      "evidence": "Actual pause HUD requests, mapped save/load actions, autosaves and six fresh-process cases use the Day-1A slot; seeded proof main and backup bytes remain unchanged."
+    },
+    {
+      "criterion": "Resume queued dialogue, choices, custody, seats, halter, end presentation; explicit legacy handling",
+      "status": "VERIFIED for covered schema-2 scenes and schema-1 migration cases",
+      "evidence": "21 scene/relaunch checks plus 19 domain tests; repeat loads replace already-used scene objects; interrupted Tebaldo/William conversations progress; end and earlier slots restore proper HUD/stop state."
+    },
+    {
+      "criterion": "Physical community and bell continuity around Nones; meaningful regressions",
+      "status": "VERIFIED",
+      "evidence": "Unchanged PM probe and scene tests at bell/walking/choir/after; remaining bell strokes, no premature office, preserved routes/activities; disabled or-true assertion removed."
+    },
+    {
+      "criterion": "Reliable performance evidence and measured cold investigation",
+      "status": "VERIFIED as an audit of retained runs; causes unresolved",
+      "evidence": "All six compressed frame tables recomputed; two complete five-leg warm-ups, ten measured loops and 22.4 measured soak minutes; RSS samples align by wall clock; shader attribution withdrawn."
+    },
+    {
+      "criterion": "Improve existing William walk without expanding asset project",
+      "status": "IMPLEMENTED; measured improvement reproduced and captures inspected",
+      "evidence": "Runtime clip-speed calibration, longer stride and eased knee flexion. Fresh package gait proxies improve; subjective character/relationship quality remains NOT RUN."
+    },
+    {
+      "criterion": "Preserve source evidence and exclusions; coherent published checkpoint",
+      "status": "VERIFIED",
+      "evidence": "Nine literary hashes unchanged; actual diff respects the bounded correction, no Day-1B or new cast/library/system scope. Original packages are preserved."
+    }
+  ],
+  "independent_checks": [
+    {
+      "command": "npm test",
+      "exit_code": 0,
+      "passed": 29,
+      "log": {
+        "path": "builds/pm-review/day1a-correction-2026-10-07/browser_tests.log",
+        "sha256": "9e80e84fd6b6e23690b41a47bc5127ccd1b98abb09649d4186156437d78aadea"
+      }
+    },
+    {
+      "command": "npm run check:render",
+      "exit_code": 0,
+      "passed": null,
+      "log": {
+        "path": "builds/pm-review/day1a-correction-2026-10-07/render_check.log",
+        "sha256": "9c9e985243033dd0fa66c2b860bb611644e5f0d84319c1a115c071d816f9d500"
+      }
+    },
+    {
+      "command": "npm run check:data",
+      "exit_code": 0,
+      "passed": null,
+      "log": {
+        "path": "builds/pm-review/day1a-correction-2026-10-07/data_check.log",
+        "sha256": "5804a568cd80052a971e5b0a790ef47205088ae10854a846ce09298cdc38695d"
+      }
+    },
+    {
+      "command": "npm run test:book",
+      "exit_code": 0,
+      "passed": 21,
+      "log": {
+        "path": "builds/pm-review/day1a-correction-2026-10-07/book_tests.log",
+        "sha256": "92ee7473ed41b869fa32525a1e64c0fa1c9bcb7f5f770accc6fcb77672efb236"
+      }
+    },
+    {
+      "command": "python3 scripts/check_repository.py",
+      "exit_code": 0,
+      "passed": null,
+      "log": {
+        "path": "builds/pm-review/day1a-correction-2026-10-07/repository_check.log",
+        "sha256": "3e5b8a89688ea20762ebbe16f2b049be610ffb304d101bfeb253422d19083d6a"
+      }
+    },
+    {
+      "kind": "native_domain",
+      "path": "builds/pm-review/day1a-correction-2026-10-07/checks/domain.json",
+      "sha256": "da6e2712d1c1fffd932fd1f84474ba5f17b7c77bb4b5bc4fa1576759564427d6",
+      "passed": 22,
+      "total": 22,
+      "failures": 0
+    },
+    {
+      "kind": "day1a_domain",
+      "path": "builds/pm-review/day1a-correction-2026-10-07/checks/day1a.json",
+      "sha256": "102fbd609ac4bc0853c83286771d33a9845b700b47e62c7484075327d69b5674",
+      "passed": 19,
+      "total": 19,
+      "failures": 0
+    },
+    {
+      "kind": "day1a_scene",
+      "path": "builds/pm-review/day1a-correction-2026-10-07/checks/day1a_scene/day1a_scene_tests.json",
+      "sha256": "ba711f510a7bcb2303d2adbb15f2c7f502ec6e1d60db990afe0be8fdc679e536",
+      "passed": 21,
+      "total": 21
+    },
+    {
+      "kind": "proof_functional",
+      "path": "builds/pm-review/day1a-correction-2026-10-07/checks/functional/functional_headless.json",
+      "sha256": "237d4b8e9243eafaa74979defdde03811d1f2d9b492c1dd1d668996be331a062",
+      "pass": true
+    },
+    {
+      "kind": "proof_second_process_reload",
+      "path": "builds/pm-review/day1a-correction-2026-10-07/checks/functional/functional-reload_headless.json",
+      "sha256": "b6b3f50bf263cb2c12a28aeb3c91856a62e66b09812fdd3811d772529a86a729",
+      "pass": true
+    },
+    {
+      "kind": "fresh_pck_audit",
+      "path": "builds/pm-review/day1a-correction-2026-10-07/checks/pck_audit.json",
+      "sha256": "1660f8e68fa4fe51c1eaeeac2bf3a4823fdabfeced7431e30ec0f1fed8d9fd08",
+      "pass": true,
+      "file_count": 1075,
+      "bytes": 111231544
+    },
+    {
+      "command": "GODOT_BIN=<pinned 4.7.2> EVIDENCE_OUT=<isolated review checks> bash scripts/migration/build_phase1.sh --fresh --functional",
+      "exit_code": 0,
+      "working_tree": "Exact Git archive of 58950e3fad90c23952e5121100aa7bfa872f184c",
+      "private_masters_present": false,
+      "generated_content_or_import_cache_present_at_start": false,
+      "derivative_outputs": 339,
+      "derivative_mismatches": 0,
+      "macos_export": "PASS",
+      "windows_export": "PASS (W0 only, no Windows runtime)",
+      "log": {
+        "path": "builds/pm-review/day1a-correction-2026-10-07/clean_build.log",
+        "sha256": "7cb6f77b936fa79036f98518501104ef2f2def04a80fab13de2d8fb7c027b1e8"
+      }
+    },
+    {
+      "kind": "fitted_pose_and_normal_checks",
+      "passed": 13,
+      "total": 13,
+      "maximum_error_m": 8.63427158037666e-06,
+      "anchor_checks": 10,
+      "anchors_pass": true
+    }
+  ],
+  "closed_initial_findings": [
+    {
+      "id": "pause_save_uses_day1a_and_preserves_proof",
+      "pass": true
+    },
+    {
+      "id": "pause_load_restores_day1a",
+      "pass": true
+    },
+    {
+      "id": "meal_dialogue_survives_load_and_progresses",
+      "pass": true
+    },
+    {
+      "id": "meal_choice_survives_load_and_progresses",
+      "pass": true
+    },
+    {
+      "id": "earlier_save_resumes_after_end",
+      "pass": true
+    },
+    {
+      "id": "end_autosave_restores_end_card",
+      "pass": true
+    },
+    {
+      "id": "nones_community_keeps_physical_state",
+      "pass": true
+    },
+    {
+      "id": "queued_unheard_name_does_not_teach_identity",
+      "pass": true
+    }
+  ],
+  "scene_relaunch_checks": [
+    {
+      "id": "menu_and_keys_use_the_day1a_slot_and_never_the_proof_slot",
+      "pass": true
+    },
+    {
+      "id": "menu_load_restores_the_day1a_director",
+      "pass": true
+    },
+    {
+      "id": "interrupted_meal_lines_finish_after_load",
+      "pass": true
+    },
+    {
+      "id": "open_meal_question_survives_load_and_a_key_answers_it",
+      "pass": true
+    },
+    {
+      "id": "an_earlier_save_resumes_after_the_end",
+      "pass": true
+    },
+    {
+      "id": "the_end_save_restores_the_end_card_and_stops",
+      "pass": true
+    },
+    {
+      "id": "repeated_loads_into_used_objects_leave_nothing_behind",
+      "pass": true
+    },
+    {
+      "id": "nones_bell_survives_a_load_without_jumps_bells_or_chant",
+      "pass": true
+    },
+    {
+      "id": "nones_walking_survives_a_load_without_jumps_bells_or_chant",
+      "pass": true
+    },
+    {
+      "id": "nones_choir_survives_a_load_without_jumps_bells_or_chant",
+      "pass": true
+    },
+    {
+      "id": "nones_after_survives_a_load_without_jumps_bells_or_chant",
+      "pass": true
+    },
+    {
+      "id": "after_nones_the_brothers_leave_the_choir",
+      "pass": true
+    },
+    {
+      "id": "seat_carry_and_hold_survive_a_load",
+      "pass": true
+    },
+    {
+      "id": "a_queued_unheard_name_teaches_nothing",
+      "pass": true
+    },
+    {
+      "id": "proof_slot_byte_identical_after_all_day1a_saves_and_loads",
+      "pass": true
+    },
+    {
+      "id": "relaunch_meal_lines",
+      "pass": true
+    },
+    {
+      "id": "relaunch_meal_question",
+      "pass": true
+    },
+    {
+      "id": "relaunch_end",
+      "pass": true
+    },
+    {
+      "id": "relaunch_nones_walking",
+      "pass": true
+    },
+    {
+      "id": "relaunch_fulco_queued",
+      "pass": true
+    },
+    {
+      "id": "relaunch_seated",
+      "pass": true
+    }
+  ],
+  "pm_probe": {
+    "path": "builds/pm-review/day1a-correction-2026-10-07/checks/day1a_scene/pm_scene_probes.json",
+    "sha256": "ced41fe4a2a12adb2cfcd905979d6fe00f6aa7766c9b45283cd0cc937e078247",
+    "passed": 8,
+    "total": 8,
+    "script": {
+      "path": "docs/evidence/day1a/pm_review_probe.gd",
+      "sha256": "c7081ca9dbe5450a1c629e49e64f4c7c66abdc63631e954db6dacbade95fa363"
+    },
+    "unchanged_since_initial_pm_checkpoint": true,
+    "metadata_note": "The historical probe prints its original e223bc2 reviewed_commit constant. This execution used the verified fresh 58950e3 archive; that old label does not identify the current test target."
+  },
+  "literary_preservation": {
+    "pass": true,
+    "file_count": 9,
+    "sha256": {
+      "book_details/output/abbey_hierarchy.json": "58afe7ff26572dc359f287f411761a4e97c5015a7da6d97cce97788c084e396f",
+      "book_details/output/access_graph.json": "ff0cddbc44b4f5bccb78061d46bf94bcba290bdd891bc92886656d5b84cc0b32",
+      "book_details/output/claims.jsonl": "f2ccb46a8418ce3bc6fd55ffc39349af2876105f28e9826c76dcc635b07cd89e",
+      "book_details/output/consolidation_summary.json": "744904b6be2a126c1b12e9e38e5ccd264c7495f31edd8573d5c6cba9f5bec469",
+      "book_details/output/facts.json": "8249626d15542d6c2de8619435916e352404252e5fa3ac54ac640409ffafd292",
+      "book_details/output/movement_graph.json": "61c860cc1411d8aeef58809952bfe975247107f3f7142036443edce68a95d772",
+      "book_details/output/reconstruction_constraints.json": "e8fc21619ad82b510f7cd74ddf14cbf203b6ddf1f1ed2b6cdb8d9c975ba2ca9a",
+      "book_details/output/spatial_graph.json": "e90476edfa30de19bd726b1c125de1dab425a73643dd80cc5b381bfb0dd9d6c2",
+      "book_details/output/visibility_graph.json": "b350663c4b8686cd319b57e3c311da7333365304607ec9bb1c057bdac5f1b5c6"
+    }
+  },
+  "original_candidate_packages": {
+    "builds/phase1/AbbeySlice-windows-x86_64.zip": "70ab570b0a6f866f5c72f47c54439bafa0f0fe10eccfd025b5ff7555f22a3a4d",
+    "builds/phase1/windows/AbbeySlice.pck": "76acede208c79cef1b471c3e3624d76a0801c3feedaef9f36b7e4258277f3d11",
+    "builds/phase1/windows/AbbeySlice.exe": "d34d36f3be1a6c49c56525ae86469b92e4f417ddf0b43cf00dd80c385c4b0562",
+    "builds/phase1/AbbeySlice-macos-universal.zip": "1b5ab959545f232acf5148ea73842c2076c951a9d0724a58bcb33e0d8555095d",
+    "builds/phase1/macos/AbbeySlice.app/Contents/MacOS/Abbey Slice": "979586582b200d620ecf4c5ff0516ee6a80e5e843e6e971a000dd23eabaddbb5"
+  },
+  "fresh_package": {
+    "hash_log": {
+      "path": "builds/pm-review/day1a-correction-2026-10-07/source/builds/phase1/pipeline/package_sha256.txt",
+      "sha256": "d1ef835513e247eec62ec010a62f0b21419313760036c666503d580303be086b"
+    },
+    "audit": {
+      "path": "builds/pm-review/day1a-correction-2026-10-07/checks/pck_audit.json",
+      "sha256": "1660f8e68fa4fe51c1eaeeac2bf3a4823fdabfeced7431e30ec0f1fed8d9fd08"
+    },
+    "file_count": 1075,
+    "bytes": 111231544,
+    "candidate_bytes": 111231672,
+    "per_file_comparison": {
+      "path": "builds/pm-review/day1a-correction-2026-10-07/fresh_package_diff.json",
+      "sha256": "2eb67cb631311fe617961849716b050be75e80d9f11e2b714f7374599db7dfe1"
+    },
+    "same_file_set": true,
+    "differing_entries": 41,
+    "runtime_scripts_and_content_equal": true,
+    "difference_qualification": "40 generated/imported binary scene resources plus CRLF versus LF in the UnifrakturMaguntia OFL file. No file additions/removals. Fresh imports need not produce byte-identical packs."
+  },
+  "performance_audit": {
+    "day1-walk_normal_candidate.csv.gz": {
+      "measured_frames": 133038,
+      "minutes_from_frame_times": 21.431,
+      "fps": 103.463,
+      "p95_ms": 11.187,
+      "max_ms": 21.159,
+      "frames_over_50ms": 0,
+      "frames_over_100ms": 0,
+      "pipeline_compilations": 19,
+      "raw_frames": {
+        "path": "docs/evidence/day1a/correction/performance/day1-walk_normal_candidate.csv.gz",
+        "sha256": "d77359dc41d48972aaf397ee5f2b74abdcd9949cae85a2811d431c4b9684bbd4"
+      }
+    },
+    "day1-walk_normal_cold.csv.gz": {
+      "measured_frames": 149406,
+      "minutes_from_frame_times": 21.431,
+      "fps": 116.191,
+      "p95_ms": 11.173,
+      "max_ms": 35.109,
+      "frames_over_50ms": 0,
+      "frames_over_100ms": 0,
+      "pipeline_compilations": 19,
+      "raw_frames": {
+        "path": "docs/evidence/day1a/correction/performance/day1-walk_normal_cold.csv.gz",
+        "sha256": "79c0893617a0709673b6c112aa4990be3dcff264c216afe6c19204700dbe81fc"
+      }
+    },
+    "day1-walk_normal_coldgodot.csv.gz": {
+      "measured_frames": 164355,
+      "minutes_from_frame_times": 21.427,
+      "fps": 127.841,
+      "p95_ms": 11.311,
+      "max_ms": 35.995,
+      "frames_over_50ms": 0,
+      "frames_over_100ms": 0,
+      "pipeline_compilations": 19,
+      "raw_frames": {
+        "path": "docs/evidence/day1a/correction/performance/day1-walk_normal_coldgodot.csv.gz",
+        "sha256": "cce05614e09666c9a3a394e843f6a546c96d20cb2312d6a67df48d8c23771ab3"
+      }
+    },
+    "day1-walk_normal_warm.csv.gz": {
+      "measured_frames": 146713,
+      "minutes_from_frame_times": 21.443,
+      "fps": 114.035,
+      "p95_ms": 11.464,
+      "max_ms": 1081.335,
+      "frames_over_50ms": 5,
+      "frames_over_100ms": 1,
+      "pipeline_compilations": 19,
+      "raw_frames": {
+        "path": "docs/evidence/day1a/correction/performance/day1-walk_normal_warm.csv.gz",
+        "sha256": "7a1b9f7b325f52e65b73af4e8852d539e0f621b0580cea4842cb919d50eccd2f"
+      }
+    },
+    "day1_cycles_mac.csv.gz": {
+      "measured_frames": 147553,
+      "minutes_from_frame_times": 22.414,
+      "fps": 109.717,
+      "p95_ms": 11.145,
+      "max_ms": 40.848,
+      "frames_over_50ms": 0,
+      "frames_over_100ms": 0,
+      "pipeline_compilations": 0,
+      "raw_frames": {
+        "path": "docs/evidence/day1a/correction/performance/day1_cycles_mac.csv.gz",
+        "sha256": "86d27e3d02294e55b338ef514ce1dd4f1938d13d9c9c91539e5266d4d5936feb"
+      },
+      "warmup": {
+        "rows": 14546,
+        "legs": [
+          "cell_to_well",
+          "gate_to_cell",
+          "nave_to_garth",
+          "to_gate",
+          "well_to_nave"
+        ],
+        "seconds": 134.426
+      },
+      "measured_loops": 10,
+      "rss_growth_pct": 4.68
+    },
+    "day1_soak_mac.csv.gz": {
+      "measured_frames": 194477,
+      "minutes_from_frame_times": 22.397,
+      "fps": 144.72,
+      "p95_ms": 10.904,
+      "max_ms": 38.271,
+      "frames_over_50ms": 0,
+      "frames_over_100ms": 0,
+      "pipeline_compilations": 0,
+      "raw_frames": {
+        "path": "docs/evidence/day1a/correction/performance/day1_soak_mac.csv.gz",
+        "sha256": "c0962f98e2720159189cf1723b7a2c286a3fde6e4d3d13fa44c164f06ce8c73a"
+      },
+      "warmup": {
+        "rows": 19451,
+        "legs": [
+          "cell_to_well",
+          "gate_to_cell",
+          "nave_to_garth",
+          "to_gate",
+          "well_to_nave"
+        ],
+        "seconds": 134.368
+      },
+      "measured_loops": 10,
+      "rss_growth_pct": 5.93
+    }
+  },
+  "performance_limits": [
+    "PM recomputed developer-recorded packaged Mac runs; did not repeat the real-time route/loops/soak during this review.",
+    "All runs are bounded resident Day-1A traversal; they neither exercise production NPC life nor clear the proof streaming hitch.",
+    "The candidate run uses the 60ec496 package; cold/warm/coldgodot/loops/soak use fb12412 runtime, differing in later spike instrumentation.",
+    "One separate warm run has an unexplained 1081.335 ms frame. Cold/coldgodot/candidate and both measured loop runs have no >100 ms frame. Sporadic cause and repeatability are not resolved."
+  ],
+  "gait": {
+    "recorded_rows_recomputed": [
+      {
+        "file": "rows_after_1.00.csv.gz",
+        "speed_mps": 1.0,
+        "planted_foot_slide_mps": 0.029,
+        "slide_fraction_of_speed": 0.029,
+        "cadence_steps_per_min": 111.7,
+        "step_length_m": 0.54,
+        "knee_flexion_max_deg": 71.5,
+        "knee_flexion_p95_deg": 70.7,
+        "swing_clearance_min_m": 0.007
+      },
+      {
+        "file": "rows_after_1.35.csv.gz",
+        "speed_mps": 1.35,
+        "planted_foot_slide_mps": 0.038,
+        "slide_fraction_of_speed": 0.028,
+        "cadence_steps_per_min": 122.0,
+        "step_length_m": 0.66,
+        "knee_flexion_max_deg": 71.5,
+        "knee_flexion_p95_deg": 70.6,
+        "swing_clearance_min_m": 0.007
+      },
+      {
+        "file": "rows_after_1.72.csv.gz",
+        "speed_mps": 1.72,
+        "planted_foot_slide_mps": 0.094,
+        "slide_fraction_of_speed": 0.055,
+        "cadence_steps_per_min": 121.5,
+        "step_length_m": 0.85,
+        "knee_flexion_max_deg": 70.6,
+        "knee_flexion_p95_deg": 69.5,
+        "swing_clearance_min_m": 0.003
+      },
+      {
+        "file": "rows_before_1.00.csv.gz",
+        "speed_mps": 1.0,
+        "planted_foot_slide_mps": 0.155,
+        "slide_fraction_of_speed": 0.155,
+        "cadence_steps_per_min": 101.5,
+        "step_length_m": 0.59,
+        "knee_flexion_max_deg": 89.4,
+        "knee_flexion_p95_deg": 87.7,
+        "swing_clearance_min_m": 0.005
+      },
+      {
+        "file": "rows_before_1.35.csv.gz",
+        "speed_mps": 1.35,
+        "planted_foot_slide_mps": 0.134,
+        "slide_fraction_of_speed": 0.099,
+        "cadence_steps_per_min": 135.5,
+        "step_length_m": 0.6,
+        "knee_flexion_max_deg": 89.5,
+        "knee_flexion_p95_deg": 88.1,
+        "swing_clearance_min_m": 0.003
+      },
+      {
+        "file": "rows_before_1.72.csv.gz",
+        "speed_mps": 1.72,
+        "planted_foot_slide_mps": 0.19,
+        "slide_fraction_of_speed": 0.111,
+        "cadence_steps_per_min": 138.9,
+        "step_length_m": 0.74,
+        "knee_flexion_max_deg": 87.6,
+        "knee_flexion_p95_deg": 85.4,
+        "swing_clearance_min_m": 0.001
+      }
+    ],
+    "fresh_package_metrics": [
+      {
+        "file": "rows_pm_1.00.csv",
+        "speed_mps": 1.0,
+        "planted_foot_slide_mps": 0.026,
+        "slide_fraction_of_speed": 0.026,
+        "cadence_steps_per_min": 113.0,
+        "step_length_m": 0.53,
+        "knee_flexion_max_deg": 71.4,
+        "knee_flexion_p95_deg": 70.8,
+        "swing_clearance_min_m": 0.004
+      },
+      {
+        "file": "rows_pm_1.35.csv",
+        "speed_mps": 1.35,
+        "planted_foot_slide_mps": 0.031,
+        "slide_fraction_of_speed": 0.023,
+        "cadence_steps_per_min": 108.7,
+        "step_length_m": 0.75,
+        "knee_flexion_max_deg": 71.4,
+        "knee_flexion_p95_deg": 70.6,
+        "swing_clearance_min_m": 0.005
+      },
+      {
+        "file": "rows_pm_1.72.csv",
+        "speed_mps": 1.72,
+        "planted_foot_slide_mps": 0.076,
+        "slide_fraction_of_speed": 0.044,
+        "cadence_steps_per_min": 104.6,
+        "step_length_m": 0.99,
+        "knee_flexion_max_deg": 70.6,
+        "knee_flexion_p95_deg": 69.5,
+        "swing_clearance_min_m": 0.003
+      }
+    ],
+    "fresh_metrics_reference": {
+      "path": "builds/pm-review/day1a-correction-2026-10-07/fresh_gait_metrics.json",
+      "sha256": "e4cbb1968986991a790ff6800c24a5829cc312ae8527c25cc16e9bceac047270"
+    },
+    "fresh_run_log": {
+      "path": "builds/pm-review/day1a-correction-2026-10-07/render_gait.log",
+      "sha256": "4e7bca46ac6640a32996096c823b2bff22c97c68517ba1b3e1cf353b61adb7ff"
+    },
+    "method_limit": "Rendered foot-bone contact proxy (net stance displacement) and knee geometry, not a human gait judgment. Cadence/contact sampling varies with frame cadence and phase.",
+    "images_inspected": [
+      {
+        "path": "builds/pm-review/day1a-correction-2026-10-07/render/gait/gait/side_pm_1.00.png",
+        "sha256": "3ae9652fb336e18ef8dae35235bcfe487fb1a930e4bf38a35789ec382358ba74"
+      },
+      {
+        "path": "builds/pm-review/day1a-correction-2026-10-07/render/gait/gait/talk_pm_1.72.png",
+        "sha256": "a044c0461110212d306b9a7546fcef05383883484ca84832e914b88f59bd0202"
+      }
+    ],
+    "capture_limit": "Four fixed gait shots generated, plus strips; side triggers at the two faster speeds were skipped by the sample window. Existing capture reliability gate remains open."
+  },
+  "fresh_rendered_route": {
+    "executable_sha256": "ec69d7bbdddcf311625be1f1fe875c5863e997291c4583a06c405cf536417d6c",
+    "scenario": "day1-walk",
+    "style": "normal",
+    "time_scale": 3,
+    "physical_viewport_px": [
+      1280,
+      720
+    ],
+    "max_fps": 60,
+    "ended": true,
+    "final_beat": "end",
+    "simulated_director_seconds": 1298.5,
+    "reported_real_s_qualification": "The runner real_s field scales with Engine.time_scale; this accelerated run is roughly 7.3 minutes wall time and is functional/capture evidence only.",
+    "interaction_misses": [
+      {
+        "beat": "meal",
+        "id": "stand",
+        "prompt": "eat_olives",
+        "t": 555.7
+      }
+    ],
+    "recovery_note": "One scripted stand request encountered an eat_olives prompt; the walker recovered and completed. No zero-miss claim.",
+    "captures_generated": 21,
+    "captures_inspected": [
+      {
+        "path": "builds/pm-review/day1a-correction-2026-10-07/render/walk/captures_normal/14_meal.png",
+        "sha256": "31edfeb8c9a4d0331bb0b2783ca67ed79f0fedc33f7b6e02a85ad9d9a38420e0"
+      },
+      {
+        "path": "builds/pm-review/day1a-correction-2026-10-07/render/walk/captures_normal/15_question.png",
+        "sha256": "c9cb7882439e7bdc252f6ff61d3fc1dc9b3548d0f2d62242eaafd5923bf66032"
+      },
+      {
+        "path": "builds/pm-review/day1a-correction-2026-10-07/render/walk/captures_normal/19_nones_bell.png",
+        "sha256": "56b2bd38f8cd5af5e8d66273672b296c291fe1b59b9dbdc2f4b3a209439077ee"
+      },
+      {
+        "path": "builds/pm-review/day1a-correction-2026-10-07/render/walk/captures_normal/20_nones_file.png",
+        "sha256": "a94ef455ee384bff97f08df0aa4cde1e92f31e8f7c9b88cc6cfc1bb250422017"
+      },
+      {
+        "path": "builds/pm-review/day1a-correction-2026-10-07/render/walk/captures_normal/21_choir.png",
+        "sha256": "05a8eb2f7494c93d8192565e4464e4811c3a2591e04ad5b725e912c80e7cbc31"
+      },
+      {
+        "path": "builds/pm-review/day1a-correction-2026-10-07/render/walk/captures_normal/22_after.png",
+        "sha256": "2c1e94972a56bd5f5bf5d682178df50a94d8be3b2bb7e4c60e6d894c946b7f8b"
+      }
+    ],
+    "nones_office_begun_seconds_after_bell": 65.2,
+    "report": {
+      "path": "builds/pm-review/day1a-correction-2026-10-07/render/walk/day1-walk_normal_pm.json",
+      "sha256": "0fa7b354c0ec4484494cd9da9f2c6162e7566b238e3e678c7625312bcb01b7e7"
+    },
+    "log": {
+      "path": "builds/pm-review/day1a-correction-2026-10-07/render_walk.log",
+      "sha256": "4772e88f8647b5a7685ea1d1d1427b0d750808fde7fe741a4dc1445699bac075"
+    },
+    "performance_qualification": "Accelerated physics, FPS cap and synchronous screenshots make these frame times unsuitable for performance gates; no new PM benchmark claimed.",
+    "visual_assessment": "Meal reply UI, bell response, movement into occupied choir and return to work render in the fresh package. William/tonsure/close faces remain prototype quality. No owner/listening/unfamiliar-player trial was substituted."
+  },
+  "harness_diagnostics": [
+    "Intentional non-allowlisted-condition negative test emits an error.",
+    "Known ObjectDB/resource-at-exit diagnostics in domain, scene, pose, anchor and functional harnesses.",
+    "Observation unknown-id negative test and finite-vector/NaN warnings in controlled domain/probe states.",
+    "Rendered runs also retain resource-at-exit cleanup warnings. No script assertion failure or import error found."
+  ],
+  "remaining_risks": [
+    {
+      "id": "PERF-STALL",
+      "priority": "P1",
+      "status": "OPEN",
+      "finding": "Warm recorded route contains one 1.08-second free-period frame with no coincident pipeline compilation or director event.",
+      "next_action": "Keep long-frame context; if it recurs during ordinary real-time play, capture focus/process/physics/system context and commission a bounded diagnosis."
+    },
+    {
+      "id": "PERF-VARIATION",
+      "priority": "P1",
+      "status": "OPEN",
+      "finding": "Identical loop legs have differing renderer work and FPS between/within runs, including a loop-10 shift; no established cause.",
+      "next_action": "Retain raw counters/setup; qualify under Windows and ordinary play before broad migration, without treating the fastest run as universal."
+    },
+    {
+      "id": "RSS-TREND",
+      "priority": "P1",
+      "status": "OPEN",
+      "finding": "Warmed RSS grows 4.68% and 5.93% over ten measured loops; within the 10% gate, not evidence of indefinite stability.",
+      "next_action": "A future longer ordinary-play/profiled run should distinguish retained telemetry/benchmark arrays and allocator behavior from game-state growth; no leak diagnosis is claimed."
+    },
+    {
+      "id": "HUMAN-PRODUCT",
+      "priority": "P0 product gate",
+      "status": "NOT RUN",
+      "finding": "William relationship, learned routes, ordinary-life appeal, resident recognition, Nones timing/mix and subjective character quality are unproven.",
+      "next_action": "Owner and at least one unfamiliar player play/listen without coaching, then PM assesses feedback before Day-1B."
+    },
+    {
+      "id": "CANON-INPUT-WINDOWS",
+      "priority": "open validation gates",
+      "status": "NOT RUN",
+      "finding": "Finished-book canon/name/office review, controller/focus/layout trials and Windows W1/W2 remain absent.",
+      "next_action": "Use the canonical procedures and correct person/hardware; source classification stays provisional and engine commitment conditional."
+    }
+  ],
+  "not_run": [
+    "Owner playtest",
+    "Unfamiliar-player playtest",
+    "Human listening",
+    "Finished-book canon/name/office/spoiler review",
+    "Controller/focus/non-US keyboard-layout trials",
+    "Windows W1/W2 runtime",
+    "Mac Intel",
+    "Linux CI",
+    "New PM real-time performance or streaming soak"
+  ],
+  "pm_changes": "Canonical docs/ledger/decision history/PM state and this concise structured review only; no gameplay implementation or user-save edits.",
+  "next_action": {
+    "assigned_to": "Owner and at least one unfamiliar player; no developer implementation assigned",
+    "brief": "docs/PROJECT.md#human-validation--day-1a",
+    "run_instructions": "docs/DEVELOPMENT.md#day-1a-human-playtest",
+    "stop": "Return observations for PM review. Hold Day-1B, Vespers/night, Day 2, library and broad migration."
+  }
+}
