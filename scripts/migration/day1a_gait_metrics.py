@@ -2,6 +2,7 @@
 """Gait metrics from the day1-gait scenario's per-frame rows.
 
     python3 scripts/migration/day1a_gait_metrics.py 'builds/day1a-gait/gait/rows_*_*.csv'
+    python3 scripts/migration/day1a_gait_metrics.py 'docs/evidence/day1a/correction/gait/rows_*.csv.gz'
 
 Each CSV (written by native/scripts/bench/day1a_runner.gd, day1-gait) holds,
 per rendered frame, the walker's body x and both feet's world positions and
@@ -20,13 +21,15 @@ knee flexion. Only the steady middle of the 9 m line is used.
 """
 import csv
 import glob
+import gzip
 import json
 import statistics
 import sys
 
 
 def metrics(path):
-    rows = [list(map(float, r)) for r in list(csv.reader(open(path)))[1:]]
+    f = gzip.open(path, 'rt') if path.endswith('.gz') else open(path)
+    rows = [list(map(float, r)) for r in list(csv.reader(f))[1:]]
     xs = [r[1] for r in rows]
     x0, x1 = min(xs) + 1.5, max(xs) - 1.5
     mid = [r for r in rows if x0 < r[1] < x1]

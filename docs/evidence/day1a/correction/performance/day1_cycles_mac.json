@@ -1,0 +1,1016 @@
+{
+ "clock_held_at": 13.0,
+ "cycles": 10,
+ "frames_all_measured": {
+  "fps_avg": 109.7,
+  "frames": 147553,
+  "ms_max": 40.85,
+  "ms_p50": 9.22,
+  "ms_p95": 11.15,
+  "ms_p99": 11.76,
+  "over_100ms": 0,
+  "over_50ms": 0
+ },
+ "frames_csv": "day1_cycles_mac.csv",
+ "label": "mac",
+ "leg_timeouts": [],
+ "measured_minutes": 22.41,
+ "memory_growth": {
+  "basis": "after the complete warm-up loop → after the last measured loop",
+  "loops_measured": 10,
+  "nodes_delta": 0,
+  "objects_delta": 1,
+  "orphans_last": 0,
+  "resources_delta": 0,
+  "vram_pct": 1.42
+ },
+ "monitor_csv": "day1_cycles_mac_mon.csv",
+ "name": "day1_cycles",
+ "residency": "Day-1A keeps every exported cell resident (world_cells resident_policy off); tree tiles and figures switch by visibility range only — no load/unload events occur in this slice",
+ "rows": [
+  {
+   "buffer_mib": 59.9,
+   "cycle": -2,
+   "epoch_s": 1791361485,
+   "hours": 13.0,
+   "kind": "free period reached",
+   "nodes": 3088.0,
+   "objects": 8560.0,
+   "orphans": 0.0,
+   "pipeline_compilations": 121.0,
+   "resources": 1250.0,
+   "static_mib": 0.0,
+   "t": 621.8,
+   "texture_mib": 425.4,
+   "vram_mib": 557.8
+  },
+  {
+   "buffer_mib": 59.9,
+   "cycle": -1,
+   "epoch_s": 1791361526,
+   "frames": {
+    "fps_avg": 113.6,
+    "frames": 4695,
+    "ms_max": 13.38,
+    "ms_p50": 8.77,
+    "ms_p95": 10.71,
+    "ms_p99": 11.57,
+    "over_100ms": 0,
+    "over_50ms": 0
+   },
+   "hours": 13.0,
+   "kind": "approach",
+   "legs": {
+    "approach": {
+     "fps_avg": 113.6,
+     "frames": 4695,
+     "ms_max": 13.38,
+     "ms_p50": 8.77,
+     "ms_p95": 10.71,
+     "ms_p99": 11.57,
+     "over_100ms": 0,
+     "over_50ms": 0
+    }
+   },
+   "nodes": 3082.0,
+   "objects": 8549.0,
+   "orphans": 0.0,
+   "pipeline_compilations": 121.0,
+   "resources": 1250.0,
+   "static_mib": 0.0,
+   "t": 663.1,
+   "texture_mib": 425.4,
+   "vram_mib": 557.8
+  },
+  {
+   "buffer_mib": 59.9,
+   "cycle": 0,
+   "epoch_s": 1791361661,
+   "frames": {
+    "fps_avg": 108.2,
+    "frames": 14546,
+    "ms_max": 14.99,
+    "ms_p50": 9.27,
+    "ms_p95": 11.15,
+    "ms_p99": 11.77,
+    "over_100ms": 0,
+    "over_50ms": 0
+   },
+   "hours": 13.0,
+   "kind": "warmup",
+   "legs": {
+    "cell_to_well": {
+     "fps_avg": 102.5,
+     "frames": 1862,
+     "ms_max": 12.48,
+     "ms_p50": 9.92,
+     "ms_p95": 11.34,
+     "ms_p99": 11.79,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "gate_to_cell": {
+     "fps_avg": 116.6,
+     "frames": 4691,
+     "ms_max": 13.89,
+     "ms_p50": 8.56,
+     "ms_p95": 10.52,
+     "ms_p99": 11.24,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "nave_to_garth": {
+     "fps_avg": 97.1,
+     "frames": 1102,
+     "ms_max": 12.22,
+     "ms_p50": 10.33,
+     "ms_p95": 11.55,
+     "ms_p99": 11.9,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "to_gate": {
+     "fps_avg": 108.9,
+     "frames": 5499,
+     "ms_max": 14.99,
+     "ms_p50": 9.23,
+     "ms_p95": 11.05,
+     "ms_p99": 11.86,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "well_to_nave": {
+     "fps_avg": 98.0,
+     "frames": 1392,
+     "ms_max": 12.4,
+     "ms_p50": 10.23,
+     "ms_p95": 11.33,
+     "ms_p99": 11.74,
+     "over_100ms": 0,
+     "over_50ms": 0
+    }
+   },
+   "nodes": 3082.0,
+   "objects": 8551.0,
+   "orphans": 0.0,
+   "pipeline_compilations": 121.0,
+   "resources": 1250.0,
+   "static_mib": 0.0,
+   "t": 797.5,
+   "texture_mib": 425.4,
+   "vram_mib": 557.8
+  },
+  {
+   "buffer_mib": 59.9,
+   "cycle": 1,
+   "epoch_s": 1791361795,
+   "frames": {
+    "fps_avg": 108.2,
+    "frames": 14553,
+    "ms_max": 13.34,
+    "ms_p50": 9.29,
+    "ms_p95": 11.16,
+    "ms_p99": 11.78,
+    "over_100ms": 0,
+    "over_50ms": 0
+   },
+   "hours": 13.0,
+   "kind": "measured",
+   "legs": {
+    "cell_to_well": {
+     "fps_avg": 102.4,
+     "frames": 1865,
+     "ms_max": 12.44,
+     "ms_p50": 9.94,
+     "ms_p95": 11.32,
+     "ms_p99": 11.77,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "gate_to_cell": {
+     "fps_avg": 116.6,
+     "frames": 4694,
+     "ms_max": 13.34,
+     "ms_p50": 8.55,
+     "ms_p95": 10.5,
+     "ms_p99": 11.28,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "nave_to_garth": {
+     "fps_avg": 97.2,
+     "frames": 1103,
+     "ms_max": 12.5,
+     "ms_p50": 10.35,
+     "ms_p95": 11.54,
+     "ms_p99": 11.95,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "to_gate": {
+     "fps_avg": 109.0,
+     "frames": 5499,
+     "ms_max": 13.27,
+     "ms_p50": 9.25,
+     "ms_p95": 11.06,
+     "ms_p99": 11.85,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "well_to_nave": {
+     "fps_avg": 97.9,
+     "frames": 1392,
+     "ms_max": 12.39,
+     "ms_p50": 10.27,
+     "ms_p95": 11.35,
+     "ms_p99": 11.88,
+     "over_100ms": 0,
+     "over_50ms": 0
+    }
+   },
+   "nodes": 3082.0,
+   "objects": 8552.0,
+   "orphans": 0.0,
+   "pipeline_compilations": 121.0,
+   "resources": 1250.0,
+   "static_mib": 0.0,
+   "t": 932.0,
+   "texture_mib": 425.4,
+   "vram_mib": 557.8
+  },
+  {
+   "buffer_mib": 59.9,
+   "cycle": 2,
+   "epoch_s": 1791361930,
+   "frames": {
+    "fps_avg": 108.2,
+    "frames": 14559,
+    "ms_max": 13.59,
+    "ms_p50": 9.29,
+    "ms_p95": 11.16,
+    "ms_p99": 11.73,
+    "over_100ms": 0,
+    "over_50ms": 0
+   },
+   "hours": 13.0,
+   "kind": "measured",
+   "legs": {
+    "cell_to_well": {
+     "fps_avg": 102.3,
+     "frames": 1867,
+     "ms_max": 12.4,
+     "ms_p50": 9.96,
+     "ms_p95": 11.35,
+     "ms_p99": 11.79,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "gate_to_cell": {
+     "fps_avg": 116.6,
+     "frames": 4694,
+     "ms_max": 13.45,
+     "ms_p50": 8.55,
+     "ms_p95": 10.52,
+     "ms_p99": 11.26,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "nave_to_garth": {
+     "fps_avg": 97.2,
+     "frames": 1103,
+     "ms_max": 12.47,
+     "ms_p50": 10.34,
+     "ms_p95": 11.55,
+     "ms_p99": 11.95,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "to_gate": {
+     "fps_avg": 109.0,
+     "frames": 5502,
+     "ms_max": 13.59,
+     "ms_p50": 9.26,
+     "ms_p95": 11.02,
+     "ms_p99": 11.76,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "well_to_nave": {
+     "fps_avg": 98.0,
+     "frames": 1393,
+     "ms_max": 12.87,
+     "ms_p50": 10.23,
+     "ms_p95": 11.36,
+     "ms_p99": 11.68,
+     "over_100ms": 0,
+     "over_50ms": 0
+    }
+   },
+   "nodes": 3082.0,
+   "objects": 8552.0,
+   "orphans": 0.0,
+   "pipeline_compilations": 121.0,
+   "resources": 1250.0,
+   "static_mib": 0.0,
+   "t": 1066.5,
+   "texture_mib": 425.4,
+   "vram_mib": 557.8
+  },
+  {
+   "buffer_mib": 59.9,
+   "cycle": 3,
+   "epoch_s": 1791362064,
+   "frames": {
+    "fps_avg": 108.2,
+    "frames": 14537,
+    "ms_max": 13.57,
+    "ms_p50": 9.3,
+    "ms_p95": 11.16,
+    "ms_p99": 11.74,
+    "over_100ms": 0,
+    "over_50ms": 0
+   },
+   "hours": 13.0,
+   "kind": "measured",
+   "legs": {
+    "cell_to_well": {
+     "fps_avg": 102.3,
+     "frames": 1859,
+     "ms_max": 13.1,
+     "ms_p50": 9.94,
+     "ms_p95": 11.37,
+     "ms_p99": 11.75,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "gate_to_cell": {
+     "fps_avg": 116.5,
+     "frames": 4684,
+     "ms_max": 13.21,
+     "ms_p50": 8.57,
+     "ms_p95": 10.49,
+     "ms_p99": 11.29,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "nave_to_garth": {
+     "fps_avg": 97.2,
+     "frames": 1103,
+     "ms_max": 12.67,
+     "ms_p50": 10.36,
+     "ms_p95": 11.55,
+     "ms_p99": 12.01,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "to_gate": {
+     "fps_avg": 109.0,
+     "frames": 5501,
+     "ms_max": 13.57,
+     "ms_p50": 9.27,
+     "ms_p95": 11.03,
+     "ms_p99": 11.79,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "well_to_nave": {
+     "fps_avg": 98.0,
+     "frames": 1390,
+     "ms_max": 12.47,
+     "ms_p50": 10.24,
+     "ms_p95": 11.34,
+     "ms_p99": 11.72,
+     "over_100ms": 0,
+     "over_50ms": 0
+    }
+   },
+   "nodes": 3082.0,
+   "objects": 8552.0,
+   "orphans": 0.0,
+   "pipeline_compilations": 121.0,
+   "resources": 1250.0,
+   "static_mib": 0.0,
+   "t": 1200.9,
+   "texture_mib": 425.4,
+   "vram_mib": 557.8
+  },
+  {
+   "buffer_mib": 59.9,
+   "cycle": 4,
+   "epoch_s": 1791362199,
+   "frames": {
+    "fps_avg": 108.2,
+    "frames": 14551,
+    "ms_max": 13.54,
+    "ms_p50": 9.28,
+    "ms_p95": 11.15,
+    "ms_p99": 11.79,
+    "over_100ms": 0,
+    "over_50ms": 0
+   },
+   "hours": 13.0,
+   "kind": "measured",
+   "legs": {
+    "cell_to_well": {
+     "fps_avg": 102.5,
+     "frames": 1862,
+     "ms_max": 12.54,
+     "ms_p50": 9.95,
+     "ms_p95": 11.3,
+     "ms_p99": 11.69,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "gate_to_cell": {
+     "fps_avg": 116.6,
+     "frames": 4689,
+     "ms_max": 13.02,
+     "ms_p50": 8.55,
+     "ms_p95": 10.49,
+     "ms_p99": 11.32,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "nave_to_garth": {
+     "fps_avg": 97.2,
+     "frames": 1106,
+     "ms_max": 12.68,
+     "ms_p50": 10.33,
+     "ms_p95": 11.54,
+     "ms_p99": 11.97,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "to_gate": {
+     "fps_avg": 109.0,
+     "frames": 5500,
+     "ms_max": 13.54,
+     "ms_p50": 9.26,
+     "ms_p95": 11.05,
+     "ms_p99": 12.03,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "well_to_nave": {
+     "fps_avg": 98.1,
+     "frames": 1394,
+     "ms_max": 12.6,
+     "ms_p50": 10.25,
+     "ms_p95": 11.31,
+     "ms_p99": 11.8,
+     "over_100ms": 0,
+     "over_50ms": 0
+    }
+   },
+   "nodes": 3082.0,
+   "objects": 8552.0,
+   "orphans": 0.0,
+   "pipeline_compilations": 121.0,
+   "resources": 1250.0,
+   "static_mib": 0.0,
+   "t": 1335.4,
+   "texture_mib": 425.4,
+   "vram_mib": 557.8
+  },
+  {
+   "buffer_mib": 59.9,
+   "cycle": 5,
+   "epoch_s": 1791362333,
+   "frames": {
+    "fps_avg": 108.3,
+    "frames": 14562,
+    "ms_max": 14.19,
+    "ms_p50": 9.29,
+    "ms_p95": 11.15,
+    "ms_p99": 11.73,
+    "over_100ms": 0,
+    "over_50ms": 0
+   },
+   "hours": 13.0,
+   "kind": "measured",
+   "legs": {
+    "cell_to_well": {
+     "fps_avg": 102.4,
+     "frames": 1868,
+     "ms_max": 12.43,
+     "ms_p50": 9.92,
+     "ms_p95": 11.32,
+     "ms_p99": 11.72,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "gate_to_cell": {
+     "fps_avg": 116.6,
+     "frames": 4691,
+     "ms_max": 13.61,
+     "ms_p50": 8.56,
+     "ms_p95": 10.54,
+     "ms_p99": 11.28,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "nave_to_garth": {
+     "fps_avg": 97.1,
+     "frames": 1103,
+     "ms_max": 12.62,
+     "ms_p50": 10.31,
+     "ms_p95": 11.51,
+     "ms_p99": 12.02,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "to_gate": {
+     "fps_avg": 109.1,
+     "frames": 5505,
+     "ms_max": 14.19,
+     "ms_p50": 9.25,
+     "ms_p95": 11.02,
+     "ms_p99": 11.84,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "well_to_nave": {
+     "fps_avg": 98.0,
+     "frames": 1395,
+     "ms_max": 12.23,
+     "ms_p50": 10.24,
+     "ms_p95": 11.29,
+     "ms_p99": 11.73,
+     "over_100ms": 0,
+     "over_50ms": 0
+    }
+   },
+   "nodes": 3082.0,
+   "objects": 8552.0,
+   "orphans": 0.0,
+   "pipeline_compilations": 121.0,
+   "resources": 1250.0,
+   "static_mib": 0.0,
+   "t": 1469.9,
+   "texture_mib": 425.4,
+   "vram_mib": 557.8
+  },
+  {
+   "buffer_mib": 59.9,
+   "cycle": 6,
+   "epoch_s": 1791362468,
+   "frames": {
+    "fps_avg": 108.2,
+    "frames": 14549,
+    "ms_max": 13.46,
+    "ms_p50": 9.3,
+    "ms_p95": 11.19,
+    "ms_p99": 11.77,
+    "over_100ms": 0,
+    "over_50ms": 0
+   },
+   "hours": 13.0,
+   "kind": "measured",
+   "legs": {
+    "cell_to_well": {
+     "fps_avg": 102.3,
+     "frames": 1860,
+     "ms_max": 12.93,
+     "ms_p50": 9.95,
+     "ms_p95": 11.4,
+     "ms_p99": 11.81,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "gate_to_cell": {
+     "fps_avg": 116.5,
+     "frames": 4687,
+     "ms_max": 12.59,
+     "ms_p50": 8.59,
+     "ms_p95": 10.51,
+     "ms_p99": 11.29,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "nave_to_garth": {
+     "fps_avg": 97.2,
+     "frames": 1103,
+     "ms_max": 12.77,
+     "ms_p50": 10.32,
+     "ms_p95": 11.64,
+     "ms_p99": 11.97,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "to_gate": {
+     "fps_avg": 109.0,
+     "frames": 5505,
+     "ms_max": 13.46,
+     "ms_p50": 9.26,
+     "ms_p95": 11.07,
+     "ms_p99": 11.83,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "well_to_nave": {
+     "fps_avg": 98.0,
+     "frames": 1394,
+     "ms_max": 12.17,
+     "ms_p50": 10.23,
+     "ms_p95": 11.35,
+     "ms_p99": 11.7,
+     "over_100ms": 0,
+     "over_50ms": 0
+    }
+   },
+   "nodes": 3082.0,
+   "objects": 8552.0,
+   "orphans": 0.0,
+   "pipeline_compilations": 121.0,
+   "resources": 1250.0,
+   "static_mib": 0.0,
+   "t": 1604.4,
+   "texture_mib": 425.4,
+   "vram_mib": 557.8
+  },
+  {
+   "buffer_mib": 59.9,
+   "cycle": 7,
+   "epoch_s": 1791362602,
+   "frames": {
+    "fps_avg": 108.2,
+    "frames": 14559,
+    "ms_max": 14.78,
+    "ms_p50": 9.3,
+    "ms_p95": 11.14,
+    "ms_p99": 11.71,
+    "over_100ms": 0,
+    "over_50ms": 0
+   },
+   "hours": 13.0,
+   "kind": "measured",
+   "legs": {
+    "cell_to_well": {
+     "fps_avg": 102.5,
+     "frames": 1866,
+     "ms_max": 12.41,
+     "ms_p50": 9.93,
+     "ms_p95": 11.33,
+     "ms_p99": 11.7,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "gate_to_cell": {
+     "fps_avg": 116.6,
+     "frames": 4692,
+     "ms_max": 12.96,
+     "ms_p50": 8.53,
+     "ms_p95": 10.45,
+     "ms_p99": 11.18,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "nave_to_garth": {
+     "fps_avg": 97.2,
+     "frames": 1106,
+     "ms_max": 12.25,
+     "ms_p50": 10.3,
+     "ms_p95": 11.58,
+     "ms_p99": 11.83,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "to_gate": {
+     "fps_avg": 109.0,
+     "frames": 5502,
+     "ms_max": 14.78,
+     "ms_p50": 9.26,
+     "ms_p95": 11.02,
+     "ms_p99": 11.81,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "well_to_nave": {
+     "fps_avg": 97.9,
+     "frames": 1393,
+     "ms_max": 13.16,
+     "ms_p50": 10.26,
+     "ms_p95": 11.31,
+     "ms_p99": 11.79,
+     "over_100ms": 0,
+     "over_50ms": 0
+    }
+   },
+   "nodes": 3082.0,
+   "objects": 8552.0,
+   "orphans": 0.0,
+   "pipeline_compilations": 121.0,
+   "resources": 1250.0,
+   "static_mib": 0.0,
+   "t": 1738.9,
+   "texture_mib": 425.4,
+   "vram_mib": 557.8
+  },
+  {
+   "buffer_mib": 59.9,
+   "cycle": 8,
+   "epoch_s": 1791362737,
+   "frames": {
+    "fps_avg": 108.3,
+    "frames": 14565,
+    "ms_max": 14.19,
+    "ms_p50": 9.28,
+    "ms_p95": 11.15,
+    "ms_p99": 11.75,
+    "over_100ms": 0,
+    "over_50ms": 0
+   },
+   "hours": 13.0,
+   "kind": "measured",
+   "legs": {
+    "cell_to_well": {
+     "fps_avg": 102.5,
+     "frames": 1872,
+     "ms_max": 12.41,
+     "ms_p50": 9.93,
+     "ms_p95": 11.3,
+     "ms_p99": 11.69,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "gate_to_cell": {
+     "fps_avg": 116.5,
+     "frames": 4689,
+     "ms_max": 12.98,
+     "ms_p50": 8.53,
+     "ms_p95": 10.49,
+     "ms_p99": 11.26,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "nave_to_garth": {
+     "fps_avg": 97.2,
+     "frames": 1104,
+     "ms_max": 12.63,
+     "ms_p50": 10.34,
+     "ms_p95": 11.58,
+     "ms_p99": 12.05,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "to_gate": {
+     "fps_avg": 109.1,
+     "frames": 5506,
+     "ms_max": 14.19,
+     "ms_p50": 9.24,
+     "ms_p95": 11.02,
+     "ms_p99": 11.85,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "well_to_nave": {
+     "fps_avg": 98.1,
+     "frames": 1394,
+     "ms_max": 12.49,
+     "ms_p50": 10.24,
+     "ms_p95": 11.36,
+     "ms_p99": 11.82,
+     "over_100ms": 0,
+     "over_50ms": 0
+    }
+   },
+   "nodes": 3082.0,
+   "objects": 8552.0,
+   "orphans": 0.0,
+   "pipeline_compilations": 121.0,
+   "resources": 1250.0,
+   "static_mib": 0.0,
+   "t": 1873.4,
+   "texture_mib": 425.4,
+   "vram_mib": 557.8
+  },
+  {
+   "buffer_mib": 59.9,
+   "cycle": 9,
+   "epoch_s": 1791362871,
+   "frames": {
+    "fps_avg": 108.2,
+    "frames": 14553,
+    "ms_max": 13.92,
+    "ms_p50": 9.29,
+    "ms_p95": 11.16,
+    "ms_p99": 11.74,
+    "over_100ms": 0,
+    "over_50ms": 0
+   },
+   "hours": 13.0,
+   "kind": "measured",
+   "legs": {
+    "cell_to_well": {
+     "fps_avg": 102.3,
+     "frames": 1867,
+     "ms_max": 12.97,
+     "ms_p50": 9.96,
+     "ms_p95": 11.35,
+     "ms_p99": 11.81,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "gate_to_cell": {
+     "fps_avg": 116.5,
+     "frames": 4687,
+     "ms_max": 13.92,
+     "ms_p50": 8.56,
+     "ms_p95": 10.52,
+     "ms_p99": 11.28,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "nave_to_garth": {
+     "fps_avg": 97.2,
+     "frames": 1104,
+     "ms_max": 12.49,
+     "ms_p50": 10.33,
+     "ms_p95": 11.58,
+     "ms_p99": 11.92,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "to_gate": {
+     "fps_avg": 109.1,
+     "frames": 5505,
+     "ms_max": 13.65,
+     "ms_p50": 9.23,
+     "ms_p95": 11.01,
+     "ms_p99": 11.73,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "well_to_nave": {
+     "fps_avg": 98.0,
+     "frames": 1390,
+     "ms_max": 12.63,
+     "ms_p50": 10.24,
+     "ms_p95": 11.37,
+     "ms_p99": 11.79,
+     "over_100ms": 0,
+     "over_50ms": 0
+    }
+   },
+   "nodes": 3082.0,
+   "objects": 8553.0,
+   "orphans": 0.0,
+   "pipeline_compilations": 121.0,
+   "resources": 1250.0,
+   "static_mib": 0.0,
+   "t": 2007.9,
+   "texture_mib": 425.4,
+   "vram_mib": 557.8
+  },
+  {
+   "buffer_mib": 59.9,
+   "cycle": 10,
+   "epoch_s": 1791363006,
+   "frames": {
+    "fps_avg": 123.2,
+    "frames": 16565,
+    "ms_max": 40.85,
+    "ms_p50": 8.13,
+    "ms_p95": 10.99,
+    "ms_p99": 11.95,
+    "over_100ms": 0,
+    "over_50ms": 0
+   },
+   "hours": 13.0,
+   "kind": "measured",
+   "legs": {
+    "cell_to_well": {
+     "fps_avg": 102.4,
+     "frames": 1868,
+     "ms_max": 13.37,
+     "ms_p50": 9.93,
+     "ms_p95": 11.34,
+     "ms_p99": 11.72,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "gate_to_cell": {
+     "fps_avg": 116.5,
+     "frames": 4685,
+     "ms_max": 14.39,
+     "ms_p50": 8.57,
+     "ms_p95": 10.52,
+     "ms_p99": 11.3,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "nave_to_garth": {
+     "fps_avg": 116.3,
+     "frames": 1320,
+     "ms_max": 40.85,
+     "ms_p50": 8.79,
+     "ms_p95": 11.74,
+     "ms_p99": 13.44,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "to_gate": {
+     "fps_avg": 144.7,
+     "frames": 7300,
+     "ms_max": 31.62,
+     "ms_p50": 6.95,
+     "ms_p95": 9.86,
+     "ms_p99": 12.32,
+     "over_100ms": 0,
+     "over_50ms": 0
+    },
+    "well_to_nave": {
+     "fps_avg": 98.0,
+     "frames": 1392,
+     "ms_max": 12.27,
+     "ms_p50": 10.21,
+     "ms_p95": 11.32,
+     "ms_p99": 11.78,
+     "over_100ms": 0,
+     "over_50ms": 0
+    }
+   },
+   "nodes": 3082.0,
+   "objects": 8552.0,
+   "orphans": 0.0,
+   "pipeline_compilations": 121.0,
+   "resources": 1250.0,
+   "static_mib": 0.0,
+   "t": 2142.4,
+   "texture_mib": 425.4,
+   "vram_mib": 565.7
+  }
+ ],
+ "rss": "sampled outside the process by scripts/migration/run_benchmarks.sh (epoch seconds), aligned with frames and counters by wall clock",
+ "scenario": "day1-cycles",
+ "soak_min": 0.0,
+ "spikes_over_50ms": [],
+ "stops": [
+  "g_court",
+  "c_mid",
+  "gt_well",
+  "nv_c",
+  "gt_n"
+ ],
+ "system": {
+  "adapter": "Apple M1 Pro (Apple7)",
+  "adapter_type": 1,
+  "api": "4.0",
+  "cpu": "Apple M1 Pro",
+  "cpu_count": 10,
+  "driver": "metal",
+  "engine": "4.7.2-stable (official)",
+  "executable": "/Users/memre/Desktop/gulun_adı/builds/phase1/macos/AbbeySlice.app/Contents/MacOS/Abbey Slice",
+  "gi": "none",
+  "memory_info": {
+   "available": 8528609280,
+   "free": 7288864768,
+   "physical": 34359738368,
+   "stack": 8372224
+  },
+  "msaa_3d": 1,
+  "os": "macOS",
+  "os_version": "26.5.2",
+  "physics": "Jolt Physics",
+  "renderer": "forward_plus",
+  "scaling_3d_scale": 1.0,
+  "screen": 0,
+  "screen_count": 2,
+  "screen_scale": 2.0,
+  "screens": [
+   {
+    "refresh_hz": 120.0,
+    "scale": 2.0,
+    "size": [
+     3456,
+     2234
+    ]
+   },
+   {
+    "refresh_hz": 75.0,
+    "scale": 1.0,
+    "size": [
+     3840,
+     2160
+    ]
+   }
+  ],
+  "shadow_atlas": 4096,
+  "ssao": true,
+  "user_dir": "/Users/memre/Library/Application Support/AbbeySlice",
+  "vendor": "Apple",
+  "viewport_texture_px": [
+   1920,
+   1080
+  ],
+  "vsync": 0,
+  "window_position": [
+   4608,
+   610
+  ],
+  "window_px": [
+   1920,
+   1080
+  ]
+ }
+}

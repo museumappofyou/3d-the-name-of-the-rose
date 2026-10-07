@@ -1,0 +1,11 @@
+10:08:48 start cold day1_walk
+10:30:26 done cold rc=0 running=0
+10:31:29 start warm day1_walk
+10:53:02 done warm rc=0 running=0
+10:55:19 start coldgodot day1_walk
+11:16:51 done coldgodot rc=0 running=0
+11:22:07 start mac day1_cycles day1_soak
+12:18:05 done mac rc=0 running=0
+ALL DONE 12:18:05
+12:28:28 start candidate day1_walk
+12:50:03 done candidate rc=0 running=0

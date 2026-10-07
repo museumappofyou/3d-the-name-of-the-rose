@@ -1,0 +1,1796 @@
+{
+ "schema_version": 1,
+ "id": "day1a-correction-2026-10-07",
+ "mission": "docs/PROJECT.md#corrective-mission--make-day-1a-safe-to-playtest",
+ "reviewed_source": "e223bc2",
+ "pm_checkpoint": "e8174fb",
+ "candidate_commits": {
+  "7cd678c": "save safety: one slot, whole scene, physical Nones, names, regressions",
+  "6526b9a": "walk calibration and William's stride",
+  "4c16e99": "benchmark warm-up and aligned evidence",
+  "fb12412": "scenario content hashes",
+  "60ec496": "long-frame context; gait/performance readers",
+  "package_from": "60ec496"
+ },
+ "developer": "Claude Opus 5.5 (corrective pass)",
+ "status": {
+  "implemented": "IMPLEMENTED: save entry points, scene resumption, physical Nones across loads, name memory, regressions, William's walk, benchmark evidence",
+  "verified": "VERIFIED: the PM's eight probes, 19 Day-1A domain tests, 21 scene/relaunch checks, 22 native domain tests, 13 pose checks, anchors, proof functional/relaunch, clean fresh build and package audit, browser/data/render/book/repository checks, literary hashes; packaged Mac benchmarks below",
+  "experientially_validated": "NOT RUN: no owner or unfamiliar player has played the corrected build; human listening, controller and Windows W1/W2 remain NOT RUN"
+ },
+ "fixes": {
+  "save_entry_points": "Pause-menu Save/Load and the displayed path use day1a_slot0.json in Day-1A mode (main.gd routes them to the Day-1A adapter; the proof's QA reset/study jumps are refused there). F5/F9, autosaves, the menu and a fresh launch share one adapter path. A seeded proof slot0.json and slot0.json.bak stay byte-identical through repeated menu/key saves and loads in one process and across six relaunched processes.",
+  "scene_resumption": "Save schema 2 keeps queued lines (time to presentation), the open choice and its options, every actor's position/route/activity/arrival tag/facing (the community included), mule trails, seat and halter, and beat state containing vectors/arrays. The adapter replaces the scene and resynchronises body and seat, figures, mules, bell queue, office transport, HUD (subtitles, replies), prompt and end card (_ended). An earlier slot loaded after the end card resumes; an end autosave loaded on a fresh launch shows the card and stays stopped. Schema 1 (e223bc2) is read explicitly: the community, awaited arrivals and interrupted line sequences of the beat are rebuilt and the load reports it.",
+  "nones": "No load places anyone: brothers keep their positions, activities and remaining routes at the bell, while walking, in the choir and afterwards; a restored bell rings only the strokes still due; the office (chant) begins only when the brothers are in their stalls; after the office everyone leaves the choir.",
+  "names": "Lines carry `teaches` (checked against the line text); a name is learned when that line is presented. An interrupted, unheard introduction teaches nothing.",
+  "tests": "The disabled `or true` assertion is replaced by a check that restore places nobody. A restored director must match the uninterrupted day for 60 s after saves at 13 moments (max deviation 0.0 m). New domain tests: halter hold, bell remainder, names, schema-1 migration. New scene suite on the real main scene: menu, F5/F9, interrupted meal and end, repeated loads into used objects, Nones stages, seat/carry/hold, six separate-process relaunches. Both, and the PM probes, gate build_phase1.sh.",
+  "william_walk": "Walk playback is calibrated from the planted foot's median backward speed in each clip (0.62–0.65 m/s for the walks, not the 0.50–0.55 previously measured), keeping planted feet planted for every walker. William (scenario stride 1.25, knee_ease) lengthens his step as he quickens instead of only raising cadence, eases the clip's deepest knee bend above 50°, and lowers the pelvis so the planted foot keeps the ground. Lead/wait, speed and lines unchanged; the body remains a stand-in.",
+  "benchmarks": "The residency loop approaches the gate court unmeasured, completes a whole warm-up loop, then measures. Raw frames (wall clock, loop, leg, pipeline compilations), per-second engine counters and epoch-stamped external RSS are retained and aligned; frames over 50 ms record their context (compilations that frame, engine process/physics time, window focus, director events, place)."
+ },
+ "cold_stall_investigation": {
+  "question": "Two 541–591 ms frames in the free period of the first run of the e223bc2-era package (5 Oct) were provisionally attributed to first-use shader/pipeline compilation.",
+  "trials": "Fresh export from 4c16e99/fb12412 code. A: never-run binary, Godot shader cache moved aside (cold). B: immediately again (warm). C: Godot shader cache moved aside again with the binary already run (Metal system cache warm). Each: the whole slice, real time, 1920×1080, VSync off, no other GPU job. D: the candidate package exported from 60ec496 (new binary, Godot cache as left by C).",
+  "findings": [
+   "A (cold): 116.2 FPS, p95 11.17 ms, max 35.1 ms, no frame over 50 ms. 19 pipeline compilations occurred while measuring (most in the first ~70 s, one at 277 s); none coincided with a frame over 36 ms.",
+   "B (warm): 114.0 FPS, p95 11.46 ms, max 1081 ms; frames over 50 ms: meal 53/54/67 ms, free 1081 ms (762 s in) and 57 ms. No pipeline compilation, director event, counter change or RSS change at any of them; RSS fell ~190 MiB (498 to 304) about 20 s after the 1081 ms frame.",
+   "C (Godot cache removed again, Metal cache warm): 127.8 FPS, p95 11.31 ms, max 36.0 ms, no frame over 50 ms; the same 19 compilations.",
+   "D (candidate package): 103.5 FPS, p95 11.19 ms, max 21.2 ms, no frame over 50 ms; the same 19 compilations; the spike instrumentation had nothing to record.",
+   "The walk calibration added to the figures costs 1.5-2 ms once per clip at first use, not hundreds.",
+   "Frame rate and counted renderer work (draw calls, primitives) differ between runs on the same legs and can shift within a run (ten-loop run: 108 FPS for loops 1-9, 123 in loop 10; soak: 145 with about 40% fewer draw calls on the same legs). Route, visible figures, pipelines and memory do not explain it; not diagnosed."
+  ],
+  "conclusion": "The 5 October 541/591 ms stalls are not reproduced in two cold runs or the candidate's first run, and first-use shader/pipeline compilation produced no long frame in any trial; that attribution is withdrawn. The one long frame seen (1081 ms, warm run) has no identified cause: no compilation, game event or memory event coincided with it. Frames over 50 ms now also record engine process/physics time and window focus/minimised state (runner 60ec496) so the next occurrence can be placed inside or outside the engine.",
+  "loading_time_preparation": "Not added: no measurement showed first-use compilation causing a stall, so no loading-time preparation was introduced."
+ },
+ "not_run": [
+  "Owner playtest",
+  "Unfamiliar-player playtest",
+  "Human listening (bells, chant, Nones delay/mix)",
+  "Finished-book canon/name/office/spoiler review",
+  "Windows W1/W2 runtime",
+  "Controller/focus/non-US layout trials"
+ ],
+ "performance_package": {
+  "source": "runs cold, warm, coldgodot, day1_cycles_mac, day1_soak_mac: package exported from fb12412 (differs from the candidate only in the benchmark runner's spike instrumentation, 60ec496); run candidate: the candidate package itself (hashes under `package`)",
+  "pck_sha256": "5794771548693e9108afff499786a50513a4450890eec0317027507d59bda67b",
+  "macos_binary_sha256": "4a8231e035df117c9c85dc0f5bd30edb16b920620617f5e2bf552d1e87f15588",
+  "setup": "Apple M1 Pro, 32 GB, macOS 26.5.2, Metal 4.0, Godot 4.7.2; built-in Retina display (scale 2.0, 120 Hz), physical 1920x1080 window, VSync off; external display connected; no other GPU job during any run (contention logs)",
+  "evidence_dir": "docs/evidence/day1a/correction/performance (recompute: python3 scripts/migration/day1a_perf_report.py docs/evidence/day1a/correction/performance)"
+ },
+ "gait_evidence": "docs/evidence/day1a/correction/gait (recompute: python3 scripts/migration/day1a_gait_metrics.py 'docs/evidence/day1a/correction/gait/rows_*.csv.gz')",
+ "other_checks": {
+  "browser_npm_test": "29/29",
+  "render_cells": "pass",
+  "data_check": "content OK",
+  "book_tests": "21/21",
+  "repository_check": "pass",
+  "pose_normal_checks": "13/13 (known resource-at-exit diagnostics)",
+  "anchors": "10/10 (known resource-at-exit diagnostics)",
+  "proof_functional_and_second_process_reload": "PASS"
+ },
+ "tests": {
+  "native_domain": "22/22",
+  "day1a_domain": "19/19",
+  "day1a_scene": "21/21",
+  "day1a_scene_checks": [
+   {
+    "id": "menu_and_keys_use_the_day1a_slot_and_never_the_proof_slot",
+    "pass": true
+   },
+   {
+    "id": "menu_load_restores_the_day1a_director",
+    "pass": true
+   },
+   {
+    "id": "interrupted_meal_lines_finish_after_load",
+    "pass": true
+   },
+   {
+    "id": "open_meal_question_survives_load_and_a_key_answers_it",
+    "pass": true
+   },
+   {
+    "id": "an_earlier_save_resumes_after_the_end",
+    "pass": true
+   },
+   {
+    "id": "the_end_save_restores_the_end_card_and_stops",
+    "pass": true
+   },
+   {
+    "id": "repeated_loads_into_used_objects_leave_nothing_behind",
+    "pass": true
+   },
+   {
+    "id": "nones_bell_survives_a_load_without_jumps_bells_or_chant",
+    "pass": true
+   },
+   {
+    "id": "nones_walking_survives_a_load_without_jumps_bells_or_chant",
+    "pass": true
+   },
+   {
+    "id": "nones_choir_survives_a_load_without_jumps_bells_or_chant",
+    "pass": true
+   },
+   {
+    "id": "nones_after_survives_a_load_without_jumps_bells_or_chant",
+    "pass": true
+   },
+   {
+    "id": "after_nones_the_brothers_leave_the_choir",
+    "pass": true
+   },
+   {
+    "id": "seat_carry_and_hold_survive_a_load",
+    "pass": true
+   },
+   {
+    "id": "a_queued_unheard_name_teaches_nothing",
+    "pass": true
+   },
+   {
+    "id": "proof_slot_byte_identical_after_all_day1a_saves_and_loads",
+    "pass": true
+   },
+   {
+    "id": "relaunch_meal_lines",
+    "pass": true
+   },
+   {
+    "id": "relaunch_meal_question",
+    "pass": true
+   },
+   {
+    "id": "relaunch_end",
+    "pass": true
+   },
+   {
+    "id": "relaunch_nones_walking",
+    "pass": true
+   },
+   {
+    "id": "relaunch_fulco_queued",
+    "pass": true
+   },
+   {
+    "id": "relaunch_seated",
+    "pass": true
+   }
+  ],
+  "pm_review_probes": "8/8",
+  "pm_review_probe_checks": [
+   {
+    "id": "pause_save_uses_day1a_and_preserves_proof",
+    "pass": true
+   },
+   {
+    "id": "pause_load_restores_day1a",
+    "pass": true
+   },
+   {
+    "id": "meal_dialogue_survives_load_and_progresses",
+    "pass": true
+   },
+   {
+    "id": "meal_choice_survives_load_and_progresses",
+    "pass": true
+   },
+   {
+    "id": "earlier_save_resumes_after_end",
+    "pass": true
+   },
+   {
+    "id": "end_autosave_restores_end_card",
+    "pass": true
+   },
+   {
+    "id": "nones_community_keeps_physical_state",
+    "pass": true
+   },
+   {
+    "id": "queued_unheard_name_does_not_teach_identity",
+    "pass": true
+   }
+  ],
+  "save_load_mirror_60s": {
+   "after_nones": {
+    "beat": "after_nones",
+    "max_dev_m": 0.0,
+    "mirrored_s": 60.0,
+    "mismatch": "",
+    "t": 1201.5
+   },
+   "free_fulco": {
+    "beat": "free",
+    "max_dev_m": 0.0,
+    "mirrored_s": 60.1,
+    "mismatch": "",
+    "t": 635.4
+   },
+   "free_water": {
+    "beat": "free",
+    "max_dev_m": 0.0,
+    "mirrored_s": 60.1,
+    "mismatch": "",
+    "t": 673.6
+   },
+   "meal_question": {
+    "beat": "meal",
+    "max_dev_m": 0.0,
+    "mirrored_s": 60.1,
+    "mismatch": "",
+    "t": 543.8
+   },
+   "meal_seated": {
+    "beat": "meal",
+    "max_dev_m": 0.0,
+    "mirrored_s": 60.0,
+    "mismatch": "",
+    "t": 515.5
+   },
+   "meal_tray_lines": {
+    "beat": "meal",
+    "max_dev_m": 0.0,
+    "mirrored_s": 60.0,
+    "mismatch": "",
+    "t": 477.9
+   },
+   "nones_bell": {
+    "beat": "nones",
+    "max_dev_m": 0.0,
+    "mirrored_s": 60.0,
+    "mismatch": "",
+    "t": 1019.5
+   },
+   "nones_choir": {
+    "beat": "nones",
+    "max_dev_m": 0.0,
+    "mirrored_s": 60.0,
+    "mismatch": "",
+    "t": 1083.6
+   },
+   "nones_walk": {
+    "beat": "nones",
+    "max_dev_m": 0.0,
+    "mirrored_s": 60.0,
+    "mismatch": "",
+    "t": 1030.5
+   },
+   "reception_greeting": {
+    "beat": "reception",
+    "max_dev_m": 0.0,
+    "mirrored_s": 60.1,
+    "mismatch": "",
+    "t": 174.5
+   },
+   "road": {
+    "beat": "road",
+    "max_dev_m": 0.0,
+    "mirrored_s": 60.1,
+    "mismatch": "",
+    "t": 10.0
+   },
+   "solo_chest": {
+    "beat": "second_bundle",
+    "max_dev_m": 0.0,
+    "mirrored_s": 60.0,
+    "mismatch": "",
+    "t": 355.6
+   },
+   "to_cell_escort": {
+    "beat": "to_cell",
+    "max_dev_m": 0.0,
+    "mirrored_s": 60.0,
+    "mismatch": "",
+    "t": 195.5
+   }
+  },
+  "state1_migration_warnings": {
+   "free": [
+    "state-1 save: queued lines, the open choice, arrival tags and the community were not kept; rebuilt"
+   ],
+   "meal_answer": [
+    "state-1 save: queued lines, the open choice, arrival tags and the community were not kept; rebuilt"
+   ],
+   "meal_tray": [
+    "state-1 save: queued lines, the open choice, arrival tags and the community were not kept; rebuilt"
+   ],
+   "nones_walk": [
+    "state-1 save: queued lines, the open choice, arrival tags and the community were not kept; rebuilt"
+   ]
+  },
+  "package_audit": {
+   "pass": true,
+   "files": 1075,
+   "bytes": 111231672
+  }
+ },
+ "package": {
+  "windows/AbbeySlice.exe": "d34d36f3be1a6c49c56525ae86469b92e4f417ddf0b43cf00dd80c385c4b0562",
+  "windows/AbbeySlice.pck": "76acede208c79cef1b471c3e3624d76a0801c3feedaef9f36b7e4258277f3d11",
+  "macos/AbbeySlice.app/Contents/MacOS/Abbey Slice": "979586582b200d620ecf4c5ff0516ee6a80e5e843e6e971a000dd23eabaddbb5",
+  "AbbeySlice-windows-x86_64.zip": "70ab570b0a6f866f5c72f47c54439bafa0f0fe10eccfd025b5ff7555f22a3a4d",
+  "AbbeySlice-macos-universal.zip": "1b5ab959545f232acf5148ea73842c2076c951a9d0724a58bcb33e0d8555095d"
+ },
+ "gait": {
+  "before": [
+   {
+    "speed": 1.0,
+    "slide_mps": 0.155,
+    "slide_frac": 0.155,
+    "cadence": 101.5,
+    "step_m": 0.59,
+    "knee_max": 89.4,
+    "knee_p95": 87.7,
+    "swing_clear_min_m": 0.005
+   },
+   {
+    "speed": 1.35,
+    "slide_mps": 0.134,
+    "slide_frac": 0.099,
+    "cadence": 135.5,
+    "step_m": 0.6,
+    "knee_max": 89.5,
+    "knee_p95": 88.1,
+    "swing_clear_min_m": 0.003
+   },
+   {
+    "speed": 1.72,
+    "slide_mps": 0.19,
+    "slide_frac": 0.111,
+    "cadence": 138.9,
+    "step_m": 0.74,
+    "knee_max": 87.6,
+    "knee_p95": 85.4,
+    "swing_clear_min_m": 0.001
+   }
+  ],
+  "calib": [
+   {
+    "speed": 1.0,
+    "slide_mps": 0.027,
+    "slide_frac": 0.027,
+    "cadence": 111.7,
+    "step_m": 0.54,
+    "knee_max": 89.5,
+    "knee_p95": 88.1,
+    "swing_clear_min_m": 0.007
+   },
+   {
+    "speed": 1.35,
+    "slide_mps": 0.049,
+    "slide_frac": 0.036,
+    "cadence": 121.6,
+    "step_m": 0.66,
+    "knee_max": 89.5,
+    "knee_p95": 87.9,
+    "swing_clear_min_m": 0.005
+   },
+   {
+    "speed": 1.72,
+    "slide_mps": 0.188,
+    "slide_frac": 0.11,
+    "cadence": 138.8,
+    "step_m": 0.74,
+    "knee_max": 87.6,
+    "knee_p95": 86.3,
+    "swing_clear_min_m": 0.001
+   }
+  ],
+  "after": [
+   {
+    "speed": 1.0,
+    "slide_mps": 0.029,
+    "slide_frac": 0.029,
+    "cadence": 111.7,
+    "step_m": 0.54,
+    "knee_max": 71.5,
+    "knee_p95": 70.7,
+    "swing_clear_min_m": 0.007
+   },
+   {
+    "speed": 1.35,
+    "slide_mps": 0.038,
+    "slide_frac": 0.028,
+    "cadence": 122.0,
+    "step_m": 0.66,
+    "knee_max": 71.5,
+    "knee_p95": 70.6,
+    "swing_clear_min_m": 0.007
+   },
+   {
+    "speed": 1.72,
+    "slide_mps": 0.094,
+    "slide_frac": 0.055,
+    "cadence": 121.5,
+    "step_m": 0.85,
+    "knee_max": 70.6,
+    "knee_p95": 69.5,
+    "swing_clear_min_m": 0.003
+   }
+  ]
+ },
+ "performance": {
+  "day1-walk_normal_candidate": {
+   "run": "day1-walk_normal_candidate",
+   "all": {
+    "frames": 133038,
+    "fps_avg": 103.5,
+    "ms_p50": 9.71,
+    "ms_p95": 11.19,
+    "ms_p99": 12.0,
+    "ms_max": 21.16,
+    "over_50ms": 0,
+    "over_100ms": 0
+   },
+   "by_beat": {
+    "road": {
+     "frames": 2805,
+     "fps_avg": 93.3,
+     "ms_p50": 10.71,
+     "ms_p95": 12.02,
+     "ms_p99": 12.29,
+     "ms_max": 21.16,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "sext_gate": {
+     "frames": 2332,
+     "fps_avg": 85.3,
+     "ms_p50": 11.76,
+     "ms_p95": 12.65,
+     "ms_p99": 13.01,
+     "ms_max": 16.89,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "gate_open": {
+     "frames": 4601,
+     "fps_avg": 111.5,
+     "ms_p50": 8.9,
+     "ms_p95": 11.66,
+     "ms_p99": 12.5,
+     "ms_max": 13.96,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "reception": {
+     "frames": 8072,
+     "fps_avg": 101.4,
+     "ms_p50": 9.96,
+     "ms_p95": 11.16,
+     "ms_p99": 11.42,
+     "ms_max": 12.27,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "to_cell": {
+     "frames": 11381,
+     "fps_avg": 115.1,
+     "ms_p50": 9.0,
+     "ms_p95": 10.35,
+     "ms_p99": 10.96,
+     "ms_max": 13.07,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "second_bundle": {
+     "frames": 20701,
+     "fps_avg": 115.2,
+     "ms_p50": 8.78,
+     "ms_p95": 10.31,
+     "ms_p99": 11.13,
+     "ms_max": 13.86,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "meal": {
+     "frames": 16365,
+     "fps_avg": 100.6,
+     "ms_p50": 9.95,
+     "ms_p95": 10.85,
+     "ms_p99": 11.3,
+     "ms_max": 13.33,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "free": {
+     "frames": 41001,
+     "fps_avg": 101.7,
+     "ms_p50": 9.85,
+     "ms_p95": 10.83,
+     "ms_p99": 11.32,
+     "ms_max": 14.88,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "nones": {
+     "frames": 17716,
+     "fps_avg": 98.4,
+     "ms_p50": 10.17,
+     "ms_p95": 11.18,
+     "ms_p99": 11.5,
+     "ms_max": 13.16,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "after_nones": {
+     "frames": 7798,
+     "fps_avg": 97.5,
+     "ms_p50": 10.29,
+     "ms_p95": 11.63,
+     "ms_p99": 12.11,
+     "ms_max": 13.15,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "end": {
+     "frames": 266,
+     "fps_avg": 88.2,
+     "ms_p50": 11.32,
+     "ms_p95": 12.0,
+     "ms_p99": 12.2,
+     "ms_max": 17.25,
+     "over_50ms": 0,
+     "over_100ms": 0
+    }
+   },
+   "pipeline_compilations_at_first_measured_frame": 102,
+   "pipeline_compilations_during_measurement": 19,
+   "spikes_over_50ms": [],
+   "rss_mib": {
+    "start": 478.0,
+    "end": 510.2,
+    "max": 510.2
+   },
+   "counters_start_end": {
+    "objects": [
+     "8522.0",
+     "8551.0"
+    ],
+    "resources": [
+     "1250.0",
+     "1250.0"
+    ],
+    "nodes": [
+     "3078.0",
+     "3081.0"
+    ],
+    "orphans": [
+     "0.0",
+     "0.0"
+    ],
+    "vram_mib": [
+     "544.88",
+     "558.58"
+    ],
+    "texture_mib": [
+     "424.38",
+     "426.16"
+    ],
+    "buffer_mib": [
+     "57.9",
+     "59.9"
+    ]
+   }
+  },
+  "day1-walk_normal_cold": {
+   "run": "day1-walk_normal_cold",
+   "all": {
+    "frames": 149406,
+    "fps_avg": 116.2,
+    "ms_p50": 9.07,
+    "ms_p95": 11.17,
+    "ms_p99": 12.3,
+    "ms_max": 35.11,
+    "over_50ms": 0,
+    "over_100ms": 0
+   },
+   "by_beat": {
+    "road": {
+     "frames": 2811,
+     "fps_avg": 93.4,
+     "ms_p50": 10.73,
+     "ms_p95": 12.04,
+     "ms_p99": 12.32,
+     "ms_max": 12.9,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "sext_gate": {
+     "frames": 2324,
+     "fps_avg": 85.0,
+     "ms_p50": 11.81,
+     "ms_p95": 12.69,
+     "ms_p99": 13.01,
+     "ms_max": 16.52,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "gate_open": {
+     "frames": 4566,
+     "fps_avg": 111.1,
+     "ms_p50": 8.9,
+     "ms_p95": 11.72,
+     "ms_p99": 12.56,
+     "ms_max": 13.9,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "reception": {
+     "frames": 7985,
+     "fps_avg": 100.3,
+     "ms_p50": 10.06,
+     "ms_p95": 11.29,
+     "ms_p99": 11.54,
+     "ms_max": 12.68,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "to_cell": {
+     "frames": 11384,
+     "fps_avg": 115.1,
+     "ms_p50": 8.93,
+     "ms_p95": 10.33,
+     "ms_p99": 10.99,
+     "ms_max": 13.31,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "second_bundle": {
+     "frames": 20731,
+     "fps_avg": 115.3,
+     "ms_p50": 8.73,
+     "ms_p95": 10.29,
+     "ms_p99": 11.1,
+     "ms_max": 12.55,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "meal": {
+     "frames": 16410,
+     "fps_avg": 100.9,
+     "ms_p50": 9.92,
+     "ms_p95": 10.82,
+     "ms_p99": 11.32,
+     "ms_max": 13.42,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "free": {
+     "frames": 46179,
+     "fps_avg": 114.5,
+     "ms_p50": 9.41,
+     "ms_p95": 11.01,
+     "ms_p99": 11.91,
+     "ms_max": 35.09,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "nones": {
+     "frames": 24995,
+     "fps_avg": 138.9,
+     "ms_p50": 7.2,
+     "ms_p95": 11.07,
+     "ms_p99": 12.68,
+     "ms_max": 35.11,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "after_nones": {
+     "frames": 11585,
+     "fps_avg": 144.8,
+     "ms_p50": 7.0,
+     "ms_p95": 10.84,
+     "ms_p99": 12.95,
+     "ms_max": 32.44,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "end": {
+     "frames": 436,
+     "fps_avg": 145.0,
+     "ms_p50": 6.93,
+     "ms_p95": 10.3,
+     "ms_p99": 13.93,
+     "ms_max": 20.28,
+     "over_50ms": 0,
+     "over_100ms": 0
+    }
+   },
+   "pipeline_compilations_at_first_measured_frame": 102,
+   "pipeline_compilations_during_measurement": 19,
+   "spikes_over_50ms": [],
+   "rss_mib": {
+    "start": 562.2,
+    "end": 592.9,
+    "max": 592.9
+   },
+   "counters_start_end": {
+    "objects": [
+     "8522.0",
+     "8552.0"
+    ],
+    "resources": [
+     "1250.0",
+     "1250.0"
+    ],
+    "nodes": [
+     "3078.0",
+     "3081.0"
+    ],
+    "orphans": [
+     "0.0",
+     "0.0"
+    ],
+    "vram_mib": [
+     "552.8",
+     "565.7"
+    ],
+    "texture_mib": [
+     "424.38",
+     "425.36"
+    ],
+    "buffer_mib": [
+     "57.9",
+     "59.9"
+    ]
+   }
+  },
+  "day1-walk_normal_coldgodot": {
+   "run": "day1-walk_normal_coldgodot",
+   "all": {
+    "frames": 164355,
+    "fps_avg": 127.8,
+    "ms_p50": 7.91,
+    "ms_p95": 11.31,
+    "ms_p99": 13.0,
+    "ms_max": 35.99,
+    "over_50ms": 0,
+    "over_100ms": 0
+   },
+   "by_beat": {
+    "road": {
+     "frames": 2787,
+     "fps_avg": 92.6,
+     "ms_p50": 10.81,
+     "ms_p95": 12.04,
+     "ms_p99": 12.32,
+     "ms_max": 12.97,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "sext_gate": {
+     "frames": 2320,
+     "fps_avg": 84.8,
+     "ms_p50": 11.84,
+     "ms_p95": 12.63,
+     "ms_p99": 13.07,
+     "ms_max": 15.0,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "gate_open": {
+     "frames": 4521,
+     "fps_avg": 110.2,
+     "ms_p50": 8.94,
+     "ms_p95": 11.79,
+     "ms_p99": 12.65,
+     "ms_max": 13.88,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "reception": {
+     "frames": 8012,
+     "fps_avg": 100.6,
+     "ms_p50": 10.01,
+     "ms_p95": 11.28,
+     "ms_p99": 11.63,
+     "ms_max": 12.92,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "to_cell": {
+     "frames": 11543,
+     "fps_avg": 116.7,
+     "ms_p50": 8.59,
+     "ms_p95": 10.39,
+     "ms_p99": 11.16,
+     "ms_max": 12.48,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "second_bundle": {
+     "frames": 21036,
+     "fps_avg": 117.1,
+     "ms_p50": 8.52,
+     "ms_p95": 10.45,
+     "ms_p99": 11.34,
+     "ms_max": 15.36,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "meal": {
+     "frames": 18336,
+     "fps_avg": 112.7,
+     "ms_p50": 9.39,
+     "ms_p95": 11.14,
+     "ms_p99": 12.14,
+     "ms_max": 35.21,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "free": {
+     "frames": 57715,
+     "fps_avg": 143.1,
+     "ms_p50": 7.04,
+     "ms_p95": 11.0,
+     "ms_p99": 14.1,
+     "ms_max": 35.99,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "nones": {
+     "frames": 26066,
+     "fps_avg": 144.8,
+     "ms_p50": 6.97,
+     "ms_p95": 10.98,
+     "ms_p99": 13.67,
+     "ms_max": 35.13,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "after_nones": {
+     "frames": 11584,
+     "fps_avg": 144.8,
+     "ms_p50": 7.02,
+     "ms_p95": 10.74,
+     "ms_p99": 13.35,
+     "ms_max": 33.4,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "end": {
+     "frames": 435,
+     "fps_avg": 144.5,
+     "ms_p50": 6.88,
+     "ms_p95": 10.05,
+     "ms_p99": 13.25,
+     "ms_max": 25.93,
+     "over_50ms": 0,
+     "over_100ms": 0
+    }
+   },
+   "pipeline_compilations_at_first_measured_frame": 102,
+   "pipeline_compilations_during_measurement": 19,
+   "spikes_over_50ms": [],
+   "rss_mib": {
+    "start": 575.4,
+    "end": 605.4,
+    "max": 605.4
+   },
+   "counters_start_end": {
+    "objects": [
+     "8522.0",
+     "8552.0"
+    ],
+    "resources": [
+     "1250.0",
+     "1250.0"
+    ],
+    "nodes": [
+     "3078.0",
+     "3081.0"
+    ],
+    "orphans": [
+     "0.0",
+     "0.0"
+    ],
+    "vram_mib": [
+     "552.8",
+     "565.7"
+    ],
+    "texture_mib": [
+     "424.38",
+     "425.36"
+    ],
+    "buffer_mib": [
+     "57.9",
+     "59.9"
+    ]
+   }
+  },
+  "day1-walk_normal_warm": {
+   "run": "day1-walk_normal_warm",
+   "all": {
+    "frames": 146713,
+    "fps_avg": 114.0,
+    "ms_p50": 9.18,
+    "ms_p95": 11.46,
+    "ms_p99": 12.83,
+    "ms_max": 1081.34,
+    "over_50ms": 5,
+    "over_100ms": 1
+   },
+   "by_beat": {
+    "road": {
+     "frames": 2806,
+     "fps_avg": 93.3,
+     "ms_p50": 10.74,
+     "ms_p95": 12.04,
+     "ms_p99": 12.28,
+     "ms_max": 20.38,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "sext_gate": {
+     "frames": 2335,
+     "fps_avg": 85.4,
+     "ms_p50": 11.74,
+     "ms_p95": 12.64,
+     "ms_p99": 12.92,
+     "ms_max": 15.17,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "gate_open": {
+     "frames": 4550,
+     "fps_avg": 110.9,
+     "ms_p50": 8.94,
+     "ms_p95": 11.71,
+     "ms_p99": 12.6,
+     "ms_max": 14.31,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "reception": {
+     "frames": 8137,
+     "fps_avg": 102.2,
+     "ms_p50": 9.88,
+     "ms_p95": 11.13,
+     "ms_p99": 11.38,
+     "ms_max": 12.71,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "to_cell": {
+     "frames": 11359,
+     "fps_avg": 114.9,
+     "ms_p50": 8.96,
+     "ms_p95": 10.82,
+     "ms_p99": 12.12,
+     "ms_max": 39.8,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "second_bundle": {
+     "frames": 20516,
+     "fps_avg": 114.2,
+     "ms_p50": 8.79,
+     "ms_p95": 11.17,
+     "ms_p99": 12.67,
+     "ms_max": 34.06,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "meal": {
+     "frames": 21847,
+     "fps_avg": 134.2,
+     "ms_p50": 7.33,
+     "ms_p95": 11.17,
+     "ms_p99": 14.28,
+     "ms_max": 67.23,
+     "over_50ms": 3,
+     "over_100ms": 0
+    },
+    "free": {
+     "frames": 48869,
+     "fps_avg": 120.9,
+     "ms_p50": 8.79,
+     "ms_p95": 10.92,
+     "ms_p99": 12.9,
+     "ms_max": 1081.34,
+     "over_50ms": 2,
+     "over_100ms": 1
+    },
+    "nones": {
+     "frames": 17431,
+     "fps_avg": 96.8,
+     "ms_p50": 10.33,
+     "ms_p95": 11.46,
+     "ms_p99": 12.76,
+     "ms_max": 23.7,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "after_nones": {
+     "frames": 8427,
+     "fps_avg": 105.3,
+     "ms_p50": 9.93,
+     "ms_p95": 11.82,
+     "ms_p99": 13.36,
+     "ms_max": 26.86,
+     "over_50ms": 0,
+     "over_100ms": 0
+    },
+    "end": {
+     "frames": 436,
+     "fps_avg": 144.8,
+     "ms_p50": 6.88,
+     "ms_p95": 8.39,
+     "ms_p99": 9.6,
+     "ms_max": 19.98,
+     "over_50ms": 0,
+     "over_100ms": 0
+    }
+   },
+   "pipeline_compilations_at_first_measured_frame": 102,
+   "pipeline_compilations_during_measurement": 19,
+   "spikes_over_50ms": [
+    {
+     "t_s": 565.9,
+     "ms": 53.36,
+     "beat": "meal",
+     "pipelines_before": 121,
+     "pipelines_after": 121
+    },
+    {
+     "t_s": 583.1,
+     "ms": 53.753,
+     "beat": "meal",
+     "pipelines_before": 121,
+     "pipelines_after": 121
+    },
+    {
+     "t_s": 588.0,
+     "ms": 67.234,
+     "beat": "meal",
+     "pipelines_before": 121,
+     "pipelines_after": 121
+    },
+    {
+     "t_s": 762.1,
+     "ms": 1081.335,
+     "beat": "free",
+     "pipelines_before": 121,
+     "pipelines_after": 121
+    },
+    {
+     "t_s": 894.3,
+     "ms": 57.298,
+     "beat": "free",
+     "pipelines_before": 121,
+     "pipelines_after": 121
+    }
+   ],
+   "rss_mib": {
+    "start": 473.8,
+    "end": 323.0,
+    "max": 498.5
+   },
+   "counters_start_end": {
+    "objects": [
+     "8522.0",
+     "8553.0"
+    ],
+    "resources": [
+     "1250.0",
+     "1250.0"
+    ],
+    "nodes": [
+     "3078.0",
+     "3081.0"
+    ],
+    "orphans": [
+     "0.0",
+     "0.0"
+    ],
+    "vram_mib": [
+     "544.88",
+     "557.78"
+    ],
+    "texture_mib": [
+     "424.38",
+     "425.36"
+    ],
+    "buffer_mib": [
+     "57.9",
+     "59.9"
+    ]
+   }
+  },
+  "day1_cycles_mac": {
+   "run": "day1_cycles_mac",
+   "measured_minutes": 22.41,
+   "measured_loops": 10,
+   "all_measured": {
+    "frames": 147553,
+    "fps_avg": 109.7,
+    "ms_p50": 9.22,
+    "ms_p95": 11.14,
+    "ms_p99": 11.76,
+    "ms_max": 40.85,
+    "over_50ms": 0,
+    "over_100ms": 0
+   },
+   "loops": [
+    {
+     "loop": -1,
+     "kind": "approach",
+     "frames": {
+      "frames": 4695,
+      "fps_avg": 113.6,
+      "ms_p50": 8.77,
+      "ms_p95": 10.71,
+      "ms_p99": 11.57,
+      "ms_max": 13.38,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 41.3,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 489.1,
+     "objects": "8549.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "271.0",
+     "objects_in_frame": "271.0",
+     "figures_visible": "14"
+    },
+    {
+     "loop": 0,
+     "kind": "warmup",
+     "frames": {
+      "frames": 14546,
+      "fps_avg": 108.2,
+      "ms_p50": 9.27,
+      "ms_p95": 11.15,
+      "ms_p99": 11.77,
+      "ms_max": 14.99,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.4,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 491.5,
+     "objects": "8551.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "262.0",
+     "objects_in_frame": "262.0",
+     "figures_visible": "13"
+    },
+    {
+     "loop": 1,
+     "kind": "measured",
+     "frames": {
+      "frames": 14553,
+      "fps_avg": 108.2,
+      "ms_p50": 9.29,
+      "ms_p95": 11.16,
+      "ms_p99": 11.78,
+      "ms_max": 13.34,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.5,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 493.9,
+     "objects": "8552.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "274.0",
+     "objects_in_frame": "274.0",
+     "figures_visible": "13"
+    },
+    {
+     "loop": 2,
+     "kind": "measured",
+     "frames": {
+      "frames": 14559,
+      "fps_avg": 108.2,
+      "ms_p50": 9.29,
+      "ms_p95": 11.16,
+      "ms_p99": 11.73,
+      "ms_max": 13.59,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.5,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 496.6,
+     "objects": "8553.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "258.0",
+     "objects_in_frame": "258.0",
+     "figures_visible": "13"
+    },
+    {
+     "loop": 3,
+     "kind": "measured",
+     "frames": {
+      "frames": 14537,
+      "fps_avg": 108.2,
+      "ms_p50": 9.3,
+      "ms_p95": 11.16,
+      "ms_p99": 11.74,
+      "ms_max": 13.57,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.4,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 499.2,
+     "objects": "8553.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "276.0",
+     "objects_in_frame": "276.0",
+     "figures_visible": "13"
+    },
+    {
+     "loop": 4,
+     "kind": "measured",
+     "frames": {
+      "frames": 14551,
+      "fps_avg": 108.2,
+      "ms_p50": 9.28,
+      "ms_p95": 11.15,
+      "ms_p99": 11.79,
+      "ms_max": 13.54,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.4,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 501.4,
+     "objects": "8552.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "254.0",
+     "objects_in_frame": "254.0",
+     "figures_visible": "13"
+    },
+    {
+     "loop": 5,
+     "kind": "measured",
+     "frames": {
+      "frames": 14562,
+      "fps_avg": 108.3,
+      "ms_p50": 9.29,
+      "ms_p95": 11.15,
+      "ms_p99": 11.73,
+      "ms_max": 14.19,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.5,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 503.2,
+     "objects": "8553.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "276.0",
+     "objects_in_frame": "276.0",
+     "figures_visible": "13"
+    },
+    {
+     "loop": 6,
+     "kind": "measured",
+     "frames": {
+      "frames": 14549,
+      "fps_avg": 108.2,
+      "ms_p50": 9.3,
+      "ms_p95": 11.19,
+      "ms_p99": 11.77,
+      "ms_max": 13.46,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.5,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 505.2,
+     "objects": "8552.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "252.0",
+     "objects_in_frame": "252.0",
+     "figures_visible": "13"
+    },
+    {
+     "loop": 7,
+     "kind": "measured",
+     "frames": {
+      "frames": 14559,
+      "fps_avg": 108.2,
+      "ms_p50": 9.3,
+      "ms_p95": 11.14,
+      "ms_p99": 11.71,
+      "ms_max": 14.78,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.5,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 506.1,
+     "objects": "8552.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "273.0",
+     "objects_in_frame": "273.0",
+     "figures_visible": "13"
+    },
+    {
+     "loop": 8,
+     "kind": "measured",
+     "frames": {
+      "frames": 14565,
+      "fps_avg": 108.3,
+      "ms_p50": 9.28,
+      "ms_p95": 11.15,
+      "ms_p99": 11.75,
+      "ms_max": 14.19,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.5,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 507.9,
+     "objects": "8552.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "255.0",
+     "objects_in_frame": "255.0",
+     "figures_visible": "13"
+    },
+    {
+     "loop": 9,
+     "kind": "measured",
+     "frames": {
+      "frames": 14553,
+      "fps_avg": 108.2,
+      "ms_p50": 9.29,
+      "ms_p95": 11.16,
+      "ms_p99": 11.74,
+      "ms_max": 13.92,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.5,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 511.9,
+     "objects": "8553.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "276.0",
+     "objects_in_frame": "276.0",
+     "figures_visible": "13"
+    },
+    {
+     "loop": 10,
+     "kind": "measured",
+     "frames": {
+      "frames": 16565,
+      "fps_avg": 123.2,
+      "ms_p50": 8.13,
+      "ms_p95": 10.99,
+      "ms_p99": 11.95,
+      "ms_max": 40.85,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.4,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 514.5,
+     "objects": "8552.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "565.7",
+     "draw_calls": "516.0",
+     "objects_in_frame": "556.0",
+     "figures_visible": "13"
+    }
+   ],
+   "growth_warmup_to_last": {
+    "rss_pct": 4.68,
+    "rss_measured_loop_ends_mib": [
+     493.9,
+     496.6,
+     499.2,
+     501.4,
+     503.2,
+     505.2,
+     506.1,
+     507.9,
+     511.9,
+     514.5
+    ],
+    "rss_max_over_warm_pct": 4.68,
+    "objects_delta": 1.0,
+    "resources_delta": 0.0,
+    "nodes_delta": 0.0,
+    "vram_mib_delta": 7.92
+   },
+   "leg_timeouts": [],
+   "spikes_over_50ms": []
+  },
+  "day1_soak_mac": {
+   "run": "day1_soak_mac",
+   "measured_minutes": 22.4,
+   "measured_loops": 10,
+   "all_measured": {
+    "frames": 194477,
+    "fps_avg": 144.7,
+    "ms_p50": 6.94,
+    "ms_p95": 10.9,
+    "ms_p99": 13.34,
+    "ms_max": 38.27,
+    "over_50ms": 0,
+    "over_100ms": 0
+   },
+   "loops": [
+    {
+     "loop": -1,
+     "kind": "approach",
+     "frames": {
+      "frames": 5988,
+      "fps_avg": 144.7,
+      "ms_p50": 6.96,
+      "ms_p95": 10.75,
+      "ms_p99": 13.55,
+      "ms_max": 30.76,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 41.4,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 489.6,
+     "objects": "8550.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "614.0",
+     "objects_in_frame": "1019.0",
+     "figures_visible": "14"
+    },
+    {
+     "loop": 0,
+     "kind": "warmup",
+     "frames": {
+      "frames": 19451,
+      "fps_avg": 144.8,
+      "ms_p50": 6.95,
+      "ms_p95": 10.66,
+      "ms_p99": 13.16,
+      "ms_max": 35.03,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.4,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 492.4,
+     "objects": "8553.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "515.0",
+     "objects_in_frame": "555.0",
+     "figures_visible": "13"
+    },
+    {
+     "loop": 1,
+     "kind": "measured",
+     "frames": {
+      "frames": 19457,
+      "fps_avg": 144.7,
+      "ms_p50": 6.94,
+      "ms_p95": 10.63,
+      "ms_p99": 12.84,
+      "ms_max": 32.15,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.4,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 495.4,
+     "objects": "8554.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "511.0",
+     "objects_in_frame": "551.0",
+     "figures_visible": "13"
+    },
+    {
+     "loop": 2,
+     "kind": "measured",
+     "frames": {
+      "frames": 19451,
+      "fps_avg": 144.7,
+      "ms_p50": 6.96,
+      "ms_p95": 10.86,
+      "ms_p99": 13.28,
+      "ms_max": 36.2,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.4,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 499.3,
+     "objects": "8553.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "517.0",
+     "objects_in_frame": "557.0",
+     "figures_visible": "13"
+    },
+    {
+     "loop": 3,
+     "kind": "measured",
+     "frames": {
+      "frames": 19446,
+      "fps_avg": 144.7,
+      "ms_p50": 6.94,
+      "ms_p95": 10.95,
+      "ms_p99": 13.27,
+      "ms_max": 34.21,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.4,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 503.0,
+     "objects": "8553.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "517.0",
+     "objects_in_frame": "557.0",
+     "figures_visible": "13"
+    },
+    {
+     "loop": 4,
+     "kind": "measured",
+     "frames": {
+      "frames": 19462,
+      "fps_avg": 144.7,
+      "ms_p50": 6.94,
+      "ms_p95": 11.03,
+      "ms_p99": 13.54,
+      "ms_max": 38.09,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.5,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 505.2,
+     "objects": "8553.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "516.0",
+     "objects_in_frame": "556.0",
+     "figures_visible": "13"
+    },
+    {
+     "loop": 5,
+     "kind": "measured",
+     "frames": {
+      "frames": 19438,
+      "fps_avg": 144.7,
+      "ms_p50": 6.95,
+      "ms_p95": 11.04,
+      "ms_p99": 13.41,
+      "ms_max": 38.27,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.3,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 506.4,
+     "objects": "8553.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "517.0",
+     "objects_in_frame": "557.0",
+     "figures_visible": "13"
+    },
+    {
+     "loop": 6,
+     "kind": "measured",
+     "frames": {
+      "frames": 19438,
+      "fps_avg": 144.7,
+      "ms_p50": 6.93,
+      "ms_p95": 10.95,
+      "ms_p99": 13.31,
+      "ms_max": 33.68,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.3,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 508.5,
+     "objects": "8553.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "508.0",
+     "objects_in_frame": "548.0",
+     "figures_visible": "13"
+    },
+    {
+     "loop": 7,
+     "kind": "measured",
+     "frames": {
+      "frames": 19449,
+      "fps_avg": 144.7,
+      "ms_p50": 6.93,
+      "ms_p95": 10.95,
+      "ms_p99": 13.47,
+      "ms_max": 35.16,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.4,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 510.7,
+     "objects": "8553.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "515.0",
+     "objects_in_frame": "555.0",
+     "figures_visible": "13"
+    },
+    {
+     "loop": 8,
+     "kind": "measured",
+     "frames": {
+      "frames": 19446,
+      "fps_avg": 144.7,
+      "ms_p50": 6.94,
+      "ms_p95": 10.91,
+      "ms_p99": 13.23,
+      "ms_max": 36.84,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.4,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 513.2,
+     "objects": "8553.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "504.0",
+     "objects_in_frame": "544.0",
+     "figures_visible": "13"
+    },
+    {
+     "loop": 9,
+     "kind": "measured",
+     "frames": {
+      "frames": 19442,
+      "fps_avg": 144.8,
+      "ms_p50": 6.96,
+      "ms_p95": 10.91,
+      "ms_p99": 13.25,
+      "ms_max": 37.84,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.3,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 515.8,
+     "objects": "8553.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "513.0",
+     "objects_in_frame": "553.0",
+     "figures_visible": "13"
+    },
+    {
+     "loop": 10,
+     "kind": "measured",
+     "frames": {
+      "frames": 19448,
+      "fps_avg": 144.7,
+      "ms_p50": 6.93,
+      "ms_p95": 10.79,
+      "ms_p99": 13.71,
+      "ms_max": 37.83,
+      "over_50ms": 0,
+      "over_100ms": 0
+     },
+     "seconds": 134.4,
+     "pipeline_compilations": 0,
+     "rss_mib_at_end": 521.6,
+     "objects": "8553.0",
+     "resources": "1250.0",
+     "nodes": "3082.0",
+     "orphans": "0.0",
+     "vram_mib": "557.78",
+     "draw_calls": "511.0",
+     "objects_in_frame": "551.0",
+     "figures_visible": "13"
+    }
+   ],
+   "growth_warmup_to_last": {
+    "rss_pct": 5.93,
+    "rss_measured_loop_ends_mib": [
+     495.4,
+     499.3,
+     503.0,
+     505.2,
+     506.4,
+     508.5,
+     510.7,
+     513.2,
+     515.8,
+     521.6
+    ],
+    "rss_max_over_warm_pct": 5.93,
+    "objects_delta": 0.0,
+    "resources_delta": 0.0,
+    "nodes_delta": 0.0,
+    "vram_mib_delta": 0.0
+   },
+   "leg_timeouts": [],
+   "spikes_over_50ms": []
+  }
+ },
+ "literary_hashes": {
+  "files": {
+   "abbey_hierarchy.json": "58afe7ff26572dc359f287f411761a4e97c5015a7da6d97cce97788c084e396f",
+   "access_graph.json": "ff0cddbc44b4f5bccb78061d46bf94bcba290bdd891bc92886656d5b84cc0b32",
+   "claims.jsonl": "f2ccb46a8418ce3bc6fd55ffc39349af2876105f28e9826c76dcc635b07cd89e",
+   "consolidation_summary.json": "744904b6be2a126c1b12e9e38e5ccd264c7495f31edd8573d5c6cba9f5bec469",
+   "facts.json": "8249626d15542d6c2de8619435916e352404252e5fa3ac54ac640409ffafd292",
+   "movement_graph.json": "61c860cc1411d8aeef58809952bfe975247107f3f7142036443edce68a95d772",
+   "reconstruction_constraints.json": "e8fc21619ad82b510f7cd74ddf14cbf203b6ddf1f1ed2b6cdb8d9c975ba2ca9a",
+   "spatial_graph.json": "e90476edfa30de19bd726b1c125de1dab425a73643dd80cc5b381bfb0dd9d6c2",
+   "visibility_graph.json": "b350663c4b8686cd319b57e3c311da7333365304607ec9bb1c057bdac5f1b5c6"
+  },
+  "matches_pm_review_record": true
+ },
+ "head": "60ec496"
+}

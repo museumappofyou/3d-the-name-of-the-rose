@@ -1,0 +1,1 @@
+== day1_soak (1920x1080) --scenario=day1-cycles --vsync=off --cycles=1 --soak-min=22 --save-dir=user://day1a_runs/saves --telemetry-dir=user://day1a_runs/telemetry  [GPU utilization before launch: 5% after 0s settle]

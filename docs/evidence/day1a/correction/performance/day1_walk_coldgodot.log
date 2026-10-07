@@ -1,0 +1,113 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+Metal 4.0 - Forward+ - Using Device #0: Apple - Apple M1 Pro (Apple7)
+
+[day1a] beat road t=0.0 h=11.5
+[walk] t=19 beat=road carry= seated= pos=(-118.6,-0.0,20.4) path=5 want= prompt=
+[day1a] beat sext_gate t=33.1 h=11.5
+[walk] t=39 beat=sext_gate carry= seated= pos=(-110.3,-0.0,-8.6) path=1 want= prompt=
+[day1a] beat gate_open t=60.4 h=11.85
+[walk] t=61 beat=gate_open carry= seated= pos=(-109.8,-0.0,-8.6) path=3 want= prompt=
+[walk] t=78 beat=gate_open carry= seated= pos=(-99.4,-0.1,-8.5) path=0 want= prompt=
+[walk] t=94 beat=gate_open carry= seated= pos=(-99.4,-0.1,-8.5) path=0 want= prompt=
+[day1a] beat reception t=101.4 h=11.85
+[walk] t=110 beat=reception carry=bedding seated= pos=(-99.8,-0.1,-8.2) path=0 want= prompt=
+[walk] t=127 beat=reception carry=bedding seated= pos=(-99.8,-0.1,-8.2) path=0 want= prompt=
+[walk] t=144 beat=reception carry=bedding seated= pos=(-99.8,-0.1,-8.2) path=0 want= prompt=
+[walk] t=163 beat=reception carry=bedding seated= pos=(-99.8,-0.1,-8.2) path=0 want= prompt=
+[day1a] beat to_cell t=181.1 h=12.25
+[walk] t=182 beat=to_cell carry=bedding seated= pos=(-98.8,-0.2,-8.2) path=23 want= prompt=
+[walk] t=198 beat=to_cell carry=bedding seated= pos=(-79.4,-0.2,-8.2) path=21 want= prompt=
+[walk] t=213 beat=to_cell carry=bedding seated= pos=(-61.4,-0.1,-8.0) path=19 want= prompt=
+[walk] t=228 beat=to_cell carry=bedding seated= pos=(-40.6,-0.1,-7.8) path=18 want= prompt=
+[walk] t=243 beat=to_cell carry=bedding seated= pos=(-28.4,-0.2,5.4) path=15 want= prompt=
+[walk] t=257 beat=to_cell carry=bedding seated= pos=(-28.3,-0.2,22.9) path=10 want= prompt=
+[walk] t=274 beat=to_cell carry=bedding seated= pos=(-20.0,5.8,15.9) path=5 want=place_bedding prompt=
+[day1a] autosave cell ok
+[day1a] beat second_bundle t=280.0 h=12.25
+[walk] t=290 beat=second_bundle carry= seated= pos=(-20.3,2.0,21.2) path=18 want= prompt=
+[walk] t=305 beat=second_bundle carry= seated= pos=(-29.3,-0.2,12.6) path=11 want= prompt=
+[walk] t=319 beat=second_bundle carry= seated= pos=(-36.0,-0.1,-5.8) path=7 want= prompt=
+[walk] t=335 beat=second_bundle carry= seated= pos=(-60.6,-0.1,-8.0) path=5 want= prompt=
+[walk] t=351 beat=second_bundle carry= seated= pos=(-85.7,-0.2,-8.3) path=3 want= prompt=
+[walk] t=367 beat=second_bundle carry=chest seated= pos=(-83.5,-0.2,-8.2) path=22 want= prompt=
+[walk] t=383 beat=second_bundle carry=chest seated= pos=(-65.4,-0.1,-8.0) path=21 want= prompt=
+[walk] t=398 beat=second_bundle carry=chest seated= pos=(-47.3,-0.1,-7.9) path=19 want= prompt=
+[walk] t=413 beat=second_bundle carry=chest seated= pos=(-31.4,-0.2,-1.6) path=18 want= prompt=
+[walk] t=427 beat=second_bundle carry=chest seated= pos=(-26.8,-0.2,13.4) path=13 want= prompt=
+[walk] t=441 beat=second_bundle carry=chest seated= pos=(-23.3,-0.2,25.0) path=8 want= prompt=
+[walk] t=459 beat=second_bundle carry=chest seated= pos=(-17.0,6.2,16.2) path=1 want= prompt=
+[day1a] beat meal t=459.6 h=12.25
+[walk] t=477 beat=meal carry= seated= pos=(-16.1,6.2,16.8) path=1 want= prompt=
+[walk] t=496 beat=meal carry= seated= pos=(-16.1,6.2,16.8) path=1 want= prompt=
+[walk] t=514 beat=meal carry= seated= pos=(-16.1,6.2,16.8) path=1 want= prompt=
+[walk] t=532 beat=meal carry= seated=stool pos=(-16.3,6.2,16.2) path=3 want= prompt=eat_olives
+[walk] t=544 beat=meal carry= seated= pos=(-16.7,6.2,16.5) path=2 want= prompt=sit_stool
+[walk] t=557 beat=meal carry= seated= pos=(-15.1,6.2,16.7) path=1 want= prompt=
+[walk] t=569 beat=meal carry= seated= pos=(-15.1,6.2,16.7) path=1 want= prompt=
+[walk] t=583 beat=meal carry= seated= pos=(-15.1,6.2,16.7) path=1 want= prompt=
+[walk] t=601 beat=meal carry= seated= pos=(-15.1,6.2,16.7) path=1 want= prompt=
+[walk] t=618 beat=meal carry= seated= pos=(-15.1,6.2,16.7) path=1 want= prompt=
+[day1a] autosave meal ok
+[day1a] beat free t=622.3 h=13.0
+[walk] t=635 beat=free carry= seated= pos=(-18.7,-0.2,24.8) path=7 want= prompt=
+[walk] t=649 beat=free carry= seated= pos=(-7.7,0.3,17.8) path=1 want= prompt=talk_fulco2
+[walk] t=661 beat=free carry= seated= pos=(-7.0,0.3,13.4) path=1 want= prompt=
+[walk] t=674 beat=free carry= seated= pos=(-5.1,-0.3,13.9) path=1 want= prompt=
+[walk] t=686 beat=free carry= seated= pos=(2.1,-0.2,12.9) path=3 want= prompt=
+[walk] t=698 beat=free carry=bucket seated= pos=(0.5,-0.2,12.6) path=9 want= prompt=
+[walk] t=711 beat=free carry=bucket seated= pos=(-8.2,0.3,15.9) path=7 want= prompt=
+[walk] t=723 beat=free carry=bucket seated= pos=(-12.3,-0.2,21.5) path=4 want= prompt=
+[walk] t=736 beat=free carry= seated= pos=(-19.7,-0.2,25.0) path=8 want= prompt=
+[walk] t=748 beat=free carry= seated= pos=(-9.2,0.3,19.3) path=3 want= prompt=
+[walk] t=761 beat=free carry= seated= pos=(-7.0,0.3,13.4) path=1 want= prompt=
+[walk] t=773 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=786 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=798 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=810 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=823 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=835 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=848 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=860 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=873 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=885 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=897 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=910 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=922 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=935 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=947 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=960 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=972 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=984 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=997 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=1009 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=1022 beat=free carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[day1a] beat nones t=1025.6 h=14.4
+[walk] t=1034 beat=nones carry= seated= pos=(-5.2,-0.3,13.9) path=1 want= prompt=
+[walk] t=1047 beat=nones carry= seated= pos=(2.8,-0.2,13.1) path=11 want= prompt=
+[walk] t=1059 beat=nones carry= seated= pos=(10.6,0.3,6.9) path=8 want= prompt=
+[walk] t=1071 beat=nones carry= seated= pos=(24.0,0.3,5.1) path=5 want= prompt=
+[walk] t=1084 beat=nones carry= seated= pos=(24.6,0.4,-2.5) path=1 want= prompt=
+[walk] t=1096 beat=nones carry= seated= pos=(24.6,0.4,-2.5) path=1 want= prompt=
+[walk] t=1109 beat=nones carry= seated= pos=(24.6,0.4,-2.5) path=1 want= prompt=
+[walk] t=1121 beat=nones carry= seated= pos=(24.6,0.4,-2.5) path=1 want= prompt=
+[walk] t=1134 beat=nones carry= seated= pos=(24.6,0.4,-2.5) path=1 want= prompt=
+[walk] t=1146 beat=nones carry= seated= pos=(24.6,0.4,-2.5) path=1 want= prompt=
+[walk] t=1159 beat=nones carry= seated= pos=(24.6,0.4,-2.5) path=1 want= prompt=
+[walk] t=1171 beat=nones carry= seated= pos=(24.6,0.4,-2.5) path=1 want= prompt=
+[walk] t=1183 beat=nones carry= seated= pos=(24.6,0.4,-2.5) path=1 want= prompt=
+[walk] t=1196 beat=nones carry= seated= pos=(24.6,0.4,-2.5) path=1 want= prompt=
+[day1a] beat after_nones t=1205.6 h=14.75
+[walk] t=1208 beat=after_nones carry= seated= pos=(26.4,0.4,-3.2) path=10 want= prompt=
+[walk] t=1221 beat=after_nones carry= seated= pos=(17.1,0.3,5.3) path=6 want= prompt=
+[walk] t=1233 beat=after_nones carry=bucket seated= pos=(5.2,-0.3,13.4) path=10 want= prompt=
+[walk] t=1246 beat=after_nones carry=bucket seated= pos=(-6.1,0.0,13.3) path=8 want= prompt=
+[walk] t=1258 beat=after_nones carry=bucket seated= pos=(-11.6,0.1,19.3) path=5 want= prompt=
+[walk] t=1270 beat=after_nones carry=bucket seated= pos=(-17.6,-0.2,24.7) path=1 want= prompt=
+[walk] t=1283 beat=after_nones carry= seated= pos=(-12.3,-0.2,21.0) path=8 want= prompt=
+[day1a] beat end t=1285.6 h=15.03
+[day1a] autosave end ok
+[day1a] walk normal ended=true t=1288.6
+WARNING: 26 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+ERROR: 12 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:822)

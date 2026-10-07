@@ -1,0 +1,615 @@
+{
+ "beat": "end",
+ "director_t": 1285.6,
+ "ended": true,
+ "events": [
+  {
+   "at": [
+    -14.7840871810913,
+    6.2003321647644,
+    17.143238067627
+   ],
+   "beat": "meal",
+   "event": "stuck",
+   "t": 520.6,
+   "target": [
+    -14.1999998092651,
+    17.3999996185303
+   ]
+  },
+  {
+   "at": [
+    -16.6682605743408,
+    6.2003321647644,
+    16.5366039276123
+   ],
+   "beat": "meal",
+   "event": "stuck",
+   "t": 546.5,
+   "target": [
+    -16.3199996948242,
+    16.2000007629395
+   ]
+  },
+  {
+   "at": [
+    -16.6682605743408,
+    6.2003321647644,
+    16.5366039276123
+   ],
+   "beat": "meal",
+   "event": "stuck",
+   "t": 551.7,
+   "target": [
+    -16.3199996948242,
+    16.2000007629395
+   ]
+  },
+  {
+   "at": [
+    -15.2006673812866,
+    6.21000003814697,
+    16.4536209106445
+   ],
+   "beat": "meal",
+   "event": "stuck",
+   "t": 556.0,
+   "target": [
+    -14.6000003814697,
+    16.2999992370605
+   ]
+  },
+  {
+   "at": [
+    -9.21965408325195,
+    0.310547024011612,
+    19.2907276153564
+   ],
+   "beat": "free",
+   "event": "stuck",
+   "t": 645.9,
+   "target": [
+    -8.60000038146973,
+    19.2700004577637
+   ]
+  },
+  {
+   "at": [
+    -7.7352876663208,
+    0.310547024011612,
+    17.7858695983887
+   ],
+   "beat": "free",
+   "event": "stuck",
+   "t": 650.4,
+   "target": [
+    -7.25,
+    17.3999996185303
+   ]
+  },
+  {
+   "at": [
+    -7.98124313354492,
+    0.310332745313644,
+    19.309232711792
+   ],
+   "beat": "free",
+   "event": "stuck",
+   "t": 716.7,
+   "target": [
+    -8.60000038146973,
+    19.2700004577637
+   ]
+  },
+  {
+   "at": [
+    -19.7015190124512,
+    -0.196079283952713,
+    24.9566345214844
+   ],
+   "beat": "free",
+   "event": "stuck",
+   "t": 735.8,
+   "target": [
+    -20.3199996948242,
+    25.0
+   ]
+  },
+  {
+   "at": [
+    -9.21999931335449,
+    0.310401856899261,
+    19.268871307373
+   ],
+   "beat": "free",
+   "event": "stuck",
+   "t": 748.9,
+   "target": [
+    -8.60000038146973,
+    19.2700004577637
+   ]
+  },
+  {
+   "at": [
+    -19.7075386047363,
+    -0.196194499731064,
+    24.9036083221436
+   ],
+   "beat": "after_nones",
+   "event": "stuck",
+   "t": 1275.7,
+   "target": [
+    -20.3199996948242,
+    25.0
+   ]
+  }
+ ],
+ "frames": {
+  "after_nones": {
+   "fps_avg": 105.3,
+   "frames": 8427,
+   "ms_max": 26.86,
+   "ms_p50": 9.93,
+   "ms_p95": 11.82,
+   "ms_p99": 13.36,
+   "over_100ms": 0,
+   "over_50ms": 0
+  },
+  "all": {
+   "fps_avg": 114.0,
+   "frames": 146713,
+   "ms_max": 1081.33,
+   "ms_p50": 9.18,
+   "ms_p95": 11.46,
+   "ms_p99": 12.83,
+   "over_100ms": 1,
+   "over_50ms": 5
+  },
+  "end": {
+   "fps_avg": 144.8,
+   "frames": 436,
+   "ms_max": 19.98,
+   "ms_p50": 6.88,
+   "ms_p95": 8.39,
+   "ms_p99": 9.6,
+   "over_100ms": 0,
+   "over_50ms": 0
+  },
+  "free": {
+   "fps_avg": 120.9,
+   "frames": 48869,
+   "ms_max": 1081.33,
+   "ms_p50": 8.78,
+   "ms_p95": 10.92,
+   "ms_p99": 12.9,
+   "over_100ms": 1,
+   "over_50ms": 2
+  },
+  "gate_open": {
+   "fps_avg": 110.9,
+   "frames": 4550,
+   "ms_max": 14.31,
+   "ms_p50": 8.94,
+   "ms_p95": 11.71,
+   "ms_p99": 12.6,
+   "over_100ms": 0,
+   "over_50ms": 0
+  },
+  "meal": {
+   "fps_avg": 134.2,
+   "frames": 21847,
+   "ms_max": 67.23,
+   "ms_p50": 7.34,
+   "ms_p95": 11.17,
+   "ms_p99": 14.28,
+   "over_100ms": 0,
+   "over_50ms": 3
+  },
+  "nones": {
+   "fps_avg": 96.8,
+   "frames": 17431,
+   "ms_max": 23.7,
+   "ms_p50": 10.33,
+   "ms_p95": 11.46,
+   "ms_p99": 12.76,
+   "over_100ms": 0,
+   "over_50ms": 0
+  },
+  "reception": {
+   "fps_avg": 102.2,
+   "frames": 8137,
+   "ms_max": 12.71,
+   "ms_p50": 9.88,
+   "ms_p95": 11.14,
+   "ms_p99": 11.38,
+   "over_100ms": 0,
+   "over_50ms": 0
+  },
+  "road": {
+   "fps_avg": 93.3,
+   "frames": 2806,
+   "ms_max": 20.38,
+   "ms_p50": 10.74,
+   "ms_p95": 12.04,
+   "ms_p99": 12.28,
+   "over_100ms": 0,
+   "over_50ms": 0
+  },
+  "second_bundle": {
+   "fps_avg": 114.2,
+   "frames": 20516,
+   "ms_max": 34.06,
+   "ms_p50": 8.78,
+   "ms_p95": 11.17,
+   "ms_p99": 12.67,
+   "over_100ms": 0,
+   "over_50ms": 0
+  },
+  "sext_gate": {
+   "fps_avg": 85.4,
+   "frames": 2335,
+   "ms_max": 15.17,
+   "ms_p50": 11.74,
+   "ms_p95": 12.64,
+   "ms_p99": 12.92,
+   "over_100ms": 0,
+   "over_50ms": 0
+  },
+  "to_cell": {
+   "fps_avg": 114.9,
+   "frames": 11359,
+   "ms_max": 39.8,
+   "ms_p50": 8.96,
+   "ms_p95": 10.82,
+   "ms_p99": 12.12,
+   "over_100ms": 0,
+   "over_50ms": 0
+  }
+ },
+ "interaction_misses": [
+  {
+   "beat": "meal",
+   "id": "stand",
+   "prompt": "eat_olives",
+   "t": 543.1
+  }
+ ],
+ "label": "warm",
+ "memory": {
+  "objects": 8553.0,
+  "static": 0.0,
+  "vram": 584876032.0
+ },
+ "monitor_csv": "day1-walk_normal_warm_mon.csv",
+ "observations": [
+  "pines",
+  "aed_windows",
+  "porter_scar",
+  "mule_shoe",
+  "garden"
+ ],
+ "people_named": [
+  "william",
+  "fazio",
+  "cellarer",
+  "tebaldo",
+  "nuto",
+  "fulco"
+ ],
+ "pipeline_compilations_total": 121.0,
+ "real_s": 1288.6,
+ "scenario": "day1-walk",
+ "spikes_over_50ms": [
+  {
+   "beat": "meal",
+   "context": "meal",
+   "counters": [
+    8551.0,
+    1250.0,
+    3082.0,
+    0.0,
+    0.0,
+    565.56,
+    425.22,
+    59.9,
+    932.0,
+    1130341.0,
+    651.0,
+    2.0,
+    28.0,
+    46.0,
+    0.0,
+    45.0,
+    3,
+    144.0
+   ],
+   "director_events_within_1_5s": [],
+   "director_t": 568.83,
+   "epoch_ms": 1791358860459,
+   "ms": 53.36,
+   "pipeline_compilations_since_last_frame": 0,
+   "player": [
+    -15.1,
+    6.2,
+    16.7
+   ]
+  },
+  {
+   "beat": "meal",
+   "context": "meal",
+   "counters": [
+    8550.0,
+    1250.0,
+    3082.0,
+    0.0,
+    0.0,
+    565.56,
+    425.22,
+    59.9,
+    932.0,
+    1130341.0,
+    651.0,
+    2.0,
+    28.0,
+    46.0,
+    0.0,
+    45.0,
+    3,
+    145.0
+   ],
+   "director_events_within_1_5s": [],
+   "director_t": 586.1,
+   "epoch_ms": 1791358877692,
+   "ms": 53.75,
+   "pipeline_compilations_since_last_frame": 0,
+   "player": [
+    -15.1,
+    6.2,
+    16.7
+   ]
+  },
+  {
+   "beat": "meal",
+   "context": "meal",
+   "counters": [
+    8550.0,
+    1250.0,
+    3082.0,
+    0.0,
+    0.0,
+    565.56,
+    425.22,
+    59.9,
+    932.0,
+    1130341.0,
+    651.0,
+    2.0,
+    28.0,
+    46.0,
+    0.0,
+    45.0,
+    3,
+    144.0
+   ],
+   "director_events_within_1_5s": [],
+   "director_t": 590.98,
+   "epoch_ms": 1791358882627,
+   "ms": 67.23,
+   "pipeline_compilations_since_last_frame": 0,
+   "player": [
+    -15.1,
+    6.2,
+    16.7
+   ]
+  },
+  {
+   "beat": "free",
+   "context": "free",
+   "counters": [
+    8549.0,
+    1250.0,
+    3081.0,
+    0.0,
+    0.0,
+    565.7,
+    425.36,
+    59.9,
+    787.0,
+    1211482.0,
+    787.0,
+    2.0,
+    28.0,
+    46.0,
+    0.0,
+    45.0,
+    13,
+    124.0
+   ],
+   "director_events_within_1_5s": [],
+   "director_t": 764.12,
+   "epoch_ms": 1791359056655,
+   "ms": 1081.34,
+   "pipeline_compilations_since_last_frame": 0,
+   "player": [
+    -7.0,
+    0.3,
+    13.4
+   ]
+  },
+  {
+   "beat": "free",
+   "context": "free",
+   "counters": [
+    8550.0,
+    1250.0,
+    3081.0,
+    0.0,
+    0.0,
+    557.78,
+    425.36,
+    59.9,
+    786.0,
+    1278388.0,
+    786.0,
+    2.0,
+    28.0,
+    46.0,
+    0.0,
+    45.0,
+    15,
+    102.0
+   ],
+   "director_events_within_1_5s": [],
+   "director_t": 896.3,
+   "epoch_ms": 1791359188840,
+   "ms": 57.3,
+   "pipeline_compilations_since_last_frame": 0,
+   "player": [
+    -5.2,
+    -0.3,
+    13.9
+   ]
+  }
+ ],
+ "style": "normal",
+ "summary": {
+  "beat_durations_s": {
+   "after_nones": 80.0,
+   "free": 403.2,
+   "gate_open": 41.0,
+   "meal": 162.7,
+   "nones": 180.0,
+   "reception": 79.6,
+   "road": 33.1,
+   "second_bundle": 179.7,
+   "sext_gate": 27.3,
+   "to_cell": 98.9
+  },
+  "free_period": {
+   "sat_s": 0.0,
+   "start": 622.4,
+   "talked": [
+    "fulco",
+    "nuto"
+   ]
+  },
+  "nones": {
+   "bell_t": 1025.6,
+   "entered_church_t": 49.7,
+   "guests_place_t": 54.9,
+   "in_church_s": 156.36,
+   "office_begun_t": 65.1,
+   "outside_s": 59.66,
+   "player_room_at_bell": "garth",
+   "watched_brothers_t": 9.8
+  },
+  "overtakes": 0,
+  "people_met": {
+   "cellarer": 158.0,
+   "fazio": 63.2,
+   "fulco": 643.3,
+   "nuto": 310.5,
+   "tebaldo": 477.4
+  },
+  "solo_route": {
+   "back_in_cell": 459.6,
+   "back_s": 104.8,
+   "help_from_nuto": false,
+   "hesitation_s": 0.0,
+   "left_cell": 287.2,
+   "max_off_route_m": 4.7,
+   "out_s": 67.6,
+   "reached_chest": 354.8,
+   "started": 287.2,
+   "wrong_turns": []
+  },
+  "william_distance_reception_m": {
+   "mean": 3.42,
+   "p50": 3.19,
+   "p90": 5.33,
+   "samples": 178
+  },
+  "william_lead_on_road_m": {
+   "max": 8.09,
+   "mean": 7.61,
+   "min": 6.5,
+   "p10": 6.93,
+   "p50": 7.77,
+   "p90": 8.01,
+   "samples": 33
+  },
+  "william_lead_to_cell_m": {
+   "mean": 2.15,
+   "p10": -0.15,
+   "p50": 2.19,
+   "p90": 5.24,
+   "samples": 178,
+   "share_adso_ahead": 0.05,
+   "share_william_ahead": 0.51
+  },
+  "william_wait_points": [],
+  "william_waits": 0
+ },
+ "system": {
+  "adapter": "Apple M1 Pro (Apple7)",
+  "adapter_type": 1,
+  "api": "4.0",
+  "cpu": "Apple M1 Pro",
+  "cpu_count": 10,
+  "driver": "metal",
+  "engine": "4.7.2-stable (official)",
+  "executable": "/Users/memre/Desktop/gulun_adı/builds/phase1/macos/AbbeySlice.app/Contents/MacOS/Abbey Slice",
+  "gi": "none",
+  "memory_info": {
+   "available": 9987129344,
+   "free": 8806105088,
+   "physical": 34359738368,
+   "stack": 8372224
+  },
+  "msaa_3d": 1,
+  "os": "macOS",
+  "os_version": "26.5.2",
+  "physics": "Jolt Physics",
+  "renderer": "forward_plus",
+  "scaling_3d_scale": 1.0,
+  "screen": 0,
+  "screen_count": 2,
+  "screen_scale": 2.0,
+  "screens": [
+   {
+    "refresh_hz": 120.0,
+    "scale": 2.0,
+    "size": [
+     3456,
+     2234
+    ]
+   },
+   {
+    "refresh_hz": 75.0,
+    "scale": 1.0,
+    "size": [
+     3840,
+     2160
+    ]
+   }
+  ],
+  "shadow_atlas": 4096,
+  "ssao": true,
+  "user_dir": "/Users/memre/Library/Application Support/AbbeySlice",
+  "vendor": "Apple",
+  "viewport_texture_px": [
+   1920,
+   1080
+  ],
+  "vsync": 0,
+  "window_position": [
+   4608,
+   610
+  ],
+  "window_px": [
+   1920,
+   1080
+  ]
+ },
+ "telemetry_file": "/Users/memre/Library/Application Support/AbbeySlice/day1a_runs/telemetry/day1a_2026-10-07_10-31-30_end.json"
+}

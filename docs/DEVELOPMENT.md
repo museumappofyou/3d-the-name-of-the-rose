@@ -41,12 +41,14 @@ bash scripts/migration/build_phase1.sh --fresh --functional
 bash scripts/migration/build_phase1.sh --no-export
 # Individual gates:
 "$GODOT_BIN" --headless --path native --script res://tests/run_tests.gd
-"$GODOT_BIN" --headless --path native --script res://tests/day1a_tests.gd
+ABBEY_TEST_SAVES="$PWD/builds/day1a-checks/test-saves" "$GODOT_BIN" --headless --path native --script res://tests/day1a_tests.gd
+"$GODOT_BIN" --headless --path native --script res://tests/day1a_scene_tests.gd -- --save-dir="$PWD/builds/day1a-checks/scene/saves" --telemetry-dir="$PWD/builds/day1a-checks/scene/telemetry" --out="$PWD/builds/day1a-checks/scene"
+"$GODOT_BIN" --headless --path native --script "$PWD/docs/evidence/day1a/pm_review_probe.gd" -- --save-dir="$PWD/builds/day1a-checks/probe/saves" --telemetry-dir="$PWD/builds/day1a-checks/probe/telemetry"
 "$GODOT_BIN" --headless --path native --script res://tests/anchor_check.gd
 "$GODOT_BIN" --headless --path native --script res://tests/pose_check.gd -- alinardo "$PWD/shared/data/manifests/pose_reference_alinardo.json"
 ```
 
-Normal build order: literary hashes → browser-computed rule references → content publication → derivative verification → fresh import if requested → pinned import settings/re-import → 22 domain tests → 14 Day-1A domain tests (scenario consistency, William's lead/wait, five whole-day walker styles, getting up, naming, perception, save/restore) → thirteen fitted pose/normal checks → ten anchors → optional main-scene functional route/reload → Windows/macOS exports → package audit → literary hash comparison. Import errors are fatal. Domain negative-condition and known test-exit diagnostics are documented in `PLATFORMS.md`; an assertion pass is not a claim that the harness has no cleanup warnings.
+Normal build order: literary hashes → browser-computed rule references → content publication → derivative verification → fresh import if requested → pinned import settings/re-import → 22 domain tests → 19 Day-1A domain tests (scenario consistency, William's lead/wait, five whole-day walker styles, getting up, naming, perception, save/restore; a restored director must match the uninterrupted day for 60 s at 13 moments; halter, bell, name and schema-1 migration) → the Day-1A scene suite on the real main scene (menu Save/Load, F5/F9, interrupted meal and end, repeated loads into used objects, Nones at the bell/walking/choir/after, seat/carry/hold, six fresh-process relaunches, with a seeded proof slot checked byte-identical) → the PM's eight review probes → thirteen fitted pose/normal checks → ten anchors → optional main-scene functional route/reload → Windows/macOS exports → package audit → literary hash comparison. Import errors are fatal. Domain negative-condition and known test-exit diagnostics are documented in `PLATFORMS.md`; an assertion pass is not a claim that the harness has no cleanup warnings.
 
 Results/logs and packages go to ignored `builds/phase1/`; `EVIDENCE_OUT` can select an alternate check-output directory. Do not overwrite frozen `docs/evidence/phase1/` during routine checks. Original packages remain locally under `builds/phase1-original/`; new builds have their own hashes. Imported scene IDs can vary on fresh import, so compare resource content/behavior rather than requiring byte-identical PCKs.
 
@@ -81,20 +83,28 @@ APP="$PWD/builds/phase1/macos/AbbeySlice.app/Contents/MacOS/Abbey Slice"
 "$APP" -- --scenario=fixture --out="$PWD/builds/phase1/evidence/fixture" --label=mac
 "$APP" -- --scenario=audio --out="$PWD/builds/phase1/evidence/audio" --label=mac
 scripts/migration/run_benchmarks.sh "$APP" mac route crowd cycles
-# Day-1A (the default mode): the whole slice walked in real time, then ten residency loops
-scripts/migration/run_benchmarks.sh "$APP" mac day1_walk day1_cycles
+# Day-1A (the default mode): the whole slice in real time; approach + one complete
+# warm-up loop + ten measured residency loops; a ≥22-minute measured soak.
+# Frames (wall clock, pipeline compilations), per-second engine counters and
+# RSS (epoch seconds) align; frames over 50 ms record their context.
+scripts/migration/run_benchmarks.sh "$APP" mac day1_walk day1_cycles day1_soak
+# Cold/warm: move ~/Library/Application Support/AbbeySlice/shader_cache aside
+# before the first run of a freshly exported binary (cold), then run again (warm).
 # Day-1A functional walks (may be accelerated; never used for performance):
 "$GODOT_BIN" --path native -- --scenario=day1-walk --style=normal --timescale=3 --captures=on --record=nones --out="$PWD/builds/day1a" --label=functional
 #   styles: normal | slow | rush | confused | ignore_nones; also day1-shots, day1-cast (close character review), day1-graph-audit (capsule sweep of every authored leg)
+# William's gait from the rendered skeleton (planted-foot slide, cadence, knee):
+"$GODOT_BIN" --path native -- --scenario=day1-gait --label=check --strip=on --out="$PWD/builds/day1a-gait"
+python3 scripts/migration/day1a_gait_metrics.py "builds/day1a-gait/gait/rows_check_*.csv"
 # Explicit longer qualification, when justified:
 scripts/migration/run_package_evidence.sh "$APP" mac
 ```
 
 Set `EVIDENCE_OUT` to change benchmark/evidence destination. Full evidence runs include high-resolution variants, startup and a twenty-minute soak. Baseline gates at physical 1920×1080: normal ≥60 FPS/p95 ≤25 ms; crowd ≥45 FPS/p95 ≤33.3 ms; no repeatable >100 ms stalls; ten residency cycles within 10% of warmed memory; twenty-minute soak without crash, graphics/audio/save failures. Record physical viewport, VSync/focus, hardware, driver, power and cache state. A short screenshot smoke is not a performance run.
 
-Proof player saves: macOS `~/Library/Application Support/AbbeySlice/saves/slot0.json`; Windows `%APPDATA%\AbbeySlice\saves\slot0.json`. Day-1A quick/autosaves use `day1a_slot0.json` (`abbey-day1a-save`); its local telemetry defaults to `user://day1a/telemetry/`. At reviewed `e223bc2`, **pause-menu Save/Load still dispatch to the proof slot**: independent probes overwrite its main file and load the wrong scenario. Meal/end/Nones reloads also fail continuity. See the [corrective mission](PROJECT.md#corrective-mission--make-day-1a-safe-to-playtest); do not claim universal save isolation from the save-file class tests.
+Proof player saves: macOS `~/Library/Application Support/AbbeySlice/saves/slot0.json`; Windows `%APPDATA%\AbbeySlice\saves\slot0.json`. In Day-1A mode the pause menu's Save/Load (and the path it shows), F5/F9, autosaves and a fresh launch all use `day1a_slot0.json` (`abbey-day1a-save`, schema 2) through one adapter path; the proof's QA reset and study jumps are refused there. Local telemetry defaults to `user://day1a/telemetry/`. Schema 2 keeps the in-flight scene: queued lines, the open choice, every actor's route/activity/arrival (the community included), mule trails, seat and halter. A load places nobody, rings only the bell strokes still due and starts the office only when the brothers are in their stalls. Schema-1 saves (e223bc2) load with the community, arrivals and interrupted line sequences rebuilt from the beat, and the load says so. At `e223bc2` the menu used the proof slot; that is fixed from `7cd678c`.
 
-Use explicit ignored scratch `--save-dir` and `--telemetry-dir` for all reproduction/playtest runs until the correction is reviewed. Scripted `day1-*` runs otherwise default to `user://day1a_runs/`. Both file services use header/body checksums and `.tmp`/`.bak` replacement; Day-1A validates the scenario envelope, player bounds, clock and beat, not every persisted actor/scene invariant. Its file class rejects a proof-format file, but that does not protect a menu routed to another service. Never overwrite a player save to test. Browser notebook storage remains separate.
+Use explicit ignored scratch `--save-dir` and `--telemetry-dir` for reproduction and playtest runs. Scripted `day1-*` runs otherwise default to `user://day1a_runs/`. Both file services use header/body checksums and `.tmp`/`.bak` replacement; the Day-1A file class validates the envelope, player bounds and seat, clock, beat, queue shape, known choice, seat/halter values and finite actor positions, and rejects or refuses to overwrite a proof-format file. Never overwrite a player save to test. Browser notebook storage remains separate.
 
 To inspect package contents:
 

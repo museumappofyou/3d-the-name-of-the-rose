@@ -1,0 +1,123 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+Metal 4.0 - Forward+ - Using Device #0: Apple - Apple M1 Pro (Apple7)
+
+[day1a] beat road t=0.0 h=11.5
+[day1a] beat sext_gate t=33.4 h=11.5
+[day1a] beat gate_open t=60.9 h=11.85
+[day1a] beat reception t=102.3 h=11.85
+[day1a] beat to_cell t=182.1 h=12.25
+[day1a] autosave cell ok
+[day1a] beat second_bundle t=279.7 h=12.25
+[day1a] beat meal t=458.9 h=12.25
+[day1a] autosave meal ok
+[day1a] beat free t=621.8 h=13.0
+[cycles] free period reached at t=622 h=13.00; approaching the gate court
+[cycles] t=634 loop=-1 leg=approach pos=(-28.34795, -0.199347, 17.1771) path=12
+[cycles] t=649 loop=-1 leg=approach pos=(-51.95554, -0.122689, -7.920287) path=4
+[cycles] approach -1: 113.6 fps avg, p95 10.7 ms, vram 557.8 MiB, objects 8549, measured 0.0 min
+[cycles] t=666 loop=0 leg=gate_to_cell pos=(-87.48386, -0.191807, -8.301682) path=21
+[cycles] t=681 loop=0 leg=gate_to_cell pos=(-41.38637, -0.116688, -7.830892) path=18
+[cycles] t=696 loop=0 leg=gate_to_cell pos=(-27.6629, -0.199372, 25.15109) path=8
+[cycles] t=713 loop=0 leg=cell_to_well pos=(-12.36015, -0.20089, 20.96357) path=8
+[cycles] t=731 loop=0 leg=well_to_nave pos=(27.76803, 0.309999, 4.30134) path=4
+[cycles] t=749 loop=0 leg=to_gate pos=(8.616544, -0.267949, 13.35833) path=26
+[cycles] t=767 loop=0 leg=to_gate pos=(-28.3679, -0.199346, 20.73421) path=13
+[cycles] t=782 loop=0 leg=to_gate pos=(-47.90199, -0.122709, -7.906214) path=5
+[cycles] warmup 0: 108.2 fps avg, p95 11.2 ms, vram 557.8 MiB, objects 8551, measured 0.0 min
+[cycles] t=799 loop=1 leg=gate_to_cell pos=(-91.44434, -0.204459, -8.109116) path=22
+[cycles] t=814 loop=1 leg=gate_to_cell pos=(-45.25533, -0.122834, -7.866219) path=18
+[cycles] t=829 loop=1 leg=gate_to_cell pos=(-28.34318, -0.199372, 22.36175) path=10
+[cycles] t=846 loop=1 leg=cell_to_well pos=(-13.15238, -0.186346, 24.69866) path=10
+[cycles] t=864 loop=1 leg=well_to_nave pos=(23.35141, 0.310624, 5.079536) path=5
+[cycles] t=882 loop=1 leg=to_gate pos=(10.42055, -0.289421, 9.395687) path=27
+[cycles] t=900 loop=1 leg=to_gate pos=(-28.52263, -0.199001, 24.37978) path=14
+[cycles] t=915 loop=1 leg=to_gate pos=(-43.65649, -0.119051, -7.933629) path=5
+[cycles] t=932 loop=1 leg=to_gate pos=(-94.60337, -0.203588, -8.382697) path=1
+[cycles] measured 1: 108.2 fps avg, p95 11.2 ms, vram 557.8 MiB, objects 8552, measured 2.2 min
+[cycles] t=948 loop=2 leg=gate_to_cell pos=(-49.09449, -0.122419, -7.900664) path=18
+[cycles] t=962 loop=2 leg=gate_to_cell pos=(-28.39458, -0.197643, 18.98403) path=11
+[cycles] t=978 loop=2 leg=cell_to_well pos=(-17.90648, -0.193961, 24.91756) path=11
+[cycles] t=997 loop=2 leg=well_to_nave pos=(18.41238, 0.309999, 5.693364) path=6
+[cycles] t=1015 loop=2 leg=nave_to_garth pos=(11.04822, 0.309999, 5.382622) path=1
+[cycles] t=1034 loop=2 leg=to_gate pos=(-24.79303, -0.197926, 25.05295) path=15
+[cycles] t=1048 loop=2 leg=to_gate pos=(-39.2079, -0.113281, -7.941522) path=5
+[cycles] t=1065 loop=2 leg=to_gate pos=(-89.40448, -0.195512, -8.318172) path=1
+[cycles] measured 2: 108.2 fps avg, p95 11.2 ms, vram 557.8 MiB, objects 8552, measured 4.5 min
+[cycles] t=1081 loop=3 leg=gate_to_cell pos=(-53.15037, -0.118448, -7.931939) path=19
+[cycles] t=1096 loop=3 leg=gate_to_cell pos=(-28.21211, -0.194269, 15.75532) path=11
+[cycles] t=1112 loop=3 leg=cell_to_well pos=(-20.31738, 0.198786, 23.63112) path=12
+[cycles] t=1130 loop=3 leg=well_to_nave pos=(14.78534, 0.309999, 5.361818) path=6
+[cycles] t=1148 loop=3 leg=nave_to_garth pos=(15.36255, 0.309999, 5.592636) path=3
+[cycles] t=1167 loop=3 leg=to_gate pos=(-20.78753, -0.196826, 24.88779) path=16
+[cycles] t=1181 loop=3 leg=to_gate pos=(-36.41846, -0.120624, -6.362532) path=6
+[cycles] t=1198 loop=3 leg=to_gate pos=(-85.10501, -0.185002, -8.255075) path=2
+[cycles] measured 3: 108.2 fps avg, p95 11.2 ms, vram 557.8 MiB, objects 8552, measured 6.7 min
+[cycles] t=1214 loop=4 leg=gate_to_cell pos=(-56.69223, -0.115516, -7.959194) path=19
+[cycles] t=1229 loop=4 leg=gate_to_cell pos=(-26.872, -0.195229, 13.16601) path=12
+[cycles] t=1245 loop=4 leg=cell_to_well pos=(-20.31791, 2.511256, 20.40442) path=12
+[cycles] t=1263 loop=4 leg=well_to_nave pos=(10.6565, 0.309999, 5.608222) path=7
+[cycles] t=1281 loop=4 leg=nave_to_garth pos=(19.48717, 0.309999, 5.337432) path=3
+[cycles] t=1299 loop=4 leg=to_gate pos=(-15.96077, -0.190092, 24.81941) path=17
+[cycles] t=1315 loop=4 leg=to_gate pos=(-33.86033, -0.138207, -4.039656) path=6
+[cycles] t=1331 loop=4 leg=to_gate pos=(-80.65265, -0.172725, -8.185925) path=2
+[cycles] measured 4: 108.2 fps avg, p95 11.2 ms, vram 557.8 MiB, objects 8552, measured 9.0 min
+[cycles] t=1347 loop=5 leg=gate_to_cell pos=(-60.53214, -0.116793, -7.988746) path=19
+[cycles] t=1362 loop=5 leg=gate_to_cell pos=(-28.34941, -0.188593, 9.941088) path=14
+[cycles] t=1378 loop=5 leg=cell_to_well pos=(-20.51354, 5.080523, 16.8194) path=13
+[cycles] t=1396 loop=5 leg=well_to_nave pos=(10.19024, -0.286791, 10.58591) path=9
+[cycles] t=1414 loop=5 leg=nave_to_garth pos=(24.68162, 0.309999, 4.97461) path=4
+[cycles] t=1432 loop=5 leg=to_gate pos=(-12.34988, -0.188646, 23.44999) path=18
+[cycles] t=1448 loop=5 leg=to_gate pos=(-31.05309, -0.150686, -1.480063) path=6
+[cycles] t=1464 loop=5 leg=to_gate pos=(-76.01089, -0.160185, -8.114139) path=2
+[cycles] measured 5: 108.3 fps avg, p95 11.2 ms, vram 557.8 MiB, objects 8552, measured 11.2 min
+[cycles] t=1480 loop=6 leg=gate_to_cell pos=(-64.68193, -0.125445, -8.020125) path=20
+[cycles] t=1495 loop=6 leg=gate_to_cell pos=(-28.35457, -0.178906, 6.441922) path=15
+[cycles] t=1511 loop=6 leg=cell_to_well pos=(-18.86483, 6.21, 14.56612) path=15
+[cycles] t=1529 loop=6 leg=well_to_nave pos=(7.671409, -0.259803, 13.97543) path=10
+[cycles] t=1547 loop=6 leg=nave_to_garth pos=(28.08286, 0.308762, 3.144603) path=5
+[cycles] t=1565 loop=6 leg=to_gate pos=(-12.28677, -0.211838, 19.34439) path=19
+[cycles] t=1581 loop=6 leg=to_gate pos=(-28.56037, -0.168147, 0.944852) path=6
+[cycles] t=1597 loop=6 leg=to_gate pos=(-72.00298, -0.150806, -8.076957) path=3
+[cycles] measured 6: 108.2 fps avg, p95 11.2 ms, vram 557.8 MiB, objects 8552, measured 13.4 min
+[cycles] t=1613 loop=7 leg=gate_to_cell pos=(-68.58313, -0.139555, -8.049468) path=20
+[cycles] t=1629 loop=7 leg=gate_to_cell pos=(-28.27308, -0.172923, 3.097365) path=15
+[cycles] t=1644 loop=7 leg=gate_to_cell pos=(-18.85764, 6.210279, 14.46188) path=2
+[cycles] t=1662 loop=7 leg=cell_to_well pos=(3.032288, -0.247323, 12.9567) path=2
+[cycles] t=1680 loop=7 leg=nave_to_garth pos=(28.05099, 0.359999, -1.57636) path=6
+[cycles] t=1698 loop=7 leg=to_gate pos=(-9.384628, 0.310465, 17.3353) path=21
+[cycles] t=1714 loop=7 leg=to_gate pos=(-28.35616, -0.180668, 4.330854) path=8
+[cycles] t=1730 loop=7 leg=to_gate pos=(-67.71053, -0.136392, -8.043958) path=3
+[cycles] measured 7: 108.2 fps avg, p95 11.1 ms, vram 557.8 MiB, objects 8552, measured 15.7 min
+[cycles] t=1747 loop=8 leg=gate_to_cell pos=(-72.6156, -0.155878, -8.079569) path=20
+[cycles] t=1762 loop=8 leg=gate_to_cell pos=(-29.6637, -0.160118, -0.061163) path=17
+[cycles] t=1777 loop=8 leg=gate_to_cell pos=(-20.32412, 5.066805, 16.85263) path=5
+[cycles] t=1795 loop=8 leg=cell_to_well pos=(-1.519392, -0.243519, 12.86125) path=3
+[cycles] t=1813 loop=8 leg=nave_to_garth pos=(25.50657, 0.359999, -2.653188) path=7
+[cycles] t=1831 loop=8 leg=to_gate pos=(-7.947388, 0.309999, 13.40202) path=23
+[cycles] t=1848 loop=8 leg=to_gate pos=(-28.31039, -0.183128, 8.030364) path=8
+[cycles] t=1863 loop=8 leg=to_gate pos=(-63.26014, -0.121887, -8.009744) path=3
+[cycles] measured 8: 108.3 fps avg, p95 11.2 ms, vram 557.8 MiB, objects 8552, measured 17.9 min
+[cycles] t=1880 loop=9 leg=gate_to_cell pos=(-76.76229, -0.162629, -8.129733) path=21
+[cycles] t=1895 loop=9 leg=gate_to_cell pos=(-32.61786, -0.142073, -2.898374) path=17
+[cycles] t=1910 loop=9 leg=gate_to_cell pos=(-20.27909, 2.235384, 20.80345) path=6
+[cycles] t=1928 loop=9 leg=cell_to_well pos=(-6.189261, 0.178131, 13.3007) path=4
+[cycles] t=1946 loop=9 leg=well_to_nave pos=(24.79715, 0.359999, -3.345174) path=1
+[cycles] t=1964 loop=9 leg=to_gate pos=(-3.191116, -0.244446, 13.00398) path=24
+[cycles] t=1981 loop=9 leg=to_gate pos=(-28.78992, -0.187868, 11.49323) path=10
+[cycles] t=1996 loop=9 leg=to_gate pos=(-59.21076, -0.115854, -7.977821) path=4
+[cycles] measured 9: 108.2 fps avg, p95 11.2 ms, vram 557.8 MiB, objects 8553, measured 20.2 min
+[cycles] t=2013 loop=10 leg=gate_to_cell pos=(-80.64304, -0.172694, -8.194211) path=21
+[cycles] t=2028 loop=10 leg=gate_to_cell pos=(-35.27746, -0.126314, -5.431237) path=17
+[cycles] t=2043 loop=10 leg=gate_to_cell pos=(-20.28863, -0.197212, 24.70997) path=6
+[cycles] t=2060 loop=10 leg=cell_to_well pos=(-8.854868, 0.309999, 15.58371) path=5
+[cycles] t=2079 loop=10 leg=well_to_nave pos=(27.70181, 0.360715, -2.727031) path=3
+[cycles] t=2094 loop=10 leg=to_gate pos=(9.209697, -0.275081, 12.51128) path=26
+[cycles] t=2106 loop=10 leg=to_gate pos=(-15.91236, -0.189754, 24.82241) path=17
+[cycles] t=2119 loop=10 leg=to_gate pos=(-28.34906, -0.169094, 1.68226) path=7
+[cycles] t=2131 loop=10 leg=to_gate pos=(-61.45882, -0.118013, -7.995702) path=4
+[cycles] measured 10: 123.2 fps avg, p95 11.0 ms, vram 565.7 MiB, objects 8552, measured 22.4 min
+[cycles] done
+WARNING: 26 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+ERROR: 12 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:822)

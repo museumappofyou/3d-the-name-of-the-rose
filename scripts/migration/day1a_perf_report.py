@@ -10,12 +10,24 @@ loop/leg, cumulative pipeline compilations), the per-second engine counters
 aligns them by wall clock. Reports frame statistics overall, per beat or per
 loop, frames over 50/100 ms, pipeline compilations during measurement, and
 RSS/objects/resources/VRAM at the start of measurement and at each loop end.
+Frame and counter CSVs may be gzip-compressed (`.csv.gz`), as committed under
+docs/evidence/.
 """
 import csv
 import glob
+import gzip
 import json
 import os
 import sys
+
+
+def read_rows(path):
+    """Rows of `path` or of `path`.gz; [] when neither exists."""
+    if os.path.exists(path):
+        return list(csv.DictReader(open(path)))
+    if os.path.exists(path + '.gz'):
+        return list(csv.DictReader(gzip.open(path + '.gz', 'rt')))
+    return []
 
 
 def fstats(ms):
@@ -50,8 +62,8 @@ def mon_at(mon, epoch_s):
 
 def load(directory, run, label):
     base = os.path.join(directory, run)
-    frames = list(csv.DictReader(open(base + '.csv')))
-    mon = list(csv.DictReader(open(base + '_mon.csv'))) if os.path.exists(base + '_mon.csv') else []
+    frames = read_rows(base + '.csv')
+    mon = read_rows(base + '_mon.csv')
     rssf = os.path.join(directory, label + '.rss.csv')
     rss = []
     if os.path.exists(rssf):
@@ -116,15 +128,15 @@ def loops(directory, run, label):
 if __name__ == '__main__':
     d = sys.argv[1]
     out = {}
-    for path in sorted(glob.glob(os.path.join(d, 'day1-walk_normal_*.csv'))):
-        if path.endswith('_mon.csv'):
+    for path in sorted(glob.glob(os.path.join(d, 'day1-walk_normal_*.csv*'))):
+        if '_mon.csv' in path:
             continue
-        run = os.path.basename(path)[:-4]
+        run = os.path.basename(path).split('.csv')[0]
         label = 'day1_walk_' + run.split('_')[-1]
         out[run] = walk(d, run, label)
     for kind in ('day1_cycles', 'day1_soak'):
         for path in sorted(glob.glob(os.path.join(d, kind + '_*.json'))):
             run = os.path.basename(path)[:-5]
-            if os.path.exists(os.path.join(d, run + '.csv')):
+            if read_rows(os.path.join(d, run + '.csv')):
                 out[run] = loops(d, run, run)
     print(json.dumps(out, indent=1))

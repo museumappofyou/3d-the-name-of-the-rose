@@ -82,6 +82,27 @@ The final road/gate portions average 91.7/84.7 FPS, so the overall rate is not e
 
 Day-1A keeps all cells resident. Its loops exercise traversal/visibility, not load/unload streaming, and do not fix or test the proof's stair hitch. PM's fresh rendered scripted package run is accelerated functional/capture review, not a new performance benchmark. An unfamiliar player has not tested route recall; listening, owner/external play, controller/focus/layout trials and Windows W1/W2 remain NOT RUN. Nones activity is implemented, but the approximately 65-second bell-to-chant delay and level remain unjudged by ear.
 
+## Day-1A corrective pass, 7 October 2026
+
+Candidate commits `7cd678c`, `6526b9a`, `4c16e99`, `fb12412`, `60ec496` on top of PM checkpoint `e8174fb`; the package is exported from `60ec496`. Hashes, check results and gait/performance numbers are in [correction evidence](evidence/day1a/correction.json). This section reports the developer's checks. **The PM has not reviewed it, and nobody has played or listened to it.**
+
+The PM's eight probes pass unchanged. Pause-menu Save/Load, the path it shows, F5/F9, autosaves and a fresh launch now use the Day-1A slot. A seeded proof `slot0.json`/`.bak` stays byte-identical through repeated saves and loads in one process and across six relaunched processes. Save schema 2 restores the in-flight scene into the scene objects already in use. Interrupted meal lines finish and an open question can still be answered. An earlier save loaded after the end resumes the day, and the end autosave on a fresh launch shows the card and stays stopped. At the Nones bell, while walking, in the choir and afterwards, brothers keep their places and routes. A restored bell rings only the remaining strokes, and the chant waits for the stalls. Names are learned when the introducing line is presented. Schema-1 saves are read with the community and interrupted line sequences rebuilt. The `or true` assertion is replaced. A restored director matches the uninterrupted day for 60 s after saves at 13 moments (0.0 m deviation). A scene suite on the real main scene adds 21 checks, including repeated loads into used objects and six separate-process relaunches.
+
+William's walk is measured from the rendered skeleton with the `day1-gait` scenario. Planted-foot slide was 0.155/0.134/0.19 m/s at 1.0/1.35/1.72 m/s and is now 0.029/0.038/0.094 m/s. Peak knee flexion fell from about 89° to 71°; cadence at 1.72 m/s fell from 139 to 122 steps/min as step length rose from 0.74 to 0.85 m. Lead/wait behaviour and the stand-in body are unchanged. The before/after captures and frame rows are under `evidence/day1a/correction/gait/`. The look of the walk has not been judged by a person.
+
+Packaged Mac runs used the same M1 Pro / macOS 26.5.2 / Metal setup: built-in Retina display, physical 1920×1080, VSync off, no other GPU job. Except for the last whole-slice row, they used the package exported from `fb12412`, which differs from the candidate only in benchmark-runner instrumentation. Each whole-slice run covers about 21.5 minutes:
+
+| Run | FPS average | p95 frame | Maximum | Frames >50 / >100 ms |
+|---|---:|---:|---:|---:|
+| Cold: never-run binary, Godot shader cache removed | 116.2 | 11.17 ms | 35.1 ms | 0 / 0 |
+| Warm: immediately again | 114.0 | 11.46 ms | 1,081 ms | 5 / 1 |
+| Godot cache removed again, Metal cache warm | 127.8 | 11.31 ms | 36.0 ms | 0 / 0 |
+| Candidate package (`60ec496`), first run of its binary | 103.5 | 11.19 ms | 21.2 ms | 0 / 0 |
+| Ten measured loops after approach + one complete warm-up loop (22.4 min) | 109.7 | 11.14 ms | 40.9 ms | 0 / 0 |
+| Soak, 22.4 measured minutes after the same warm-up | 144.7 | 10.90 ms | 38.3 ms | 0 / 0 |
+
+The 5 October 541/591 ms stalls do not recur in either cold run or in the candidate's first run. The 19 pipeline compilations in those runs cost no long frame. The warm run's 1,081 ms frame happened 762 s in, during the free period. It had no pipeline compilation, director event or memory change at that moment; RSS fell about 190 MiB some 20 s later. Its cause is **not identified**, so no loading-time preparation was added. Frames over 50 ms now also record engine process/physics time and window focus for the next run. Over the loops RSS rose steadily by about 2–3 MiB per loop: 4.7% over the warmed baseline in the loop run and 5.9% in the soak. Objects, resources and nodes stayed flat. Frame rate and counted renderer work (draw calls, primitives) differ between runs on the same legs and sometimes shift within a run. Route, figure visibility and memory do not explain this; it is not diagnosed. Raw frames, per-second counters and RSS samples are retained under `evidence/day1a/correction/performance/`.
+
 ## Asset findings and rendering qualifications
 
 Original `cast.glb` and `tasks.glb` cannot directly import with their required meshopt/quantization extensions. Decoded derivatives retain integer joint/weight encodings, topology, clothing, fitted keyframe timing and `bendDrape`; they bind clips by stable bone name. Authored browser normals were already corrupt on seven of nine parts. The normalized native copies restore them from the retained `.local/mh/cast-round3.glb`, with topology, per-index position and constant-bind checks. The browser source remains defective. Recomputing arbitrary smooth normals would lose authored splits; do not overwrite its cast without a separate validated repair.
@@ -114,6 +135,6 @@ Agent B also tested a temporary copy containing only Git-eligible files: no `.lo
 | Test exit diagnostics | Domain/anchor/pose harnesses emit known ObjectDB/resource-at-exit warnings; invalid-condition negative test intentionally emits an error; investigate cleanup without calling this an error-free test run |
 | Full-world rendering/NPCs/audio/save | Outside proof; do not extrapolate slice performance or synthetic crowd to production |
 
-The active gate remains **Day-1A: William, learned routes, ordinary life and Nones**. Initial implementation is complete, but the PM decision is **FIX** before a safe playtest candidate and independent player/listening review. Day-1B is held. [Project](PROJECT.md#active-mission--day-1a) owns the corrective mission; [Game design](GAME_DESIGN.md) records the Adapted Adso campaign decision. The Leaf Before Vespers remains a later idea.
+The active gate remains **Day-1A: William, learned routes, ordinary life and Nones**. The PM decision on `e223bc2` was **FIX**; a corrected candidate (above) awaits PM review before any player/listening review. Day-1B is held. [Project](PROJECT.md#active-mission--day-1a) owns the corrective mission; [Game design](GAME_DESIGN.md) records the Adapted Adso campaign decision. The Leaf Before Vespers remains a later idea.
 
 Actual Windows W1/W2 still gates broad migration/final engine commitment. Fresh export/PCK audit is W0 only. The Phase-1 stair hitch, browser normals, subjective audio and close-character/input questions remain open; no subsequent hash-identified human/Windows trial was provided at this review.
